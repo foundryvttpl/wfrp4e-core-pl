@@ -28441,7 +28441,6 @@
         "Black Lotus": {
             "id": "qfd01sggD9xbCuJY",
             "name": "Czarny lotos",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.qfd01sggD9xbCuJY",
             "effects": {
                 "NyPpILiBcAdT06RZ": {
@@ -29071,7 +29070,6 @@
         "Heartkill": {
             "id": "JbSjlgUdzsl5ok95",
             "name": "Sercobój",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.JbSjlgUdzsl5ok95",
             "effects": {
                 "6uP7rREK03gthlAq": {
@@ -29306,7 +29304,6 @@
         "Mad Cap Mushrooms": {
             "id": "CihEl1pzvTiMQswA",
             "name": "Grzybki Szalonego Kapelusznika",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.CihEl1pzvTiMQswA",
             "effects": {
                 "L4iaGjmt224RgWhW": {
@@ -29399,7 +29396,6 @@
         "Mandrake Root": {
             "id": "5fowsr8vslorjeB2",
             "name": "Korzeń mandragory",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.5fowsr8vslorjeB2",
             "effects": {
                 "2V9aoWM8eH3ezQh1": {
@@ -29478,7 +29474,6 @@
         "Moonflower": {
             "id": "wgFj3lFhCuO8OeDb",
             "name": "Księżycowy kwiat",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.wgFj3lFhCuO8OeDb",
             "gmdescription": "<p>Ten środek uspokajający to suszony mech, który rośnie wyłącznie na liściach w lesie Laurelorn. Elfy wykorzystują księżycowy kwiat do leczenia Czarnej Dżumy. Członkowie tej rasy otrzymują premię +30 do każdego Testu opierania się tej chorobie. Poza tym środek nie wywołuje u nich żadnych innych efektów. Inni mogą wdychać opary gotującego się mchu i jeśli nie uda im się <strong>Bardzo Trudny (–30) Test Siły Woli</strong>, otrzymują Stan @Condition[Utrata przytomności]; jeśli Test jest udany, otrzymują premię +20 do Testów Opanowania i zyskują Stan @Condition[Zmęczenie]. Najdrożsi lekarze stosują księżycowy kwiat jako środek znieczulający.</p><p><strong>Czas trwania</strong>: [[/r 1d10+5]]{1k10+5} godzin</p>"
         },
@@ -29491,7 +29486,6 @@
         "Mule": {
             "id": "Yf5KzF7u0gAbxam9",
             "name": "Muł",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.Yf5KzF7u0gAbxam9"
         },
         "Nails": {
@@ -29707,7 +29701,6 @@
         "Ranald's Delight": {
             "id": "jTFOrokjEHbi12rT",
             "name": "Rozkosz Ranalda",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.jTFOrokjEHbi12rT",
             "effects": {
                 "Bx8xTxlLwCu24IUS": {
@@ -30003,7 +29996,6 @@
         "Spit": {
             "id": "W4X1Jx8AN84yRPDx",
             "name": "Pluja",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.W4X1Jx8AN84yRPDx",
             "gmdescription": "<p>Ten niezwykle silny halucynogen, pozyskiwany z kameleopijawek znajdowanych na bagniskach Imperium, sprowadza wizję czegoś głęboko pożądanego, jak utraconego kochanka, zmarłego przyjaciela lub zaginionego dziecka. Narkotyk zwany jest na ulicy <i>Plują</i> i cieszy się popularnością wśród tych, którzy poddali się rozpaczy. Po jego użyciu trzeba przejść udany <strong>Bardzo Trudny (–30) Test Odporności</strong>, inaczej użytkownik zatraca się w niezwykle przekonującej fantazji, której treść zależy od MG.</p><p><strong>Czas trwania</strong>: [[/r 1d10]]{1k10} minut.</p>"
         },
@@ -30190,7 +30182,6 @@
         "Weirdroot": {
             "id": "b6tGqvNe1jYBdeN5",
             "name": "Dziwnokorzeń",
-            "description": "opistegowyzej",
             "sourceId": "Compendium.wfrp4e-core.items.Item.b6tGqvNe1jYBdeN5",
             "effects": {
                 "hLWNp5uC77EBu33J": {
