@@ -1,4 +1,4 @@
-**Oficjalne polskie tłumaczenie systemu Warhammer Fantasy Roleplay 4. ed.**
+**Warhammer Fantasy Roleplay 4e - Oficjalne polskie tłumaczenie.**
 
 Wiecie dobrze, co znajduje się w środku. Kryją się tam spaczeni, niepokorni, zagubieni. Mówicie sobie, że chcielibyście odejść i zostawić to za sobą. Czmychnąć do idealnego świata, gdzie wszystko układa się jak po sznurze. To nieprawda. Coś ciągnie Was właśnie tutaj. Możecie tłumaczyć sobie, że kuszą was bogactwa albo żądza chwały. Nie łudźcie się. Wszyscy wiemy, że jest inaczej. Kto raz usłyszał, jak wzywają go szlaki Starego Świata, ten zawsze już będzie chciał na nie powrócić. Dobądźcie ostrzy, nabijcie pistolety i uważajcie na tego psa: może i jest mały, ale jaki zajadły!
 
