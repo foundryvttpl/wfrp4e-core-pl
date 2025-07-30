@@ -1,0 +1,68 @@
+{
+    "label": "Wyposażenie (Ciężkie Dnie i Niespokojne Noce)",
+    "mapping": {
+        "gmdescription": "system.gmdescription.value",
+        "duration": "system.duration.value",
+        "range": "system.range.value",
+        "target": "system.target.value",
+        "damage": "system.damage.value",
+        "overcast": "system.overcast.label",
+        "overcastvalue": "system.overcast.valuePerOvercast.type",
+        "overcastinitial": "system.overcast.initial.type",
+        "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
+        "overcastinitialvalue": "system.overcast.initial.additional",
+		"specification_label": "system.specification.label",
+        "specification": "system.specification.value",
+        "tests": "system.tests.value",
+        "effects": {
+            "path": "effects",
+            "converter": "effects"
+        }
+    },
+    "entries": {
+        "Reveal the Inner Beauty": {
+            "id": "vofOA5XiwV4qimbt",
+            "name": "Ujawnienie wewnętrznego piękna",
+            "description": "<p>Powodujesz, że przedmiot lub osobę szybko dotyka rozkład. Rzeczy nieorganiczne rdzewieją, psują się i przestają być zdatne do użytku. Organiczne prędko zaczynają się psuć i gnić, pękając zaraz i rozlewając wokół śmierdzącą ciecz. Stworzenie żywe musi wykonać <strong>Wymagający (+0) Test Wytrzymałości</strong> Jeżeli zda, opiera się działaniu zaklęcia. Jeżeli nie zda, starzeje się o [[/r 2d10]]{2k10} lat i trwale traci -[[/r 1d10]]{1k10}% ze swoich Cech: Walka Wręcz, Umiejętności Strzeleckie, Siła, Wytrzymałość, Zręczność i Zwinność.</p>",
+            "sourceId": "Compendium.wfrp4e-rnhd.items.vofOA5XiwV4qimbt",
+            "effects": {
+                "U76EYFL7a5udrGVc": {
+                    "id": "U76EYFL7a5udrGVc",
+                    "name": "Ujawnienie wewnętrznego piękna",
+                    "scriptData": [
+                        {
+                            "id": "U76EYFL7a5udrGVc",
+                            "name": "Ujawnienie wewnętrznego piękna",
+                            "script": "[Script.lvjcddwRiN9iGruy]"
+                        }
+                    ]
+                }
+            },
+            "duration": "Natychmiast",
+            "target": "Specjalny",
+            "range": "Dotyk"
+        },
+		"Suffused with Ulgu": {
+            "id": "BTl4iFl6jEaZedrq",
+            "name": "Dostrojony do Ulgu",
+            "description": "<p>Jesteś dostrojony do Szarego Wiatru Magii. Wszyscy, którzy mają Percepcję Magiczną, dostrzegają szarą mgłę i cienie oplatające twoje ciało.</p>\n<p>Możesz używać swojej Umiejętności Splatanie Magii (<em>Ulgu</em>) zamiast Skradania.</p>\n<p>Każde skuteczne użycie Tradycji Cieni w odległości 8 metrów od ciebie zyskuje +1 PS. Ten bonus nie rośnie niezależnie od tego, ilu <em>Dostrojonych do Ulgu</em> jest w pobliżu rzucającego zaklęcie.</p>",
+            "sourceId": "Compendium.wfrp4e-rnhd.items.BTl4iFl6jEaZedrq",
+            "effects": {
+                "XtlMzLibp3FKzOye": {
+                    "id": "XtlMzLibp3FKzOye",
+                    "name": "Dostrojony do Ulgu",
+                    "scriptData": [
+                        {
+                            "id": "XtlMzLibp3FKzOye",
+                            "name": "Dostrojony do Ulgu",
+                            "script": "[Script.3Cn2TlRahlm5LkSj]",
+                            "activationScript": "[Script.xQnoRTHotZKrwPrx]",
+                            "hideScript": "[Script.cgmA2N0MkjA7qIZy]"
+                        }
+                    ]
+                }
+            },
+            "tests": "Splatanie Magii (Ulgu) za Skradanie się; wszystkie zaklęcia Tradycji Cienia rzucone w odległości 8 metrów zyskują +1 PS"
+        }
+    }
+}

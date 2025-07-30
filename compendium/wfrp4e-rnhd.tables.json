@@ -1,0 +1,120 @@
+{
+    "label": "Tabele (Ciężkie Dnie i Niespokojne Noce)",
+    "entries": {
+        "Career - Gnome": {
+            "id": "TVYWHR9YRIpZNBbB",
+            "name": "Profesje - Gnomy",
+            "description": " ",
+            "results": {
+                "1-1": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.86gkaanqt19xYCRa]{Aptekarka}",
+                "2-2": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.uIKbkjQpNUCGIQRv]{Prawniczka}",
+                "3-4": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Mn7w0SSGfN7cu7gQ]{Medyczka}",
+                "5-5": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h1l9jvaIxsb92wtM]{Kapłan}",
+                "6-7": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.CmiCNv8YlslFqRqy]{Uczony}",
+                "8-14": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.PKm1L6yjZ4PH0JJG]{Czarodziej}",
+                "15-15": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.X6OBFMR8ywipAPOo]{Agitator}",
+                "16-17": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.GWrZq3xoRSsDnQe0]{Rzemieślniczka}",
+                "18-18": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1l2m7D1LHIz2q9qv]{Żebrak}",
+                "19-19": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Śledczy}",
+                "20-21": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h7GdfctKdjWL0Ejp]{Kupiec}",
+                "22-22": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Szczurołap}",
+                "23-28": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.XHYgf5oEwIeCEVNM]{Mieszczka}",
+                "29-29": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.N02cjJdNWPdc4PUS]{Strażnik}",
+                "30-30": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.pwth0cd20Vdp0B9G]{Doradca}",
+                "31-31": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.u9sso2ox8BNznmy4]{Artystka}",
+                "32-32": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.0t9wtjQIoOofh8nO]{Poseł}",
+                "33-33": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.t41abSTLeMAdLiWS]{Szlachcic}",
+                "34-35": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.iYnopOFkz5L6hljq]{Służąca}",
+                "36-40": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ssJHG82vEHHRoAUF]{Szpieg}",
+                "41-42": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.wbqpqbFoSnvoZ53j]{Namiestnik}",
+                "43-43": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.UhdhIWaofKgwFKEr]{Zarządca}",
+                "44-44": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.fTqkgehpmxk7kVT6]{Zielarka}",
+                "45-46": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Łowczyni}",
+                "47-54": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Nu2diwbUfo786wYt]{Górnik}",
+                "55-58": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Zwiadowca}",
+                "59-62": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.EYkvtokq0FXlFaPa]{Chłopka}",
+                "63-63": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Łowczyni Nagród}",
+                "64-68": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.5nIDu8oyFVShLqne]{Kuglarka}",
+                "69-69": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.9XoJinyH6CsOcJ1h]{Posłaniec}",
+                "70-75": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.FdlybSv02jjXG1qW]{Domokrążca}",
+                "76-76": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Rk1V9EvtZ0p5Qhwr]{Przewoźnik}",
+                "77-80": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ADHp81MC8050ngjm]{Strażnik Rzeczny}",
+                "81-83": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.FqhOxcvai4ROvhXB]{Przemytniczka}",
+                "84-85": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.WmXiUhsOHIJia8OM]{Rajfur}",
+                "86-90": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Eg5D2UI3U4SAHnuU]{Szarlatan}",
+                "91-91": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.VzMDRJtha7epNzuX]{Paser}",
+                "92-92": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.SrqxyWytyki4WYgC]{Banita}",
+                "93-94": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Z5QPZbUR3h422ozo]{Rekieterka}",
+                "95-97": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mBtIPoWNpXwAS5Yl]{Złodziej}",
+                "98-98": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HndWncfaHb0nzNUq]{Ochroniarz}",
+                "99-99": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1OTZ386bMWJ6wfzX]{Żołnierz}",
+                "100-100": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.iYVpqJ6bz8fokdmf]{Kapłan Bitewny}"
+            }
+        },
+        "Eye Colour - Gnome": {
+            "id": "aZ485TmhGW2YdysY",
+            "name": "Kolor oczu - Gnomy",
+            "description": " ",
+            "results": {
+                "2-2": "Błękitny",
+                "3-3": "Niebieski",
+                "18-18": "Brązowy",
+                "19-19": "Ciemnobrązowy",
+                "4-4": "Brązowy jak ziemia",
+                "12-14": "Orzechowy",
+                "15-17": "Popielaty",
+                "8-11": "Bladozielone",
+                "5-7": "Turkusowy",
+                "20-20": "Fiołkowy"
+            }
+        },
+        "Hair Colour - Gnome": {
+            "id": "wcTrhkXPbhVTkOBW",
+            "name": "Kolor włosów - Gnomy",
+            "description": " ",
+            "results": {
+                "4-4": "Kasztanowy",
+                "2-2": "Czarny",
+                "5-7": "Brązowy",
+                "3-3": "Ciemnobrązowy",
+                "12-14": "Rudy",
+                "18-18": "Złoty blond",
+                "8-11": "Jasny brąz",
+                "15-17": "Rudoblond",
+                "20-20": "Biały",
+                "19-19": "Jasny blond"
+            }
+        },
+        "Species (Rough Nights & Hard Days)": {
+            "id": "pdAbJyxsHNAMaSKZ",
+            "name": "Rasy (Ciężkie Dnie i Niespokojne Noce)",
+            "description": " ",
+            "results": {
+                "1-89": {
+                    "name": "Człowiek",
+                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humans-(reiklander)]{Człowiek}</p>"
+                },
+                "90-93": {
+                    "name": "Niziołek",
+                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Niziołek}</p>"
+                },
+                "94-97": {
+                    "name": "Krasnolud",
+                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#dwarfs]{Krasnolud}</p>"
+                },
+                "98-98": {
+                    "name": "Gnomy",
+                    "description": "<p>@UUID[Compendium.wfrp4e-rnhd.journals.JournalEntry.Hd6J761opHoj2QRG.JournalEntryPage.i06rwUkQyvRIB7f6]{Gnomy}</p>"
+                },
+                "99-99": {
+                    "name": "Wysoki elf",
+                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#high-elves]{Wysoki elf}</p>"
+                },
+                "100-100": {
+                    "name": "Leśny elf",
+                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#wood-elves]{Leśny elf}</p>"
+                }
+            }
+        }
+    }
+}

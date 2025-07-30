@@ -41,7 +41,7 @@ let choice2 = [
 let choice3 = [
     {
         type : "armour",
-        name : "Płytowy Napierśnik"
+        name : "Płytowy napierśnik"
     },
     {
         type : "armour",

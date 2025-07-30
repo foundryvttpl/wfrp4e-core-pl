@@ -857,7 +857,7 @@ Hooks.on("i18nInit", async function () {
 		],
 		helf: [
 			"Wyczulony Zmysł (Wzrok)",
-			"Błyskotliwość, Zimna Krew",
+			"Błyskotliwość, Zimna krew",
 			"Widzenie w Ciemności",
 			"Szósty Zmysł, Percepcja Magiczna",
 			"Czytanie/Pisanie",

@@ -1,0 +1,49 @@
+{
+    "label": "Mapy (Ciężkie Dnie i Niespokojne Noce)",
+    "mapping": {
+        "image": "background.src",
+        "notes": {
+            "path": "notes",
+            "converter": "notes"
+        },
+        "units": "grid.units"
+    },
+    "entries": {
+        "Castle Grauenberg": {
+            "id": "RQQBIZT9OyHMFL27",
+            "name": "Zamek Grauenberg",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/castle-grauenberg-unlabeled.webp",
+            "units": "m"
+        },
+        "Niederstadt Haus": {
+            "id": "z7HyTQCvTmIXcy3V",
+            "name": "Niederstadt Haus",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/niederstadt-haus-unlabeled.webp",
+            "units": "m"
+        },
+        "Staatsoper Theatre": {
+            "id": "g07sPqjuua3lSWLk",
+            "name": "Gmach Staatsoper",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/theatre-combined.webp",
+            "units": "m"
+        },
+        "The Arena": {
+            "id": "Jtn8esCP1Z6vYmcT",
+            "name": "Arena",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/th-arena-unlabeled.webp",
+            "units": "m"
+        },
+        "The Courthouse": {
+            "id": "IyP6nRhsQT7tBhVs",
+            "name": "Gmach Sądu",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/courthouse-unlabeled.webp",
+            "units": "m"
+        },
+        "The Three Feathers": {
+            "id": "v4GeyV3QckfV0cdh",
+            "name": "Pod Trzema Piórami",
+            "image": "modules/wfrp4e-core-pl/images/rnhd/three-feathers-unlabeled.webp",
+            "units": "m"
+        }
+    }
+}

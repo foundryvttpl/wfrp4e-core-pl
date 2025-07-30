@@ -14,7 +14,7 @@ let skills = [game.i18n.localize("NAME.Cool"), game.i18n.localize("NAME.Dodge"),
 let skillAdvancements = [15, 15, 15, 15, 10, 15, 10, 10]
 
 let talents = ["Zmysł Bitewny", "Mistrz Walki", "Bitewny Refleks", "Inspirujący", "Nieugięty", "Wódz"]
-let trappings = ["Broń ręczna",  "Tarcza", "Płytowy Napierśnik", "Płytowe Naramienniki", "Hełm płytowy", "Płytowe Nagolenniki"]
+let trappings = ["Broń ręczna",  "Tarcza", "Płytowy napierśnik", "Płytowe Naramienniki", "Hełm płytowy", "Płytowe Nagolenniki"]
 let specialItems = []    
 let items = [];
 

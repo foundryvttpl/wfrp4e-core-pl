@@ -1,6 +1,7 @@
 {
     "label": "Bestiariusz (Pod Bronią)",
     "mapping": {
+        "gmdescription": "system.gmdescription.value",
         "species": "system.details.species.value",
         "gender": "system.details.gender.value",
         "gmnotes": "system.details.gmnotes.value",
@@ -668,7 +669,7 @@
                     "specification": "Bojowy"
                 },
                 "QdgEi8a6TxkIY55d": {
-                    "specification": " "
+                    "specification": ""
                 },
                 "tyb0VoeTQ23WJld6": {
                     "id": "HbrwGhUl0ZXz4kLA",

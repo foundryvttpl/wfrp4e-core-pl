@@ -1,816 +1,816 @@
 {
-    "mapping": {
-        "gmdescription": "system.gmdescription.value",
-        "skills": "system.skills",
-        "talents": "system.talents",
-        "class": "system.class.value",
-        "careergroup": "system.careergroup.value",
-        "trappings": "system.trappings",
-        "specification_label": "system.specification.label",
-        "specification": "system.specification.value",
-        "tests": "system.tests.value",
-        "effects": {
-            "path": "effects",
-            "converter": "effects"
-        },
-        "penalties": "system.penalty.value",
-        "range": "system.range.value",
-        "special": "system.special.value"
+  "label": "Wyposażenie (Archiwa Tom I)",
+  "mapping": {
+    "gmdescription": "system.gmdescription.value",
+    "skills": "system.skills",
+    "talents": "system.talents",
+    "class": "system.class.value",
+    "careergroup": "system.careergroup.value",
+    "trappings": "system.trappings",
+    "specification_label": "system.specification.label",
+    "specification": "system.specification.value",
+    "tests": "system.tests.value",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
     },
-    "folders": {
-        "Careers": "Profesje",
-        "Talents": "Talenty",
-        "Trappings": "Wyposażenie",
-        "Blessings": "Błogosławieństwa",
-        "Uliric": "Ulryk",
-        "Ammunition": "Amunicja",
-        "Armour": "Pancerze",
-        "Weapons": "Broń",
-        "Books and Documents": "Księgi i Dokumenty",
-        "Clothing and Accessories": "Odzież i Akcesoria",
-        "Drugs and Poisons": "Narkotyki i Trucizny",
-        "Food and Drink": "Jedzenie i Napoje",
-        "Herbs and Draughts": "Zioła i Eliksiry",
-        "Miscellaneous": "Różne",
-        "Packs and Containers": "Plecaki i Pojemniki",
-        "Tools and Kits": "Narzędzia i Zestawy",
-        "Chaos Magic": "Magia Chaosu",
-        "Lore of Beasts": "Tradycja Zwierząt",
-        "Lore of Daemonology": "Tradycja Demonologii",
-        "Lore of Death": "Tradycja Śmierci",
-        "Lore of Fire": "Tradycja Ognia",
-        "Lore of Heavens": "Tradycja Niebios",
-        "Lore of Hedgecraft": "Tradycja Guślarstwa",
-        "Lore of Life": "Tradycja Życia",
-        "Lore of Light": "Tradycja Światła",
-        "Lore of Metal": "Tradycja Metalu",
-        "Lore of Shadow": "Tradycja Cieni",
-        "Lore of Witchcraft": "Tradycja Czarownictwa",
-        "Lore of Necromancy": "Tradycja Nekromancji",
-        "Petty Spells": "Magia Prosta"
+    "penalties": "system.penalty.value",
+    "range": "system.range.value",
+    "special": "system.special.value"
+  },
+  "folders": {
+    "Careers": "Profesje",
+    "Talents": "Talenty",
+    "Trappings": "Wyposażenie",
+    "Blessings": "Błogosławieństwa",
+    "Uliric": "Ulryk",
+    "Ammunition": "Amunicja",
+    "Armour": "Pancerze",
+    "Weapons": "Broń",
+    "Books and Documents": "Księgi i Dokumenty",
+    "Clothing and Accessories": "Ubrania i dodatki",
+    "Drugs and Poisons": "Narkotyki i trucizny",
+    "Food and Drink": "Jedzenie i picie",
+    "Herbs and Draughts": "Zioła i mikstury",
+    "Miscellaneous": "Inne",
+    "Packs and Containers": "Pakunki i pojemniki",
+    "Tools and Kits": "Narzędzia pracy i warsztaty",
+    "Chaos Magic": "Magia Chaosu",
+    "Lore of Beasts": "Tradycja Zwierząt",
+    "Lore of Daemonology": "Tradycja Demonologii",
+    "Lore of Death": "Tradycja Śmierci",
+    "Lore of Fire": "Tradycja Ognia",
+    "Lore of Heavens": "Tradycja Niebios",
+    "Lore of Hedgecraft": "Tradycja Guślarstwa",
+    "Lore of Life": "Tradycja Życia",
+    "Lore of Light": "Tradycja Światła",
+    "Lore of Metal": "Tradycja Metalu",
+    "Lore of Shadow": "Tradycja Cieni",
+    "Lore of Witchcraft": "Tradycja Czarownictwa",
+    "Lore of Necromancy": "Tradycja Nekromancji",
+    "Petty Spells": "Magia Prosta"
+  },
+  "entries": {
+    "Badger Botherer": {
+      "id": "fdMWg3AgTt5IDUva",
+      "name": "Borsuczy Nękacz",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.fdMWg3AgTt5IDUva",
+      "careergroup": "Borsuczy Jeździec",
+      "class": "Wojownicy",
+      "skills": [
+        "Tresura (Borsuki)",
+        "Oswajanie",
+        "Unik",
+        "Plotkowanie",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Jeździectwo (Borsuki)",
+        "Rzemiosło (Dowolne)"
+      ],
+      "talents": [
+        "Błyskawiczny Strzał",
+        "Chodu!",
+        "Strzelec Wyborowy",
+        "Urodzony w Siodle"
+      ],
+      "trappings": [
+        "Plecak",
+        "Skórzana kurta",
+        "Proca",
+        "oswojony borsuk z rzędem"
+      ]
     },
-    "entries": {
-        "Badger Botherer": {
-            "id": "fdMWg3AgTt5IDUva",
-            "name": "Borsuczy Nękacz",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.fdMWg3AgTt5IDUva",
-            "careergroup": "Borsuczy Jeździec",
-            "class": "Wojownicy",
-            "skills": [
-                "Tresura (Borsuki)",
-                "Oswajanie",
-                "Unik",
-                "Plotkowanie",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Jeździectwo (Borsuki)",
-                "Rzemiosło (Dowolne)"
-            ],
-            "talents": [
-                "Błyskawiczny Strzał",
-                "Chodu!",
-                "Strzelec Wyborowy",
-                "Urodzony w Siodle"
-            ],
-            "trappings": [
-                "Plecak",
-                "Skórzana kurta",
-                "Proca",
-                "oswojony borsuk z rzędem"
-            ]
-        },
-        "Badger Master": {
-            "id": "LO4SuX4hLbn5l2gH",
-            "name": "Mistrz Borsuczy",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.LO4SuX4hLbn5l2gH",
-            "careergroup": "Borsuczy Jeździec",
-            "class": "Wojownicy",
-            "skills": [
-                "Tresura (Borsuki)",
-                "Oswajanie",
-                "Unik",
-                "Plotkowanie",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Jeździectwo (Borsuki)",
-                "Rzemiosło (Dowolne)",
-                "Opieka nad Zwierzętami",
-                "Charyzma",
-                "Opanowanie",
-                "Odporność",
-                "Broń Biała (Podstawowa)",
-                "Nawigacja",
-                "Broń Zasięgowa (Oplątująca)",
-                "Zastraszanie",
-                "Broń Biała (Kawaleryjska)",
-                "Sztuka Przetrwania",
-                "Tropienie",
-                "Mocna Głowa",
-                "Dowodzenie"
-            ],
-            "talents": [
-                "Hulaka",
-                "Straszny",
-                "Inspirujący",
-                "Morderczy Atak"
-            ],
-            "trappings": [
-                "Duży oswojony borsuk (Borsuk Cętkowany z Krainy Zgromadzenia rozmiaru kuca)",
-                "Giermek (Borsuczy Nękacz)",
-                "Zbroja płytowa",
-                "Poczucie humoru"
-            ]
-        },
-        "Badger Rider": {
-            "id": "pVvwnWt1GvihJf8Q",
-            "name": "Borsuczy Jeździec",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.pVvwnWt1GvihJf8Q",
-            "careergroup": "Borsuczy Jeździec",
-            "class": "Wojownicy",
-            "skills": [
-                "Tresura (Borsuki)",
-                "Oswajanie",
-                "Unik",
-                "Plotkowanie",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Jeździectwo (Borsuki)",
-                "Rzemiosło (Dowolne)",
-                "Opieka nad Zwierzętami",
-                "Charyzma",
-                "Opanowanie",
-                "Odporność",
-                "Broń Biała (Podstawowa)",
-                "Nawigacja",
-                "Broń Zasięgowa (Oplątująca)"
-            ],
-            "talents": [
-                "Celny Strzał",
-                "Włóczykij",
-                "Obieżyświat",
-                "Waleczne Serce"
-            ],
-            "trappings": [
-                "Juki",
-                "Kolet",
-                "Broń zasięgowa (Oplątująca albo Broń Miotana)"
-            ]
-        },
-        "Badger Sergeant": {
-            "id": "DfaF14rEznMwka3m",
-            "name": "Borsuczy Sierżant",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.DfaF14rEznMwka3m",
-            "careergroup": "Borsuczy Jeździec",
-            "class": "Wojownicy",
-            "skills": [
-                "Tresura (Borsuki)",
-                "Oswajanie",
-                "Unik",
-                "Plotkowanie",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Jeździectwo (Borsuki)",
-                "Rzemiosło (Dowolne)",
-                "Opieka nad Zwierzętami",
-                "Charyzma",
-                "Opanowanie",
-                "Odporność",
-                "Broń Biała (Podstawowa)",
-                "Nawigacja",
-                "Broń Zasięgowa (Oplątująca)",
-                "Zastraszanie",
-                "Broń Biała (Kawaleryjska)",
-                "Sztuka Przetrwania",
-                "Tropienie"
-            ],
-            "talents": [
-                "Rozproszenie Uwagi",
-                "Nieugięty",
-                "Woltyżerka",
-                "Szczur Tunelowy"
-            ],
-            "trappings": [
-                "Kropierz na borsuka (2PP na głowie i korpusie)",
-                "Broń biała (Podstawowa albo Kawaleryjska)"
-            ]
-        },
-        "Field Warden": {
-            "id": "c4SxYRUNDABuu3Ru",
-            "name": "Strażniczka Pól",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.c4SxYRUNDABuu3Ru",
-            "careergroup": "Strażniczka Pól",
-            "class": "Wędrowcy",
-            "skills": [
-                "Plotkowanie",
-                "Intuicja",
-                "Wiedza (Kraina Zgromadzenia)",
-                "Nawigacja",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Rzemiosło (Dowolne)",
-                "Skradanie (Wieś)",
-                "Charyzma",
-                "Mocna Głowa",
-                "Unik",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Sekretne Znaki (Zwiadowców)"
-            ],
-            "talents": [
-                "Celny Strzał",
-                "Musztra",
-                "Nos do Kłopotów",
-                "Wyczucie Kierunku"
-            ],
-            "trappings": [
-                "Skórzana kurta",
-                "Broń ręczna",
-                "Latarnia z oliwą"
-            ]
-        },
-        "Field Warden Captain": {
-            "id": "kwU1Ajl5GoBee34j",
-            "name": "Kapitan Strażniczek Pól",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.kwU1Ajl5GoBee34j",
-            "careergroup": "Strażniczka Pól",
-            "class": "Wędrowcy",
-            "skills": [
-                "Plotkowanie",
-                "Intuicja",
-                "Wiedza (Kraina Zgromadzenia)",
-                "Nawigacja",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Rzemiosło (Dowolne)",
-                "Skradanie (Wieś)",
-                "Charyzma",
-                "Mocna Głowa",
-                "Unik",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Sekretne Znaki (Zwiadowców)",
-                "Opanowanie",
-                "Odporność",
-                "Wiedza (Nekromancja)",
-                "Zastawianie Pułapek",
-                "Dowodzenie",
-                "Wiedza (Sztuka Wojenna)"
-            ],
-            "talents": [
-                "Nieustraszony",
-                "Nienawiść (Nieumarli)",
-                "Inspirujący",
-                "Krzepki",
-                "Znawca (teren Krainy Zgromadzenia)"
-            ],
-            "trappings": [
-                "Garnizon doświadczonych Strażniczek Pól",
-                "Poważanie społeczności"
-            ]
-        },
-        "Field Warden Sergeant": {
-            "id": "lFb44eROpT8Sr6To",
-            "name": "Sierżant Strażniczek Pól",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.lFb44eROpT8Sr6To",
-            "careergroup": "Strażniczka Pól",
-            "class": "Wędrowcy",
-            "skills": [
-                "Plotkowanie",
-                "Intuicja",
-                "Wiedza (Kraina Zgromadzenia)",
-                "Nawigacja",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Rzemiosło (Dowolne)",
-                "Skradanie (Wieś)",
-                "Charyzma",
-                "Mocna Głowa",
-                "Unik",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Sekretne Znaki (Zwiadowców)",
-                "Opanowanie",
-                "Odporność",
-                "Wiedza (Nekromancja)",
-                "Zastawianie Pułapek"
-            ],
-            "talents": [
-                "Bardzo Szybki",
-                "Twardziel",
-                "Widzenie w Ciemności",
-                "Włóczykij"
-            ],
-            "trappings": [
-                "Dobrej jakości kaftan kolczy",
-                "Oddział Strażniczek Nowicjuszek"
-            ]
-        },
-        "Forest Ranger": {
-            "id": "HozlnIvSPqv6qYlr",
-            "name": "Leśny Zwiadowca",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.HozlnIvSPqv6qYlr",
-            "careergroup": "Wędrowny Duch",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Wiedza (Bestie)",
-                "Nawigacja",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Broń Zasięgowa (Łuk)",
-                "Skradanie (Dowolne)",
-                "Rzemiosło (Łuczarz)"
-            ],
-            "talents": [
-                "Celny Strzał",
-                "Bardzo Szybki",
-                "Cień",
-                "Doświadczony Wędrowiec (Lasy)"
-            ],
-            "trappings": [
-                "Plecak",
-                "Płaszcz z kapturem",
-                "Łuk długi i 10 strzał",
-                "Narzędzia pracy (Łuczarza)"
-            ]
-        },
-        "Forest's Wrath": {
-            "id": "N1EuBkdCZYotyPOq",
-            "name": "Gniew Lasu",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.N1EuBkdCZYotyPOq",
-            "careergroup": "Wędrowny Duch",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Wiedza (Bestie)",
-                "Nawigacja",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Broń Zasięgowa (Łuk)",
-                "Skradanie (Dowolne)",
-                "Rzemiosło (Łuczarz)",
-                "Atletyka",
-                "Oswajanie",
-                "Broń Biała (Podstawowa)",
-                "Sekretne Znaki (Łowców)",
-                "Zastawianie Pułapek",
-                "Tropienie",
-                "Opanowanie",
-                "Odporność",
-                "Unik",
-                "Pływanie",
-                "Zastraszanie",
-                "Język (Dowolny)"
-            ],
-            "talents": [
-                "Prosto Między Oczy",
-                "Nienawiść (Dowolne)",
-                "Snajper",
-                "Morderczy Atak"
-            ],
-            "trappings": [
-                "Trofeum z legendarnego wroga",
-                "Charakterystyczne elfie strzały (z przeznaczeniem na godny cel)",
-                "Budząca lęk reputacja"
-            ]
-        },
-        "Ghost Strider": {
-            "id": "A438IiStelJMrIzc",
-            "name": "Wędrowny Duch",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.A438IiStelJMrIzc",
-            "careergroup": "Wędrowny Duch",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Wiedza (Bestie)",
-                "Nawigacja",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Broń Zasięgowa (Łuk)",
-                "Skradanie (Dowolne)",
-                "Rzemiosło (Łuczarz)",
-                "Atletyka",
-                "Oswajanie",
-                "Broń Biała (Podstawowa)",
-                "Sekretne Znaki (Łowców)",
-                "Zastawianie Pułapek",
-                "Pływanie",
-                "Tropienie"
-            ],
-            "talents": [
-                "Posłuch u Zwierząt",
-                "Błyskawiczny Strzał",
-                "Wyczucie Kierunku",
-                "Wyborny Wspinacz"
-            ],
-            "trappings": [
-                "Własnoręcznie wykonany elfi łuk i 10 strzał",
-                "Wybór pułapek",
-                "Skórzana kurta"
-            ]
-        },
-        "Hold Runner": {
-            "id": "fGgDpDWP5d0cDcWd",
-            "name": "Gończyni z Twierdzy",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.fGgDpDWP5d0cDcWd",
-            "careergroup": "Zwiadowczyni z Karaku",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Unik",
-                "Odporność",
-                "Rzemiosło (Kartograf)",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Wioślarstwo"
-            ],
-            "talents": [
-                "Nieubłagany",
-                "Wyczucie Kierunku",
-                "Doświadczony Wędrowiec (Dowolne)",
-                "Mocne Plecy"
-            ],
-            "trappings": [
-                "Plecak",
-                "Broń ręczna",
-                "Skórzana kurta",
-                "Narzędzia pracy (Kartografa)"
-            ]
-        },
-        "Karak Mountain Strider": {
-            "id": "Redw0hR56YLisVVs",
-            "name": "Zwiadowczyni z Karaku",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.Redw0hR56YLisVVs",
-            "careergroup": "Zwiadowczyni z Karaku",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Unik",
-                "Odporność",
-                "Rzemiosło (Kartograf)",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Wioślarstwo",
-                "Oswajanie",
-                "Intuicja",
-                "Broń Zasięgowa (Prochowa)",
-                "Sekretne Znaki (Zwiadowców)",
-                "Sekretne Znaki (Łowców)",
-                "Tropienie",
-                "Wiedza (Inżynier)",
-                "Skradanie (Podziemia)",
-                "Opanowanie",
-                "Język (Dowolny)"
-            ],
-            "talents": [
-                "Złota Rączka",
-                "Znawca (Twierdze i Szlaki Krasnoludzkie)",
-                "Krzepki",
-                "Wytrwały"
-            ],
-            "trappings": [
-                "4 uczniów Gończynie z Twierdzy",
-                "Mapy",
-                "Pamiątki z wielu podróży"
-            ]
-        },
-        "Karak Pathkeeper": {
-            "id": "jixfk0Zo7MQDLGj9",
-            "name": "Strażniczka Dróg z Karaku",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.jixfk0Zo7MQDLGj9",
-            "careergroup": "Zwiadowczyni z Karaku",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Unik",
-                "Odporność",
-                "Rzemiosło (Kartograf)",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Wioślarstwo",
-                "Oswajanie",
-                "Intuicja",
-                "Broń Zasięgowa (Prochowa)",
-                "Sekretne Znaki (Zwiadowców)",
-                "Sekretne Znaki (Łowców)",
-                "Tropienie",
-                "Wiedza (Inżynier)",
-                "Skradanie (Podziemia)"
-            ],
-            "talents": [
-                "Celny Strzał",
-                "Walka w Ciasnocie",
-                "Pilot Rzeczny LUB Artylerzysta",
-                "Silne Nogi"
-            ],
-            "trappings": [
-                "Narzędzia pracy (Kamieniarza)"
-            ]
-        },
-        "Karak Ranger": {
-            "id": "fRkh5R4ocyLgOwzO",
-            "name": "Zwiadowczyni z Karaku",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.fRkh5R4ocyLgOwzO",
-            "careergroup": "Zwiadowczyni z Karaku",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Unik",
-                "Odporność",
-                "Rzemiosło (Kartograf)",
-                "Broń Biała (Podstawowa)",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Wioślarstwo",
-                "Oswajanie",
-                "Intuicja",
-                "Broń Zasięgowa (Prochowa)",
-                "Sekretne Znaki (Zwiadowca)",
-                "Sekretne Znaki (Łowców)",
-                "Tropienie"
-            ],
-            "talents": [
-                "Silny Cios",
-                "Wyborny Wspinacz",
-                "Nos do Kłopotów",
-                "Włóczykij"
-            ],
-            "trappings": [
-                "Broń prochowa z Amunicją",
-                "Kotwiczka z liną"
-            ]
-        },
-        "Novice Warden": {
-            "id": "eTb72IpSFjQGwhBH",
-            "name": "Strażniczka Nowicjuszka",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.eTb72IpSFjQGwhBH",
-            "careergroup": "Strażniczka Pól",
-            "class": "Wędrowcy",
-            "skills": [
-                "Plotkowanie",
-                "Intuicja",
-                "Wiedza (Kraina Zgromadzenia)",
-                "Nawigacja",
-                "Percepcja",
-                "Broń Zasięgowa (Proca)",
-                "Rzemiosło (Dowolne)",
-                "Skradanie (Wieś)"
-            ],
-            "talents": [
-                "Cios Mierzony",
-                "Rozproszenie Uwagi",
-                "Błyskawiczny Strzał",
-                "Waleczne Serce"
-            ],
-            "trappings": [
-                "Plecak",
-                "Namiot",
-                "Mapa lokalnej okolicy",
-                "Proca z 10 kamieniami",
-                "Narzędzia pracy (wybranego Rzemiosła)"
-            ]
-        },
-        "Windwraith": {
-            "id": "MGG91PNtsZMqKJO0",
-            "name": "Wietrzna Zjawa",
-            "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.MGG91PNtsZMqKJO0",
-            "careergroup": "Wędrowny Duch",
-            "class": "Wędrowcy",
-            "skills": [
-                "Wspinaczka",
-                "Wiedza (Bestie)",
-                "Nawigacja",
-                "Sztuka Przetrwania",
-                "Percepcja",
-                "Broń Zasięgowa (Łuk)",
-                "Skradanie (Dowolne)",
-                "Rzemiosło (Łuczarz)",
-                "Atletyka",
-                "Oswajanie",
-                "Broń Biała (Podstawowa)",
-                "Sekretne Znaki (Łowców)",
-                "Zastawianie Pułapek",
-                "Tropienie",
-                "Opanowanie",
-                "Odporność",
-                "Unik",
-                "Pływanie"
-            ],
-            "talents": [
-                "Na Cztery Łapy",
-                "Zmysł Bitewny",
-                "Silny Cios",
-                "Strzał w Dziesiątkę"
-            ],
-            "trappings": [
-                "Elfi łuk i Zbroja skórzana z co najmniej jedną Zaletą każde",
-                "10 elfich strzał"
-            ]
-        },
-        "Youngblood": {
-            "id": "jAvJTMLUiY8WtUX5",
-            "name": "Młoda Krew",
-            "description": "<p>Twoja rodzina jest uważana za nowo przybyłych do Laurelornu i traktowana z lekceważeniem przez Eonirów ze starszych wspól not. Zawsze jesteś uważany za osobę o niższym Statusie niż inni Eonirowie, chyba że oni również posiadają Talent Młoda Krew. Wywodzące się z takich rodzin elfy mogą w drugim pokoleniu pozbyć się tego Talentu, jeśli pomyślnie przejdą próbę i dołączą do wspólnoty Śródleśnych.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.jAvJTMLUiY8WtUX5",
-            "effects": {
-                "qZzCRWTaBLP0BNl8": {
-                    "id": "qZzCRWTaBLP0BNl8",
-                    "name": "Młoda Krew",
-                    "scriptData": [
-                        {
-                            "id": "qZzCRWTaBLP0BNl8",
-                            "name": "Testy społeczne z innymi Eonirami",
-                            "script": "[Script.956dUb5sd6OtbWZR]",
-                            "hideScript": "[Script.6Fe8M5MdklKS2olx]"
-                        }
-                    ]
-                }
-            },
-            "tests": "Testy społeczne z innymi Eonirami"
-        },
-        "Bearded Axe": {
-            "id": "kPmmaj7qzM3O6pY8",
-            "name": "Topór brodaty",
-            "description": "<p>Ulubiony oręż wielu krasnoludów, chętnie wykorzystywany w boju. Głowica tego topora zakrzywia się w dół, w stronę trzonka. W ten sposób powstaje odstęp między ostrzem a trzonkiem, który doskonale nadaje się do wyrywania broni z rąk niebacznych przeciwników.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.kPmmaj7qzM3O6pY8"
-        },
-        "Blackbriar Javelin": {
-            "id": "qBqfo35CFyWAAAnX",
-            "name": "Oszczep czarnocierni",
-            "description": "<p> Ta żywa broń powoli ocieka zabójczą trucizną. Wykonana jest z drzew, których duchy stały się spaczone i złośliwe. Podobno ta broń sprowadza nieszczęście. Z pewnością to prawda dla tych, którzy muszą się zmierzyć z nią w boju.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.qBqfo35CFyWAAAnX",
-            "effects": {
-                "TVxG7u4tG9JNIXNj": {
-                    "id": "TVxG7u4tG9JNIXNj",
-                    "name": "Zatrucie",
-                    "scriptData": [
-                        {
-                            "id": "TVxG7u4tG9JNIXNj",
-                            "name": "Zatrucie",
-                            "script": "[Script.GZFsuynUhgZqwTGo]"
-                        }
-                    ]
-                }
-            },
-            "special": "Tak długo, jak każdej nocy może zbierać siły, tkwiąc w żyznej ziemi, oszczep czarnocierni zadaje 1 poziom Stanu Zatrucie każ demu celowi, który straci przynajmniej 1 Ranę od ataku. Można się temu oprzeć, wykonując <strong>Wymagający (+0) Test Odporności</strong>."
-        },
-        "Cinderblast Bomb": {
-            "id": "nyUbN0JaeXNQUbUT",
-            "name": "Bomba żużlowa",
-            "description": "<p>Ta zabójcza broń jest niezastąpiona w walkach tunelowych, które toczą się głęboko pod Starym Światem, gdzie krasnoludy desperacko odpierają ataki skavenów, goblinów i jeszcze gorszych stworów. Bomby te zazwyczaj ciskane są w gęstwę sił wroga. Eksplodują w ognistym podmuchu i odłamkami. To przerażający widok.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.nyUbN0JaeXNQUbUT"
-        },
-        "Drakefire Pistol": {
-            "id": "XurSURwIt8pnoOlJ",
-            "name": "Pistolet smoczego ognia",
-            "description": "<p> Przemyślny przykład krasnoludzkiego rzemiosła. Pistolet smoczego ognia ostrzeliwuje cele pociskami zapalającymi. Szczegóły budowy tej broni to pieczołowicie strzeżony przez krasnoludy sekret, ale wątpliwe, by jakakolwiek inna rasa zdołała skopiować tę skomplikowaną konstrukcję, nawet gdyby pojęła jej schemat. To ulubiony oręż krasnoludów, które ścierają się ze skavenami głęboko pod ziemią, ponieważ ich plugawa sierść nader satysfakcjonująco zajmuje się ogniem.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.XurSURwIt8pnoOlJ",
-            "effects": {
-                "3FkboTu03MTUm5qY": {
-                    "id": "3FkboTu03MTUm5qY",
-                    "name": "Pistolet smoczego ognia",
-                    "scriptData": [
-                        {
-                            "id": "3FkboTu03MTUm5qY",
-                            "name": "Pistolet smoczego ognia",
-                            "script": "[Script.gh2KS1prBKcsSK6M]"
-                        }
-                    ]
-                }
-            },
-            "special": "Przy każdym Trafieniu Krytycznym z pistoletów smoczego ognia cel otrzymuje również Stan Podpalenie."
-        },
-        "Drakefire Shot": {
-            "id": "gxiMS94QBeyURKfJ",
-            "name": "Ładunek smoczego ognia",
-            "description": "<p>Amunicja zapalająca wykorzystywana w pistoletach smoczego ognia jest zarówno niebezpieczna, jak i rzadka. Faktycznie na daje się do użytku tylko z tą bronią. Jednakże można ją załado wać do dowolnej broni prochowej, przy czym zadziała dokład nie jeden raz i wybuchnie w rękach strzelającego. Rozwiąż to tak, jakby przy każdym strzale następował Rzut Pechowy.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.gxiMS94QBeyURKfJ",
-            "effects": {
-                "7LWsyK7nuYHOnlII": {
-                    "id": "7LWsyK7nuYHOnlII",
-                    "name": "Ładunek smoczego ognia",
-                    "scriptData": [
-                        {
-                            "id": "7LWsyK7nuYHOnlII",
-                            "name": "Niewypał",
-                            "script": "[Script.8RNziYGGb4sp3BGQ]"
-                        }
-                    ]
-                }
+    "Badger Master": {
+      "id": "LO4SuX4hLbn5l2gH",
+      "name": "Mistrz Borsuczy",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.LO4SuX4hLbn5l2gH",
+      "careergroup": "Borsuczy Jeździec",
+      "class": "Wojownicy",
+      "skills": [
+        "Tresura (Borsuki)",
+        "Oswajanie",
+        "Unik",
+        "Plotkowanie",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Jeździectwo (Borsuki)",
+        "Rzemiosło (Dowolne)",
+        "Opieka nad Zwierzętami",
+        "Charyzma",
+        "Opanowanie",
+        "Odporność",
+        "Broń Biała (Podstawowa)",
+        "Nawigacja",
+        "Broń Zasięgowa (Oplątująca)",
+        "Zastraszanie",
+        "Broń Biała (Kawaleryjska)",
+        "Sztuka Przetrwania",
+        "Tropienie",
+        "Mocna Głowa",
+        "Dowodzenie"
+      ],
+      "talents": [
+        "Hulaka",
+        "Straszny",
+        "Inspirujący",
+        "Morderczy Atak"
+      ],
+      "trappings": [
+        "Duży oswojony borsuk (Borsuk Cętkowany z Krainy Zgromadzenia rozmiaru kuca)",
+        "Giermek (Borsuczy Nękacz)",
+        "Zbroja płytowa",
+        "Poczucie humoru"
+      ]
+    },
+    "Badger Rider": {
+      "id": "pVvwnWt1GvihJf8Q",
+      "name": "Borsuczy Jeździec",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.pVvwnWt1GvihJf8Q",
+      "careergroup": "Borsuczy Jeździec",
+      "class": "Wojownicy",
+      "skills": [
+        "Tresura (Borsuki)",
+        "Oswajanie",
+        "Unik",
+        "Plotkowanie",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Jeździectwo (Borsuki)",
+        "Rzemiosło (Dowolne)",
+        "Opieka nad Zwierzętami",
+        "Charyzma",
+        "Opanowanie",
+        "Odporność",
+        "Broń Biała (Podstawowa)",
+        "Nawigacja",
+        "Broń Zasięgowa (Oplątująca)"
+      ],
+      "talents": [
+        "Celny Strzał",
+        "Włóczykij",
+        "Obieżyświat",
+        "Waleczne Serce"
+      ],
+      "trappings": [
+        "Juki",
+        "Kolet",
+        "Broń zasięgowa (Oplątująca albo Broń Miotana)"
+      ]
+    },
+    "Badger Sergeant": {
+      "id": "DfaF14rEznMwka3m",
+      "name": "Borsuczy Sierżant",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.W9OXP7I8Y9CX5gvG]{Borsuczy Jeździec}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.DfaF14rEznMwka3m",
+      "careergroup": "Borsuczy Jeździec",
+      "class": "Wojownicy",
+      "skills": [
+        "Tresura (Borsuki)",
+        "Oswajanie",
+        "Unik",
+        "Plotkowanie",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Jeździectwo (Borsuki)",
+        "Rzemiosło (Dowolne)",
+        "Opieka nad Zwierzętami",
+        "Charyzma",
+        "Opanowanie",
+        "Odporność",
+        "Broń Biała (Podstawowa)",
+        "Nawigacja",
+        "Broń Zasięgowa (Oplątująca)",
+        "Zastraszanie",
+        "Broń Biała (Kawaleryjska)",
+        "Sztuka Przetrwania",
+        "Tropienie"
+      ],
+      "talents": [
+        "Rozproszenie Uwagi",
+        "Nieugięty",
+        "Woltyżerka",
+        "Szczur Kanałowy"
+      ],
+      "trappings": [
+        "Kropierz na borsuka (2PP na głowie i korpusie)",
+        "Broń biała (Podstawowa albo Kawaleryjska)"
+      ]
+    },
+    "Field Warden": {
+      "id": "c4SxYRUNDABuu3Ru",
+      "name": "Strażniczka Pól",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.c4SxYRUNDABuu3Ru",
+      "careergroup": "Strażniczka Pól",
+      "class": "Wędrowcy",
+      "skills": [
+        "Plotkowanie",
+        "Intuicja",
+        "Wiedza (Kraina Zgromadzenia)",
+        "Nawigacja",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Rzemiosło (Dowolne)",
+        "Skradanie (Wieś)",
+        "Charyzma",
+        "Mocna Głowa",
+        "Unik",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Sekretne Znaki (Zwiadowców)"
+      ],
+      "talents": [
+        "Celny Strzał",
+        "Musztra",
+        "Nos do Kłopotów",
+        "Wyczucie Kierunku"
+      ],
+      "trappings": [
+        "Skórzana kurta",
+        "Broń ręczna",
+        "Latarnia z oliwą"
+      ]
+    },
+    "Field Warden Captain": {
+      "id": "kwU1Ajl5GoBee34j",
+      "name": "Kapitan Strażniczek Pól",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.kwU1Ajl5GoBee34j",
+      "careergroup": "Strażniczka Pól",
+      "class": "Wędrowcy",
+      "skills": [
+        "Plotkowanie",
+        "Intuicja",
+        "Wiedza (Kraina Zgromadzenia)",
+        "Nawigacja",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Rzemiosło (Dowolne)",
+        "Skradanie (Wieś)",
+        "Charyzma",
+        "Mocna Głowa",
+        "Unik",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Sekretne Znaki (Zwiadowców)",
+        "Opanowanie",
+        "Odporność",
+        "Wiedza (Nekromancja)",
+        "Zastawianie Pułapek",
+        "Dowodzenie",
+        "Wiedza (Sztuka Wojenna)"
+      ],
+      "talents": [
+        "Nieustraszony",
+        "Nienawiść (Nieumarli)",
+        "Inspirujący",
+        "Krzepki",
+        "Znawca (teren Krainy Zgromadzenia)"
+      ],
+      "trappings": [
+        "Garnizon doświadczonych Strażniczek Pól",
+        "Poważanie społeczności"
+      ]
+    },
+    "Field Warden Sergeant": {
+      "id": "lFb44eROpT8Sr6To",
+      "name": "Sierżant Strażniczek Pól",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.lFb44eROpT8Sr6To",
+      "careergroup": "Strażniczka Pól",
+      "class": "Wędrowcy",
+      "skills": [
+        "Plotkowanie",
+        "Intuicja",
+        "Wiedza (Kraina Zgromadzenia)",
+        "Nawigacja",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Rzemiosło (Dowolne)",
+        "Skradanie (Wieś)",
+        "Charyzma",
+        "Mocna Głowa",
+        "Unik",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Sekretne Znaki (Zwiadowców)",
+        "Opanowanie",
+        "Odporność",
+        "Wiedza (Nekromancja)",
+        "Zastawianie Pułapek"
+      ],
+      "talents": [
+        "Bardzo Szybki",
+        "Twardziel",
+        "Widzenie w Ciemności",
+        "Włóczykij"
+      ],
+      "trappings": [
+        "Dobrej jakości kaftan kolczy",
+        "Oddział Strażniczek Nowicjuszek"
+      ]
+    },
+    "Forest Ranger": {
+      "id": "HozlnIvSPqv6qYlr",
+      "name": "Leśny Zwiadowca",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.HozlnIvSPqv6qYlr",
+      "careergroup": "Wędrowny Duch",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Wiedza (Bestie)",
+        "Nawigacja",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Broń Zasięgowa (Łuk)",
+        "Skradanie (Dowolne)",
+        "Rzemiosło (Łuczarz)"
+      ],
+      "talents": [
+        "Celny Strzał",
+        "Bardzo Szybki",
+        "Cień",
+        "Doświadczony Wędrowiec (Lasy)"
+      ],
+      "trappings": [
+        "Plecak",
+        "Płaszcz z kapturem",
+        "Łuk długi i 10 strzał",
+        "Narzędzia pracy (Łuczarza)"
+      ]
+    },
+    "Forest's Wrath": {
+      "id": "N1EuBkdCZYotyPOq",
+      "name": "Gniew Lasu",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.N1EuBkdCZYotyPOq",
+      "careergroup": "Wędrowny Duch",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Wiedza (Bestie)",
+        "Nawigacja",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Broń Zasięgowa (Łuk)",
+        "Skradanie (Dowolne)",
+        "Rzemiosło (Łuczarz)",
+        "Atletyka",
+        "Oswajanie",
+        "Broń Biała (Podstawowa)",
+        "Sekretne Znaki (Łowców)",
+        "Zastawianie Pułapek",
+        "Tropienie",
+        "Opanowanie",
+        "Odporność",
+        "Unik",
+        "Pływanie",
+        "Zastraszanie",
+        "Język (Dowolny)"
+      ],
+      "talents": [
+        "Prosto Między Oczy",
+        "Nienawiść (Dowolne)",
+        "Snajper",
+        "Morderczy Atak"
+      ],
+      "trappings": [
+        "Trofeum z legendarnego wroga",
+        "Charakterystyczne elfie strzały (z przeznaczeniem na godny cel)",
+        "Budząca lęk reputacja"
+      ]
+    },
+    "Ghost Strider": {
+      "id": "A438IiStelJMrIzc",
+      "name": "Wędrowny Duch",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.A438IiStelJMrIzc",
+      "careergroup": "Wędrowny Duch",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Wiedza (Bestie)",
+        "Nawigacja",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Broń Zasięgowa (Łuk)",
+        "Skradanie (Dowolne)",
+        "Rzemiosło (Łuczarz)",
+        "Atletyka",
+        "Oswajanie",
+        "Broń Biała (Podstawowa)",
+        "Sekretne Znaki (Łowców)",
+        "Zastawianie Pułapek",
+        "Pływanie",
+        "Tropienie"
+      ],
+      "talents": [
+        "Posłuch u Zwierząt",
+        "Błyskawiczny Strzał",
+        "Wyczucie Kierunku",
+        "Wyborny Wspinacz"
+      ],
+      "trappings": [
+        "Własnoręcznie wykonany elfi łuk i 10 strzał",
+        "Wybór pułapek",
+        "Skórzana kurta"
+      ]
+    },
+    "Hold Runner": {
+      "id": "fGgDpDWP5d0cDcWd",
+      "name": "Gończyni z Twierdzy",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.fGgDpDWP5d0cDcWd",
+      "careergroup": "Zwiadowczyni z Karaku",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Unik",
+        "Odporność",
+        "Rzemiosło (Kartografia)",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Wioślarstwo"
+      ],
+      "talents": [
+        "Nieubłagany",
+        "Wyczucie Kierunku",
+        "Doświadczony Wędrowiec (Wybrany Teren)",
+        "Mocne Plecy"
+      ],
+      "trappings": [
+        "Plecak",
+        "Broń ręczna",
+        "Skórzana kurta",
+        "Narzędzia pracy (Kartografa)"
+      ]
+    },
+    "Karak Mountain Strider": {
+      "id": "Redw0hR56YLisVVs",
+      "name": "Zwiadowczyni z Karaku",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.Redw0hR56YLisVVs",
+      "careergroup": "Zwiadowczyni z Karaku",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Unik",
+        "Odporność",
+        "Rzemiosło (Kartografia)",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Wioślarstwo",
+        "Oswajanie",
+        "Intuicja",
+        "Broń Zasięgowa (Prochowa)",
+        "Sekretne Znaki (Zwiadowców)",
+        "Sekretne Znaki (Łowców)",
+        "Tropienie",
+        "Wiedza (Inżynieria)",
+        "Skradanie (Podziemia)",
+        "Opanowanie",
+        "Język (Dowolny)"
+      ],
+      "talents": [
+        "Złota Rączka",
+        "Znawca (Twierdze i Szlaki Krasnoludzkie)",
+        "Krzepki",
+        "Wytrwały"
+      ],
+      "trappings": [
+        "4 uczniów Gończynie z Twierdzy",
+        "Mapy",
+        "Pamiątki z wielu podróży"
+      ]
+    },
+    "Karak Pathkeeper": {
+      "id": "jixfk0Zo7MQDLGj9",
+      "name": "Strażniczka Dróg z Karaku",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.jixfk0Zo7MQDLGj9",
+      "careergroup": "Zwiadowczyni z Karaku",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Unik",
+        "Odporność",
+        "Rzemiosło (Kartografia)",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Wioślarstwo",
+        "Oswajanie",
+        "Intuicja",
+        "Broń Zasięgowa (Prochowa)",
+        "Sekretne Znaki (Zwiadowców)",
+        "Sekretne Znaki (Łowców)",
+        "Tropienie",
+        "Wiedza (Inżynieria)",
+        "Skradanie (Podziemia)"
+      ],
+      "talents": [
+        "Celny Strzał",
+        "Walka w Ciasnocie",
+        "Pilot Rzeczny LUB Artylerzysta",
+        "Silne Nogi"
+      ],
+      "trappings": [
+        "Narzędzia pracy (Kamieniarza)"
+      ]
+    },
+    "Karak Ranger": {
+      "id": "fRkh5R4ocyLgOwzO",
+      "name": "Zwiadowczyni z Karaku",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.fRkh5R4ocyLgOwzO",
+      "careergroup": "Zwiadowczyni z Karaku",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Unik",
+        "Odporność",
+        "Rzemiosło (Kartografia)",
+        "Broń Biała (Podstawowa)",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Wioślarstwo",
+        "Oswajanie",
+        "Intuicja",
+        "Broń Zasięgowa (Prochowa)",
+        "Sekretne Znaki (Zwiadowców)",
+        "Sekretne Znaki (Łowców)",
+        "Tropienie"
+      ],
+      "talents": [
+        "Silny Cios",
+        "Wyborny Wspinacz",
+        "Nos do Kłopotów",
+        "Włóczykij"
+      ],
+      "trappings": [
+        "Broń prochowa z Amunicją",
+        "Kotwiczka z liną"
+      ]
+    },
+    "Novice Warden": {
+      "id": "eTb72IpSFjQGwhBH",
+      "name": "Strażniczka Nowicjuszka",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.qFs945qryMKHavCn]{Strażniczka Pól}</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.eTb72IpSFjQGwhBH",
+      "careergroup": "Strażniczka Pól",
+      "class": "Wędrowcy",
+      "skills": [
+        "Plotkowanie",
+        "Intuicja",
+        "Wiedza (Kraina Zgromadzenia)",
+        "Nawigacja",
+        "Percepcja",
+        "Broń Zasięgowa (Proca)",
+        "Rzemiosło (Dowolne)",
+        "Skradanie (Wieś)"
+      ],
+      "talents": [
+        "Cios Mierzony",
+        "Rozproszenie Uwagi",
+        "Błyskawiczny Strzał",
+        "Waleczne Serce"
+      ],
+      "trappings": [
+        "Plecak",
+        "Namiot",
+        "Mapa lokalnej okolicy",
+        "Proca z 10 kamieniami",
+        "Narzędzia Pracy (Odpowiednie dla Rzemiosła)"
+      ]
+    },
+    "Windwraith": {
+      "id": "MGG91PNtsZMqKJO0",
+      "name": "Wietrzna Zjawa",
+      "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.zcIpfDRNoyIl6d9e]{Wędrowny Duch}</p><p></p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.MGG91PNtsZMqKJO0",
+      "careergroup": "Wędrowny Duch",
+      "class": "Wędrowcy",
+      "skills": [
+        "Wspinaczka",
+        "Wiedza (Bestie)",
+        "Nawigacja",
+        "Sztuka Przetrwania",
+        "Percepcja",
+        "Broń Zasięgowa (Łuk)",
+        "Skradanie (Dowolne)",
+        "Rzemiosło (Łuczarz)",
+        "Atletyka",
+        "Oswajanie",
+        "Broń Biała (Podstawowa)",
+        "Sekretne Znaki (Łowców)",
+        "Zastawianie Pułapek",
+        "Tropienie",
+        "Opanowanie",
+        "Odporność",
+        "Unik",
+        "Pływanie"
+      ],
+      "talents": [
+        "Na Cztery Łapy",
+        "Zmysł Bitewny",
+        "Silny Cios",
+        "Strzał w Dziesiątkę"
+      ],
+      "trappings": [
+        "Elfi łuk i Zbroja skórzana z co najmniej jedną Zaletą każde",
+        "10 elfich strzał"
+      ]
+    },
+    "Youngblood": {
+      "id": "jAvJTMLUiY8WtUX5",
+      "name": "Młoda Krew",
+      "description": "<p>Twoja rodzina jest uważana za nowo przybyłych do Laurelornu i traktowana z lekceważeniem przez Eonirów ze starszych wspól not. Zawsze jesteś uważany za osobę o niższym Statusie niż inni Eonirowie, chyba że oni również posiadają Talent Młoda Krew. Wywodzące się z takich rodzin elfy mogą w drugim pokoleniu pozbyć się tego Talentu, jeśli pomyślnie przejdą próbę i dołączą do wspólnoty Śródleśnych.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.jAvJTMLUiY8WtUX5",
+      "effects": {
+        "qZzCRWTaBLP0BNl8": {
+          "id": "qZzCRWTaBLP0BNl8",
+          "name": "Młoda Krew",
+          "scriptData": [
+            {
+              "id": "qZzCRWTaBLP0BNl8",
+              "name": "Testy społeczne z innymi Eonirami",
+              "script": "[Script.956dUb5sd6OtbWZR]",
+              "hideScript": "[Script.6Fe8M5MdklKS2olx]"
             }
-        },
-        "Dwarf Crossbow": {
-            "id": "aQE698skxSqkrdmO",
-            "name": "Krasnoludzka kusza",
-            "description": "<p>Różnica między kuszami krasnoludzkimi i imperialnymi nie jest tak wyraźna, jak w przypadku ich broni prochowych, nie mniej krasnoludzkie kusze są konstruowane ze znacznie wyż szym standardem, niż jest w stanie uzyskać jakikolwiek ludzki rzemieślnik. W rezultacie jest to broń precyzyjniejsza.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.aQE698skxSqkrdmO"
-        },
-        "Dwarf Hammer": {
-            "id": "Fs7tl8V78Ie4INPX",
-            "name": "Młot krasnoludzki",
-            "description": "<p> Krasnoludy znane są z tego, że używają tych samych młotów w kuźniach w czasie pokoju, jak i na polach bitew w czasie wojny. Te ciężkie narzędzia świetnie się nadają do rozbijania nawet najtwardszych orczych czerepów.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.Fs7tl8V78Ie4INPX"
-        },
-        "Dwarf Handgun": {
-            "id": "BIW1jibsj1mZTKq0",
-            "name": "Krasnoludzka rusznica",
-            "description": "<p>Krasnoludy często załamują ręce nad tym, co uchodzi za sztukę rusznikarstwa wśród ludzi, których broń jest często równie niebezpieczna dla użytkownika, jak dla jego celu. Krasnoludzka broń prochowa jest kunsztownie wykonana i pieczołowicie wzmocniona, dzięki czemu rzadziej pudłuje, a do tego wystrzeliwuje pociski z większą siłą.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.BIW1jibsj1mZTKq0"
-        },
-        "Dwarf Pistol": {
-            "id": "yaQBcwPMyEyP7H2f",
-            "name": "Krasnoludzki pistolet",
-            "description": "<p>Krasnoludy często załamują ręce nad tym, co uchodzi za sztukę rusznikarstwa wśród ludzi, których broń jest często równie niebezpieczna dla użytkownika, jak dla jego celu. Krasnoludzka broń prochowa jest kunsztownie wykonana i pieczołowicie wzmocniona, dzięki czemu rzadziej pudłuje, a do tego wystrzeliwuje pociski z większą siłą.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.yaQBcwPMyEyP7H2f"
-        },
-        "Eonir Spear": {
-            "id": "LIzUGidgb1mkXcZB",
-            "name": "Włócznia Eonirów",
-            "description": "<p>To zmora oddziałów konnych. Te ostro zakończone włócznie są nieco lżejsze od tych, których używa się w Imperium. Ich szpikulce są hartowane i ostrzone sposobami znanymi jedynie leśnym elfom. Mogą z łatwością przebijać pancerze.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.LIzUGidgb1mkXcZB"
-        },
-        "Eonir War Blade": {
-            "id": "1DHLlgZEpY5uSVm9",
-            "name": "Ostrze wojenne Eonirów",
-            "description": "<p> Wybornie wykonane ostrza Eonirów są nieco lżejsze od typowej broni z Imperium, lecz ich doskonałe wyważenie umożliwia wyprowadzanie szybkich, precyzyjnych ataków.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.1DHLlgZEpY5uSVm9"
-        },
-        "Iron Skillet": {
-            "id": "aJpSeHl6kNp1DD1y",
-            "name": "Żelazna patelnia",
-            "description": "<p> Pomimo niepozornego wyglądu żeliwne rondle i patelnie niziołków są cięższe, niż to się wydaje. Można się z nich wyśmiewać, ale niziołcza patelnia odbiła niejedno ostrze, zapobiegając śmiertelnemu trafieniu. Takie podrapane i poobijane rondle zawsze zajmują zaszczytne miejsce w domostwach niziołków.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.aJpSeHl6kNp1DD1y"
-        },
-        "Nan's Cleaver": {
-            "id": "UOVmOd9TgMvquysD",
-            "name": "Tasak babuni",
-            "description": "<p> Kucharze i kucharki niziołków dbają o swoje utensylia równie pieczołowicie, jak większość rzetelnych wojowników dba o swoje ostrze. Nic zatem dziwnego, że wiele sztuk takiego oręża doczekało się wykorzystania w czasie wojny. Niejeden goblin padł ofiarą tasaka, którego później użyto do przygotowania pokrzepiającego gulaszu serwowanego zaraz po walce.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.UOVmOd9TgMvquysD"
-        },
-        "Precision Shot and Powder": {
-            "id": "JRHgVa3Eb2WYakvJ",
-            "name": "Precyzyjny śrut i proch",
-            "description": "<p>Przygotowany ze znawstwem proch oraz pieczołowicie wygładzone i obtoczone śruciny można łączyć ze sobą, otrzymując bardziej niezawodne i celniejsze pociski do odpowiedniej broni prochowej.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.JRHgVa3Eb2WYakvJ"
-        },
-        "Slayer's Axe": {
-            "id": "7cVsB1Ss3cXMySl5",
-            "name": "Topór Zabójców",
-            "description": "<p> Zabójcy z wielką dumą obnoszą się ze swoją bronią, której proces ostrzenia jest swoistym rytuałem. Większość tego oręża zyskała groźną reputację dorównującą tym, którzy go noszą. To niszczycielska broń, a władający nią Zabójcy zdają się walczyć niestrudzenie, pomimo jej wielkości.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.7cVsB1Ss3cXMySl5"
-        },
-        "Starfire Shafts": {
-            "id": "ws96ig1WPFRecmCn",
-            "name": "Strzały gwiezdnego ognia",
-            "description": "<p> Drewno wyciosane z drzewa gwiezdnego ognia przynosi zgubę zepsuciu, a wyrabiane z niego strzały nasycone są zaciekłym i ognistym duchem. Cele trafione tymi strzałami często stają w ogniu. Zmasowane salwy tych strzał stanowią przerażający widok w boju.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.ws96ig1WPFRecmCn",
-            "effects": {
-                "uYoVPJs6O8zVsA16": {
-                    "id": "uYoVPJs6O8zVsA16",
-                    "name": "Strzały gwiezdnego ognia",
-                    "scriptData": [
-                        {
-                            "id": "uYoVPJs6O8zVsA16",
-                            "name": "Strzały gwiezdnego ognia",
-                            "script": "[Script.8ThudCYRqkjQIwJH]"
-                        }
-                    ]
-                }
-            },
-            "range": "50"
-        },
-        "Swiftshiver Shafts": {
-            "id": "RXRsdPqnIRQVQ3be",
-            "name": "Strzały jaskółcze",
-            "description": "<p>Wycinane są z drewna tak lekkiego i mocnego, że wydają się wyskakiwać z łuku same z siebie. Zręczny łucznik może z zaskakującą łatwością naciągnąć i wystrzelić więcej niż jedną taką strzałę jednocześnie.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.RXRsdPqnIRQVQ3be",
-            "special": "Jeśli chcesz skorzystać z Zalety Odłamkowa, musisz zużyć dodatkową strzałę jaskółczą na każdy cel, który zostałby trafiony atakiem. Zrób to przed wykonaniem Testu ataku."
-        },
-        "Wildwood Sword": {
-            "id": "9NeNBFZwuHDQF6LN",
-            "name": "Miecz Dzikiej Kniei",
-            "description": "<p>Dwuręczne ostrze z trzonem z żywego drewna. Ta broń wydaje się być poruszana własną wolą. Uderza szybciej, niż wydawałoby się to możliwe dla tak pokaźnej broni.</p>",
-            "sourceId": "Compendium.wfrp4e-archives1.items.9NeNBFZwuHDQF6LN"
+          ]
         }
+      },
+      "tests": "Testy społeczne z innymi Eonirami"
     },
-    "label": "Wyposażenie (Archiwa Tom I)"
+    "Bearded Axe": {
+      "id": "kPmmaj7qzM3O6pY8",
+      "name": "Topór brodaty",
+      "description": "<p>Ulubiony oręż wielu krasnoludów, chętnie wykorzystywany w boju. Głowica tego topora zakrzywia się w dół, w stronę trzonka. W ten sposób powstaje odstęp między ostrzem a trzonkiem, który doskonale nadaje się do wyrywania broni z rąk niebacznych przeciwników.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.kPmmaj7qzM3O6pY8"
+    },
+    "Blackbriar Javelin": {
+      "id": "qBqfo35CFyWAAAnX",
+      "name": "Oszczep czarnocierni",
+      "description": "<p> Ta żywa broń powoli ocieka zabójczą trucizną. Wykonana jest z drzew, których duchy stały się spaczone i złośliwe. Podobno ta broń sprowadza nieszczęście. Z pewnością to prawda dla tych, którzy muszą się zmierzyć z nią w boju.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.qBqfo35CFyWAAAnX",
+      "effects": {
+        "TVxG7u4tG9JNIXNj": {
+          "id": "TVxG7u4tG9JNIXNj",
+          "name": "Zatrucie",
+          "scriptData": [
+            {
+              "id": "TVxG7u4tG9JNIXNj",
+              "name": "Zatrucie",
+              "script": "[Script.GZFsuynUhgZqwTGo]"
+            }
+          ]
+        }
+      },
+      "special": "Tak długo, jak każdej nocy może zbierać siły, tkwiąc w żyznej ziemi, oszczep czarnocierni zadaje 1 poziom Stanu Zatrucie każ demu celowi, który straci przynajmniej 1 Ranę od ataku. Można się temu oprzeć, wykonując <strong>Wymagający (+0) Test Odporności</strong>."
+    },
+    "Cinderblast Bomb": {
+      "id": "nyUbN0JaeXNQUbUT",
+      "name": "Bomba żużlowa",
+      "description": "<p>Ta zabójcza broń jest niezastąpiona w walkach tunelowych, które toczą się głęboko pod Starym Światem, gdzie krasnoludy desperacko odpierają ataki skavenów, goblinów i jeszcze gorszych stworów. Bomby te zazwyczaj ciskane są w gęstwę sił wroga. Eksplodują w ognistym podmuchu i odłamkami. To przerażający widok.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.nyUbN0JaeXNQUbUT"
+    },
+    "Drakefire Pistol": {
+      "id": "XurSURwIt8pnoOlJ",
+      "name": "Pistolet smoczego ognia",
+      "description": "<p> Przemyślny przykład krasnoludzkiego rzemiosła. Pistolet smoczego ognia ostrzeliwuje cele pociskami zapalającymi. Szczegóły budowy tej broni to pieczołowicie strzeżony przez krasnoludy sekret, ale wątpliwe, by jakakolwiek inna rasa zdołała skopiować tę skomplikowaną konstrukcję, nawet gdyby pojęła jej schemat. To ulubiony oręż krasnoludów, które ścierają się ze skavenami głęboko pod ziemią, ponieważ ich plugawa sierść nader satysfakcjonująco zajmuje się ogniem.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.XurSURwIt8pnoOlJ",
+      "effects": {
+        "3FkboTu03MTUm5qY": {
+          "id": "3FkboTu03MTUm5qY",
+          "name": "Pistolet smoczego ognia",
+          "scriptData": [
+            {
+              "id": "3FkboTu03MTUm5qY",
+              "name": "Pistolet smoczego ognia",
+              "script": "[Script.gh2KS1prBKcsSK6M]"
+            }
+          ]
+        }
+      },
+      "special": "Przy każdym Trafieniu Krytycznym z pistoletów smoczego ognia cel otrzymuje również Stan Podpalenie."
+    },
+    "Drakefire Shot": {
+      "id": "gxiMS94QBeyURKfJ",
+      "name": "Ładunek smoczego ognia",
+      "description": "<p>Amunicja zapalająca wykorzystywana w pistoletach smoczego ognia jest zarówno niebezpieczna, jak i rzadka. Faktycznie na daje się do użytku tylko z tą bronią. Jednakże można ją załado wać do dowolnej broni prochowej, przy czym zadziała dokład nie jeden raz i wybuchnie w rękach strzelającego. Rozwiąż to tak, jakby przy każdym strzale następował Rzut Pechowy.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.gxiMS94QBeyURKfJ",
+      "effects": {
+        "7LWsyK7nuYHOnlII": {
+          "id": "7LWsyK7nuYHOnlII",
+          "name": "Ładunek smoczego ognia",
+          "scriptData": [
+            {
+              "id": "7LWsyK7nuYHOnlII",
+              "name": "Niewypał",
+              "script": "[Script.8RNziYGGb4sp3BGQ]"
+            }
+          ]
+        }
+      }
+    },
+    "Dwarf Crossbow": {
+      "id": "aQE698skxSqkrdmO",
+      "name": "Krasnoludzka kusza",
+      "description": "<p>Różnica między kuszami krasnoludzkimi i imperialnymi nie jest tak wyraźna, jak w przypadku ich broni prochowych, nie mniej krasnoludzkie kusze są konstruowane ze znacznie wyż szym standardem, niż jest w stanie uzyskać jakikolwiek ludzki rzemieślnik. W rezultacie jest to broń precyzyjniejsza.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.aQE698skxSqkrdmO"
+    },
+    "Dwarf Hammer": {
+      "id": "Fs7tl8V78Ie4INPX",
+      "name": "Młot krasnoludzki",
+      "description": "<p> Krasnoludy znane są z tego, że używają tych samych młotów w kuźniach w czasie pokoju, jak i na polach bitew w czasie wojny. Te ciężkie narzędzia świetnie się nadają do rozbijania nawet najtwardszych orczych czerepów.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.Fs7tl8V78Ie4INPX"
+    },
+    "Dwarf Handgun": {
+      "id": "BIW1jibsj1mZTKq0",
+      "name": "Krasnoludzka rusznica",
+      "description": "<p>Krasnoludy często załamują ręce nad tym, co uchodzi za sztukę rusznikarstwa wśród ludzi, których broń jest często równie niebezpieczna dla użytkownika, jak dla jego celu. Krasnoludzka broń prochowa jest kunsztownie wykonana i pieczołowicie wzmocniona, dzięki czemu rzadziej pudłuje, a do tego wystrzeliwuje pociski z większą siłą.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.BIW1jibsj1mZTKq0"
+    },
+    "Dwarf Pistol": {
+      "id": "yaQBcwPMyEyP7H2f",
+      "name": "Krasnoludzki pistolet",
+      "description": "<p>Krasnoludy często załamują ręce nad tym, co uchodzi za sztukę rusznikarstwa wśród ludzi, których broń jest często równie niebezpieczna dla użytkownika, jak dla jego celu. Krasnoludzka broń prochowa jest kunsztownie wykonana i pieczołowicie wzmocniona, dzięki czemu rzadziej pudłuje, a do tego wystrzeliwuje pociski z większą siłą.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.yaQBcwPMyEyP7H2f"
+    },
+    "Eonir Spear": {
+      "id": "LIzUGidgb1mkXcZB",
+      "name": "Włócznia Eonirów",
+      "description": "<p>To zmora oddziałów konnych. Te ostro zakończone włócznie są nieco lżejsze od tych, których używa się w Imperium. Ich szpikulce są hartowane i ostrzone sposobami znanymi jedynie leśnym elfom. Mogą z łatwością przebijać pancerze.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.LIzUGidgb1mkXcZB"
+    },
+    "Eonir War Blade": {
+      "id": "1DHLlgZEpY5uSVm9",
+      "name": "Ostrze wojenne Eonirów",
+      "description": "<p> Wybornie wykonane ostrza Eonirów są nieco lżejsze od typowej broni z Imperium, lecz ich doskonałe wyważenie umożliwia wyprowadzanie szybkich, precyzyjnych ataków.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.1DHLlgZEpY5uSVm9"
+    },
+    "Iron Skillet": {
+      "id": "aJpSeHl6kNp1DD1y",
+      "name": "Żelazna patelnia",
+      "description": "<p> Pomimo niepozornego wyglądu żeliwne rondle i patelnie niziołków są cięższe, niż to się wydaje. Można się z nich wyśmiewać, ale niziołcza patelnia odbiła niejedno ostrze, zapobiegając śmiertelnemu trafieniu. Takie podrapane i poobijane rondle zawsze zajmują zaszczytne miejsce w domostwach niziołków.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.aJpSeHl6kNp1DD1y"
+    },
+    "Nan's Cleaver": {
+      "id": "UOVmOd9TgMvquysD",
+      "name": "Tasak babuni",
+      "description": "<p> Kucharze i kucharki niziołków dbają o swoje utensylia równie pieczołowicie, jak większość rzetelnych wojowników dba o swoje ostrze. Nic zatem dziwnego, że wiele sztuk takiego oręża doczekało się wykorzystania w czasie wojny. Niejeden goblin padł ofiarą tasaka, którego później użyto do przygotowania pokrzepiającego gulaszu serwowanego zaraz po walce.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.UOVmOd9TgMvquysD"
+    },
+    "Precision Shot and Powder": {
+      "id": "JRHgVa3Eb2WYakvJ",
+      "name": "Precyzyjny pocisk i proch",
+      "description": "<p>Doskonałej jakości proch oraz ostrożnie wygładzone i zaokrąglone pociski pozwalają strzelać precyzyjniej i pewniej z każdej odpowiedniej broni prochowej.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.JRHgVa3Eb2WYakvJ"
+    },
+    "Slayer's Axe": {
+      "id": "7cVsB1Ss3cXMySl5",
+      "name": "Topór Zabójców",
+      "description": "<p> Zabójcy z wielką dumą obnoszą się ze swoją bronią, której proces ostrzenia jest swoistym rytuałem. Większość tego oręża zyskała groźną reputację dorównującą tym, którzy go noszą. To niszczycielska broń, a władający nią Zabójcy zdają się walczyć niestrudzenie, pomimo jej wielkości.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.7cVsB1Ss3cXMySl5"
+    },
+    "Starfire Shafts": {
+      "id": "ws96ig1WPFRecmCn",
+      "name": "Strzały gwiezdnego ognia",
+      "description": "<p> Drewno wyciosane z drzewa gwiezdnego ognia przynosi zgubę zepsuciu, a wyrabiane z niego strzały nasycone są zaciekłym i ognistym duchem. Cele trafione tymi strzałami często stają w ogniu. Zmasowane salwy tych strzał stanowią przerażający widok w boju.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.ws96ig1WPFRecmCn",
+      "effects": {
+        "uYoVPJs6O8zVsA16": {
+          "id": "uYoVPJs6O8zVsA16",
+          "name": "Strzały gwiezdnego ognia",
+          "scriptData": [
+            {
+              "id": "uYoVPJs6O8zVsA16",
+              "name": "Strzały gwiezdnego ognia",
+              "script": "[Script.8ThudCYRqkjQIwJH]"
+            }
+          ]
+        }
+      },
+      "range": "50"
+    },
+    "Swiftshiver Shafts": {
+      "id": "RXRsdPqnIRQVQ3be",
+      "name": "Strzały jaskółcze",
+      "description": "<p>Wycinane są z drewna tak lekkiego i mocnego, że wydają się wyskakiwać z łuku same z siebie. Zręczny łucznik może z zaskakującą łatwością naciągnąć i wystrzelić więcej niż jedną taką strzałę jednocześnie.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.RXRsdPqnIRQVQ3be",
+      "special": "Jeśli chcesz skorzystać z Zalety Odłamkowa, musisz zużyć dodatkową strzałę jaskółczą na każdy cel, który zostałby trafiony atakiem. Zrób to przed wykonaniem Testu ataku."
+    },
+    "Wildwood Sword": {
+      "id": "9NeNBFZwuHDQF6LN",
+      "name": "Miecz Dzikiej Kniei",
+      "description": "<p>Dwuręczne ostrze z trzonem z żywego drewna. Ta broń wydaje się być poruszana własną wolą. Uderza szybciej, niż wydawałoby się to możliwe dla tak pokaźnej broni.</p>",
+      "sourceId": "Compendium.wfrp4e-archives1.items.9NeNBFZwuHDQF6LN"
+    }
+  }
 }

@@ -10,7 +10,8 @@ Aktualnie obsługiwane moduły:
 - [Core Rulebook](https://foundryvtt.com/packages/wfrp4e-core/)
 - [Up in Arms](https://foundryvtt.com/packages/wfrp4e-up-in-arms)
 - [Starter Set](https://foundryvtt.com/packages/wfrp4e-starter-set)
-- [Archives of the Empire vol. I](https://foundryvtt.com/packages/wfrp4e-archives1):new:
+- [Archives of the Empire vol. I](https://foundryvtt.com/packages/wfrp4e-archives1)
+- [Rough Nights and Hard Days](https://foundryvtt.com/packages/wfrp4e-rnhd):new:
 
 Autorzy:
 - Daniel.Sobolewski

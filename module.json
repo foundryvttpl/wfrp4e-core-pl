@@ -88,6 +88,7 @@
         "modules/initialization.js",
         "modules/initialization-up-in-arms.js",
         "modules/initialization-archives1.js",
+        "modules/initialization-rnhd.js",
         "modules/wfrp4e-npc-generator.js"
     ],
     "styles": [

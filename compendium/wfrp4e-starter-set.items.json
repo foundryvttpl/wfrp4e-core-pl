@@ -1,956 +1,956 @@
 {
-    "mapping": {
-        "gmdescription": "system.gmdescription.value",
-        "wounds": "system.wounds.value",
-        "location": "system.location.value",
-        "effects": {
-            "path": "effects",
-            "converter": "effects"
-        },
-        "duration_value": "system.duration.value",
-        "duration_unit": "system.duration.unit",
-        "incubation_value": "system.incubation.value",
-        "incubation_unit": "system.incubation.unit",
-        "contraction": "system.contraction.value",
-        "symptoms": "system.symptoms.value",
-        "permanent": "system.permanent.value",
-        "modifier": "system.modifier.value",
-        "duration": "system.duration.value",
-        "range": "system.range.value",
-        "target": "system.target.value",
-        "damage": "system.damage.value",
-        "overcast": "system.overcast.label",
-        "overcastvalue": "system.overcast.valuePerOvercast.type",
-        "overcastinitial": "system.overcast.initial.type",
-        "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
-        "overcastinitialvalue": "system.overcast.initial.additional",
-        "roll": "system.rollable.skill",
-        "specification_label": "system.specification.label",
-        "specification": "system.specification.value",
-        "penalties": "system.penalty.value",
-        "special": "system.special.value"
+  "label": "Wyposażenie (Zestaw Startowy)",
+  "mapping": {
+    "gmdescription": "system.gmdescription.value",
+    "wounds": "system.wounds.value",
+    "location": "system.location.value",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
     },
-    "folders": {
-        "Criticals": "Rany Krytyczne",
-        "Diseases": "Choroby",
-        "Mutations": "Mutacje",
-        "Spells": "Zaklęcia",
-        "Traits": "Cechy Stworzeń",
-        "Trappings": "Wyposażenie",
-        "Blessings": "Błogosławieństwa",
-        "Uliric": "Ulryk",
-        "Ammunition": "Amunicja",
-        "Armour": "Pancerze",
-        "Weapons": "Broń",
-        "Books and Documents": "Księgi i Dokumenty",
-        "Clothing and Accessories": "Odzież i Akcesoria",
-        "Drugs and Poisons": "Narkotyki i Trucizny",
-        "Food and Drink": "Jedzenie i Napoje",
-        "Herbs and Draughts": "Zioła i Eliksiry",
-        "Miscellaneous": "Różne",
-        "Packs and Containers": "Plecaki i Pojemniki",
-        "Tools and Kits": "Narzędzia i Zestawy",
-        "Chaos Magic": "Magia Chaosu (Dowolna)",
-        "Lore of Beasts": "Tradycja Zwierząt",
-        "Lore of Daemonology": "Tradycja Demonologii",
-        "Lore of Death": "Tradycja Śmierci",
-        "Lore of Fire": "Tradycja Ognia",
-        "Lore of Heavens": "Tradycja Niebios",
-        "Lore of Hedgecraft": "Tradycja Guślarstwa",
-        "Lore of Life": "Tradycja Życia",
-        "Lore of Light": "Tradycja Światła",
-        "Lore of Metal": "Tradycja Metalu",
-        "Lore of Shadow": "Tradycja Cieni",
-        "Lore of Witchcraft": "Tradycja Czarostwa",
-        "Lore of Necromancy": "Tradycja Nekromancji",
-        "Petty Spells": "Proste Zaklęcia"
-    },
-    "entries": {
-        "Bruised": {
-            "id": "h3gFDi7hULlP2TJX",
-            "name": "Potłuczenie",
-            "description": "<p>Wszystkie Testy Zwinności otrzymują karę -10 na [[/r 1d10]]{1k10} dni.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.h3gFDi7hULlP2TJX",
-            "effects": {
-                "klvis7s3ItDHPQN0": {
-                    "id": "klvis7s3ItDHPQN0",
-                    "name": "Potłuczenie",
-                    "scriptData": [
-                        {
-                            "id": "klvis7s3ItDHPQN0",
-                            "name": "Kara dla wszystkich testów",
-                            "script": "[Script.xvGxwv7X0Vq3vNqb]",
-                            "activationScript": "[Script.JFgXyb6bKjZJLmF8]",
-                            "hideScript": "[Script.oW1gtYVT5nrxDjM7]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "2",
-            "location": " "
-        },
-        "Cracked Bone": {
-            "id": "vcM1EnJXXM02anIi",
-            "name": "Pęknięta kość",
-            "description": "<p>Zyskujesz stan @Condition[Ogłuszenia]. Wszystkie testy otrzymują karę -10, dopóki nie otrzymasz udanego testu leczenia.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.vcM1EnJXXM02anIi",
-            "effects": {
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                },
-                "XWCKsliojPlRhtX5": {
-                    "id": "XWCKsliojPlRhtX5",
-                    "name": "Pęknięta kość",
-                    "scriptData": [
-                        {
-                            "id": "XWCKsliojPlRhtX5",
-                            "name": "Pęknięta kość",
-                            "script": "[Script.xvGxwv7X0Vq3vNqb]",
-                            "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "3",
-            "location": " "
-        },
-        "Crippling Wound": {
-            "id": "xtJXTEjOQtn3pods",
-            "name": "Okaleczenie",
-            "description": "<p>dostajesz stan @Condition [Powalenie], który można usunąć tylko po udanym <strong>Prostym (+0) Teście Leczenia</strong> . Wszystkie Testy podlegają karze -20, dopóki nie otrzymasz opieki medycznej i nie spędzisz co najmniej tygodnia na odpoczynku.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.xtJXTEjOQtn3pods",
-            "effects": {
-                "3Z6QjYmhs1Opp1Wp": {
-                    "id": "3Z6QjYmhs1Opp1Wp",
-                    "name": "Okaleczenie",
-                    "scriptData": [
-                        {
-                            "id": "3Z6QjYmhs1Opp1Wp",
-                            "name": "Kara dla wszystkich testów",
-                            "script": "[Script.0iTLDgFHO9Rgc010]",
-                            "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
-                        }
-                    ]
-                },
-                "oyxMXt8PHKUatGsE": {
-                    "id": "oyxMXt8PHKUatGsE",
-                    "name": "Powalenie",
-                    "scriptData": [
-                        {
-                            "id": "oyxMXt8PHKUatGsE",
-                            "name": "Testy związane z jakimkolwiek ruchem",
-                            "script": "\n        args.prefillModifiers.modifier += -20;\n        args.prefillModifiers.slBonus += 0;\n        args.prefillModifiers.successBonus += 0;\n        "
-                        }
-                    ]
-                }
-            },
-            "wounds": "4",
-            "location": " "
-        },
-        "Flensed Muscle": {
-            "id": "CsnWW8GohpZyEAYG",
-            "name": "Naderwany mięsień",
-            "description": "<p>Dostajesz 4 Stany @Condition[Krwawienie]. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia przez następne 4 tygodnie, będą wywoływać także 2 Stany <em>Krwawienie</em>, ponieważ rana wciąż się otwiera.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.CsnWW8GohpZyEAYG",
-            "effects": {
-                "3MNCFqmWfDVYnYbu": {
-                    "id": "3MNCFqmWfDVYnYbu",
-                    "name": "Krwawienie"
-                },
-                "HT33m8ut91PlUwlg": {
-                    "id": "HT33m8ut91PlUwlg",
-                    "name": "Naderwany mięsień",
-                    "scriptData": [
-                        {
-                            "id": "HT33m8ut91PlUwlg",
-                            "name": "Naderwany mięsień",
-                            "script": "[Script.1PQPxFjmRlulHHzo]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "4",
-            "location": " "
-        },
-        "Fractured Bone": {
-            "id": "SdB0sthOSurZWqYe",
-            "name": "Złamana kość",
-            "description": "<p>Dostajesz Stan Oszołomienie. Przejdź <strong>Test Odporności</strong> albo dostaniesz także Stan @Condition[Powalenie]. Wszystkie Testy dostają karę -10 przez następne 4 tygodnie.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.SdB0sthOSurZWqYe",
-            "effects": {
-                "ftiYT4Sxl2RlzOvB": {
-                    "id": "ftiYT4Sxl2RlzOvB",
-                    "name": "Złamana kość",
-                    "scriptData": [
-                        {
-                            "id": "ftiYT4Sxl2RlzOvB",
-                            "name": "Powalenie",
-                            "script": "[Script.bhXUW7IJtEaUGAoV]"
-                        },
-                        {
-                            "id": "ftiYT4Sxl2RlzOvB",
-                            "name": "Kara dla wszystkich testów",
-                            "script": "[Script.xvGxwv7X0Vq3vNqb]",
-                            "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
-                        }
-                    ]
-                },
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                }
-            },
-            "wounds": "4",
-            "location": " "
-        },
-        "Gaping Wound": {
-            "id": "pmggfvcdKxjfsgLF",
-            "name": "Rana otwarta",
-            "description": "<p>Dostajesz 3 Stany @Condition[Bleeding]. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia, będą wywoływać dodatkowy Stan Krwawienie przez następny tydzień z powodu otwierania się rany.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.pmggfvcdKxjfsgLF",
-            "effects": {
-                "H1jqgnMQlBWlb2iN": {
-                    "id": "H1jqgnMQlBWlb2iN",
-                    "name": "Rana otwarta",
-                    "scriptData": [
-                        {
-                            "id": "H1jqgnMQlBWlb2iN",
-                            "name": "Rana otwarta",
-                            "script": "[Script.NNytXz5XFPrEF6dw]"
-                        }
-                    ]
-                },
-                "nyrOZnHf5SaR3ql0": {
-                    "id": "nyrOZnHf5SaR3ql0",
-                    "name": "Krwawienie"
-                }
-            },
-            "wounds": "3",
-            "location": " "
-        },
-        "Gash": {
-            "id": "6cojY1IRxvJev8kt",
-            "name": "Rozcięcie",
-            "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie].</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.6cojY1IRxvJev8kt",
-            "effects": {
-                "p5XumBXXpYWcXo7X": {
-                    "id": "p5XumBXXpYWcXo7X",
-                    "name": "Krwawienie"
-                }
-            },
-            "wounds": "1",
-            "location": " "
-        },
-        "Gut Blow": {
-            "id": "vj8VdUbOpT1vepsL",
-            "name": "Cios w bebechy",
-            "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie].</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.vj8VdUbOpT1vepsL",
-            "effects": {
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                }
-            },
-            "wounds": "1",
-            "location": " "
-        },
-        "Low Blow!": {
-            "id": "HPszYSWoB4ObYOBM",
-            "name": "Poniżej pasa!",
-            "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie]. Musi również wykonać <strong>Trudny (-20) Test Odporności</strong> jeśli ten się nie uda, postać otrzyma dodatkowe 2 Stany @Condition[Oszołomienie].</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.HPszYSWoB4ObYOBM",
-            "effects": {
-                "dys96YM5JQYiJjtZ": {
-                    "id": "dys96YM5JQYiJjtZ",
-                    "name": "Poniżej pasa!",
-                    "scriptData": [
-                        {
-                            "id": "dys96YM5JQYiJjtZ",
-                            "name": "Poniżej pasa!",
-                            "script": "[Script.EU5j0hnDTG9Z6d1e]"
-                        }
-                    ]
-                },
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                }
-            },
-            "wounds": "1",
-            "location": " "
-        },
-        "Painful Cut": {
-            "id": "Vj7jkZ1ZtJKXKYmu",
-            "name": "Bolesne rozcięcie",
-            "description": "<p>Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie] oraz 1 poziom Stanu @Condition[Oszołomienie]. Musi także zdać <strong>Trudny (-20) Test Odporności</strong>, w przeciwnym wypadku nastąpi @Condition[Nieprzytomny] Utrata Przytomności z powodu bólu.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.Vj7jkZ1ZtJKXKYmu",
-            "effects": {
-                "eDYPhQ4BZxsoN3S3": {
-                    "id": "eDYPhQ4BZxsoN3S3",
-                    "name": "Krwawienie"
-                },
-                "fLJCyLURFISohfWx": {
-                    "id": "fLJCyLURFISohfWx",
-                    "name": "Bolesne rozcięcie",
-                    "scriptData": [
-                        {
-                            "id": "fLJCyLURFISohfWx",
-                            "name": "Bolesne rozcięcie",
-                            "script": "[Script.EmXwcuycEH8slEn5]"
-                        }
-                    ]
-                },
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                }
-            },
-            "wounds": "3",
-            "location": " "
-        },
-        "Ruined": {
-            "id": "M181psxcR6fA3wNB",
-            "name": "Pokonany",
-            "description": "<p>Postać otrzymuje Stan @Condition[Oszołomienie], który można usunąć tylko przy pomocy udanego <strong>Prostego (+0) Testu Leczenia</strong>. To Miejsce Trafienia staje się bezużyteczne, o ile nie spędzisz miesiąca na odpoczynku w łóżku.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.M181psxcR6fA3wNB",
-            "effects": {
-                "a8bUPcOi4uFCDICJ": {
-                    "id": "a8bUPcOi4uFCDICJ",
-                    "name": "Pokonany",
-                    "scriptData": [
-                        {
-                            "id": "a8bUPcOi4uFCDICJ",
-                            "name": "Pokonany",
-                            "script": "[Script.OnkEe4ISru1hjJWP]"
-                        }
-                    ]
-                },
-                "iliuuUkzNTekgldW": {
-                    "id": "iliuuUkzNTekgldW",
-                    "name": "Utrata Przytomności"
-                }
-            },
-            "wounds": "5",
-            "location": " "
-        },
-        "Shattered Bone": {
-            "id": "9re1DIxquRgCswc2",
-            "name": "Roztrzaskana kość",
-            "description": "<p>dostajesz stan @Condition [Oszołomienie], który można usunąć tylko po udanym <strong>Prostym (+0) Teście Leczenia</strong> . Wszystkie Testy podlegają karze -20, dopóki nie otrzymasz opieki medycznej i nie spędzisz co najmniej tygodnia na odpoczynku.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.9re1DIxquRgCswc2",
-            "effects": {
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                },
-                "rER8YHCJqjxaDQEE": {
-                    "id": "rER8YHCJqjxaDQEE",
-                    "name": "Roztrzaskana kość",
-                    "scriptData": [
-                        {
-                            "id": "rER8YHCJqjxaDQEE",
-                            "name": "Kara dla wszystkich testów",
-                            "script": "[Script.0iTLDgFHO9Rgc010]",
-                            "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "5",
-            "location": " "
-        },
-        "Torn Apart": {
-            "id": "ULUNwr1srKJhCYKi",
-            "name": "Na kawałki",
-            "description": "<p>Zostajesz przerąbany wpół. Twoja górna połowa ląduje [[/r 1d10]]{1k10} metrów dalej w losowym kierunku, a wszystkie pobliskie postacie zostają spryskane krwią..</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.ULUNwr1srKJhCYKi",
-            "effects": {
-                "sQBHhd6ooMpuKhK6": {
-                    "id": "sQBHhd6ooMpuKhK6",
-                    "name": "Na kawałki",
-                    "scriptData": [
-                        {
-                            "id": "sQBHhd6ooMpuKhK6",
-                            "name": "Na kawałki",
-                            "script": "[Script.GEfWIFBSrXt0ldBM]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "Śmierć",
-            "location": " "
-        },
-        "Torn Flesh": {
-            "id": "7u2XsoTaIdEMsnzG",
-            "name": "Rana szarpana",
-            "description": "<p>Dostajesz 2 Stany @Condition[Krwawienie].</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.7u2XsoTaIdEMsnzG",
-            "effects": {
-                "OcAC7jjpeR86HSSK": {
-                    "id": "OcAC7jjpeR86HSSK",
-                    "name": "Krwawienie"
-                }
-            },
-            "wounds": "2",
-            "location": " "
-        },
-        "Winded": {
-            "id": "JxCMVZYWoLpaMiWR",
-            "name": "Pozbawienie tchu",
-            "description": "<p>Dostajesz 2 Stany @Condition[Oszołomienie]. Przejdź <strong>Przeciętny (+20) Test Odporności</strong> albo dostaniesz Stan @Condition[Powalenie]. Twoja Szybkość jest zmniejszona o połowę przez [[/r 1d10]]{1k10} Rund, gdy próbujesz złapać oddech.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.JxCMVZYWoLpaMiWR",
-            "effects": {
-                "PKfdEwRZh5DCZSwC": {
-                    "id": "PKfdEwRZh5DCZSwC",
-                    "name": "Oszołomienie",
-                    "scriptData": [
-                        {
-                            "id": "PKfdEwRZh5DCZSwC",
-                            "name": "Oszołomienie",
-                            "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
-                            "activationScript": "return true"
-                        }
-                    ]
-                },
-                "rgHSoFshdyzm8l2R": {
-                    "id": "rgHSoFshdyzm8l2R",
-                    "name": "Pozbawienie tchu",
-                    "scriptData": [
-                        {
-                            "id": "rgHSoFshdyzm8l2R",
-                            "name": "Pozbawienie tchu",
-                            "script": "[Script.kMSdRskYDI2J1gnp]"
-                        },
-                        {
-                            "id": "rgHSoFshdyzm8l2R",
-                            "name": "Szybkość zmniejszona o połowę",
-                            "script": "[Script.9MDi3ok9gPwtbALf]"
-                        }
-                    ]
-                }
-            },
-            "wounds": "2",
-            "location": " "
-        },
-        "Bronze Fever": {
-            "id": "BBYmXJ5jiRUk93IJ",
-            "name": "Brązowa Febra",
-            "description": "<p>Brązową Febrę częściej spotyka się w południowych rejonach Starego Świata, gdzie jest cieplej i bardziej wilgotno, a choroba roznoszona jest przez ukąszenia owadów. Większość zarażonych wraca do zdrowia po kilku dniach, ale niekiedy choroba prowadzi do komplikacji, a nawet śmierci.&nbsp;</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.BBYmXJ5jiRUk93IJ",
-            "effects": {
-                "CphfLDDScFyJx7cR": {
-                    "id": "CphfLDDScFyJx7cR",
-                    "name": "Nawroty (Umiarkowane)"
-                },
-                "eMgQvHbj3ODJL8X6": {
-                    "id": "eMgQvHbj3ODJL8X6",
-                    "name": "Mdłości",
-                    "scriptData": [
-                        {
-                            "id": "eMgQvHbj3ODJL8X6",
-                            "name": "@effect.name",
-                            "script": "if (args.test.failed)\n                            {\n                                let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"];\n                                if (applicableCharacteristics.includes(args.test.characteristicKey))\n                                {\n                                    this.actor.addCondition(\"stunned\");\n                                }\n                            }"
-                        }
-                    ]
-                },
-                "OvR8HtQaW6EuIyPB": {
-                    "id": "OvR8HtQaW6EuIyPB",
-                    "name": "Gorączka",
-                    "scriptData": [
-                        {
-                            "id": "OvR8HtQaW6EuIyPB",
-                            "name": "@effect.name",
-                            "script": "args.fields.modifier -= 10",
-                            "activationScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
-                            "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
-                        }
-                    ]
-                },
-                "qjXPqzIEuzHGAY8m": {
-                    "id": "qjXPqzIEuzHGAY8m",
-                    "name": "Apatia",
-                    "scriptData": [
-                        {
-                            "id": "qjXPqzIEuzHGAY8m",
-                            "name": "@effect.name",
-                            "script": "let fatigued = this.actor.hasCondition(\"fatigued\")\nif (!fatigued)\n{\n    this.actor.addCondition(\"fatigued\")\n    ui.notifications.notify(\"Zmęczenie dodane do \" + this.actor.name + \", które nie może zostać usunięte, dopóki objaw Apatia nie zostanie uleczony.\")\n}"
-                        }
-                    ]
-                }
-            },
-            "duration_value": "1d10",
-            "duration_unit": "dni",
-            "contraction": "Jeśli nie powiedzie się Przeciętny (+20) Test Odporności po ugryzieniu przez zainfekowanego komara. Spożycie lub przetoczenie zakażonej krwi powoduje automatyczne zarażenie Brązową Febrą.",
-            "incubation_value": "1d10",
-            "incubation_unit": "dni",
-            "symptoms": "Apatia, Gorączka, Mdłości, Nawroty (Umiarkowane)",
-            "permanent": " ",
-            "duration_text": " ",
-            "incubation_text": " "
-        },
-        "Clutch of Eyes": {
-            "id": "iBS0fYHCX9VHdyVR",
-            "name": "Wylęg Oczu",
-            "description": "<p>Pod skórą zaczynają nabrzmiewać drgające cysty, potem przeszywa cię ból, gdy krwawe wrzody rosną, pękają i odsłaniają skupisko nowych, przerażonych oczu.</p><p>Rzuć 1k100, by ustalić @Table[hitloc]{Miejsce Trafienia}, w którym wyłonią się twoje nowe oczy. Teraz możesz widzieć z tego Miejsca Trafienia. Zwiększ swoją Inicjatywę o +[[/r 1d10]]. Jeśli nie masz Inicjatywy, dostajesz także +[[/r 2d10]]{2k10}. Ponadto wszystkie trafienia w miejsce Wylęgu oczu powodują stan @Condition[Oślepienie].</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.iBS0fYHCX9VHdyVR",
-            "effects": {
-                "qcgzN9lKYCUuG2T6": {
-                    "id": "qcgzN9lKYCUuG2T6",
-                    "name": "Wylęg Oczu",
-                    "scriptData": [
-                        {
-                            "id": "qcgzN9lKYCUuG2T6",
-                            "name": "Wylęg Oczu",
-                            "script": "[Script.ynoHNXXCGRS6fTqF]"
-                        },
-                        {
-                            "id": "qcgzN9lKYCUuG2T6",
-                            "name": "Oślepienie",
-                            "script": "[Script.abLWYtNTu1UVDQAs]"
-                        }
-                    ]
-                }
-            },
-            "modifier": " "
-        },
-        "Massive Intellect": {
-            "id": "ox7tLcnA1HMxhyBF",
-            "name": "Potężny Intelekt",
-            "description": "<p>Jasna krew, popękane kości i zmiażdżone tkanki wylewają się z otworów w twoim ciele, gdy twój dawny mózg nabrzmiewa. Powoli, w ciągu tygodni, w jego miejscu rośnie nowy intelekt, który boleśnie rozciąga twoją głowę w szerokich, przezroczystych fałdach wokół napuchłego, świecącego mózgu.</p><p>Zwiększ swoją Inteligencję o +[[/r 2d10]]{2k10}. Jeśli nie masz Ogłady, dostajesz także +[[/r 2d10]]{2k10}. Wszystkie trafienia w głowę automatycznie oznaczają @Table[crithead]{Trafienie Krytyczne}, o ile już nie została zadana.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.ox7tLcnA1HMxhyBF",
-            "effects": {
-                "RZr67I9pU34yJqPy": {
-                    "id": "RZr67I9pU34yJqPy",
-                    "name": "Potężny Intelekt",
-                    "scriptData": [
-                        {
-                            "id": "RZr67I9pU34yJqPy",
-                            "name": "Potężny Intelekt",
-                            "script": "[Script.YwLEw4BiKq4EMy57]"
-                        },
-                        {
-                            "id": "RZr67I9pU34yJqPy",
-                            "name": "Rana Krytyczna",
-                            "script": "[Script.e7IxnxePdXSy6L4E]"
-                        }
-                    ]
-                }
-            },
-            "modifier": " "
-        },
-        "Slippery Skin": {
-            "id": "IPrHvStaZ2hw3Q8z",
-            "name": "Oślizgła Skóra",
-            "description": "<p>Stale się pocisz, a twoja skóra wydziela rzadki, lepki śluz podobny do tego, który wytwarza ośluza. Wydzielina jest nieprzyjemna w dotyku, przesącza się przez ubranie w ciągu godziny lub dwóch i z jej powodu twój chwyt jest niepewny.</p><p>Wszelkie Testy, które wymagają od ciebie trzymania czegokolwiek w dłoniach (na przykład broni), dostają karę -20. Ponadto ty dostajesz karę -20 do odpowiednich Testów Ogłady. Gdy próbujesz oswobodzić się z Pochwycenia, jeśli ci się udało, możesz użyć wyrzuconego PS albo wartości, która wypadła na kostce jedności. Zatem udany rzut wynoszący 28 może być zastosowany jako +8 PS.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.IPrHvStaZ2hw3Q8z",
-            "effects": {
-                "hexXxc4eT1sfti0S": {
-                    "id": "hexXxc4eT1sfti0S",
-                    "name": "Oślizgła Skóra",
-                    "scriptData": [
-                        {
-                            "id": "hexXxc4eT1sfti0S",
-                            "name": "Testy wymagające trzymania czegokolwiek w dłoniach oraz Testy Ogłady",
-                            "script": "[Script.KuuWAhoSzk0rCxxw]",
-                            "activationScript": "[Script.xQ3xR2Wf0wHFa76H]",
-                            "hideScript": "[Script.px7eEdhOEt7zOTrq]"
-                        }
-                    ]
-                }
-            },
-            "modifier": "-20 do Testów związanych z trzymaniem czegokolwiek w dłoniach, -20 do Testów Ogłady"
-        },
-        "Telepathy": {
-            "id": "6clrmh4DXUJgzJqc",
-            "name": "Telepatia",
-            "description": "<p>Twój umysł oswabadza się z materialnych oków i bełkocze radośnie, znajdując nowe sposoby wpływania na innych.</p><p>Przy pomocy <strong>Prostego Testu Siły Woli</strong> możesz komunikować się z dowolnym rozumnym stworzeniem w polu widzenia, w zasięgu tylu metrów, ile wynosi twoja Siła Woli. Trwa to przez tyle minut, ile wynosi twoja Inicjatywa. Możesz także odczytywać powierzchowne myśli dowolnego stworzenia, z którym komunikujesz się telepatycznie po wykonaniu kolejnego <strong>Przeciwstawnego Testu Siły Woli</strong>. Jeśli nie uda ci się pomyślnie\nprzejść Testu, nie możesz czytać myśli tej istoty przez następne [[/r 1d10]]{1k10} dni. Gdy używasz telepatii, twoje oczy lśnią dziwacznym blaskiem. Za każdym razem, gdy rozwija się ta mutacja, podwaja się twój zasięg oddziaływania tej mocy.</p><p> </p><p> </p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.6clrmh4DXUJgzJqc",
-            "effects": {
-                "OoLIeLBpzP5t7P8U": {
-                    "id": "OoLIeLBpzP5t7P8U",
-                    "name": "Telepatia",
-                    "scriptData": [
-                        {
-                            "id": "OoLIeLBpzP5t7P8U",
-                            "name": "Telepatia",
-                            "script": "[Script.TQRL4mZhZohXg1Au]"
-                        }
-                    ]
-                }
-            },
-            "modifier": " "
-        },
-        "Itchy Nuisance": {
-            "id": "j43uKlFEckLe70LP",
-            "name": "Swędzące utrapienie",
-            "description": "<p>Liczba Rund równa Bonusowi z Siły Woli Machasz palcami i z ich koniuszków wystrzeliwują małe, swędzące zarodniki grzybni, które wciskają się w czułe miejsca celu. Zarodniki gwałtownie rosną, co wywołuje nieznośne swędzenie. Cel dostaje karę -10 do wszystkich Testów i na czas trwania czaru jego Szybkość jest zmniejszona o połowę.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.j43uKlFEckLe70LP",
-            "effects": {
-                "yREez0l5RG1YGcNM": {
-                    "id": "yREez0l5RG1YGcNM",
-                    "name": "Swędzące utrapienie",
-                    "scriptData": [
-                        {
-                            "id": "yREez0l5RG1YGcNM",
-                            "name": "Swędzące utrapienie",
-                            "script": "[Script.xvGxwv7X0Vq3vNqb]",
-                            "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
-                        }
-                    ]
-                }
-            },
-            "duration": "Bonus SW Rund",
-            "target": "1",
-            "range": "Siła Woli metrów"
-        },
-        "Sneaky Stabbin'": {
-            "id": "PQr8MOz38M0TXlga",
-            "name": "Cwano-dźgano",
-            "description": "<p>Zaklinasz ostrza swoich sojuszników, aby wyszukiwały najsłabsze punkty pancerza ich wrogów. Twoje cele dostają +1 Przewagę, a ich ataki zyskują Zaletę broni Przekłuwająca (WFRP, strona 298), która trwa, dopóki mają Przewagę.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.PQr8MOz38M0TXlga",
-            "effects": {
-                "sOpM9v9eKAumNjqd": {
-                    "id": "sOpM9v9eKAumNjqd",
-                    "name": "Cwano-dźgano",
-                    "scriptData": [
-                        {
-                            "id": "sOpM9v9eKAumNjqd",
-                            "name": "Cwano-dźgano",
-                            "script": "[Script.j1AmrY1SxFJQyapo]"
-                        },
-                        {
-                            "id": "sOpM9v9eKAumNjqd",
-                            "name": "Dodaj Przewagę",
-                            "script": "[Script.kIM4Fs1lFVV7TSnj]"
-                        }
-                    ]
-                }
-            },
-            "duration": "Specjalny",
-            "target": "Bonus Ogd Goblinów",
-            "range": "Siła Woli metrów"
-        },
-        "Doppelganger": {
-            "id": "TQDlbIGPOPNDF9uB",
-            "name": "Mimik",
-            "description": "<p>BN może przybrać postać dowolnej humanoidalnej istoty o Rozmiarze Średnim. Musi osiągnąć +5 PS w <strong>Wydłużonym Teście Percepcji</strong> , gdy obserwuje swój cel. Następnie przybranie postaci celu zajmuje mu 2 Rundy. Kopiowane są także ubranie i mniejsze elementy wyposażenia celu; stają się częścią stwora i nie mogą być usuwane. Większe elementy wyposażenia, takie jak miecze i plecaki, nie są kopiowane. Gdy ci, którzy znają ofiarę, spotkają przekształconego stwora, wykonują <strong>Trudny (−20)Test Intuicji</strong>. Jeśli go zdadzą, zorientują się, że coś jest nie tak. Jeśli im się nie uda, pozostaną przekonani, że stwór jest znajomą im osobą.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.TQDlbIGPOPNDF9uB"
-        },
-        "Ameliorative Elixir": {
-            "id": "vUGt1d6vzu3kuMYu",
-            "name": "Eliksir Udobruchający",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.vUGt1d6vzu3kuMYu",
-            "effects": {
-                "39pBDLe966yHGvLh": {
-                    "id": "39pBDLe966yHGvLh",
-                    "name": "Eliksir Udobruchający",
-                    "scriptData": [
-                        {
-                            "id": "39pBDLe966yHGvLh",
-                            "name": "Eliksir Udobruchający",
-                            "script": "[Script.nYtAjSArsNbrU2ob]",
-                            "activationScript": "[Script.fIUxKZMWJ8HMPmH9]",
-                            "hideScript": "[Script.k9SvH4Lm3ZuI8S1N]"
-                        }
-                    ]
-                },
-                "m2BhURfWblde0MYM": {
-                    "id": "m2BhURfWblde0MYM",
-                    "name": "Zastosuj Eliksir Udobruchający",
-                    "scriptData": [
-                        {
-                            "id": "m2BhURfWblde0MYM",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>W jego skład wchodzi dziwnokorzeń, co sprawia, że ten gęsty i ziemisty eliksir daje poczucie szczęścia i przyjemne halucynacje. Zapewnia premię +10 do Testów Siły Woli, ale powoduje, że Testy Zwinności, Inicjatywy i Inteligencji obciążone są modyfikatorem -10. </p><p><strong>Czas działania</strong>: [[/r 1d10*10]]{1k10*10} minut.</p>"
-        },
-        "Basilisk's Baleful Bile": {
-            "id": "cCMhuudYsHlP1t56",
-            "name": "Złowroga Żółć Bazyliszka",
-            "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[Oszołomienie] na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[Zatrucie] odpierane <strong>Problematycznym (-10) Testem Odporności</strong> Test. If the target fails to resist the @Condition[Zatrucie] zostaje permanentnie przemieniona w kamień. </p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.cCMhuudYsHlP1t56",
-            "effects": {
-                "GFWCmFT6AtYimdnZ": {
-                    "id": "GFWCmFT6AtYimdnZ",
-                    "name": "Zastosuj Złowroga Żółć Bazyliszka",
-                    "scriptData": [
-                        {
-                            "id": "GFWCmFT6AtYimdnZ",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                },
-                "XxU3DqOlS4Cm4HUs": {
-                    "id": "XxU3DqOlS4Cm4HUs",
-                    "name": "Złowroga Żółć Bazyliszka",
-                    "scriptData": [
-                        {
-                            "id": "XxU3DqOlS4Cm4HUs",
-                            "name": "Złowroga Żółć Bazyliszka",
-                            "script": "[Script.8ZAUBSH9CM9OTpTL]"
-                        }
-                    ]
-                }
+    "duration_value": "system.duration.value",
+    "duration_unit": "system.duration.unit",
+    "incubation_value": "system.incubation.value",
+    "incubation_unit": "system.incubation.unit",
+    "contraction": "system.contraction.value",
+    "symptoms": "system.symptoms.value",
+    "permanent": "system.permanent.value",
+    "modifier": "system.modifier.value",
+    "duration": "system.duration.value",
+    "range": "system.range.value",
+    "target": "system.target.value",
+    "damage": "system.damage.value",
+    "overcast": "system.overcast.label",
+    "overcastvalue": "system.overcast.valuePerOvercast.type",
+    "overcastinitial": "system.overcast.initial.type",
+    "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
+    "overcastinitialvalue": "system.overcast.initial.additional",
+    "roll": "system.rollable.skill",
+    "specification_label": "system.specification.label",
+    "specification": "system.specification.value",
+    "penalties": "system.penalty.value",
+    "special": "system.special.value"
+  },
+  "folders": {
+    "Criticals": "Rany Krytyczne",
+    "Diseases": "Choroby",
+    "Mutations": "Mutacje",
+    "Spells": "Zaklęcia",
+    "Traits": "Cechy Stworzeń",
+    "Trappings": "Wyposażenie",
+    "Blessings": "Błogosławieństwa",
+    "Uliric": "Ulryk",
+    "Ammunition": "Amunicja",
+    "Armour": "Pancerze",
+    "Weapons": "Broń",
+    "Books and Documents": "Księgi i Dokumenty",
+    "Clothing and Accessories": "Ubrania i dodatki",
+    "Drugs and Poisons": "Narkotyki i trucizny",
+    "Food and Drink": "Jedzenie i picie",
+    "Herbs and Draughts": "Zioła i mikstury",
+    "Miscellaneous": "Inne",
+    "Packs and Containers": "Pakunki i pojemniki",
+    "Tools and Kits": "Narzędzia i warsztaty",
+    "Chaos Magic": "Magia Chaosu",
+    "Lore of Beasts": "Tradycja Zwierząt",
+    "Lore of Daemonology": "Tradycja Demonologii",
+    "Lore of Death": "Tradycja Śmierci",
+    "Lore of Fire": "Tradycja Ognia",
+    "Lore of Heavens": "Tradycja Niebios",
+    "Lore of Hedgecraft": "Tradycja Guślarstwa",
+    "Lore of Life": "Tradycja Życia",
+    "Lore of Light": "Tradycja Światła",
+    "Lore of Metal": "Tradycja Metalu",
+    "Lore of Shadow": "Tradycja Cieni",
+    "Lore of Witchcraft": "Tradycja Czarownictwa",
+    "Lore of Necromancy": "Tradycja Nekromancji",
+    "Petty Spells": "Magia Prosta"
+  },
+  "entries": {
+    "Bruised": {
+      "id": "h3gFDi7hULlP2TJX",
+      "name": "Potłuczenie",
+      "description": "<p>Wszystkie Testy Zwinności otrzymują karę -10 na [[/r 1d10]]{1k10} dni.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.h3gFDi7hULlP2TJX",
+      "effects": {
+        "klvis7s3ItDHPQN0": {
+          "id": "klvis7s3ItDHPQN0",
+          "name": "Potłuczenie",
+          "scriptData": [
+            {
+              "id": "klvis7s3ItDHPQN0",
+              "name": "Kara dla wszystkich testów",
+              "script": "[Script.xvGxwv7X0Vq3vNqb]",
+              "activationScript": "[Script.JFgXyb6bKjZJLmF8]",
+              "hideScript": "[Script.oW1gtYVT5nrxDjM7]"
             }
-        },
-        "Focusing Philtre": {
-            "id": "lTsRQp3AmDBcXg9L",
-            "name": "Ekstrakt Skupienia",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.lTsRQp3AmDBcXg9L",
-            "effects": {
-                "4XXjzGh06hLzur1z": {
-                    "id": "4XXjzGh06hLzur1z",
-                    "name": "Zastosuj Ekstrakt Skupienia",
-                    "scriptData": [
-                        {
-                            "id": "4XXjzGh06hLzur1z",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                },
-                "NIRhXPLO5leTz7hM": {
-                    "id": "NIRhXPLO5leTz7hM",
-                    "name": "Ekstrakt Skupienia",
-                    "scriptData": [
-                        {
-                            "id": "NIRhXPLO5leTz7hM",
-                            "name": "Ekstrakt Skupienia",
-                            "script": "[Script.u6CYMSZADrfXd48Q]",
-                            "activationScript": "[Script.yXUPiWuQ5o0JBY4i]",
-                            "hideScript": "[Script.I0oRZ7AWde5KI5jw]"
-                        },
-                        {
-                            "id": "NIRhXPLO5leTz7hM",
-                            "name": "Zmęczenie",
-                            "script": "[Script.YRUTliBzAQvncGNX]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>Ciemny, gorzki napar powoduje, że umysł skupia się na myśleniu, i zwiększa koncentrację. Zapewnia premię +20 do Testów Inteligencji i Odporności. Kiedy przestanie działać, postać opada znużenie i nabywa ona Stan Zmęczenie, który trwa przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin</p>"
-        },
-        "Katya's Cordial": {
-            "id": "D8jml7l6GANTVwXn",
-            "name": "Rozgrzewacz Katyi",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.D8jml7l6GANTVwXn",
-            "effects": {
-                "KdgovIoeDUVdz1va": {
-                    "id": "KdgovIoeDUVdz1va",
-                    "name": "Zastosuj Rozgrzewacz Katyi",
-                    "scriptData": [
-                        {
-                            "id": "KdgovIoeDUVdz1va",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                },
-                "qAaU8yFByibRqO9q": {
-                    "id": "qAaU8yFByibRqO9q",
-                    "name": "Efekty Uboczne Rozgrzewacza Katyi",
-                    "scriptData": [
-                        {
-                            "id": "qAaU8yFByibRqO9q",
-                            "name": "Kara do testów Ogłady",
-                            "script": "[Script.0iTLDgFHO9Rgc010]",
-                            "activationScript": "[Script.VuE1mhrB6X6MYTzg]",
-                            "hideScript": "[Script.6Fe8M5MdklKS2olx]"
-                        }
-                    ]
-                },
-                "sxcJkDbYoXmNQKPF": {
-                    "id": "sxcJkDbYoXmNQKPF",
-                    "name": "Rozgrzewacz Katyi",
-                    "scriptData": [
-                        {
-                            "id": "sxcJkDbYoXmNQKPF",
-                            "name": "Atrakcyjny",
-                            "script": "[Script.EwD053Fyy46b59ZI]",
-                            "activationScript": "return true;"
-                        },
-                        {
-                            "id": "sxcJkDbYoXmNQKPF",
-                            "name": "Zastosuj Efekty Uboczne",
-                            "script": "[Script.9WZa63lr0K3SsP4G]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>Zawiesina o słodkim aromacie, perłoworóżowym kolorze i ognistym smaku. Eliksir podnosi atrakcyjność pijącego, ale za pewną cenę. Będąc pod jego wpływem, postać może korzystać z działania Talentu @UUID[Compendium.wfrp4e-core.items.6l3jvIAvrKxt0lA9]{Atrakcyjny}, ale kiedy przestanie działać… Przez [[/r 1d10]]{1k10} dni Bohater musi się borykać z karą -20 do Ogłady, ponieważ przez jego skórę i oczy wydalana jest żółta wydzielina. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin</p>"
-        },
-        "Liquor of Luck": {
-            "id": "bycar0CfYqx6OOft",
-            "name": "Likier Fortuny",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.bycar0CfYqx6OOft",
-            "gmdescription": "<p>Jasnobłękitny likier o lekkim aromacie lukrecji. Jego spożycie daje +1 Punkt Szczęścia, a kiedy eliksir działa i Bohater wyda Punkt Szczęścia, gracz powinien rzucić [[/r 1d100]]. Jeśli wynikiem będzie dublet, postać odzyskuje wydany punkt. Kiedy napar przestanie działać, Bohater traci wszystkie Punkty Szczęścia i otrzymuje 1 Stan @Condition[Zmęczenie], który utrzymuje się przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
-        },
-        "Reactionary Restorative": {
-            "id": "mZHMUtVLsASroIQH",
-            "name": "Ripostny Odwar",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.mZHMUtVLsASroIQH",
-            "effects": {
-                "D6CmrdQcAAbnqJla": {
-                    "id": "D6CmrdQcAAbnqJla",
-                    "name": "Ripostny Odwar",
-                    "scriptData": [
-                        {
-                            "id": "D6CmrdQcAAbnqJla",
-                            "name": "Ekstrakt Skupienia",
-                            "script": "[Script.rCh3ltUrUMovd2Kc]",
-                            "activationScript": "return args.skill?.name == \"Odporność\" || args.characteristic == \"int\"",
-                            "hideScript": "return ![\"t\", \"int\"].includes(args.characteristic)"
-                        },
-                        {
-                            "id": "D6CmrdQcAAbnqJla",
-                            "name": "Zmęczenie",
-                            "script": "[Script.YRUTliBzAQvncGNX]"
-                        }
-                    ]
-                },
-                "U1GKvX5iR8hxJBNU": {
-                    "id": "U1GKvX5iR8hxJBNU",
-                    "name": "Zastosuj Ripostny Odwar",
-                    "scriptData": [
-                        {
-                            "id": "U1GKvX5iR8hxJBNU",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>Gęsty, krwiście czerwony płyn o ohydnym smaku wyostrza zmysły pijącego, który jest świadomy każdego zagrożenia. Kiedy eliksir działa, Bohater nie może otrzymać Stanu Zaskoczony. Gdy napar skończy działać, postać otrzymuje 1 Stan @Condition[Zmęczenie], którego nie da się usunąć przez całą dobę.</p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin.</p>"
-        },
-        "Saif al-Janub": {
-            "id": "rIBB37yMATXRnFbp",
-            "name": "Saif al-Janub",
-            "description": "<p>To zakrzywione ostrze zostało podarowane Lohnerowi za jego śmiałe czyny podczas obrony Sudenburga przed zastępami nieumarłych w 2498 KI. Wykonał je słynny rzemieślnik-filozof, Hataq al-Kundi, w 1445 KI. W Arabii to wyborne ostrze warte jest dziesięć razy więcej, niż wynosi jego podana cena.</p>",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.rIBB37yMATXRnFbp"
-        },
-        "The Marvelous Medicinal Mixture": {
-            "id": "9xOhhmZzKTPS2SnO",
-            "name": "Mistrzowska Mikstura Medyczna",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.9xOhhmZzKTPS2SnO",
-            "effects": {
-                "1rklhrpLZV24rwet": {
-                    "id": "1rklhrpLZV24rwet",
-                    "name": "Zastosuj Mistrzowską Miksturę Medyczną",
-                    "scriptData": [
-                        {
-                            "id": "1rklhrpLZV24rwet",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                },
-                "24RuaFgg3jiAGUp3": {
-                    "id": "24RuaFgg3jiAGUp3",
-                    "name": "Mistrzowska Mikstura Medyczna",
-                    "scriptData": [
-                        {
-                            "id": "24RuaFgg3jiAGUp3",
-                            "name": "Zmęczenie",
-                            "script": "[Script.YRUTliBzAQvncGNX]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>Okropny, trącący rybą olej. Aby go w ogóle wypić, trzeba zdać <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli się uda, Bohater otrzymuje 1 Stan @Condition[Zmęczenie], który usunąć można tylko całonocnym snem. Poza tym eliksir nie ma żadnego innego działania. Klienci von Holzenauera są przekonani, że okropny smak idzie w parze z leczniczym działaniem przeciwko każdej przypadłości</p>"
-        },
-        "Tonic of Sight Beyond Sight": {
-            "id": "AulAEeUVTGuCmQPX",
-            "name": "Tonik Niewidywanych Widoków",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-starter-set.items.AulAEeUVTGuCmQPX",
-            "effects": {
-                "2RIpjvXRofiedknt": {
-                    "id": "2RIpjvXRofiedknt",
-                    "name": "Zastosuj Tonik Niewidywanych Widoków",
-                    "scriptData": [
-                        {
-                            "id": "2RIpjvXRofiedknt",
-                            "name": "@effect.name",
-                            "script": "[Script.xUpKYT7BZCSmAfUy]"
-                        }
-                    ]
-                },
-                "qIbEQBBpeeFeW4qQ": {
-                    "id": "qIbEQBBpeeFeW4qQ",
-                    "name": "Tonik Niewidywanych Widoków",
-                    "scriptData": [
-                        {
-                            "id": "qIbEQBBpeeFeW4qQ",
-                            "name": "Tonik Niewidywanych Widoków",
-                            "script": "[Script.RDtJXji3hgcKnEBk]"
-                        }
-                    ]
-                }
-            },
-            "gmdescription": "<p>Ciemnozielony płyn, na etykiecie którego znajduje się wielka, czerwona gałka oczna, ma wyostrzyć wzrok. Wypicie eliksiru daje postaci możliwość korzystania z któregoś z poniższych Talentów ([[/r 1d10]]{1k10}):</p>\n<p>1-2: @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł (Wzrok)};</p>\n<p>3-4: @UUID[Compendium.wfrp4e-core.items.Nj3tC8A5fZ3zEdMR]{Święte Wizje};</p>\n<p>5-6: @UUID[Compendium.wfrp4e-core.items.6w30u0VPsAicrqb5]{Wykrywanie Magii};</p>\n<p>7-8: @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna};</p>\n<p>9-10: wszystkie powyższe na raz.</p>\n<p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
+          ]
         }
+      },
+      "wounds": "2",
+      "location": " "
     },
-    "label": "Wyposażenie (Zestaw Startowy)"
+    "Cracked Bone": {
+      "id": "vcM1EnJXXM02anIi",
+      "name": "Pęknięta kość",
+      "description": "<p>Zyskujesz stan @Condition[Ogłuszenia]. Wszystkie testy otrzymują karę -10, dopóki nie otrzymasz udanego testu leczenia.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.vcM1EnJXXM02anIi",
+      "effects": {
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        },
+        "XWCKsliojPlRhtX5": {
+          "id": "XWCKsliojPlRhtX5",
+          "name": "Pęknięta kość",
+          "scriptData": [
+            {
+              "id": "XWCKsliojPlRhtX5",
+              "name": "Pęknięta kość",
+              "script": "[Script.xvGxwv7X0Vq3vNqb]",
+              "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+            }
+          ]
+        }
+      },
+      "wounds": "3",
+      "location": " "
+    },
+    "Crippling Wound": {
+      "id": "xtJXTEjOQtn3pods",
+      "name": "Okaleczenie",
+      "description": "<p>dostajesz stan @Condition [Powalenie], który można usunąć tylko po udanym <strong>Prostym (+0) Teście Leczenia</strong> . Wszystkie Testy podlegają karze -20, dopóki nie otrzymasz opieki medycznej i nie spędzisz co najmniej tygodnia na odpoczynku.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.xtJXTEjOQtn3pods",
+      "effects": {
+        "3Z6QjYmhs1Opp1Wp": {
+          "id": "3Z6QjYmhs1Opp1Wp",
+          "name": "Okaleczenie",
+          "scriptData": [
+            {
+              "id": "3Z6QjYmhs1Opp1Wp",
+              "name": "Kara dla wszystkich testów",
+              "script": "[Script.0iTLDgFHO9Rgc010]",
+              "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+            }
+          ]
+        },
+        "oyxMXt8PHKUatGsE": {
+          "id": "oyxMXt8PHKUatGsE",
+          "name": "Powalenie",
+          "scriptData": [
+            {
+              "id": "oyxMXt8PHKUatGsE",
+              "name": "Testy związane z jakimkolwiek ruchem",
+              "script": "\n        args.prefillModifiers.modifier += -20;\n        args.prefillModifiers.slBonus += 0;\n        args.prefillModifiers.successBonus += 0;\n        "
+            }
+          ]
+        }
+      },
+      "wounds": "4",
+      "location": " "
+    },
+    "Flensed Muscle": {
+      "id": "CsnWW8GohpZyEAYG",
+      "name": "Naderwany mięsień",
+      "description": "<p>Dostajesz 4 Stany @Condition[Krwawienie]. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia przez następne 4 tygodnie, będą wywoływać także 2 Stany <em>Krwawienie</em>, ponieważ rana wciąż się otwiera.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.CsnWW8GohpZyEAYG",
+      "effects": {
+        "3MNCFqmWfDVYnYbu": {
+          "id": "3MNCFqmWfDVYnYbu",
+          "name": "Krwawienie"
+        },
+        "HT33m8ut91PlUwlg": {
+          "id": "HT33m8ut91PlUwlg",
+          "name": "Naderwany mięsień",
+          "scriptData": [
+            {
+              "id": "HT33m8ut91PlUwlg",
+              "name": "Naderwany mięsień",
+              "script": "[Script.1PQPxFjmRlulHHzo]"
+            }
+          ]
+        }
+      },
+      "wounds": "4",
+      "location": " "
+    },
+    "Fractured Bone": {
+      "id": "SdB0sthOSurZWqYe",
+      "name": "Złamana kość",
+      "description": "<p>Dostajesz Stan Oszołomienie. Przejdź <strong>Test Odporności</strong> albo dostaniesz także Stan @Condition[Powalenie]. Wszystkie Testy dostają karę -10 przez następne 4 tygodnie.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.SdB0sthOSurZWqYe",
+      "effects": {
+        "ftiYT4Sxl2RlzOvB": {
+          "id": "ftiYT4Sxl2RlzOvB",
+          "name": "Złamana kość",
+          "scriptData": [
+            {
+              "id": "ftiYT4Sxl2RlzOvB",
+              "name": "Powalenie",
+              "script": "[Script.bhXUW7IJtEaUGAoV]"
+            },
+            {
+              "id": "ftiYT4Sxl2RlzOvB",
+              "name": "Kara dla wszystkich testów",
+              "script": "[Script.xvGxwv7X0Vq3vNqb]",
+              "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+            }
+          ]
+        },
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        }
+      },
+      "wounds": "4",
+      "location": " "
+    },
+    "Gaping Wound": {
+      "id": "pmggfvcdKxjfsgLF",
+      "name": "Rana otwarta",
+      "description": "<p>Dostajesz 3 Stany @Condition[Bleeding]. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia, będą wywoływać dodatkowy Stan Krwawienie przez następny tydzień z powodu otwierania się rany.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.pmggfvcdKxjfsgLF",
+      "effects": {
+        "H1jqgnMQlBWlb2iN": {
+          "id": "H1jqgnMQlBWlb2iN",
+          "name": "Rana otwarta",
+          "scriptData": [
+            {
+              "id": "H1jqgnMQlBWlb2iN",
+              "name": "Rana otwarta",
+              "script": "[Script.NNytXz5XFPrEF6dw]"
+            }
+          ]
+        },
+        "nyrOZnHf5SaR3ql0": {
+          "id": "nyrOZnHf5SaR3ql0",
+          "name": "Krwawienie"
+        }
+      },
+      "wounds": "3",
+      "location": " "
+    },
+    "Gash": {
+      "id": "6cojY1IRxvJev8kt",
+      "name": "Rozcięcie",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie].</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.6cojY1IRxvJev8kt",
+      "effects": {
+        "p5XumBXXpYWcXo7X": {
+          "id": "p5XumBXXpYWcXo7X",
+          "name": "Krwawienie"
+        }
+      },
+      "wounds": "1",
+      "location": " "
+    },
+    "Gut Blow": {
+      "id": "vj8VdUbOpT1vepsL",
+      "name": "Cios w bebechy",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie].</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.vj8VdUbOpT1vepsL",
+      "effects": {
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        }
+      },
+      "wounds": "1",
+      "location": " "
+    },
+    "Low Blow!": {
+      "id": "HPszYSWoB4ObYOBM",
+      "name": "Poniżej pasa!",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie]. Musi również wykonać <strong>Trudny (-20) Test Odporności</strong> jeśli ten się nie uda, postać otrzyma dodatkowe 2 Stany @Condition[Oszołomienie].</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.HPszYSWoB4ObYOBM",
+      "effects": {
+        "dys96YM5JQYiJjtZ": {
+          "id": "dys96YM5JQYiJjtZ",
+          "name": "Poniżej pasa!",
+          "scriptData": [
+            {
+              "id": "dys96YM5JQYiJjtZ",
+              "name": "Poniżej pasa!",
+              "script": "[Script.EU5j0hnDTG9Z6d1e]"
+            }
+          ]
+        },
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        }
+      },
+      "wounds": "1",
+      "location": " "
+    },
+    "Painful Cut": {
+      "id": "Vj7jkZ1ZtJKXKYmu",
+      "name": "Bolesne rozcięcie",
+      "description": "<p>Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie] oraz 1 poziom Stanu @Condition[Oszołomienie]. Musi także zdać <strong>Trudny (-20) Test Odporności</strong>, w przeciwnym wypadku nastąpi @Condition[Nieprzytomny] Utrata Przytomności z powodu bólu.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.Vj7jkZ1ZtJKXKYmu",
+      "effects": {
+        "eDYPhQ4BZxsoN3S3": {
+          "id": "eDYPhQ4BZxsoN3S3",
+          "name": "Krwawienie"
+        },
+        "fLJCyLURFISohfWx": {
+          "id": "fLJCyLURFISohfWx",
+          "name": "Bolesne rozcięcie",
+          "scriptData": [
+            {
+              "id": "fLJCyLURFISohfWx",
+              "name": "Bolesne rozcięcie",
+              "script": "[Script.EmXwcuycEH8slEn5]"
+            }
+          ]
+        },
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        }
+      },
+      "wounds": "3",
+      "location": " "
+    },
+    "Ruined": {
+      "id": "M181psxcR6fA3wNB",
+      "name": "Pokonany",
+      "description": "<p>Postać otrzymuje Stan @Condition[Oszołomienie], który można usunąć tylko przy pomocy udanego <strong>Prostego (+0) Testu Leczenia</strong>. To Miejsce Trafienia staje się bezużyteczne, o ile nie spędzisz miesiąca na odpoczynku w łóżku.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.M181psxcR6fA3wNB",
+      "effects": {
+        "a8bUPcOi4uFCDICJ": {
+          "id": "a8bUPcOi4uFCDICJ",
+          "name": "Pokonany",
+          "scriptData": [
+            {
+              "id": "a8bUPcOi4uFCDICJ",
+              "name": "Pokonany",
+              "script": "[Script.OnkEe4ISru1hjJWP]"
+            }
+          ]
+        },
+        "iliuuUkzNTekgldW": {
+          "id": "iliuuUkzNTekgldW",
+          "name": "Utrata Przytomności"
+        }
+      },
+      "wounds": "5",
+      "location": " "
+    },
+    "Shattered Bone": {
+      "id": "9re1DIxquRgCswc2",
+      "name": "Roztrzaskana kość",
+      "description": "<p>dostajesz stan @Condition [Oszołomienie], który można usunąć tylko po udanym <strong>Prostym (+0) Teście Leczenia</strong> . Wszystkie Testy podlegają karze -20, dopóki nie otrzymasz opieki medycznej i nie spędzisz co najmniej tygodnia na odpoczynku.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.9re1DIxquRgCswc2",
+      "effects": {
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        },
+        "rER8YHCJqjxaDQEE": {
+          "id": "rER8YHCJqjxaDQEE",
+          "name": "Roztrzaskana kość",
+          "scriptData": [
+            {
+              "id": "rER8YHCJqjxaDQEE",
+              "name": "Kara dla wszystkich testów",
+              "script": "[Script.0iTLDgFHO9Rgc010]",
+              "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+            }
+          ]
+        }
+      },
+      "wounds": "5",
+      "location": " "
+    },
+    "Torn Apart": {
+      "id": "ULUNwr1srKJhCYKi",
+      "name": "Na kawałki",
+      "description": "<p>Zostajesz przerąbany wpół. Twoja górna połowa ląduje [[/r 1d10]]{1k10} metrów dalej w losowym kierunku, a wszystkie pobliskie postacie zostają spryskane krwią..</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.ULUNwr1srKJhCYKi",
+      "effects": {
+        "sQBHhd6ooMpuKhK6": {
+          "id": "sQBHhd6ooMpuKhK6",
+          "name": "Na kawałki",
+          "scriptData": [
+            {
+              "id": "sQBHhd6ooMpuKhK6",
+              "name": "Na kawałki",
+              "script": "[Script.GEfWIFBSrXt0ldBM]"
+            }
+          ]
+        }
+      },
+      "wounds": "Śmierć",
+      "location": " "
+    },
+    "Torn Flesh": {
+      "id": "7u2XsoTaIdEMsnzG",
+      "name": "Rana szarpana",
+      "description": "<p>Dostajesz 2 Stany @Condition[Krwawienie].</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.7u2XsoTaIdEMsnzG",
+      "effects": {
+        "OcAC7jjpeR86HSSK": {
+          "id": "OcAC7jjpeR86HSSK",
+          "name": "Krwawienie"
+        }
+      },
+      "wounds": "2",
+      "location": " "
+    },
+    "Winded": {
+      "id": "JxCMVZYWoLpaMiWR",
+      "name": "Pozbawienie tchu",
+      "description": "<p>Dostajesz 2 Stany @Condition[Oszołomienie]. Przejdź <strong>Przeciętny (+20) Test Odporności</strong> albo dostaniesz Stan @Condition[Powalenie]. Twoja Szybkość jest zmniejszona o połowę przez [[/r 1d10]]{1k10} Rund, gdy próbujesz złapać oddech.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.JxCMVZYWoLpaMiWR",
+      "effects": {
+        "PKfdEwRZh5DCZSwC": {
+          "id": "PKfdEwRZh5DCZSwC",
+          "name": "Oszołomienie",
+          "scriptData": [
+            {
+              "id": "PKfdEwRZh5DCZSwC",
+              "name": "Oszołomienie",
+              "script": "args.prefillModifiers.modifier -= 10 * this.effect.conditionValue",
+              "activationScript": "return true"
+            }
+          ]
+        },
+        "rgHSoFshdyzm8l2R": {
+          "id": "rgHSoFshdyzm8l2R",
+          "name": "Pozbawienie tchu",
+          "scriptData": [
+            {
+              "id": "rgHSoFshdyzm8l2R",
+              "name": "Pozbawienie tchu",
+              "script": "[Script.kMSdRskYDI2J1gnp]"
+            },
+            {
+              "id": "rgHSoFshdyzm8l2R",
+              "name": "Szybkość zmniejszona o połowę",
+              "script": "[Script.9MDi3ok9gPwtbALf]"
+            }
+          ]
+        }
+      },
+      "wounds": "2",
+      "location": " "
+    },
+    "Bronze Fever": {
+      "id": "BBYmXJ5jiRUk93IJ",
+      "name": "Brązowa Febra",
+      "description": "<p>Brązową Febrę częściej spotyka się w południowych rejonach Starego Świata, gdzie jest cieplej i bardziej wilgotno, a choroba roznoszona jest przez ukąszenia owadów. Większość zarażonych wraca do zdrowia po kilku dniach, ale niekiedy choroba prowadzi do komplikacji, a nawet śmierci.&nbsp;</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.BBYmXJ5jiRUk93IJ",
+      "effects": {
+        "CphfLDDScFyJx7cR": {
+          "id": "CphfLDDScFyJx7cR",
+          "name": "Nawroty (Umiarkowane)"
+        },
+        "eMgQvHbj3ODJL8X6": {
+          "id": "eMgQvHbj3ODJL8X6",
+          "name": "Mdłości",
+          "scriptData": [
+            {
+              "id": "eMgQvHbj3ODJL8X6",
+              "name": "@effect.name",
+              "script": "if (args.test.failed)\n                            {\n                                let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"];\n                                if (applicableCharacteristics.includes(args.test.characteristicKey))\n                                {\n                                    this.actor.addCondition(\"stunned\");\n                                }\n                            }"
+            }
+          ]
+        },
+        "OvR8HtQaW6EuIyPB": {
+          "id": "OvR8HtQaW6EuIyPB",
+          "name": "Gorączka",
+          "scriptData": [
+            {
+              "id": "OvR8HtQaW6EuIyPB",
+              "name": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "activationScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+              "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+            }
+          ]
+        },
+        "qjXPqzIEuzHGAY8m": {
+          "id": "qjXPqzIEuzHGAY8m",
+          "name": "Apatia",
+          "scriptData": [
+            {
+              "id": "qjXPqzIEuzHGAY8m",
+              "name": "@effect.name",
+              "script": "let fatigued = this.actor.hasCondition(\"fatigued\")\nif (!fatigued)\n{\n    this.actor.addCondition(\"fatigued\")\n    ui.notifications.notify(\"Zmęczenie dodane do \" + this.actor.name + \", które nie może zostać usunięte, dopóki objaw Apatia nie zostanie uleczony.\")\n}"
+            }
+          ]
+        }
+      },
+      "duration_value": "1d10",
+      "duration_unit": "dni",
+      "contraction": "Jeśli nie powiedzie się Przeciętny (+20) Test Odporności po ugryzieniu przez zainfekowanego komara. Spożycie lub przetoczenie zakażonej krwi powoduje automatyczne zarażenie Brązową Febrą.",
+      "incubation_value": "1d10",
+      "incubation_unit": "dni",
+      "symptoms": "Apatia, Gorączka, Mdłości, Nawroty (Umiarkowane)",
+      "permanent": " ",
+      "duration_text": " ",
+      "incubation_text": " "
+    },
+    "Clutch of Eyes": {
+      "id": "iBS0fYHCX9VHdyVR",
+      "name": "Wylęg Oczu",
+      "description": "<p>Pod skórą zaczynają nabrzmiewać drgające cysty, potem przeszywa cię ból, gdy krwawe wrzody rosną, pękają i odsłaniają skupisko nowych, przerażonych oczu.</p><p>Rzuć 1k100, by ustalić @Table[hitloc]{Miejsce Trafienia}, w którym wyłonią się twoje nowe oczy. Teraz możesz widzieć z tego Miejsca Trafienia. Zwiększ swoją Inicjatywę o +[[/r 1d10]]. Jeśli nie masz Inicjatywy, dostajesz także +[[/r 2d10]]{2k10}. Ponadto wszystkie trafienia w miejsce Wylęgu oczu powodują stan @Condition[Oślepienie].</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.iBS0fYHCX9VHdyVR",
+      "effects": {
+        "qcgzN9lKYCUuG2T6": {
+          "id": "qcgzN9lKYCUuG2T6",
+          "name": "Wylęg Oczu",
+          "scriptData": [
+            {
+              "id": "qcgzN9lKYCUuG2T6",
+              "name": "Wylęg Oczu",
+              "script": "[Script.ynoHNXXCGRS6fTqF]"
+            },
+            {
+              "id": "qcgzN9lKYCUuG2T6",
+              "name": "Oślepienie",
+              "script": "[Script.abLWYtNTu1UVDQAs]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Massive Intellect": {
+      "id": "ox7tLcnA1HMxhyBF",
+      "name": "Potężny Intelekt",
+      "description": "<p>Jasna krew, popękane kości i zmiażdżone tkanki wylewają się z otworów w twoim ciele, gdy twój dawny mózg nabrzmiewa. Powoli, w ciągu tygodni, w jego miejscu rośnie nowy intelekt, który boleśnie rozciąga twoją głowę w szerokich, przezroczystych fałdach wokół napuchłego, świecącego mózgu.</p><p>Zwiększ swoją Inteligencję o +[[/r 2d10]]{2k10}. Jeśli nie masz Ogłady, dostajesz także +[[/r 2d10]]{2k10}. Wszystkie trafienia w głowę automatycznie oznaczają @Table[crithead]{Trafienie Krytyczne}, o ile już nie została zadana.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.ox7tLcnA1HMxhyBF",
+      "effects": {
+        "RZr67I9pU34yJqPy": {
+          "id": "RZr67I9pU34yJqPy",
+          "name": "Potężny Intelekt",
+          "scriptData": [
+            {
+              "id": "RZr67I9pU34yJqPy",
+              "name": "Potężny Intelekt",
+              "script": "[Script.YwLEw4BiKq4EMy57]"
+            },
+            {
+              "id": "RZr67I9pU34yJqPy",
+              "name": "Rana Krytyczna",
+              "script": "[Script.e7IxnxePdXSy6L4E]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Slippery Skin": {
+      "id": "IPrHvStaZ2hw3Q8z",
+      "name": "Oślizgła Skóra",
+      "description": "<p>Stale się pocisz, a twoja skóra wydziela rzadki, lepki śluz podobny do tego, który wytwarza ośluza. Wydzielina jest nieprzyjemna w dotyku, przesącza się przez ubranie w ciągu godziny lub dwóch i z jej powodu twój chwyt jest niepewny.</p><p>Wszelkie Testy, które wymagają od ciebie trzymania czegokolwiek w dłoniach (na przykład broni), dostają karę -20. Ponadto ty dostajesz karę -20 do odpowiednich Testów Ogłady. Gdy próbujesz oswobodzić się z Pochwycenia, jeśli ci się udało, możesz użyć wyrzuconego PS albo wartości, która wypadła na kostce jedności. Zatem udany rzut wynoszący 28 może być zastosowany jako +8 PS.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.IPrHvStaZ2hw3Q8z",
+      "effects": {
+        "hexXxc4eT1sfti0S": {
+          "id": "hexXxc4eT1sfti0S",
+          "name": "Oślizgła Skóra",
+          "scriptData": [
+            {
+              "id": "hexXxc4eT1sfti0S",
+              "name": "Testy wymagające trzymania czegokolwiek w dłoniach oraz Testy Ogłady",
+              "script": "[Script.KuuWAhoSzk0rCxxw]",
+              "activationScript": "[Script.xQ3xR2Wf0wHFa76H]",
+              "hideScript": "[Script.px7eEdhOEt7zOTrq]"
+            }
+          ]
+        }
+      },
+      "modifier": "-20 do Testów związanych z trzymaniem czegokolwiek w dłoniach, -20 do Testów Ogłady"
+    },
+    "Telepathy": {
+      "id": "6clrmh4DXUJgzJqc",
+      "name": "Telepatia",
+      "description": "<p>Twój umysł oswabadza się z materialnych oków i bełkocze radośnie, znajdując nowe sposoby wpływania na innych.</p><p>Przy pomocy <strong>Prostego Testu Siły Woli</strong> możesz komunikować się z dowolnym rozumnym stworzeniem w polu widzenia, w zasięgu tylu metrów, ile wynosi twoja Siła Woli. Trwa to przez tyle minut, ile wynosi twoja Inicjatywa. Możesz także odczytywać powierzchowne myśli dowolnego stworzenia, z którym komunikujesz się telepatycznie po wykonaniu kolejnego <strong>Przeciwstawnego Testu Siły Woli</strong>. Jeśli nie uda ci się pomyślnie\nprzejść Testu, nie możesz czytać myśli tej istoty przez następne [[/r 1d10]]{1k10} dni. Gdy używasz telepatii, twoje oczy lśnią dziwacznym blaskiem. Za każdym razem, gdy rozwija się ta mutacja, podwaja się twój zasięg oddziaływania tej mocy.</p><p> </p><p> </p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.6clrmh4DXUJgzJqc",
+      "effects": {
+        "OoLIeLBpzP5t7P8U": {
+          "id": "OoLIeLBpzP5t7P8U",
+          "name": "Telepatia",
+          "scriptData": [
+            {
+              "id": "OoLIeLBpzP5t7P8U",
+              "name": "Telepatia",
+              "script": "[Script.TQRL4mZhZohXg1Au]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Itchy Nuisance": {
+      "id": "j43uKlFEckLe70LP",
+      "name": "Swędzące utrapienie",
+      "description": "<p>Liczba Rund równa Bonusowi z Siły Woli Machasz palcami i z ich koniuszków wystrzeliwują małe, swędzące zarodniki grzybni, które wciskają się w czułe miejsca celu. Zarodniki gwałtownie rosną, co wywołuje nieznośne swędzenie. Cel dostaje karę -10 do wszystkich Testów i na czas trwania czaru jego Szybkość jest zmniejszona o połowę.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.j43uKlFEckLe70LP",
+      "effects": {
+        "yREez0l5RG1YGcNM": {
+          "id": "yREez0l5RG1YGcNM",
+          "name": "Swędzące utrapienie",
+          "scriptData": [
+            {
+              "id": "yREez0l5RG1YGcNM",
+              "name": "Swędzące utrapienie",
+              "script": "[Script.xvGxwv7X0Vq3vNqb]",
+              "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "1",
+      "range": "Siła Woli metrów"
+    },
+    "Sneaky Stabbin'": {
+      "id": "PQr8MOz38M0TXlga",
+      "name": "Cwano-dźgano",
+      "description": "<p>Zaklinasz ostrza swoich sojuszników, aby wyszukiwały najsłabsze punkty pancerza ich wrogów. Twoje cele dostają +1 Przewagę, a ich ataki zyskują Zaletę broni Przekłuwająca (WFRP, strona 298), która trwa, dopóki mają Przewagę.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.PQr8MOz38M0TXlga",
+      "effects": {
+        "sOpM9v9eKAumNjqd": {
+          "id": "sOpM9v9eKAumNjqd",
+          "name": "Cwano-dźgano",
+          "scriptData": [
+            {
+              "id": "sOpM9v9eKAumNjqd",
+              "name": "Cwano-dźgano",
+              "script": "[Script.j1AmrY1SxFJQyapo]"
+            },
+            {
+              "id": "sOpM9v9eKAumNjqd",
+              "name": "Dodaj Przewagę",
+              "script": "[Script.kIM4Fs1lFVV7TSnj]"
+            }
+          ]
+        }
+      },
+      "duration": "Specjalny",
+      "target": "Bonus Ogd Goblinów",
+      "range": "Siła Woli metrów"
+    },
+    "Doppelganger": {
+      "id": "TQDlbIGPOPNDF9uB",
+      "name": "Mimik",
+      "description": "<p>BN może przybrać postać dowolnej humanoidalnej istoty o Rozmiarze Średnim. Musi osiągnąć +5 PS w <strong>Wydłużonym Teście Percepcji</strong> , gdy obserwuje swój cel. Następnie przybranie postaci celu zajmuje mu 2 Rundy. Kopiowane są także ubranie i mniejsze elementy wyposażenia celu; stają się częścią stwora i nie mogą być usuwane. Większe elementy wyposażenia, takie jak miecze i plecaki, nie są kopiowane. Gdy ci, którzy znają ofiarę, spotkają przekształconego stwora, wykonują <strong>Trudny (−20)Test Intuicji</strong>. Jeśli go zdadzą, zorientują się, że coś jest nie tak. Jeśli im się nie uda, pozostaną przekonani, że stwór jest znajomą im osobą.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.TQDlbIGPOPNDF9uB"
+    },
+    "Ameliorative Elixir": {
+      "id": "vUGt1d6vzu3kuMYu",
+      "name": "Eliksir Udobruchający",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.vUGt1d6vzu3kuMYu",
+      "effects": {
+        "39pBDLe966yHGvLh": {
+          "id": "39pBDLe966yHGvLh",
+          "name": "Eliksir Udobruchający",
+          "scriptData": [
+            {
+              "id": "39pBDLe966yHGvLh",
+              "name": "Eliksir Udobruchający",
+              "script": "[Script.nYtAjSArsNbrU2ob]",
+              "activationScript": "[Script.fIUxKZMWJ8HMPmH9]",
+              "hideScript": "[Script.k9SvH4Lm3ZuI8S1N]"
+            }
+          ]
+        },
+        "m2BhURfWblde0MYM": {
+          "id": "m2BhURfWblde0MYM",
+          "name": "Zastosuj Eliksir Udobruchający",
+          "scriptData": [
+            {
+              "id": "m2BhURfWblde0MYM",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>W jego skład wchodzi dziwnokorzeń, co sprawia, że ten gęsty i ziemisty eliksir daje poczucie szczęścia i przyjemne halucynacje. Zapewnia premię +10 do Testów Siły Woli, ale powoduje, że Testy Zwinności, Inicjatywy i Inteligencji obciążone są modyfikatorem -10. </p><p><strong>Czas działania</strong>: [[/r 1d10*10]]{1k10*10} minut.</p>"
+    },
+    "Basilisk's Baleful Bile": {
+      "id": "cCMhuudYsHlP1t56",
+      "name": "Złowroga Żółć Bazyliszka",
+      "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[Oszołomienie] na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[Zatrucie] odpierane <strong>Problematycznym (-10) Testem Odporności</strong> Test. If the target fails to resist the @Condition[Zatrucie] zostaje permanentnie przemieniona w kamień. </p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.cCMhuudYsHlP1t56",
+      "effects": {
+        "GFWCmFT6AtYimdnZ": {
+          "id": "GFWCmFT6AtYimdnZ",
+          "name": "Zastosuj Złowroga Żółć Bazyliszka",
+          "scriptData": [
+            {
+              "id": "GFWCmFT6AtYimdnZ",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        },
+        "XxU3DqOlS4Cm4HUs": {
+          "id": "XxU3DqOlS4Cm4HUs",
+          "name": "Złowroga Żółć Bazyliszka",
+          "scriptData": [
+            {
+              "id": "XxU3DqOlS4Cm4HUs",
+              "name": "Złowroga Żółć Bazyliszka",
+              "script": "[Script.8ZAUBSH9CM9OTpTL]"
+            }
+          ]
+        }
+      }
+    },
+    "Focusing Philtre": {
+      "id": "lTsRQp3AmDBcXg9L",
+      "name": "Ekstrakt Skupienia",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.lTsRQp3AmDBcXg9L",
+      "effects": {
+        "4XXjzGh06hLzur1z": {
+          "id": "4XXjzGh06hLzur1z",
+          "name": "Zastosuj Ekstrakt Skupienia",
+          "scriptData": [
+            {
+              "id": "4XXjzGh06hLzur1z",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        },
+        "NIRhXPLO5leTz7hM": {
+          "id": "NIRhXPLO5leTz7hM",
+          "name": "Ekstrakt Skupienia",
+          "scriptData": [
+            {
+              "id": "NIRhXPLO5leTz7hM",
+              "name": "Ekstrakt Skupienia",
+              "script": "[Script.u6CYMSZADrfXd48Q]",
+              "activationScript": "[Script.yXUPiWuQ5o0JBY4i]",
+              "hideScript": "[Script.I0oRZ7AWde5KI5jw]"
+            },
+            {
+              "id": "NIRhXPLO5leTz7hM",
+              "name": "Zmęczenie",
+              "script": "[Script.YRUTliBzAQvncGNX]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>Ciemny, gorzki napar powoduje, że umysł skupia się na myśleniu, i zwiększa koncentrację. Zapewnia premię +20 do Testów Inteligencji i Odporności. Kiedy przestanie działać, postać opada znużenie i nabywa ona Stan Zmęczenie, który trwa przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin</p>"
+    },
+    "Katya's Cordial": {
+      "id": "D8jml7l6GANTVwXn",
+      "name": "Rozgrzewacz Katyi",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.D8jml7l6GANTVwXn",
+      "effects": {
+        "KdgovIoeDUVdz1va": {
+          "id": "KdgovIoeDUVdz1va",
+          "name": "Zastosuj Rozgrzewacz Katyi",
+          "scriptData": [
+            {
+              "id": "KdgovIoeDUVdz1va",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        },
+        "qAaU8yFByibRqO9q": {
+          "id": "qAaU8yFByibRqO9q",
+          "name": "Efekty Uboczne Rozgrzewacza Katyi",
+          "scriptData": [
+            {
+              "id": "qAaU8yFByibRqO9q",
+              "name": "Kara do testów Ogłady",
+              "script": "[Script.0iTLDgFHO9Rgc010]",
+              "activationScript": "[Script.VuE1mhrB6X6MYTzg]",
+              "hideScript": "[Script.6Fe8M5MdklKS2olx]"
+            }
+          ]
+        },
+        "sxcJkDbYoXmNQKPF": {
+          "id": "sxcJkDbYoXmNQKPF",
+          "name": "Rozgrzewacz Katyi",
+          "scriptData": [
+            {
+              "id": "sxcJkDbYoXmNQKPF",
+              "name": "Atrakcyjny",
+              "script": "[Script.EwD053Fyy46b59ZI]",
+              "activationScript": "return true;"
+            },
+            {
+              "id": "sxcJkDbYoXmNQKPF",
+              "name": "Zastosuj Efekty Uboczne",
+              "script": "[Script.9WZa63lr0K3SsP4G]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>Zawiesina o słodkim aromacie, perłoworóżowym kolorze i ognistym smaku. Eliksir podnosi atrakcyjność pijącego, ale za pewną cenę. Będąc pod jego wpływem, postać może korzystać z działania Talentu @UUID[Compendium.wfrp4e-core.items.6l3jvIAvrKxt0lA9]{Atrakcyjny}, ale kiedy przestanie działać… Przez [[/r 1d10]]{1k10} dni Bohater musi się borykać z karą -20 do Ogłady, ponieważ przez jego skórę i oczy wydalana jest żółta wydzielina. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin</p>"
+    },
+    "Liquor of Luck": {
+      "id": "bycar0CfYqx6OOft",
+      "name": "Likier Fortuny",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.bycar0CfYqx6OOft",
+      "gmdescription": "<p>Jasnobłękitny likier o lekkim aromacie lukrecji. Jego spożycie daje +1 Punkt Szczęścia, a kiedy eliksir działa i Bohater wyda Punkt Szczęścia, gracz powinien rzucić [[/r 1d100]]. Jeśli wynikiem będzie dublet, postać odzyskuje wydany punkt. Kiedy napar przestanie działać, Bohater traci wszystkie Punkty Szczęścia i otrzymuje 1 Stan @Condition[Zmęczenie], który utrzymuje się przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
+    },
+    "Reactionary Restorative": {
+      "id": "mZHMUtVLsASroIQH",
+      "name": "Ripostny Odwar",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.mZHMUtVLsASroIQH",
+      "effects": {
+        "D6CmrdQcAAbnqJla": {
+          "id": "D6CmrdQcAAbnqJla",
+          "name": "Ripostny Odwar",
+          "scriptData": [
+            {
+              "id": "D6CmrdQcAAbnqJla",
+              "name": "Ekstrakt Skupienia",
+              "script": "[Script.rCh3ltUrUMovd2Kc]",
+              "activationScript": "return args.skill?.name == \"Odporność\" || args.characteristic == \"int\"",
+              "hideScript": "return ![\"t\", \"int\"].includes(args.characteristic)"
+            },
+            {
+              "id": "D6CmrdQcAAbnqJla",
+              "name": "Zmęczenie",
+              "script": "[Script.YRUTliBzAQvncGNX]"
+            }
+          ]
+        },
+        "U1GKvX5iR8hxJBNU": {
+          "id": "U1GKvX5iR8hxJBNU",
+          "name": "Zastosuj Ripostny Odwar",
+          "scriptData": [
+            {
+              "id": "U1GKvX5iR8hxJBNU",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>Gęsty, krwiście czerwony płyn o ohydnym smaku wyostrza zmysły pijącego, który jest świadomy każdego zagrożenia. Kiedy eliksir działa, Bohater nie może otrzymać Stanu Zaskoczony. Gdy napar skończy działać, postać otrzymuje 1 Stan @Condition[Zmęczenie], którego nie da się usunąć przez całą dobę.</p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin.</p>"
+    },
+    "Saif al-Janub": {
+      "id": "rIBB37yMATXRnFbp",
+      "name": "Saif al-Janub",
+      "description": "<p>To zakrzywione ostrze zostało podarowane Lohnerowi za jego śmiałe czyny podczas obrony Sudenburga przed zastępami nieumarłych w 2498 KI. Wykonał je słynny rzemieślnik-filozof, Hataq al-Kundi, w 1445 KI. W Arabii to wyborne ostrze warte jest dziesięć razy więcej, niż wynosi jego podana cena.</p>",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.rIBB37yMATXRnFbp"
+    },
+    "The Marvelous Medicinal Mixture": {
+      "id": "9xOhhmZzKTPS2SnO",
+      "name": "Mistrzowska Mikstura Medyczna",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.9xOhhmZzKTPS2SnO",
+      "effects": {
+        "1rklhrpLZV24rwet": {
+          "id": "1rklhrpLZV24rwet",
+          "name": "Zastosuj Mistrzowską Miksturę Medyczną",
+          "scriptData": [
+            {
+              "id": "1rklhrpLZV24rwet",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        },
+        "24RuaFgg3jiAGUp3": {
+          "id": "24RuaFgg3jiAGUp3",
+          "name": "Mistrzowska Mikstura Medyczna",
+          "scriptData": [
+            {
+              "id": "24RuaFgg3jiAGUp3",
+              "name": "Zmęczenie",
+              "script": "[Script.YRUTliBzAQvncGNX]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>Okropny, trącący rybą olej. Aby go w ogóle wypić, trzeba zdać <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli się uda, Bohater otrzymuje 1 Stan @Condition[Zmęczenie], który usunąć można tylko całonocnym snem. Poza tym eliksir nie ma żadnego innego działania. Klienci von Holzenauera są przekonani, że okropny smak idzie w parze z leczniczym działaniem przeciwko każdej przypadłości</p>"
+    },
+    "Tonic of Sight Beyond Sight": {
+      "id": "AulAEeUVTGuCmQPX",
+      "name": "Tonik Niewidywanych Widoków",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-starter-set.items.AulAEeUVTGuCmQPX",
+      "effects": {
+        "2RIpjvXRofiedknt": {
+          "id": "2RIpjvXRofiedknt",
+          "name": "Zastosuj Tonik Niewidywanych Widoków",
+          "scriptData": [
+            {
+              "id": "2RIpjvXRofiedknt",
+              "name": "@effect.name",
+              "script": "[Script.xUpKYT7BZCSmAfUy]"
+            }
+          ]
+        },
+        "qIbEQBBpeeFeW4qQ": {
+          "id": "qIbEQBBpeeFeW4qQ",
+          "name": "Tonik Niewidywanych Widoków",
+          "scriptData": [
+            {
+              "id": "qIbEQBBpeeFeW4qQ",
+              "name": "Tonik Niewidywanych Widoków",
+              "script": "[Script.RDtJXji3hgcKnEBk]"
+            }
+          ]
+        }
+      },
+      "gmdescription": "<p>Ciemnozielony płyn, na etykiecie którego znajduje się wielka, czerwona gałka oczna, ma wyostrzyć wzrok. Wypicie eliksiru daje postaci możliwość korzystania z któregoś z poniższych Talentów ([[/r 1d10]]{1k10}):</p>\n<p>1-2: @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł (Wzrok)};</p>\n<p>3-4: @UUID[Compendium.wfrp4e-core.items.Nj3tC8A5fZ3zEdMR]{Święte Wizje};</p>\n<p>5-6: @UUID[Compendium.wfrp4e-core.items.6w30u0VPsAicrqb5]{Wykrywanie Magii};</p>\n<p>7-8: @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna};</p>\n<p>9-10: wszystkie powyższe na raz.</p>\n<p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
+    }
+  }
 }
