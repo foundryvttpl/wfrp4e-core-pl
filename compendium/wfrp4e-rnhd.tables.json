@@ -3,7 +3,7 @@
     "entries": {
         "Career - Gnome": {
             "id": "TVYWHR9YRIpZNBbB",
-            "name": "Profesje - Gnomy",
+            "name": "Profesje - Gnom",
             "description": " ",
             "results": {
                 "1-1": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.86gkaanqt19xYCRa]{Aptekarka}",
@@ -53,7 +53,7 @@
         },
         "Eye Colour - Gnome": {
             "id": "aZ485TmhGW2YdysY",
-            "name": "Kolor oczu - Gnomy",
+            "name": "Kolor oczu - Gnom",
             "description": " ",
             "results": {
                 "2-2": "Błękitny",
@@ -70,7 +70,7 @@
         },
         "Hair Colour - Gnome": {
             "id": "wcTrhkXPbhVTkOBW",
-            "name": "Kolor włosów - Gnomy",
+            "name": "Kolor włosów - Gnom",
             "description": " ",
             "results": {
                 "4-4": "Kasztanowy",
@@ -103,8 +103,8 @@
                     "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#dwarfs]{Krasnolud}</p>"
                 },
                 "98-98": {
-                    "name": "Gnomy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-rnhd.journals.JournalEntry.Hd6J761opHoj2QRG.JournalEntryPage.i06rwUkQyvRIB7f6]{Gnomy}</p>"
+                    "name": "Gnom",
+                    "description": "<p>@UUID[Compendium.wfrp4e-rnhd.journals.JournalEntry.Hd6J761opHoj2QRG.JournalEntryPage.i06rwUkQyvRIB7f6]{Gnom}</p>"
                 },
                 "99-99": {
                     "name": "Wysoki elf",
