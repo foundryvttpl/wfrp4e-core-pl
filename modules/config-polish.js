@@ -785,7 +785,7 @@ Hooks.on("i18nInit", async function () {
 			"Wycena",
 			"Zastraszanie",
 			"Język (Khazalid)",
-			"Wiedza (Nains)",
+			"Wiedza (Krasnoludy)",
 			"Wiedza (Geologia)",
 			"Wiedza (Metalurgia)",
 			"Broń Biała (Podstawowa)",
