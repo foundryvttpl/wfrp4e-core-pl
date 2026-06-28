@@ -1,11 +1,14 @@
 Hooks.on("init", () => {
-	if (typeof Babele !== "undefined") {
-		game.babele.register({
-			module: "wfrp4e-core-pl",
-			lang: "pl",
-			dir: "compendium",
-		});
+	if (!game.modules.get("babele")?.active || !game.babele) {
+		console.warn("wfrp4e-core-pl | Babele is not active. Skipping Babele registration.");
+		return;
 	}
+
+	game.babele.register({
+		module: "wfrp4e-core-pl",
+		lang: "pl",
+		dir: "compendium"
+	});
 
 	class CompendiumMapping {
 
@@ -93,38 +96,49 @@ Hooks.on("init", () => {
 		}
 	}
 	
-	Reflect.defineProperty(WarhammerModuleContentHandler.prototype, 'createFolders', { value:
-		function (pack) {
-			let root = game.modules.get(pack.metadata.packageName).flags.folder;
-			root.type = pack.metadata.type;
-			root._id = foundry.utils.randomID();
-            root.flags = {"warhammer-lib" : {source : this.module.id}};
-			this.rootFolders[pack.metadata.id] = root._id;
-			const data = {name: root.name};
-			let packsFolderJson = game.babele.packs.get(pack.metadata.packageName + "._packs-folders");
-			if (packsFolderJson) {
-				root.name = packsFolderJson.translations[data.name] || root.name;
-				let packFolders = pack.folders.contents.map(f => f.toObject());
-				for (let f of packFolders) {
-					if (!f.folder) {
-						f.folder = root._id;
-						f.name = pack.folders.contents.find(x => x._id == f._id).name;
-					}
-            		foundry.utils.setProperty(f.flags, "warhammer-lib.source", this.module.id);
+	if (globalThis.WarhammerModuleContentHandler?.prototype) {
+		Reflect.defineProperty(WarhammerModuleContentHandler.prototype, "createFolders", {
+			configurable: true,
+			writable: true,
+			value: function(pack) {
+				const module = game.modules.get(pack.metadata.packageName);
+				const root = foundry.utils.deepClone(module?.flags?.folder);
+
+				if (!root) {
+				console.warn(`wfrp4e-core-pl | Missing folder flag for ${pack.metadata.packageName}`);
+				return;
 				}
-				return CONFIG.Folder.documentClass.create(packFolders.concat(root), {keepId : true})
-			} else {
-				let packFolders = pack.folders.contents.map(f => f.toObject());
-				for(let f of packFolders) {
-					if (!f.folder) {
-						f.folder = root._id;
+
+				root.type = pack.metadata.type;
+				root._id = foundry.utils.randomID();
+				root.flags = {"warhammer-lib" : {source : this.module.id}};
+				this.rootFolders[pack.metadata.id] = root._id;
+				const data = {name: root.name};
+				let packsFolderJson = game.babele.packs.get(pack.metadata.packageName + "._packs-folders");
+				if (packsFolderJson) {
+					root.name = packsFolderJson.translations[data.name] || root.name;
+					let packFolders = pack.folders.contents.map(f => f.toObject());
+					for (let f of packFolders) {
+						if (!f.folder) {
+							f.folder = root._id;
+							f.name = pack.folders.contents.find(x => x._id == f._id).name;
+						}
+						foundry.utils.setProperty(f.flags, "warhammer-lib.source", this.module.id);
 					}
-            		foundry.utils.setProperty(f.flags, "warhammer-lib.source", this.module.id);
+					return CONFIG.Folder.documentClass.create(packFolders.concat(root), {keepId : true})
+				} else {
+					let packFolders = pack.folders.contents.map(f => f.toObject());
+					for(let f of packFolders) {
+						if (!f.folder) {
+							f.folder = root._id;
+						}
+						foundry.utils.setProperty(f.flags, "warhammer-lib.source", this.module.id);
+					}
+					return CONFIG.Folder.documentClass.create(packFolders.concat(root), {keepId : true})
 				}
-				return CONFIG.Folder.documentClass.create(packFolders.concat(root), {keepId : true})
 			}
-		}
-	});
+		});
+	}
 
 
 	game.babele.registerConverters({
@@ -282,8 +296,8 @@ Hooks.on("init", () => {
 							}
 						}
 						for (const itemToCheck of itemsToCheck) {
-							let compendiumItem = fromUuidSync(itemToCheck.sourceId);
-							let compendiumItemId = compendiumItem._id;
+							const compendiumItem = foundry.utils.fromUuidSync(itemToCheck.sourceId);
+							const compendiumItemId = compendiumItem._id ?? compendiumItem.id;
 							if (compendiumItem && compendiumItem.type == item.type) {
 								let translatedItem = pack.translations[compendiumItemId];
 								if (translatedItem) {
@@ -386,15 +400,18 @@ Hooks.on("init", () => {
 		},
 
 		templateTrappings: (trappings, translations) => {
-			if (trappings?.options) {
-				let result = foundry.utils.deepClone(trappings);
+			if (trappings?.options && Array.isArray(translations)) {
+				const result = foundry.utils.deepClone(trappings);
+
 				for (let i = 0; i < trappings.options.length; i++) {
-					const o = trappings.options[i];
-					const t = translations.find(t => t.Id == o.id);
-					if (t) {
-						result.options[i].name = t.Name;
+					const option = trappings.options[i];
+					const translated = translations.find(t => t.Id === option.id);
+
+					if (translated?.Name) {
+						result.options[i].name = translated.Name;
 					}
 				}
+
 				return result;
 			}
 			else if (Array.isArray(trappings)) {
@@ -405,19 +422,25 @@ Hooks.on("init", () => {
 	});
 });
 
+const FVTTCompendiumCollection = foundry.documents.collections.CompendiumCollection;
+
 (function disableCache() {
 	console.log("BABELE: Disable cache");
-	CompendiumCollection.CACHE_LIFETIME_SECONDS = 1;
+	FVTTCompendiumCollection.CACHE_LIFETIME_SECONDS = 1;
 })();
-
 
 Hooks.on("ready", () => {
 	setTimeout(() => {
 		console.log("BABELE: Enable cache");
-		CompendiumCollection.CACHE_LIFETIME_SECONDS = 300;
+		FVTTCompendiumCollection.CACHE_LIFETIME_SECONDS = 300;
 
-		game.packs.forEach(p => {
-			p._flush = foundry.utils.debounce(p.clear.bind(p), CompendiumCollection.CACHE_LIFETIME_SECONDS * 100);
+		game.packs.forEach(pack => {
+			if (typeof pack.clear === "function") {
+				pack._flush = foundry.utils.debounce(
+					pack.clear.bind(pack),
+													 FVTTCompendiumCollection.CACHE_LIFETIME_SECONDS * 100
+				);
+			}
 		});
 	}, 1000);
 });
