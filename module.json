@@ -52,7 +52,7 @@
                 "id": "babele",
                 "type": "module",
                 "compatibility": {
-                    "minimum": "2.7.5"
+                    "minimum": "2.9.1"
                 }
             },
             {
@@ -76,8 +76,8 @@
     },
     "compatibility": {
         "minimum": "13",
-        "maximum": "13",
-        "verified": "13"
+        "maximum": "14",
+        "verified": "14"
     },
     "esmodules": [
         "babele-register.js",
