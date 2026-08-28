@@ -14,7 +14,50 @@ jobs:
       contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Validate release version and provenance
+        id: provenance
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REPOSITORY_TOKEN: ${{ secrets.SOURCE_REPOSITORY_TOKEN }}
+        run: |
+          if [ -z "$SOURCE_REPOSITORY_TOKEN" ]; then
+            echo "SOURCE_REPOSITORY_TOKEN is not configured." >&2
+            exit 1
+          fi
+
+          python3 << 'PY'
+          import json
+          import os
+          import re
+
+          with open('module.json', encoding='utf-8') as handle:
+              manifest = json.load(handle)
+          with open('release-source.json', encoding='utf-8') as handle:
+              provenance = json.load(handle)
+
+          version = str(manifest.get('version', '')).strip()
+          expected_tag = f'v{version}'
+          release_tag = os.environ['RELEASE_TAG']
+          if release_tag != expected_tag:
+              raise SystemExit(
+                  f'Release tag {release_tag!r} must match module.json version {version!r} '
+                  f'and use {expected_tag!r}'
+              )
+          if provenance.get('version') != version:
+              raise SystemExit('release-source.json version does not match module.json')
+          if provenance.get('source_repository') != 'foundryvttpl/wfrp4e-core-pl-pre':
+              raise SystemExit('release-source.json contains an unexpected source repository')
+
+          source_commit = str(provenance.get('source_commit', ''))
+          if not re.fullmatch(r'[0-9a-f]{40,64}', source_commit):
+              raise SystemExit('release-source.json contains an invalid source commit')
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write(f'version={version}\n')
+              output.write(f'source_commit={source_commit}\n')
+          PY
 
       - name: Extract Version From Tag
         id: get_version
@@ -33,7 +76,7 @@ jobs:
 
       - name: Zip files
         run: |
-          zip -r wfrp4e-core-pl.zip module.json babele-register.js load-scripts-pl.js gazetteer.json modules/ lang/ images/ fonts/ css/ compendium/ 
+          zip -r wfrp4e-core-pl.zip module.json release-source.json RELEASE_TAGGING.md babele-register.js load-scripts-pl.js gazetteer.json modules/ lang/ images/ fonts/ css/ compendium/
 
       - name: Update Release with Files
         id: create_version_release
@@ -42,7 +85,7 @@ jobs:
           allowUpdates: true
           name: Release ${{steps.get_version.outputs.version}}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json, ./wfrp4e-core-pl.zip'
+          artifacts: './module.json, ./release-source.json, ./wfrp4e-core-pl.zip'
           tag: ${{ github.ref }}
 
       - name: Get Module ID
@@ -80,3 +123,38 @@ jobs:
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json", "Authorization" : "${{ secrets.FOUNDRY_KEY }}"}'
           data: '{"dry_run": false, "id": "${{steps.moduleID.outputs.prop}}", "release": {"version":  "${{steps.get_version.outputs.version-without-v}}", "manifest": "https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/module.json", "compatibility" : {"minimum": "${{steps.minimum.outputs.prop}}", "verified": "${{steps.verified.outputs.prop}}", "maximum": "${{steps.maximum.outputs.prop}}"}}}'
+
+      - name: Check out synchronized development commit
+        uses: actions/checkout@v4
+        with:
+          repository: foundryvttpl/wfrp4e-core-pl-pre
+          ref: ${{ steps.provenance.outputs.source_commit }}
+          token: ${{ secrets.SOURCE_REPOSITORY_TOKEN }}
+          fetch-depth: 0
+          path: development-source
+
+      - name: Tag development commit with production version
+        env:
+          VERSION: ${{ steps.provenance.outputs.version }}
+          PRODUCTION_COMMIT: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          cd development-source
+
+          tag="production/v${VERSION}"
+          source_commit=$(git rev-parse HEAD)
+          existing_commit=$(git rev-list -n 1 "$tag" 2>/dev/null || true)
+
+          if [ -n "$existing_commit" ]; then
+            if [ "$existing_commit" != "$source_commit" ]; then
+              echo "$tag already points to $existing_commit instead of $source_commit" >&2
+              exit 1
+            fi
+            echo "$tag already points to the synchronized development commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$tag" -m "Production release v${VERSION} from ${PRODUCTION_COMMIT}"
+          git push origin "refs/tags/$tag"
