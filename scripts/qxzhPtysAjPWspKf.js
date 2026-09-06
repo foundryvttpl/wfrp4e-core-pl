@@ -1,4 +1,4 @@
-if (this.actor.has(game.i18n.localize("NAME.Undead")) || this.actor.has(game.i18n.localize("NAME.Daemonic")))
+if (this.actor.has("Undead") || this.actor.has("Daemonic"))
 {
-    this.script.notification(`Nie może wejśc ze względu na: ${this.effect.name}!`);
+    this.script.notification(`Cannot enter ${this.effect.name}!`);
 }

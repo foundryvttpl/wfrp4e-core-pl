@@ -1,1 +1,1 @@
-args.fields.slBonus -= 2; 
+args.fields.slBonus -= 2;

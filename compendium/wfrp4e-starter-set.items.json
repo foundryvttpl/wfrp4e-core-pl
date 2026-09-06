@@ -27,7 +27,7 @@
     "overcastinitialvalue": "system.overcast.initial.additional",
     "roll": "system.rollable.skill",
     "specification_label": "system.specification.label",
-    "specification": "system.specification.value",
+    "specification": "system.specification.label",
     "penalties": "system.penalty.value",
     "special": "system.special.value"
   },

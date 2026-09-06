@@ -1,0 +1,3005 @@
+{
+  "label": "Przedmioty (Wróg w Cieniach)",
+  "mapping": {
+    "gmdescription": "system.gmdescription.value",
+    "skills": "system.skills",
+    "talents": "system.talents",
+    "class": "system.class.value",
+    "careergroup": "system.careergroup.value",
+    "trappings": "system.trappings",
+    "duration_value": "system.duration.value",
+    "duration_unit": "system.duration.unit",
+    "incubation_value": "system.incubation.value",
+    "incubation_unit": "system.incubation.unit",
+    "duration_text": "system.duration.text",
+    "incubation_text": "system.incubation.text",
+    "contraction": "system.contraction.value",
+    "symptoms": "system.symptoms.value",
+    "permanent": "system.permanent.value",
+    "modifier": "system.modifier.value",
+    "duration": "system.duration.value",
+    "range": "system.range.value",
+    "target": "system.target.value",
+    "damage": "system.damage.value",
+    "overcast": "system.overcast.label",
+    "overcastvalue": "system.overcast.valuePerOvercast.type",
+    "overcastinitial": "system.overcast.initial.type",
+    "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
+    "overcastinitialvalue": "system.overcast.initial.additional",
+    "specification_label": "system.specification.label",
+    "specification": "system.specification.label",
+    "tests": "system.tests.value",
+    "roll": "system.rollable.skill",
+    "penalties": "system.penalty.value",
+    "special": "system.special.value",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    }
+  },
+  "folders": {
+    "Careers": "Profesje",
+    "Modifications": "Modyfikacje",
+    "Herbs": "Zioła",
+    "Prayers": "Modlitwy",
+    "Talents": "Talenty",
+    "Criticals": "Rany Krytyczne",
+    "Vehicle": "Pojazd",
+    "Diseases": "Choroby",
+    "Mutations": "Mutacje",
+    "Spells": "Zaklęcia",
+    "Traits": "Cechy Stworzeń",
+    "Trappings": "Wyposażenie",
+    "Trappingcs": "Wyposażenie",
+    "Blessings": "Błogosławieństwa",
+    "Uliric": "Ulryk",
+    "Ammunition": "Amunicja",
+    "Armour": "Pancerz",
+    "Weapons": "Bronie",
+    "Books and Documents": "Księgi i Dokumenty",
+    "Clothing and Accessories": "Ubrania i akcesoria",
+    "Drugs and Poisons": "Narkotyki i trucizny",
+    "Food and Drink": "Jedzenie i Picie",
+    "Herbs and Draughts": "Zioła i mikstury",
+    "Miscellaneous": "Inne",
+    "Packs and Containers": "Pakunki i pojemniki",
+    "Tools and Kits": "Narzędzia i zestawy",
+    "Chaos Magic": "Magia Chaosu",
+    "Lore of Beasts": "Tradycja Zwierząt",
+    "Lore of Daemonology": "Tradycja Demonologii",
+    "Lore of Death": "Tradycja Śmierci",
+    "Lore of Fire": "Tradycja Ognia",
+    "Lore of Heavens": "Tradycja Niebios",
+    "Lore of Hedgecraft": "Tradycja Guślarstwa",
+    "Lore of Life": "Tradycja Życia",
+    "Lore of Light": "Tradycja Światła",
+    "Lore of Metal": "Tradycja Metalu",
+    "Lore of Shadow": "Tradycja Cieni",
+    "Lore of Witchcraft": "Tradycja Czarostwa",
+    "Lore of Necromancy": "Tradycja Nekromancji",
+    "Undivided": "Niepodzielnego",
+    "Petty Spells": "Proste Zaklęcia"
+  },
+  "entries": {
+    "Chosen of Tzeentch": {
+      "id": "An6mEyE7rgtyGatt",
+      "name": "Wybraniec Tzeentcha",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.okL3l1pH269uRycI]{Wtajemniczona Kultu Tzeentcha}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.An6mEyE7rgtyGatt",
+      "careergroup": "Wtajemniczona Kultu Tzeentcha",
+      "class": null,
+      "skills": [
+        "Splatanie Magii (Dhar)",
+        "Występy (Aktorstwo)",
+        "Intuicja",
+        "Język (Magiczny)",
+        "Wiedza (Tzeentch)",
+        "Percepcja",
+        "Sekretne Znaki (Kultystów)",
+        "Skradanie (Miasto)",
+        "Charyzma",
+        "Opanowanie",
+        "Unik",
+        "Odporność",
+        "Badania Naukowe",
+        "Zwinne Palce",
+        "Występy (Gawędziarstwo)",
+        "Zastraszanie",
+        "Dowodzenie",
+        "Broń Biała (Podstawowa)"
+      ],
+      "talents": [
+        "Magia Tajemna (Demonologia)",
+        "Wyznawca Zmiany",
+        "Mistrz Charakteryzacji",
+        "Krasomówstwo"
+      ],
+      "trappings": [
+        "Zgromadzenie kultystów",
+        "Magiczny przedmiot",
+        "Sztylet ofiarny"
+      ]
+    },
+    "Cult Acolyte": {
+      "id": "eWWKMUW6rB40XDeW",
+      "name": "Akolitka Kultu",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.okL3l1pH269uRycI]{Wtajemniczona Kultu Tzeentcha}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.eWWKMUW6rB40XDeW",
+      "careergroup": "Wtajemniczona Kultu Tzeentcha",
+      "class": null,
+      "skills": [
+        "Splatanie Magii (Dhar)",
+        "Występy (Aktorstwo)",
+        "Intuicja",
+        "Język (Magiczny)",
+        "Wiedza (Tzeentch)",
+        "Percepcja",
+        "Sekretne Znaki (Kultystów)",
+        "Skradanie (Miasto)"
+      ],
+      "talents": [
+        "Niegodny Uwagi",
+        "Sekretna Tożsamość",
+        "Łaska Tzeentcha",
+        "Wykrywanie Magii"
+      ],
+      "trappings": [
+        "Insygnia kultu",
+        "Rytualne szaty",
+        "Sekretny tatuaż"
+      ]
+    },
+    "Cult Magus": {
+      "id": "BoF0SgCc7ldSFc79",
+      "name": "Wtajemniczona Kultu",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.okL3l1pH269uRycI]{Wtajemniczona Kultu Tzeentcha}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.BoF0SgCc7ldSFc79",
+      "careergroup": "Wtajemniczona Kultu Tzeentcha",
+      "class": null,
+      "skills": [
+        "Splatanie Magii (Dhar)",
+        "Występy (Aktorstwo)",
+        "Intuicja",
+        "Język (Magiczny)",
+        "Wiedza (Tzeentch)",
+        "Percepcja",
+        "Sekretne Znaki (Kultystów)",
+        "Skradanie (Miasto)",
+        "Charyzma",
+        "Opanowanie",
+        "Unik",
+        "Odporność",
+        "Badania Naukowe",
+        "Zwinne Palce"
+      ],
+      "talents": [
+        "Gładkie Słówka",
+        "Magia Chaosu (Tzeentcha)",
+        "Podwójne Życie",
+        "Mówca"
+      ],
+      "trappings": [
+        "Księga zaklęć Chaosu",
+        "Dobrej jakości szaty rytualne",
+        "Plany intryg"
+      ]
+    },
+    "Master Magus": {
+      "id": "KoPj0rsFrR8bmweR",
+      "name": "Mistrzyni Wtajemniczonych",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.okL3l1pH269uRycI]{Wtajemniczona Kultu Tzeentcha}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.KoPj0rsFrR8bmweR",
+      "careergroup": "Wtajemniczona Kultu Tzeentcha",
+      "class": null,
+      "skills": [
+        "Splatanie Magii (Dhar)",
+        "Występy (Aktorstwo)",
+        "Intuicja",
+        "Język (Magiczny)",
+        "Wiedza (Tzeentch)",
+        "Percepcja",
+        "Sekretne Znaki (Kultystów)",
+        "Skradanie (Miasto)",
+        "Charyzma",
+        "Opanowanie",
+        "Unik",
+        "Odporność",
+        "Badania Naukowe",
+        "Zwinne Palce",
+        "Występy (Gawędziarstwo)",
+        "Zastraszanie",
+        "Dowodzenie",
+        "Broń Biała (Podstawowa)",
+        "Język (Mroczna mowa)",
+        "Wiedza (Dowolna)"
+      ],
+      "talents": [
+        "Władcza Postura",
+        "Straszny",
+        "Porywająca Gorliwość",
+        "Znawca (Tzeentch)"
+      ],
+      "trappings": [
+        "Kult Chaosu",
+        "Straszliwe przeznaczenie"
+      ]
+    },
+    "Common Cold": {
+      "id": "R4qQc4fnxQzuNg9l",
+      "name": "Przeziębienie",
+      "description": "<p>Chociaż przelotne, niczym czerwienienie jesiennych liści, to zmora Starego Świata. Nieleczony zwykły katar czy kaszel może przerodzić się w coś znacznie poważniejszego w przeciągu zaledwie paru dni. Każda starsza osoba w Imperium ma swój własny zapas remediów i amuletów przeciwko chorobie oraz wspomnienia o niejednym przyjacielu czy członku rodziny, którego Przeziębienie posłało w objęcia Morra.</p><p>Ponowne wystawienie się na deszcz czy śnieg sprawi, że postać będzie cierpieć na Przeziębienie przez kolejnych [[/r 1d10]]{1k10} dni. Jeżeli Bohater będzie chorował dłużej niż 14 dni, choroba przechodzi w @UUID[Compendium.wfrp4e-eis.items.K74AhzejwTdzTc1w]{Zapalenie Płuc}.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.R4qQc4fnxQzuNg9l",
+      "effects": {
+        "hYDKgm6KAXfnZ1Vu": {
+          "id": "hYDKgm6KAXfnZ1Vu",
+          "name": "Apatia",
+          "scriptData": [
+            {
+              "id": "hYDKgm6KAXfnZ1Vu",
+              "name": "@effect.name",
+              "script": "let fatigued = this.actor.hasCondition(\"fatigued\")\nif (!fatigued)\n{\n    this.actor.addCondition(\"fatigued\")\n    ui.notifications.notify(\"Zmęczenie dodane do \" + this.actor.name + \", które nie może zostać usunięte, dopóki objaw Apatia nie zostanie uleczony.\")\n}"
+            }
+          ]
+        },
+        "i7X6lRySdFmQLOH0": {
+          "id": "i7X6lRySdFmQLOH0",
+          "name": "Kaszel i katar"
+        }
+      },
+      "duration_value": "1k10",
+      "duration_unit": "dni",
+      "contraction": "Porażka w Wymagającym (+0) Teście Odporności po kontakcie z kichającym czy kaszlącym lub kiedy jest się wystawionym na działanie złej pogody.",
+      "incubation_value": "20+4k10",
+      "incubation_unit": "godzin",
+      "symptoms": "Apatia, Kaszel i katar",
+      "permanent": " ",
+      "duration_text": " ",
+      "incubation_text": " "
+    },
+    "Pneumonia": {
+      "id": "K74AhzejwTdzTc1w",
+      "name": "Zapalenie Płuc",
+      "description": "<p>Zbierające się w płucach płyny mogą doprowadzić do zapalenia, gorączki czy nawet śmierci. Zapalenie Płuc nazywane jest kolokwialnie Kołataniem Morra ze względu na okropne charczenie, które wydaje zarażony podczas brania głębszych oddechów.</p>\n<p>Bohater z Zapaleniem Płuc musi wykonać <strong>Wymagający (+0) Test Odporności</strong> każdego dnia, jeżeli jest w trakcie podróży lub wykonuje jakikolwiek wysiłek fizyczny. Porażka oznacza, że Gorączka staje się @Symptom[Gorączka(Poważna)]{Poważna}. W takim wypadku powyższe Testy muszą być wykonywane każdego dnia niezależnie od okoliczności, inaczej choroba otrzyma dodatkowy Objaw – @Symptom[Uwiąd].</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.K74AhzejwTdzTc1w",
+      "effects": {
+        "3cuBForXOhXNVHkw": {
+          "id": "3cuBForXOhXNVHkw",
+          "name": "Gorączka",
+          "scriptData": [
+            {
+              "id": "3cuBForXOhXNVHkw",
+              "name": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "activationScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+              "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+            }
+          ]
+        },
+        "LdgZyEq4sEbNXbjq": {
+          "id": "LdgZyEq4sEbNXbjq",
+          "name": "Kaszel i katar"
+        },
+        "uAElEYbzoPc7Ae94": {
+          "id": "uAElEYbzoPc7Ae94",
+          "name": "Apatia",
+          "scriptData": [
+            {
+              "id": "uAElEYbzoPc7Ae94",
+              "name": "@effect.name",
+              "script": "let fatigued = this.actor.hasCondition(\"fatigued\")\nif (!fatigued)\n{\n    this.actor.addCondition(\"fatigued\")\n    ui.notifications.notify(\"Zmęczenie dodane do \" + this.actor.name + \", które nie może zostać usunięte, dopóki objaw Apatia nie zostanie uleczony.\")\n}"
+            }
+          ]
+        }
+      },
+      "duration_value": "3k10",
+      "duration_unit": "dni",
+      "contraction": "Patrz Przeziębienie",
+      "incubation_value": "Natychmiastowy",
+      "incubation_unit": " ",
+      "symptoms": "Apatia, Gorączka, Kaszel i katar",
+      "permanent": " ",
+      "duration_text": " ",
+      "incubation_text": " "
+    },
+    "Purple Brain Fever": {
+      "id": "dDILARjlekBnsR0j",
+      "name": "Purpurowa Gorączka Mózgowa",
+      "description": "<p>Purpurowa Gorączka Mózgowa to przerażająca choroba. Głowa chorego okropnie puchnie, przy okazji nieszczęśnik dostaje napadów gorączki i delirium. Twarz przybiera kolor śliwki, oczy wychodzą z oczodołów, język zaś puchnie tak bardzo, że przestaje mieścić się w ustach. Śmierć przychodzi zazwyczaj w ciągu tygodnia.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.dDILARjlekBnsR0j",
+      "effects": {
+        "bUJQQ8oJtWJme0AZ": {
+          "id": "bUJQQ8oJtWJme0AZ",
+          "name": "Nawroty (Częste)"
+        },
+        "FfzDGn3C7lGejtMw": {
+          "id": "FfzDGn3C7lGejtMw",
+          "name": "Uwiąd",
+          "scriptData": [
+            {
+              "id": "FfzDGn3C7lGejtMw",
+              "name": "@effect.name",
+              "script": "let difficulty = \"\"\n                            if (this.effect.name.includes(\"Moderate\"))\n                                difficulty = \"easy\"\n                            else if (this.effect.name.includes(\"Severe\"))\n                                difficulty = \"average\"\n                            else\n                                difficulty = \"veasy\"\n        \n                            let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" dies from Blight\"}, fields: {difficulty}, appendTitle : \" - Blight\"})\n                            await test.roll();\n                            if (test.failed)\n                            {\n                                this.actor.addCondition(\"dead\");\n                            }"
+            }
+          ]
+        },
+        "md6jbudojM2vZAeN": {
+          "id": "md6jbudojM2vZAeN",
+          "name": "Gorączka (Wysoka)",
+          "scriptData": [
+            {
+              "id": "md6jbudojM2vZAeN",
+              "name": "@effect.name",
+              "script": "args.fields.modifier -= 10",
+              "activationScript": "return [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+              "hideScript": "return ![\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+            }
+          ]
+        },
+        "XaNdqKSz2UzniBBG": {
+          "id": "XaNdqKSz2UzniBBG",
+          "name": "Opuchlizna (twarz i głowa)."
+        },
+        "yz4uu7drpqAdgDHI": {
+          "id": "yz4uu7drpqAdgDHI",
+          "name": "Delirium"
+        },
+        "zYT2EGXLTx4C4Sqm": {
+          "id": "zYT2EGXLTx4C4Sqm",
+          "name": "Konwulsje",
+          "scriptData": [
+            {
+              "id": "zYT2EGXLTx4C4Sqm",
+              "name": "@effect.name",
+              "script": "let modifier = 0\n                            if (this.effect.name.includes(\"Moderate\"))\n                                modifier = -20\n                            else\n                                modifier = -10\n                            args.fields.modifier += modifier",
+              "activationScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+              "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
+            }
+          ]
+        }
+      },
+      "duration_value": "1k10",
+      "duration_unit": "dni",
+      "contraction": "Porażka w <b>Przeciętnym (+20) Teście Odporności</b> podczas fizycznego kontaktu z zarażonym (Test wykonuje się raz na każdą godzinę kontaktu).",
+      "incubation_value": "1k10",
+      "incubation_unit": "godzin",
+      "symptoms": "Delirium, Gorączka (poważna), Konwulsje, Nawroty (częste), Opuchlizna (twarz i głowa), Uwiąd",
+      "permanent": " ",
+      "duration_text": " ",
+      "incubation_text": " "
+    },
+    "Acid Blood": {
+      "id": "XbWHvyzcS2dYBLxy",
+      "name": "Kwasowa krew",
+      "description": "Otrzymujesz Cechę stworzenia: @UUID[Compendium.wfrp4e-core.items.M5QSWOYt2Rbv2yxW]{Kwasowa Krew}",
+      "sourceId": "Compendium.wfrp4e-eis.items.XbWHvyzcS2dYBLxy",
+      "effects": {
+        "J8YGmjMyRokGPt7k": {
+          "id": "J8YGmjMyRokGPt7k",
+          "name": "Kwasowa krew",
+          "scriptData": [
+            {
+              "id": "J8YGmjMyRokGPt7k",
+              "name": "Kwasowa krew",
+              "script": "[Script.4QoxhoekgVeZcQA7]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Aethyric Leak": {
+      "id": "d1Wbfp3mDRK1r3nV",
+      "name": "Magiczna wyrwa",
+      "description": "Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB]{Czarownica!}",
+      "sourceId": "Compendium.wfrp4e-eis.items.d1Wbfp3mDRK1r3nV",
+      "effects": {
+        "CnfJryZOhwFya12f": {
+          "id": "CnfJryZOhwFya12f",
+          "name": "Magiczna wyrwa",
+          "scriptData": [
+            {
+              "id": "CnfJryZOhwFya12f",
+              "name": "Magiczna wyrwa",
+              "script": "[Script.nuIpPD4uaZRuJni8]"
+            }
+          ]
+        }
+      },
+      "modifier": "Inteligencja -5, Ogłada -5"
+    },
+    "Animalistic Legs": {
+      "id": "RGayIjR72yJlTvZx",
+      "name": "Zwierzęce nogi",
+      "description": "Szybkość +1;  Ta mutacja może być ukryta tylko pod ubraniem; Problematyczny (&ndash;10) Test Atletyki, by chodzić w normalny sposób",
+      "sourceId": "Compendium.wfrp4e-eis.items.RGayIjR72yJlTvZx",
+      "effects": {
+        "tvLLf6a1A7wkXRfI": {
+          "id": "tvLLf6a1A7wkXRfI",
+          "name": "Zwierzęce nogi",
+          "scriptData": [
+            {
+              "id": "tvLLf6a1A7wkXRfI",
+              "name": "Zwierzęce nogi",
+              "script": "[Script.CCK1iIfPmB398ziT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Animalistic Psyche": {
+      "id": "UZ5bcKjFGbRcrHL6",
+      "name": "Zwierzęcy umysł",
+      "description": "<p>Gdy nie zdasz Testu opartego na Sile Woli, otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.AGcJl5rHjkyIQBPP]{Zwierzęcy} na [[/r 1d10]]{1k10} godzin.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.UZ5bcKjFGbRcrHL6",
+      "effects": {
+        "OnOp8V9RQwyKUe69": {
+          "id": "OnOp8V9RQwyKUe69",
+          "name": "Zwierzęcy umysł",
+          "scriptData": [
+            {
+              "id": "OnOp8V9RQwyKUe69",
+              "name": "Zwierzęcy umysł",
+              "script": "[Script.oWa7RkScnl6lR5vd]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Beacon of Corruption": {
+      "id": "WSzbWokq1EVHRl0z",
+      "name": "Siedlisko zepsucia",
+      "description": "<p>Gdy jesteś wystawiony na działanie Czynnika Psychologicznego, otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.xsGbDFqK2qh7lsIj]{Spaczenie} (Pomniejsze). Ogłada -10.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.WSzbWokq1EVHRl0z",
+      "effects": {
+        "Orfl3rex4Qx4OWVb": {
+          "id": "Orfl3rex4Qx4OWVb",
+          "name": "Siedlisko zepsucia",
+          "scriptData": [
+            {
+              "id": "Orfl3rex4Qx4OWVb",
+              "name": "Siedlisko zepsucia",
+              "script": "[Script.TrIYdcG3jDER4WgY]"
+            }
+          ]
+        }
+      },
+      "modifier": "Ogłada -10"
+    },
+    "Beaked Face": {
+      "id": "7GFCYoVdFuhwSVPy",
+      "name": "Dziobata twarz",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie}&nbsp;+3; Tej mutacji nie da się ukryć</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.7GFCYoVdFuhwSVPy",
+      "effects": {
+        "qyu6ePlGQ98qEm1h": {
+          "id": "qyu6ePlGQ98qEm1h",
+          "name": "Dziobata twarz",
+          "scriptData": [
+            {
+              "id": "qyu6ePlGQ98qEm1h",
+              "name": "Dziobata twarz",
+              "script": "[Script.Be5rdfnZorbILhpC]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Bear Head": {
+      "id": "P448U1YiALUtDOYv",
+      "name": "Głowa Niedźwiedzia",
+      "description": "<p>+1 Punkt Pancerza na głowie. Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +9; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.P448U1YiALUtDOYv",
+      "effects": {
+        "STdELJ0HeNEwRur0": {
+          "id": "STdELJ0HeNEwRur0",
+          "name": "Głowa Niedźwiedzia",
+          "scriptData": [
+            {
+              "id": "STdELJ0HeNEwRur0",
+              "name": "Głowa Niedźwiedzia",
+              "script": "[Script.zUv9e0A3OEXWY9Mv]"
+            },
+            {
+              "id": "STdELJ0HeNEwRur0",
+              "name": "PP",
+              "script": "[Script.gpuBg3y9rocJL7yT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Beast Head": {
+      "id": "tXjVy9AgMJgP54yZ",
+      "name": "Zwierzęca Głowa",
+      "description": "<p>Rzut na tabelę @Table[beasthead]{Zwierzęca Głowa}; ta mutacja nie może zostać ukryta.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.tXjVy9AgMJgP54yZ",
+      "effects": {
+        "UIgz9HbLj6lMsTeY": {
+          "id": "UIgz9HbLj6lMsTeY",
+          "name": "Zwierzęca Głowa",
+          "scriptData": [
+            {
+              "id": "UIgz9HbLj6lMsTeY",
+              "name": "Zwierzęca Głowa",
+              "script": "[Script.DmbWR9s5I8LHBwxB]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Bestial Face (Dog)": {
+      "id": "UEtCmYgyDGU1bPSF",
+      "name": "Zwierzęca Głowa (Pies)",
+      "description": "<p>Odczuwasz nieodpartą potrzebę, by paść na kolana i wyć. Twoja szczęka wysuwa się na przód i zaczynasz się krztusić w niekontrolowanych spazmach, gdy przez twą skórę przebija się na zewnątrz pokryty futrem pysk. Ludzki nos, wargi i zęby zanikają i odpadają, będąc niczym więcej jak zaledwie wspomnieniem twojego dawnego życia, teraz zastąpionym warczącym psim obliczem.</p>\n<p>Tracisz 20 punktów Ogłady i 10 Inteligencji. Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł (Węch)}.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.UEtCmYgyDGU1bPSF",
+      "effects": {
+        "moBHXdKClLBZNY7E": {
+          "id": "moBHXdKClLBZNY7E",
+          "name": "Zwierzęca Głowa (Pies)",
+          "scriptData": [
+            {
+              "id": "moBHXdKClLBZNY7E",
+              "name": "Zwierzęca Głowa (Pies)",
+              "script": "[Script.9JnPK1jNUEso7Pv8]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Beweaponed Extremities": {
+      "id": "bGxDVux4RfbD1YhB",
+      "name": "Żywa broń",
+      "description": "Zręczność na stałe spada do 0. Nie możesz być rozbrojony. Tej mutacji nie da się ukryć",
+      "sourceId": "Compendium.wfrp4e-eis.items.bGxDVux4RfbD1YhB",
+      "effects": {
+        "zDNhOWBVfdHCThyL": {
+          "id": "zDNhOWBVfdHCThyL",
+          "name": "Żywa broń",
+          "scriptData": [
+            {
+              "id": "zDNhOWBVfdHCThyL",
+              "name": "Żywa broń",
+              "script": "[Script.i7xl0jNpLnBT2h2l]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Beyond Pain": {
+      "id": "6mL7LVtjlpKqfzLD",
+      "name": "Ignorowanie bólu",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.wMwSRDmgiF2IdCJr]{Nie Czuje Bólu}.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.6mL7LVtjlpKqfzLD",
+      "effects": {
+        "0087dQe9lTuqsJ6e": {
+          "id": "0087dQe9lTuqsJ6e",
+          "name": "Ignorowanie bólu",
+          "scriptData": [
+            {
+              "id": "0087dQe9lTuqsJ6e",
+              "name": "Ignorowanie bólu",
+              "script": "[Script.8AoA4bnstBtglRGZ]"
+            }
+          ]
+        }
+      },
+      "modifier": "Inicjatywa -20, Inteligencja -20"
+    },
+    "Big Ears": {
+      "id": "zJFhxAXWzV6ZEIrS",
+      "name": "Wielkie uszy",
+      "description": "<p>Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł}&nbsp;(Słuch); Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.zJFhxAXWzV6ZEIrS",
+      "effects": {
+        "fbgsrMKysKbvjO2o": {
+          "id": "fbgsrMKysKbvjO2o",
+          "name": "Wielkie uszy",
+          "scriptData": [
+            {
+              "id": "fbgsrMKysKbvjO2o",
+              "name": "Wielkie uszy",
+              "script": "[Script.2WSN306tL4apjRtD]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Bird's Feet": {
+      "id": "Q9X19Laf3dW5Ygem",
+      "name": "Ptasie stopy",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.rOV2s6PQBBrhpMOv]{Mieszkaniec Lasu}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.Q9X19Laf3dW5Ygem",
+      "effects": {
+        "4xG93kvHvpx9IwR3": {
+          "id": "4xG93kvHvpx9IwR3",
+          "name": "Ptasie stopy",
+          "scriptData": [
+            {
+              "id": "4xG93kvHvpx9IwR3",
+              "name": "Ptasie stopy",
+              "script": "[Script.cApfxL7Ic0NKdoSr]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Blank Face": {
+      "id": "EXgBFl9iZnBEH5QF",
+      "name": "Twarz bez rysów",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach}&nbsp;2. Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.EXgBFl9iZnBEH5QF",
+      "effects": {
+        "g1yxmmdQR6VC0ueN": {
+          "id": "g1yxmmdQR6VC0ueN",
+          "name": "Twarz bez rysów",
+          "scriptData": [
+            {
+              "id": "g1yxmmdQR6VC0ueN",
+              "name": "Twarz bez rysów",
+              "script": "[Script.hSlEY2oh8quVmdXR]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Blasphemous Soul": {
+      "id": "HAw3VRN8XcsBClPT",
+      "name": "Bluźniercza dusza",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.aE3pyW20Orvdjzj0]{Nienawiść} (Religia)</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.HAw3VRN8XcsBClPT",
+      "effects": {
+        "gWjoSiOt2CyCQK9a": {
+          "id": "gWjoSiOt2CyCQK9a",
+          "name": "Bluźniercza dusza",
+          "scriptData": [
+            {
+              "id": "gWjoSiOt2CyCQK9a",
+              "name": "Nienawiść",
+              "script": "[Script.ZI2YnAAGoLpmVDIL]"
+            }
+          ]
+        }
+      },
+      "modifier": "Siła Woli +10"
+    },
+    "Blasted Mind": {
+      "id": "MUPhnpdYek3h1mm8",
+      "name": "Zniszczony umysł",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.IAWyzDfC286a9MPz]{ Niewrażliwość na Psychologię} na [[/r 1d10]]&nbsp;  Rund za każdym razem, kiedy miałbyś otrzymać Stan @Condition[Panika]  Po tym czasie otrzymujesz  [[/r 1d10]] stanu Panika</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.MUPhnpdYek3h1mm8",
+      "effects": {
+        "tMO4lna22MZ6UXyF": {
+          "id": "tMO4lna22MZ6UXyF",
+          "name": "Zniszczony umysł",
+          "scriptData": [
+            {
+              "id": "tMO4lna22MZ6UXyF",
+              "name": "Zniszczony umysł",
+              "script": "[Script.jGDk7avWFSnyFoql]"
+            },
+            {
+              "id": "tMO4lna22MZ6UXyF",
+              "name": "Dodaj Stan Panika",
+              "script": "[Script.syqqBkyP5tGqZ78t]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Boar Head": {
+      "id": "gG99k8ioiEswj5W7",
+      "name": "Głowa Dzika",
+      "description": "<p>+1 Punkt Pancerza na głowie. Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.BqPZn6q3VHn9HUrW]{Rogi (Szable)}; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.gG99k8ioiEswj5W7",
+      "effects": {
+        "oQtPvciP6gOTbEax": {
+          "id": "oQtPvciP6gOTbEax",
+          "name": "Głowa Dzika",
+          "scriptData": [
+            {
+              "id": "oQtPvciP6gOTbEax",
+              "name": "Głowa Dzika",
+              "script": "[Script.hZAax4emLahEEqcZ]"
+            },
+            {
+              "id": "oQtPvciP6gOTbEax",
+              "name": "PP",
+              "script": "[Script.gpuBg3y9rocJL7yT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Breathe Fire": {
+      "id": "cCEVXrJUB9l682JF",
+      "name": "Ognisty oddech",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.uqGxFOEqeurwkAO3]{Zionięcie}&nbsp;5 (Ogień).</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.cCEVXrJUB9l682JF",
+      "effects": {
+        "k3qPq3qyQ3fS4SSh": {
+          "id": "k3qPq3qyQ3fS4SSh",
+          "name": "Ognisty oddech",
+          "scriptData": [
+            {
+              "id": "k3qPq3qyQ3fS4SSh",
+              "name": "Ognisty oddech",
+              "script": "[Script.x76tKw4L8dX00ikE]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Bulging Eyes": {
+      "id": "hFZ2eJUdWBIiZiqI",
+      "name": "Wyłupiaste oczy",
+      "description": "<p>Inicjatywa +10; Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.hFZ2eJUdWBIiZiqI",
+      "effects": {
+        "OybZ7FU03ZCYSYqS": {
+          "id": "OybZ7FU03ZCYSYqS",
+          "name": "Wyłupiaste oczy"
+        }
+      },
+      "modifier": " "
+    },
+    "Bull Head": {
+      "id": "UHdgMrc2RP5szE7U",
+      "name": "Głowa Byka",
+      "description": "<p>+1 Punkt Pancerza na głowie. Otrzymujesz\nCechę @UUID[Compendium.wfrp4e-core.items.BqPZn6q3VHn9HUrW]{Rogi}; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.UHdgMrc2RP5szE7U",
+      "effects": {
+        "wAgqSCaQxR1jVB6x": {
+          "id": "wAgqSCaQxR1jVB6x",
+          "name": "Głowa Byka",
+          "scriptData": [
+            {
+              "id": "wAgqSCaQxR1jVB6x",
+              "name": "Głowa Dzika",
+              "script": "[Script.bRtZH0xRh8dgqMeW]"
+            },
+            {
+              "id": "wAgqSCaQxR1jVB6x",
+              "name": "PP",
+              "script": "[Script.gpuBg3y9rocJL7yT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Burning Skin": {
+      "id": "4AxwPjHE5H7qh6FD",
+      "name": "Płonąca skóra",
+      "description": "<p>Istoty i przedmioty, których dotkniesz, muszą zdać Test Atletyki albo otrzymują Stan @Condition[Podpalenie]; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.4AxwPjHE5H7qh6FD",
+      "modifier": " "
+    },
+    "Carapace": {
+      "id": "GFDf08YjfA3rBcew",
+      "name": "Chityna",
+      "description": "+1 punkt pancerza we wszystkich miejscach; mutację tę można ukryć jedynie za pomocą ubrania",
+      "sourceId": "Compendium.wfrp4e-eis.items.GFDf08YjfA3rBcew",
+      "effects": {
+        "xhtAoZlxJWRZsYCa": {
+          "id": "xhtAoZlxJWRZsYCa",
+          "name": "Chityna",
+          "scriptData": [
+            {
+              "id": "xhtAoZlxJWRZsYCa",
+              "name": "Lokacja",
+              "script": "[Script.TpZItJ5Ugbazaobd]"
+            },
+            {
+              "id": "xhtAoZlxJWRZsYCa",
+              "name": "PP",
+              "script": "[Script.hfO4INH3EeETDTFt]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Claws": {
+      "id": "oNEAQK3U4zTVQJ5R",
+      "name": "Pazury",
+      "description": "<p>Dłonie mogą służyć jako oręż, jakby postać posiadała Cechę @UUID[Compendium.wfrp4e-core.items.AtpAudHA4ybXVlWM]{Broń} o współczynniku obrażeń +BS; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.oNEAQK3U4zTVQJ5R",
+      "effects": {
+        "OIqEvUj4O3QIJCe1": {
+          "id": "OIqEvUj4O3QIJCe1",
+          "name": "Pazury",
+          "scriptData": [
+            {
+              "id": "OIqEvUj4O3QIJCe1",
+              "name": "Pazury",
+              "script": "[Script.ZxtOdwsM2Sqj9Zam]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Cloud of Flies": {
+      "id": "4uiNFVlWe50InlYX",
+      "name": "Rój much",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.4uiNFVlWe50InlYX",
+      "effects": {
+        "XXCIpwVfdcffNhwz": {
+          "id": "XXCIpwVfdcffNhwz",
+          "name": "Rój much",
+          "scriptData": [
+            {
+              "id": "XXCIpwVfdcffNhwz",
+              "name": "Rój much",
+              "script": "[Script.ljpM7muMyxGD04EX]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Corpulent": {
+      "id": "WYFaXngDpdp9rG5G",
+      "name": "Otyłość",
+      "description": "<p>Szybkość -1, Siła +5, Wytrzymałość +5</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.WYFaXngDpdp9rG5G",
+      "effects": {
+        "qBzPQtKVyE85af7w": {
+          "id": "qBzPQtKVyE85af7w",
+          "name": "Otyłość"
+        }
+      },
+      "modifier": " "
+    },
+    "Crested Head": {
+      "id": "LCWnv34fdBh786Lg",
+      "name": "Rogata głowa",
+      "description": "<p>Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.6l3jvIAvrKxt0lA9]{Atrakcyjny}&nbsp; działający na\nmutantów i zwierzoludzi.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.LCWnv34fdBh786Lg",
+      "effects": {
+        "pd25Q5jvE4qEnucM": {
+          "id": "pd25Q5jvE4qEnucM",
+          "name": "Rogata głowa",
+          "scriptData": [
+            {
+              "id": "pd25Q5jvE4qEnucM",
+              "name": " Testy Charyzma przeciwko mutantom",
+              "script": "[Script.956dUb5sd6OtbWZR]",
+              "hideScript": "[Script.yIGItnshXI4W46cp]",
+              "submissionScript": "[Script.3jm0NoYpgB6ZuUSl]"
+            },
+            {
+              "id": "pd25Q5jvE4qEnucM",
+              "name": "Atrakcyjny",
+              "script": "[Script.Qgn92fZyc3Psn8QJ]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Deafening Cry": {
+      "id": "Fn4oyaEu8T7ulH5r",
+      "name": "Ogłuszający wrzask",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.Fn4oyaEu8T7ulH5r",
+      "effects": {
+        "7aVwqW5QAIE1iCPK": {
+          "id": "7aVwqW5QAIE1iCPK",
+          "name": "Ogłuszający wrzask",
+          "scriptData": [
+            {
+              "id": "7aVwqW5QAIE1iCPK",
+              "name": "Ogłuszający wrzask",
+              "script": "[Script.ljpM7muMyxGD04EX]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Distended Digits": {
+      "id": "OrupYvTOI2jdOiUo",
+      "name": "Wydłużone palce",
+      "description": "<p>Zręczność +10; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.OrupYvTOI2jdOiUo",
+      "effects": {
+        "1XhWFrvjDRyhqcss": {
+          "id": "1XhWFrvjDRyhqcss",
+          "name": "Wydłużone palce"
+        }
+      },
+      "modifier": " "
+    },
+    "Dog Head": {
+      "id": "NCZJR8oP1BydpEaL",
+      "name": "Głowa psa",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie +5}; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.NCZJR8oP1BydpEaL",
+      "effects": {
+        "e41fpikurzInfA9J": {
+          "id": "e41fpikurzInfA9J",
+          "name": "Głowa psa",
+          "scriptData": [
+            {
+              "id": "e41fpikurzInfA9J",
+              "name": "Głowa psa",
+              "script": "[Script.ohl803m0tUwNfKAk]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Eagle Head": {
+      "id": "VJ0LFX9q5NeOv7jT",
+      "name": "Głowa orła",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +4; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.VJ0LFX9q5NeOv7jT",
+      "effects": {
+        "DF8Khb0mqu7eIR5n": {
+          "id": "DF8Khb0mqu7eIR5n",
+          "name": "Głowa orła",
+          "scriptData": [
+            {
+              "id": "DF8Khb0mqu7eIR5n",
+              "name": "Głowa orła",
+              "script": "[Script.JavuFNZ9Pj5elVLc]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Elastic Arms": {
+      "id": "NSfDyRFhjIirrGmd",
+      "name": "Giętkie ramiona",
+      "description": "<p>Twoja broń biała liczy się tak, jakby miała Długość o dwa stopnie wyższą.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.NSfDyRFhjIirrGmd",
+      "effects": {
+        "SOZwe4JHmM0IFkEw": {
+          "id": "SOZwe4JHmM0IFkEw",
+          "name": "Giętkie ramiona",
+          "scriptData": [
+            {
+              "id": "SOZwe4JHmM0IFkEw",
+              "name": "Giętkie ramiona",
+              "script": "[Script.ILqHxk7deotgI3KD]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Emaciated": {
+      "id": "0ZxDmvsU1HIBzuSP",
+      "name": "Wychudzone ciało",
+      "description": "<p>Siła -10, Zwinność +5</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.0ZxDmvsU1HIBzuSP",
+      "effects": {
+        "PPXqHpK6l3npgr31": {
+          "id": "PPXqHpK6l3npgr31",
+          "name": "Wychudzone ciało"
+        }
+      },
+      "modifier": " "
+    },
+    "Evil Eye": {
+      "id": "TKGWAFJwwFlB5qhk",
+      "name": "Złe oko",
+      "description": "<p>Możesz rzucać zaklęcie @UUID[Compendium.wfrp4e-core.items.CnydL8p3PVAuF98w]{Złę oko}, wydawszy Punkt Szczęścia, bez konieczności wykonania Testu. Jednocześnie natychmiast padasz ofiarą @Table[minormis]{Mniejszej Manifestacji}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.TKGWAFJwwFlB5qhk",
+      "effects": {
+        "crxKhefNS5hbtEIN": {
+          "id": "crxKhefNS5hbtEIN",
+          "name": "Złe oko",
+          "scriptData": [
+            {
+              "id": "crxKhefNS5hbtEIN",
+              "name": "Złe oko",
+              "script": "[Script.nHJdlqbOP0ECgywb]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Extra Leg Joints": {
+      "id": "C92TVClDYiJfF2V6",
+      "name": "Dodatkowe stawy w nogach",
+      "description": "<p>Zwinność +5; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.C92TVClDYiJfF2V6",
+      "effects": {
+        "E1IaFC6xWO3Q5gOA": {
+          "id": "E1IaFC6xWO3Q5gOA",
+          "name": "Dodatkowe stawy w nogach"
+        }
+      },
+      "modifier": " "
+    },
+    "Extra Mouth": {
+      "id": "6RHQo1l5ulJkpVgn",
+      "name": "Dodatkowe usta",
+      "description": "<p>Rzuć kośćmi, by ustalić @Table[hitloc]{Miejsce Trafienia}, w którym się pojawią; Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.6RHQo1l5ulJkpVgn",
+      "effects": {
+        "3djNvzmIVtmPZ7Oa": {
+          "id": "3djNvzmIVtmPZ7Oa",
+          "name": "Dodatkowe usta",
+          "scriptData": [
+            {
+              "id": "3djNvzmIVtmPZ7Oa",
+              "name": "Dodatkowe usta",
+              "script": "[Script.toSrgcvWq9b5eN0K]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Eyestalks": {
+      "id": "ejfCuaUgNuJsb5sT",
+      "name": "Oczy na szypułkach",
+      "description": "<p>Możesz patrzeć ponad przeszkodami i dookoła nich; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.ejfCuaUgNuJsb5sT",
+      "modifier": " "
+    },
+    "Fantasist": {
+      "id": "FiuDSQMSXg1W3tCN",
+      "name": "Mitomania",
+      "description": "<p>Inicjatywa -5, Siła Woli -5</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.FiuDSQMSXg1W3tCN",
+      "effects": {
+        "cdzW1v5BUoKPz7LZ": {
+          "id": "cdzW1v5BUoKPz7LZ",
+          "name": "Mitomania"
+        }
+      },
+      "modifier": "Inicjatywa -5, Siła Woli -5"
+    },
+    "Fitful Hatred": {
+      "id": "RR3xRb1fOSQxzJcJ",
+      "name": "Wydmuchana nienawiść",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.aE3pyW20Orvdjzj0]{Nienawiść} (Cel). Raz dziennie rzuć w Tabeli @Table[fixations]{Fiksacji}, by wybrać aktualny Cel.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.RR3xRb1fOSQxzJcJ",
+      "effects": {
+        "EHnxIyt8q35G5l85": {
+          "id": "EHnxIyt8q35G5l85",
+          "name": "Wydmuchana nienawiść",
+          "scriptData": [
+            {
+              "id": "EHnxIyt8q35G5l85",
+              "name": "Wydmuchana nienawiść",
+              "script": "[Script.bQyVajMN1ETwlzvM]"
+            },
+            {
+              "id": "EHnxIyt8q35G5l85",
+              "name": "Rzuć na cel Nienawiści",
+              "script": "[Script.StAderQaQQsxb6Rv]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Fleshy Tentacle": {
+      "id": "P4kooD6L7C6EOEBE",
+      "name": "Mięsista macka",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.4xF7M6ylIiGntekh]{# Macki}&nbsp; Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.P4kooD6L7C6EOEBE",
+      "effects": {
+        "AuIzkxFiPPjRRYlU": {
+          "id": "AuIzkxFiPPjRRYlU",
+          "name": "Mięsista macka",
+          "scriptData": [
+            {
+              "id": "AuIzkxFiPPjRRYlU",
+              "name": "Mięsista macka",
+              "script": "[Script.oHenUKtaS3jT5xQn]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Foul Odour": {
+      "id": "P7D3Iuh2ueGNTqdg",
+      "name": "Okropny odór",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.P7D3Iuh2ueGNTqdg",
+      "effects": {
+        "4UX2ZiDJ85UiooOr": {
+          "id": "4UX2ZiDJ85UiooOr",
+          "name": "Okropny odór",
+          "scriptData": [
+            {
+              "id": "4UX2ZiDJ85UiooOr",
+              "name": "Ogłuszający wrzask",
+              "script": "[Script.ljpM7muMyxGD04EX]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Furred Skin": {
+      "id": "1JMeEaM2nDHU5gp7",
+      "name": "Futro",
+      "description": "<p>Ignorujesz efekty pogodowe z powodu zimna. Efekty gorąca są podwojone; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.1JMeEaM2nDHU5gp7",
+      "modifier": " "
+    },
+    "Giant Spider Head": {
+      "id": "HEtGCvMRVpCOdtWq",
+      "name": "Głowa olbrzymiego pająka",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +3 i @UUID[Compendium.wfrp4e-core.items.gFkRm9wS65qe18Xv]{Jad (Przeciętny)}; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.HEtGCvMRVpCOdtWq",
+      "effects": {
+        "24wb7vStnLJr5tYc": {
+          "id": "24wb7vStnLJr5tYc",
+          "name": "Głowa olbrzymiego pająka",
+          "scriptData": [
+            {
+              "id": "24wb7vStnLJr5tYc",
+              "name": "Głowa olbrzymiego pająka",
+              "script": "[Script.O9fc0hLHdkTgSuLg]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Gills": {
+      "id": "ZuCoMd6USGH0MDfH",
+      "name": "Skrzela",
+      "description": "<p>Możesz oddychać pod wodą; Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.ZuCoMd6USGH0MDfH",
+      "modifier": " "
+    },
+    "Glorious Corruption": {
+      "id": "VSE9hlaLztX5HzI9",
+      "name": "Pragnienie spaczenia",
+      "description": "<p><span class=\"fontstyle0\">Gain a </span><span class=\"fontstyle2\">@Condition[Fatigued] </span><span class=\"fontstyle0\">Condition for every week you go without gaining a Corruption Point, or where you are not responsible for another Character gaining a Corruption Point; lose all Fatigued Conditions if either situation occurs</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.VSE9hlaLztX5HzI9",
+      "modifier": " "
+    },
+    "Glowing Skin": {
+      "id": "cSx0NYRkh984z0Np",
+      "name": "Świecąca skóra",
+      "description": "<p>Blask porównywalny z płomieniem świecy; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.cSx0NYRkh984z0Np",
+      "effects": {
+        "m46DkZXVjqliXmOS": {
+          "id": "m46DkZXVjqliXmOS",
+          "name": "Świecąca skóra",
+          "scriptData": [
+            {
+              "id": "m46DkZXVjqliXmOS",
+              "name": "Świecąca skóra",
+              "script": "[Script.XthZ3GCC3WhsEI2g]"
+            },
+            {
+              "id": "m46DkZXVjqliXmOS",
+              "name": "Aktywne tokeny",
+              "script": "[Script.KJLAan0glJlyOyqF]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Goat Head": {
+      "id": "rqUrJ0gEmnUPyQNR",
+      "name": "Głowa kozy",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.BqPZn6q3VHn9HUrW]{Rogi}; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.rqUrJ0gEmnUPyQNR",
+      "effects": {
+        "FI0pxNGCFKixmg7e": {
+          "id": "FI0pxNGCFKixmg7e",
+          "name": "Głowa kozy",
+          "scriptData": [
+            {
+              "id": "FI0pxNGCFKixmg7e",
+              "name": "Głowa kozy",
+              "script": "[Script.s8idWt9YdMTRfnjV]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Headless": {
+      "id": "CEkEhklDcsfUCLZR",
+      "name": "Bezgłowy",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach}&nbsp;2. Trafienia w Twoją głowę chybiają; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.CEkEhklDcsfUCLZR",
+      "effects": {
+        "6RuZCzP2rRrQwq9Z": {
+          "id": "6RuZCzP2rRrQwq9Z",
+          "name": "Bezgłowy",
+          "scriptData": [
+            {
+              "id": "6RuZCzP2rRrQwq9Z",
+              "name": "Strach",
+              "script": "[Script.hSlEY2oh8quVmdXR]"
+            },
+            {
+              "id": "6RuZCzP2rRrQwq9Z",
+              "name": "Bezgłowy",
+              "script": "[Script.dM449AU0FQRnOc3l]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Hopper": {
+      "id": "fgcNAGRYoUhE3yb9",
+      "name": "Skoczek",
+      "description": "<p>Twoja Szybkość spada do 2 i nie może być wyższa. Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.j6v78dnOOdCB6c3d]{Skoczny}&nbsp; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.fgcNAGRYoUhE3yb9",
+      "effects": {
+        "sFqO3hkhZGo8OiC2": {
+          "id": "sFqO3hkhZGo8OiC2",
+          "name": "Skoczek",
+          "scriptData": [
+            {
+              "id": "sFqO3hkhZGo8OiC2",
+              "name": "Skoczek",
+              "script": "[Script.q3nRyXaxksdCiLFM]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Hounds of Despair": {
+      "id": "rSH0QjyeYQ3A6ms9",
+      "name": "Czarna rozpacz",
+      "description": " Gdy nie zdasz Testu opartego na Sile Woli, Otrzymujesz objawy @Symptom[Apatii] Symptom na [[/r 1d10]] godzin</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.rSH0QjyeYQ3A6ms9",
+      "effects": {
+        "ecbpm6T0nhWbSJpg": {
+          "id": "ecbpm6T0nhWbSJpg",
+          "name": "Czarna rozpacz",
+          "scriptData": [
+            {
+              "id": "ecbpm6T0nhWbSJpg",
+              "name": "Czarna rozpacz",
+              "script": "[Script.tNTO1LVN7JqHf4YN]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Hurried Masochism": {
+      "id": "vgQ9GK4S6kcZgCS8",
+      "name": "Radosny masochizm",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.GbDyBCu8ZjDp6dkj]{Wojowniczy}; nie możesz @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#ucieczka]{uciec} z własnej woli</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.vgQ9GK4S6kcZgCS8",
+      "effects": {
+        "LMr7iruJt1GyIvG5": {
+          "id": "LMr7iruJt1GyIvG5",
+          "name": "Radosny masochizm",
+          "scriptData": [
+            {
+              "id": "LMr7iruJt1GyIvG5",
+              "name": "Radosny masochizm",
+              "script": "[Script.0e0UZT2FodOJDdgW]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Inhuman Beauty": {
+      "id": "uDWDaaFajtHXsyp3",
+      "name": "Nieludzka uroda",
+      "description": "<p>Ogłada +10, rany zawsze goją się bez blizn.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.uDWDaaFajtHXsyp3",
+      "effects": {
+        "9Re8jiaEyiFdozXw": {
+          "id": "9Re8jiaEyiFdozXw",
+          "name": "Nieludzka uroda"
+        }
+      },
+      "modifier": " "
+    },
+    "Iron Skin": {
+      "id": "W2jyjRFnuNadvPGa",
+      "name": "Stalowa skóra",
+      "description": "<p>+2 Punkty Pancerza na wszystkich Miejscach Trafienia, Zwinność -10.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.W2jyjRFnuNadvPGa",
+      "effects": {
+        "wj8ju9mUcJqgq4t3": {
+          "id": "wj8ju9mUcJqgq4t3",
+          "name": "Stalowa skóra",
+          "scriptData": [
+            {
+              "id": "wj8ju9mUcJqgq4t3",
+              "name": "Stalowa skóra",
+              "script": "[Script.S6tUyFJvGMV19mvP]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Lingering Foulness": {
+      "id": "j2fJWOX4xLgdVdfc",
+      "name": "Mania czystości",
+      "description": "<p>Gdy masz do czynienia z brudem, otrzymujesz Objawy @Symptom[Mdłości] na [[/r 1d10]] godzin </p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.j2fJWOX4xLgdVdfc",
+      "effects": {
+        "Uyn0WlVzvUXwL2n9": {
+          "id": "Uyn0WlVzvUXwL2n9",
+          "name": "Mania czystości",
+          "scriptData": [
+            {
+              "id": "Uyn0WlVzvUXwL2n9",
+              "name": "Mania czystości",
+              "script": "[Script.hA8PzeiCsHqqlUZm]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Lolling Tongue": {
+      "id": "WpRH3fKU33jGmtUt",
+      "name": "Zwisający jęzor",
+      "description": "<p>-10 do wszystkich Testów Języka wymagających mówienia; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.WpRH3fKU33jGmtUt",
+      "effects": {
+        "xyP1z3rpZTMsv3yq": {
+          "id": "xyP1z3rpZTMsv3yq",
+          "name": "Zwisający jęzor",
+          "scriptData": [
+            {
+              "id": "xyP1z3rpZTMsv3yq",
+              "name": "Testy językowe podczas mówienia",
+              "script": "[Script.xvGxwv7X0Vq3vNqb]",
+              "activationScript": "[Script.VAs1nXvicdQK18Do]",
+              "hideScript": "[Script.3LLiSgj6KGtgqcmo]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Long Arms": {
+      "id": "Jre2KJsz5gB700CY",
+      "name": "Długie ręce",
+      "description": "<p>Jeżeli Ty i twój przeciwnik walczycie bronią o tej samej Długości, Twoja broń jest traktowana, jakby była dłuższa; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.Jre2KJsz5gB700CY",
+      "effects": {
+        "tf3lKEYm14VlXvRm": {
+          "id": "tf3lKEYm14VlXvRm",
+          "name": "Długie ręce",
+          "scriptData": [
+            {
+              "id": "tf3lKEYm14VlXvRm",
+              "name": "Długie ręce - atakujący",
+              "script": "[Script.PI1QNaKFeqood6d7]"
+            },
+            {
+              "id": "tf3lKEYm14VlXvRm",
+              "name": "Długie ręce - broniący się",
+              "script": "[Script.VzgTGb5QXKoyPNh3]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Long Legs": {
+      "id": "4y99oLqMiPLptOaH",
+      "name": "Długie nogi",
+      "description": "<p>Szybkość +2; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.4y99oLqMiPLptOaH",
+      "effects": {
+        "rRxJCLcyaxe6090M": {
+          "id": "rRxJCLcyaxe6090M",
+          "name": "Długie nogi"
+        }
+      },
+      "modifier": " "
+    },
+    "Long Neck": {
+      "id": "8LccDWq0NReTeE0B",
+      "name": "Długa szyja",
+      "description": "<p>Połowa trafień w korpus liczy się jako trafienie w głowę; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.8LccDWq0NReTeE0B",
+      "effects": {
+        "zcc7htyjfLyJfquD": {
+          "id": "zcc7htyjfLyJfquD",
+          "name": "Długa szyja",
+          "scriptData": [
+            {
+              "id": "zcc7htyjfLyJfquD",
+              "name": "Długa szyja",
+              "script": "[Script.FiD3mvWIBHNNIuO9]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Mindless Wandering": {
+      "id": "3YbX5MUDVsFeHhnJ",
+      "name": "Bezmyślna tułaczka",
+      "description": "<p>Inteligencja -10, Siła Woli +10. Dodatkowo, kiedy jesteś sam, otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.9GNpAqgsKzxZKJpp]{Głupi}.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.3YbX5MUDVsFeHhnJ",
+      "effects": {
+        "1MV02DxPhNRJnqas": {
+          "id": "1MV02DxPhNRJnqas",
+          "name": "Bezmyślna tułaczka",
+          "scriptData": [
+            {
+              "id": "1MV02DxPhNRJnqas",
+              "name": "Bezmyślna tułaczka",
+              "script": "[Script.Q68WiUWY7GxiXBbT]"
+            }
+          ]
+        }
+      },
+      "modifier": "Inteligencja -10, Siła Woli +10"
+    },
+    "Monstrous Paranoia": {
+      "id": "9uNiVxLE4qVSLmd5",
+      "name": "Potworna podejrzliwość",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.IPKRMGry6WotuS1G]{Płochliwy}. Inicjatywa +10.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.9uNiVxLE4qVSLmd5",
+      "effects": {
+        "0L3HsrJoCE52OFCF": {
+          "id": "0L3HsrJoCE52OFCF",
+          "name": "Potworna podejrzliwość",
+          "scriptData": [
+            {
+              "id": "0L3HsrJoCE52OFCF",
+              "name": "Potworna podejrzliwość",
+              "script": "[Script.3R6Y4NpNTqPc83wh]"
+            }
+          ]
+        }
+      },
+      "modifier": "Inicjatywa +10"
+    },
+    "Multiple Arms": {
+      "id": "MT16sKCPRQmiy4MJ",
+      "name": "Wieloręki",
+      "description": "Otrzymujesz jeden Darmowy Atak; Tej mutacji nie da się ukryć",
+      "sourceId": "Compendium.wfrp4e-eis.items.MT16sKCPRQmiy4MJ",
+      "modifier": " "
+    },
+    "Multiple Legs": {
+      "id": "0MxaNsefsQObrIQy",
+      "name": "Dodatkowe nogi",
+      "description": "<p>Szybkość +1; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.0MxaNsefsQObrIQy",
+      "effects": {
+        "2LAaB9MqA025tcAA": {
+          "id": "2LAaB9MqA025tcAA",
+          "name": "Dodatkowe nogi"
+        }
+      },
+      "modifier": " "
+    },
+    "One Eye": {
+      "id": "7koQRhc8sEl1XkWN",
+      "name": "Jednooki",
+      "description": "Umiejętności Strzeleckie -20; Ta mutacja może być ukryta tylko pod ubraniem.",
+      "sourceId": "Compendium.wfrp4e-eis.items.7koQRhc8sEl1XkWN",
+      "effects": {
+        "sEnR7uButWPYfZIp": {
+          "id": "sEnR7uButWPYfZIp",
+          "name": "Jednooki"
+        }
+      },
+      "modifier": " "
+    },
+    "Panicked Urgency": {
+      "id": "PTNrW1z4zZtpLW2i",
+      "name": "Mania natręctw",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-eis.items.PTNrW1z4zZtpLW2i",
+      "effects": {
+        "SSI0fCQDApOIlYOI": {
+          "id": "SSI0fCQDApOIlYOI",
+          "name": "Mania natręctw"
+        }
+      },
+      "modifier": "Siła Woli -10, Zwinność +10"
+    },
+    "Patchy Feathers": {
+      "id": "0VpEA88S9JOvyEFS",
+      "name": "Niejednolite opierzenie",
+      "description": "<p>Rzuć dwukrotnie, by ustalić @Table[hitloc] porosłe pierzem</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.0VpEA88S9JOvyEFS",
+      "effects": {
+        "DkXBoIpEZth3QSgZ": {
+          "id": "DkXBoIpEZth3QSgZ",
+          "name": "Niejednolite opierzenie",
+          "scriptData": [
+            {
+              "id": "DkXBoIpEZth3QSgZ",
+              "name": "Niejednolite opierzenie",
+              "script": "[Script.iBEPQ3NwtI9DfkEy]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Pin Head": {
+      "id": "F5zx5gSLAGC2hiDE",
+      "name": "Gwoździogłowy",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.9GNpAqgsKzxZKJpp]{Głupi} ; ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.F5zx5gSLAGC2hiDE",
+      "effects": {
+        "neSSF9CwfqHhyKax": {
+          "id": "neSSF9CwfqHhyKax",
+          "name": "Gwoździogłowy",
+          "scriptData": [
+            {
+              "id": "neSSF9CwfqHhyKax",
+              "name": "Gwoździogłowy",
+              "script": "[Script.2wk0yrRPlPsdqr3L]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Pointed Head": {
+      "id": "AjJNwBmIV1VRPtLS",
+      "name": "Szpiczastogłowy",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.9GNpAqgsKzxZKJpp]{Głupi} i nie możesz nosić hełmu; ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.AjJNwBmIV1VRPtLS",
+      "effects": {
+        "fFiiAloLIhZ1jjEk": {
+          "id": "fFiiAloLIhZ1jjEk",
+          "name": "Szpiczastogłowy",
+          "description": "<blockquote class=\"foundry-note\"><p>This effect will remove all Head AP coming from Armour items.</p></blockquote>",
+          "scriptData": [
+            {
+              "id": "fFiiAloLIhZ1jjEk",
+              "name": "Szpiczastogłowy",
+              "script": "[Script.2wk0yrRPlPsdqr3L]"
+            },
+            {
+              "id": "fFiiAloLIhZ1jjEk",
+              "name": "Brak punktów pancerza na głowie",
+              "script": "[Script.GNl5Zk7BZ2jhRV1I]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Rat Head": {
+      "id": "24ffgX9chl463jsM",
+      "name": "Głowa Szczura",
+      "description": "<p> Otrzymujesz Cechę  @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +4 and @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Zaraza}; ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.24ffgX9chl463jsM",
+      "effects": {
+        "88JuLRWkZ2PKDFDQ": {
+          "id": "88JuLRWkZ2PKDFDQ",
+          "name": "Głowa Szczura",
+          "scriptData": [
+            {
+              "id": "88JuLRWkZ2PKDFDQ",
+              "name": "Głowa Szczura",
+              "script": "[Script.ZGlJnrIemqul24j7]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Ravenous Hunger": {
+      "id": "AbhmfpmtEASoCV6R",
+      "name": "Obżarstwo",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.xneBqGOs1QS7kfUr]{ Żarłoczny}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.AbhmfpmtEASoCV6R",
+      "effects": {
+        "vG1BM5eEfyEVfmMu": {
+          "id": "vG1BM5eEfyEVfmMu",
+          "name": "Obżarstwo",
+          "scriptData": [
+            {
+              "id": "vG1BM5eEfyEVfmMu",
+              "name": "Obżarstwo",
+              "script": "[Script.xL4S0H1RP8hhXW7c]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Rearranged Face": {
+      "id": "OJy15qOyhb81qY2C",
+      "name": "Przemodelowana twarz",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach}&nbsp;1;  Próby wykrycia, czy kłamiesz, otrzymują modyfikator -20 do Testów Intuicji ; ta mutacja może być ukryta tylko pod ubraniem</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.OJy15qOyhb81qY2C",
+      "effects": {
+        "QInAT77RDWXXTZDU": {
+          "id": "QInAT77RDWXXTZDU",
+          "name": "Przemodelowana twarz",
+          "scriptData": [
+            {
+              "id": "QInAT77RDWXXTZDU",
+              "name": "Przemodelowana twarz",
+              "script": "[Script.IkGegSuQwwVPhrjF]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Rotting Flesh": {
+      "id": "hiNRXBk70tszyUsY",
+      "name": "Gnijące ciało",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach 2}, i @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Zaraza}</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.hiNRXBk70tszyUsY",
+      "effects": {
+        "iqSDeX5LNfs4X66b": {
+          "id": "iqSDeX5LNfs4X66b",
+          "name": "Gnijące ciało",
+          "scriptData": [
+            {
+              "id": "iqSDeX5LNfs4X66b",
+              "name": "Gnijące ciało",
+              "script": "[Script.lSOAZ4FG44bT4jh1]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Shifting Colours": {
+      "id": "DJK1Tsz0fna0ADg2",
+      "name": "Zmieniające się kolory",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.DJK1Tsz0fna0ADg2",
+      "effects": {
+        "ynV9F0BUqWLcehWl": {
+          "id": "ynV9F0BUqWLcehWl",
+          "name": "Zmieniające się kolory",
+          "scriptData": [
+            {
+              "id": "ynV9F0BUqWLcehWl",
+              "name": "Zmieniające się kolory",
+              "script": "[Script.ljpM7muMyxGD04EX]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Short Legs": {
+      "id": "9jsz5qK4tf58DbRz",
+      "name": "Krótkie nogi",
+      "description": "<p>Szybkość -1; Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.9jsz5qK4tf58DbRz",
+      "effects": {
+        "NSz8Ru9B7z24VSEM": {
+          "id": "NSz8Ru9B7z24VSEM",
+          "name": "Krótkie nogi"
+        }
+      },
+      "modifier": " "
+    },
+    "Skull Face": {
+      "id": "RHm2O18BgWkm23Da",
+      "name": "Trupia czaszka",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach}&nbsp;2. Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.RHm2O18BgWkm23Da",
+      "effects": {
+        "0GtID90uoOoOdop8": {
+          "id": "0GtID90uoOoOdop8",
+          "name": "Trupia czaszka",
+          "scriptData": [
+            {
+              "id": "0GtID90uoOoOdop8",
+              "name": "Trupia czaszka",
+              "script": "[Script.hSlEY2oh8quVmdXR]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Snake Head": {
+      "id": "OKFUSUiOkwUE7QNU",
+      "name": "Głowa Węża",
+      "description": "+1 Punkt Pancerza na głowie; Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +3 i @UUID[Compendium.wfrp4e-core.items.gFkRm9wS65qe18Xv]{Jad (Przeciętny)}; Tej mutacji nie da się ukryć.",
+      "sourceId": "Compendium.wfrp4e-eis.items.OKFUSUiOkwUE7QNU",
+      "effects": {
+        "DTZwKaIoj9HuiOSh": {
+          "id": "DTZwKaIoj9HuiOSh",
+          "name": "Głowa Węża",
+          "scriptData": [
+            {
+              "id": "DTZwKaIoj9HuiOSh",
+              "name": "Głowa Węża",
+              "script": "[Script.O9fc0hLHdkTgSuLg]"
+            },
+            {
+              "id": "DTZwKaIoj9HuiOSh",
+              "name": "PP",
+              "script": "[Script.gpuBg3y9rocJL7yT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Soul Sickness": {
+      "id": "outL99LlRQa3aSbe",
+      "name": "Choroba duszy",
+      "description": "<p> Gdy nie zdasz Testu opartego na Sile Woli, otrzymujesz Objawy @Symptom[Konwulsji] Symptom for [[/r 1d10]] godzin</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.outL99LlRQa3aSbe",
+      "effects": {
+        "SseY2LhecHsExQka": {
+          "id": "SseY2LhecHsExQka",
+          "name": "Choroba duszy",
+          "scriptData": [
+            {
+              "id": "SseY2LhecHsExQka",
+              "name": "Choroba duszy",
+              "script": "[Script.IAGla7HJlYN0wa4H]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Spiked Skin": {
+      "id": "BDwo5yO8GM1cMiBA",
+      "name": "Kolczasta skóra",
+      "description": "<p>Nie możesz nosić zbroi; +1 Punkt Pancerza n awszystkich Miejscach Trafienia; Kiedy Szarżujesz otrzymujesz dotatkowy Darmowy Atak (Cecha @UUID[Compendium.wfrp4e-core.items.AtpAudHA4ybXVlWM]{Broń}&nbsp;+4); ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.BDwo5yO8GM1cMiBA",
+      "effects": {
+        "BHMP8YUjcE6pqECA": {
+          "id": "BHMP8YUjcE6pqECA",
+          "name": "Kolczasta skóra",
+          "scriptData": [
+            {
+              "id": "BHMP8YUjcE6pqECA",
+              "name": "Kolczasta skóra",
+              "script": "[Script.mBcLf11upaHS8AQq]"
+            },
+            {
+              "id": "BHMP8YUjcE6pqECA",
+              "name": "Broń",
+              "script": "[Script.9VfeubiCV83LN9iY]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Suckered Hands and Feet": {
+      "id": "sV5gPy9ml87AKeX2",
+      "name": "Przyssawki na dłoniach i stopach",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.KII1gWnxIZ8HzmU5]{Wspinacz}&nbsp; ta mutacja może zostać ukryta tylko pod ubraniem</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.sV5gPy9ml87AKeX2",
+      "effects": {
+        "Y93kbcSWp1zpwgZm": {
+          "id": "Y93kbcSWp1zpwgZm",
+          "name": "Przyssawki na dłoniach i stopach",
+          "scriptData": [
+            {
+              "id": "Y93kbcSWp1zpwgZm",
+              "name": "Przyssawki na dłoniach i stopach",
+              "script": "[Script.Gh7OidY6UdpWBS1g]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Tail": {
+      "id": "VSISxXBnDMIuZFCu",
+      "name": "Ogon",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.UnJ25lL8aUzem5JO]{Atak Ogonem} +3; ta mutacja może zostać ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.VSISxXBnDMIuZFCu",
+      "effects": {
+        "qyu6ePlGQ98qEm1h": {
+          "id": "qyu6ePlGQ98qEm1h",
+          "name": "Ogon",
+          "scriptData": [
+            {
+              "id": "qyu6ePlGQ98qEm1h",
+              "name": "Ogon",
+              "script": "[Script.Ip8sctF9SIE1Z2vF]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Terrible Phobia": {
+      "id": "qcwonzZPzC9zQKJk",
+      "name": "Fobia",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.4CMKeDTDrRQZbPIJ]{Lęk} (Cel). Rzuć w tabeli @Table[fixations]{Fiksacji}, żeby ustalić co jest celem</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.qcwonzZPzC9zQKJk",
+      "effects": {
+        "SzLaPJyOwOiy06CO": {
+          "id": "SzLaPJyOwOiy06CO",
+          "name": "Fobia",
+          "scriptData": [
+            {
+              "id": "SzLaPJyOwOiy06CO",
+              "name": "Fobia",
+              "script": "[Script.0KG3HoTNoZhaINIj]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Thorny Scales": {
+      "id": "FRwy5vKNrmkW9qRI",
+      "name": "Kolczaste łuski",
+      "description": "+1 punkt pancerza we wszystkich miejscach; mutację tę można ukryć jedynie za pomocą ubrania",
+      "sourceId": "Compendium.wfrp4e-eis.items.FRwy5vKNrmkW9qRI",
+      "effects": {
+        "z3rhTQKhmXVq4EUY": {
+          "id": "z3rhTQKhmXVq4EUY",
+          "name": "Kolczaste łuski",
+          "scriptData": [
+            {
+              "id": "z3rhTQKhmXVq4EUY",
+              "name": "Kolczasta skóra",
+              "script": "[Script.mBcLf11upaHS8AQq]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Three Eyes": {
+      "id": "lpBpQGZMy2inQlZq",
+      "name": "Troje oczu",
+      "description": "<p>Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł}&nbsp;(Wzrok); Ta mutacja może być ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.lpBpQGZMy2inQlZq",
+      "effects": {
+        "wVIDaaXbWNnY8k7A": {
+          "id": "wVIDaaXbWNnY8k7A",
+          "name": "Troje oczu",
+          "scriptData": [
+            {
+              "id": "wVIDaaXbWNnY8k7A",
+              "name": "Troje oczu",
+              "script": "[Script.ZNu4B0OdjkM9lmtu]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Thrill Seeker": {
+      "id": "IOxLxxGPIwj6Zjk2",
+      "name": "Uzależnienie od adrenaliny",
+      "description": "Siła Woli +10, Inicjatywa -10",
+      "sourceId": "Compendium.wfrp4e-eis.items.IOxLxxGPIwj6Zjk2",
+      "effects": {
+        "MZXaSq7UFGPFbX7P": {
+          "id": "MZXaSq7UFGPFbX7P",
+          "name": "Uzależnienie od adrenaliny"
+        }
+      },
+      "modifier": "Siła Woli +10, Inicjatywa -10"
+    },
+    "Transparent Skin": {
+      "id": "ZUDKdhab8rGJEL5n",
+      "name": "Przezroczysta skóra",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach}&nbsp;2. Tej mutacji nie da się ukryć</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.ZUDKdhab8rGJEL5n",
+      "effects": {
+        "ITm6L96F23Z3WxcG": {
+          "id": "ITm6L96F23Z3WxcG",
+          "name": "Przezroczysta skóra",
+          "scriptData": [
+            {
+              "id": "ITm6L96F23Z3WxcG",
+              "name": "Przezroczysta skóra",
+              "script": "[Script.hSlEY2oh8quVmdXR]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Two Heads": {
+      "id": "TDtgI5zFoQGQAhkd",
+      "name": "Dwie głowy",
+      "description": "<p> Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.IFKWu98qmWpaSfUi]{Oburęczność}; ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.TDtgI5zFoQGQAhkd",
+      "effects": {
+        "1bDvqcgOPlD5HGow": {
+          "id": "1bDvqcgOPlD5HGow",
+          "name": "Dwie głowy",
+          "scriptData": [
+            {
+              "id": "1bDvqcgOPlD5HGow",
+              "name": "Dwie głowy",
+              "script": "[Script.AmOMCUaWLJ2iJAt5]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Uneven Horns": {
+      "id": "yVGqbdebUNijCZ3r",
+      "name": "Nierówne rogi",
+      "description": "<p>+1 Punkt Pancerza na głowie. Liczy się jako Cecha Stworzenia @UUID[Compendium.wfrp4e-core.items.AtpAudHA4ybXVlWM]{Broń} o współczynniku obrażeń +BS. Tej mutacji nie da się ukryć.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.yVGqbdebUNijCZ3r",
+      "effects": {
+        "sDVYmMYP8kgYY1mB": {
+          "id": "sDVYmMYP8kgYY1mB",
+          "name": "Nierówne rogi",
+          "scriptData": [
+            {
+              "id": "sDVYmMYP8kgYY1mB",
+              "name": "Kolczasta skóra",
+              "script": "[Script.OqxeuZfZDfm9ax6h]"
+            },
+            {
+              "id": "sDVYmMYP8kgYY1mB",
+              "name": "Broń",
+              "script": "[Script.iHn3YzvqNfbwzjZz]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Unusual Skin": {
+      "id": "928Gc6cj8SMR9UvK",
+      "name": "Nietypowa skóra",
+      "description": "Ma dziwny kolor lub teksturę: pomarańczowa, w paski, kropki, plamy itp.; Tej mutacji nie da się ukryć.",
+      "sourceId": "Compendium.wfrp4e-eis.items.928Gc6cj8SMR9UvK",
+      "modifier": " "
+    },
+    "Warp Frenzy": {
+      "id": "VvMSLXiRF4mI2KSY",
+      "name": "Spaczeniowy szał",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.yRhhOlt18COq4e1q]{Szał Bojowy}&nbsp. Kiedy jesteś w szale, czasowo dostajesz dodatkową, losową fizyczną mutację.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.VvMSLXiRF4mI2KSY",
+      "effects": {
+        "AnA7OcRZyIghYQfy": {
+          "id": "AnA7OcRZyIghYQfy",
+          "name": "Spaczeniowy szał",
+          "scriptData": [
+            {
+              "id": "AnA7OcRZyIghYQfy",
+              "name": "Spaczeniowy szał",
+              "script": "[Script.SRmfstEs278bP9Pz]"
+            },
+            {
+              "id": "AnA7OcRZyIghYQfy",
+              "name": "Dodaj mutację",
+              "script": "[Script.U1UpSRJOSjPpO4HS]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Webbed Feet": {
+      "id": "1Ht88EsWOOkQeCk6",
+      "name": "Błoniaste stopy",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.sJ3yX1kvzu2hgNq5]{Ziemnowodny}&nbsp; ta mutacja może zostać ukryta tylko pod ubraniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.1Ht88EsWOOkQeCk6",
+      "effects": {
+        "QxybiNIQSEDctScR": {
+          "id": "QxybiNIQSEDctScR",
+          "name": "Błoniaste stopy",
+          "scriptData": [
+            {
+              "id": "QxybiNIQSEDctScR",
+              "name": "Błoniaste stopy",
+              "script": "[Script.eHRv7f2BTtle6Y1K]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Weeping Pus": {
+      "id": "RQIux5somIMmUCGG",
+      "name": "Sącząca się ropa",
+      "description": "<p>Rzuć, dwukrotnie, w tabeli @Table[hitloc]{Miejsca Trafień}, by ustalić miejsce, w którym się pojawią.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.RQIux5somIMmUCGG",
+      "effects": {
+        "QuOpZnmriF6RZZHZ": {
+          "id": "QuOpZnmriF6RZZHZ",
+          "name": "Sącząca się ropa",
+          "scriptData": [
+            {
+              "id": "QuOpZnmriF6RZZHZ",
+              "name": "Sącząca się ropa",
+              "script": "[Script.iBEPQ3NwtI9DfkEy]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Whiskered Snout": {
+      "id": "FBrMliYVuBh0tliN",
+      "name": "Wibrysy",
+      "description": "+10 do Tropienia; Ta mutacja może być ukryta tylko pod ubraniem.",
+      "sourceId": "Compendium.wfrp4e-eis.items.FBrMliYVuBh0tliN",
+      "effects": {
+        "BBPHWbXAPyDJl5ly": {
+          "id": "BBPHWbXAPyDJl5ly",
+          "name": "Wibrysy",
+          "scriptData": [
+            {
+              "id": "BBPHWbXAPyDJl5ly",
+              "name": "Tropienie",
+              "script": "[Script.xPDMpOvC1ZBVxrNg]",
+              "activationScript": "[Script.FmLx9pwOkzqqU7Ph]",
+              "hideScript": "[Script.tdICiJ26rJrDbxT6]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Wings": {
+      "id": "e2qdJ1brdc6DoPa4",
+      "name": "Skrzydła",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.EO05HX7jql0g605A]{Lot} 60; ta mutacja może zostać ukryta tylko poprzez ubranie</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.e2qdJ1brdc6DoPa4",
+      "effects": {
+        "KtXa4oOa2jVvLzB6": {
+          "id": "KtXa4oOa2jVvLzB6",
+          "name": "Skrzydła",
+          "scriptData": [
+            {
+              "id": "KtXa4oOa2jVvLzB6",
+              "name": "Skrzydła",
+              "script": "[Script.w7K0lbxQKJ2tsc6f]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Wolf Head": {
+      "id": "4DUyxZdDXi2ei1ru",
+      "name": "Głowa Wilka",
+      "description": "<p>+1 Punkt Pancerza na głowie; Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +6; Otrzymujesz Talent @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Wyczulony Zmysł (Węch)}; ta mutacja nie może zostać ukryta</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.4DUyxZdDXi2ei1ru",
+      "effects": {
+        "skfndKZRqt0Dq6kP": {
+          "id": "skfndKZRqt0Dq6kP",
+          "name": "Głowa Wilka",
+          "scriptData": [
+            {
+              "id": "skfndKZRqt0Dq6kP",
+              "name": "Głowa Węża",
+              "script": "[Script.6JrUjs3g5x6bFnj3]"
+            },
+            {
+              "id": "skfndKZRqt0Dq6kP",
+              "name": "PP",
+              "script": "[Script.gpuBg3y9rocJL7yT]"
+            }
+          ]
+        }
+      },
+      "modifier": " "
+    },
+    "Blast of Corruption (Tzeentch)": {
+      "id": "hb34QOyWEGIkd8PG",
+      "name": "Wybuch spaczenia (Tzeentch)",
+      "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w eksplozję spaczenia. Uznawana jest ona za magiczny pocisk ze współczynnikiem Obrażeń +5, zadawanym wszystkim celom na Obszarze działania. Każda z ofiar zaklęcia musi zdać</span> <strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong><span class=\"fontstyle0\">  lub otrzyma 1 Punkt Zepsucia.</span></p><p>\n\n <b>Tradycja:</b> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.<p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.hb34QOyWEGIkd8PG",
+      "effects": {
+        "lwRGuVu0RZipzAMT": {
+          "id": "lwRGuVu0RZipzAMT",
+          "name": "Wybuch spaczenia (Tzeentch)",
+          "scriptData": [
+            {
+              "id": "lwRGuVu0RZipzAMT",
+              "name": "Wybuch spaczenia (Tzeentch)",
+              "script": "[Script.VlFUDaKUYoBYKYn0]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "Bonus SW metrów",
+      "range": "Siła Woli metrów",
+      "damage": "5"
+    },
+    "Blast of Corruption (Undivided)": {
+      "id": "5h10PaMCFJLM2H6S",
+      "name": "Wybuch spaczenia",
+      "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w eksplozję spaczenia. Uznawana jest ona za magiczny pocisk ze współczynnikiem Obrażeń +5, zadawanym wszystkim celom na Obszarze działania. Każda z ofiar zaklęcia musi zdać</span><strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong><span class=\"fontstyle0\"> lub otrzyma 1 Punkt Zepsucia.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.5h10PaMCFJLM2H6S",
+      "effects": {
+        "f0ylOlHNyqtg71Qx": {
+          "id": "f0ylOlHNyqtg71Qx",
+          "name": "Wybuch spaczenia",
+          "scriptData": [
+            {
+              "id": "f0ylOlHNyqtg71Qx",
+              "name": "Wybuch spaczenia",
+              "script": "[Script.VlFUDaKUYoBYKYn0]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "Bonus SW metrów",
+      "range": "Siła Woli metrów",
+      "damage": "5"
+    },
+    "Blue Fire of Tzeentch": {
+      "id": "wY6JAt76eArBroYC",
+      "name": "Niebieski płomień Tzeentcha",
+      "description": "<p>Przyzywasz wirującą kulę iskrzącego błękitnego ognia, która po chłania Twoich wrogów. <em>Niebieski Płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +3 zadawanym wszystkim Celom na Obszarze działania. Każdy trafiony otrzymuje również jeden Stan @Condition[Podpalenie].</p><p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nią Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p><p>Tradycja<strong>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha. </p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.wY6JAt76eArBroYC",
+      "effects": {
+        "kpfKJaxLFqOnbIli": {
+          "id": "kpfKJaxLFqOnbIli",
+          "name": "Niebieski płomień Tzeentcha",
+          "scriptData": [
+            {
+              "id": "kpfKJaxLFqOnbIli",
+              "name": "Niebieski płomień Tzeentcha",
+              "script": "[Script.Z4WrrlVGpPY4iUbG]"
+            },
+            {
+              "id": "kpfKJaxLFqOnbIli",
+              "name": "Sprawdź liczbę punktów życia",
+              "script": "[Script.yFMvxecXAZ6T2O0S]"
+            },
+            {
+              "id": "kpfKJaxLFqOnbIli",
+              "name": "Sprawdź Stan Podpalenie",
+              "script": "[Script.6MSodMuZ5xk2JJJ9]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "Bonus I metrów",
+      "range": "Inteligencja metrów",
+      "damage": "3"
+    },
+    "Bolt of Change": {
+      "id": "UOGORIbMyGWflehS",
+      "name": "Pocisk przemiany",
+      "description": "<p> Pulsujący pocisk migotliwej energii Chaosu przecina powietrze i jest traktowany jak <em>magiczny pocisk</em>o współczynniku obrażeń +7. Co więcej, trafiony cel musi wykonać <strong>Wymagający (+0) Test Odporności</strong> lub dostaje 1 Punkt Zepsucia.  W przypadku Pecha w tym Teście ofiara natychmiast musi wylosować Mutację (@Table[mutatemental]{Psychiczną} or @Table[mutatephys]{Fizyczną}) i otrzymuje Talent @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Talent Magia Chaosu (Tzeentch)} . Bohater poddany mutującemu wpływowi tego zaklęcia może wydać Punkt Bohatera, aby oprzeć się przemianie. </p><p><strong>Atrybut Tradycji:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p><p></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.UOGORIbMyGWflehS",
+      "effects": {
+        "35UAihuCR5o2saMI": {
+          "id": "35UAihuCR5o2saMI",
+          "name": "Pocisk przemiany",
+          "scriptData": [
+            {
+              "id": "35UAihuCR5o2saMI",
+              "name": "Pocisk przemiany",
+              "script": "[Script.HASsi6wYHVALExWq]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "1",
+      "range": "Inteligencja metrów",
+      "damage": "7"
+    },
+    "Bolt of Corruption (Tzeentch)": {
+      "id": "B8nIGc6B4mkMU6X0",
+      "name": "Pocisk spaczenia (Tzeentch)",
+      "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w wyładowanie niszczycielskiej energii. Uznawane jest za magiczny pocisk o współczynniku Obrażeń +6. Trafiona ofiara musi zdać</span> <strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong> <span class=\"fontstyle0\">lub otrzyma 1 Punkt Zepsucia.</span></p>\n<p><b>Tradycja:</b> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.B8nIGc6B4mkMU6X0",
+      "effects": {
+        "BcIqqg2LrTJdON5l": {
+          "id": "BcIqqg2LrTJdON5l",
+          "name": "Pocisk spaczenia (Tzeentch)",
+          "scriptData": [
+            {
+              "id": "BcIqqg2LrTJdON5l",
+              "name": "Pocisk spaczenia (Tzeentch)",
+              "script": "[Script.VlFUDaKUYoBYKYn0]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "1",
+      "range": "Siła Woli metrów",
+      "damage": "6"
+    },
+    "Bolt of Corruption (Undivided)": {
+      "id": "SMXvl791YcurXc5W",
+      "name": "Pocisk spaczenia",
+      "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w wyładowanie niszczycielskiej energii. Uznawane jest za magiczny pocisk o współczynniku Obrażeń +6. Trafiona ofiara musi zdać</span> <strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong> <span class=\"fontstyle0\">lub otrzyma 1 Punkt Zepsucia.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.SMXvl791YcurXc5W",
+      "effects": {
+        "g3X027r29G9dcaOm": {
+          "id": "g3X027r29G9dcaOm",
+          "name": "Pocisk spaczenia",
+          "scriptData": [
+            {
+              "id": "g3X027r29G9dcaOm",
+              "name": "Pocisk spaczenia",
+              "script": "[Script.VlFUDaKUYoBYKYn0]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "1",
+      "range": "Siła Woli metrów",
+      "damage": "6"
+    },
+    "Boon of Tzeentch": {
+      "id": "gnYTBH7VDDEraDVT",
+      "name": "Dar Tzeentcha",
+      "description": "<p><span class=\"fontstyle0\">Zaklęcie sprawia, że Twój umysł zostaje natchniony zagadkową przemyślnością Zmieniającego Drogi, co daje Ci dostęp do nowej wiedzy tajemnej. Wybierz jedno zaklęcie z dowolnej Tradycji (dla przyśpieszenia rozgrywki MG może dać na to Graczowi 9 sekund). Dopóki trwa </span><em><span class=\"fontstyle2\">Dar Tzeentcha</span></em><span class=\"fontstyle0\">, masz dostęp do tego zaklęcia, jakbyś je znał. Nie możesz go jednak zapisać w księdze zaklęć, na zwoju itp. Jeżeli zechcesz je rzucić, możesz użyć Splatania Magii (</span><em><span class=\"fontstyle2\">Dhar</span></em><span class=\"fontstyle0\">) lub odpowiedniej Tradycji, która normalnie jest do niego wymagana (o ile ją znasz).<br></span></p>\n<p><span class=\"fontstyle0\">Jeżeli podczas Splatania Magii lub rzucania nowego zaklęcia padniesz ofiarą manifestacji, </span><em><span class=\"fontstyle2\">Dar Tzeentcha</span></em><span class=\"fontstyle0\"> opuszcza Twój umysł z obrzydzeniem i jednocześnie usuwa się z Twojej księgi zaklęć (o ile pozwolił się w niej zapisać).</span></p>\n<p><b>Tradycja:</b> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.gnYTBH7VDDEraDVT",
+      "effects": {
+        "zLzN51B758mRYPE4": {
+          "id": "zLzN51B758mRYPE4",
+          "name": "Dar Tzeentcha",
+          "scriptData": [
+            {
+              "id": "zLzN51B758mRYPE4",
+              "name": "Dodaj zaklęcie",
+              "script": "[Script.Z6jNlyZMECkW4Hon]"
+            },
+            {
+              "id": "zLzN51B758mRYPE4",
+              "name": "Rzucanie/Splatanie",
+              "script": "[Script.M5bh0heeafA2fQQ8]"
+            }
+          ]
+        }
+      },
+      "duration": "Liczba dni równa Bonusowi z Inicjatywy",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Curse of Tzeentch": {
+      "id": "umgfRTZ2QQsBVJdd",
+      "name": "Klątwa Tzeentcha",
+      "description": "<p><span class=\"fontstyle0\">Tradycja Tzeentcha naucza, że wszystkie zaklęcia ostatecznie pochodzą od tego boga i są jego własnością. Dzięki temu zaklęciu czarnoksiężnik może sprawić, iż wrogi mag straci swoją cenną wiedzę i zdolność do rzucenia czaru.</span></p>\n<p><span class=\"fontstyle0\">Po udanym rzuceniu Klątwy Tzeentcha czarnoksiężnik oraz jego cel muszą wykonać </span><span class=\"fontstyle2\"><strong>Test Przeciwstawny Siły Woli</strong></span><span class=\"fontstyle0\">. W przypadku wygranej czarownika ofiara traci dostęp do losowo wybranego zaklęcia na tyle dni, ile PS osiągnięto w Teście Przeciwstawnym.</span></p>\n<p><b>Tradycja: </b>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.umgfRTZ2QQsBVJdd",
+      "effects": {
+        "VUGGwjkm2tQZ6Yzf": {
+          "id": "VUGGwjkm2tQZ6Yzf",
+          "name": "Klątwa Tzeentcha",
+          "preApplyScript": "let test = await this.actor.setupCharacteristic(\"wp\", {appendTitle : ` - ${this.effect.name}`})\ntest.roll();\nreturn true;",
+          "scriptData": [
+            {
+              "id": "VUGGwjkm2tQZ6Yzf",
+              "name": "Klątwa Tzeentcha",
+              "script": "[Script.iNAQJa5HyaEckknX]"
+            }
+          ]
+        }
+      },
+      "duration": "Różne",
+      "target": "1",
+      "range": "Inteligencja metrów"
+    },
+    "Demonic Mien (Tzeentch)": {
+      "id": "rwvwd9RXLiPc44pe",
+      "name": "Demoniczne oblicze (Tzeentch)",
+      "description": "<p><span class=\"fontstyle0\">Kierujesz zmieniającą energię Chaosu do własnego ciała, tymczasowo poświęcając swoją śmiertelną formę na ołtarzu mrocznego patrona. Twoje ciało przemienia się, przyjmując aspekty demonów będących w służbie boga, któremu oddajesz mroczną cześć. Rzuć [[/r 1d10]]{1k10} i sprawdź wynik w Tabeli Efektów @Table[demonic-mien]{Demonicznych Obliczy}. Otrzymujesz odpowiednią Cechę na czas działania zaklęcia. Za każde 2 </span><span class=\"fontstyle2\">PS</span><span class=\"fontstyle0\"> możesz przedłużyć Czas działania czaru i jednocześnie ponownie rzucić w Tabeli. Gdy masz Cechę </span><span class=\"fontstyle3\">@UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoniczny}</span><span class=\"fontstyle0\"> i Twoja Żywotność zostanie zredukowana do 0, Twoja dusza zostaje wessana do Królestwa Chaosu zgodnie z zasadami działania tej Cechy.</span></p>\n<p><strong>Tradycja: </strong>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.rwvwd9RXLiPc44pe",
+      "effects": {
+        "q3lu4F5N1LcCiXNp": {
+          "id": "q3lu4F5N1LcCiXNp",
+          "name": "Demoniczne oblicze (Tzeentch)",
+          "scriptData": [
+            {
+              "id": "q3lu4F5N1LcCiXNp",
+              "name": "Demoniczne oblicze (Tzeentch)",
+              "script": "[Script.iLpq4yCFN6YACrYA]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus Ogd Rund",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Demonic Mien (Undivided)": {
+      "id": "GYTx4tjkS1rLXoCe",
+      "name": "Demoniczne oblicze",
+      "description": "<p><span class=\"fontstyle0\">Kierujesz zmieniającą energię Chaosu do własnego ciała, tymczasowo poświęcając swoją śmiertelną formę na ołtarzu mrocznego patrona. Twoje ciało przemienia się, przyjmując aspekty demonów będących w służbie boga, któremu oddajesz mroczną cześć. Rzuć [[/r 1d10]]{1k10} i sprawdź wynik w Tabeli Efektów @Table[demonic-mien]{Demonicznych Obliczy}. Otrzymujesz odpowiednią Cechę na czas działania zaklęcia. Za każde 2&nbsp;</span><span class=\"fontstyle2\">PS</span><span class=\"fontstyle0\"> możesz przedłużyć Czas działania czaru i jednocześnie ponownie rzucić w Tabeli. Gdy masz Cechę </span><span class=\"fontstyle3\">@UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoniczny}</span><span class=\"fontstyle0\"> i Twoja Żywotność zostanie zredukowana do 0, Twoja dusza zostaje wessana do Królestwa Chaosu zgodnie z zasadami działania tej Cechy.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.GYTx4tjkS1rLXoCe",
+      "effects": {
+        "99NbTlWGJ1VARore": {
+          "id": "99NbTlWGJ1VARore",
+          "name": "Demoniczne oblicze",
+          "scriptData": [
+            {
+              "id": "99NbTlWGJ1VARore",
+              "name": "Demoniczne oblicze",
+              "script": "[Script.iLpq4yCFN6YACrYA]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus Ogd Rund",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Foul Messenger (Tzeentch)": {
+      "id": "AwIx8XPEzkHjX1JA",
+      "name": "Plugawy posłaniec (Tzeentch)",
+      "description": "<p><span class=\"fontstyle0\">Przyzywasz rój pomniejszych demonów, spętanych i posłusznych Twojej woli. Ich wygląd zależy od bóstwa, któremu służysz. Demony przekażą krótką wiadomość (nie więcej niż 25 słów) wybranej przez Ciebie postaci. Przemieszczają się niemal natychmiastowo i są niewidzialne (oraz niesłyszalne) dla nikogo, kto nie ma Talentu @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}.</span><span class=\"fontstyle2\"> Każdy z tym Talentem może wykonać <span class=\"fontstyle0\"><strong><span class=\"fontstyle3\">Trudny (-20) Test Percepcji</span></strong><span class=\"fontstyle0\">, by zauważyć rój i usłyszeć wiadomość. Za każde dodatkowe 2 PS możesz podwoić długość wiadomości.</span></p>\n<p><b>Tradycja</b>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.AwIx8XPEzkHjX1JA",
+      "duration": "Natychmiast",
+      "target": "Specialny",
+      "range": "liczba kilometrów równa półtorakrotności Twojej Ogłady"
+    },
+    "Foul Messenger (Undivided)": {
+      "id": "3TDE8Or2cx1HEXbR",
+      "name": "Plugawy posłaniec",
+      "description": "<p><span class=\"fontstyle0\">Przyzywasz rój pomniejszych demonów, spętanych i posłusznych Twojej woli. Ich wygląd zależy od bóstwa, któremu służysz. Demony przekażą krótką wiadomość (nie więcej niż 25 słów) wybranej przez Ciebie postaci. Przemieszczają się niemal natychmiastowo i są niewidzialne (oraz niesłyszalne) dla nikogo, kto nie ma Talentu @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}.</span><span class=\"fontstyle2\"> Każdy z tym Talentem może wykonać <span class=\"fontstyle0\"><strong>Trudny (-20) Test Percepcji</strong><span class=\"fontstyle0\">, by zauważyć rój i usłyszeć wiadomość. Za każde dodatkowe 2 PS możesz podwoić długość wiadomości.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.3TDE8Or2cx1HEXbR",
+      "duration": "Natychmiast",
+      "target": "Specialny",
+      "range": "liczba kilometrów równa półtorakrotności Twojej Ogłady"
+    },
+    "Joyous Aspect (Tzeentch)": {
+      "id": "G5hGQI0pQDuZ9uyL",
+      "name": "Radosne oblicze (Tzeentch)",
+      "description": "<p><span class=\"fontstyle0\">Czarodziej skrywa cel (być może samego siebie) w wypaczonym bąblu utkanym z przesiąkniętego </span><em><span class=\"fontstyle2\">Dharem</span></em><span class=\"fontstyle0\"> Wiatru </span><em><span class=\"fontstyle2\">Ulgu</span></em><span class=\"fontstyle0\">. Magia otacza postać ukrywającą aurą. W czasie trwania zaklęcia cel wydaje się pozbawiony wszelkich fizycznych skaz czy wad. Blizny, deformacje, a przede wszystkim mutacje, stają się niewykrywalne w żaden sposób, poza boską interwencją.</span></p>\n<p><span class=\"fontstyle0\">Chociaż oczywiste deformacje są ukryte, postać wydaje się dziwna, obca, nazbyt pełna życia bądź nienaturalnie pociągająca. Każdy, kto zda </span><strong><span class=\"fontstyle2\">Trudny (-20) Test Percepcji</span></strong><span class=\"fontstyle0\">, zauważy, że z istotą jest coś nie tak, chociaż nie będzie w stanie tego dokładnie wskazać. Dla Bohaterów z Talentem @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna} Test jest </span><strong>Wymagający (+0)</strong><span class=\"fontstyle0\">. W przypadku sukcesu zorientują się, że na postać zostało rzucone zaklęcie, ale i tak nie będą wiedzieć, co się pod nim skrywa.</span></p>\n<p><b>Tradycja</b>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.G5hGQI0pQDuZ9uyL",
+      "duration": "Bonus Ogd Rund",
+      "target": "1",
+      "range": "Dotyk"
+    },
+    "Joyous Aspect (Undivided)": {
+      "id": "S3gO8NSZVVvtAZxG",
+      "name": "Radosne oblicze",
+      "description": "<p><span class=\"fontstyle0\">Czarodziej skrywa cel (być może samego siebie) w wypaczonym bąblu utkanym z przesiąkniętego </span><em>Dharem</em><span class=\"fontstyle0\"> Wiatru </span><em>Ulgu</em><span class=\"fontstyle0\">. Magia otacza postać ukrywającą aurą. W czasie trwania zaklęcia cel wydaje się pozbawiony wszelkich fizycznych skaz czy wad. Blizny, deformacje, a przede wszystkim mutacje, stają się niewykrywalne w żaden sposób, poza boską interwencją.</span></p>\n<p><span class=\"fontstyle0\">Chociaż oczywiste deformacje są ukryte, postać wydaje się dziwna, obca, nazbyt pełna życia bądź nienaturalnie pociągająca. Każdy, kto zda </span><strong>Trudny (-20) Test Percepcji</strong><span class=\"fontstyle0\">, zauważy, że z istotą jest coś nie tak, chociaż nie będzie w stanie tego dokładnie wskazać. Dla Bohaterów z Talentem @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna} Test jest </span><strong>Wymagający (+0)</strong><span class=\"fontstyle0\">. W przypadku sukcesu zorientują się, że na postać zostało rzucone zaklęcie, ale i tak nie będą wiedzieć, co się pod nim skrywa.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.S3gO8NSZVVvtAZxG",
+      "duration": "Bonus Ogd Rund",
+      "target": "1",
+      "range": "Dotyk"
+    },
+    "Master of Fortune": {
+      "id": "99tpweD3L8O6AImv",
+      "name": "Pan losu",
+      "description": "<p><span class=\"fontstyle0\">Czarnoksiężnicy Tzeentcha często targują się ze swoim panem, by umożliwił im wejrzeć w ich możliwe przeznaczenie. Takie wróżenie jest niebezpieczne, albowiem Pan Przemian to kapryśne bóstwo, gotowe karać nawet najwierniejszych wyznawców. Raz rzucony czar nie może zostać rzucony ponownie, póki nie skończy się działanie pierwszego.</span></p>\n<p><span class=\"fontstyle0\">Za każdy dodatni PS w Teście </span><strong><span class=\"fontstyle2\">Języka (Magiczny)</span></strong><span class=\"fontstyle0\"> przy rzucaniu zaklęcia czarodziej otrzymuje 1 Punkt Szczęścia, którego może użyć zgodnie z zasadami w czasie trwania czaru. Za każdy ujemny PS czarnoksiężnik otrzymuje jeden Punkt Zepsucia, gdy jego umysł wypełniają niezrozumiałe i niepokojące echa przyszłości.</span></p>\n<p><b>Tradycja: </b>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.99tpweD3L8O6AImv",
+      "effects": {
+        "qRYINhWYqnpN1MHC": {
+          "id": "qRYINhWYqnpN1MHC",
+          "name": "Pan losu",
+          "scriptData": [
+            {
+              "id": "qRYINhWYqnpN1MHC",
+              "name": "Test Zaklęcia",
+              "script": "[Script.A0OK0qAMmnf8iNJf]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW dni",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Mindfire": {
+      "id": "Wmo0Yr7EyukRCOJq",
+      "name": "Płomień umysłu",
+      "description": "<p>Powietrze wypacza się wokół Twoich palców, tworząc kulę błyszczącej, mglistej energii, którą możesz cisnąć w przeciwnika. Cel trafiony przez <em>Płomień umysłu</em> musi zdać <strong>Wymagający (+0) Test Opanowania</strong> lub otrzymuje 1 Punkt Zepsucia. Za każde 2 PS uzyskane w Teście rzucania zaklęcia możesz przyznać ofierze kolejny Punkt Zepsucia, jeżeli nie zda Testu Opanowania. Gdyby nieszczęśnik miał z tego powodu otrzymać mutację, rzuca w Tabeli @Table[mutatemental]{Zepsucia Psychicznego} oraz dostaje jeden poziom Stanu @Condition[Podpalenie], kiedy nienaturalny ogień bucha z jego oczu, ust, nozdrzy i uszu.</p>\n<p><strong>Tradycja: </strong>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.Wmo0Yr7EyukRCOJq",
+      "effects": {
+        "tktZi4OuuYUujjbM": {
+          "id": "tktZi4OuuYUujjbM",
+          "name": "Płomień umysłu",
+          "scriptData": [
+            {
+              "id": "tktZi4OuuYUujjbM",
+              "name": "Płomień umysłu",
+              "script": "[Script.z5HfNUrHy5MS3K7a]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "1",
+      "range": "Inteligencja metrów"
+    },
+    "Obsession (Tzeentch)": {
+      "id": "1g4x4kW7is39y7vu",
+      "name": "Obsesja (Tzeentch)",
+      "description": "<p>Musisz mieć ukochany lub cenny przedmiot należący do osoby, na którą chcesz rzucić zaklęcie. Splatasz magię z czystą energią Chaosu, nasycając nimi przedmiot, a w ten sposób wpływając przez niego na swój cel. Ofiara dostaje obsesji na jakimś punkcie. Natura tej manii zależy od charakteru postaci oraz Tradycji Twojej magii. Dla przykładu, rzucone dzięki Magii Nurgla zaklęcie może sprawić, że niedawno zraniona ofiara będzie obsesyjnie rozdrapywać swoje rany. Magia Slaanesha z kolei może zmusić łakomczucha bądź smakosza do przejedzenia.</p>\n<p>Ofiara musi co godzinę zdać <strong>Przeciętny (+20) Test Odporności</strong> lub podda się obsesji. W przypadku porażki następne Testy stają się <strong>Wymagające (+0)</strong>. Kolejne porażki dalej podnoszą Trudność, aż do poziomu <strong>Bardzo Trudnego (-30)</strong>. Jeżeli ofiara będzie miała Pecha w którymkolwiek z Testów (porażka przy wyrzuceniu dubletu), mania całkowicie ją pochłania. Nie może robić nic poza oddawaniem się obsesji za wszelką cenę, bez względu na konsekwencje. Dzieje się tak przez liczbę godzin równą [[/r 1d10]]{1k10} - Bonus z Siły Woli celu (minimum 1 godzina). Na koniec czasu działania zaklęcia, niezależnie od poniesionych fizycznych, społecznych albo finansowych konsekwencji, ofiara musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia.</p>\n<p>Postać może być celem tego zaklęcia tylko raz na każdą Tradycję, za pomocą której można je rzucić. Każda próba ponownego rzucenia czaru tą samą Tradycją na ten cel automatycznie kończy się niepowodzeniem.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.1g4x4kW7is39y7vu",
+      "duration": "Liczba dni równa PS",
+      "target": "Specialny",
+      "range": "Bonus I Kilometrów"
+    },
+    "Obsession (Undivided)": {
+      "id": "e0Km0uHZL9MoShjD",
+      "name": "Obsesja",
+      "description": "<p>Musisz mieć ukochany lub cenny przedmiot należący do osoby, na którą chcesz rzucić zaklęcie. Splatasz magię z czystą energią Chaosu, nasycając nimi przedmiot, a w ten sposób wpływając przez niego na swój cel. Ofiara dostaje obsesji na jakimś punkcie. Natura tej manii zależy od charakteru postaci oraz Tradycji Twojej magii. Dla przykładu, rzucone dzięki Magii Nurgla zaklęcie może sprawić, że niedawno zraniona ofiara będzie obsesyjnie rozdrapywać swoje rany. Magia Slaanesha z kolei może zmusić łakomczucha bądź smakosza do przejedzenia.</p>\n<p>Ofiara musi co godzinę zdać <strong>Przeciętny (+20) Test Odporności</strong> lub podda się obsesji. W przypadku porażki następne Testy stają się <strong>Wymagające (+0)</strong>. Kolejne porażki dalej podnoszą Trudność, aż do poziomu <strong>Bardzo Trudnego (-30)</strong>. Jeżeli ofiara będzie miała Pecha w którymkolwiek z Testów (porażka przy wyrzuceniu dubletu), mania całkowicie ją pochłania. Nie może robić nic poza oddawaniem się obsesji za wszelką cenę, bez względu na konsekwencje. Dzieje się tak przez liczbę godzin równą [[/r 1d10]]{1k10} - Bonus z Siły Woli celu (minimum 1 godzina). Na koniec czasu działania zaklęcia, niezależnie od poniesionych fizycznych, społecznych albo finansowych konsekwencji, ofiara musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia.</p>\n<p>Postać może być celem tego zaklęcia tylko raz na każdą Tradycję, za pomocą której można je rzucić. Każda próba ponownego rzucenia czaru tą samą Tradycją na ten cel automatycznie kończy się niepowodzeniem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.e0Km0uHZL9MoShjD",
+      "duration": "Liczba dni równa PS",
+      "target": "Specialny",
+      "range": "Bonus I Kilometrów"
+    },
+    "Pink Fire of Tzeentch": {
+      "id": "sklbZU3K8ogeu3mC",
+      "name": "Różowy płomień Tzeentcha",
+      "description": "<p>Wirujące pociski różowego ognia tryskają z Twoich rozczapierzonych palców, rozdzierając wrzeszczącą z bólu rzeczywistość. <em>Różowy płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +6. Dodatkowo Cel otrzymuje Stan @Condition[Podpalenie].</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]{1k10}. Gdy wypadnie 9, @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowy strachulec} wydziera sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.sklbZU3K8ogeu3mC",
+      "effects": {
+        "prljNzFYTk5xHTcl": {
+          "id": "prljNzFYTk5xHTcl",
+          "name": "Różowy płomień Tzeentcha",
+          "scriptData": [
+            {
+              "id": "prljNzFYTk5xHTcl",
+              "name": "Różowy płomień Tzeentcha",
+              "script": "[Script.Z4WrrlVGpPY4iUbG]"
+            },
+            {
+              "id": "prljNzFYTk5xHTcl",
+              "name": "Sprawdź liczbę punktów życia",
+              "script": "[Script.GRfCxtYzmEx2LYU7]"
+            },
+            {
+              "id": "prljNzFYTk5xHTcl",
+              "name": "Sprawdź Stan Podpalenie",
+              "script": "[Script.6MSodMuZ5xk2JJJ9]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "1",
+      "range": "Inteligencja metrów",
+      "damage": "6"
+    },
+    "Power of Chaos (Tzeentch)": {
+      "id": "0TeeOpkYRgKeSjiZ",
+      "name": "Potęga Chaosu (Tzeentch)",
+      "description": "<p>Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania Potęgi Chaosu ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać <strong>Przeciętny (+20) Test Odporności</strong> na koniec każdej Rundy lub otrzymują 1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają <strong>Przeciętną (+20) Trudność</strong>.</p>\n<p><b>Tradycja:</b> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.0TeeOpkYRgKeSjiZ",
+      "effects": {
+        "OpjmUwcDJXeOUSWe": {
+          "id": "OpjmUwcDJXeOUSWe",
+          "name": "Potęga Chaosu",
+          "scriptData": [
+            {
+              "id": "OpjmUwcDJXeOUSWe",
+              "name": "PZ obniżony o połowę",
+              "script": "[Script.33PWizq5F7pkKnQT]"
+            },
+            {
+              "id": "OpjmUwcDJXeOUSWe",
+              "name": "Trudność",
+              "script": "[Script.KG4TxnXiLLpfWOQO]",
+              "activationScript": "[Script.8vpAtJ93GIeye1qj]",
+              "hideScript": "[Script.DBafsY1HrclJRTtA]"
+            },
+            {
+              "id": "OpjmUwcDJXeOUSWe",
+              "name": "Na końcu rundy (endRound)",
+              "script": "[Script.4pQW4WLyhjbZR85k]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "Bonus Ogd Metrów",
+      "range": "Siła Woli metrów"
+    },
+    "Power of Chaos (Undivided)": {
+      "id": "R9tmGw2LBoHvzWne",
+      "name": "Potęga Chaosu",
+      "description": "<p>Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania <em>Potęgi Chaosu</em> ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać <strong>Przeciętny (+20) Test Odporności</strong> na koniec każdej Rundy lub otrzymują 1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają <strong>Przeciętną (+20) Trudność</strong>.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.R9tmGw2LBoHvzWne",
+      "effects": {
+        "OS6hrsvAtkFvv9zl": {
+          "id": "OS6hrsvAtkFvv9zl",
+          "name": "Potęga Chaosu",
+          "scriptData": [
+            {
+              "id": "OS6hrsvAtkFvv9zl",
+              "name": "PZ obniżony o połowę",
+              "script": "[Script.33PWizq5F7pkKnQT]"
+            },
+            {
+              "id": "OS6hrsvAtkFvv9zl",
+              "name": "Trudność",
+              "script": "[Script.KG4TxnXiLLpfWOQO]",
+              "activationScript": "[Script.8vpAtJ93GIeye1qj]",
+              "hideScript": "[Script.DBafsY1HrclJRTtA]"
+            },
+            {
+              "id": "OS6hrsvAtkFvv9zl",
+              "name": "Na końcu rundy (endRound)",
+              "script": "[Script.4pQW4WLyhjbZR85k]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "Bonus Ogd Metrów",
+      "range": "Siła Woli metrów"
+    },
+    "Rend Aethyr (Tzeentch)": {
+      "id": "FH1VCEoqOzlHfCeL",
+      "name": "Rozdarcie Eteru (Tzeentch)",
+      "description": "<p>Twoje plugawe, bluźniercze słowa rozdzierają rzeczywistość i przez powstałą wyrwę świat zalewa fala przeklętych sług Mrocznych Bogów.</p>\n<p>W zasięgu działania zaklęcia pojawia się poszarpany portal prowadzący wprost do Eteru. Na koniec każdej Rundy z Domeny Chaosu przechodzi przez niego jeden pomniejszy demon. Istota ta nie znajduje się pod Twoją kontrolą, ale prawdopodobnie będzie Cię chronić i atakować Twoich wrogów, zgodnie z wolą jej przeklętego pana. Rodzaj demona zależy od Tradycji Chaosu: Slaanesh przyzywa @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{demonetki}, Nurgle siewców zarazy, Tzeentch @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{strachulce}, Khorne @UUID[Compendium.wfrp4e-core.actors.KZkuwdOYmE3nwB2n]{krwiopuszcze}, a czarnoksiężnicy Chaosu Niepodzielnego – @UUID[Compendium.wfrp4e-eis.actors.piVHq2Y1a9PhHlZJ]{furie Chaosu}. W czasie działania zaklęcia każdy przyzwany w ten sposób demon jest niewrażliwy na Cechę @UUID[Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl]{Niestabilny}.</p>\n<p>Za każde +5 PS w Teście Rzucenia Zaklęcia możesz zwiększyć liczbę pojawiających się co Rundę demonów o +1.</p>\n<p>Żywe istoty muszą zdać <strong>Przeciętny (+20) Test Odporności</strong> na koniec każdej Rundy, w której widzą wyrwę w rzeczywistości. W przeciwnym razie otrzymują 1 Punkt Zepsucia. Każda postać na tyle głupia lub pechowa, by wejść w portal, zostaje pochłonięta przez Królestwo Chaosu i natychmiast umiera, o ile nie wyda Punktu Przeznaczenia. W takim wypadku zostaje wyrzucona z powrotem do rzeczywistości, być może ocalona za sprawą mocy, dla której wciąż musi wykonać jakieś zadanie.\nJeżeli wyrzucisz Pecha, rzucając to zaklęcie, demony przechodzące przez wyrwę należą do rywala Twojego boga i są wobec Ciebie wrogo nastawione!</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.FH1VCEoqOzlHfCeL",
+      "duration": "Bonus SW Rund",
+      "target": "Specialny",
+      "range": "Siła Woli metrów"
+    },
+    "Rend Aethyr (Undivided)": {
+      "id": "6nNUdl9DlfCspbkT",
+      "name": "Rozdarcie Eteru",
+      "description": "<p>Twoje plugawe, bluźniercze słowa rozdzierają rzeczywistość i przez powstałą wyrwę świat zalewa fala przeklętych sług Mrocznych Bogów.</p>\n<p>W zasięgu działania zaklęcia pojawia się poszarpany portal prowadzący wprost do Eteru. Na koniec każdej Rundy z Domeny Chaosu przechodzi przez niego jeden pomniejszy demon. Istota ta nie znajduje się pod Twoją kontrolą, ale prawdopodobnie będzie Cię chronić i atakować Twoich wrogów, zgodnie z wolą jej przeklętego pana. Rodzaj demona zależy od Tradycji Chaosu: Slaanesh przyzywa @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{demonetki}, Nurgle siewców zarazy, Tzeentch @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{strachulce}, Khorne @UUID[Compendium.wfrp4e-core.actors.KZkuwdOYmE3nwB2n]{krwiopuszcze}, a czarnoksiężnicy Chaosu Niepodzielnego – @UUID[Compendium.wfrp4e-eis.actors.piVHq2Y1a9PhHlZJ]{furie Chaosu}. W czasie działania zaklęcia każdy przyzwany w ten sposób demon jest niewrażliwy na Cechę @UUID[Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl]{Niestabilny}.</p>\n<p>Za każde +5 PS w Teście Rzucenia Zaklęcia możesz zwiększyć liczbę pojawiających się co Rundę demonów o +1.</p>\n<p>Żywe istoty muszą zdać <strong>Przeciętny (+20) Test Odporności</strong> na koniec każdej Rundy, w której widzą wyrwę w rzeczywistości. W przeciwnym razie otrzymują 1 Punkt Zepsucia. Każda postać na tyle głupia lub pechowa, by wejść w portal, zostaje pochłonięta przez Królestwo Chaosu i natychmiast umiera, o ile nie wyda Punktu Przeznaczenia. W takim wypadku zostaje wyrzucona z powrotem do rzeczywistości, być może ocalona za sprawą mocy, dla której wciąż musi wykonać jakieś zadanie.\nJeżeli wyrzucisz Pecha, rzucając to zaklęcie, demony przechodzące przez wyrwę należą do rywala Twojego boga i są wobec Ciebie wrogo nastawione!</p>\n",
+      "sourceId": "Compendium.wfrp4e-eis.items.6nNUdl9DlfCspbkT",
+      "duration": "Bonus SW Rund",
+      "target": "Specialny",
+      "range": "Siła Woli metrów"
+    },
+    "Sense the Skein": {
+      "id": "iSleU9g1CPmmJRP2",
+      "name": "Wyczucie splotu",
+      "description": "<p>Twoje oczy błyszczą różowym i błękitnym blaskiem, gdy wypowiadasz zakazane słowa mocy. Łuski opadają z Twych powiek i przez ulotny moment dostrzegasz splot losu łączący wszystkie rzeczy. Możesz wybrać jeden Cel znajdujący się w zasięgu wzroku. MG musi wyjawić Ci jego Motywację oraz Ambicje krótko- i długoterminowe.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.iSleU9g1CPmmJRP2",
+      "duration": "1 Rund",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Slave to Darkness (Tzeentch)": {
+      "id": "FZo7yPItCapm3vF3",
+      "name": "Niewolnik ciemności (Tzeentch)",
+      "description": "<p>Prosisz swego patrona, by porwał duszę Twojej ofiary i zastąpił ją czymś potwornym. Wykonaj <strong>Test Przeciwstawny Siły Woli</strong>, który musisz wygrać o przynajmniej 2 PS. W przypadku sukcesu wyjąca dusza ofiary zostaje strącona do Domeny Chaosu, a jej ciało opętuje demon. O ile postać nie wyda Punktu Przeznaczenia, kontrolę nad nią przejmuje MG. Jeżeli nie wygrasz Testu Przeciwstawnego o przynajmniej 2 PS, padasz ofiarą @Table[majormis]{Większej Manifestacji} i zaklęcie nie odnosi skutku. Pech w tym Teście oznacza, że zostajesz ukarany przez swojego patrona za arogancję. Twoja dusza zostaje wyrwana z ciała, by już nigdy do niego nie powrócić. Możesz tego uniknąć, wydając Punkt Przeznaczenia, ale bóstwo najpewniej nie będzie zadowolone, gdy w ten sposób rażąco sprzeciwisz się jego osądowi.</p>\n<p>Biorąc pod uwagę ryzyko i ograniczenia tego zaklęcia, zwykle używa się go na odpowiednio przygotowanych ofiarach. Nieszczęśnicy są wcześniej oszałamiani narkotykami, pętani lub w inny sposób spacyfikowani.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.FZo7yPItCapm3vF3",
+      "effects": {
+        "OIpXAbkLwhQ4ofpW": {
+          "id": "OIpXAbkLwhQ4ofpW",
+          "name": "Niewolnik ciemności (Tzeentch)",
+          "preApplyScript": "let test = await this.actor.setupCharacteristic(\"wp\", {appendTitle : ` - ${this.effect.name}`})\ntest.roll();\nreturn true;",
+          "scriptData": [
+            {
+              "id": "OIpXAbkLwhQ4ofpW",
+              "name": "Niewolnik ciemności (Tzeentch)",
+              "script": "[Script.CCwuu3bPLCpVGAmb]"
+            }
+          ]
+        }
+      },
+      "duration": "Specialny",
+      "target": "1",
+      "range": "Dotyk"
+    },
+    "Slave to Darkness (Undivided)": {
+      "id": "FHavChaObRV39maA",
+      "name": "Niewolnik ciemności",
+      "description": "<p>Prosisz swego patrona, by porwał duszę Twojej ofiary i zastąpił ją czymś potwornym. Wykonaj <strong>Test Przeciwstawny Siły Woli</strong>, który musisz wygrać o przynajmniej 2 PS. W przypadku sukcesu wyjąca dusza ofiary zostaje strącona do Domeny Chaosu, a jej ciało opętuje demon. O ile postać nie wyda Punktu Przeznaczenia, kontrolę nad nią przejmuje MG. Jeżeli nie wygrasz Testu Przeciwstawnego o przynajmniej 2 PS, padasz ofiarą @Table[majormis]{Większej Manifestacji} i zaklęcie nie odnosi skutku. Pech w tym Teście oznacza, że zostajesz ukarany przez swojego patrona za arogancję. Twoja dusza zostaje wyrwana z ciała, by już nigdy do niego nie powrócić. Możesz tego uniknąć, wydając Punkt Przeznaczenia, ale bóstwo najpewniej nie będzie zadowolone, gdy w ten sposób rażąco sprzeciwisz się jego osądowi.</p>\n<p>Biorąc pod uwagę ryzyko i ograniczenia tego zaklęcia, zwykle używa się go na odpowiednio przygotowanych ofiarach. Nieszczęśnicy są wcześniej oszałamiani narkotykami, pętani lub w inny sposób spacyfikowani.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.FHavChaObRV39maA",
+      "effects": {
+        "p0TQIeb2pLseVedE": {
+          "id": "p0TQIeb2pLseVedE",
+          "name": "Niewolnik ciemności",
+          "preApplyScript": "let test = await this.actor.setupCharacteristic(\"wp\", {appendTitle : ` - ${this.effect.name}`})\ntest.roll();\nreturn true;",
+          "scriptData": [
+            {
+              "id": "p0TQIeb2pLseVedE",
+              "name": "Niewolnik ciemności",
+              "script": "[Script.CCwuu3bPLCpVGAmb]"
+            }
+          ]
+        }
+      },
+      "duration": "Specialny",
+      "target": "1",
+      "range": "Dotyk"
+    },
+    "The Flickering Flames of Fickle Fate": {
+      "id": "iNynHyu1el6fXJ6J",
+      "name": "Migoczące płomienie kapryśnego losu",
+      "description": "<p>Przyzywasz strumień magicznego ognia, który pluje, trzaska i płonie, ale nie jest podsycany żadną fizyczną materią. Ogień nie ma fizycznych właściwości, nie zapala, nie parzy, nie wydziela ciepła. Wszystkie żywe istoty i demony, które widzą płomienie, mogą jednorazowo przerzucić każdy Test, tak jakby wydały Punkt Szczęścia. Za każdym razem, kiedy ktoś to zrobi, musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia (@Corruption[minor]{Pomniejsze}). Bohaterowie z Piętnem Tzeentcha są odporni na ten efekt. Tego Testu nie można przerzucić, korzystając z efektu zaklęcia.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.iNynHyu1el6fXJ6J",
+      "duration": "Bonus SW Rund",
+      "target": "Specialny",
+      "range": "Inteligencja metrów"
+    },
+    "The Purple Hand": {
+      "id": "DhpMRsuTBgD69JW1",
+      "name": "Purpurowa Dłoń",
+      "description": "<p>Zaklęcie to jest pomniejszą klątwą nakładaną przez czarnoksiężników Purpurowej Dłoni, by zastraszyć lub uspokoić zbyt porywczych członków organizacji. Spośród wszystkich niewerbalnych tajemnych znaków kultystów znaczenie tego jest najbardziej oczywiste: natychmiast zmień zachowanie albo spotkają cię surowe konsekwencje.</p>\n<p>Migoczące płomienie kapryśnego losuAby rzucić zaklęcie, mag musi zdobyć fragment ciała swojego celu, włos czy fragment paznokcia powinny wystarczyć. Jeżeli uda się je pozyskać i rzucić czar, dłonie ofiary przybierają głęboki purpurowy kolor. Efekt klątwy utrzymuje się przez godzinę za każdy PS uzyskany przez czarodzieja przy rzucaniu zaklęcia.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.DhpMRsuTBgD69JW1",
+      "duration": "Różne",
+      "target": "1",
+      "range": "Inteligencja metrów"
+    },
+    "Transformation of Tzeentch": {
+      "id": "xFN6ucGC0moflQAb",
+      "name": "Transformacja Tzeentcha",
+      "description": "<p>Na Twój rozkaz z ziemi wyrastają więzy eterycznego ognia, po czym chwytają wybrany przez Ciebie cel w kokon magicznej energii. Ofiara otrzymuje Stan Powalenie i jest uznana za bezbronną na czas działania zaklęcia. Gdy czas działania Transformacji Tzeentcha się skończy, cel musi wykonać <strong>Test Przeciwstawny Odporność/Język (Magiczny)</strong>. Jeżeli mu się nie powiedzie, otrzymuje 1 Punkt Zepsucia +1 za każdy PS, o który przegrał.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.xFN6ucGC0moflQAb",
+      "duration": "Bonus SW metrów",
+      "target": "1",
+      "range": "Bonus I metrów"
+    },
+    "Tzeentch's Firestorm": {
+      "id": "R0uUNtxsHEEddMLV",
+      "name": "Burza ognia Tzeentcha",
+      "description": "<p>W wybranym miejscu wybucha burza purpurowego ognia, przywołana Twoim opętańczym śmiechem. Jest uznawana za magiczny pocisk o współczynniku Obrażeń +9, jego ofiary otrzymują również jeden Stan @Condition[Podpalenie].</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowe strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.R0uUNtxsHEEddMLV",
+      "effects": {
+        "FRfP4hUQarIWkpfA": {
+          "id": "FRfP4hUQarIWkpfA",
+          "name": "Burza ognia Tzeentcha",
+          "scriptData": [
+            {
+              "id": "FRfP4hUQarIWkpfA",
+              "name": "Różowy płomień Tzeentcha",
+              "script": "[Script.KD4nCSdSXJVJmk0R]"
+            },
+            {
+              "id": "FRfP4hUQarIWkpfA",
+              "name": "Sprawdź liczbę punktów życia",
+              "script": "[Script.GRfCxtYzmEx2LYU7]"
+            },
+            {
+              "id": "FRfP4hUQarIWkpfA",
+              "name": "Sprawdź Stan Podpalenie",
+              "script": "[Script.6MSodMuZ5xk2JJJ9]"
+            }
+          ]
+        }
+      },
+      "duration": "Natychmiast",
+      "target": "Bonus I metrów",
+      "range": "Inteligencja metrów",
+      "damage": "9"
+    },
+    "Tzeentch's Golden Aura": {
+      "id": "NilfYPRh9dIbFH2y",
+      "name": "Złota aura Tzeentcha",
+      "description": "<p>Jest to najbardziej praktyczne i bezpośrednie zaklęcie w arsenale czarnoksiężnika Tzeentcha. Otacza go przyzwany z Eteru wir żółtego ognia, chroniąc przed ciosami i pociskami. W czasie działania czaru postać otrzymuje Cechę @UUID[Compendium.wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Ochrona (9+)}.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.NilfYPRh9dIbFH2y",
+      "effects": {
+        "NsMVCHVJqym5FEtd": {
+          "id": "NsMVCHVJqym5FEtd",
+          "name": "Złota aura Tzeentcha",
+          "scriptData": [
+            {
+              "id": "NsMVCHVJqym5FEtd",
+              "name": "Ochrona",
+              "script": "[Script.d6mVm08o8SeklAcW]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "Ty",
+      "range": "Ty"
+    },
+    "Word of Tzeentch": {
+      "id": "dzVPZv5iuUYeAfaI",
+      "name": "Słowo Tzeentcha",
+      "description": "<p>Gdy Twój język formułuje dziwaczne dźwięki tego bluźnierczego zaklęcia, dwa głosy wydobywają się z Twojego gardła w przeklętej, nienaturalnej harmonii. Wypowiedziane słowa niosą dodatkowe znaczenie dla istoty będącej celem zaklęcia, choć ofiara nigdy nie zapamięta, co powiedziano. Pozostaje pełna złych przeczuć, jak gdyby zapomniała o czymś wielce istotnym dla swojej przyszłości.</p>\n<p>Czarownik i żyjąca istota będąca celem zaklęcia muszą wykonać <strong>Test Przeciwstawny Inteligencji</strong>. Jeżeli czarownik wygra Test, cel Czaru otrzymuje jeden poziom Stanu @Condition[Oszołomienie] i +1 poziom za każdy PS różnicy. Jeśli ofiara zaklęcia miała Pecha, otrzymuje Stan @Condition[Utrata Przytomności] i 1 Punkt Zepsucia.</p>\n<p>Gdy wszystkie Stany zostaną usunięte, cel zaklęcia musi zdać <strong>Przeciętny (+20) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia. Jeżeli Test zakończy się Pechem, ofiara natychmiast otrzymuje jedną @Table[mutatemental]{mutację psychiczną} i nie może wybrać żadnej nowej Ambicji krótkoterminowej przez następne [[/r 1d10]]{1k10} tygodni.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.dzVPZv5iuUYeAfaI",
+      "effects": {
+        "7e8tRh93XBV8ATSv": {
+          "id": "7e8tRh93XBV8ATSv",
+          "name": "Słowo Tzeentcha",
+          "preApplyScript": "let test = await this.actor.setupCharacteristic(\"int\", {appendTitle : ` - ${this.effect.name}`})\ntest.roll();\nreturn true;",
+          "scriptData": [
+            {
+              "id": "7e8tRh93XBV8ATSv",
+              "name": "Słowo Tzeentcha",
+              "script": "[Script.uLBDnWC3S0lRitbj]"
+            },
+            {
+              "id": "7e8tRh93XBV8ATSv",
+              "name": "Sprawdź Stany",
+              "script": "[Script.Ux4buMc7llF1Kg8p]"
+            },
+            {
+              "id": "7e8tRh93XBV8ATSv",
+              "name": "Usunięcie",
+              "script": "[Script.hDC6lroDEPVBituR]"
+            }
+          ]
+        }
+      },
+      "duration": "Liczba Rund równa Bonusowi z Inteligencji",
+      "target": "1",
+      "range": "Liczba metrów równa Bonusowi z Siły"
+    },
+    "Disciple of Change": {
+      "id": "5Um84CPA7CeUERij",
+      "name": "Wyznawca Zmiany",
+      "description": "<p> Gdy otrzymasz mutację, rzuć w tabeli dwa razy i wybierz jeden z wyników. </p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.5Um84CPA7CeUERij"
+    },
+    "Double Life": {
+      "id": "nYa9BHTKSIxtuNqc",
+      "name": "Podwójne Życie",
+      "description": "<p><span class=\"fontstyle0\">Jesteś tak dobry w utrzymywaniu swojej Sekretnej Tożsamości, że potrafisz prowadzić dwa zupełnie inne życia. Kiedy kupisz ten Talent, możesz rozpocząć drugą Profesję równolegle do Profesji kultysty Chaosu. Uznaje się, że posiadasz obydwie Profesje i możesz rozwijać Atrybuty, Umiejętności i Talenty każdej z nich. Możesz także przejść z dowolnej z nich na kolejną Profesję. Jak zwykle zmiana Profesji wymaga zgody Mistrza Gry. Musi ona pasować do Waszej kampanii i odpowiadać logicznie prowadzonemu przez Ciebie podwójnemu życiu.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.nYa9BHTKSIxtuNqc",
+      "effects": {
+        "5Askn9k0Q1UO2uyN": {
+          "id": "5Askn9k0Q1UO2uyN",
+          "name": "Podwójne Życie",
+          "scriptData": [
+            {
+              "id": "5Askn9k0Q1UO2uyN",
+              "name": "Wybierz Profesję",
+              "script": "[Script.a02tlRCXpaoaDjSN]"
+            },
+            {
+              "id": "5Askn9k0Q1UO2uyN",
+              "name": "Ustaw jako bieżącą",
+              "script": "[Script.Lm9IBkc918Duw3US]"
+            }
+          ]
+        }
+      }
+    },
+    "Suffused with Magic": {
+      "id": "1T6t6Cu4LvKWUMO5",
+      "name": "Nasycenie Magią",
+      "description": "<p><span class=\"fontstyle0\">Wszystkie zaklęcia rzucane w promieniu (Bonus z Siły Woli) metrów od Ciebie otrzymują +1 PS do Testu Rzucania Zaklęcia. Bonus może zostać przyznany tylko raz na zaklęcie, nieważne, ile postaci z tym Talentem znajduje się w pobliżu.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.1T6t6Cu4LvKWUMO5",
+      "effects": {
+        "n82gqJU3NCAgXQwY": {
+          "id": "n82gqJU3NCAgXQwY",
+          "name": "Nasycenie Magią",
+          "scriptData": [
+            {
+              "id": "n82gqJU3NCAgXQwY",
+              "name": "Nałóż bonus za Nasycenie Magią",
+              "script": "[Script.TY0xSQ00XXyEr49r]",
+              "hideScript": "[Script.DBafsY1HrclJRTtA]",
+              "submissionScript": "[Script.7ZoFUMDG2WJd8RMg]"
+            }
+          ]
+        },
+        "NM54wG5D1lcnNind": {
+          "id": "NM54wG5D1lcnNind",
+          "name": "Nasycenie Magią",
+          "scriptData": [
+            {
+              "id": "NM54wG5D1lcnNind",
+              "name": "Nałóż bonus za Nasycenie Magią",
+              "script": "[Script.TY0xSQ00XXyEr49r]",
+              "hideScript": "[Script.DBafsY1HrclJRTtA]",
+              "submissionScript": "[Script.7ZoFUMDG2WJd8RMg]"
+            }
+          ]
+        }
+      }
+    },
+    "Tzeentch's Blessing": {
+      "id": "9P3ZBMJlDD7komF0",
+      "name": "Łaska Tzeentcha",
+      "description": "<p><span class=\"fontstyle0\">Tzeentch, bóg magii Chaosu, obdarował Cię pasożytem wgryzającym się w Twój umysł. Kiedy kupisz ten Talent, wybrane przez Ciebie zaklęcie wkrada się w głąb Twojej głowy. Umieszcza się tam wygodnie i czasem szepcze do Ciebie w snach. Czar może pochodzić z dowolnej Tradycji Kolorów.</span></p><p><span class=\"fontstyle0\">Dodatkowo za 100 Punktów Doświadczenia możesz kupić jedno zaklęcie z dowolnej Tradycji Kolorów za każdy poznany przez Ciebie czar z Tradycji Tzeentcha.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.9P3ZBMJlDD7komF0",
+      "effects": {
+        "Nr1kKY6LcbgJDkWC": {
+          "id": "Nr1kKY6LcbgJDkWC",
+          "name": "Łaska Tzeentcha",
+          "scriptData": [
+            {
+              "id": "Nr1kKY6LcbgJDkWC",
+              "name": "Łaska Tzeentcha",
+              "script": "[Script.iuSoKntfJ4eAPafQ]"
+            }
+          ]
+        }
+      }
+    },
+    "Absorb": {
+      "id": "nMZamRegEI8TtE5I",
+      "name": "Wchłanianie",
+      "description": "<p><span class=\"fontstyle0\">Na koniec Rundy, jeżeli istota ma więcej Przewag niż którykolwiek z jej przeciwników będących z nią w zwarciu, pochłania jednego z nich o rozmiarze jej równym lub mniejszym. Wchłonięta ofiara otrzymuje tyle poziomów Stanu </span>@Condition[Pochwycenie] <span class=\"fontstyle0\">, ile wynosi Bonus z Siły atakującej istoty, a ponadto jest traktowana, jakby siłowała się z przeciwnikiem w @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#zapasy]{Zapasach}. Na koniec każdej Rundy ofiara traci tyle punktów Żywotności, ile wynosi Bonus z Siły wchłaniającego ją stworzenia. Punkty Pancerza i Bonus z Wytrzymałości nie zmniejszają tych Ran. Pochłaniająca istota „leczy” tyle samo punktów swojej Żywotności. Jeżeli wchłonięta ofiara umrze, stwór wycofuje się, by w ciągu najbliższych kilku dni trawić unoszące się w jego ciele zwłoki. Każdy atak wymierzony w istotę z tą Cechą zadaje tyle samo Obra- żeń pochłoniętej ofierze.</span></p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.nMZamRegEI8TtE5I"
+    },
+    "Amorphous": {
+      "id": "wOf9AwaFctvEx5gQ",
+      "name": "Bezkształtny ",
+      "description": "<p>Stworzenie jest amorficzną plamą. Otrzymuje połowę Ran od ataków, jeśli nie są zadane ogniem, zimnem lub magią. Ignoruje wszystkie Rany Krytyczne i może zostać zabite jedynie wtedy, gdy jego Żywotność spadnie do 0 na skutek Obrażeń zadanych magią, zimnem lub ogniem. Jeżeli Żywotność zostanie zredukowana do 0 przez inny rodzaj ataku, istota zapada w letarg na [[/r 1d10]]{1k10} Rund, po których regeneruje 1 punkt Żywotności. Bezkształtne stworzenia unkają ekstremalnych źródeł ciepła czy zimna.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.wOf9AwaFctvEx5gQ",
+      "effects": {
+        "lKNdxLICyt0l9hli": {
+          "id": "lKNdxLICyt0l9hli",
+          "name": "Bezkształtny ",
+          "scriptData": [
+            {
+              "id": "lKNdxLICyt0l9hli",
+              "name": "Bezkształtny ",
+              "script": "[Script.pR4Q2OnPxXtwRVli]"
+            },
+            {
+              "id": "lKNdxLICyt0l9hli",
+              "name": "Zmniejsz obrażenia o połowę",
+              "script": "[Script.ACtDCTLZXmd5uXjX]"
+            }
+          ]
+        }
+      }
+    },
+    "Blighted": {
+      "id": "nJJU7N7pjtscQIHi",
+      "name": "Siewca Zarazy (Typ)",
+      "description": "<p>Istota jest nosicielem choroby wymienionej w nawiasie, którą może przekazywać przy pomocy dotyku. Dotknięta ofiara musi wykonać odpowiedni Test, aby uniknąć Zarażenia, lecz jest on o dwa stopnie trudniejszy niż normalnie. Jeżeli ofiara zostanie zarażona, Inkubacja choroby staje się &lsquo;Natychmiastowa&rsquo;.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.nJJU7N7pjtscQIHi",
+      "specification": "Choroba"
+    },
+    "Fleshthief": {
+      "id": "vEhuuaYESVY6EU5H",
+      "name": "Złodziej Ciał",
+      "description": "<p>Istota (która musi mieć Cechę @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoniczny}) może przywdziewać ciało każdego człowieka, którego zabiła. Co więcej, może idealnie podszywać się pod tożsamość ofiary, doskonale naśladując jej głos i manieryzmy. Przygotowanie ciała zajmuje [[/r 1d10]]{1k10} Rund, po których może być ono przywdziane bądź ściągnięte w dowolnej chwili, co zajmuje 1 Rundę. Przygotowane w ten sposób ciało gnije tylko wtedy, kiedy jego nosiciel umrze, ale można je uszkodzić zwykłymi sposobami. Jeżeli istota sobie tego życzy, może wydostać się z potwornego przebrania w makabryczny sposób, w fontannie krwi i kawałków ciała, zyskując na 1 Rundę Cechę @UUID[Compendium.wfrp4e-core.items.kJNAY1YRaCy9IgmT]{Groza (1)}, równocześnie bezpowrotnie niszcząc ciało.</p>\n<p>Ci, którzy znają osobę, pod którą podszywa się istota, mogą wykonać <strong>Daremny (-40) Test Intuicji</strong>, by zorientować się, że coś jest nie tak, chociaż nie będą wiedzieć co.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.vEhuuaYESVY6EU5H"
+    },
+    "Mark of Tzeentch": {
+      "id": "CHqfy42NcbhTWM32",
+      "name": "Piętno Tzeentcha",
+      "description": "<p>Tzeentch, Pan Przemiany, naznaczył tę istotę widocznym piętnem, ogłaszając tym samym, że jest ona ważnym pionkiem w jego niekończącej się grze. Postać otrzymuje [[/r ceil(1d10/3)]]{1k10/3} mutacji (zaokrąglając w górę), po równo z Tabeli Zepsucia Psychicznego Zepsucia i Spaczenia Fizycznego. Użyj kolumny Tzeentcha. Istota otrzymuje Talent @UUID[Compendium.wfrp4e-core.items.sYbgpSnRqSZWgwFP]{Etykieta (Wyznawcy Tzeentcha)} i Cechę Wrogość (Wyznawcy Nurgla). Co więcej, postać może wykupić następujące Talenty, jakby należały do jej Profesji: @UUID[Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB]{Czarownica!}, @UUID[Compendium.wfrp4e-core.items.F2EiuAc6IpaGd4J7]{Mag Bitewny}, @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Magia Chaosu (Tzeentch)}, @UUID[Compendium.wfrp4e-core.items.mdPGZsn2396dEpOf]{Magia Prosta}, @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Magia Tajemna (Dowolna)}, @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}, @UUID[Compendium.wfrp4e-core.items.BYChSVfMG004eflQ]{Precyzyjne Inkantowanie}, @UUID[Compendium.wfrp4e-core.items.9sMAf0xmehjEmUao]{Ruchliwe Dłonie}, @UUID[Compendium.wfrp4e-core.items.6w30u0VPsAicrqb5]{Wykrywanie Magii} i @UUID[Compendium.wfrp4e-core.items.1IZWRr7BYOIcqPlQ]{Zmysł Magii}. Płaci za to normalny koszt w PD.</p>\n<p>Piętno Tzeentcha jest błogosławieństwem udzielanym nielicznym, szczególnie uprzywilejowanym sługom Zmieniającego Drogi. Zdarza się bardzo rzadko, może być nim naznaczony ktoś, kto jeszcze nie jest wyznawcą, ale dzięki piętnu nim się stanie. Tzeentch faworyzuje tych, którzy odrzucają tradycję i stabilność oraz przejawiają fascynację magią i manipulacją. Tacy ludzie mogą śnić o strasznym zmutowanym kruku o przenikliwym spojrzeniu, który oferuje im moc. Jeśli trzykrotnie zaakceptują ofertę kruka, zdobędą Piętno Tzeentcha, tym samym rozpoczną podróż, która może zakończyć się tylko upadkiem.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.CHqfy42NcbhTWM32",
+      "effects": {
+        "ez2unEp9QFaquz2B": {
+          "id": "ez2unEp9QFaquz2B",
+          "name": "Piętno Tzeentcha",
+          "scriptData": [
+            {
+              "id": "ez2unEp9QFaquz2B",
+              "name": "Mutacje",
+              "script": "[Script.5M6IgCUncCwyxHok]"
+            },
+            {
+              "id": "ez2unEp9QFaquz2B",
+              "name": "Talenty",
+              "script": "[Script.2vTVR0quRZQtjNfQ]"
+            }
+          ]
+        }
+      }
+    },
+    "Mindless": {
+      "id": "zelpi59bYYr4wMis",
+      "name": "Bezmyślny",
+      "description": "<p>Istota jest bezrozumna, kieruje się wyłącznie podstawowymi instynktami bądź magicznymi rozkazami. Nie posiada Inicjatywy, Inteligencji, Siły Woli ani Ogłady i nigdy nie musi ich testować. W celu wyliczenia jej Żywotności należy wziąć jej Bonus z Siły zamiast Bonusu z Siły Woli. Ponieważ nie ma Inicjatywy, stworzenie zawsze działa jako ostatnie w Rundzie.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.zelpi59bYYr4wMis",
+      "effects": {
+        "QUS9Bq5GPe532DP5": {
+          "id": "QUS9Bq5GPe532DP5",
+          "name": "Bezmyślny",
+          "scriptData": [
+            {
+              "id": "QUS9Bq5GPe532DP5",
+              "name": "Cechy",
+              "script": "[Script.8yBr6VbdKcrWUuqw]"
+            },
+            {
+              "id": "QUS9Bq5GPe532DP5",
+              "name": "Inicjatywa",
+              "script": "[Script.4cOZzUvu1nytcqNn]"
+            },
+            {
+              "id": "QUS9Bq5GPe532DP5",
+              "name": "Żywotność",
+              "script": "[Script.T74FEjfFrh3f6MKv]"
+            }
+          ]
+        }
+      }
+    },
+    "Shapeshifter": {
+      "id": "c3y0CqTW5cQm0hMe",
+      "name": "Zmiennokształtny",
+      "description": "<p>Istota potrafi przemieniać się między swoją normalną postacią a formą jakiegoś stworzenia. Transformacja zajmuje całą Rundę, w której czasie postać nie może wykorzystać ani Ruchu, ani Akcji. Podczas pełni Mannslieba istota musi o zmierzchu wykonać <strong>Przeciętny (+20) Test Siły Woli</strong>, by uniknąć spontanicznej przemiany. MG może podnieść Trudność Testu, jeśli postać dopiero nabyła tę Cechę Stworzenia i będzie to jej pierwsza przemiana. Po przemianie istota zachowuje swoje mentalne Atrybuty (Int, SW, Ogd), ale pozostałe przyjmują wartości właściwe dla stworzenia, którego postać przyjęła.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.c3y0CqTW5cQm0hMe"
+    },
+    "Split": {
+      "id": "nWBhRUDdfs07LopR",
+      "name": "Rozdziel",
+      "description": "<p>Jeżeli stworzenie otrzyma Ranę Krytyczną albo straci wszystkie punkty Żywotności, natychmiast dzieli się na dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce}, wygrzebujące się z resztek swojego rodzica w chmurze wirujących, iskrzących magicznych energii. Obydwa strachulce są niezranione.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.nWBhRUDdfs07LopR"
+    },
+    "Tzeentch's Fire": {
+      "id": "hrTMJNF0CFX8JXhI",
+      "name": "Ogień Tzeentcha",
+      "description": "<p>Stwór płonie ogniem Tzeentcha, który nieustannie strzela z jego palców, ust i oczu. Wszystkie istoty tego samego typu (przykładowo wszystkie różowe strachulce czy niebieskie strachulce) w okolicy dzielą się wzajemnie mocą. Jedno z nich staje się katalizatorem (czarodziejem) i podczas swojej Rundy może rzucić zaklęcie z Tradycji Tzeentcha. Różowe strachulce mogą rzucić @UUID[Compendium.wfrp4e-eis.items.sklbZU3K8ogeu3mC]{Różowy płomień Tzeentcha}, a inne istoty – @UUID[Compendium.wfrp4e-eis.items.wY6JAt76eArBroYC]{Niebieski płomień Tzeentcha}. Każda dodatkowa istota tego samego rodzaju, która ma tę Cechę, dodaje rzucającemu zaklęcie +1 PS (maksymalnie +9 PS) do Testu rzucenia Czaru.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.hrTMJNF0CFX8JXhI"
+    },
+    "Dog": {
+      "id": "8HKXprgF2We8U75i",
+      "name": "Pies",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.iaVpUaCKx1qEYkq1]{Pies}</p>\n<p>Udźwig: 8</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.8HKXprgF2We8U75i"
+    },
+    "Donkey or Mule": {
+      "id": "cDBVmh9Kc24MbDfo",
+      "name": "Osioł lub muł",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.lOO8BfzQfP7omFe0]{Osioł} lub @UUID[Compendium.wfrp4e-eis.actors.jd77heDEL6v768Nd]{Muł}</p>\n<p>Udźwig: 14</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.cDBVmh9Kc24MbDfo"
+    },
+    "Draught Horse": {
+      "id": "SyeYK3NrI8nHsl5q",
+      "name": "Koń pociągowy",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.guaFC5d5WK8ExDhk]{Koń pociągowy}</p>\n<p>Udźwig: 20</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.SyeYK3NrI8nHsl5q"
+    },
+    "Heavy Draught Horse": {
+      "id": "vZYC9wKJexrJltiO",
+      "name": "Ciężki koń pociągowy",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.PZiW5RRL0sqmGjaL]{Ciężki koń pociągowy}</p>\n<p>Udźwig zwierzęcia: 30</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.vZYC9wKJexrJltiO"
+    },
+    "Heavy Warhorse": {
+      "id": "21Wrt7zj0HBHRI5K",
+      "name": "Ciężki koń bojowy",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.NJxgxApkhZixXYEj]{Ciężki rumak bojowy} (aka Destrier)</p>\n<p>Udźwig zwierzęcia: 20</p>",
+      "gmdescription": "<p>Cena może się podwoić lub potroić w czasach napięcia lub wojny, kiedy nikt nie chce rozstać się ze sprzętem wojskowym.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.21Wrt7zj0HBHRI5K"
+    },
+    "Light Warhorse": {
+      "id": "D51YLwyoWIVsjq4w",
+      "name": "Lekki koń bojowy",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.QhEFgUrPzF2NNWoS]{ lekki rumak bojowy z siodłem i uprzężą} (ma na imię Hobby)</p><p> Udźwig: 18</p>",
+      "gmdescription": "<p>Cena może się podwoić lub potroić w czasach napięcia lub wojny, kiedy nikt nie chce rozstać się ze sprzętem wojskowym.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.D51YLwyoWIVsjq4w"
+    },
+    "Ox": {
+      "id": "mu7okaGNwsxc4yWJ",
+      "name": "Wół",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.l7G0hmzl6VMnAXtL]{Wół}</p>\n<p>Udźwig: 30</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.mu7okaGNwsxc4yWJ"
+    },
+    "Pony": {
+      "id": "7FHg4zjzkMjhi0yJ",
+      "name": "Kucyk",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.12ARFrc7Dokxc72q]{Kucyk}</p>\n<p>Udźwig: 14</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.7FHg4zjzkMjhi0yJ"
+    },
+    "Riding Horse": {
+      "id": "Mjw7ToPBKMbmZgnu",
+      "name": "Koń Wierzchowy",
+      "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J]{Koń wierzchowy} (aka Palfrey)</p>\n<p>Udźwig zwierzęcia: 16</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.Mjw7ToPBKMbmZgnu"
+    },
+    "Ring of Opsianon": {
+      "id": "c3T3NCS9SPDdEQyy",
+      "name": "Obsydianowy pierścień",
+      "description": "<p>Gideon nosi na palcu złoty pierścień z obsydianowym, fasetowanym klejnotem.</p>",
+      "gmdescription": "<p>Według legend pierścień został wykuty prawie trzysta lat temu, kilka dekad przed założeniem Kolegiów Magii. Jego twórca, Kurtis Krammovic, pragnął w tamtych mrocznych czasach ukryć swoją magiczną naturę przed ówczesnymi wrogami czarownic. W 2498 KI, na aukcji magicznych artefaktów w Marienburgu, pierścień kupiła Najwyższa Astromantka, Filiona Perls z Niebieskiego Zakonu. Jakieś pięć lat temu Teugen ukradł jej pierścień. Gideon twierdził, że potrzebuje go do ustabilizowania swojej fizycznej formy, gdy akurat nie nosi czyjegoś ciała. Co więcej, pierścień jest niezbędny do przeprowadzenia rytuału „ocalenia duszy” Teugena. Perls, obecnie piastująca stanowisko nadwornego czarodzieja i zajmująca się przepowiadaniem przyszłości dla ważnych magnatów w Altdorfie, chce odzyskać swą zgubę. Oferuje za niego nagrodę w wysokości @Credit[10zk mode=split]{10 złotych koron}.</p>\n<h3>Zasady</h3>\n<p>Każdy demon noszący pierścień ignoruje Cechę @UUID[Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl]{Niestabilny} i nie może zostać wykryty za pomocą @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcji Magicznej}. Ponadto magia demona nie może być wykryta przez Percepcję Magiczną, póki Czar nie zostanie rzucony. Nie może być on zatem rozproszony przez kontrzaklęcie.</p>\n<p>Śmiertelnicy noszący pierścień zamiast tego otrzymują wszystkie efekty zaklęcia @UUID[Compendium.wfrp4e-core.items.T9cEYAUhqBiTxrp2]{Aura codzienności}.</p>\n<p>Niestety, przez lata pierścień przesiąkł demoniczną energią Gideona i stał się niebezpieczny. Noszący go śmiertelnik musi co miesiąc wykonać Test, by oprzeć się działaniu @Corruption[minor]{Pomniejszego Źródła Spaczenia}. Tę skazę mogą usunąć jedynie potężne rytuały i zaklęcia Tradycji Światła.</p>",
+      "sourceId": "Compendium.wfrp4e-eis.items.c3T3NCS9SPDdEQyy"
+    }
+  }
+}

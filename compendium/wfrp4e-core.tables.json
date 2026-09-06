@@ -1,6 +1,7 @@
 {
     "label": "Tabele (Podręcznik Główny)",
     "mapping": {
+        "initialization_folder": "flags.wfrp4e-core.initialization-folder",
         "results": {
             "path": "results",
             "converter": "tableResults"
@@ -1486,7 +1487,7 @@
                 "36-40": "<p><strong>Rój</strong>: Postać zostaje zaatakowana przez chmarę eterycznych szczurów, gigantycznych pająków, węży lub innych podobnych stworzeń (decyduje MG). Użyj standardowych charakterystyk, odpowiednich dla danego gatunku stworzenia, dodając Cechę Stworzenia Rój. Po [[1d10]]{1k10} Rundach, jeśli nie zostały zniszczone wcześniej, stwory znikają.</p>",
                 "41-45": "<p><strong>Szmaciana lalka</strong>: Postać zostaje wyrzucona w powietrze i leci [[1d10]]{1k10} metrów w losowym kierunku. Otrzymuje [[1d10]]{1k10} Obrażeń ignorujących Punkty Pancerza, zostaje również @Condition[Powalona].</p>",
                 "46-50": "<p><strong>Zmrożone kończyny</strong>: Jedna kończyna (losowa) zostaje zamrożona na [[1d10]]{1k10} godzin. Przez ten czas jest zupełnie bezużyteczna, jakby została @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#amputacje]{Amputowana}.</p>",
-                "51-55": "<p><strong>Mroczna ślepota</strong>: Na [[1d10]]{1k10} godzin postać traci swój Talent @UUID[Compendium.wfrp4e-core.talentitems.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}. Wszelkie Testy Splatania Magii otrzymują karę -20.</p>",
+                "51-55": "<p><strong>Mroczna ślepota</strong>: Na [[1d10]]{1k10} godzin postać traci swój Talent @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}. Wszelkie Testy Splatania Magii otrzymują karę -20.</p>",
                 "56-60": "<p><strong>Chaotyczna dalekowzroczność</strong>: Otrzymujesz premiową pulę [[1d10]]{1k10} Punktów Szczęścia (które mogą przekroczyć normalny limit). Za każdym razem, gdy postać korzysta z tych punktów, otrzymuje 1 Punkt Zepsucia. Wszelkie pozostałe Punkty Szczęścia zdobyte w ten sposób przepadają po zakończeniu sesji gry.</p>",
                 "61-65": "<p><strong>Lewitacja</strong>: Wiatry Magii porywają postać w powietrze. Na [[1d10]]{1k10} minut unosi się [[1d10]]{1k10} metrów nad ziemią. Inne postaci mogą ją przemieszczać siłą. Ponadto postać może poruszać się sama dzięki zaklęciom, skrzydłom i innym zabiegom, ale jeśli zostanie pozostawiona sama sobie, uniesie się z powrotem jak balonik. Niekontrolowana lewitacja kończy się @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#upadki]{upadkiem}.</p>",
                 "66-70": "<p><strong>Wymioty</strong>: Postać wymiotuje, wyrzucając z siebie o wiele więcej odrażająco śmierdzących wymiocin, niż mogłoby pomieścić ciało. Postać otrzymuje 1 poziom @Condition[Oszołomienia], który utrzymuje się przez [[1d10]]{1k10} Rund.</p>",

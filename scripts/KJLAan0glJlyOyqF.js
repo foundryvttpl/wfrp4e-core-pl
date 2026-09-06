@@ -1,4 +1,4 @@
-    this.actor.getActiveTokens().forEach(t => t.document.update({light : {
+this.actor.getActiveTokens().forEach(t => t.document.update({light : {
       "dim": 10,
       "bright": 5,
       "alpha": 0.5,

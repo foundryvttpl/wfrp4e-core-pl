@@ -11,10 +11,10 @@ let APused = Math.max(0, APatLoc.value - metalAP); // remove metal AP at locatio
 damage -= (APused + this.actor.system.characteristics.t.bonus)
 
 let msg = await this.actor.applyBasicDamage(damage, {suppressMsg : true, damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
-msg += ` (Zignorowano metalowy pancerz: ${metalAP} PP na lokalizacji: ${game.wfrp4e.config.locations[loc]})`
+msg += ` (ignored ${metalAP} metal AP on ${game.wfrp4e.config.locations[loc]})`
 this.script.message(msg)
 
-let test = await this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {fields : {difficulty : "difficult"}, appendTitle : ` - ${this.effect.name}`});
+let test = await this.actor.setupSkill("Endurance", {fields : {difficulty : "difficult"}, appendTitle : ` - ${this.effect.name}`});
 await test.roll();
 if (test.failed)
 	this.actor.addCondition("stunned");

@@ -48,4 +48,3 @@ updateObj.name = updateObj.name += " " + this.effect.name
 
 await this.actor.update(updateObj)
 this.actor.createEmbeddedDocuments("Item", items);
-

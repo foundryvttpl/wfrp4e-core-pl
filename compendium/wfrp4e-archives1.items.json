@@ -1,5 +1,5 @@
 {
-  "label": "Wyposażenie (Archiwa Tom I)",
+  "label": "Przedmioty (Archiwa Tom I)",
   "mapping": {
     "gmdescription": "system.gmdescription.value",
     "skills": "system.skills",
@@ -8,7 +8,7 @@
     "careergroup": "system.careergroup.value",
     "trappings": "system.trappings",
     "specification_label": "system.specification.label",
-    "specification": "system.specification.value",
+    "specification": "system.specification.label",
     "tests": "system.tests.value",
     "effects": {
       "path": "effects",

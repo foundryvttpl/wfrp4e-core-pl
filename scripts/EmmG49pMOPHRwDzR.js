@@ -1,4 +1,4 @@
-   let roll = Math.ceil(CONFIG.Dice.randomUniform() * 10)
+let roll = Math.ceil(CONFIG.Dice.randomUniform() * 10)
    if (args.test.isFumble && roll == 1 && !args.test.result.misfire)
   {
           args.test.result.misfire = game.i18n.localize("Misfire") + " (Wyrzucono 1)"

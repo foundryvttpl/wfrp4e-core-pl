@@ -1,19 +1,19 @@
 let choice1 = [
     {
         type: "trait",
-        name: "Zwierzęcy",
+        name: "Bestial",
     },
     {
         type: "trait",
-        name: "Regeneracja",
+        name: "Regeneration",
     },
     {
         type: "trait",
-        name: "Rozmiar (Duży)",
+        name: "Size (Large)",
     },
     {
         type: "trait",
-        name: "Terytorialny",
+        name: "Territorial",
     }
 ]
 
@@ -35,13 +35,14 @@ async function addTrait(c) {
         else
             ui.notifications.warn(`Could not find ${c}`, { permanent: true });
     }
+    console.log("WISH LIST2", choice1, items);
     actor.createEmbeddedDocuments("Item", items);
 }
 
 async function dialogChoice() {
     for (let c of choice1) 
     {
-        if (await foundry.applications.api.DialogV2.confirm({window : {title: "Opcje"}, content:`<p>Dodajć opcje?</p><ol><li>${c.name}</li></ol>`}))
+        if (await foundry.applications.api.DialogV2.confirm({window : {title: "Option"}, content:`<p>Add Option?</p><ol><li>${c.name}</li></ol>`}))
         {
             addTrait(c)
             c.valid = true;
@@ -52,4 +53,3 @@ async function dialogChoice() {
 updateObj = this.actor.toObject();
 actor = this.actor
 await dialogChoice();
-

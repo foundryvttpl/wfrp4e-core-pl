@@ -1,108 +1,114 @@
 {
-    "id": "wfrp4e-core-pl",
-    "title": "WFRP4e - Oficjalne polskie tłumaczenie",
-    "description": "Wiecie dobrze, co znajduje się w środku. Kryją się tam spaczeni, niepokorni, zagubieni. Mówicie sobie, że chcielibyście odejść i zostawić to za sobą. Czmychnąć do idealnego świata, gdzie wszystko układa się jak po sznurze. To nieprawda. Coś ciągnie Was właśnie tutaj. Możecie tłumaczyć sobie, że kuszą was bogactwa albo żądza chwały. Nie łudźcie się. Wszyscy wiemy, że jest inaczej. Kto raz usłyszał, jak wzywają go szlaki Starego Świata, ten zawsze już będzie chciał na nie powrócić. Dobądźcie ostrzy, nabijcie pistolety i uważajcie na tego psa: może i jest mały, ale jaki zajadły! Warhammer Fantasy Roleplay zabiera Was do Starego Świata. Skompletujcie własną drużynę śmiałków lub bandę oprychów i wyruszcie we wspólną podróż. W jej trakcie będziecie mierzyć się z podłością, zepsuciem, intrygami i straszliwymi bestiami pałającymi chęcią destrukcji.",
-    "authors": [
-        {
-            "name": "Daniel.Sobolewski",
-            "discord": "Daniel.Sobolewski",
-            "flags": {}
-        },
-        {
-            "name": "Ez",
-            "discord": "shifu7939"
-        },
-        {
-            "name": "GregorHak",
-            "discord": "gregorhak",
-            "flags": {}
-        },
-        {
-            "name": "Liv",
-            "email": "livithor@gmail.pl",
-            "discord": "livithor",
-            "flags": {}
-        },
-        {
-            "name": "Myeshko1",
-            "discord": "myeshko1",
-            "flags": {}
-        },
-        {
-            "name": "silent_mark",
-            "url": "https://weblate.foundryvtt.be",
-            "email": "marek@kembrowski.net",
-            "discord": "silent_mark",
-            "flags": {}
-        },
-        {
-            "name": "Varis (dr_hans)",
-            "discord": "dr_hans",
-            "flags": {}
-        },
-        {
-            "name": "Verhar",
-            "discord": "verhar",
-            "flags": {}
-        }
-    ],
-    "relationships": {
-        "requires": [
-            {
-                "id": "babele",
-                "type": "module",
-                "compatibility": {
-                    "minimum": "2.7.5"
-                }
-            },
-            {
-                "id": "wfrp4e-core",
-                "type": "module",
-                "compatibility": {
-                    "minimum": "7.0.0"
-                }
-            }
-        ],
-        "systems": [
-            {
-                "id": "wfrp4e",
-                "type": "system",
-                "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json",
-                "compatibility": {
-                    "minimum": "9.1.0"
-                }
-            }
-        ]
+  "id": "wfrp4e-core-pl",
+  "title": "WFRP4e - Oficjalne polskie tłumaczenie",
+  "description": "Wiecie dobrze, co znajduje się w środku. Kryją się tam spaczeni, niepokorni, zagubieni. Mówicie sobie, że chcielibyście odejść i zostawić to za sobą. Czmychnąć do idealnego świata, gdzie wszystko układa się jak po sznurze. To nieprawda. Coś ciągnie Was właśnie tutaj. Możecie tłumaczyć sobie, że kuszą was bogactwa albo żądza chwały. Nie łudźcie się. Wszyscy wiemy, że jest inaczej. Kto raz usłyszał, jak wzywają go szlaki Starego Świata, ten zawsze już będzie chciał na nie powrócić. Dobądźcie ostrzy, nabijcie pistolety i uważajcie na tego psa: może i jest mały, ale jaki zajadły! Warhammer Fantasy Roleplay zabiera Was do Starego Świata. Skompletujcie własną drużynę śmiałków lub bandę oprychów i wyruszcie we wspólną podróż. W jej trakcie będziecie mierzyć się z podłością, zepsuciem, intrygami i straszliwymi bestiami pałającymi chęcią destrukcji.",
+  "authors": [
+    {
+      "name": "Daniel.Sobolewski",
+      "discord": "Daniel.Sobolewski",
+      "flags": {}
     },
-    "compatibility": {
-        "minimum": "13",
-        "maximum": "13",
-        "verified": "13"
+    {
+      "name": "Ez",
+      "discord": "shifu7939"
     },
-    "esmodules": [
-        "babele-register.js",
-        "modules/config-polish.js"
-    ],
-    "scripts": [
-        "load-scripts-pl.js",
-        "modules/initialization.js",
-        "modules/initialization-up-in-arms.js",
-        "modules/initialization-archives1.js",
-        "modules/initialization-rnhd.js",
-        "modules/wfrp4e-npc-generator.js"
-    ],
-    "styles": [
-        "css/wfrp4e.css"
-    ],
-    "languages": [
-        {
-            "lang": "pl",
-            "name": "Polski",
-            "path": "lang/pl.json"
+    {
+      "name": "GregorHak",
+      "discord": "gregorhak",
+      "flags": {}
+    },
+    {
+      "name": "Liv",
+      "email": "livithor@gmail.pl",
+      "discord": "livithor",
+      "flags": {}
+    },
+    {
+      "name": "Myeshko1",
+      "discord": "myeshko1",
+      "flags": {}
+    },
+    {
+      "name": "silent_mark",
+      "url": "https://weblate.foundryvtt.be",
+      "email": "marek@kembrowski.net",
+      "discord": "silent_mark",
+      "flags": {}
+    },
+    {
+      "name": "Varis (dr_hans)",
+      "discord": "dr_hans",
+      "flags": {}
+    },
+    {
+      "name": "Verhar",
+      "discord": "verhar",
+      "flags": {}
+    },
+    {
+      "name": "Tomasz Warchol",
+      "discord": "Tom Wa",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "babele",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.9.1"
         }
-    ],    
-    "version": "6.0.1",
-    "url": "https://github.com/foundryvttpl/wfrp4e-core-pl",
-    "manifest": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/module.json",
-    "download": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/wfrp4e-core-pl.zip"
+      },
+      {
+        "id": "wfrp4e-core",
+        "type": "module",
+        "compatibility": {
+          "minimum": "8.0.0"
+        }
+      }
+    ],
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system",
+        "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "9.6.1"
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "14",
+    "maximum": "14",
+    "verified": "14"
+  },
+  "esmodules": [
+    "babele-register.js",
+    "load-scripts-pl.js",
+    "modules/name-compatibility.js",
+    "modules/corruption-compatibility.js",
+    "modules/chat-command-compatibility.js",
+    "modules/script-compatibility.js",
+    "modules/config-polish.js"
+  ],
+  "scripts": [
+    "modules/initialization.js",
+    "modules/initialization-dlc.js"
+  ],
+  "styles": [
+    "css/wfrp4e.css"
+  ],
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ],
+  "version": "7.2.0",
+  "url": "https://github.com/foundryvttpl/wfrp4e-core-pl",
+  "manifest": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/module.json",
+  "download": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/wfrp4e-core-pl.zip"
 }

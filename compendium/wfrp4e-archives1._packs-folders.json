@@ -1,5 +1,20 @@
 {
-    "entries": {
-      "Archives of the Empire Vol. I": "Archiwa Imperium Tom I"
-    }
+  "entries": {
+    "Archives of the Empire Vol. I": "Archiwa Imperium Tom I",
+    "Archives of the Empire Vol. 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire Vol 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire Volume 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol 1.": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol. 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol. I": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol I": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Volume 1": "Archiwa Imperium Tom I",
+    "Archiwa Imperium Tom I": "Archiwa Imperium Tom I",
+    "Archiwa Imperium Tom 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire": "Archiwa Imperium",
+    "Dwarfs of the Empire": "Krasnoludy Imperium",
+    "Wood Elves of the Laurelorn": "Leśne Elfy z Laurelornu",
+    "Halflings of the Moot": "Niziołki z Krainy Zgromadzenia"
+  }
 }

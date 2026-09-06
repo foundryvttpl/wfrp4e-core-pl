@@ -15,4 +15,3 @@ fromUuid(this.effect.origin).then(caster => {
       }
    }
 })
-

@@ -8,6 +8,6 @@ if (args.test.preData.skillName?.includes(game.i18n.localize("NAME.Language")) |
 			args.test.result.description = game.i18n.localize("ROLL.MarginalFailure");
 		}
 		args.test.result.outcome = "failure"
-        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Maksymalnie -0 PS`);
+        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Maximum -0 SL`)
 	}
 }

@@ -14,5 +14,3 @@ if (opposedResult?.winner == "attacker")
         chosen.update({name : chosen.name += " (UTRACONO)"})
     }
 }
-
-

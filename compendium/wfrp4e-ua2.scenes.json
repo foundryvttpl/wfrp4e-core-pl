@@ -1,0 +1,201 @@
+{
+  "label": "Sceny (Przygody w Ubersreiku II)",
+  "folders": {
+    "Ubersreik Adventures II": "Przygody w Ubersreiku II",
+    "Ubersreik Adventures  II": "Przygody w Ubersreiku II",
+    "Deadly Dispatch": "Śmiertelna przesyłka",
+    "Fishrook Returns": "Rybowron powraca",
+    "Double Trouble": "Zdublowane tarapaty",
+    "The Blessings That Drew Blood": "Błogosławieństwo, które przelało krew",
+    "The Grey Mountain Gold": "Złoto Gór Szarych",
+    "A Guide to Black Rock": "Przewodnik po Czarnej Skale"
+  },
+  "mapping": {
+    "image": "background.src",
+    "notes": {
+      "path": "notes",
+      "converter": "notes"
+    },
+    "drawings": {
+      "path": "drawings",
+      "converter": "drawings"
+    },
+    "units": "grid.units",
+    "initialization_folder": "flags.wfrp4e-ua2.initialization-folder"
+  },
+  "entries": {
+    "Duchy of Black Rock": {
+      "id": "rWszfOUhI8RR5gRi",
+      "name": "Księstwo Czarnej Skały",
+      "notes": {
+        "YkCQ7ycTgnXN0bsy": {
+          "text": ""
+        },
+        "1jnvKvZBgqawK7M5": {
+          "text": ""
+        },
+        "nO1HQRNGz8lO5TZ3": {
+          "text": ""
+        },
+        "LkO2aZcqR0XFvjJE": {
+          "text": ""
+        },
+        "xBWICWG5pTD2w4wb": {
+          "text": ""
+        },
+        "tyGmG7xWoUbUYevo": {
+          "text": ""
+        },
+        "Q869sTXn9s3iwb8a": {
+          "text": ""
+        },
+        "NnwqIcE3hCe9Ejrq": {
+          "text": "Ruiny Lengsrath"
+        },
+        "brtqu7KtSkhGppGh": {
+          "text": "Czarny Kurhan"
+        }
+      },
+      "drawings": {
+        "Iz2kC8ixrJ8Rmmnc": {
+          "text": "UPADEK GÓRNIKA"
+        },
+        "8o4mstg1DaLFwSij": {
+          "text": "MOST STURZEN"
+        },
+        "PnIgQsP0D054mfOy": {
+          "text": "WĘGLOWY TRAKT"
+        },
+        "2G37jZhbS8dfSmfC": {
+          "text": "STUDNIA"
+        },
+        "VXw7Ft7seVFLUoMt": {
+          "text": "RZEKA ELSTER"
+        },
+        "eZytghPBYxi88jer": {
+          "text": "CHATA"
+        },
+        "E8ltXurSsRF3AzPR": {
+          "text": "GRAŃ NAGELA"
+        },
+        "fezw0ufSztV0pv2F": {
+          "text": "WODOSPADY WICHTELA"
+        },
+        "NJfHfzSpQSV5waRo": {
+          "text": "OBÓZ NAJEMNIKÓW"
+        },
+        "wNQgNsTdHko0x5xT": {
+          "text": "KANAŁ FELBER"
+        },
+        "VTOxOaBih1QMpuHY": {
+          "text": "WĘGLOWY TRAKT"
+        },
+        "cAgf59mI0ujcj080": {
+          "text": "NEUFELJUNGWEG"
+        },
+        "5BBNWLlmA4QnktUK": {
+          "text": "RZEKA TEUFEL"
+        },
+        "ni6frohBbKltpSkZ": {
+          "text": "TRAKT SZAREJ DAMY"
+        },
+        "WIS7GQMKM3bA9a3U": {
+          "text": "SZUBIENICA"
+        },
+        "bfx7huDAZPOvY2je": {
+          "text": "WRZOSOWISKO ZERZAUST"
+        },
+        "EBDKiEMy1MKaXjqf": {
+          "text": "RZEKA RUMIG"
+        },
+        "YsKWSEmBynkFzc0B": {
+          "text": "NEUFELJUNGWEG"
+        },
+        "PzzXQkIjojzhqryc": {
+          "text": "BURSZTYNOWE DZIECIĘ"
+        },
+        "892Jlv37d5RoOfhF": {
+          "text": "KOPCE VONGAL"
+        },
+        "J5nDCvhPqoUB78fG": {
+          "text": "FARMY"
+        }
+      },
+      "image": "modules/wfrp4e-core-pl/images/ua2/maps/duchy-of-black-rock.webp",
+      "initialization_folder": "Przygody w Ubersreiku II"
+    },
+    "Karstadt Estate": {
+      "id": "KolJyrj5JBQFP5MX",
+      "name": "Rezydencja Karstadtów",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua2/maps/karstadt-estate.webp",
+      "initialization_folder": "Przygody w Ubersreiku II"
+    },
+    "The Griffon and Hammer": {
+      "id": "nd0MGnLm7QPLiPFu",
+      "name": "Ruiny Gryfa i Młota",
+      "notes": {
+        "8q1Kb01JaOZD2d6s": {
+          "text": "Szubienica"
+        },
+        "whcgbp9je1fcpu6T": {
+          "text": "Stróżówka"
+        },
+        "AuAt8oD1Pth1nfAn": {
+          "text": "Grządka Dziwnokorzenia"
+        },
+        "xJnvgqsKR2qpFHTZ": {
+          "text": "Gospoda"
+        },
+        "fcrd70uzWPqIUb9V": {
+          "text": "Stajnie"
+        }
+      },
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua2/maps/the-griffon-and-hammer.webp",
+      "initialization_folder": "Przygody w Ubersreiku II"
+    },
+    "Ubersreik Duchy": {
+      "id": "IUOeHk4sTCwHN4UV",
+      "name": "Księstwo Ubersreik",
+      "notes": {
+        "Ii624f2kiU75UUQM": {
+          "text": "Napad na Tostiga Halstroma"
+        },
+        "e9CZ6Zpi5gJfFiq3": {
+          "text": "Napad na Duchampów"
+        },
+        "Nz92j6S2PG3Du9cT": {
+          "text": "Napad na Willego i Maxa"
+        },
+        "jlG6qkep2JU3KFeY": {
+          "text": "Napad na Gretchen Sollander"
+        }
+      },
+      "drawings": {
+        "QKrV9Xd3OJybvMjj": {
+          "text": "- Napad na Tostiga Halstroma"
+        },
+        "7GhcnfDEm2YbvgzS": {
+          "text": "- Napad na Duchampów i Erasmusa"
+        },
+        "VMTlGGRorVWlYALc": {
+          "text": "- Napad na Willego i Maxa"
+        },
+        "tdWyJ0ZaI1lDrNpO": {
+          "text": "- Napad na Gretchen Sollander"
+        }
+      },
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua2/maps/ubersreik-duchy-cropped.webp",
+      "initialization_folder": "Przygody w Ubersreiku II"
+    },
+    "Ubersreik Investigation": {
+      "id": "AUEWkahWPemTysPS",
+      "name": "Śledztwo w Ubersreiku",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua2/maps/btdb-investigation-map.webp",
+      "initialization_folder": "Przygody w Ubersreiku II"
+    }
+  }
+}
