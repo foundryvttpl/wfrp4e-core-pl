@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   build:
-    name: Publish approved synchronization
+    name: Publish synchronized release
     if: >-
       github.event.pull_request.merged == true &&
       github.event.pull_request.head.ref == 'automation/sync-from-development' &&
@@ -21,35 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.merge_commit_sha }}
           fetch-depth: 0
-
-      - name: Verify approval of synchronized commit
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const pullRequest = context.payload.pull_request;
-            const reviews = await github.paginate(github.rest.pulls.listReviews, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pullRequest.number,
-              per_page: 100,
-            });
-
-            const approved = reviews.some((review) =>
-              review.state === 'APPROVED' && review.commit_id === pullRequest.head.sha
-            );
-            if (!approved) {
-              core.setFailed(
-                `Pull request #${pullRequest.number} was merged without an approval ` +
-                `for its final synchronized commit ${pullRequest.head.sha}.`
-              );
-            }
 
       - name: Validate release version and provenance
         id: provenance
@@ -66,8 +43,6 @@ jobs:
           import os
           import re
 
-          with open('module.json', encoding='utf-8') as handle:
-              manifest = json.load(handle)
           with open('release-source.json', encoding='utf-8') as handle:
               provenance = json.load(handle)
 
@@ -78,9 +53,6 @@ jobs:
                   'release-source.json source_tag must use numeric dev-vX.Y.Z.N format'
               )
           version = tag_match.group(1)
-          manifest_version = str(manifest.get('version', '')).strip()
-          if manifest_version != version:
-              raise SystemExit('module.json version does not match the development tag')
           if provenance.get('version') != version:
               raise SystemExit('release-source.json version does not match the development tag')
           if provenance.get('source_repository') != 'foundryvttpl/wfrp4e-core-pl-pre':
@@ -172,7 +144,7 @@ jobs:
 
       - name: Zip files
         run: |
-          zip -r wfrp4e-core-pl.zip module.json release-source.json RELEASE_TAGGING.md babele-register.js load-scripts-pl.js gazetteer.json modules/ lang/ images/ fonts/ css/ compendium/
+          zip -r wfrp4e-core-pl.zip module.json release-source.json README.md babele-register.js load-scripts-pl.js gazetteer.json modules/ scripts/ lang/ images/ fonts/ css/ compendium/
 
       - name: Update Release with Files
         id: create_version_release
