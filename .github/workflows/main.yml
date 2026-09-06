@@ -71,11 +71,18 @@ jobs:
           with open('release-source.json', encoding='utf-8') as handle:
               provenance = json.load(handle)
 
-          version = str(manifest.get('version', '')).strip()
-          if not re.fullmatch(r'\d+\.\d+\.\d+', version):
-              raise SystemExit(f'Production version must use X.Y.Z format, got {version!r}')
+          source_tag = str(provenance.get('source_tag', '')).strip()
+          tag_match = re.fullmatch(r'dev-v(\d+\.\d+\.\d+)\.(\d+)', source_tag)
+          if not tag_match:
+              raise SystemExit(
+                  'release-source.json source_tag must use numeric dev-vX.Y.Z.N format'
+              )
+          version = tag_match.group(1)
+          manifest_version = str(manifest.get('version', '')).strip()
+          if manifest_version != version:
+              raise SystemExit('module.json version does not match the development tag')
           if provenance.get('version') != version:
-              raise SystemExit('release-source.json version does not match module.json')
+              raise SystemExit('release-source.json version does not match the development tag')
           if provenance.get('source_repository') != 'foundryvttpl/wfrp4e-core-pl-pre':
               raise SystemExit('release-source.json contains an unexpected source repository')
 
@@ -87,6 +94,7 @@ jobs:
               output.write(f'version={version}\n')
               output.write(f'release_tag=v{version}\n')
               output.write(f'source_commit={source_commit}\n')
+              output.write(f'source_tag={source_tag}\n')
           PY
 
       - name: Prepare release version
@@ -97,6 +105,34 @@ jobs:
         run: |
           echo "version=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
           echo "version-without-v=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Check out synchronized development commit
+        uses: actions/checkout@v4
+        with:
+          repository: foundryvttpl/wfrp4e-core-pl-pre
+          ref: ${{ steps.provenance.outputs.source_commit }}
+          token: ${{ secrets.SOURCE_REPOSITORY_TOKEN }}
+          fetch-depth: 0
+          fetch-tags: true
+          path: development-source
+
+      - name: Verify development tag provenance
+        env:
+          SOURCE_TAG: ${{ steps.provenance.outputs.source_tag }}
+        run: |
+          set -euo pipefail
+          cd development-source
+
+          source_commit=$(git rev-parse HEAD)
+          tagged_commit=$(git rev-parse "${SOURCE_TAG}^{commit}" 2>/dev/null || true)
+          if [ -z "$tagged_commit" ]; then
+            echo "Development tag $SOURCE_TAG does not exist." >&2
+            exit 1
+          fi
+          if [ "$tagged_commit" != "$source_commit" ]; then
+            echo "$SOURCE_TAG points to $tagged_commit instead of $source_commit" >&2
+            exit 1
+          fi
 
       - name: Create production tag
         id: production_tag
@@ -183,15 +219,6 @@ jobs:
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json", "Authorization" : "${{ secrets.FOUNDRY_KEY }}"}'
           data: '{"dry_run": false, "id": "${{steps.moduleID.outputs.prop}}", "release": {"version":  "${{steps.get_version.outputs.version-without-v}}", "manifest": "https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/module.json", "compatibility" : {"minimum": "${{steps.minimum.outputs.prop}}", "verified": "${{steps.verified.outputs.prop}}", "maximum": "${{steps.maximum.outputs.prop}}"}}}'
-
-      - name: Check out synchronized development commit
-        uses: actions/checkout@v4
-        with:
-          repository: foundryvttpl/wfrp4e-core-pl-pre
-          ref: ${{ steps.provenance.outputs.source_commit }}
-          token: ${{ secrets.SOURCE_REPOSITORY_TOKEN }}
-          fetch-depth: 0
-          path: development-source
 
       - name: Tag development commit with production version
         env:
