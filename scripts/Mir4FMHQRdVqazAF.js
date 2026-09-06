@@ -3,11 +3,11 @@ let attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.v
 
 if (attackerSize > actorSize)
 {
-   let msg = `<b>Atak Językiem</b>: ${args.actor.prototypeToken.name} otrzymuje Stan @Condition[Pochwycenie]`;
+   let msg = `<b>Tongue Attack</b>: ${args.actor.prototypeToken.name} is now @Condition[Entangled]`;
    await args.actor.addCondition("entangled");
    if (actorSize <= 2)
    {
-       msg += `oraz Stan @Condition[Związany Walką]`;
+       msg += `and @Condition[Engaged]`
    }
    this.script.message(msg, {speaker : {alias: args.attacker.prototypeToken.name}})
 }

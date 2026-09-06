@@ -1,5 +1,4 @@
-
-                            let difficulty = ""
+let difficulty = ""
                             if (this.effect.name.includes("Umiarkowany"))
                                 difficulty = "easy"
                             else if (this.effect.name.includes("Poważny"))
@@ -13,4 +12,3 @@
                             {
                                 this.actor.addCondition("dead");
                             }
-                            

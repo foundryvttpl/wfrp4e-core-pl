@@ -9,7 +9,7 @@ let filters = [
     }
 ]
 
-let items = await ItemDialog.createFromFilters(filters, 1, { text : "Wybierz odpowiednią broń drzewcową lub dwuręczną" })
+let items = await ItemDialog.createFromFilters(filters, 1, {text : "Choose an appropriate Polearm or Two-Handed Weapon"})
 items = items.map(i => i.toObject())
 
 items.forEach(i => i.system.equipped.value = true);

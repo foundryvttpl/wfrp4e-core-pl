@@ -8,4 +8,4 @@ if (!this.actor.items.getName(game.i18n.localize("NAME.Frenzy"))) // Either fren
 }
 
 this.script.message(`<p><strong>Po wypiciu tej mikstury, ${this.actor.prototypeToken.name}</strong> wpada w Szał Bojowy. Stan ten trwa [[1d10]] rund, i nie może zostać zakończony wcześniej.</p>`, 
-  {whisper: ChatMessage.getWhisperRecipients("GM"), blind: true })   
+  {whisper: ChatMessage.getWhisperRecipients("GM"), blind: true })

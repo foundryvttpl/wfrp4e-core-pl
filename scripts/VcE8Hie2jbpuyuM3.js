@@ -9,7 +9,7 @@ const scriptData = effect.system.scriptData;
 // REMINDER
 
 scriptData.push({
-  label:  'Spell Rules Reminder',
+  label:  'Spell Rules Reminder'
   trigger: 'rollTest',
   script: ` 
     args.test.result.other.push("This Vomit attack follows the rules for the Lore of Nurgle spell @UUID[Compendium.wfrp4e-core.items.Item.XhyZ140R1iA1J7wZ].");

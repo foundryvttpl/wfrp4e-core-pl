@@ -1,5 +1,17 @@
 {
-    "entries": {
-      "Up In Arms": "Pod Bronią"
-    }
+  "entries": {
+    "Up In Arms": "Pod Bronią",
+    "Up in Arms": "Pod Bronią",
+    "Talents": "Talenty",
+    "Trappings": "Wyposażenie",
+    "Criticals": "Trafienia Krytyczne",
+    "Careers": "Kariery",
+    "Traits": "Cechy",
+    "Prayers": "Modlitwy",
+    "Weapons": "Broń",
+    "Ammunition": "Amunicja",
+    "Hireling": "Najemnik",
+    "Job": "Praca",
+    "Hireling Profiles": "Wzorce najemników"
+  }
 }

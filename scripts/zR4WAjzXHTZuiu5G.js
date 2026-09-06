@@ -49,4 +49,3 @@ let actor = this.actor;
                             {
                                 return this.script.message(msg)
                             }
-                            

@@ -29,7 +29,7 @@
     "god": "system.god.value",
     "overcast": "system.overcast.label",
     "specification_label": "system.specification.label",
-    "specification": "system.specification.value",
+    "specification": "system.specification.label",
     "tests": "system.tests.value",
     "alterNamePost": "system.alterName.post",
     "alterNamePre": "system.alterName.pre",
@@ -135,7 +135,8 @@
         "Rzemiosło (Rusznikarz albo Cieśla)",
         "Dowodzenie",
         "Wiedza (Artyleria)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -176,7 +177,8 @@
         "Wiedza (Artyleria)",
         "Jeździectwo (Konie)",
         "Charyzma",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Inspirujący",
@@ -288,7 +290,8 @@
         "Opanowanie",
         "Dowodzenie",
         "Nawigacja",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -482,7 +485,8 @@
         "Dowodzenie",
         "Percepcja",
         "Wiedza (Prawo)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Inspirujący",
@@ -663,7 +667,8 @@
         "Broń Biała (Podstawowa)",
         "Sztuka Przetrwania",
         "Broń Zasięgowa (Miotana)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Etykieta (Najemnicy)",
@@ -742,7 +747,8 @@
         "Powożenie",
         "Intuicja",
         "Dowodzenie",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Bitewny Refleks",
@@ -854,7 +860,8 @@
         "Plotkowanie",
         "Targowanie",
         "Wiedza (Heraldyka)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zimna krew",
@@ -1202,7 +1209,8 @@
         "Charyzma",
         "Język (Dowolny)",
         "Dowodzenie",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Nieustraszony (Chaos)",
@@ -1397,7 +1405,8 @@
         "Broń Zasięgowa (Eksperymentalna)",
         "Rzemiosło (Materiały Wybuchowe)",
         "Wiedza (Prawo)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -1548,7 +1557,8 @@
         "Badania Naukowe",
         "Rzemiosło (Płatnerz albo Zbrojmistrz)",
         "Opieka nad Zwierzętami",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Mistrz Walki",
@@ -1660,7 +1670,8 @@
         "Targowanie",
         "Hazard",
         "Dowodzenie",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Mistrz Walki",
@@ -1810,7 +1821,8 @@
         "Intuicja",
         "Dowodzenie",
         "Nawigacja",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -1853,7 +1865,8 @@
         "Nawigacja",
         "Jeździectwo (Konie)",
         "Charyzma",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Władcza Postura",
@@ -1963,7 +1976,8 @@
         "Intuicja",
         "Dowodzenie",
         "Nawigacja",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -2005,7 +2019,8 @@
         "Nawigacja",
         "Jeździectwo (Konie)",
         "Charyzma",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Inspirujący",
@@ -2113,7 +2128,8 @@
         "Dowodzenie",
         "Nawigacja",
         "Broń Zasięgowa (Eksperymentalna)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Zmysł Bitewny",
@@ -2155,7 +2171,8 @@
         "Broń Zasięgowa (Eksperymentalna)",
         "Jeździectwo (Konie)",
         "Charyzma",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Inspirujący",
@@ -2186,7 +2203,8 @@
         "Wiedza (Dowolna)",
         "Broń Biała (Podstawowa)",
         "Broń Biała (Kawaleryjska)",
-        "Jeździectwo (Konie)"
+        "Jeździectwo (Konie)",
+        "Intuicja"
       ],
       "talents": [
         "Błękitna Krew",
@@ -2227,7 +2245,8 @@
         "Zastraszanie",
         "Język (Bitewny)",
         "Broń Biała (Dowolna)",
-        "Wiedza (Sztuka Wojenna)"
+        "Wiedza (Sztuka Wojenna)",
+        "Intuicja"
       ],
       "talents": [
         "Etykieta (Grupa Społeczna)",
@@ -3163,44 +3182,6 @@
       ],
       "traits": []
     },
-    "ac5ClOuaYtzOYyWp": {
-        "id": "ac5ClOuaYtzOYyWp",
-        "name": "Bystrzak",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.ac5ClOuaYtzOYyWp",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Bystrzak",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Bystrzak",
-                        "script": "[Script.WO5n7Vbx8AgoVrwC]"
-                    }
-                ]
-            }
-        }
-    },
-    "x5wpMprsObuqMCYg": {
-        "id": "x5wpMprsObuqMCYg",
-        "name": "Nieoszlifowany diament",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.x5wpMprsObuqMCYg",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Nieoszlifowany diament",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Nieoszlifowany diament",
-                        "script": "[Script.1BT0MWM2cbhlEnrn]"
-                    }
-                ]
-            }
-        }
-    },
     "Hireling": {
       "id": "gjtcCTmRPxTL4oAL",
       "name": "Najemnik",
@@ -3219,97 +3200,6 @@
           ]
         }
       }
-    },
-    "wYN19h3WVF1yOVq2": {
-        "id": "wYN19h3WVF1yOVq2",
-        "name": "Zniedołężniały",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.wYN19h3WVF1yOVq2",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Zniedołężniały",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Zniedołężniały",
-                        "script": "[Script.RvipIYj9H7n4UDMe]"
-                    },
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Umiejętności",
-                        "script": "[Script.Et4tPHlrkueLqP3T]"
-                    }
-                ]
-            }
-        }
-    },
-    "LjMlx99gBGeRJUQu": {
-        "id": "LjMlx99gBGeRJUQu",
-        "name": "Wilk Morski",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.LjMlx99gBGeRJUQu",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Wilk morski",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Wilk morski",
-                        "script": "[Script.fYLSe6CrYciap5y8]"
-                    }
-                ]
-            }
-        }
-    },
-    "IS3LTdTuay6uRHUq": {
-        "id": "IS3LTdTuay6uRHUq",
-        "name": "Zreformowany łotr",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.IS3LTdTuay6uRHUq",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Zreformowany łotr",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Zreformowany łotr",
-                        "script": "[Script.zadppy7FEbXvgUON]"
-                    }
-                ]
-            }
-        }
-    },
-    "Xp4r2KUhqfjak8zq": {
-        "id": "Xp4r2KUhqfjak8zq",
-        "name": "Weteran wielu przygód",
-        "description": " ",
-        "sourceId": "Compendium.wfrp4e-up-in-arms.items.Xp4r2KUhqfjak8zq",
-        "effects": {
-            "GPWvWnhtvfc1jdvJ": {
-                "id": "GPWvWnhtvfc1jdvJ",
-                "name": "Weteran wielu przygód",
-                "scriptData": [
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Weteran wielu przygód",
-                        "script": "[Script.hhv7PrRdlf9sfC82]"
-                    },
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Wybór umiejętności",
-                        "script": "[Script.HJ2X4ZtXei0BXbxf]"
-                    },
-                    {
-                        "id": "GPWvWnhtvfc1jdvJ",
-                        "name": "Wybór broni",
-                        "script": "[Script.ezGqDoC9hNRBnFTB]"
-                    }
-                ]
-            }
-        }
     },
     "Trained (Shock Cavalry)": {
       "id": "twLaBj2HdhL5cC4v",
@@ -3665,7 +3555,7 @@
       "id": "PinFSQuQvxqaobSf",
       "name": "Kartacz i proch",
       "description": " ",
-      "range": "ćwierć zasięgu broni",
+      "range": "1/4 zasięgu broni",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.PinFSQuQvxqaobSf"
     },
     "Grapple": {
@@ -3709,7 +3599,7 @@
     "Gun Halberd": {
       "id": "UBqjWR96AHSKilMP",
       "name": "Halabarda pistoletowa",
-      "description": "<p>Broń ta, skonstruowana w podobnym duchu co @UUID[Compendium.moo-dev.dev-items.3KRPhCsimHmFKTxj]{topór pistoletowy}, może zostać wykorzystana zarówno jako halabarda, jak i rusznica. Lufa broni palnej jest wbudowana w drzewce halabardy. Jeśli oręż jest naładowany, kiedy korzysta się z niego jak z halabardy, każdy krytyczny pech oznacza wystrzał z broni palnej w kierunku pechowej istoty stojącej bezpośrednio za użytkownikiem halabardy pistoletowej.</p>",
+      "description": "<p>Broń ta, skonstruowana w podobnym duchu co @UUID[Compendium.wfrp4e-up-in-arms.items.umOvfObukES6LRvT]{topór pistoletowy}, może zostać wykorzystana zarówno jako halabarda, jak i rusznica. Lufa broni palnej jest wbudowana w drzewce halabardy. Jeśli oręż jest naładowany, kiedy korzysta się z niego jak z halabardy, każdy krytyczny pech oznacza wystrzał z broni palnej w kierunku pechowej istoty stojącej bezpośrednio za użytkownikiem halabardy pistoletowej.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.UBqjWR96AHSKilMP"
     },
     "Halberd": {
@@ -3828,7 +3718,7 @@
     "Large Bullet and Powder": {
       "id": "lN4K2kCeInZf6wIL",
       "name": "Duży pocisk i proch",
-      "description": "<p>Technicznie rzecz biorąc, są to niewielkie kule armatnie, które można załadować do broni posiadającej dużą lufę, takiej jak @UUID[Compendium.wfrp4e-up-in-arms.items.HblRPlASKOI73aOE]{arkebuz} czy @UUID[Compendium.wfrp4e-up-in-arms. items.hRXoLcdkE97BBJlL]{moździerz ręczny}. Strzelający z takich pocisków oraz każdy, kto stoi w promieniu dwóch metrów od strzelca, musi zdać <strong>Wymagający (+0) Test Odporności</strong> albo otrzymuje Stan @Condition[Ogłuszenie]{Ogłuszenie}.</p>",
+      "description": "<p>Technicznie rzecz biorąc, są to niewielkie kule armatnie, które można załadować do broni posiadającej dużą lufę, takiej jak @UUID[Compendium.wfrp4e-up-in-arms.items.HblRPlASKOI73aOE]{arkebuz} czy @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerz ręczny}. Strzelający z takich pocisków oraz każdy, kto stoi w promieniu dwóch metrów od strzelca, musi zdać <strong>Wymagający (+0) Test Odporności</strong> albo otrzymuje Stan @Condition[Ogłuszenie]{Ogłuszenie}.</p>",
       "range": "jak broń",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.lN4K2kCeInZf6wIL"
     },

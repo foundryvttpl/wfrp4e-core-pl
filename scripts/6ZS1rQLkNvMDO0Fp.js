@@ -8,4 +8,3 @@ else if (args.test.isFumble && roll != 1)
 {
     args.test.result.other.push("Rzut na Niewybuch: " + roll)
 }
-

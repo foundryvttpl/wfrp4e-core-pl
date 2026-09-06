@@ -1,4 +1,3 @@
-
 if (!args.flags.howlingWarpGale)
 {
     args.fields.modifier -= 10;

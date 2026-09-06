@@ -1,0 +1,308 @@
+{
+  "label": "Sceny (Przygody w Ubersreiku I)",
+  "folders": {
+    "Ubersreik Adventures I": "Przygody w Ubersreiku"
+  },
+  "mapping": {
+    "image": "background.src",
+    "notes": {
+      "path": "notes",
+      "converter": "notes"
+    },
+    "drawings": {
+      "path": "drawings",
+      "converter": "drawings"
+    },
+    "units": "grid.units",
+    "distance": "grid.distance",
+    "navName": "navName",
+    "initialization_folder": "flags.wfrp4e-ua1.initialization-folder"
+  },
+  "entries": {
+    "Camp": {
+      "id": "jX9m31vUMlZTLLgl",
+      "name": "Obóz",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/camp-white.webp",
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Gotheim": {
+      "id": "1Ugf4oqbj18urTsK",
+      "name": "Gotheim",
+      "notes": {
+        "EL1lkgj6JKAtk9iz": {
+          "text": "Usypisko"
+        },
+        "crIRbQruAWlcAs4b": {
+          "text": "Jezioro"
+        },
+        "CgyUK9ipKhytC48w": {
+          "text": "Potok Mühlbach"
+        },
+        "Jp0ZxVKW5O5M70UM": {
+          "text": "Chłodnia"
+        },
+        "0OhixA7hjBQEuLAJ": {
+          "text": "Czerwone oghamy"
+        },
+        "GnSBFkdKmqqGUBzA": {
+          "text": "Bramy"
+        }
+      },
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/gotheim-gm-white.webp",
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Grausee Environs": {
+      "id": "jZWoauy9VMH1hCIm",
+      "name": "Okolice Grausse",
+      "units": "mi",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/grausee-environs-white.webp",
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Guilty Party Route": {
+      "id": "8RcvI9tLo5kSbJVP",
+      "name": "Droga Winnej Strony",
+      "navName": "Mapa Ubersreik-Altdorf",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/guilty-party-travel-players.webp",
+      "drawings": {
+        "RbA5fJrdLsLK5YhQ": {
+          "text": "X Zniszczony powóz"
+        }
+      },
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Road to the Tower of Vane": {
+      "id": "hxmQBCH1wF5PL6g9",
+      "name": "Droga do Wieżycy Wiatrowskazu",
+      "navName": "Podróż",
+      "units": "km",
+      "distance": 0.75,
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/heart-of-glass-travel-unlabeled.webp",
+      "drawings": {
+        "SwvAwHnsSFwS2h8g": {
+          "text": "Messingen"
+        },
+        "0yfgYBxzhiyIsLZ9": {
+          "text": "Halheim"
+        },
+        "dqw2x2xpIWR73ssu": {
+          "text": "Flussberg"
+        },
+        "xDsaq7RxaklPQQ71": {
+          "text": "Ubersreik"
+        },
+        "WE1RPIrax3SSJ8Jd": {
+          "text": "Grausee"
+        },
+        "sYxoySofis8OiG6R": {
+          "text": "Grauner"
+        },
+        "EDLDjIJuHIev1Qao": {
+          "text": "Traisburg"
+        },
+        "yrhEbN2uEzVmzZw8": {
+          "text": "Bamenz"
+        },
+        "7gagvyxKlekD1jAD": {
+          "text": "Grunwächt"
+        },
+        "n94aZKN4L7utHaxS": {
+          "text": "Elssen"
+        },
+        "iBXQNS8sxK5nMUcH": {
+          "text": "Wieżyca Wiatrowskazu"
+        },
+        "WPsQi4j58yHIArvY": {
+          "text": "Tallerhoff"
+        },
+        "aLOrKPKoiAeF5Uh8": {
+          "text": "Hugeldal"
+        }
+      },
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Rugger's Boarding House": {
+      "id": "4L8T2DLNp5V8VkpU",
+      "name": "Przytulisko Babuni Rugger",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/boarding-house-yard-unlabeled.webp",
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Spittlefeld": {
+      "id": "DDtwpWItznY2DBhr",
+      "name": "Spittlefeld",
+      "units": "m",
+      "image": "modules/wfrp4e-ua1/assets/spittlefeld-unlabeled.webp",
+      "drawings": {
+        "r1OCSIfemulUjrcB": {
+          "text": "1",
+          "hidden": true
+        },
+        "QaUSzGvWz85KN6e0": {
+          "text": "2",
+          "hidden": true
+        },
+        "xi5GO9TtB7N1oHjU": {
+          "text": "4",
+          "hidden": true
+        },
+        "t4PwdGlosgtv5f12": {
+          "text": "3",
+          "hidden": true
+        },
+        "BEOrkuou4t0tqZcT": {
+          "text": "5",
+          "hidden": true
+        },
+        "l7rE1KmYL2v12gRo": {
+          "text": "5",
+          "hidden": true
+        },
+        "bbxENTUbahZnqm3t": {
+          "text": "6",
+          "hidden": true
+        },
+        "hZKBMyjz4GJW49GM": {
+          "text": "7",
+          "hidden": true
+        },
+        "RO1tsBBZP2zFL8np": {
+          "text": "7",
+          "hidden": true
+        },
+        "AezP1KOsGDjLu3uQ": {
+          "text": "8",
+          "hidden": true
+        },
+        "WxrzO1VftPrAGvcM": {
+          "text": "6",
+          "hidden": true
+        },
+        "6xqNT9snoImk11zY": {
+          "text": "9",
+          "hidden": true
+        },
+        "BTp8Qy9Ya8ELxjO5": {
+          "text": "9",
+          "hidden": true
+        },
+        "0Xcep46kd5YMVEK9": {
+          "text": "9",
+          "hidden": true
+        },
+        "wabfSaDlw3L47YAh": {
+          "text": "Labirynt",
+          "hidden": true
+        },
+        "wcgLtdSFypr6B1O0": {
+          "text": "Legowisko Melone",
+          "hidden": true
+        },
+        "SWxiOAkUCkF4LZVC": {
+          "text": "Recepcja",
+          "hidden": true
+        },
+        "HkB1NOEEt4smfwAp": {
+          "text": "Noclegownia",
+          "hidden": true
+        },
+        "HNINQPQUr4jH0DLS": {
+          "text": "Wspólna sala",
+          "hidden": true
+        },
+        "1yTJ6NIuRGNniTax": {
+          "text": "Wspólna sala",
+          "hidden": true
+        },
+        "CfS70Pw6LlxW8e4i": {
+          "text": "Szyb klatki schodowej",
+          "hidden": true
+        },
+        "gOzAxr5GsibvUosO": {
+          "text": "Skrzydło niezamieszkane",
+          "hidden": true
+        },
+        "2lpQytRuqKjqC7ng": {
+          "text": "Sierociniec Passerine",
+          "hidden": true
+        },
+        "zFuDAArMNGa4SBO4": {
+          "text": "Skrzydło niezamieszkane",
+          "hidden": true
+        },
+        "cdnIImRp1uVPBL78": {
+          "text": "Skrzydło niezamieszkane",
+          "hidden": true
+        },
+        "8JX0pMNaLfLAPIXC": {
+          "text": "Mieszkanie Sreluca i Srulema",
+          "hidden": true
+        },
+        "ugh8RYSSmahMz8rm": {
+          "text": "Apartament Eluharatha",
+          "hidden": true
+        },
+        "MSBKOdtZKiDh4weG": {
+          "text": "Apartament Eluharatha",
+          "hidden": true
+        }
+      },
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "The Crashed Coach": {
+      "id": "6YsPL5SsT67oMKwX",
+      "name": "Zniszczony powóz",
+      "navName": "Droga",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/coach-crash-unlabeled.webp",
+      "drawings": {
+        "RGNT4PLZKgPVleV7": {
+          "text": "1"
+        },
+        "TAJaovubOBfVVepG": {
+          "text": "2"
+        },
+        "twfXA0r3kwTPEN4P": {
+          "text": "2"
+        },
+        "VcVhgNv89s8LGmFz": {
+          "text": "2"
+        },
+        "E0DryveQYGXDNSE2": {
+          "text": "2"
+        },
+        "Sbu7zQGv0rcnXseA": {
+          "text": "3"
+        },
+        "5zV3wUMtMYrtEVlB": {
+          "text": "3"
+        },
+        "QVZoujcZMW6tZMjd": {
+          "text": "3"
+        },
+        "A8vg2xzzHcdrEx9O": {
+          "text": "4"
+        },
+        "C1JwVWwOO2SQZCvN": {
+          "text": "5"
+        },
+        "Cu4woitKNYC745xc": {
+          "text": "Do Bruchthin"
+        },
+        "rnJ6Eju77k9P6CPK": {
+          "text": "Do Blutroch"
+        }
+      },
+      "initialization_folder": "Przygody w Ubersreiku I"
+    },
+    "Whistlebone Alley": {
+      "id": "Tzm4ENjDH1Hrn3dK",
+      "name": "Gwizdokostna Alejka",
+      "units": "m",
+      "image": "modules/wfrp4e-core-pl/images/ua1/maps/whistle-bone-alley-unlabeled.webp",
+      "initialization_folder": "Przygody w Ubersreiku I"
+    }
+  }
+}

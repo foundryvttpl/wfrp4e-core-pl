@@ -5,4 +5,3 @@ if (test.failed)
 {
    this.actor.addSystemEffect("cold1")
 }
-

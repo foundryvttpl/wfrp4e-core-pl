@@ -1,0 +1,3059 @@
+{
+  "label": "Aktorzy (Przygody w Ubersreiku II)",
+  "mapping": {
+    "species": "system.details.species.value",
+    "gender": "system.details.gender.value",
+    "gmnotes": "system.details.gmnotes.value",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "items": {
+      "path": "items",
+      "converter": "fromPack",
+      "documentType": "Item",
+      "fallbackPolicy": "source-first"
+    },
+    "status": "system.details.status.value"
+  },
+  "folders": {
+    "Deadly Dispatch": "Śmiertelna przesyłka",
+    "Fishrook Returns": "Rybowron powraca",
+    "Double Trouble": "Zdublowane tarapaty",
+    "The Blessings That Drew Blood": "Błogosławieństwo, które przelało krew",
+    "The Grey Mountain Gold": "Złoto Gór Szarych",
+    "A Guide to Black Rock": "Przewodnik po Czarnej Skale"
+  },
+  "entries": {
+    "Abbess Mathild": {
+      "id": "91tSwvQY1IKIoISh",
+      "name": "Przeorysza Mathilda",
+      "description": "<section id=\"secret-5cAPFc4UV9cvxqwl\" class=\"secret\"><p>Zanim pojawi się przeorysza Mathilda, zimny wiatr zaczyna wiać ze strony @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.oqKZQGPERCD0tQK0]{Czarnego Kurhanu}, niosąc odległe odgłosy zaśpiewu. Jej biczownicy są teraz eterycznymi widmami, które zapowiadają nadejście upiorzycy przykryte nadpalonymi szatami, w których spłonęli. Kiedy pojawia się sama przeorysza, wyje tak, jak wówczas, gdy jej ciało było miażdżone pod kamieniami. Choć wciąż odziana jest w swoje olśniewające kapłańskie szaty, jej widok przeraża, gdyż na głowie nosi maskę z baraniej czaszki, a jej szczęka rozdziawia się szeroko, by wydać z siebie przenikające duszę wycie.</p><p>Przeorysza pragnie jedynie zemścić się na żywych. Będzie atakowała każdą żywą istotę, dopóki nie zostanie ona całkowicie zniszczona. Jeżeli w pobliżu obecny jest von Jungfreud albo kapłan Sigmara, płaczka skoncentruje furię najpierw na nich.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.91tSwvQY1IKIoISh",
+      "species": "Upiorna Płaczka",
+      "gender": "Kobieta",
+      "items": {
+        "2k11gainb721rabq": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "dzx1jw7yb5elxz2f": {
+          "id": "aE3pyW20Orvdjzj0",
+          "name": "Nienawiść",
+          "description": "<p>Stworzenie naprawdę nienawidzi Celu.</p>\n<p>Postać skrywa w duszy głęboką Nienawiść do „x”, czyli jakiejś grupy ludzi czy stworzeń, np. „mieszkańców Hochlandu”, „ośmiornic bagiennych” czy „handlarzy niewolników”. Postać nigdy nie może nawiązać kontaktów z kimś lub czymś, czego nienawidzi.</p>\n<p>Za każdym razem, gdy spotyka przedstawiciela znienawidzonej grupy, musi wykonać Test Psychologii. Jeśli ten się nie uda, postać nie jest w stanie dłużej powstrzymywać swojej Nienawiści. Pod koniec każdej następnej Rundy postać może wykonać kolejny Test Psychologii, by zakończyć napad Nienawiści. Taki atak sam dobiegnie końca, kiedy wszyscy członkowie znienawidzonej grupy znajdujący się w polu widzenia albo uciekną, albo zginą. Utrata Przytomności przynosi identyczny skutek.</p>\n<p>Postać będąca w szale Nienawiści musi natychmiast podjąć próbę zniszczenia znienawidzonej grupy w najszybszy i najbardziej zabójczy znany jej sposób: </p>\n<ul>\n<li>Otrzymuje premię +1 PS do wszystkich Testów walki przeciwko tej grupie.</li>\n<li>Jest niewrażliwa na Strach oraz Zastraszanie (ale nie na Grozę) wywoływane przez znienawidzonego wroga.</li>\n</ul>",
+          "originalName": "Nienawiść",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0",
+          "effects": {
+            "4MsIBocsfHnwGUr7": {
+              "id": "4MsIBocsfHnwGUr7",
+              "name": "Nienawiść",
+              "scriptData": [
+                {
+                  "id": "4MsIBocsfHnwGUr7",
+                  "name": "Testy walki przeciwko @item.system.specification.value",
+                  "script": "[Script.wAETU6aTRr9d4oCU]",
+                  "hideScript": "[Script.S4793DLFhjMxpM8x]"
+                }
+              ]
+            }
+          },
+          "specification": "Cel"
+        },
+        "b7iz2hxkjpvwmxqa": {
+          "id": "b7iz2hxkjpvwmxqa",
+          "name": "Broń (Zbezczeszczony symbol Sigmara)",
+          "description": "<p>Stworzenie nosi broń do walki wręcz lub używa w walce zębów, pazurów albo tym podobnych. Broń zadaje tyle Obrażeń, ile wynosi podana wartość, która już zawiera Bonus z Siły stworzenia. Zazwyczaj będzie to wynosiło 4 + Bonus z Siły (co reprezentuje broń ręczną).</p>",
+          "originalName": "Broń (Zbezczeszczony symbol Sigmara)",
+          "specification": "4"
+        },
+        "eivAvNgRg34wbpWh": {
+          "id": "EO05HX7jql0g605A",
+          "name": "Lot",
+          "description": "<p>Gdy stworzenie wykonuje Ruch, może przelecieć tyle metrów, ile wynosi podana wartość. Lecąc, ignoruje wszelkie przeszkody terenowe i inne oraz postaci. Pod koniec ruchu musi zdecydować, czy wyląduje, czy będzie kontynuować lot. Może w ramach tego ruchu wykonać Szarżę. Jeśli na początku swojej Tury leci, musi wybrać jako Ruch Latanie. Jeśli nie jest w stanie tego zrobić, MG decyduje, jak daleko stworzenie upadnie.</p>\n<p>Biorąc stworzenie na cel, zmierz odległość horyzontalną jak normalnie, a następnie zwiększ dystans o 1 poziom. Zatem strzał na Dalekim zasięgu stanie się strzałem na Bardzo dalekim zasięgu. Natomiast jeśli był to Bardzo daleki zasięg, stworzenia nie można dosięgnąć strzałem.</p>\n<p>Lecąc, stworzenie dostaje karę -20 do wszystkich prób walki dystansowej, ponieważ nurkuje w powietrzu i zatacza kręgi.</p>\n<blockquote class=\"foundry-note\"><p>Efekt <strong>Latanie</strong> jest domyślnie nieaktywny. Gdy zostanie aktywowany, będzie powodować kary do testów Ataków Zasięgowych.</p></blockquote>",
+          "originalName": "Lot",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.EO05HX7jql0g605A",
+          "effects": {
+            "qFRVjb5kUqUPzBgB": {
+              "id": "qFRVjb5kUqUPzBgB",
+              "name": "Latanie",
+              "scriptData": [
+                {
+                  "id": "qFRVjb5kUqUPzBgB",
+                  "name": "Test związane z ruchem podczas lotu",
+                  "script": "[Script.0iTLDgFHO9Rgc010]",
+                  "activationScript": "[Script.nSXzktHyNjGUXjaw]",
+                  "hideScript": "[Script.RZlMkxJz5apn0mUj]"
+                }
+              ]
+            }
+          },
+          "specification": "#"
+        },
+        "QPxRbQlqpaAlDlsZ": {
+          "specification": "4"
+        }
+      }
+    },
+    "Absolem Trott": {
+      "id": "NMdZpAyqdfS4o0Pl",
+      "name": "Absolem Trott",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.NMdZpAyqdfS4o0Pl",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Trott uważa, że jest potężnym wojownikiem ze starych, prostszych czasów. Wierzy, że racja stoi po stronie silniejszego, a zwykle to on jest najsilniejszą osobą w pokoju. Polityka i subtelna sztuka dyplomacji to po prostu narzędzia dla słabych.</p>\n<p>Absolem nie zawsze taki był. Od początku był brutalny i tępy, ale szanował autorytet rodziny i przenikliwość. Kiedy został wydziedziczony na rzecz swojej siostry Shalgrid, wpadł w szał, zabił wielu swoich żołnierzy i służących, po czym spróbował wszcząć bunt przeciwko ojcu. Skończył przez dwa lata uwięziony w zagrodzie dla psów bojowych.</p>\n<p>Stracił tam rozum. Wywalczył sobie pozycję przywódcy stada psów i kiedy go wypuszczono, uznał Shalgrid za swoją właścicielkę. Teraz jest lojalny wobec rodziny, ale jedynie dlatego, że wie, iż ta jest brutalniejsza od niego.</p>\n<p>Absolem jest gigantycznym mężczyzną, barczystym i mającym ponad dwa metry wzrostu. Jego twarz i łysa głowa są poznaczone bliznami po psich kłach i walkach, które stoczył w ciągu życia. Rzadko kiedy ściąga zbroję, nosi wielki, kolczasty młot bojowy i trzyma przy sobie trzy na wpół dzikie psy bojowe, kiedy przechadza się po wsi. Chwali się, że są częściowo hobogarami i że własnymi zębami rozerwał gardło ich ojca.</p>\n<p>Jeżeli Bohaterowie spotkają Absolema, spróbuje zrekrutować spośród nich dobrych wojowników, będzie dręczył pozostałych i zniszczy wszelkie potencjalne zagrożenia. Absolema hamują jedynie rozkazy lady Shalgrid przysyłane mu przez @UUID[Compendium.wfrp4e-ua2.actors.gdaMZK3R8I0jcRxW]{Gretę} albo subtelne interwencje jego zastępcy, @UUID[Compendium.wfrp4e-ua2.actors.JiMqU4nNuE1bDiC9]{Vidara Skarosta}.</p>",
+      "items": {
+        "j9dd6atjn9yonpwe": {
+          "id": "j9dd6atjn9yonpwe",
+          "name": "Śliniący się ogar bojowy",
+          "description": " ",
+          "originalName": "Śliniący się ogar bojowy"
+        },
+        "XQiiwS9m2Du1IMUz": {
+          "id": "XQiiwS9m2Du1IMUz",
+          "name": "Język (Bitewny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Bitewny)"
+        },
+        "csxtqnro1ubdbqog": {
+          "id": "csxtqnro1ubdbqog",
+          "name": "Etykieta (Najemnicy)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Najemnicy)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Najemnicy)"
+        },
+        "zoifjabdosm0vdor": {
+          "specification": "Młot bojowy"
+        },
+        "mZkiPPIWaVFKj1po": {
+          "id": "mZkiPPIWaVFKj1po",
+          "name": "Kolczasty młot bojowy",
+          "description": " ",
+          "originalName": "Kolczasty młot bojowy"
+        },
+        "sOeyBSC7zC3c7ssI": {
+          "id": "sOeyBSC7zC3c7ssI",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Entertain}",
+          "originalName": "Występy"
+        },
+        "G6uhRY63FOo0afuO": {
+          "id": "G6uhRY63FOo0afuO",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "wygd1FioWKJfHNnt": {
+          "id": "wygd1FioWKJfHNnt",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "vO7ijNIs5gF7Gv7t": {
+          "id": "vO7ijNIs5gF7Gv7t",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "3vlQV7UeZUNW1hx5": {
+          "id": "3vlQV7UeZUNW1hx5",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "0ZNXAhI3M0HY44lJ": {
+          "id": "0ZNXAhI3M0HY44lJ",
+          "name": "Kapitan Najemników",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.dN2K3ZBMu4rvGGpW]{Strażniczka Dróg}</p>",
+          "originalName": "Kapitan Najemników",
+          "careergroup": "Strażniczka Dróg",
+          "class": "Wędrowcy",
+          "skills": [
+            "Przekupstwo",
+            "Mocna Głowa",
+            "Hazard",
+            "Plotkowanie",
+            "Targowanie",
+            "Broń Biała (Podstawowa)",
+            "Percepcja",
+            "Broń Zasięgowa (Kusza)",
+            "Opieka nad Zwierzętami",
+            "Odporność",
+            "Zastraszanie",
+            "Intuicja",
+            "Sztuka Przetrwania",
+            "Jeździectwo (Konie)",
+            "Atletyka",
+            "Charyzma",
+            "Dowodzenie",
+            "Broń Zasięgowa (Prochowa)",
+            "Wiedza (Imperium)",
+            "Nawigacja"
+          ],
+          "talents": [
+            "Zmysł Bitewny",
+            "Władcza Postura",
+            "Szycha",
+            "Mówca"
+          ],
+          "trappings": [
+            "Lekki koń bojowy",
+            "Pistolet z 10 nabojami",
+            "Kapelusz i płaszcz dobrej jakości",
+            "oddział Strażników Dróg"
+          ]
+        }
+      }
+    },
+    "Arnulf Sosna": {
+      "id": "UajSlVhELZTctqyx",
+      "name": "Arnulf Sosna",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.UajSlVhELZTctqyx",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "items": {
+        "XQiiwS9m2Du1IMUz": {
+          "id": "XQiiwS9m2Du1IMUz",
+          "name": "Język (Bitewny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Bitewny)"
+        },
+        "ltb66x0qwmn8dvcw": {
+          "id": "ltb66x0qwmn8dvcw",
+          "name": "Etykieta (Szlachta, Żołnierze)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta, Żołnierze)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta, Żołnierze)"
+        },
+        "tboyuxpixrmn57sm": {
+          "specification": "natręci, arogancie młodziki, zbytnio napuszeni sigmaryci"
+        },
+        "aYix9XwBWvJm6Tbn": {
+          "specification": "3"
+        }
+      }
+    },
+    "Beatrice Mittelmäss": {
+      "id": "bEh6kCrg1JRaaBke",
+      "name": "Beatrice Mittelmäss",
+      "description": "<section id=\"secret-8MnncgDCGy0780KR\" class=\"secret\"><p>Beatrice była kiedyś E’een’n Op’rhll Hiss’ss, okrutną i zdeprawowaną demoniczną heroldką, która była znana z kąśliwych szyderstw. Jednak jej decyzję, by wielokrotnie raczyć dwór opowieściami o występkach kapłana, impresario teatralnego i kurczaka, uznano za prostackie. Niedługo później popadła w niełaskę.</p>\n<p>Beatrice wygląda jak kobieta w średnim wieku, która roztacza wokół aurę bohemy. Zwykle nosi wyblakłą i sfatygowaną szarofioletową suknię oraz sporo biżuterii. Duże, masywne pierścionki z okrągłymi kamieniami spoczywają na jej palcach, a barokowe ozdoby ze srebra zwisają z jej uszu i szyi. Owe bibeloty wyglądają efektownie, jednak w rzeczywistości są tandetnymi rekwizytami. Jej siwiejące kasztanowe włosy ułożone są w nieco rozwichrzoną fryzurę à la ul, tak aby ukryć powykręcany róg wyrastający z jej głowy.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.bEh6kCrg1JRaaBke",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "items": {
+        "hnzbu0xnkw4xz34o": {
+          "id": "FmHDbCOy3pH8yKhm",
+          "name": "Widzenie w Ciemności",
+          "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
+          "originalName": "Widzenie w Ciemności",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
+        },
+        "b814qjka9n84qepm": {
+          "specification": "Slaanesh, Czarownica"
+        },
+        "QQbAv4eTjBu8aMRp": {
+          "specification": "3"
+        },
+        "mpTsXGhO61MssiVt": {
+          "id": "mpTsXGhO61MssiVt",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Entertain}",
+          "originalName": "Występy"
+        },
+        "Wxl8YcypBApEDgV6": {
+          "id": "Wxl8YcypBApEDgV6",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "4EKTgHoZHXhLAtSv": {
+          "id": "4EKTgHoZHXhLAtSv",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "xnLJXllmiHPTTr1u": {
+          "id": "xnLJXllmiHPTTr1u",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "FSrR3dzHqjKGQhYS": {
+          "id": "FSrR3dzHqjKGQhYS",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "NUnszOYcdAvKW6yK": {
+          "id": "NUnszOYcdAvKW6yK",
+          "name": "Klątwa pecha",
+          "description": "<p>Składnikiem do tego zaklęcia jest jakiś przedmiot, który wcześniej był w posiadaniu celu: albo coś osobistego, albo pukiel włosów. Przez czas trwania zaklęcia cel prześladuje pech. Przykładowo pękają troki i łańcuchy oraz dzieje się wiele innych nieprzyjemnych, ale drobnych efektów narracyjnych. Cel otrzymuje karę -10 do wszystkich Testów (co sumuje się ze wszystkimi innymi modyfikatorami), a ponadto nie może używać Punktów Szczęścia.</p>\n\n<p>Zaklęcia z Tradycji Czarownictwa korzystają z dowolnego dostępnego Wiatru Magii, nie zważając na niebezpieczeństwa płynące z mieszania Wiatrów. Za każdym razem, gdy postać korzystająca z Czarownictwa wywołuje Manifestację, otrzymuje też 1 Punkt Zepsucia. Każde zaklęcie tej Tradycji może zadać dodatkowo każdemu celowi 1 poziom Stanu @Condition[Krwawienie]. Poza tym Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią. Na szczęście składniki Tradycji Czarownictwa są tanie i powszechnie dostępne. Zazwyczaj są to części ciał małych zwierząt. Składniki zaklęć kosztują tyle brązowych pensów (a nie srebrnych szylingów), ile wynosi PZ. Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników, jak opisano w ramce Zdobywanie Pożywienia i Ziół na stronie 129.</p>",
+          "originalName": "Klątwa pecha",
+          "effects": {
+            "zFqJGepPilWiSBCm": {
+              "id": "zFqJGepPilWiSBCm",
+              "name": "Klątwa pecha",
+              "scriptData": [
+                {
+                  "id": "zFqJGepPilWiSBCm",
+                  "name": "Klątwa pecha",
+                  "script": "[Script.brNRqfpPqD2Ki0cM]",
+                  "activationScript": "[Script.AZGXrZOQ4EzjxRL9]"
+                },
+                {
+                  "id": "zFqJGepPilWiSBCm",
+                  "name": "Brak punktów szczęścia",
+                  "script": "[Script.DMQ0taEpBUJU5njV]"
+                },
+                {
+                  "id": "zFqJGepPilWiSBCm",
+                  "name": "Nie można edytować punktów szczęścia",
+                  "script": "[Script.6xTtJEhRc4OjcDTf]"
+                }
+              ]
+            }
+          },
+          "duration": "Bonus SW dni",
+          "target": "1",
+          "range": "Bonus SW kilometrów"
+        }
+      }
+    },
+    "Begrin Belbaksson": {
+      "id": "ssb1ZysBxnJaJtic",
+      "name": "Begrin Belbaksson",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.ssb1ZysBxnJaJtic",
+      "species": "Krasnolud",
+      "gender": "Mężczyzna",
+      "gmnotes": "<p>Długa, czarna broda Begrina przyprószona jest siwizną. Jego twarz jest wiecznie zmarszczona, a on sam niewiele się odzywa, pozwalając @UUID[Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC]{Dieterowi} mówić za ich obu. Próby wciągnięcia go w rozmowę w większości skutkują wymamrotaniem kilku przekleństw w Khazalidzie. @UUID[Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC]{Dieter} może zdradzić, że Begrin był górnikiem, który przez większość życia pracował w @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.w0YfGxsBuLoODCgc]{Górach Szarych}. Może mu się też wymknąć, że Begrin spędził lata spłacając hazardowe długi swojego ojca.</p>\n<p>Oczywiście nic z tego nie jest prawdą. Begrin dorastał na ulicach Nuln. Ubersreik jest najbliższym Górom Szarym miejscem, w jakim kiedykolwiek był. Nie jest też członkiem klanu Harataki. Właściwie jest dość towarzyski (jak na krasnoluda), ale wie, że rozmawianie lepiej zostawić @UUID[Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC]{Dieterowi}. Zanim Begrin poznał Wernera, desperacko próbował zarobić na życie jako nieudolny złodziej. Dlatego jest o wiele bardziej lojalny wobec Dietera, niż tamten na to zasługuje. Werner nie zdaje sobie jednak sprawy, jak bardzo niechętny przemocy jest Begrin. Chociaż będzie walczył w samoobronie, nigdy nikogo nie zabił i jest bardzo mało prawdopodobne, aby kiedykolwiek zaatakował kogoś z zamiarem skrzywdzenia go.</p>",
+      "items": {
+        "4y9iBrqkn7HB4UZ4": {
+          "id": "4y9iBrqkn7HB4UZ4",
+          "name": "Strzelanie (60)",
+          "description": "<p>Stworzenie dysponuje bronią dystansową. Broń zadaje podane Obrażenia, a jej zasięg w metrach podany jest w nawiasie.</p>",
+          "originalName": "Strzelanie (60)",
+          "specification": "9"
+        },
+        "q5VqE6jr1oNZ0gwk": {
+          "id": "q5VqE6jr1oNZ0gwk",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "e1VTQEFtt7NTizZJ": {
+          "id": "e1VTQEFtt7NTizZJ",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "xVJgOaHafEbYrZ0L": {
+          "id": "xVJgOaHafEbYrZ0L",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "StPrIYuPS74TYfIw": {
+          "id": "StPrIYuPS74TYfIw",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "5wt7qr18LJ3ybuQn": {
+          "id": "5wt7qr18LJ3ybuQn",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Blixa": {
+      "id": "tFzOCwsoKScGaCsH",
+      "name": "Blixa",
+      "description": "<section id=\"secret-6Vxb7Bc4M7NXF1gM\" class=\"secret\"><p>Blixa była kiedyś H’xxxii Warrrpl’vish, zachwycającą @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{demonetką}, której gracja oraz pochlebcze pokazy upodobania uczyniły gwiazdą w Pałacu Rozkoszy. Tak było do dnia, w którym Slaanesh urządził wyjątkowo groteskową maskaradę i przyłapał ją pogrążoną w marzeniach i otwarcie ziewającą.</p>\n<p>Blixa objawia się jako duży czarny pies ze strasznymi wzdęciami, obciętym ogonem i czujnym wyrazem twarzy. Jeśli jest pewna, że nikt jej nie obserwuje, to od czasu do czasu liże się długim, lepkimi różowym językiem. Każdy, kto zbliży się do niej dostatecznie blisko, natychmiast się cofnie przed jej ohydnym oddechem.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.tFzOCwsoKScGaCsH",
+      "species": "Pies / Demonetka",
+      "gender": "???",
+      "items": {
+        "02mdrqqbiv8ymotd": {
+          "id": "FmHDbCOy3pH8yKhm",
+          "name": "Widzenie w Ciemności",
+          "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
+          "originalName": "Widzenie w Ciemności",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
+        },
+        "hsyfa0rbw48hrl08": {
+          "specification": "Mały"
+        },
+        "uUOAAZIIImlieVfc": {
+          "specification": "3"
+        },
+        "rpvLCuDupnxsar6L": {
+          "id": "ClOlztW6hH8rslbp",
+          "name": "Tropiciel",
+          "description": "<p>Tropiciele skutecznie śledzą swoje ofiary, zazwyczaj za pomocą węchu lub słuchu. Do wszystkich Testów Tropienia dodają PS równe swojemu Bonusowi z Inicjatywy.</p>",
+          "originalName": "Tropiciel",
+          "sourceId": "Compendium.wfrp4e-core.items.ClOlztW6hH8rslbp",
+          "effects": {
+            "ftGagmf8rj6rq3ir": {
+              "id": "ftGagmf8rj6rq3ir",
+              "name": "Tropiciel",
+              "scriptData": [
+                {
+                  "id": "ftGagmf8rj6rq3ir",
+                  "name": "Tropiciel",
+                  "script": "[Script.neaaVy6D6tfcst5P]",
+                  "activationScript": "[Script.FmLx9pwOkzqqU7Ph]",
+                  "hideScript": "[Script.yatUu0cd7iKs50rq]"
+                }
+              ]
+            }
+          }
+        },
+        "mJM15X3bHpwKhJ0f": {
+          "specification": "Slaanesha"
+        }
+      }
+    },
+    "Boniel von Bruner": {
+      "id": "H4JTrhGvhlB8zc0a",
+      "name": "Boniel von Bruner",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.H4JTrhGvhlB8zc0a",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Boniel wyraźnie jest bratem @UUID[Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC]{Gutele}. Mimo że są różnej płci, a on ma krótsze włosy, wyglądają bardzo podobnie i łatwo zgadnąć, że są bliźniakami.</p>",
+      "items": {
+        "16w4gb291azjws6p": {
+          "id": "16w4gb291azjws6p",
+          "name": "Gromada sług",
+          "description": " ",
+          "originalName": "Gromada sług"
+        },
+        "Ggx0bRaCuq8MbF0g": {
+          "id": "Ggx0bRaCuq8MbF0g",
+          "name": "2k10 Złotych Koron",
+          "description": " ",
+          "originalName": "2k10 Złotych Koron"
+        },
+        "B7Jg9OjyJqbNTPQc": {
+          "id": "B7Jg9OjyJqbNTPQc",
+          "name": "Rodzinna pieczęć",
+          "description": " ",
+          "originalName": "Rodzinna pieczęć"
+        },
+        "8oDXzFHCkr5U00B5": {
+          "id": "8oDXzFHCkr5U00B5",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "2dqkm2WMOYEmJ693": {
+          "id": "2dqkm2WMOYEmJ693",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "jFhBnpa9ipXwnYs0": {
+          "id": "jFhBnpa9ipXwnYs0",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "Nc9LirvxwYdXSbDy": {
+          "id": "Nc9LirvxwYdXSbDy",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "PfrQFuP05jzpuP49": {
+          "id": "PfrQFuP05jzpuP49",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "Gyxk4K0pRZl5XY4c": {
+          "id": "Gyxk4K0pRZl5XY4c",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Brunhilde/Brandt": {
+      "id": "20kAPAeaS7noET48",
+      "name": "Brandt/Brunhilda",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.20kAPAeaS7noET48",
+      "species": "Mimik",
+      "gender": "???",
+      "status": "Silver 5/0",
+      "gmnotes": "<p>Brandt jest pasożytem. Kradnie życie swoich ofiar, mieszkając w ich domach i wykorzystując ich bogactwo, aby przetrwać. Jednak jak bardzo by się nie starał, nie jest w stanie udawać tej samej osoby przez dłuższy czas. Jest niezdolny do odczuwania ludzkich emocji, a jego brak empatii w końcu budzi podejrzenia otoczenia. Ciągle jest zmuszany do porzucania skradzionych tożsamości i ucieczki do kanałów lub w głuszę. Mimo to Brandt uważa, że tym razem może być w stanie wejść w rolę na dłuższy okres. @UUID[Compendium.wfrp4e-starter-set.actors.Je9bENZeEyEaQR9p]{Hellin Karstadt-Stampf} to potężna kobieta, której działań prawie nikt nie zakwestionuje. Nawet jej własna rodzina trochę się jej boi. Jeśli Brandt zdoła ją zastąpić, powinien być w stanie utrzymać tę mistyfikację przez lata, a nawet dekady.</p>\n<p>Brunhilda była pulchną kobietą po sześćdziesiątce o rumianych policzkach. Była uwielbiana przez większość domowników oraz rodzinę Karstadtów za nieschodzący z twarzy uśmiech i poczucie humoru. Brandt uważa, że jej rola jest trudna. Jego uśmiechy są dziwne, a żarty nie wzbudzają śmiechu. Nie może się doczekać zmiany tożsamości.</p>",
+      "items": {
+        "8cu75s96ayrlgbum": {
+          "specification": "Ognia"
+        },
+        "7cho4rqnuwbkbuek": {
+          "specification": "Przeciętny"
+        },
+        "kVJw7XkjXWLWAAU9": {
+          "specification": "0"
+        }
+      }
+    },
+    "Dieter Werner": {
+      "id": "uXMBBaq10Mn4WopC",
+      "name": "Dieter Werner",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "gmnotes": "<p>Mózgiem całej operacji jest Dieter Werner, doświadczony szarlatan, którego poziom życia zależy od powodzenia jego szwindli. To on wymyśla i kieruje przekrętami, których podejmują się hochsztaplerzy, ale chociaż jest sprytnym przestępcą, nie ma ostatnio szczęścia. Teraz jego grupa musi z sukcesem kogoś oszukać albo stawić czoła nędzy.</p><p>Poplątane, białe i rzadkie włosy Dietera, jego szczupła sylwetka i wyraźny piwny brzuszek mogą należeć do przedwcześnie podstarzałego czterdziestolatka lub wciąż żwawego sześćdziesięciolatka. Ma słabo uwydatniony podbródek, garbi się i ma smutne oczy, ale często się śmieje i będzie starał się dogadać ze wszystkimi, działając jako rozjemca, gdy Begrin odnosi się do ludzi w niewłaściwy sposób. Gdy ktoś pyta go o jego przeszłość, mamrocze coś o tym, że kiedyś był doktorem w Middenheim, i narzeka, że nie może założyć praktyki w Ubersreiku z powodu nieustępliwości lokalnej @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.XXEYah0l4NQV0Uhs]{Gildii Medyków}.</p><p>Kiedy nie gra roli zdziecinniałego medyka, jest wysokim, chudym, łysym mężczyzną zbliżającym się do pięćdziesiątki. Piwny brzuch i włosy, gdy nie są używane, znikają z powrotem w jego @UUID[Compendium.wfrp4e-core.items.gx451Vn2Ru3eKLIg]{zestawie do charakteryzacji}, a chód oraz postawa Wernera zmieniają się całkowicie. Przez lata nauczył się, że udawanie wymizerowanego medyka jest przydatne i czuje się w tej roli komfortowo. Zapłacił nawet cyrulikowi, aby nauczył go pewnych umiejętności medycznych (głównie zszywania ran), aby uwiarygodnić swoje odgrywanie.</p><p>Dieter uważa się za lepszego od głupców, którzy padają ofiarą jego planów, ale jak na ironię sam również jest ofiarą tej samej upartej wytrwałości i nadmiernej pewności siebie, których szuka u swoich celów. Zamiast wycofać się, gdy Friedrich zatrudnił poszukiwaczy przygód, Dieter nalegał na kontynuację planu z niewielkimi poprawkami. Zainwestował w to oszustwo zbyt dużo czasu i wysiłku, żeby teraz się poddać.</p><p>Dieter nosi sztuczne zęby, które pomagają mu zmienić wygląd. Wcielając się w Dietera, MG powinien mówić tak, jakby jego usta były zbyt pełne, i mieć lekko nosowy tembr głosu.</p>",
+      "items": {
+        "0CwV96kTDRF0jUhk": {
+          "id": "0CwV96kTDRF0jUhk",
+          "name": "Występy (Aktorstwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy (Aktorstwo)"
+        },
+        "dpAdPez4mde5cWcl": {
+          "id": "dpAdPez4mde5cWcl",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "suZg4IDYj4puNJan": {
+          "id": "suZg4IDYj4puNJan",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "TjXxudBARLew8LxU": {
+          "id": "TjXxudBARLew8LxU",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "SO6MtikLqosVRrKa": {
+          "id": "SO6MtikLqosVRrKa",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "GWorJSgGklCWKmSz": {
+          "id": "GWorJSgGklCWKmSz",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "xlt6tH1KouMKgcEp": {
+          "specification": "2"
+        },
+        "h6gpDwrbnRB0q1Zm": {
+          "id": "h6gpDwrbnRB0q1Zm",
+          "name": "zestawy biednych ubrań",
+          "description": " ",
+          "originalName": "zestawy biednych ubrań"
+        }
+      }
+    },
+    "Dietgar Horstmann": {
+      "id": "g0EdWgwFP3JN9CQs",
+      "name": "Dietgar Horstmann",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.g0EdWgwFP3JN9CQs",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Srebro 5",
+      "gmnotes": "<p>Dietgar ma przeciętną sylwetkę i okrągłą, pomarszczoną twarz oraz duży nos, który nadaje jego surowej twarzy komiczny wygląd. Jego krótkie, siwiejące włosy szybko rzedną. Nigdy nie podnosi głosu, jest zawsze uprzejmy i pełen szacunku. Nawet w sytuacjach, gdy niestety zmuszony jest do użycia przemocy.</p><p>Dietgar był kiedyś drobnym złodziejaszkiem w @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.OONgV24fbQ8ZEqSr]{Bögenhafen}, ale uciekł z miasta po tym, jak został złapany i napiętnowany za swe występki. Do służby u Karstadtów dołączył jako stajenny. Planował obrabować posiadłość, ale odkrył, że pracując w gospodarstwie domowym, wiódł wygodniejsze życie, niż kiedy był rzezimieszkiem. Zaprzyjaźnił się z młodą Helliną Karstadt i jest teraz jednym z jej bardziej zaufanych sług.</p><p>Na prawej ręce ma brzydką bliznę w kształcie litery Z, będącą wynikiem napiętnowania. Zawsze nosi rękawiczki, aby ją ukryć.</p>",
+      "items": {
+        "maptrjyzxwhss9k3": {
+          "id": "maptrjyzxwhss9k3",
+          "name": "Etykieta (Słudzy)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Słudzy)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Służba)"
+        },
+        "yqohw1o2d48e1vme": {
+          "id": "HbrwGhUl0ZXz4kLA",
+          "name": "Twardziel",
+          "description": "<p>Stworzenie jest w stanie przyjąć więcej obrażeń niż większość innych istot. Zwiększ Żywotność stworzenia o wartość równą jego Bonusowi z Wytrzymałości (zastosuj to przed wszelkimi modyfikatorami <i>Rozmiaru</i>).</p>",
+          "originalName": "Twardziel",
+          "sourceId": "Compendium.wfrp4e-core.items.HbrwGhUl0ZXz4kLA",
+          "effects": {
+            "yrUvulIfrQfAJmkB": {
+              "id": "yrUvulIfrQfAJmkB",
+              "name": "Twardziel",
+              "scriptData": [
+                {
+                  "id": "yrUvulIfrQfAJmkB",
+                  "name": "Twardziel",
+                  "script": "[Script.GuUCErVbk5hrFzR3]"
+                }
+              ]
+            }
+          }
+        },
+        "pF5XS6kxjSCFMNmJ": {
+          "id": "pF5XS6kxjSCFMNmJ",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "HjUhSfj3nS0WjA2D": {
+          "id": "HjUhSfj3nS0WjA2D",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "EPfpYLRLIC6SHxC4": {
+          "id": "EPfpYLRLIC6SHxC4",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "21kIvuQhC2vi4s0l": {
+          "id": "21kIvuQhC2vi4s0l",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "aDgeYcjLRWuGZMPC": {
+          "id": "aDgeYcjLRWuGZMPC",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "8nzZfHzEsJBTfmRa": {
+          "specification": "2"
+        }
+      }
+    },
+    "Dwarf Mob": {
+      "id": "pPrkKah4cpTodjEu",
+      "name": "Krasnoludzka banda",
+      "description": "<p>Rozdrażniony tłum składający się z zarostu, ostrych narzędzi\ni niezliczonych pretensji.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.pPrkKah4cpTodjEu",
+      "species": "Krasnoludy",
+      "gender": "Różne",
+      "items": {
+        "dzm3k38a1ll11nxu": {
+          "specification": "Broń Improwizowana"
+        }
+      }
+    },
+    "Florine Heine-Jungfreud": {
+      "id": "W8OiMH3Pvn06tZL3",
+      "name": "Florine Heine-Jungfreud",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.W8OiMH3Pvn06tZL3",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 5",
+      "gmnotes": "<p>Żona księcia nigdy nie była blisko związana z @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{mężem}. Ich małżeństwo było podyktowane politycznymi względami jej rodziny (podupadłego, starożytnego averlandzkiego rodu), więc po urodzeniu trzech zdrowych synów kobieta wycofała się, by cieszyć się własnym życiem, głównie w jej rodowych posiadłościach, gdzie zajmowała się trudnymi baronami. Była w Ubersreiku, gdy nadeszły armie Imperatora, i uciekła wraz z mężem i jej najstarszym synem do @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.TRZcW4cIpmwLwbDA]{Neufaljung}.</p><p>Teraz utknęła w wietrznym zamku z członkami rodziny, której nie lubi, a główny powód jej małżeństwa przepadł. Jedyny syn, o którego dbała, jest uwięziony w Ubersreiku albo stało się z nim coś gorszego. Wygląda na to, że szykuje się wojna, a ona nie ma apetytu na konflikt. Modli się do Sigmara i Shallyi, by pomogli jej wrócić do Pfungzig z jej chłopcem.</p><p>Jako piękna kobieta po czterdziestce lady Florine wciąż ubiera się zgodnie z ostentacyjnym stylem południowej Imperialnej szlachty, co było źródłem pewnego rozbawienia w Ubersreiku. Wiąże czarne włosy w skomplikowane warkocze.</p><h3>Czego chce…</h3><ul><li><p>Jeżeli lady Florine znajdzie sposób na powrót do Averlandu bez narażania na szwank jej małżeństwa, zrobi to.</p></li><li><p>Delikatny charakter młodego @UUID[Compendium.wfrp4e-starter-set.actors.TKM7T6dQMde2jUWJ]{Wendelina} pochodzi od jego matki, która od jego urodzenia poświęcała mu dużo uwagi. Zrobi wszystko dla ludzi, którzy go jej zwrócą.</p></li><li><p>Florine jest samotna. Nie jest snobką, więc nawet współczujący służący mógłby stać się powiernikiem jej tajemnic i poznać wiele prawd na temat von Jungfreudów i ich sytuacji.</p></li></ul><h3>Można ją znaleźć…</h3><ul><li><p>Jedzącą wraz z mężem przy wysokim stole w @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.TRZcW4cIpmwLwbDA#wielkiej-sali]{Wielkiej Sali}, z wyrazem niezadowolenia na twarzy.</p></li><li><p>Polującą konno w dolinie Ruhig wraz z paroma gwardzistami i damami dworu.</p></li><li><p>W kaplicy, modlącą się o bezpieczny powrót jej @UUID[Compendium.wfrp4e-starter-set.actors.TKM7T6dQMde2jUWJ]{syna}.</p></li></ul>",
+      "items": {
+        "d3wffthdylp7yx81": {
+          "id": "d3wffthdylp7yx81",
+          "name": "ostentacyjna suknia",
+          "description": " ",
+          "originalName": "ostentacyjna suknia"
+        },
+        "r59jmhpevg8r5v8t": {
+          "id": "r59jmhpevg8r5v8t",
+          "name": "ukryty schowek z 500 złotymi koronami",
+          "description": " ",
+          "originalName": "ukryty schowek z 500 złotymi koronami"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Averland)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Averland)"
+        },
+        "orwa7tcw1t4tafhd": {
+          "id": "orwa7tcw1t4tafhd",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "NFLCM7vVKDhaE8ke": {
+          "id": "NFLCM7vVKDhaE8ke",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "QkJOpobWy33cv6A7": {
+          "id": "QkJOpobWy33cv6A7",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "V5Y2XlKwJWz7oDNh": {
+          "id": "V5Y2XlKwJWz7oDNh",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "mP77YlKkqbXhBPPg": {
+          "id": "mP77YlKkqbXhBPPg",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "BsDHOYuIs6HzSAJo": {
+          "id": "BsDHOYuIs6HzSAJo",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Footmen And Maids": {
+      "id": "q8McLUvseFgHhqnA",
+      "name": "Lokaje i pokojówki",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.q8McLUvseFgHhqnA",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "status": "Srebro 1",
+      "items": {
+        "OXq4gU2eYNetAKDu": {
+          "id": "OXq4gU2eYNetAKDu",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "Pg1oRjYtlc48P5gm": {
+          "id": "Pg1oRjYtlc48P5gm",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "zO8IRNmvyDqxwbgT": {
+          "id": "zO8IRNmvyDqxwbgT",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "FHcbuAIQqzLYENPe": {
+          "id": "FHcbuAIQqzLYENPe",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "hhcMn4m3FSbuEjwt": {
+          "id": "hhcMn4m3FSbuEjwt",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "QrTgjrvilmYWgqsO": {
+          "specification": "2"
+        }
+      }
+    },
+    "Friedrich Müller": {
+      "id": "ByQdLbsYV68zzTuX",
+      "name": "Friedrich Müller",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.ByQdLbsYV68zzTuX",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "gmnotes": "<p>Friedrich podchodzi w życiu do wszystkiego, włącznie z Bohaterami, z entuzjazmem – bez względu na to, jak jest on bezpodstawny. To wysoki, patykowaty młody mężczyzna z dużą ilością energii. Wygląda trochę starzej, niż wskazywałaby na to metryka, z powodu zakoli i podbródka, który wygląda na za duży dla jego twarzy. Jego ojciec był odnoszącym sukcesy, choć mało ambitnym kupcem handlującym produktami mlecznymi, który pozwalał swojej siostrze Marcie zajmować się prowadzeniem biznesu, podczas gdy on wykonywał codzienne prace. Takie zajęcia śmiertelnie nudzą Friedricha i jest on pewny, że nie jest to życie dla niego. Marta jest zapracowaną mistrzynią gildii, która nie ma własnej rodziny. Jest świadoma tego, że Friedrich jest darmozjadem, i zaczyna być zmęczona udzielaniem mu kolejnych pożyczek.</p>",
+      "items": {
+        "ny5aj4zf3po4mrq6": {
+          "specification": "Ciężka praca"
+        },
+        "wIAcoxPByUPH3gEL": {
+          "id": "wIAcoxPByUPH3gEL",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "nBnrvQHNHNQ7yV3f": {
+          "id": "nBnrvQHNHNQ7yV3f",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "oWXQqALWcfDUXlce": {
+          "id": "oWXQqALWcfDUXlce",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "vgOoFePfDCqaAsIe": {
+          "id": "vgOoFePfDCqaAsIe",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "MPQCQLKruOtWfHxo": {
+          "id": "MPQCQLKruOtWfHxo",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Fritz The Fleet": {
+      "id": "wBHBA4jxgIrrfz9D",
+      "name": "Prędki Fritz",
+      "description": "<section id=\"secret-Ufbms2UlVcI2nu5e\" class=\"secret\"><p>Fritz jest wprawionym w podróżowaniu kurierem, który język ma prawie tak szybki jak stopy. Jest dobrym źródłem nielokalnych plotek, ponieważ stale jest w ruchu, od tak dalekiego południa jak @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.vg5HI5Y74MmXMR3G]{Dunkelberg}, po północne krańce @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.0Cmr0LZ3boLbNt6p]{Vorberglandu}.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.wBHBA4jxgIrrfz9D",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "items": {
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Lokalna)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Lokalna)"
+        },
+        "5mgtHskohQXJznpA": {
+          "id": "5mgtHskohQXJznpA",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "fbk7enmlYoOBK6ek": {
+          "id": "fbk7enmlYoOBK6ek",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "gD8W00EEGJrcmVkA": {
+          "id": "gD8W00EEGJrcmVkA",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "fHXRGI3Y1eOrzHHA": {
+          "id": "fHXRGI3Y1eOrzHHA",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "pDiKHZawf9fg8DIc": {
+          "id": "pDiKHZawf9fg8DIc",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Gele": {
+      "id": "pEyKFc0mlJSqperN",
+      "name": "Gele",
+      "description": "<section id=\"secret-vcb10z5xGXbGVpBK\" class=\"secret\"><p>Nazwisko Gele jest podobne do odbiorcy z tylko jedną albo dwoma zmienionymi literami.</p>\n<p>Gele jest odnoszącą sukcesy flisaczką po trzydziestce, z rudymi włosami i pełnymi rezerwy brązowymi oczami. Jej ręce pokrywa wiele blizn od żyłek wędkarskich, ostrych haczyków i ciężkiej pracy. Wraz z mężem Thomelem przeszła drogę od prostych rybackich majtków do właścicieli własnego statku. Śmierć Thomela nastąpiła podczas burzy na Reiku, gdy walczyli o uratowanie statku. Ten fakt mocno nią wstrząsnął. Bardzo tęskni za mężem i ma ciężki przypadek syndromu ocalałego. W najtrudniejszych momentach uważa, że powinna była umrzeć razem z nim.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.pEyKFc0mlJSqperN",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "items": {}
+    },
+    "Gotlinde von Jungfreud": {
+      "id": "yn4caxkjVT9THORJ",
+      "name": "Gotlinda von Jungfreud",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.yn4caxkjVT9THORJ",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 5",
+      "gmnotes": "<p>Mimo siedemdziesięciu ośmiu lat i wątłego wyglądu, matka @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{księcia} jest energiczną kobietą o bystrych oczach i wyrazistej osobowości. Pozostaje panią kasztelan @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.TRZcW4cIpmwLwbDA]{Neufaljung} od czasów śmierci jej męża, nadzorującą zamek, podczas gdy jej syn rządził Ubersreikiem. Ma uporządkowany, zapracowany umysł i dobrą reputację pośród zamkowej służby dzięki jej żelaznej dyscyplinie równoważonej przez macierzyńską opiekuńczość wobec służących. Gotlinda prowadzi zamek z czymś, co określa „krasnoludzkimi zasadami”, które oznaczają utrzymywanie grubych murów i dobrze zaopatrzonych spiżarni. Nosi dobrej jakości, praktycznie skrojone stroje i lubi wypuszczać sokoły z zamkowych blanek.</p><p>Lady Gotlinda jest wściekła na to, jak Karl-Franz potraktował jej rodzinę, i uważa, że władca postradał zmysły. Jest dobrą przyjaciółką Wielkiej Matriarchini Thory Hirdsdottir z @UUID[Compendium.wfrp4e-archives1.journals.De6yFCVO4shYbAUx]{Karak Azgaraz} i obydwie czasami się spotykają, by omówić wydarzenia z krain ludzi. Lady Gotlinda poprosiła szare krasnoludy o pomoc poprzez przyjaciółkę, ale jeszcze nie zdołała zawrzeć żadnego sojuszu, a jedynie uzyskać słowa poparcia.</p><h3>Czego chce…</h3><ul><li><p>Lady Gotlinde jest sfrustrowana tym, że @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{Graf Sigismund} nie może skupić się na jednym planie działania. Martwi się, że reputacja rodziny zostanie na zawsze zszargana przez to, jak łatwo zostali wyparci z Ubersreiku. Cokolwiek pomoże przywrócić dobre imię Jungfreudów, sprawi jej radość.</p></li><li><p>Lubiła rządzić zamkiem na własnych warunkach i chciałaby, aby wszyscy nowi przybysze wrócili do Ubersreik i zabrali ze sobą swoje bałagany.</p></li><li><p>Lady Gotlinde nie może znieść widoku Lady @UUID[Compendium.wfrp4e-ua2.actors.gdaMZK3R8I0jcRxW]{Grety Trott}, i jest przerażona, że urodzi następcę tronu księstwa. Chce wiedzieć, co knuje Trott.</p></li></ul><h3>Można ją znaleźć…</h3><ul><li><p>Podczas sprawdzania ziarna pod kątem pleśni i szkodników w zamkowym spichlerzu wraz ze swoimi urzędnikami.</p></li><li><p>W Wieży Bowyerów, prosząc o audiencję u jej  @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{syna}.</p></li><li><p>Podczas zbesztania strażnika zamkowego przy bramie za krzywo założony hełm.</p></li></ul>",
+      "items": {
+        "pt52wsadjvf1yobr": {
+          "id": "pt52wsadjvf1yobr",
+          "name": "Sigward (trzyletni sokół, wyszkolony do polowań)",
+          "description": " ",
+          "originalName": "Sigward (trzyletni sokół, wyszkolony do polowań)"
+        },
+        "1vrkmao3xk5ihmck": {
+          "id": "1vrkmao3xk5ihmck",
+          "name": "sprzęt sokolnika",
+          "description": " ",
+          "originalName": "sprzęt sokolnika"
+        },
+        "2tsy36awfxh2ulcv": {
+          "id": "2tsy36awfxh2ulcv",
+          "name": "klatki z żywymi myszami",
+          "description": " ",
+          "originalName": "klatki z żywymi myszami"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Sokolnictwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Sokolnictwo)"
+        },
+        "bBLK2hznjPlby6Jb": {
+          "id": "bBLK2hznjPlby6Jb",
+          "name": "Muzyka (Klawesyn)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Klawesyn)"
+        },
+        "vsa75ecsgjk9ha09": {
+          "id": "vsa75ecsgjk9ha09",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "j6ILTlSEoqiQi3uM": {
+          "id": "j6ILTlSEoqiQi3uM",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "SuJO8N6ozhMMSsAM": {
+          "id": "SuJO8N6ozhMMSsAM",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "qBlHemuaq6Iv0Gil": {
+          "id": "qBlHemuaq6Iv0Gil",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "gk2g7HJ4Kj2O7dsy": {
+          "id": "gk2g7HJ4Kj2O7dsy",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "Emc6OTg2SKFaPurF": {
+          "id": "Emc6OTg2SKFaPurF",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Gragni Gelrikssnev": {
+      "id": "hz49hrfXXU1ZZJt3",
+      "name": "Gragni Gelrikssnev",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.hz49hrfXXU1ZZJt3",
+      "species": "Krasnolud",
+      "gender": "Mężczyzna",
+      "gmnotes": "<p>Wysoki, jak na krasnoluda, z opaloną od pracy na pokładzie skórą i włosami, które zaczynają siwieć. Gragni dwie dekady temu niechętnie podjął się pracy jako majtek na łodzi, ale pokochał podróżowanie po rzekach Imperium.</p><p>Generalnie cichy krasnolud staje się dość rozmowny, gdy tylko wleje w siebie kilka kolejek. Jego ulubionym tematem jest utracona Twierdza jego rodu i wiele niefortunnych prób jej odzyskania. Gdzieś w środku wie, że Karak Branar nigdy nie zostanie odzyskane, lecz mimo to, za każdym razem, gdy dokuje w Ubersreiku, wysyła @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.sTFp4j7DXF96VNvG]{królowej Vildzie} kilka monet.</p>",
+      "items": {
+        "csfrkhGcf4J27Pqw": {
+          "id": "csfrkhGcf4J27Pqw",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "W3QlRDkKqXmLjSRN": {
+          "id": "W3QlRDkKqXmLjSRN",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "FpEtVuKPVtSU1u6X": {
+          "id": "FpEtVuKPVtSU1u6X",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "u0TJt2HaoU4m07q6": {
+          "id": "u0TJt2HaoU4m07q6",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "UPVm1hIf1ODiA7z5": {
+          "id": "UPVm1hIf1ODiA7z5",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Greta Trott": {
+      "id": "gdaMZK3R8I0jcRxW",
+      "name": "Greta Trott",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.gdaMZK3R8I0jcRxW",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 3",
+      "gmnotes": "<p>Życie jako Trott to jedno wielkie knucie przeciwko reszcie rodziny. Lady Greta jest wciąż ulubienicą ojca, ale boi się, że znajduje się zbyt daleko, by utrzymać swoje wpływy. Nie znosi swojego okrutnego brata @UUID[Compendium.wfrp4e-ua2.actors.NMdZpAyqdfS4o0Pl]{Absolema}, ale trzyma się blisko niego, ponieważ jego brutalność jest użyteczna. Zdaje sobie sprawę z tego, że jej siostry knują przeciwko niej, ale wie, że noszenie pod sercem dziedzica księcia daje jej przewagę w rodzinnej polityce. Jej mąż @UUID[Compendium.wfrp4e-ua2.actors.34yRS0R4e4grG3Fj]{Sigismund} jest użytecznym, niegroźnym idiotą i dziewczyna nie żałuje swojej obecnej sytuacji.</p><p>Lady Greta ma jasnobrązowe włosy i przyjazną twarz, która skrywa jej podstępny charakter. Jest w zaawansowanej ciąży.</p><h3>Czego chce…</h3><ul><li><p>Greta uwielbia wyzwania. Przymierze między Trottami a Jungfreudami wydawało się niemożliwe parę lat temu, ale jej udało się je wypracować. Jeżeli coś wydaje się trudne, dziewczyna spróbuje to osiągnąć.</p></li><li><p>Nie chce, żeby ktokolwiek odkrył, że zaszła w ciążę z Gerhardtem von Jungfreudem, a nie @UUID[Compendium.wfrp4e-ua2.actors.34yRS0R4e4grG3Fj]{Sigismundem Młodszym}. Podejmie się drastycznych środków, by utrzymać to w tajemnicy.</p></li><li><p>Greta chce poprawić sytuację rodu Trottów. W przeszłości sprzedawała armię najemników ojca, ale teraz widzi niezliczone możliwości do wykorzystania jej umiejętności dyplomatycznych.</p></li></ul><h3>Można ją znaleźć…</h3><ul><li><p>„Odpoczywającą” w jej komnatach, co oznacza, że wysyła\ngołębie pocztowe do ojca, @UUID[Compendium.wfrp4e-ua2.actors.NMdZpAyqdfS4o0Pl]{Absolema} albo do jednej z jej okropnych sióstr.</p></li><li><p>Próbującą (z pewnymi sukcesami) przypochlebiać się dowódcom wojskowym.</p></li><li><p>Unikającą podejrzliwych spojrzeń @UUID[Compendium.wfrp4e-ua2.actors.yn4caxkjVT9THORJ]{lady Gotlindy} podczas obiadów w Wielkiej Sali.</p></li></ul>",
+      "items": {
+        "dlgxwoy1xi5dysxf": {
+          "id": "dlgxwoy1xi5dysxf",
+          "name": "dowody do szantażowania",
+          "description": " ",
+          "originalName": "dowody do szantażowania"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Polityka)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Polityka)"
+        },
+        "bBLK2hznjPlby6Jb": {
+          "id": "bBLK2hznjPlby6Jb",
+          "name": "Muzyka (Organy)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Organy)"
+        },
+        "2p835nlr91czv43d": {
+          "id": "2p835nlr91czv43d",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "8FkJv6K142TRMhrY": {
+          "id": "8FkJv6K142TRMhrY",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "5kXcr4Yx7xnZyYAZ": {
+          "id": "5kXcr4Yx7xnZyYAZ",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "RBr69FP5rb0oec7o": {
+          "id": "RBr69FP5rb0oec7o",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "eoOzhpql1gRf1dNO": {
+          "id": "eoOzhpql1gRf1dNO",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "yR3QqODc92WVbvGY": {
+          "id": "yR3QqODc92WVbvGY",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Guards": {
+      "id": "9xdDhIvtgMYwEKAP",
+      "name": "Strażnicy",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.9xdDhIvtgMYwEKAP",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "status": "Srebro 2",
+      "items": {
+        "xUYPbapwkatxy5uT": {
+          "specification": "3"
+        },
+        "LKNfYlXtjNSruVCi": {
+          "id": "LKNfYlXtjNSruVCi",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "BRkyQRjqZTmAzUXw": {
+          "id": "BRkyQRjqZTmAzUXw",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "rVhKV9AE8S1ecBvO": {
+          "id": "rVhKV9AE8S1ecBvO",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "9OH8H5k4Tesz4IrM": {
+          "id": "9OH8H5k4Tesz4IrM",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "TzGkC9AYSDgegLdR": {
+          "id": "TzGkC9AYSDgegLdR",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Gunther Meifert": {
+      "id": "MobhiSBvv5X1HN3A",
+      "name": "Gunther Meifert",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.MobhiSBvv5X1HN3A",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "items": {
+        "XQiiwS9m2Du1IMUz": {
+          "id": "XQiiwS9m2Du1IMUz",
+          "name": "Język (Bitewny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Bitewny)"
+        },
+        "ltb66x0qwmn8dvcw": {
+          "id": "ltb66x0qwmn8dvcw",
+          "name": "Etykieta (Szlachta, Żołnierze)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta, Żołnierze)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta, Żołnierze)"
+        },
+        "tboyuxpixrmn57sm": {
+          "specification": "natręci, arogancie młodziki, zbytnio napuszeni sigmaryci"
+        },
+        "aYix9XwBWvJm6Tbn": {
+          "specification": "3"
+        }
+      }
+    },
+    "Gutele von Bruner": {
+      "id": "ySYxwgeetYujddRC",
+      "name": "Gutele von Bruner",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Gutele, młoda kobieta po dwudziestce, jest atrakcyjną szlachcianką. Ubiera się w najlepsze i najdelikatniejsze stroje z Altdorfu i Parravonu, a na jednym palcu nosi duży pierścionek z brylantem. Kiedy opowiada Bohaterom swoją historię, spoczywa na szezlongu, sącząc coś wyrafinowanego z eleganckiego kieliszka, jednak nawet nie myśli o zaoferowaniu im napitku.</p>",
+      "items": {
+        "gpwx2h3jhb7dlav1": {
+          "id": "gpwx2h3jhb7dlav1",
+          "name": "Gromada sług",
+          "description": " ",
+          "originalName": "Gromada sług"
+        },
+        "w8r5hwioiic4q5u2": {
+          "id": "w8r5hwioiic4q5u2",
+          "name": "Rodzinna pieczęć",
+          "description": " ",
+          "originalName": "Rodzinna pieczęć"
+        },
+        "jmhsonsrgb895emt": {
+          "id": "jmhsonsrgb895emt",
+          "name": "zły plan i szybki koń",
+          "description": " ",
+          "originalName": "zły plan i szybki koń"
+        },
+        "Ggx0bRaCuq8MbF0g": {
+          "id": "Ggx0bRaCuq8MbF0g",
+          "name": "3k10 Złotych Koron",
+          "description": " ",
+          "originalName": "3k10 Złotych Koron"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "1k10 srebrnych szylingów",
+          "description": " ",
+          "originalName": "1k10 srebrnych szylingów"
+        },
+        "bBLK2hznjPlby6Jb": {
+          "id": "bBLK2hznjPlby6Jb",
+          "name": "Muzyka (Klawesyn)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Klawesyn)"
+        },
+        "4hc28xxdrmvtq5nh": {
+          "id": "4hc28xxdrmvtq5nh",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "lFtMxQu8O1pBpAKi": {
+          "id": "lFtMxQu8O1pBpAKi",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "E1q9Sg0zEak5wodI": {
+          "id": "E1q9Sg0zEak5wodI",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "VIEj0MeglkKYdbhp": {
+          "id": "VIEj0MeglkKYdbhp",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "RyjjSLuVBP0silzK": {
+          "id": "RyjjSLuVBP0silzK",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "lJXTEcgw2Hzvor3b": {
+          "id": "lJXTEcgw2Hzvor3b",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "Egxn2ZBSuLKk0j7K": {
+          "id": "Egxn2ZBSuLKk0j7K",
+          "name": "skradziona biżuteria o wartości 1k10 ZK",
+          "description": "<p>Ceny różnią się w zależności od jakości wykonania, typu wykorzystanego metalu i wartości wstawionych klejnotów. Generalnie pospolite pierścienie bez żadnych klejnotów kosztują 10 monet wartości równej rodzajowi wykorzystanego metalu (tj. brązu, srebra lub złota), podczas gdy naszyjniki kosztują 20 monet tego samego rodzaju metalu.</p>",
+          "originalName": "skradziona biżuteria o wartości 1k10 ZK"
+        },
+        "yZ92iYbzZ4ElNMa7": {
+          "id": "yZ92iYbzZ4ElNMa7",
+          "name": "zazwyczaj nienoszone",
+          "description": " ",
+          "originalName": "zazwyczaj nienoszone"
+        }
+      }
+    },
+    "Hellin Karstadt-stampf": {
+      "id": "Je9bENZeEyEaQR9p",
+      "name": "Hellin Karstadt-Stampf",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.Je9bENZeEyEaQR9p",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Bogactwo Helliny widoczne jest w jej ubraniach i biżuterii. Misterne kwietne wzory na jej czarnej sukni są wyszywane złotymi nićmi, a złoty naszyjnik podkreśla znajdujący się w jego centrum czarny opal. Poszukiwaczy przygód obserwuje znad pary małych okularów, które przyczepione są do ubrania złotym łańcuszkiem. Hellina chce, aby wszyscy zdawali sobie sprawę z tego, jaka jest bogata, a co za tym idzie – jaką siłę może okazać, jeśli ktoś ją rozgniewa.</p>",
+      "items": {
+        "XQiiwS9m2Du1IMUz": {
+          "id": "XQiiwS9m2Du1IMUz",
+          "name": "Język (Cechu)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Cechu)"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Lokalna)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Lokalna)"
+        },
+        "g3wqr10smwbxu1yg": {
+          "id": "g3wqr10smwbxu1yg",
+          "name": "Etykieta (Członkowie Cechu)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Członkowie Cechu)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Członkowie gildii)"
+        },
+        "3ovhcfiax61f85cq": {
+          "id": "3ovhcfiax61f85cq",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma lub plotkowanie (Szlachta)"
+        },
+        "47H3DT6B1jV4hRq1": {
+          "id": "47H3DT6B1jV4hRq1",
+          "name": "ubrania najwyższej jakości",
+          "description": "<p>Strój szlachty charakteryzujący się upiększeniami, takimi jak koronkowe kołnierze i rękawy, wyśmienitej jakości tkaninami i szpiczastym obuwiem. Także służący chodzą odziani w dworskie stroje podczas bankietów i ceremonii, chociaż ich opończe i gorsety są mniej ostentacyjne niż ubiory szlachetnie urodzonych, dlatego można je nabyć za pół ceny.;</p>",
+          "originalName": "ubrania najwyższej jakości"
+        },
+        "UCFOGZgirDV6GTqU": {
+          "id": "UCFOGZgirDV6GTqU",
+          "name": "biżuteria warta 100 ZK",
+          "description": "<p>Ceny różnią się w zależności od jakości wykonania, typu wykorzystanego metalu i wartości wstawionych klejnotów. Generalnie pospolite pierścienie bez żadnych klejnotów kosztują 10 monet wartości równej rodzajowi wykorzystanego metalu (tj. brązu, srebra lub złota), podczas gdy naszyjniki kosztują 20 monet tego samego rodzaju metalu.</p>",
+          "originalName": "biżuteria warta 100 ZK"
+        },
+        "HXOOJazpnFKEyWrs": {
+          "id": "HXOOJazpnFKEyWrs",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "TsUZdTmtvuzOn9Fu": {
+          "id": "TsUZdTmtvuzOn9Fu",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "pwVZOHJoGiJzgnVp": {
+          "id": "pwVZOHJoGiJzgnVp",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "cXQgKJLOp9uC9Oiy": {
+          "id": "cXQgKJLOp9uC9Oiy",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "7rmavHblQYOXLsom": {
+          "id": "7rmavHblQYOXLsom",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Hild von Jungfreud": {
+      "id": "YvbXmDOGT1s1b7op",
+      "name": "Hild von Jungfreud",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.YvbXmDOGT1s1b7op",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Złoto 3",
+      "gmnotes": "<p>Młodsza siostra @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{księcia} jest jedną z niewielu osób, które Sigismund uważa za równie kompetentne co on sam. Kiedy możnowładca potrzebował dowódcy sił wojskowych, nie miał żadnych problemów z mianowaniem swojej siostry marszałkiem. Walczyła z nim przecież od czasów, kiedy byli dziećmi, jechała do boju z zielonoskórymi u jego boku i wie, jak dowodzić żołnierzami podczas bitwy.</p>\n<p>Lady Hild ma krótkie włosy, chodzi po zamku w zbroi i nie znosi szlacheckich fatałaszków. Martwi się o @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{brata}. Nigdy nie widziała, by kiedykolwiek wcześniej wątpił w swoje umiejętności, i desperacko pragnie, by wrócił do bycia starym sobą.</p>\n<p>Celowo bezdzietna i niezainteresowana romansami kobieta była całkowicie zaskoczona wzajemnym zauroczeniem między nią a kapitanem Tieckiem, dawnym dowódca ubersreikskiej straży miejskiej. Uważa, że różnica rangi między nimi sprawia, że ich romans musi pozostać tajemnicą.</p>",
+      "items": {
+        "inwpgqq5j5jfvop2": {
+          "id": "inwpgqq5j5jfvop2",
+          "name": "pieczęć rodu Jungfreud",
+          "description": " ",
+          "originalName": "pieczęć rodu Jungfreud"
+        },
+        "bBLK2hznjPlby6Jb": {
+          "id": "bBLK2hznjPlby6Jb",
+          "name": "Muzyka (Bęben)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Bęben)"
+        },
+        "7hxq7iighe9hnqxe": {
+          "id": "7hxq7iighe9hnqxe",
+          "name": "Etykieta (Szlachta, Żołnierze)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta, Żołnierze)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta, Żołnierze)"
+        },
+        "r8v49inqfbli5zil": {
+          "id": "zImcTgEl2XNnbu5W",
+          "name": "Twardziel",
+          "description": "<p>Na stałe zwiększasz swoją Żywotność o Bonus z Wytrzymałości. Jeśli ten się zwiększy, wraz z nim wzrośnie również twoja Żywotność wynikająca z tego Talentu.</p>",
+          "originalName": "Twardziel",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.zImcTgEl2XNnbu5W",
+          "effects": {
+            "REeG0AV5Sm4fTAIJ": {
+              "id": "REeG0AV5Sm4fTAIJ",
+              "name": "Twardziel",
+              "scriptData": [
+                {
+                  "id": "REeG0AV5Sm4fTAIJ",
+                  "name": "Twardziel",
+                  "script": "[Script.GuUCErVbk5hrFzR3]"
+                }
+              ]
+            }
+          }
+        },
+        "DTDApwvTpffRviFK": {
+          "id": "DTDApwvTpffRviFK",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "cDA23OBPYZoVqGBX": {
+          "id": "cDA23OBPYZoVqGBX",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "Yv8qYOR82jKtFjhl": {
+          "id": "Yv8qYOR82jKtFjhl",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "3loZds6fO8RqoC5l": {
+          "id": "3loZds6fO8RqoC5l",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "zQYDgl6ThrlSHBO0": {
+          "id": "zQYDgl6ThrlSHBO0",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Hugo": {
+      "id": "PMwpeOsIYSYICoKu",
+      "name": "Hugo",
+      "description": "<section id=\"secret-iF6gaDnbSvHhHWLS\" class=\"secret\"><h4>Stary Rycerz</h4>\n<p>Opiekunem kaplicy jest Hugo, stary Bretończyk z białą brodą i życzliwym spojrzeniem, który – jak przysięgają miejscowe dzieci – dawno temu był rycerzem. Mają rację, chociaż wiek odebrał mu większość dawnej sprawności. Mimo to będzie walczył w obronie kaplicy, gdyż jest to jego obowiązek, i nie da się go od tego odwieść. Jeśli Bohaterowie powiadomią go, że coś nadchodzi, założy starą zbroję – dodaj @UUID[Compendium.wfrp4e-core.items.VUJUZVN3VYhOaPjj]{Pancerz 2} do jego Cech.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.PMwpeOsIYSYICoKu",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "items": {}
+    },
+    "Ingwer": {
+      "id": "AV0FE0qVRLbPSU7o",
+      "name": "Ingwer",
+      "description": "<section id=\"secret-kH5YERi935Qvz0Rw\" class=\"secret\"><p>Wcześniej Ingwer był znany jako Cacklefaxx Sq’lchsp’sm Gnuśny, strażnik Kręgu Lenistwa. Ten obszar Domeny Chaosu otacza (zazwyczaj) Pałac Rozkoszy Slaanesha. Ingwer uległ usypiającej aurze i znaleziono go drzemiącego w pracy.</p>\n<p>Ingwer przejawia się jako otyły i astmatyczny pręgowany kocur o bladozielonych oczach. Jeśli ktoś dokładnie go zbada, to odnajdzie sześć fioletowych sutków ciągnących się wzdłuż lewej strony jego brzucha.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.AV0FE0qVRLbPSU7o",
+      "species": "Kot / Demon",
+      "gender": "???",
+      "items": {
+        "ii2ebsf0hfrimmb2": {
+          "id": "FmHDbCOy3pH8yKhm",
+          "name": "Widzenie w Ciemności",
+          "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
+          "originalName": "Widzenie w Ciemności",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
+        },
+        "cr7lij3fi8wem8x8": {
+          "specification": "Mały"
+        },
+        "sp3st30r0v6ontdw": {
+          "specification": "Slaanesha"
+        },
+        "kj5nuvuv7p8wb03d": {
+          "id": "ClOlztW6hH8rslbp",
+          "name": "Tropiciel",
+          "description": "<p>Tropiciele skutecznie śledzą swoje ofiary, zazwyczaj za pomocą węchu lub słuchu. Do wszystkich Testów Tropienia dodają PS równe swojemu Bonusowi z Inicjatywy.</p>",
+          "originalName": "Tropiciel",
+          "sourceId": "Compendium.wfrp4e-core.items.ClOlztW6hH8rslbp",
+          "effects": {
+            "ftGagmf8rj6rq3ir": {
+              "id": "ftGagmf8rj6rq3ir",
+              "name": "Tropiciel",
+              "scriptData": [
+                {
+                  "id": "ftGagmf8rj6rq3ir",
+                  "name": "Tropiciel",
+                  "script": "[Script.neaaVy6D6tfcst5P]",
+                  "activationScript": "[Script.FmLx9pwOkzqqU7Ph]",
+                  "hideScript": "[Script.yatUu0cd7iKs50rq]"
+                }
+              ]
+            }
+          }
+        },
+        "ilI4BgfJiHTD3EBm": {
+          "specification": "3"
+        }
+      }
+    },
+    "Jacob Möhren": {
+      "id": "4YBUEhi5fsiIyEhV",
+      "name": "Jacob Möhren",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.4YBUEhi5fsiIyEhV",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Srebro 2",
+      "gmnotes": "<p>Jacob jest Kapłanem Bitewnym Sigmara. Ubiera się w czerwone szaty i nosi złoty młotek na łańcuszku. Jego głowa przypomina twardy i kwadratowy głaz i jest całkowicie ogolona. Jego kalafiorowate uszy i poszczerbione zęby wskazują, że w swoim życiu spotkał się z dużą ilością przemocy. Sieć starych i świeżych blizn przecina jego skórę.</p><p>Na czoło ma nałożoną ciężką żelazną opaskę, nabijaną z każdej strony ćwiekami. Zainteresowany Bohater, który zda <strong>Problematyczny (−10) Test Wiedzy (Teologia)</strong> rozpozna, że jest to forma pokuty typowa dla sigmarytów.</p><p>Möhren to człowiek porywczy i dumny, z przeszłością pełną pochopnych decyzji. Niedawno poprowadził grupę nowicjuszy na wyczerpujący trening u podnóża @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.w0YfGxsBuLoODCgc]{Gór Szarych}. Przepełniony świętym natchnieniem, nalegał, aby podjęli się misji odkrycia legowiska goblinów i wyrżnięcia ich wszystkich</p><p>Grupa Möhrena całkowicie zagubiła się w górach. Wielu jej członków cierpiało z powodu wychłodzenia lub głodu albo zaginęło. Jedyne gobliny, jakie napotkali, trzymały się od nich z daleka i faszerowały ich strzałami. Ostatecznie Möhren musiał powrócić. Sam.</p>",
+      "items": {
+        "XQiiwS9m2Du1IMUz": {
+          "id": "XQiiwS9m2Du1IMUz",
+          "name": "Język (Bitewny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Bitewny)"
+        },
+        "vje4wcxn0oowu22j": {
+          "id": "vje4wcxn0oowu22j",
+          "name": "Błogosławieństwo (Sigmar*)",
+          "description": "<p><em>*Hańba Jacoba jest tak wielka, że nie może użyć tego Talentu, dopóki nie poczuje, że się odkupił.</em></p>\n<p>Jesteś pod opieką jednego z bogów i możesz wzmacniać proste modlitwy. Teraz możesz wykorzystać błogosławieństwa swojego bóstwa wymienione w @UUID[Compendium.wfrp4e-core.journals.NcH9OhleJFfaUdon]{Religia i Wierzenia}. W normalnych okolicznościach możesz znać tylko jedną Boską Wiedzę dla Talentu Błogosławieństwa.</p>",
+          "originalName": "Błogosławieństwo (Sigmar*)",
+          "effects": {
+            "xBEN6zLyoG2JrZwh": {
+              "id": "xBEN6zLyoG2JrZwh",
+              "name": "Błogosławieństwo",
+              "scriptData": [
+                {
+                  "id": "xBEN6zLyoG2JrZwh",
+                  "name": "Błogosławieństwo",
+                  "script": "[Script.IupskvzvoGyD2H5o]"
+                }
+              ]
+            }
+          }
+        },
+        "sPUtGTV3TU3m8yps": {
+          "id": "sPUtGTV3TU3m8yps",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "DJ3xTHBBqa2IrOhn": {
+          "id": "DJ3xTHBBqa2IrOhn",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "T7i9BPCMvvkFxf93": {
+          "id": "T7i9BPCMvvkFxf93",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "BMcjtYTo9UFAnB1u": {
+          "id": "BMcjtYTo9UFAnB1u",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "QDJZ1k50vCDnbX0Z": {
+          "id": "QDJZ1k50vCDnbX0Z",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Johanna Bartoli": {
+      "id": "wA3DrahzcwS7RpjY",
+      "name": "Johanna Bartoli",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.wA3DrahzcwS7RpjY",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "gmnotes": "<p>Silna, niska i krępa kobieta tuż po trzydziestce. Każdy, kto ma choć trochę oleju w głowie, od razu może stwierdzić, że lepiej z Johanną nie zadzierać. Nosi krótkie blond włosy ścięte zaraz nad pokrytą bliznami twarzą ze złamanym nosem.</p>\n<p>Johanna urodziła się w Altdorfie, ale jej ojcem był tileański żeglarz. Wychowywała ją matka, a jej dzieciństwo było ciężkie. Nauczyła się, że sukces musi osiągnąć sama, zwłaszcza po tym, jak matka wyrzuciła ją z domu po osiągnięciu przez młodą Bartoli dziesiątego roku życia, co zmusiło ją do radzenia sobie samej. Przemierzyła Imperium wzdłuż i wszerz, zatrzymując się jedynie w miastach oraz miasteczkach, by zarabiać jako uliczna bandytka (otwarte tereny przyprawiają ją o palpitacje serca). Z @UUID[Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC]{Dieterem} i @UUID[Compendium.wfrp4e-ua2.actors.ssb1ZysBxnJaJtic]{Begrinem} zaczęła współpracować dwa lata temu – po tym, jak usłyszała o jednym z ich oszustw i spróbowała ich szantażować. Kiedy @UUID[Compendium.wfrp4e-ua2.actors.uXMBBaq10Mn4WopC]{Dieter} zaproponował odpalenie jej działki, wiedziała, że coś się święci. Bartoli ma świadomość, że mężczyźni nie są osobami godnymi zaufania, ale jak dotąd układ się opłaca i jest znacznie mniej niebezpieczny od życia ulicznej bandytki.</p>",
+      "items": {
+        "SBRKCnQzCCo7Rb8C": {
+          "specification": "1"
+        },
+        "5S5DKwjPbUwZwNpR": {
+          "id": "5S5DKwjPbUwZwNpR",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "Mf1pLhSkKFecpGpp": {
+          "id": "Mf1pLhSkKFecpGpp",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "5nJAxd3QVMhVsY9B": {
+          "id": "5nJAxd3QVMhVsY9B",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "xiUh7hrvOJOZWTet": {
+          "id": "xiUh7hrvOJOZWTet",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "Kd4LrD7m6pewJreC": {
+          "id": "Kd4LrD7m6pewJreC",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "xGkVxoiL6vXaOiiS": {
+          "specification": "5"
+        }
+      }
+    },
+    "Josef Specht": {
+      "id": "b7SY081CpP0aQndx",
+      "name": "Josef Specht",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.b7SY081CpP0aQndx",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Josef prezentuje światu nieszkodliwą uprzejmość. Jest lojalnym sługą, zawsze ubranym w czerń i złoto rodu Karstadt.</p>\n<p>Oczywiście wszystko to służy ukryciu jego całkowicie bezwzględnej natury. Josef jest zabójcą i wyznawcą Boga Morderstw Khaine’a. Chociaż zachowuje lojalność wobec @UUID[Compendium.wfrp4e-starter-set.actors.Je9bENZeEyEaQR9p]{Frau Karstadt-Stampf} oraz jej rodziny, ukrył przed nią swoje oddanie dla Khaine’a i nie ma zamiaru pozwolić komukolwiek odkryć swojego sekretu.</p>",
+      "items": {
+        "k75tnd3ngqgn6435": {
+          "id": "k75tnd3ngqgn6435",
+          "name": "Garota",
+          "description": " ",
+          "originalName": "Garota"
+        },
+        "t4j2x03dodacefth": {
+          "id": "t4j2x03dodacefth",
+          "name": "ciche modlitwy do Khaine’a",
+          "description": " ",
+          "originalName": "ciche modlitwy do Khaine’a"
+        },
+        "Z9hQe46ykQBZneoU": {
+          "id": "Z9hQe46ykQBZneoU",
+          "name": "Broń Zasięgowa (Miotana)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{Broń Zasięgowa}</p>",
+          "originalName": "Broń Zasięgowa (Miotana)"
+        },
+        "7al8yajiw4txjvyz": {
+          "id": "FmHDbCOy3pH8yKhm",
+          "name": "Widzenie w Ciemności",
+          "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
+          "originalName": "Widzenie w Ciemności",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
+        },
+        "uChwMrMQt32Vrr4v": {
+          "id": "uChwMrMQt32Vrr4v",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "mu6B40LcXfkUPTtr": {
+          "id": "mu6B40LcXfkUPTtr",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "P63x5XQt7ZiC1au4": {
+          "id": "P63x5XQt7ZiC1au4",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "oHywRyMg2y0ILoWy": {
+          "id": "oHywRyMg2y0ILoWy",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "SSA0PcYNgf9SXcuH": {
+          "id": "SSA0PcYNgf9SXcuH",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Jungfreud Zombies": {
+      "id": "nYytFmpLbir4qKjw",
+      "name": "Zombi Jungfreudów",
+      "description": "<section id=\"secret-4MvYWGPnt21uJ0A0\" class=\"secret\"><p>Zgniłe zwłoki dawnych zwolenników Jungfreudów zrywające się z szubienic w całym Ubersreiku, by zagrozić żywym.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.nYytFmpLbir4qKjw",
+      "species": "Nieumarły",
+      "gender": "Różne",
+      "items": {
+        "z9wdnmh4i96zmmu8": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "1cdkyuly5atzujw4": {
+          "specification": "Ząb (dowolny)"
+        },
+        "m0d21fukl43i0wVi": {
+          "specification": "2"
+        }
+      }
+    },
+    "Kelp's Crewmembers": {
+      "id": "pOlCOTnbO4OapWIi",
+      "name": "Członkowie szajki Klepa",
+      "description": "<section id=\"secret-6hO0y7cgrPgha3mS\" class=\"secret\"><p>Stara szajka Klepa to dwaj mężczyźni (Brun i Heiro) oraz dwie kobiety (Kat i Hilde). Wiodą ciężkie życie pełne przemocy i litrów alkoholu. Z hardych twarzy wyzierają spojrzenia paciorkowatych czarnych oczu. W czasie rozmowy często plują i się krzywią. Noszą znoszone, ale praktyczne skórzane ubrania w ciemnych kolorach.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.pOlCOTnbO4OapWIi",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "02byi4dl746gdamh": {
+          "id": "aE3pyW20Orvdjzj0",
+          "name": "Nienawiść",
+          "description": "<p>Stworzenie naprawdę nienawidzi Celu.</p>\n<p>Postać skrywa w duszy głęboką Nienawiść do „x”, czyli jakiejś grupy ludzi czy stworzeń, np. „mieszkańców Hochlandu”, „ośmiornic bagiennych” czy „handlarzy niewolników”. Postać nigdy nie może nawiązać kontaktów z kimś lub czymś, czego nienawidzi.</p>\n<p>Za każdym razem, gdy spotyka przedstawiciela znienawidzonej grupy, musi wykonać Test Psychologii. Jeśli ten się nie uda, postać nie jest w stanie dłużej powstrzymywać swojej Nienawiści. Pod koniec każdej następnej Rundy postać może wykonać kolejny Test Psychologii, by zakończyć napad Nienawiści. Taki atak sam dobiegnie końca, kiedy wszyscy członkowie znienawidzonej grupy znajdujący się w polu widzenia albo uciekną, albo zginą. Utrata Przytomności przynosi identyczny skutek.</p>\n<p>Postać będąca w szale Nienawiści musi natychmiast podjąć próbę zniszczenia znienawidzonej grupy w najszybszy i najbardziej zabójczy znany jej sposób: </p>\n<ul>\n<li>Otrzymuje premię +1 PS do wszystkich Testów walki przeciwko tej grupie.</li>\n<li>Jest niewrażliwa na Strach oraz Zastraszanie (ale nie na Grozę) wywoływane przez znienawidzonego wroga.</li>\n</ul>",
+          "originalName": "Nienawiść",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0",
+          "effects": {
+            "4MsIBocsfHnwGUr7": {
+              "id": "4MsIBocsfHnwGUr7",
+              "name": "Nienawiść",
+              "scriptData": [
+                {
+                  "id": "4MsIBocsfHnwGUr7",
+                  "name": "Testy walki przeciwko @item.system.specification.value",
+                  "script": "[Script.wAETU6aTRr9d4oCU]",
+                  "hideScript": "[Script.S4793DLFhjMxpM8x]"
+                }
+              ]
+            }
+          },
+          "specification": "Cel"
+        },
+        "ppe01r36xcjba0c7": {
+          "specification": "Snoby, Węszyciele"
+        },
+        "RBEcm6RHaP4AQMo3": {
+          "specification": "1"
+        },
+        "k7AwSmsaNyMWWu8m": {
+          "id": "k7AwSmsaNyMWWu8m",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "Ow2xltFDGeUqEvpS": {
+          "id": "Ow2xltFDGeUqEvpS",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "ZFmx0micKekNGtZn": {
+          "id": "ZFmx0micKekNGtZn",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "0eHIu6VxdvBBltD4": {
+          "id": "0eHIu6VxdvBBltD4",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "MCwCchazWboW7XGl": {
+          "id": "MCwCchazWboW7XGl",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Lena Stein": {
+      "id": "d6HBw2S2bUGYesKY",
+      "name": "Lena Stein",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.d6HBw2S2bUGYesKY",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Srebro 3",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-ua2.journals.A8R3vahlFHvd7zz1]{Błogosławieństwo, które przelało krew}</p>",
+      "items": {
+        "rv12cc09rip9mc8n": {
+          "id": "rv12cc09rip9mc8n",
+          "name": "Cytra Slaanesha",
+          "description": "<p>Cytra Slaanesha została namaszczona krwią sześciu ludzi oddanych religii, wszystkie <strong>Testy Muzyki (Lutnia)</strong> wykonywane przy używaniu tego instrumentu otrzymują +3 PS. Posiadanie Cytry Slaanesha liczy się jako @Corruption[minor]{minor source of Corruption}.</p>",
+          "originalName": "Cytra Slaanesha"
+        },
+        "0CwV96kTDRF0jUhk": {
+          "id": "0CwV96kTDRF0jUhk",
+          "name": "Występy (Śpiew)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy (Śpiew)"
+        },
+        "9ynaqt9txpnztajl": {
+          "id": "9ynaqt9txpnztajl",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "vhgk3akxvw8do02t": {
+          "id": "zImcTgEl2XNnbu5W",
+          "name": "Twardziel",
+          "description": "<p>Na stałe zwiększasz swoją Żywotność o Bonus z Wytrzymałości. Jeśli ten się zwiększy, wraz z nim wzrośnie również twoja Żywotność wynikająca z tego Talentu.</p>",
+          "originalName": "Twardziel",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.zImcTgEl2XNnbu5W",
+          "effects": {
+            "REeG0AV5Sm4fTAIJ": {
+              "id": "REeG0AV5Sm4fTAIJ",
+              "name": "Twardziel",
+              "scriptData": [
+                {
+                  "id": "REeG0AV5Sm4fTAIJ",
+                  "name": "Twardziel",
+                  "script": "[Script.GuUCErVbk5hrFzR3]"
+                }
+              ]
+            }
+          }
+        },
+        "s18cvaits87oiily": {
+          "specification": "Krytycy literaccy, Ludzie gadający na występach, Kapłani"
+        },
+        "dljqTjvNF9UdYDw7": {
+          "id": "dljqTjvNF9UdYDw7",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "oinbKhMZbq3iCLgo": {
+          "id": "oinbKhMZbq3iCLgo",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "ePVV43aXV9WQeyY4": {
+          "id": "ePVV43aXV9WQeyY4",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "OmNDpfvEsDVB245R": {
+          "id": "OmNDpfvEsDVB245R",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "R6BqDnYksRuBGEnX": {
+          "id": "R6BqDnYksRuBGEnX",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Leo Sagornus": {
+      "id": "5ZetvsPUC5v9SA5b",
+      "name": "Leo Sagornus",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.5ZetvsPUC5v9SA5b",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Srebro 3",
+      "gmnotes": "<p>Sagornus przybył na zamek krótko po tym, jak Jungfreudowie uciekli z Ubersreiku, wraz z kilkoma listami polecającymi od wpływowych rodów z północnego Imperium. Szybko zainstalował się w domostwie jako przedsiębiorczy człowiek od wszystkiego grafa @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{graf Sigismunda}.</p><p>Przybył do @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.TRZcW4cIpmwLwbDA]{Neufaljung} z reputacją człowieka, który umie załatwiać sprawy, i dokładnie tym się dla księcia zajmuje. Daje radę zdobyć informacje, ludzi i zasoby tam, gdzie inni zawodzą. Nalega na to, by otrzymywać zapłatę z góry; jest kompletnie pozbawiony moralności.</p><p>Nikt nie wie zbyt wiele na temat Leo Sagornusa i jemu to odpowiada. Wydaje się mieć około czterdziestu lat i utrzymuje wokół siebie aurę cichej pewności siebie. Wydaje się szczupły i niewyszukany – jego dobrze dobrany dublet pomaga mu sprawiać ascetyczne wrażenie. Jedyną ozdobą jest jego sztuczna lewa ręka – zrobiona z brązu i pokryta srebrnymi inskrypcjami. Mężczyzna ma zwyczaj polerować ją podczas rozmów.</p><section class=\"hook\"><h3 style=\"text-align: center; text-transform:uppercase\">Na temat Trottów</h3><ul><li><p>Sagornus zorganizował układ z księciem Trottem, ale wie, że tej rodzinie nie można ufać. Musi poznać słabości Trottów, żeby móc je wykorzystać we właściwym momencie. Zapłaci szczodrze Bohaterom za taką informację, ale zdradzi ich natychmiast, gdy przestaną być potrzebni.</p></li><li><p>Po usłyszeniu historii o @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.oqKZQGPERCD0tQK0]{Lengrath Sagornus} zaczął się zastanawiać, czy nie mógłby wynająć nekromanty, aby wypuścić @UUID[Compendium.wfrp4e-ua2.actors.91tSwvQY1IKIoISh]{przeoryszę} i jej biczowników na Ubersreik. Musi tylko przekonać jakichś ludzi, aby wytropili podejrzanego czarownika do pomocy.</p></li></ul></section>",
+      "items": {
+        "bmhkp9opxhkbiluu": {
+          "id": "bmhkp9opxhkbiluu",
+          "name": "informatorzy (zamkowa służba)",
+          "description": " ",
+          "originalName": "informatorzy (zamkowa służba)"
+        },
+        "bVdhLdfuSAfMi3qq": {
+          "id": "bVdhLdfuSAfMi3qq",
+          "name": "Sekretne Znaki (Czarnej Komnaty)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Sekretne Znaki}",
+          "originalName": "Sekretne Znaki (Czarnej Komnaty)"
+        },
+        "wKwel9MG7NIG3i3w": {
+          "id": "wKwel9MG7NIG3i3w",
+          "name": "Rzemiosło (Trucizny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
+          "originalName": "Rzemiosło (Trucizny)"
+        },
+        "BEBJ1ZW3WzfgxRjX": {
+          "id": "BEBJ1ZW3WzfgxRjX",
+          "name": "Występy (Aktorstwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy (Aktorstwo)"
+        },
+        "JF5R5HCf89Xtftdx": {
+          "id": "JF5R5HCf89Xtftdx",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "oLq68f3QKh105O62": {
+          "id": "oLq68f3QKh105O62",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "v3fy0Axf3ttaTwtn": {
+          "id": "v3fy0Axf3ttaTwtn",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "he2NHDLujnt078eI": {
+          "id": "he2NHDLujnt078eI",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "ik4Zg0b8iBDicFJG": {
+          "id": "ik4Zg0b8iBDicFJG",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "ub8vV5pmBl70u2OX": {
+          "id": "ub8vV5pmBl70u2OX",
+          "name": "rozmaite przebrania",
+          "description": " ",
+          "originalName": "rozmaite przebrania"
+        }
+      }
+    },
+    "Lucius Karstadt-stampf": {
+      "id": "H4gGpGbMcMRhvIdf",
+      "name": "Lucius Karstadt-Stampf",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.H4gGpGbMcMRhvIdf",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Lucius ma osiemnaście lat i jest najmłodszym dzieckiem @UUID[Compendium.wfrp4e-starter-set.actors.Je9bENZeEyEaQR9p]{Helliny Karstadt-Stampf}. Zwykle pozwala, by ciemne włosy opadały mu na szare oczy, co podkreśla duży, wystający i bulwiasty nos. Gdy jego rodzeństwo wyjechało do Altdorfu, aby zobaczyć się z ojcem, Luciusowi udało się wykręcić, skarżąc się na przeziębienie. Teraz żałuje, że został w posiadłości, ponieważ obawia się, że jego matka oszalała.</p>",
+      "items": {
+        "qss6h3uh5772jw15": {
+          "id": "qss6h3uh5772jw15",
+          "name": "stos nieukończonych poematów",
+          "description": " ",
+          "originalName": "stos nieukończonych poematów"
+        },
+        "0CwV96kTDRF0jUhk": {
+          "id": "0CwV96kTDRF0jUhk",
+          "name": "Występy (Poezja)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy (Poezja)"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Tragedie Epickie)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Tragedie Epickie)"
+        },
+        "422tkq9phm8dc4ut": {
+          "specification": "Matka"
+        },
+        "eVrSE9WrEOGN9qS2": {
+          "id": "eVrSE9WrEOGN9qS2",
+          "name": "niedopasowany strój szlachecki",
+          "description": "<p>Strój szlachty charakteryzujący się upiększeniami, takimi jak koronkowe kołnierze i rękawy, wyśmienitej jakości tkaninami i szpiczastym obuwiem. Także służący chodzą odziani w dworskie stroje podczas bankietów i ceremonii, chociaż ich opończe i gorsety są mniej ostentacyjne niż ubiory szlachetnie urodzonych, dlatego można je nabyć za pół ceny.;</p>",
+          "originalName": "niedopasowany strój szlachecki"
+        },
+        "DVLGokExWXAqG177": {
+          "id": "DVLGokExWXAqG177",
+          "name": "niezaostrzone pióro",
+          "description": " ",
+          "originalName": "niezaostrzone pióro"
+        },
+        "9dCOf1bCjKYAzTD1": {
+          "id": "9dCOf1bCjKYAzTD1",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "7VTVoVSm80bAYmI5": {
+          "id": "7VTVoVSm80bAYmI5",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "w11M9TQGx4sjERk8": {
+          "id": "w11M9TQGx4sjERk8",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "tlGfC9GU1Br1Yl86": {
+          "id": "tlGfC9GU1Br1Yl86",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "cXPTyKLdMQXysFbO": {
+          "id": "cXPTyKLdMQXysFbO",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Maximillian Palt": {
+      "id": "Yt0x4G9Wohj8RnHt",
+      "name": "Maximillian Palt",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.Yt0x4G9Wohj8RnHt",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 1",
+      "gmnotes": "<p>Czcigodny Palt reprezentował księcia w księstwie, odkąd ktokolwiek sięga pamięcią. Ma co najmniej osiemdziesiąt lat, jest częściowo ślepy i twierdzi (nieprawdziwie), że jest prawie całkiem głuchy. Od czasu śmierci ojca księcia Maximillian pełni zazwyczaj jedynie ceremonialną funkcję — @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{graf Sigismund} za bardzo chce wszystko kontrolować, by pozwolić komuś innemu zajmować się jego sprawami.</p><p>Palt ma nawoskowaną białą brodę, którą uważa za wytworną. Zazwyczaj stoi gdzieś i stara się wyglądać użytecznie, podczas gdy jego skrybowie i totumfaccy zajmują się zarządzaniem księstwem.</p><p>Mimo stwarzanych pozorów Palt czujnie przygląda się wydarzeniom w księstwie. Jego największą tajemnicą jest to, że to on stoi za intrygą, by odebrać @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{grafowi Sigismundowi} rozum. Lata bycia ignorowanym i poniżanym wzbudziły w nim żarliwą żądzę zemsty, więc kiedy skontaktował się z nim agent lady @UUID[Compendium.wfrp4e-ua1.actors.hcAF95tFaOdoZoeF]{Emmanuelle Nacht}, ochmistrz z radością skorzystał z okazji.</p><h3>Czego chce…</h3><ul><li><p>Palt pragnie szacunku. Ma dość bycia traktowanym jedynie jako ozdoba von Jungfreudów, ignorowanym przez @Actor[yn4caxkjVT9THORJ]{lady Gotlindę} i ledwie uznawanym za godnego uwagi przez księcia.</p></li><li><p>Chce pozostać na Czarnej Skale, przejąć władzę i wrócić do swojego życiowego celu odnalezienia @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.do8GXo5jCOdCC01q#the-legend-of-alduns-cavern]{Pieczary Alduna}.</p></li><li><p>Chce, by ludzie nadal uważali, że jest niegroźnym, starym człowiekiem, bardziej zainteresowanym noszeniem właściwego dubletu niż sprawami stanu.</p></li></ul><h3>Można go znaleźć…</h3><ul><li><p>Kiedy siedzi w skarbcu, ignorowany przez księgowych i skrybów.</p></li><li><p>Przemawia nudno i bez składu do odwiedzającego zamek rycerza, zbyt uprzejmego, by się grzecznie wykręcić.</p></li><li><p>Udaje, że zasnął w pobliżu komnat księcia, na tyle blisko, by mógł podsłuchiwać.</p></li></ul>",
+      "items": {
+        "l03j4ybjytv8y6mv": {
+          "id": "l03j4ybjytv8y6mv",
+          "name": "ukryte obrazy",
+          "description": " ",
+          "originalName": "ukryte obrazy"
+        },
+        "e7hlfb6qg4ker5ts": {
+          "id": "e7hlfb6qg4ker5ts",
+          "name": "sakiewka z 3k10 srebrnymi szylingami",
+          "description": " ",
+          "originalName": "sakiewka z 3k10 srebrnymi szylingami"
+        },
+        "V2jUpMVL0RuMiXyD": {
+          "id": "V2jUpMVL0RuMiXyD",
+          "name": "notatnik",
+          "description": " ",
+          "originalName": "notatnik"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Reikland)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Reikland)"
+        },
+        "d8kp3bhz245id075": {
+          "id": "d8kp3bhz245id075",
+          "name": "Etykieta (Słudzy, Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Słudzy, Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Słudzy, Szlachta)"
+        },
+        "rg0amh4pqi0599j9": {
+          "id": "rg0amh4pqi0599j9",
+          "name": "Odporny na (Trucizny)",
+          "description": "Twoja wielka wytrwałość pozwala ci poradzić sobie z niebezpieczeństwem. Automatycznie zdajesz pierwszy Test opierania się przeciwko konkretnemu typowi zagrożenia na danej sesji. Znane są Odporności na Choroby, Magię, Mutacje czy Trucizny. Jeśli w Teście ważne są Poziomy Sukcesu, to za ich liczbę przyjmujesz Bonus z Wytrzymałości.",
+          "originalName": "Odporny na (Trucizny)",
+          "effects": {
+            "FQv1UAIrdvtf9Tlc": {
+              "id": "FQv1UAIrdvtf9Tlc",
+              "name": "Odporny na (Trucizny)",
+              "scriptData": [
+                {
+                  "id": "FQv1UAIrdvtf9Tlc",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]"
+                },
+                {
+                  "id": "FQv1UAIrdvtf9Tlc",
+                  "name": "Wybierz Odporność",
+                  "script": "[Script.tCIT1a12Gt6k2ohA]"
+                }
+              ]
+            }
+          },
+          "tests": "Wszystkie Test przeciwko Trucizną"
+        },
+        "2dptiBr65lx8g1ab": {
+          "id": "2dptiBr65lx8g1ab",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "Gd809wERFYQjhIiI": {
+          "id": "Gd809wERFYQjhIiI",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "6u058xRf2uWbn7L8": {
+          "id": "6u058xRf2uWbn7L8",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "qp88KLAPmwkeNC6X": {
+          "id": "qp88KLAPmwkeNC6X",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "aDaKLD0m7NXyEK2q": {
+          "id": "aDaKLD0m7NXyEK2q",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "64YScNa9L7kioUxj": {
+          "id": "64YScNa9L7kioUxj",
+          "name": "Dobre ubranie",
+          "description": " ",
+          "originalName": "Dobre ubranie"
+        },
+        "781vVf6mSTUnzw0q": {
+          "id": "781vVf6mSTUnzw0q",
+          "name": "Kałamarz i Pióro",
+          "description": " ",
+          "originalName": "Kałamarz i Pióro"
+        }
+      }
+    },
+    "Moritz": {
+      "id": "RLzAFFajRCAH4NWb",
+      "name": "Moritz",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.RLzAFFajRCAH4NWb",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Srebro 3",
+      "gmnotes": "<p>Moritz jest sługą von Brunerów, który będzie działał dla @UUID[Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC]{Gutele} i zwróci się do Bohaterów w jej imieniu. To starszy, siwowłosy mężczyzna, służący von Brunerom od co najmniej pięćdziesięciu lat. Wygląda na zmęczonego światem człowieka, który widział wszystko, ale niewiele z tego mu się podobało. Sporo lat zajęło mu opanowanie mówienia „mój panie” i „moja pani” bez cienia szacunku.</p>\n<p>Nie lubi @UUID[Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC]{Gutele}, ale jest zbyt lojalny wobec rodziny i zbyt kulturalny, by o tym wspomnieć, chociaż obserwując jego interakcje z nią, można wyczuć pogardę. Gutele wykorzystuje go do załatwiania swoich spraw, ponieważ go to drażni, co jest dla niej zabawne.</p>\n<p>Moritz może roztaczać aurę kogoś, kto uważa to wszystko za żmudne, a wybryki @UUID[Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC]{Gutele} za dziecinadę, ale z pewnością nigdy nie wyraziłby takich myśli wprost.</p>",
+      "items": {
+        "c2xrp5q1m06oy7rj": {
+          "id": "c2xrp5q1m06oy7rj",
+          "name": "niezwykle protekcjonalny ton",
+          "description": " ",
+          "originalName": "niezwykle protekcjonalny ton"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "1k10 srebrnych szylingów",
+          "description": " ",
+          "originalName": "1k10 srebrnych szylingów"
+        },
+        "37cc64gvkd2w5a5p": {
+          "id": "37cc64gvkd2w5a5p",
+          "name": "Etykieta (Służba, Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Służba, Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Słudzy, Szlachta)"
+        },
+        "06qwNLNK4StkTzGz": {
+          "id": "06qwNLNK4StkTzGz",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "ndEjiIuMQWfPhaob": {
+          "id": "ndEjiIuMQWfPhaob",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "qQ5Q8fwIHBQ8qsOu": {
+          "id": "qQ5Q8fwIHBQ8qsOu",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "9CVPAI9KJABhIgCx": {
+          "id": "9CVPAI9KJABhIgCx",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "EdKuUC7jA8moIYfc": {
+          "id": "EdKuUC7jA8moIYfc",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "uNFGIrHYGG0tzlF3": {
+          "id": "uNFGIrHYGG0tzlF3",
+          "name": "liberia von Brunerów",
+          "description": " ",
+          "originalName": "Von Bruner Livery"
+        }
+      }
+    },
+    "Ottokar Johanson": {
+      "id": "SoHM5PWg07mMQCJU",
+      "name": "Ottokar Johanson",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.SoHM5PWg07mMQCJU",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Brąz 3",
+      "gmnotes": "<p>Uczciwy Ottokar Johanson to potężny, muskularny mężczyzna, który ubiera się w kamizelki z krótkim rękawem, aby móc eksponować swoją sylwetkę. Konserwatywny demagog, który wydaje się niezdolny do komunikowania czegokolwiek bez użycia krzyku i żyje tylko po to, by się kłócić.</p>",
+      "items": {
+        "fdq3RFSOKl5b3WzW": {
+          "id": "fdq3RFSOKl5b3WzW",
+          "name": "Sztuka (Pisarstwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka (Pisarstwo)"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Polityka)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Polityka)"
+        },
+        "wKwel9MG7NIG3i3w": {
+          "id": "wKwel9MG7NIG3i3w",
+          "name": "Rzemiosło (Drukarstwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
+          "originalName": "Rzemiosło (Drukarstwo)"
+        },
+        "ESBFcy0UmhiupLfT": {
+          "id": "ESBFcy0UmhiupLfT",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "qSDiq0zO8MfCzfIe": {
+          "id": "qSDiq0zO8MfCzfIe",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "7n5tXhONPmRUaKA9": {
+          "id": "7n5tXhONPmRUaKA9",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "CfWDYed1Y68euahZ": {
+          "id": "CfWDYed1Y68euahZ",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "wIQdAXIkEyy0DlWk": {
+          "id": "wIQdAXIkEyy0DlWk",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Rojas": {
+      "id": "cHwm0b83YZ4QC9Ui",
+      "name": "Rojas",
+      "description": "<section id=\"secret-jYl79agrMxXlTQ4R\" class=\"secret\"><p>Przez wiele spędzonych w Estalii lat @UUID[Compendium.wfrp4e-ua2.actors.HWnfxg0fYjkzU55F]{Leidtragende} zachowywał ostrożność, ucząc się rzeczy, które powinny pozostać zapomniane. Kiedy słynny estalijski szermierz został otruty i pozostawiony w zaułku na pewną śmierć, nekromanta znalazł długo wyczekiwanego ochroniarza. Rojas jest nieumarłym, ale znacznie potężniejszym niż jakikolwiek prosty wskrzeszony trup. Jest świadomy i chociaż jego wspomnienia o zimnym winie, ciepłych nocach oraz pięknych kobietach zniknęły, to nie stracił umiejętności posługiwania się ostrzem. Rojas musi być posłuszny Leidtragendowi i wykonywać jego polecenia najlepiej, jak potrafi, chociaż zdał sobie sprawę ze swojej sytuacji i zaczyna żywić wobec nekromanty coraz większą nienawiść. Skóra Rojasa dobrze się zachowała, a gdy w ciągu dnia nosi grube ubrania, uchodzi za jednego z żyjących. Jednak jego niegdyś melodyjny głos został zredukowany do zgrzytliwego chrypienia. Również jego krew dawno temu obróciła się w pył, a każda rana, którą otrzyma, natychmiast ujawnia jego prawdziwą naturę. W nocy jego oczy płoną bladym, upiornym światłem.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.cHwm0b83YZ4QC9Ui",
+      "species": "Upiór",
+      "gender": "Mężczyzna",
+      "status": "Formerly estalian diestro",
+      "items": {
+        "thw0w4tjn2faqgt1": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "YJdJ6pDmoUcCzaQW": {
+          "specification": "2"
+        },
+        "rbgJLxscH6q1Jbog": {
+          "specification": "2"
+        }
+      }
+    },
+    "Rule Leidtragende": {
+      "id": "HWnfxg0fYjkzU55F",
+      "name": "Rule Leidtragende",
+      "description": "<section id=\"secret-uVuKUpVjVE6bBC71\" class=\"secret\"><p>Choć Leidtragende przyznaje, że jest nekromantą, postrzega się przede wszystkim jako uczonego. W swojej odległej młodości był studentem medycyny na @UUID[Compendium.wfrp4e-altdorf.journals.EmhvOkkzAir6pzCB.JournalEntryPage.OiAVm63T9JEFsVfR]{Uniwersytecie w Altdorfie} i podążał wieloma ścieżkami badań lekarskich, szukając specjalizacji, która by go zainteresowała, aż odkrył kopię niesławnej „Liber Mortis”. Wkrótce jego zainteresowania skupiły się na nowej formie „przedłużania życia”. Teraz, po ponad stu latach od rozpoczęcia studiów, jest nękany przez obcych wtrącających się w jego badania. Uważa, że jego postępy w badaniu długowieczności pewnego dnia przyniosą korzyści wszystkim, więc z pewnością trywialna ofiara kilku niedożywionych dusz to niewielka cena. W końcu aby rozwijać swoją pracę, musi po prostu być w stanie badać moment, w którym dusza opuszcza ciało, a biedni i bezbronni są idealnymi obiektami dla tej ścieżki badań.</p><p>Leidtragende regularnie pozostaje w ruchu, aby wyprzedzić krytyków swojej pracy. Jest drobnym mężczyzną, który mówi reikspielem z szorstkim sylvańskim akcentem. Nosi ciężkie, ciemne ubrania, które mocno kontrastują z jego niemal alabastrową skórą. Prawe oko stracił dawno temu z powodu ostrza łowcy czarownic, a pusty oczodół wypełnił się iskrzącą się bladozieloną poświatą, którą podczas niezwykle rzadkich publicznych wyjść maskuje przepaską.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.HWnfxg0fYjkzU55F",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "items": {
+        "V8eRx66SxB9Jha0Q": {
+          "id": "V8eRx66SxB9Jha0Q",
+          "name": "Splatanie Magii (Dhar)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Splatanie Magii}</p>",
+          "originalName": "Splatanie Magii (Dhar)"
+        },
+        "qpqgasyxu9jh8bqa": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "da2rhqjzx7mqbuck": {
+          "specification": "Nekromancji"
+        },
+        "j2ot1359p45ofx1z": {
+          "specification": "Miecz"
+        },
+        "exwhudAfnY9omOMd": {
+          "specification": "1"
+        }
+      }
+    },
+    "Sabrina Ghurst": {
+      "id": "bSy09ytEdk8WJqiU",
+      "name": "Sabrina Ghurst",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.bSy09ytEdk8WJqiU",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "items": {
+        "oulx48tx9znfvj77": {
+          "specification": "pijaczyny, krzykacze"
+        },
+        "OponFpxUBSpFUeTk": {
+          "specification": "2"
+        },
+        "rM6I0XsbjeNI93kB": {
+          "id": "rM6I0XsbjeNI93kB",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "i750uMjC0RibZGjv": {
+          "id": "i750uMjC0RibZGjv",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "hkP0ekBTWPwEnRz5": {
+          "id": "hkP0ekBTWPwEnRz5",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "6eh54BYtNGsEFf00": {
+          "id": "6eh54BYtNGsEFf00",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "zWGGmPzDeAxuFyOW": {
+          "id": "zWGGmPzDeAxuFyOW",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Sigismund The Younger": {
+      "id": "34yRS0R4e4grG3Fj",
+      "name": "Sigismund Młodszy",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.34yRS0R4e4grG3Fj",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Złoto 3",
+      "gmnotes": "<p>Sigismund jest najstarszym synem księcia i jego dziedzicem. Z wyglądu wydaje się młodszą wersją swojego ojca, wliczając w to starannie przystrzyżoną brodę i gęste brwi. Podobieństwo jest jednak pozorne. Podczas gdy @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{starszy Sigismund} jest dominujący i przenikliwy, jego syna łatwo zwieść i ma on zwyczaj ulegać sentymentom. Jest zachwycony ojcem i ma zwyczaj powtarzać wyrażenia księcia, by zaimponować innym.</p><p>Sigismund Młodszy w duchu cieszy się wygnaniem z Ubersreiku. Po raz pierwszy jego ojciec go potrzebuje. Regularnie konsultuje z nim plany i przeprowadzenie intryg mających na celu odzyskanie rodzinnej chwały. Ma dwadzieścia dwa lata i wreszcie szkoli się na przyszłego przywódcę – przynajmniej tak prawie każdej nocy szepcze mu do ucha jego żona @UUID[Compendium.wfrp4e-ua2.actors.gdaMZK3R8I0jcRxW]{Greta}.</p><h3>Czego chce…</h3><ul><li><p>Desperacko pragnie uznania przez @UUID[Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u]{ojca}. Jeżeli będzie mógł odegrać rolę w przywróceniu statusu rodu Jungfreud, pokaże, że zasługuje na odziedziczenie tytułu.</p></li><li><p>Sigismund chce się sprawdzić w walce z godnym przeciwnikiem.</p></li><li><p>Chce podtrzymać ród Jungfreudów dzięki dziedzicowi i chociaż nie całkiem zgadza mu się czas, jest szczęśliwy, że jego żona jest w ciąży. Chciałby zapewnić jej szczęście i bezpieczeństwo od wysiłku i stresu, więc zwykle robi to, co ona mu mówi.</p></li></ul><h3>Można go znaleźć…</h3><ul><li><p>Kiedy biegnie za ojcem, przedstawiając mu nowy pomysł, jak wesprzeć rodzinne interesy.</p></li><li><p>Patrolującego @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.do8GXo5jCOdCC01q#neufaljungweg]{Neufaljungweg} z niewielkim oddziałem rajtarów, niedaleko granic księstwa.</p></li><li><p>Opiekującego się @UUID[Compendium.wfrp4e-ua2.actors.gdaMZK3R8I0jcRxW]{lady Gretą} w Wielkiej Sali.</p></li></ul>",
+      "items": {
+        "bBLK2hznjPlby6Jb": {
+          "id": "bBLK2hznjPlby6Jb",
+          "name": "Muzyka (Harmonijka)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Harmonijka)"
+        },
+        "3p00catg5a2pmfwv": {
+          "id": "3p00catg5a2pmfwv",
+          "name": "Etykieta (Szlachta)",
+          "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
+          "originalName": "Etykieta (Szlachta)",
+          "effects": {
+            "W0ORRnLMpYlf6NTK": {
+              "id": "W0ORRnLMpYlf6NTK",
+              "name": "Etykieta",
+              "scriptData": [
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]",
+                  "hideScript": "[Script.dAMtbn3uQwF8KpKU]"
+                },
+                {
+                  "id": "W0ORRnLMpYlf6NTK",
+                  "name": "Grupa",
+                  "script": "[Script.g0SzfsLyW7aD2F19]"
+                }
+              ]
+            }
+          },
+          "tests": "Charyzma i Plotkowanie (Szlachta)"
+        },
+        "UmCehwWvNxSoLJNb": {
+          "id": "UmCehwWvNxSoLJNb",
+          "name": "Doskonały Miecz",
+          "description": " ",
+          "originalName": "Doskonały Miecz"
+        },
+        "iE8cOhMUx1f58gCr": {
+          "id": "iE8cOhMUx1f58gCr",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "ac5PnqizfQwE9yGr": {
+          "id": "ac5PnqizfQwE9yGr",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "WsaEN1z2AfJ3zqHN": {
+          "id": "WsaEN1z2AfJ3zqHN",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "ABNIwM7qumROD5eT": {
+          "id": "ABNIwM7qumROD5eT",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "BNafy617LAVc8TtB": {
+          "id": "BNafy617LAVc8TtB",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Sigismund von Jungfreud": {
+      "id": "KHU4UeFIP5yokI6u",
+      "name": "Sigismund von Jungfreud",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.KHU4UeFIP5yokI6u",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Gold 5*",
+      "gmnotes": "<p>*Obecna sytuacja grafa obniżyła jego Status poniżej poziomu, którego można by się spodziewać po szlachcicu jego stanu.</p><p>Wszystko, co dzieje się na @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.Exvp9RN8shcIHrFm]{Czarnej Skale}, skupia się wokół grafa Sigismunda von Jungfreuda i ucieczki z Ubersreiku. Spuścizna zdrady Imperatora dyktuje każde działanie podjęte przez księcia i cokolwiek on rozkaże, ma się stać.</p><p>Przez całe życie Sigismund doświadczał jedynie sukcesów. Urodził się w bogatej reiklandzkiej rodzinie, zabezpieczył swoją pozycję, udowodnił w młodym wieku, że jest mężem stanu, wykorzystał inteligencję i pragmatyzm, by wykuć sojusze i załagodzić spory z innymi reiklandzkimi rodami i krasnoludami z @UUID[Compendium.wfrp4e-archives1.journals.De6yFCVO4shYbAUx]{Karak Azgaraz}. Gdzie jego ojciec nie poradził sobie z najazdami armii zielonoskórych, tam Sigismund wykazał się zdolnościami bojowymi i poprowadził swoje regimenty, by odmienić losy Ubersreiku. Po otrzymaniu tytułu po ojcu błyskawicznie wprowadził projekty budowlane w mieście i w całej okolicy, które umocniły ich obronność i wzmogły handel. W wieku pięćdziesięciu czterech lat Sigismund mógłby spojrzeć w tył na swoje życie i czuć dumę z tego, co osiągnął dzięki stanowczej osobowości i groźnej posturze. Był uczciwym, silnym władcą, lubianym przez swoich poddanych za jego osiągnięcia, jeżeli nie za jego urok.</p><p>Sigismund stanowi obecnie cień swojego dawnego, zwycięskiego siebie. Po raz pierwszy doświadczył prawdziwej porażki, wygnany ze swojego dziedzictwa ze znieważonym imieniem rodowym. Teraz siedzi ponuro na swoim wietrznym rodowym tronie i próbuje pogodzić się z tym, co się stało.</p><p>Jego @UUID[Compendium.wfrp4e-ua2.actors.34yRS0R4e4grG3Fj]{najstarszy syn} został poślubiony z konieczności z przedstawicielką rodziny, o której książę wie, że jest poniżej jego rodu i nie można jej ufać. Jego @UUID[Compendium.wfrp4e-starter-set.actors.TKM7T6dQMde2jUWJ]{najmłodszy syn} przepadł i prawdopodobnie zginął w Ubersreiku.</p><p>Niegdyś znany z panowania nad sobą i kontrolowania emocji Sigismund obecnie doświadcza wahań nastroju. Czasem jest ostrożny i niezdecydowany, nie mogąc skupić się na sprawach księstwa ani planach zemsty na Karlu-Franzie. Innymi razy staje się nagły i impulsywny. Rozpoczyna tuzin intryg, by podkopać pozycję Altdorfu i Imperatora, bombardując najstarszego syna i jego ludzi niepraktycznymi żądaniami. Książę nie stracił swojej inteligencji – wiele jego intryg mogłoby zadziałać, ale próba zrealizowania wszystkich planów naraz sprawia, że mają małe szanse powodzenia. Kiedy nowy plan się nie uda albo trafi na przewidywalne problemy, możnowładca wpadnie w paranoję. Założy, że Karl-Franz ma szpiegów na zamku albo gdzieś indziej na @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.Exvp9RN8shcIHrFm]{Czarnej Skale}, i straci czas na ich wykorzenienie.</p><p>Radzenie sobie z Sigismundem jest trudne. Jakikolwiek ma akurat humor, jest skłonny do gniewu i brak mu poczucia humoru. Nie ma czasu na myślenie abstrakcyjne i dywagacje.</p><p>Jeszcze niedawno Sigismund miał tyle sił co mężczyzna w połowie jego wieku. Teraz widać po nim jego lata – posiwiałe włosy zaczęły odsłaniać łysinę, a oczy są podkrążone od braku snu. Wciąż nosi eleganckie, ale praktyczne stroje – zwykle wycięty dublet i bryczesy w barwach Jungfreudów, jak również krótki, podszyty futrem płaszcz.</p><h3>Czego chce…</h3><ul><li><p>Książę opętany jest obsesyjnym pragnieniem zemsty na Imperatorze i jego agentach oraz sojusznikach w Reiklandzie. Jest przekonany, że jego przeciwnicy nie ustaną, dopóki zarówno on, jak i jego księstwo nie zostaną całkowicie zniszczeni.</p></li><li><p>Kolejnym pożerającym księcia pragnieniem jest chęć przywrócenia władzy jego rodziny w Ubersreiku i złapanie wszystkich przebywających w mieście i poza nim zdrajców, którzy wbili mu nóż w plecy. Szczególną nienawiścią darzy @UUID[Compendium.wfrp4e-rnhd.actors.gfSfXHgfqW5QiUxu]{generała von Dabernicka}, którego uważa za pyszałkowatego polityka, który mści się za jakieś niewielkie urazy, o których Jungfreudowie zapomnieli lata temu.</p></li><li><p>Sigismund chce odzyskać najmłodszego syna @UUID[Compendium.wfrp4e-starter-set.actors.TKM7T6dQMde2jUWJ]{Wendelina}, ale bardziej z praktycznych powodów niż jakichś prawdziwych uczuć. Chłopak zawsze był dziwny, ale żaden Jungfreud nie powinien być pozostawiony sam, a poza tym możnowładca z pewnością nie chciałby, żeby coś mu się stało. To samo dotyczy zaginionego drugiego syna Gerhardta, ale biorąc pod uwagę, że ostatnio widziano go w Altdorfie, Sigismund nie ma na to zbyt wielkich nadziei.</p></li><li><p>Nawet w swoim niepewnym stanie Sigismund nie zatracił dominującego i autorytarnego podejścia. Chce, by ludzie robili to, co im każe, kiedy im każe, i jeżeli to możliwe, by przewyższali jego oczekiwania.</p></li></ul><h3>Można go znaleźć…</h3><ul><li><p>W wieży Bowyera, gdy kłóci się z synem na temat tego, czy mają możliwość bezpośrednio skontaktować się z przyjaznymi czarodziejami z kolegiów magii w Altdorfie.</p></li><li><p>W skryptorium, gdzie czyta dokładnie spisy towarów z jego barek na @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.do8GXo5jCOdCC01q#rzeka-elster]{rzece Elster}.</p></li><li><p>Wędrującego w cichej rozpaczy po zamkowych salach w środku nocy, nie mogąc zasnąć.</p></li></ul>",
+      "items": {
+        "dnwoqixwkejgdcsw": {
+          "id": "dnwoqixwkejgdcsw",
+          "name": "księstwo Czarnej Skały",
+          "description": " ",
+          "originalName": "księstwo Czarnej Skały"
+        },
+        "hjl9qdohat8ijg8i": {
+          "id": "hjl9qdohat8ijg8i",
+          "name": "liczne ziemie i posiadłości",
+          "description": " ",
+          "originalName": "liczne ziemie i posiadłości"
+        },
+        "redyqead3gcsw7oc": {
+          "id": "redyqead3gcsw7oc",
+          "name": "rodowa służba",
+          "description": " ",
+          "originalName": "rodowa służba"
+        },
+        "zr82ym8xf666zl68": {
+          "id": "zr82ym8xf666zl68",
+          "name": "lojalni żołnierze i podejrzani najemnicy",
+          "description": " ",
+          "originalName": "lojalni żołnierze i podejrzani najemnicy"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Reikland)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Reikland)"
+        },
+        "EUemxeAxtdh7sy4P": {
+          "id": "EUemxeAxtdh7sy4P",
+          "name": "Ubranie dobrej jakości",
+          "description": " ",
+          "originalName": "Ubranie dobrej jakości"
+        },
+        "A8sTP4X4yejIOscj": {
+          "id": "A8sTP4X4yejIOscj",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "HcGIhsmOJL1QgYri": {
+          "id": "HcGIhsmOJL1QgYri",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "64KrtWqm0ANbriyd": {
+          "id": "64KrtWqm0ANbriyd",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "sgLfWji2XcenV5fK": {
+          "id": "sgLfWji2XcenV5fK",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "c5aSQzWmLOJTuWTh": {
+          "id": "c5aSQzWmLOJTuWTh",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Sir Galleran de Grismerie": {
+      "id": "ioOn6JzvMTTStVpT",
+      "name": "Sir Galleran de Grismerie",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.ioOn6JzvMTTStVpT",
+      "species": "Nieumarły",
+      "gender": "Mężczyzna",
+      "items": {
+        "e4e4krcdaunvod9c": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "A2FB1aaR0wc1E64l": {
+          "specification": "2"
+        },
+        "lOeCnUeNZnzH5miT": {
+          "specification": "2"
+        }
+      }
+    },
+    "Skeleton Guards": {
+      "id": "WrzKdnuUSc4w8zqj",
+      "name": "Szkieletowa gwardia",
+      "description": "<section id=\"secret-6jYDpHebVUxzqTcU\" class=\"secret\"><blockquote><p>‘I raised the heavy lid expecting to find the glorious golden death mask of Khetanken. But we had been misinformed. A bony hand flew out and grabbed my neck. Startled, I dropped the lid, and the hand and lower arm were severed, trapping the undead creature within the sarcophagus.</p><p>‘But it held on tightly, squeezing my neck so I could hardly breathe! I thought I was going to die. But Sister Celestine threw some of her sacred water over the thing, and it became lifeless once more.</p><p>‘I use it as a back scratcher now.’</p><p style=\"text-align: right\"><em>– Hubert Karter, Tomb Robber</em></p></blockquote><p>Szkielety to pozbawione ciała kości dawno umarłych, poruszane mroczną magią, która zmusza je, by chodziły po ziemi, szydząc z żywych. Ci, którzy po śmierci nie zostali złożeni na spoczynek zgodnie z rytuałami @UUID[Compendium.wfrp4e-core.journals.NcH9OhleJFfaUdon.JournalEntryPage.HfmrIexylrgxIz2x]{Morra, Boga Śmierci}, mogą zostać wskrzeszeni w tej postaci przez wystarczająco potężnego nekromantę. Całkowicie bezmyślne szkielety będą walczyły, dopóki ich kości nie zostaną rozbite na kawałki. Nie wiedzą, co to odwaga, ponieważ nie wiedzą, co to strach. Nie mogą zostać zabite, ponieważ nie są żywe.</p><blockquote class=\"sidebar\"><h3 style=\"text-align: center; text-transform:uppercase\" class=\"sidebar-title no-toc\"><em>Zasada opcjonalna: Same kości</em></h3><p><span style=\"font-family: CaslonPro\"><em>Jeśli chcesz oddać kościstą naturę szkieletów, możesz wprowadzić karę -1 punkt Obrażeń do Ran zadawanych przez broń, która nie posiada cechy Ogłuszająca.</em></span></p></blockquote></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.WrzKdnuUSc4w8zqj",
+      "species": "Nieumarły",
+      "gender": "???",
+      "items": {
+        "hysxpkllv5u2h2ki": {
+          "id": "JQa5DLnTs2SEzRrc",
+          "name": "Widzenie w Mroku",
+          "description": "<p>Stworzenie potrafi widzieć w ciemności jak w świetle dziennym.</p>",
+          "originalName": "Widzenie w Mroku",
+          "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
+        },
+        "c2t70ss02kgqrdf6": {
+          "id": "HbrwGhUl0ZXz4kLA",
+          "name": "Twardziel",
+          "description": "<p>Stworzenie jest w stanie przyjąć więcej obrażeń niż większość innych istot. Zwiększ Żywotność stworzenia o wartość równą jego Bonusowi z Wytrzymałości (zastosuj to przed wszelkimi modyfikatorami <i>Rozmiaru</i>).</p>",
+          "originalName": "Twardziel",
+          "sourceId": "Compendium.wfrp4e-core.items.HbrwGhUl0ZXz4kLA",
+          "effects": {
+            "yrUvulIfrQfAJmkB": {
+              "id": "yrUvulIfrQfAJmkB",
+              "name": "Twardziel",
+              "scriptData": [
+                {
+                  "id": "yrUvulIfrQfAJmkB",
+                  "name": "Twardziel",
+                  "script": "[Script.GuUCErVbk5hrFzR3]"
+                }
+              ]
+            }
+          }
+        },
+        "vu8YAYbFCpy0861k": {
+          "specification": "2"
+        },
+        "DvBA47zKMoe8r2hB": {
+          "specification": "2"
+        }
+      }
+    },
+    "Stablehands and Groundskeepers": {
+      "id": "Wjg03drvsPT4sora",
+      "name": "Stajenni i ogrodnicy",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.Wjg03drvsPT4sora",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "status": "Srebro 1",
+      "items": {
+        "Rri5U7GnxIODkcF6": {
+          "id": "Rri5U7GnxIODkcF6",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "3jjl1CRJj995hMZ4": {
+          "id": "3jjl1CRJj995hMZ4",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "s3MlodxWpeXZUZRy": {
+          "id": "s3MlodxWpeXZUZRy",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "A1L8XffnDVayJXTO": {
+          "id": "A1L8XffnDVayJXTO",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "AQ8LFlRDR7VFuxMX": {
+          "id": "AQ8LFlRDR7VFuxMX",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        },
+        "Bw4BzqDOrldDDJdt": {
+          "id": "Bw4BzqDOrldDDJdt",
+          "name": "Broń (Widły lub inne zakończone szpikulcem narzędzia)",
+          "description": "<p>Stworzenie nosi broń do walki wręcz lub używa w walce zębów, pazurów albo tym podobnych. Broń zadaje tyle Obrażeń, ile wynosi podana wartość, która już zawiera Bonus z Siły stworzenia. Zazwyczaj będzie to wynosiło 4 + Bonus z Siły (co reprezentuje broń ręczną).</p>",
+          "originalName": "Broń (Widły lub inne zakończone szpikulcem narzędzia)",
+          "specification": "3"
+        }
+      }
+    },
+    "The Branchers": {
+      "id": "7BuQmyBVAvVfs4s9",
+      "name": "Podloty",
+      "description": "<section id=\"secret-xOLf3bZJlKu1Gs0j\" class=\"secret\"><p>Chociaż historyczny Rybowron działał samodzielnie, w @UUID[Compendium.wfrp4e-ua2.journals.sQB0DIfZU4c8nbTd.JournalEntryPage.C9XGHvmlzFnVsOUJ#the-fishrook-dalliance]{Swawolach Rybowrona}, Ludlheim wykreował grupę tęgich wieśniaków, którzy pracowali na rzecz rabusia. Nazwał ich Podlotami od określenia nadawanego młodym Rybowrona. @UUID[Compendium.wfrp4e-ua2.actors.ySYxwgeetYujddRC]{Gutele} odtworzyła to, ściągając ośmiu młodych ludzi z Sigmartempel jako swoją prywatną armię. Oni również noszą maski, chociaż to raczej worki z wyciętymi otworami na oczy niż ozdobna ptasia maska, której używa Gutele. Pomogli już Rybowronowi w obrabowaniu brata Erasmusa, sigmaryckiego kapłana. Uzbroili się we wszystko, czego można się spodziewać po wiejskiej hałastrze – noże, widły, pałki i włócznie. Jeden z nich miał nawet stary garłacz dziadka.</p></section>",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.7BuQmyBVAvVfs4s9",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "0MYOJFx3vkYA95B4": {
+          "id": "0MYOJFx3vkYA95B4",
+          "name": "1k10 miedzianych pensów",
+          "description": " ",
+          "originalName": "1k10 miedzianych pensów"
+        },
+        "0ytwj2gkl3wqxrrn": {
+          "specification": "Szlachta"
+        },
+        "rsbeCl0ZY6rPNLf7": {
+          "id": "rsbeCl0ZY6rPNLf7",
+          "name": "przebrania Podlotów",
+          "description": " ",
+          "originalName": "przebrania Podlotów"
+        },
+        "EVhr0HBelMVKmmWB": {
+          "id": "EVhr0HBelMVKmmWB",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "fXDZRYizFIidQfAd": {
+          "id": "fXDZRYizFIidQfAd",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "kbc4hAX7WahtaMDG": {
+          "id": "kbc4hAX7WahtaMDG",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "FFk7fgqH68Gql7jG": {
+          "id": "FFk7fgqH68Gql7jG",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "HMtr02KpnWdwNjBO": {
+          "id": "HMtr02KpnWdwNjBO",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Vidar Skarost": {
+      "id": "JiMqU4nNuE1bDiC9",
+      "name": "Vidar Skarost",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.JiMqU4nNuE1bDiC9",
+      "species": "Człowiek",
+      "gender": "Mężczyzna",
+      "status": "Srebro 5",
+      "gmnotes": "<p>Najważniejszym porucznikiem @UUID[Compendium.wfrp4e-ua2.actors.NMdZpAyqdfS4o0Pl]{kapitana Trotta} jest Vidar Skarost, norsmeński najemnik, który dowodzi Niepokonaną Bandą, szczególnie brutalną grupą dawnych gladiatorów z Horvenghaast. Barczysty, rudy Skarost jest dumny ze strachu, jaki wzbudza w słabych ludziach z południa, i cieszy go efekt, jaki wywołuje jego włochaty i niechlujny regiment na zastraszonych mieszkańcach @UUID[Compendium.wfrp4e-ua2.journals.jMtLvCUR8HkJtqpI.JournalEntryPage.4uttIFHEO74XE6xf]{Altebergu}. Mimo że dowodzi Absolem, dzięki sprytowi Vidara udało mu się uniknąć kłopotów. Norsmena można często spotkać na wioskowym placu, gdzie ćwiczy ostentacyjnie i gwałtownie z Absolemem i poprzez walkę powoli wprowadza dowódcę w wiarę w dzikich bogów zamarzniętej północy.</p>",
+      "items": {
+        "zyd4sclae3hmf3bm": {
+          "id": "zyd4sclae3hmf3bm",
+          "name": "para brodatych toporów",
+          "description": " ",
+          "originalName": "para brodatych toporów"
+        },
+        "ikg3gt2dqej8qy5e": {
+          "id": "ikg3gt2dqej8qy5e",
+          "name": "Norsmen",
+          "description": " ",
+          "originalName": "Norsmen"
+        },
+        "DRO5DLF6UcfkvNSh": {
+          "id": "DRO5DLF6UcfkvNSh",
+          "name": "Wiedza (Norska)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Norska)"
+        },
+        "HO8vIjGTHjmenIaV": {
+          "id": "HO8vIjGTHjmenIaV",
+          "name": "Kuglarstwo (Walka Pokazowa)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Kuglarstwo}</p>",
+          "originalName": "Kuglarstwo (Walka Pokazowa)"
+        },
+        "ZhQnV8rOkoyCBNuw": {
+          "id": "ZhQnV8rOkoyCBNuw",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "OuMiJ78Auiv0sZE9": {
+          "id": "OuMiJ78Auiv0sZE9",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "4EiNmG8WbKmUhdlt": {
+          "id": "4EiNmG8WbKmUhdlt",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "oe1U6s12wdrlvMyF": {
+          "id": "oe1U6s12wdrlvMyF",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "d6eZCHzDzIugjUgM": {
+          "id": "d6eZCHzDzIugjUgM",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    },
+    "Wanda Grimmig": {
+      "id": "Aflfb0BTIDX6j8uQ",
+      "name": "Wanda Grimmig",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-ua2.actors.Aflfb0BTIDX6j8uQ",
+      "species": "Człowiek",
+      "gender": "Kobieta",
+      "status": "Srebro 1",
+      "gmnotes": "<p>Wanda Grimmig to atrakcyjna młoda dama o kruczoczarnych włosach i gładkiej, alabastrowej skórze. Nerwowa dusza, której nastrój waha się od przygnębionego nadąsania do egzystencjalnej rozpaczy. Nosi gruby wełniany płaszcz, który otula całe jej ciało z wyjątkiem twarzy, dłoni i przedramion. Jej dłonie oraz nadgarstki zdobią srebrne bransoletki i pierścionki, a na jej szyi spoczywa ciężki wisiorek przedstawiający Bramę Morra.</p><p>Wanda jest świecką urzędniczką @UUID[Compendium.wfrp4e-core.journals.NcH9OhleJFfaUdon.JournalEntryPage.HfmrIexylrgxIz2x]{kultu Morra}. Dostarcza zapasy na @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.eoXBXibg4X0OnT7p]{Pole Morra}, cmentarz znajdujący się poza murami @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG]{Ubersreiku}. Ostatnio zaczęła miewać niepokojące sny. Przekonana, że komunikuje się z nią Morr, spanikowała i głośno napraszała się swoim przełożonym podczas obrzędów pogrzebowych wymagających uroczystej ciszy. W rezultacie została zawieszona na czas nieokreślony</p>",
+      "items": {
+        "7msw9o6460h6g4ql": {
+          "id": "7msw9o6460h6g4ql",
+          "name": "Błogosławieństwo (Morr*)",
+          "description": "<p><em>*Kiedy Wanda czuje się odrzucona przez kult, nie może używać tych Talentów.</em></p>\n<p>Jesteś pod opieką jednego z bogów i możesz wzmacniać proste modlitwy. Teraz możesz wykorzystać błogosławieństwa swojego bóstwa wymienione w @UUID[Compendium.wfrp4e-core.journals.NcH9OhleJFfaUdon]{Religie i Wierzenia}. W normalnych okolicznościach możesz znać tylko jedną boską wiedzę dla talentu Błogosławieństwo.</p>",
+          "originalName": "Błogosławieństwo (Morr*)",
+          "effects": {
+            "xBEN6zLyoG2JrZwh": {
+              "id": "xBEN6zLyoG2JrZwh",
+              "name": "Błogosławieństwo",
+              "scriptData": [
+                {
+                  "id": "xBEN6zLyoG2JrZwh",
+                  "name": "Błogosławieństwo",
+                  "script": "[Script.IupskvzvoGyD2H5o]"
+                }
+              ]
+            }
+          }
+        },
+        "830zw4hlrj61r92f": {
+          "id": "830zw4hlrj61r92f",
+          "name": "Inwokacja (Morr*)",
+          "description": "<p><em>*Kiedy Wanda czuje się odrzucona przez kult, nie może używać tych Talentów.</em></p>\n<p>Zostałeś pobłogosławiony przez jednego z bogów i możesz wzmocnić jeden z cudów swojej sekty. Ponadto możesz nabyć dodatkowe cuda za 100 XP za każdy znany ci obecnie cud. Jeśli więc znasz już 3 cuda, nabycie kolejnego kosztuje 300 XP. Pełne zasady dotyczące nauki nowych cudów znajdują się w.  @UUID[Compendium.wfrp4e-core.journals.NcH9OhleJFfaUdon]{Religia i Wiara}. W normalnych okolicznościach nie możesz nauczyć się więcej niż jednego cudu. <em>Przywołanie (Boska wiedza)</em> Talent. Further, @UUID[Compendium.wfrp4e-core.items.mdPGZsn2396dEpOf]{Petty Magic} or @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Arcane Magic} Talents when you have the Invoke Talent. You can unlearn this Talent for 100 XP, but will lose all of your miracles if you do so, and will also garner the extreme disfavor of your God, with effects determined by your GM</p>",
+          "originalName": "Inwokacja (Morr*)"
+        },
+        "Fmy3wDj3H9pLbSfp": {
+          "id": "Fmy3wDj3H9pLbSfp",
+          "name": "Kapłanka Morra",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h1l9jvaIxsb92wtM]{Kapłan}</p>",
+          "originalName": "Kapłanka Morra",
+          "careergroup": "Kapłan",
+          "class": "Uczeni",
+          "skills": [
+            "Atletyka",
+            "Opanowanie",
+            "Odporność",
+            "Intuicja",
+            "Wiedza (Teologia)",
+            "Percepcja",
+            "Modlitwa",
+            "Badania Naukowe",
+            "Charyzma",
+            "Występy (Gawędziarstwo)",
+            "Plotkowanie",
+            "Leczenie",
+            "Zastraszanie",
+            "Broń Biała (Podstawowa)"
+          ],
+          "talents": [
+            "Gadanina",
+            "Mól Książkowy",
+            "Etykieta (Kultyści)",
+            "Inwokacja (Dowolne Bóstwo)"
+          ],
+          "trappings": [
+            "Księga (Religia)",
+            "Szata ceremonialna"
+          ]
+        },
+        "i6gGYCKq9yjmEthR": {
+          "id": "i6gGYCKq9yjmEthR",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy"
+        },
+        "GgiTVmyIS8jCP5V0": {
+          "id": "GgiTVmyIS8jCP5V0",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała"
+        },
+        "1bqz6PFGJkOeRsG3": {
+          "id": "1bqz6PFGJkOeRsG3",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka"
+        },
+        "6owL34DDdmR3QNFt": {
+          "id": "6owL34DDdmR3QNFt",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie"
+        },
+        "JmgzNr8G7M655gdp": {
+          "id": "JmgzNr8G7M655gdp",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo"
+        }
+      }
+    }
+  }
+}

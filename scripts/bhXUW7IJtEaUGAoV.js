@@ -4,4 +4,3 @@ if (test.failed)
 {
     this.actor.addCondition("prone");
 }
-  

@@ -1,5 +1,5 @@
-  if (["orc", "ork", "goblin", "hobgoblin", "snotling", "greenskin", "zielonoskóry"].includes(args.opposedTest.defender.details.species.value.toLowerCase()))
+if (["orc", "ork", "goblin", "hobgoblin", "snotling", "greenskin"].includes(args.opposedTest.defender.details.species.value.toLowerCase()))
     {
       args.addImpact = true
-      args.opposedTest.result.other.push("<b>Runa Zabójcy Goblinów</b>: Dodano Zaletę Druzgocąca")
+      args.opposedTest.result.other.push("<b>Rune of Goblin Bane</b>: Impact Added")
     }

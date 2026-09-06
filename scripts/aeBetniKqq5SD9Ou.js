@@ -10,10 +10,10 @@ let characteristics = {
     "wp" : 40,
     "fel" : 30
 }
-let skills = [game.i18n.localize("NAME.Intimidate"), "Język (Klasyczny)", game.i18n.localize("NAME.Leadership"), "Wiedza (Sztuka Wojenna)", "Wiedza (Historia)", game.i18n.localize("NAME.Perception")]
+let skills = ["Intimidate", "Language (Classical)", "Leadership", "Lore (Warfare)", "Lore (History)", "Perception"]
 let skillAdvancements = [20, 30, 20, 30, 20, 20]
-let talents = ["Zmysł Bitewny", "Bitewny Refleks", "Musztra", "Groźny", "Krzepki", "Silny Cios", "Silny Cios", "Wódz"]
-let trappings = ["Broń ręczna", "Płytowy napierśnik", "Hełm płytowy", "Płytowe Nagolenniki"]
+let talents = ["Combat Aware", "Combat Reflexes", "Drilled", "Menacing", "Robust", "Strike Mighty Blow", "Strike Mighty Blow", "War Leader"]
+let trappings = ["Hand Weapon", "Plate Breastplate", "Plate Helm", "Plate Leggings"]
 let specialItems = [ 
 ]    
 let items = [];

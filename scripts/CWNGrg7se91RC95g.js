@@ -1,11 +1,14 @@
 if (args.totalWoundLoss > 0) {
-  args.opposedTest.result.other.push(
-  `@Corruption[minor]{Wystawienie na Umiarkowane Zepsucie}`
-  )
+  if (args.opposedTest)
+  {
+    args.opposedTest.result.other.push(
+      `@Corruption[minor]{Moderate Exposure to Corruption}`
+    )
+  }
   this.script.message(`<strong>${this.effect.name}</strong>: 
-      @Corruption[moderate]{Wystawienie na Umiarkowane Zepsucie} <br/>
-      <strong>${args.actor.prototypeToken.name}</strong> musi wykonać test na 
-      <strong>Zepsucie (Umiarkowane)</strong>`, 
+      @Corruption[moderate]{Moderate Exposure to Corruption} <br/>
+      <strong>${args.actor.prototypeToken.name}</strong> must take an 
+      <strong>Corruption (Moderate) Test</strong>`, 
       {whisper: ChatMessage.getWhisperRecipients("GM")}
   )
 }

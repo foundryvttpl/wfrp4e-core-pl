@@ -1,7 +1,7 @@
 let halve;
-if (args.opposedTest.attackerTest.item?.type != "spell")
+if (args.sourceItem?.type != "spell")
 {
-    halve = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : "Obrażenia obniżone o połowę? (Zmniejsza obrażenia, które nie pochodzą od ognia, zimna i magii)"})
+    halve = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : "Halve Damage? (Halves all damage other than fire, cold, and magic)"})
 }
 else
 {
@@ -11,5 +11,5 @@ else
 if (halve)
 {
     args.totalWoundLoss /= 2;
-    args.modifiers.other.push({label : this.effect.name, details : "Zmniejszono o Połowę", value : "× 0.5"})
+    args.modifiers.other.push({label : this.effect.name, details : "Halved", value : "× 0.5"})
 }

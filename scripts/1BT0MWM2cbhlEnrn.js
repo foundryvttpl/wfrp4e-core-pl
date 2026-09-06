@@ -1,4 +1,4 @@
-        let characteristics = {
+let characteristics = {
             "ws" : 5,
             "bs" : 5,
             "s" : 5,
@@ -37,4 +37,3 @@
         
         await this.actor.update(updateObj)
         this.actor.createEmbeddedDocuments("Item", items);
-    

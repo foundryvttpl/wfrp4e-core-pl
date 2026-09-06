@@ -10,13 +10,13 @@ let characteristics = {
   "wp" : 10,
   "fel" : 15
 }
-let skills = ["Splatanie Magii", "Charyzma", "Kuglarstwo (Taniec)"]
+let skills = ["Channelling", "Charm", "Perform (Dancing)"]
 let skillAdvancements = [0, 6, 3]
-let talents = ["Atrakcyjny", "Rozproszenie Uwagi", "Naśladowca"]
-let traits = ["Dekoncentrujący", "Latanie (6)", "Rzucanie Czarów (Magia Prosta)"]
-let trappings = [];
+let talents = ["Attractive", "Distract", "Mimic"]
+let traits = ["Distracting", "Flight (6)", "Spellcaster (Petty)"]
+let trappings = []
 let items = [];
-let spells = ["Błędne ogniki", "Uśpienie"];
+let spells = ["Marsh Lights", "Sleep"];
 
 let updateObj = this.actor.toObject();
 
@@ -74,7 +74,7 @@ for (let trait of traits)
 
   if (Number.isNumeric(traitVal))
   {
-      traitItem.system.specification.value = traitName.includes('Broń','Rogi','Atak Ogonem','Macki','Ugryzienie') ? traitVal - parseInt(characteristicValues[3]/10) : traitVal;
+      traitItem.system.specification.value = traitName.includes('Weapon','Horns','Tail','Tentacles','Bite') ? traitVal - parseInt(characteristicValues[3]/10) : traitVal;
       traitItem.name = (traitItem.name +  ` ${traitSpec ? "("+ traitSpec + ")" : ""}`).trim()
   }
   else 

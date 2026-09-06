@@ -8,12 +8,12 @@ if (type == "cold")
 
 if (type == "corrosion")
 {
-    let damageItems = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>Uszkodzić wszystkie noszone przedmioty?</p>`})
+    let damageItems = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>Damage all Items carried?</p>`})
 	if (damageItems)
 	{
 		let msg = ``
 		let weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);
-		let armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);
+		let armour = args.actor.itemTags.armour.filter(i => i.isEquipped);
 		let trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);
 		for(let item of weapons)
 		{
@@ -25,17 +25,17 @@ if (type == "corrosion")
 			{
 				await item.system.damageItem(1);
 			}
-			msg += `<p><strong>${item.name}</strong>: uszkodzono o 1</p>`
+			msg += `<p><strong>${item.name}</strong> damage by 1</p>`
 		}
 		for(let item of armour)
 		{
 			await item.system.damageItem(1);
-			msg += `<p><strong>${item.name}</strong>: uszkodzono o 1</p>`
+			msg += `<p><strong>${item.name}</strong> damage by 1</p>`
 		}
 		for(let item of trappings)
 		{
 			await item.system.damageItem(1);
-			msg += `<p><strong>${item.name}</strong>: uszkodzono o 1</p>`
+			msg += `<p><strong>${item.name}</strong> damage by 1</p>`
 		}
 		if (msg)
 		{

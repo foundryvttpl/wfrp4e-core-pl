@@ -1,4 +1,3 @@
-
 let characteristics = {
     "ws" : 20,
     "bs" : 20,

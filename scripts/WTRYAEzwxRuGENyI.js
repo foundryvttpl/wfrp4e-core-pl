@@ -1,4 +1,4 @@
-        // Every living creature within 10 yards, other than the wielder of the hammer,
+// Every living creature within 10 yards, other than the wielder of the hammer,
         // must make a Challenging (+0) Endurance Test 
 
         let test = await this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {

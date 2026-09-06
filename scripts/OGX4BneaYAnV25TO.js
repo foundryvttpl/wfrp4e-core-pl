@@ -15,25 +15,25 @@ if (wounds.value > 0)
     {
         wounds.value = wounds.max
     }
-    message += `<b>${this.actor.name}</b>: Odzyskane punkty Żywotności: ${regen}.`
+    message += `<b>${this.actor.name}</b> regains ${regen} Wounds.`
 
     if (regen == 10)
     {
-        message += `<br>Dodatkowo zregenerowano krytyczną ranę.`;
+        message += `<br>Additionally, they regenerate a Critical Wound.`
     }
 }
 else if (regen >= 8) 
 {
-    message += `<b>${this.actor.name}</b>: wylosowano ${regen} i odzyskano 1 punkt Żywotności.`;
+    message += `<b>${this.actor.name}</b> rolled a ${regen} and regains 1 Wound.`
     wounds.value += 1
     if (regen == 10)
     {
-        message += `<br>Dodatkowo zregenerowano krytyczną ranę.`;
+        message += `<br>Additionally, they regenerate a Critical Wound.`
     }
 }
 else 
 {
-    message += `<b>${this.actor.name}</b>: wylosowano ${regen} - brak efektu.`;
+    message += `<b>${this.actor.name}</b> Regenerate roll of ${regen} - No effect.`
 }
 
 await this.actor.update({ "system.status.wounds": wounds })
