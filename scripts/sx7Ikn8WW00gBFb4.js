@@ -2,11 +2,11 @@ let location = (Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? "r" : "l") + "
 
 if (location == "lArm")
 {
-	this.script.notification("Wylosowano Lewą")
+	this.script.notification("Rolled Left")
 }
 else if (location == "rArm")
 {
-	this.script.notification("Wylosowano Prawą")
+	this.script.notification("Rolled Right")
 }
 
 this.effect.updateSource({"flags.wfrp4e.location" : location});
@@ -17,7 +17,7 @@ if (location)
 
     if (dropped.length)
     {
-        this.script.notification(`Upuszczono ${dropped.map(i => i.name).join(", ")}!`)
+        this.script.notification(`Dropped ${dropped.map(i => i.name).join(", ")}!`)
         for(let weapon of dropped)
         {
             await weapon.system.toggleEquip();
@@ -27,6 +27,6 @@ if (location)
 
 let roll = await new Roll("1d10").roll()
 
-roll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Czas Trwania)`}));
+roll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));
 
 this.effect.updateSource({"duration.rounds" : roll.total})

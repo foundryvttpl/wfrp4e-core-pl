@@ -1,4 +1,4 @@
- let characteristics = {
+let characteristics = {
                     "ws" : 5,
                     "bs" : 0,
                     "s" : 0,

@@ -7,4 +7,3 @@ if (args.test.result.critical && args.test.result.roll % 10 == 0)
     })
 
   }
-

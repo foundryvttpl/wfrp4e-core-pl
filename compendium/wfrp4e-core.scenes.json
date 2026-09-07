@@ -1,7 +1,7 @@
 {
     "label": "Mapy (Podręcznik Główny)",
     "mapping": {
-        "image": "background.src",
+        "image": "levels.0.background.src",
         "notes": {
             "path": "notes",
             "converter": "notes"

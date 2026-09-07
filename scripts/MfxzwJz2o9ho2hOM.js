@@ -1,1 +1,1 @@
-return args.skill?.name == "Rzemiosło (Aptekarstwo)";
+return args.skill?.name == "Lore (Apothecary)"

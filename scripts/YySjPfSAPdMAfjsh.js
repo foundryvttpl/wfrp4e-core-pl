@@ -8,4 +8,3 @@ for (let talent of talents) {
     continue;
   currentCareer.system.talents.push(talent);	
 }
-

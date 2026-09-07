@@ -1,11 +1,11 @@
-    let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);
-    amberTalons.name = "Szpony Furii";
+let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);
+    amberTalons.name = "Amber Talons";
     amberTalons.img = this.effect.img;
     amberTalons.system.damage.value = "SB + WPB"
     amberTalons.system.equipped = true;
     amberTalons.system.qualities.value.push({name : "magical"})
     amberTalons.effects.push({
-        label : "Szpony Furii",
+        name : "Amber Talons",
         transfer: false,
         img : "modules/wfrp4e-core/icons/spells/amber-talons.png" ,
         system: {

@@ -1,7 +1,7 @@
 {
     "label": "Mapy (Zestaw Startowy)",
     "mapping": {
-        "image": "background.src",
+        "image": "levels.0.background.src",
         "notes": {
             "path": "notes",
             "converter": "notes"
@@ -13,7 +13,7 @@
         "Ubersreik City": {
             "id": "qInNaOV1JVu4SyQU",
             "name": "Miasto Ubersreik",
-            "image": "modules/wfrp4e-core-pl/images/zs/ubersreik-unlabeled-upscaled.webp",
+            "image": "modules/wfrp4e-core-pl/images/starter-set/ubersreik-unlabeled-upscaled.webp",
             "notes": {
                 "WK8TdUUkqN23hhBH": {
                     "text": ""
@@ -246,7 +246,7 @@
         "Ubersreik Duchy": {
             "id": "LyOavLLMR3Y5Hq09",
             "name": "Księstwo Ubersreik",
-            "image": "modules/wfrp4e-core-pl/images/zs/ubersreik-duchy.webp",
+            "image": "modules/wfrp4e-core-pl/images/starter-set/ubersreik-duchy.webp",
             "notes": {
                 "VHNw8vpKQDSeAotD": {
                     "text": ""
@@ -284,7 +284,7 @@
         "Ubersreik Surrounds": {
             "id": "dffFQGeXYq79AE8p",
             "name": "Okolice Ubersreiku",
-            "image": "modules/wfrp4e-core-pl/images/zs/ubersreik-surrounds.webp",
+            "image": "modules/wfrp4e-core-pl/images/starter-set/ubersreik-surrounds.webp",
             "units": "km"
         }
     }

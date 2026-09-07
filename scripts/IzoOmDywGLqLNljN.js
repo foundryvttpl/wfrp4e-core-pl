@@ -1,4 +1,4 @@
-let skill = `Język (Magiczny)`;
+let skill = `Language (Magick)`
 let currentCareer = this.actor.system.currentCareer;
 let existingSkill = this.actor.itemTypes.skill.find(i => i.name == skill);
 

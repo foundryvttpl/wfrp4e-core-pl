@@ -1,0 +1,1084 @@
+{
+    "label": "Sceny (Wróg w Cieniach)",
+    "mapping": {
+        "image": "background.src",
+        "notes": {
+            "path": "notes",
+            "converter": "notes"
+        },
+        "drawings": {
+            "path": "drawings",
+            "converter": "drawings"
+        },
+        "units": "grid.units",
+        "distance": "grid.distance"
+    },
+    "folders": {
+        "Bögenhafen": "Bögenhafen",
+        "Companion": "Niezbędnik",
+        "Enemy In Shadows": "Wróg w cieniach"
+    },
+    "entries": {
+        "Altdorf": {
+            "id": "aQ5GINBrubaDGQw4",
+            "name": "Altdorf",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/altdorf.webp",
+            "drawings": {
+                "EG0SzNtGRW9u46Lz": {
+                    "text": "1. Königsplatz"
+                },
+                "Fxnp8IoADe5v1d3Y": {
+                    "text": "2. Pałac Imperatora"
+                },
+                "swOMkWua1OdV4QGA": {
+                    "text": "3. Świątynia Sigmara"
+                },
+                "EqKWW3RsOnN1y9Dz": {
+                    "text": "4. Dzielnica Biedoty"
+                },
+                "S3cTon3v7VFrPmRU": {
+                    "text": "5. Dzielnica Kupiecka"
+                },
+                "PUqaWTizI7ioXQxm": {
+                    "text": "6. Doki"
+                },
+                "E6ur1kvrrVQg9RMf": {
+                    "text": "7. Uniwersytet Altdorfski i Kolegia Magii"
+                }
+            }
+        },
+        "Altdorf to Bögenhafen": {
+            "id": "3c6zrSdav47pSYaK",
+            "name": "Droga Altdorf Bögenhafen",
+            "units": "km",
+            "distance": 4,
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/altdorf-to-bogenhafen.webp"
+        },
+        "Black Arrow Keep": {
+            "id": "XgFi5CGDXXTnftf7",
+            "name": "Zamek Czarnych Strzał",
+            "notes": {
+                "d3BFVCzz8tOtmzcr": {
+                    "text": ""
+                },
+                "L1K75oStWJnEJtW7": {
+                    "text": ""
+                },
+                "8wVstzDwbD8QYLFN": {
+                    "text": ""
+                },
+                "2JjCqGfCW1qy9i7n": {
+                    "text": ""
+                },
+                "6N2wrrjyKskJAEFY": {
+                    "text": ""
+                },
+                "tx0fR2zSzeZ4VNC3": {
+                    "text": ""
+                },
+                "NH7uVXYnVkVH9Toe": {
+                    "text": ""
+                },
+                "L1PS8IMcw7eJwyOs": {
+                    "text": ""
+                },
+                "DDHULl8Zvsz4gSqx": {
+                    "text": ""
+                },
+                "I9VwvT4p4fIYkFs4": {
+                    "text": ""
+                },
+                "Pz06G1cWAspMefcy": {
+                    "text": ""
+                },
+                "fh35l5BvC6tv4PKf": {
+                    "text": ""
+                },
+                "ponn8yPytCcIoAGg": {
+                    "text": ""
+                },
+                "shSmtqEpOtVUNxE4": {
+                    "text": ""
+                },
+                "G8ydTQ2xtiE5XKCU": {
+                    "text": ""
+                },
+                "iBuWaW6gKKNAL31Q": {
+                    "text": ""
+                },
+                "SJJFKSzoLVsf6BuF": {
+                    "text": ""
+                },
+                "0ldz3UbjjLw7qShW": {
+                    "text": ""
+                },
+                "cKFiQ1En9vey7LYE": {
+                    "text": ""
+                },
+                "l1Vpk9uYRPpOCI81": {
+                    "text": ""
+                },
+                "BD8XB5my0y20vbqd": {
+                    "text": ""
+                },
+                "wKe3OP3Fx38hWRP3": {
+                    "text": ""
+                },
+                "7T3Z3hwUqCm023fK": {
+                    "text": ""
+                },
+                "YbKT0piBDayE7C2V": {
+                    "text": ""
+                },
+                "J6YMvUtSnT3AoT8i": {
+                    "text": ""
+                },
+                "X1Gw62dnssN8adyD": {
+                    "text": ""
+                },
+                "HKlsuTpGvNqKjIvs": {
+                    "text": ""
+                },
+                "y5NWgKYw0wYS9vfD": {
+                    "text": ""
+                },
+                "CDbwKAuNj5et6AMA": {
+                    "text": ""
+                },
+                "fNE1ZSuSRs1aME9w": {
+                    "text": ""
+                },
+                "Zt2G00t0Art4YITE": {
+                    "text": "10. Patrole na blankach"
+                }
+            },
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/black-arrow-keep.webp",
+            "drawings": {
+                "jCAfyNeZyM4oDRll": {
+                    "text": "Zewnętrze górnej wieży"
+                },
+                "5kpyVP8CwR3jiltg": {
+                    "text": "Wnętrze górnej wieży"
+                },
+                "QVE5CreVKZADyvTp": {
+                    "text": "Czwarte piętro"
+                },
+                "e8ynhYU5ZD0AHE7Z": {
+                    "text": "Trzecie piętro"
+                },
+                "fLsX6CMvYnXG3wzu": {
+                    "text": "Pierwsze piętro"
+                },
+                "MgEboeSwZLRNDJ7o": {
+                    "text": "Drugie piętro"
+                },
+                "HAEtQDXgTpCeYsvF": {
+                    "text": "Parter"
+                }
+            }
+        },
+        "Bögenhafen": {
+            "id": "PjdjWCf0haIiXEW6",
+            "name": "Bögenhafen",
+            "notes": {
+                "1i8smrO4fk1oshfg": {
+                    "text": ""
+                },
+                "lpILPFnDq2l0jfo3": {
+                    "text": ""
+                },
+                "6zjWIcUSelzkRgUi": {
+                    "text": ""
+                },
+                "JkrWERhblw0dTOCn": {
+                    "text": ""
+                },
+                "Xl7JXwhWSitQHEzE": {
+                    "text": ""
+                },
+                "kwLstRyZWyWTkyIK": {
+                    "text": ""
+                },
+                "r8khvdY8rWWcyniE": {
+                    "text": ""
+                },
+                "nKpIxLkCSl3KKRoJ": {
+                    "text": ""
+                },
+                "ExhhRwziBJV6dH2g": {
+                    "text": ""
+                },
+                "zqwEU8E6wK1AQ7oB": {
+                    "text": ""
+                },
+                "YuyYgyQIkqGZCjLn": {
+                    "text": ""
+                },
+                "RJ2uFbWms2IcfAnX": {
+                    "text": ""
+                },
+                "pPhws4w5vE90lRyH": {
+                    "text": ""
+                },
+                "NcCQJtcFAMcjfoTL": {
+                    "text": ""
+                },
+                "uR6mLNab0OjFsPJI": {
+                    "text": ""
+                },
+                "g1HrkgqHtYp61qnk": {
+                    "text": ""
+                },
+                "63oTrsP8UPmo8KOI": {
+                    "text": ""
+                },
+                "xx59U1nrSwnhnSmV": {
+                    "text": ""
+                },
+                "Acj3NtoTOZs9AnUA": {
+                    "text": ""
+                },
+                "f7PNPQQCyOq2gelX": {
+                    "text": ""
+                },
+                "fc8G0WF3fKsz97R5": {
+                    "text": ""
+                },
+                "MNp2zm07RLq7Q9uV": {
+                    "text": ""
+                },
+                "j7m0ecwqShGmuJ19": {
+                    "text": ""
+                },
+                "KO8LNcDA0pcDMt2A": {
+                    "text": ""
+                },
+                "mq7QmbUoSgil9ksg": {
+                    "text": ""
+                },
+                "UuXPSPmECIklnzKw": {
+                    "text": ""
+                },
+                "Eu841CcA8NacexIX": {
+                    "text": ""
+                },
+                "dXv8uQgp9fdOEqpw": {
+                    "text": ""
+                },
+                "rz584l7ThVzCMumD": {
+                    "text": ""
+                },
+                "x2Zu0qIeiju1avhM": {
+                    "text": ""
+                },
+                "hRWn9rz1kVhlA5ah": {
+                    "text": ""
+                },
+                "Ai71P65COTSCIeMW": {
+                    "text": ""
+                },
+                "bEe6i3jTDBB9zdva": {
+                    "text": ""
+                },
+                "zHtEY7tSGFlRIisy": {
+                    "text": ""
+                },
+                "YF2gyHadBIPH8lVG": {
+                    "text": ""
+                },
+                "MyxLfD2Ghf6R6ao2": {
+                    "text": ""
+                },
+                "NTp0GlKndkLlg7WA": {
+                    "text": ""
+                },
+                "Gq1uB6NPuVjlnlZQ": {
+                    "text": ""
+                },
+                "2VqnFf4MZkbM6Qcc": {
+                    "text": ""
+                },
+                "mNZSM3Tzu7SoXTZ6": {
+                    "text": ""
+                },
+                "ydxfHUEnGYKoGVO1": {
+                    "text": ""
+                },
+                "1njq2cM1wR2dZan4": {
+                    "text": ""
+                },
+                "TOWULkeTyBl6qBAH": {
+                    "text": ""
+                },
+                "hlRDajpjUol95Dts": {
+                    "text": ""
+                },
+                "c19ZtS4WAu26vVFz": {
+                    "text": ""
+                },
+                "V2zbwNGCfSqDkRfy": {
+                    "text": ""
+                },
+                "66AqJfhDrGayLzGN": {
+                    "text": ""
+                },
+                "Izbm8YfJiRGTSEb9": {
+                    "text": ""
+                },
+                "7To82MW8BFS9muiA": {
+                    "text": ""
+                },
+                "sKZrmeGMFFa9Nebx": {
+                    "text": ""
+                },
+                "JncBMhM4QfK535Wa": {
+                    "text": ""
+                },
+                "5XEgWoaEbFVkYH8d": {
+                    "text": ""
+                },
+                "KajHz8qKwRxJlKu7": {
+                    "text": ""
+                },
+                "llzWQ4a30BfuAr3o": {
+                    "text": ""
+                },
+                "X2A5GmBCiuH3eGmS": {
+                    "text": ""
+                },
+                "CXLcLO7NyXjyAESi": {
+                    "text": ""
+                },
+                "T0rOhvOQ90iZX0q5": {
+                    "text": ""
+                },
+                "X0SKryGA4WiCBstk": {
+                    "text": ""
+                },
+                "FeTTyZ8LeYfa0W2K": {
+                    "text": ""
+                },
+                "OYLOFFXziwZoIPP6": {
+                    "text": ""
+                },
+                "nqj8Ml1aCTzx7QWk": {
+                    "text": ""
+                },
+                "kyEgGrXshdntZcbb": {
+                    "text": ""
+                }
+            },
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/bogenhafen.webp"
+        },
+        "Bögenhafen Sewers": {
+            "id": "o2rtweOR2Yq5q797",
+            "name": "Kanały Bögenhafen",
+            "notes": {
+                "Gaf9aQ00QZ9xkovk": {
+                    "text": "Ujście kanału wentylacyjnego"
+                },
+                "khkTAWGe1SWaaMzE": {
+                    "text": "Drzwi do Skrzyżowanych Pik"
+                },
+                "SCIZPiujRqm4X8cz": {
+                    "text": "Wejście do kanałów"
+                },
+                "U3iN4r2hWNTWmt64": {
+                    "text": "Ciało Gottriego"
+                },
+                "wzPMPj0QaYMfB61j": {
+                    "text": "Rury Odpływowe"
+                },
+                "VFHcKE9USeh55m5a": {
+                    "text": "Rury Odpływowe"
+                },
+                "ZoOGsDszbzKNgaYD": {
+                    "text": "Otwarty Kanał"
+                },
+                "XJXMS2qjPOI1uRBw": {
+                    "text": "Ukryta Świątynia"
+                }
+            },
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/bogenhafen-sewers.webp"
+        },
+        "Duchy of Saponatheim": {
+            "id": "wCv7C3xQbpK5mEIw",
+            "name": "Księstwo Saponatheim",
+            "units": "km",
+            "distance": 2,
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/saponatheim-duchy.webp"
+        },
+        "Hidden Temple": {
+            "id": "vWIwHxWF29dBcGJh",
+            "name": "Ukryta Świątynia",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/hidden-temple.webp",
+            "drawings": {
+                "C5UCCSlkmTgS7V8j": {
+                    "text": "Świątynia"
+                },
+                "IIg7NNNattekFvRq": {
+                    "text": "Chodnik"
+                },
+                "MHmCdijmZf0ZyJWo": {
+                    "text": "Ściek"
+                }
+            }
+        },
+        "Pandemonium Carnival": {
+            "id": "8F5geqClPFtsqyaA",
+            "name": "Piekielny Karnawał",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/pandemonium-carnival-unlabeled.webp",
+            "drawings": {
+                "NK6f0LRS1LgXQLPD": {
+                    "text": "Klatka Urzo"
+                },
+                "RxGMBbFoqEzTSuQE": {
+                    "text": "Klatka Rassaraka"
+                },
+                "Aih6gXCEOON6Eb5P": {
+                    "text": "Khornijscy Zwierzoludzie"
+                },
+                "cDKxuvQFznuj4bGf": {
+                    "text": "Bliźnięta i Imperialna Bestia"
+                },
+                "xYjRzQ90JCNYbz0C": {
+                    "text": "Bestie z Domowego Obejścia"
+                },
+                "Ps1JNoomPfX7cC48": {
+                    "text": "Wóz z bagażami"
+                },
+                "pUdkFrSnmcrTb2Py": {
+                    "text": "Wóz Wolfganga"
+                },
+                "i6GmckjrX8U2Yt6P": {
+                    "text": "Wóz do spania"
+                },
+                "OPDgl65c5LxSEReV": {
+                    "text": "Bestie z Domowego Obejścia"
+                },
+                "EUnATfVFU1rCdAS3": {
+                    "text": "Bliźnięta i Imperialna Bestia"
+                },
+                "EVfIuf1ODaCRdXP1": {
+                    "text": "Wóz bagażowy"
+                },
+                "dBEFbDbvZRe6k7kk": {
+                    "text": "Wóz Wolfganga"
+                },
+                "cCaIHeojd06n9HXE": {
+                    "text": "Khornijscy Zwierzoludzie"
+                },
+                "p0YYNdIDQDth0tVL": {
+                    "text": "Wóz do spania"
+                },
+                "JiSZu6ZC3GTfMf4z": {
+                    "text": "Klatka Rassaraka"
+                },
+                "GQa9YhJPN3rtyXxu": {
+                    "text": "Klatka Urzo"
+                }
+            }
+        },
+        "Steinhäger Offices": {
+            "id": "cQcGoCuumi6JJvpp",
+            "name": "Biura Steinhägerów",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/steinhager-offices-unlabeled.webp",
+            "drawings": {
+                "CnWiMsEZHSosfgul": {
+                    "text": "Kaufmannstrasse"
+                },
+                "tpgiF55hMAg0fppM": {
+                    "text": "Kurz Strasse"
+                },
+                "AUlW0KUFeOXtZl4Y": {
+                    "text": "Trefferstrasse"
+                },
+                "oBelqqn4hNZaz9kg": {
+                    "text": "Dziedziniec"
+                },
+                "wQTa1I2yAlTnMVb3": {
+                    "text": "Pokój Heinrich'a"
+                },
+                "Rq7oKnmMjIM9VYGA": {
+                    "text": "Pokój Albrecht'a"
+                },
+                "fUAuWMbwYcLAweOu": {
+                    "text": "Sejf"
+                },
+                "kwY07l0C5lgQ6Yjv": {
+                    "text": "Pokój Franz'a"
+                },
+                "MniqxhdVuTwSzGCY": {
+                    "text": "Odźwierny"
+                },
+                "f9gEK51qSXTAVXJW": {
+                    "text": "Recepcja 1"
+                },
+                "DDXIhct7SMBvHdnN": {
+                    "text": "Recepcja 2"
+                },
+                "UG2BQlf5nYgZfPZR": {
+                    "text": "Pokoje urzędników"
+                },
+                "WzVshSkeCmH07CCd": {
+                    "text": "Pokój starszego urzędnika"
+                },
+                "F6LlTE3Nd405p35H": {
+                    "text": "Składzik"
+                }
+            }
+        },
+        "Teugen Houshold": {
+            "id": "rSXZkhuKuD3MK2ux",
+            "name": "Posiadłość Teugenów",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/teugen-household-unlabeled.webp",
+            "drawings": {
+                "qcJqxH7bBvmO1srv": {
+                    "text": "Żywopłot"
+                },
+                "1hENKHmnEVWV8GVw": {
+                    "text": "Żywopłot"
+                },
+                "8S9vxjIL2LeJhvtU": {
+                    "text": "Staw"
+                },
+                "LIrKqRdwT1b7ufzZ": {
+                    "text": "Balkon"
+                },
+                "vqNmJstxqi1TStjx": {
+                    "text": "Ogród"
+                }
+            }
+        },
+        "The Berebeli": {
+            "id": "fjSU58G83rHfvIDn",
+            "name": "Barka Berebeli",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/berebeli-unlabeled.webp"
+        },
+        "The Coach and Horses": {
+            "id": "bhj3sBk67Z3wD2eY",
+            "name": "Zajazd Powóz i konie",
+            "notes": {
+                "PjL3idslXqaAmEmc": {
+                    "text": ""
+                },
+                "ZYXGmHu219hdWBBV": {
+                    "text": ""
+                },
+                "0j7cuL58ttIOjLhp": {
+                    "text": ""
+                },
+                "fKVnd1CtOYqosMXG": {
+                    "text": ""
+                },
+                "IN36rtIP3GLGUS9B": {
+                    "text": "5. Wozownia"
+                },
+                "m1cEzG9KBYg1Ugml": {
+                    "text": ""
+                },
+                "od4EoNQvPdrO64mW": {
+                    "text": ""
+                },
+                "j7HWMhRfx8kq7ajw": {
+                    "text": "5. Stajnie"
+                },
+                "N7E3CetSGF3jjEoo": {
+                    "text": ""
+                },
+                "UobUORppcAdahO6L": {
+                    "text": ""
+                },
+                "Rou8sdNX68JFEzJL": {
+                    "text": ""
+                },
+                "2gwhVOVY7ISkq5tY": {
+                    "text": ""
+                },
+                "n70wVw3hO6JPNZLq": {
+                    "text": ""
+                },
+                "gWv4VSEZFmYNBMDU": {
+                    "text": ""
+                },
+                "oxBqCxZwYBAPAlLq": {
+                    "text": ""
+                },
+                "UY1nfTBuPw7YvUp0": {
+                    "text": ""
+                },
+                "uqxaFh02tYRKRhCw": {
+                    "text": ""
+                },
+                "4DZqt2CYpRpHEG7x": {
+                    "text": ""
+                },
+                "SYetdVgS64N0B6ch": {
+                    "text": ""
+                }
+            },
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/the-coach-and-horses-unlabeled.webp",
+            "drawings": {
+            }
+        },
+        "The Crossed Lances": {
+            "id": "cegPRLxZ4iEUqo3u",
+            "name": "Skrzyżowane Lance",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/crossed-lances.webp",
+            "drawings": {
+                "pLs6CBtKsbR7jge5": {
+                    "text": "1. Sala barowa",
+                    "fontSize": 120,
+                    "x": 3875,
+                    "y": 12375,
+                    "shape": {
+                        "type": "r",
+                        "width": 750,
+                        "height": 141,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "K07AasFInj1TQglT": {
+                    "text": "2. Alkierz",
+                    "fontSize": 120,
+                    "x": 3843.75,
+                    "y": 12500,
+                    "shape": {
+                        "type": "r",
+                        "width": 609,
+                        "height": 125,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "1IreWQPRX75g7Q03": {
+                    "text": "3. Biuro Kellermanna",
+                    "fontSize": 120,
+                    "x": 3921.875,
+                    "y": 12609.375,
+                    "shape": {
+                        "type": "r",
+                        "width": 930,
+                        "height": 172,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "shbF23q4LAPO5Oho": {
+                    "text": "4. Wejście do piwnicy",
+                    "fontSize": 120,
+                    "x": 3906.25,
+                    "y": 12750,
+                    "shape": {
+                        "type": "r",
+                        "width": 969,
+                        "height": 141,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "ZPP7oSjgRoprka43": {
+                    "text": "5. Stajnie",
+                    "fontSize": 120,
+                    "x": 3937.5,
+                    "y": 12875,
+                    "shape": {
+                        "type": "r",
+                        "width": 419,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "bvucICaSuBcA4Nuo": {
+                    "text": "6. Kuźnia",
+                    "fontSize": 120,
+                    "x": 3937.5,
+                    "y": 13000,
+                    "shape": {
+                        "type": "r",
+                        "width": 421,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "sZQ1LAHDAL77QiE6": {
+                    "text": "7. Warzelnia",
+                    "fontSize": 120,
+                    "x": 5625,
+                    "y": 12375,
+                    "shape": {
+                        "type": "r",
+                        "width": 613,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "VZdxfjC2t7K4MN4M": {
+                    "text": "8. Dziedziniec",
+                    "fontSize": 120,
+                    "x": 5625,
+                    "y": 12500,
+                    "shape": {
+                        "type": "r",
+                        "width": 672,
+                        "height": 141,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "OeAUBOBsBahvD3m8": {
+                    "text": "9. Wozownia",
+                    "fontSize": 120,
+                    "x": 5594,
+                    "y": 12625,
+                    "shape": {
+                        "type": "r",
+                        "width": 690,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "G3cUiGLwySGSYhAk": {
+                    "text": "10. Hol główny",
+                    "fontSize": 120,
+                    "x": 5625,
+                    "y": 12750,
+                    "shape": {
+                        "type": "r",
+                        "width": 725,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "kGrGlYy4xQTWdoGZ": {
+                    "text": "11. Kuchnia",
+                    "fontSize": 120,
+                    "x": 5672,
+                    "y": 12875,
+                    "shape": {
+                        "type": "r",
+                        "width": 453,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "kuMALzjIu8WCxJSf": {
+                    "text": "12. Pokój hrabiego",
+                    "fontSize": 120,
+                    "x": 5671.875,
+                    "y": 13000,
+                    "shape": {
+                        "type": "r",
+                        "width": 752,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "cWfdHedXoaNX46AL": {
+                    "text": "13. Pokój strażników",
+                    "fontSize": 120,
+                    "x": 7250,
+                    "y": 12375,
+                    "shape": {
+                        "type": "r",
+                        "width": 844,
+                        "height": 156,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "bE2oifF89V4J4u31": {
+                    "text": "14. Wspólna sala",
+                    "fontSize": 120,
+                    "x": 7218.75,
+                    "y": 12500,
+                    "shape": {
+                        "type": "r",
+                        "width": 750,
+                        "height": 156,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "XasszLrtjUFpTu20": {
+                    "text": "15. Pokój Bohaterów",
+                    "fontSize": 120,
+                    "x": 7218.75,
+                    "y": 12625,
+                    "shape": {
+                        "type": "r",
+                        "width": 878,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "g54oHKJvFQJrNex8": {
+                    "text": "16. Poddasze z sianem",
+                    "fontSize": 120,
+                    "x": 7218.75,
+                    "y": 12750,
+                    "shape": {
+                        "type": "r",
+                        "width": 938,
+                        "height": 156,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "qMYshTMFy98T3rzr": {
+                    "text": "17. Kwatery służby",
+                    "fontSize": 120,
+                    "x": 7187.5,
+                    "y": 12875,
+                    "shape": {
+                        "type": "r",
+                        "width": 872,
+                        "height": 147,
+                        "points": [],
+                        "radius": null
+                    }
+                },
+                "KIsA6NVsIVHYInVF": {
+                    "text": "1",
+                    "fontSize": 110
+                },
+                "YvXh1aApF3dNE8tg": {
+                    "text": "2",
+                    "fontSize": 110
+                },
+                "riYsweJDd0wwfVnC": {
+                    "text": "3",
+                    "fontSize": 110
+                },
+                "2ktxwW4PpHC7ByWM": {
+                    "text": "4",
+                    "fontSize": 110
+                },
+                "9ULqOBtRZ7GWmJkE": {
+                    "text": "5",
+                    "fontSize": 110
+                },
+                "cVLMObUnQWmKbKzK": {
+                    "text": "6",
+                    "fontSize": 110
+                },
+                "jWTPUPQeIsmqWxjh": {
+                    "text": "7",
+                    "fontSize": 110
+                },
+                "VgZqmlXjQt9F9dnB": {
+                    "text": "8",
+                    "fontSize": 110
+                },
+                "TpuLdQnHEKQDIhCl": {
+                    "text": "9",
+                    "fontSize": 110
+                },
+                "QMlXszsCUEGznCwA": {
+                    "text": "10",
+                    "fontSize": 110
+                },
+                "zw47jGARXO2Wn7VG": {
+                    "text": "11",
+                    "fontSize": 110
+                },
+                "SZBU7qT7TVPdpvXo": {
+                    "text": "8",
+                    "fontSize": 110
+                },
+                "ud9G8tEBouf9tqWE": {
+                    "text": "1",
+                    "fontSize": 110
+                },
+                "Qjz06YWVHSa7NFRU": {
+                    "text": "7",
+                    "fontSize": 110
+                },
+                "sdHEwxGkbqBRaF5x": {
+                    "text": "12",
+                    "fontSize": 110
+                },
+                "Xb6KsvoJMg5pSucs": {
+                    "text": "13",
+                    "fontSize": 110
+                },
+                "JW2QeJJdom7z7VF6": {
+                    "text": "13",
+                    "fontSize": 110
+                },
+                "8tiVPRm0bzCFkrS3": {
+                    "text": "13",
+                    "fontSize": 110
+                },
+                "0ixBqsw5mFr6NkWW": {
+                    "text": "14",
+                    "fontSize": 110
+                },
+                "5rA2tKmPPtPfKJO7": {
+                    "text": "15",
+                    "fontSize": 110
+                },
+                "I65eBT2472w9ryFp": {
+                    "text": "16",
+                    "fontSize": 110
+                },
+                "O5qsEtR8k72LFaQ2": {
+                    "text": "17",
+                    "fontSize": 110
+                }
+            }
+        },
+        "The Crossed Pikes": {
+            "id": "g4sVCuNlfW92UNXT",
+            "name": "Skrzyżowane Piki",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/crossed-pikes-unlabeled.webp",
+            "drawings": {
+                "FucCM3bFvehQFtDa": {
+                    "text": "1"
+                },
+                "sSQBXdpy9AeeVVgg": {
+                    "text": "2"
+                },
+                "70SSn4S9Erg6nljs": {
+                    "text": "3"
+                },
+                "oxzHKE75iz9k9Ahe": {
+                    "text": "4"
+                },
+                "9HpMT5zDy1ESJW7U": {
+                    "text": "5"
+                },
+                "nGNucoD36Pk4rPwn": {
+                    "text": "6"
+                },
+                "IPfi6xveXr5FZC5o": {
+                    "text": "7"
+                },
+                "fANZqRu7TEegRyKu": {
+                    "text": "8"
+                },
+                "rbDDsR0QjoG93xgy": {
+                    "text": "9"
+                },
+                "YwoGwhEolpgfyBl1": {
+                    "text": "10"
+                },
+                "uuw4k31vWvfgphbu": {
+                    "text": "11"
+                },
+                "E8auZNnYarYNj2rg": {
+                    "text": "12"
+                },
+                "Vn6Q0qDQTgCUKeRt": {
+                    "text": "13"
+                },
+                "UI0jw6X5WISLAXiW": {
+                    "text": "14"
+                },
+                "H3Wa6LnFpniA4Wt5": {
+                    "text": "15"
+                },
+                "gwdsnyMx9wH2aqCu": {
+                    "text": "16"
+                },
+                "aDRfeYr4z4raZPkK": {
+                    "text": "17"
+                }
+            }
+        },
+        "The Golden Trout": {
+            "id": "odhoRqwACv5OfWqm",
+            "name": "„Złoty Pstrąg”",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/golden-trout-unlabeled.webp",
+            "drawings": {
+                "O5NAyJvflGa8LxbV": {
+                    "text": "1"
+                },
+                "YTP9R6M65miq7itk": {
+                    "text": "2"
+                },
+                "VrzrfWSV9hpkOcJ8": {
+                    "text": "3"
+                },
+                "CbCc56HwwAs05AIX": {
+                    "text": "4"
+                },
+                "ALG40Nvtp4FAOjhb": {
+                    "text": "5"
+                },
+                "pcK8xhLLTTdboyHq": {
+                    "text": "6"
+                },
+                "fMVhScN0OlljHMEX": {
+                    "text": "7"
+                },
+                "f5dphfkXtEBthnRr": {
+                    "text": "8"
+                },
+                "arArcICGfHrAENPp": {
+                    "text": "9"
+                },
+                "wHqXWqmiW2ZMJo6y": {
+                    "text": "10"
+                }
+            }
+        },
+        "Warehouse 13": {
+            "id": "clYfG9LmEw1J5Kmo",
+            "name": "Mazazyn 13",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/warehouse13-unlabeled.webp",
+            "drawings": {
+                "c4KfOr4JzRvHpAgn": {
+                    "text": "Strefa załadunkowa"
+                },
+                "8vbbEO7bAd2VjmUI": {
+                    "text": "Pomieszczenia magazynowe"
+                }
+            }
+        },
+        "Weissbruck": {
+            "id": "tvGHowUko2x39RSn",
+            "name": "Weissbruck",
+            "units": "m",
+            "image": "modules/wfrp4e-core-pl/images/eis/maps/weissbruck-unlabeled.webp",
+            "drawings": {
+                "hHrJ98ttuBf7LV4G": {
+                    "text": "Barka Berebelli"
+                },
+                "v8REewPlBHA90sZS": {
+                    "text": "Karczma \"Czarne Złoto\""
+                },
+                "Gl6JA0A7IYfYYwsC": {
+                    "text": "Karczma \"Pod Szczęśliwym Człowiekiem\""
+                },
+                "eBmQB6NYoTWOHHpf": {
+                    "text": "Karczma \"Pod Trąbką\""
+                }
+            }
+        }
+    }
+
+}

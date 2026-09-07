@@ -1,117 +1,138 @@
 {
-    "label": "Mapy (Archiwa Tom I)",
-    "mapping": {
-        "image": "background.src",
-        "notes": {
-            "path": "notes",
-            "converter": "notes"
-        },
-        "units": "grid.units",
-        "scene_note": "flags.wfrp4e-archives1.scene-note"
+  "label": "Sceny (Archiwa Tom I)",
+  "mapping": {
+    "image": "levels.0.background.src",
+    "notes": {
+      "path": "notes",
+      "converter": "notes"
     },
-    "entries": {
-        "The Laurelorn": {
-            "id": "h9ZlLGfW0lZKIG4k",
-            "name": "Laurelorn",
-            "image": "modules/wfrp4e-core-pl/images/ai1/laurelorn-map-unlabeled.webp",
-            "notes": {
-                "79QSvhgTL3LRHApt": {
-                    "text": "Las Laurelorn"
-                },
-                "kbxNRVU6aMDCFr2e": {
-                    "text": ""
-                },
-                "Vq7NhWpBQKcfq7bf": {
-                    "text": "Tor Lithanel"
-                },
-                "czmP0Yg6bJnmMIHU": {
-                    "text": "Srebrny Las"
-                },
-                "8vYgFpq26ClawakL": {
-                    "text": "Srebrny Las"
-                },
-                "HCqs2kvbMwYEeIQL": {
-                    "text": "Las Życzeń"
-                },
-                "lMTcnIOX9FvozJG4": {
-                    "text": "Tęczowy Wodospad"
-                },
-                "2REl1nOaqoOzeivS": {
-                    "text": ""
-                },
-                "5OO78R7melYGY8zX": {
-                    "text": "Dolina Khaina"
-                },
-                "6fsYaPHqcF9USFUC": {
-                    "text": "Kamienna Przełęcz"
-                },
-                "V1SzSZV2SztcTyab": {
-                    "text": "Staw Łez"
-                },
-                "5ghymUhQldbJWZbZ": {
-                    "text": "Drachenhohle"
-                },
-                "jzpjdlC0uh8rpyrS": {
-                    "text": "Złoty Las"
-                },
-                "w7fCYZGmd0arUqp8": {
-                    "text": ""
-                },
-                "ujG85wUrlbAV6tLf": {
-                    "text": "Srebrne Wzgórza"
-                },
-                "ucvYLviy2d6EzrRz": {
-                    "text": "Wieża Se-Athil"
-                },
-                "DDT603XUwMxXEe96": {
-                    "text": "Fontanna Lebin"
-                },
-                "PoAR6uafnZbHqOTF": {
-                    "text": "Skała Farinara"
-                },
-                "gbJ9Yn5cbZVYJOOF": {
-                    "text": ""
-                }
-            },
-            "units": "km"
+    "units": "grid.units",
+    "scene_note": "flags.wfrp4e-archives1.scene-note",
+    "initialization_folder": "flags.wfrp4e-archives1.initialization-folder"
+  },
+  "entries": {
+    "The Laurelorn": {
+      "id": "h9ZlLGfW0lZKIG4k",
+      "name": "Laurelorn",
+      "image": "modules/wfrp4e-core-pl/images/archives1/laurelorn-map-unlabeled.webp",
+      "notes": {
+        "79QSvhgTL3LRHApt": {
+          "text": "Las Laurelorn"
         },
-        "The Mootland": {
-            "id": "SmQJpAnynYyOBusA",
-            "name": "Kraina Zgromadzenia",
-            "image": "modules/wfrp4e-core-pl/images/ai1/mootlands.webp",
-            "notes": {
-                "iR9MMOBuYs7H33Ud": {
-                    "text": ""
-                },
-                "GV6TCZK0wA4l7sh3": {
-                    "text": ""
-                },
-                "NfW8f6KNkZ92yC4E": {
-                    "text": ""
-                },
-                "Vh84DN4bjTF0sYAv": {
-                    "text": ""
-                },
-                "3jKK70KAw8tMxakR": {
-                    "text": ""
-                },
-                "mrlYP91EHgnYvNOv": {
-                    "text": ""
-                },
-                "cNS2MddSWFkeTE5w": {
-                    "text": ""
-                },
-                "mVgru38NdLq2APx1": {
-                    "text": "Las Lamentu"
-                },
-                "LZH8mS3HueM3RASV": {
-                    "text": "Birnbaum"
-                },
-                "1p8EGuqqNsPzYow2": {
-                    "text": "Gipfel"
-                }
-            },
-            "units": "km"
+        "kbxNRVU6aMDCFr2e": {
+          "text": ""
+        },
+        "Vq7NhWpBQKcfq7bf": {
+          "text": "Tor Lithanel"
+        },
+        "czmP0Yg6bJnmMIHU": {
+          "text": "Srebrny Las"
+        },
+        "8vYgFpq26ClawakL": {
+          "text": "Srebrny Las"
+        },
+        "HCqs2kvbMwYEeIQL": {
+          "text": "Las Życzeń"
+        },
+        "lMTcnIOX9FvozJG4": {
+          "text": "Tęczowy Wodospad"
+        },
+        "2REl1nOaqoOzeivS": {
+          "text": ""
+        },
+        "5OO78R7melYGY8zX": {
+          "text": "Dolina Khaina"
+        },
+        "6fsYaPHqcF9USFUC": {
+          "text": "Kamienna Przełęcz"
+        },
+        "V1SzSZV2SztcTyab": {
+          "text": "Staw Łez"
+        },
+        "5ghymUhQldbJWZbZ": {
+          "text": "Drachenhohle"
+        },
+        "jzpjdlC0uh8rpyrS": {
+          "text": "Złoty Las"
+        },
+        "w7fCYZGmd0arUqp8": {
+          "text": ""
+        },
+        "ujG85wUrlbAV6tLf": {
+          "text": "Srebrne Wzgórza"
+        },
+        "ucvYLviy2d6EzrRz": {
+          "text": "Wieża Se-Athil"
+        },
+        "DDT603XUwMxXEe96": {
+          "text": "Fontanna Lebin"
+        },
+        "PoAR6uafnZbHqOTF": {
+          "text": "Skała Farinara"
+        },
+        "gbJ9Yn5cbZVYJOOF": {
+          "text": ""
         }
+      },
+      "units": "km",
+      "initialization_folder": "Archiwa Imperium Tom I"
+    },
+    "The Mootland": {
+      "id": "SmQJpAnynYyOBusA",
+      "name": "Kraina Zgromadzenia",
+      "image": "modules/wfrp4e-core-pl/images/archives1/mootlands.webp",
+      "notes": {
+        "iR9MMOBuYs7H33Ud": {
+          "text": ""
+        },
+        "GV6TCZK0wA4l7sh3": {
+          "text": ""
+        },
+        "NfW8f6KNkZ92yC4E": {
+          "text": ""
+        },
+        "Vh84DN4bjTF0sYAv": {
+          "text": ""
+        },
+        "3jKK70KAw8tMxakR": {
+          "text": ""
+        },
+        "mrlYP91EHgnYvNOv": {
+          "text": ""
+        },
+        "cNS2MddSWFkeTE5w": {
+          "text": ""
+        },
+        "mVgru38NdLq2APx1": {
+          "text": "Las Lamentu"
+        },
+        "LZH8mS3HueM3RASV": {
+          "text": "Birnbaum"
+        },
+        "1p8EGuqqNsPzYow2": {
+          "text": "Gipfel"
+        }
+      },
+      "units": "km",
+      "initialization_folder": "Archiwa Imperium Tom I"
     }
+  },
+  "folders": {
+    "Archives of the Empire Vol. I": "Archiwa Imperium Tom I",
+    "Archives of the Empire Vol. 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire Vol 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire Volume 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol 1.": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol. 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol. I": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Vol I": "Archiwa Imperium Tom I",
+    "Archives of the Empire: Volume 1": "Archiwa Imperium Tom I",
+    "Archiwa Imperium Tom I": "Archiwa Imperium Tom I",
+    "Archiwa Imperium Tom 1": "Archiwa Imperium Tom I",
+    "Archives of the Empire": "Archiwa Imperium",
+    "Dwarfs of the Empire": "Krasnoludy Imperium",
+    "Wood Elves of the Laurelorn": "Leśne Elfy z Laurelornu",
+    "Halflings of the Moot": "Niziołki z Krainy Zgromadzenia"
+  }
 }

@@ -1,8 +1,8 @@
-let wounds = this.actor.itemTypes.disease.filter(i => i.name == "Ropiejąca Rana" && i.system.duration.active);
+let wounds = this.actor.itemTypes.disease.filter(i => i.name == "Festering Wound" && i.system.duration.active);
 let selected;
 if (wounds.length == 0)
 {
-    return this.script.scriptNotification("Brak Ropiejących Ran!");
+    return this.script.notification("No Festering Wounds!");
 }
 else if (wounds.length == 1)
 {
@@ -23,7 +23,7 @@ if (selected)
         if (SL >= 0)
         {
             selected.update({"system.duration.value" : selected.system.duration.value - SL})
-            this.script.message(`<strong>${selected.name}</strong> czas trwania choroby zmniejszony o ${SL}!`)
+            this.script.message(`<strong>${selected.name}</strong> duration reduced by ${SL}!`)
         }
     }
 }

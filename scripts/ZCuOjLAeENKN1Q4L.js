@@ -1,15 +1,15 @@
 let halve;
-if (args.opposedTest.attackerTest.item?.type != "spell")
+if (args.sourceItem?.type != "spell")
 {
-    halve = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : "Zmniejszyć obrażenia o połowę? (Zmniejsza obrażenia zadane od ognia o połowę)"})
+    halve = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : "Halve Damage? (Halves Damage from all fire)"})
 }
 else
 {
-    halve = args.opposedTest.attackerTest.item?.system.lore?.value == "fire";
+    halve = args.sourceItem?.system.lore?.value == "fire";
 }
 
 if (halve)
 {
     args.totalWoundLoss /= 2;
-    args.modifiers.other.push({label : this.effect.name, details : "Zmniejszono o połowę", value : "× 0.5"})
+    args.modifiers.other.push({label : this.effect.name, details : "Halved", value : "× 0.5"})
 }
