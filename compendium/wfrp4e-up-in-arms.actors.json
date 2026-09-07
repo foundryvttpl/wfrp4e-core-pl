@@ -1,719 +1,725 @@
 {
-    "label": "Bestiariusz (Pod Bronią)",
-    "mapping": {
-        "gmdescription": "system.gmdescription.value",
-        "species": "system.details.species.value",
-        "gender": "system.details.gender.value",
-        "gmnotes": "system.details.gmnotes.value",
-        "effects": {
-            "path": "effects",
-            "converter": "effects"
-        },
-        "items": {
-            "path": "items",
-            "converter": "bestiary_traits"
-        }
+  "label": "Bestiariusz (Pod Bronią)",
+  "mapping": {
+    "gmdescription": "system.gmdescription.value",
+    "species": "system.details.species.value",
+    "gender": "system.details.gender.value",
+    "gmnotes": "system.details.gmnotes.value",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
     },
-    "entries": {
-        "Demigryph Mount": {
-            "id": "SvY5jKrtcsmLJqPy",
-            "name": "Półgryf Wierzchowiec",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.SvY5jKrtcsmLJqPy",
-            "species": "Półgryf",
-            "gender": "Różne",
-            "items": {
-                "yOgUSeW1HZzr8C8l": {
-                    "id": "yOgUSeW1HZzr8C8l",
-                    "name": "Kropierz (2 PP na Korpus",
-                    "description": " ",
-                    "originalName": "Kropierz (2 PP na Korpus",
-                    "sourceId": " "
-                },
-                "WLkQKKAxykwo0YVf": {
-                    "id": "WLkQKKAxykwo0YVf",
-                    "name": "Głowa",
-                    "description": " ",
-                    "originalName": "Głowa",
-                    "sourceId": " "
-                },
-                "BIgCIK0nPKTb56i7": {
-                    "id": "BIgCIK0nPKTb56i7",
-                    "name": "Przednie Nogi)",
-                    "description": " ",
-                    "originalName": "Przednie Nogi)",
-                    "sourceId": " "
-                },
-                "l9JGFkBXITGfwBzT": {
-                    "id": "FmHDbCOy3pH8yKhm",
-                    "name": "Widzenie w Ciemności",
-                    "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
-                    "originalName": "Widzenie w Ciemności",
-                    "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
-                },
-                "IiaaV4GjzXRJzhTJ": {
-                    "specification": "Duży"
-                },
-                "dItjwv5zpgTyOygv": {
-                    "specification": "Bojowy, Kawaleria Uderzeniowa, Ujarzmiony, Wierzchowiec"
-                },
-                "A7MlswtqdtboG9H7": {
-                    "id": "A7MlswtqdtboG9H7",
-                    "name": "Broń (Pazury)",
-                    "description": "<p>Stworzenie nosi broń do walki wręcz lub używa w walce zębów, pazurów albo tym podobnych. Broń zadaje tyle Obrażeń, ile wynosi podana wartość, która już zawiera Bonus z Siły stworzenia. Zazwyczaj będzie to wynosiło 4 + Bonus z Siły (co reprezentuje broń ręczną).</p>",
-                    "originalName": "Broń (Pazury)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.A7MlswtqdtboG9H7",
-                    "specification": "4"
-                },
-                "AXnj7XjPQFpzoxQj": {
-                    "specification": "4"
-                },
-                "rD3dIZzZn4vts3KK": {
-                    "id": "rD3dIZzZn4vts3KK",
-                    "name": "Pancerz (Głowa, Korpus, i Przednie Nogi)",
-                    "description": "<p>Stworzenie chronione jest przez pancerz lub grubą skórę. Ma tyle Punktów Pancerza, ile wynosi wartość, na wszystkich Miejscach Trafień.</p>",
-                    "originalName": "Pancerz (Głowa, Korpus, i Przednie Nogi)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.rD3dIZzZn4vts3KK",
-                    "effects": {
-                        "CAcGBn8sq62mVUxJ": {
-                            "id": "CAcGBn8sq62mVUxJ",
-                            "name": "Pancerz",
-                            "scriptData": [
-                                {
-                                    "id": "CAcGBn8sq62mVUxJ",
-                                    "name": "Pancerz",
-                                    "script": "[Script.Vb7rgl8T4VRswbnZ]"
-                                }
-                            ]
-                        }
-                    },
-                    "specification": "3"
-                },
-                "FpTBkO3AS6GtGZ5N": {
-                    "id": "FpTBkO3AS6GtGZ5N",
-                    "name": "Pancerz (Tylnie Nogi)",
-                    "description": "<p>Stworzenie chronione jest przez pancerz lub grubą skórę. Ma tyle Punktów Pancerza, ile wynosi wartość, na wszystkich Miejscach Trafień.</p>",
-                    "originalName": "Pancerz (Tylnie Nogi)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.FpTBkO3AS6GtGZ5N",
-                    "effects": {
-                        "CAcGBn8sq62mVUxJ": {
-                            "id": "CAcGBn8sq62mVUxJ",
-                            "name": "Pancerz",
-                            "scriptData": [
-                                {
-                                    "id": "CAcGBn8sq62mVUxJ",
-                                    "name": "Pancerz",
-                                    "script": "[Script.Vb7rgl8T4VRswbnZ]"
-                                }
-                            ]
-                        }
-                    },
-                    "specification": "1"
-                }
-            }
-        },
-        "Doktor": {
-            "id": "DeVqxMfNjki7ytr8",
-            "name": "Doktor",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.DeVqxMfNjki7ytr8",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "items": {
-                "pMsAfL3q5cRsR2p1": {
-                    "id": "pMsAfL3q5cRsR2p1",
-                    "name": "Język (Gildii)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
-                    "originalName": "Język (Gildii)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.pMsAfL3q5cRsR2p1"
-                },
-                "SUMfqgcTyftqwtrA": {
-                    "id": "SUMfqgcTyftqwtrA",
-                    "name": "Wiedza (Anatomia)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
-                    "originalName": "Wiedza (Anatomia)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.SUMfqgcTyftqwtrA"
-                },
-                "6sldnNUriPit4L7X": {
-                    "id": "6sldnNUriPit4L7X",
-                    "name": "Wiedza (Medycyna)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
-                    "originalName": "Wiedza (Medycyna)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.6sldnNUriPit4L7X"
-                },
-                "Qk1kW7lm5hCtCqF5": {
-                    "id": "Qk1kW7lm5hCtCqF5",
-                    "name": "Rzemiosło (Cyrulik)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
-                    "originalName": "Rzemiosło (Cyrulik)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.Qk1kW7lm5hCtCqF5"
-                },
-                "wNDlpnPxX3rc0VC0": {
-                    "id": "wNDlpnPxX3rc0VC0",
-                    "name": "Odporny na (Choroby)",
-                    "description": "<p>Twoja wielka wytrwałość pozwala ci poradzić sobie z niebezpieczeństwem. Automatycznie zdajesz pierwszy Test opierania się przeciwko konkretnemu typowi zagrożenia na danej sesji. Znane są Odporności na Choroby, Magię, Mutacje czy Trucizny. Jeśli w Teście ważne są Poziomy Sukcesu, to za ich liczbę przyjmujesz Bonus z Wytrzymałości.</p>",
-                    "originalName": "Odporny na (Choroby)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.wNDlpnPxX3rc0VC0",
-                    "effects": {
-                        "FQv1UAIrdvtf9Tlc": {
-                            "id": "FQv1UAIrdvtf9Tlc",
-                            "name": "Odporny na (Choroby)",
-                            "scriptData": [
-                                {
-                                    "id": "FQv1UAIrdvtf9Tlc",
-                                    "name": "@item.system.tests.value",
-                                    "script": "[Script.956dUb5sd6OtbWZR]"
-                                },
-                                {
-                                    "id": "FQv1UAIrdvtf9Tlc",
-                                    "name": "Wybierz Odporność",
-                                    "script": "[Script.tCIT1a12Gt6k2ohA]"
-                                }
-                            ]
-                        }
-                    },
-                    "tests": "Wszystkie Test przeciwko Chorobom"
-                },
-                "cGfcj3yi0F8S8AAS": {
-                    "id": "cGfcj3yi0F8S8AAS",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.cGfcj3yi0F8S8AAS"
-                },
-                "zEDwfLQDrFHlv3wJ": {
-                    "id": "zEDwfLQDrFHlv3wJ",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.zEDwfLQDrFHlv3wJ"
-                },
-                "wWgLDGhRhmJxpzXM": {
-                    "id": "wWgLDGhRhmJxpzXM",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.wWgLDGhRhmJxpzXM"
-                },
-                "B9SOSnrGaQ2cgjlF": {
-                    "id": "B9SOSnrGaQ2cgjlF",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.B9SOSnrGaQ2cgjlF"
-                },
-                "ZHOGMQOa7ci9LfYN": {
-                    "id": "ZHOGMQOa7ci9LfYN",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.ZHOGMQOa7ci9LfYN"
-                },
-                "DKmsoWHDRR9rPkGq": {
-                    "id": "DKmsoWHDRR9rPkGq",
-                    "name": "Bandaże",
-                    "description": "<p>Umożliwia wykonanie <strong>Testu Zręczności</strong>, zamiast <strong>Testu Leczenia</strong> do zatamowania <em>Krwawienia</em> (Leczenie). Udany Test Leczenia lub Zręczności pozwala usunąć jeden dodatkowy Stan <em>Krwawienia</em>.</p>",
-                    "originalName": "Bandaże",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.DKmsoWHDRR9rPkGq"
-                },
-                "r1CYc9bYEkGYiuYF": {
-                    "id": "r1CYc9bYEkGYiuYF",
-                    "name": "Książka (Medycyna)",
-                    "description": "<p>Teksty medyczne mogą być pisane ręcznie lub drukowane, w zależności od prestiżu lekarza będącego ich autorem. Zazwyczaj występują w nich ilustracje, zwykle włącznie z rysunkami autopsji i diagramami procedur lekarskich.</p>",
-                    "originalName": "Książka (Medycyna)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.r1CYc9bYEkGYiuYF"
-                },
-                "lXMKaJZaog45TDYR": {
-                    "id": "lXMKaJZaog45TDYR",
-                    "name": "Narzędzia pracy (Medycyna)",
-                    "description": "<p><strong>Aptekarz</strong>: Narzędzia obejmują moździerz z tłuczkiem, łyżki, słoiki oraz wagę szalkową. Warsztat wyposażony jest także w palniki olejowe i półki pełne składników.</p>\n<p><strong>Artysta</strong>: Pędzle i farby, młotek i dłuta, pilniki i skrobaki. Warsztat zawiera także sztalugi lub postumenty i zapas płócien, pergaminu, welinu, drewna, gliny lub nieociosanego kamienia.</p>\n<p><strong>Inżynier</strong>: Klepsydra, przymiar, lont, cyrkiel i przykładnica. Warsztat zawiera także wielokrążki, liny i deski kreślarskie.</p>\n<p><strong>Lekarz</strong>: Igły i szwy, bandaże, skalpel, ocet, pincety i wziernik. Warsztat zawiera także rysunki anatomiczne, różne przybory i stół operacyjny. </p>\n<p><strong>Nawigator</strong>: Kwadrant, astrolabium, wykresy i kompasy, klepsydra i sonda na linie.</p>\n<p><strong>Rzemieślnik</strong>: Potencjalny wybór narzędzi używanych przez rzemieślników jest szeroki.</p>\n<p>Przykładowe zestawy:</p>\n<ul>\n<li><strong>Grawer</strong>: Rylce, punktaki, wosk, kwas, młotek i dłuta. Warsztat zawiera także skrawarki i prasy.</li>\n</ul>\n<ul>\n<li><strong>Kowal</strong>: Młotek, cęgi, punktaki, kształtowniki, świdry i wiertła. Warsztat zawiera także kowadło, piec, dziurkownicę, młot kowalski oraz sztaby metalu.</li>\n</ul>\n<ul>\n<li><strong>Stolarz</strong>: Młotek i gwoździe, piła, przymiar, kreda, pion na sznurku. Warsztat zawiera także tokarki, heble, imadła i zapas drewna.</li>\n</ul>\n<p><strong>Przykłady innych rzemieślników</strong>: balsamista, bednarz, browarnik, dmuchacz szkła, garbarz, garncarz, jubiler, kaligraf, kamieniarz, kartograf, krawiec, kucharz, malarz, murarz, płatnerz, rusznikarz, rymarz, snycerz, szewc, szkutnik, szlifierz, świecarz, tkacz, winiarz, wytwórca łuków, zbrojmistrz i złotnik.</p>\n<p><strong>Zielarz</strong>: Moździerz z tłuczkiem, nożyki, sekator i rękawice. Warsztat zawiera także stojaki do suszenia ziół, filtry, lejki, miseczki i słoiki.</p>",
-                    "originalName": "Narzędzia pracy (Medycyna)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.lXMKaJZaog45TDYR"
-                },
-                "k1VoX9x7ofQPgMJh": {
-                    "id": "k1VoX9x7ofQPgMJh",
-                    "name": "Pergamin",
-                    "description": "<p></p>",
-                    "originalName": "Pergamin",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.k1VoX9x7ofQPgMJh"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Lawyer": {
-            "id": "OaODR2wDFVLfY5np",
-            "name": "Prawnik",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.OaODR2wDFVLfY5np",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "items": {
-                "8j9rJvJ5r32r2RZE": {
-                    "id": "8j9rJvJ5r32r2RZE",
-                    "name": "Szkło powiększające",
-                    "description": " ",
-                    "originalName": "Szkło powiększające",
-                    "sourceId": " "
-                },
-                "EQZ6FKekRB6qIwyk": {
-                    "id": "EQZ6FKekRB6qIwyk",
-                    "name": "Język (Gildii)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
-                    "originalName": "Język (Gildii)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.EQZ6FKekRB6qIwyk"
-                },
-                "U51arbNU76rtMy9P": {
-                    "id": "U51arbNU76rtMy9P",
-                    "name": "Sekretne Znaki (Gildii)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Sekretne Znaki}",
-                    "originalName": "Sekretne Znaki (Gildii)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.U51arbNU76rtMy9P"
-                },
-                "PVXmhhQ63btwKKB7": {
-                    "id": "PVXmhhQ63btwKKB7",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.PVXmhhQ63btwKKB7"
-                },
-                "SF69knAcTEo9AcAf": {
-                    "id": "SF69knAcTEo9AcAf",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.SF69knAcTEo9AcAf"
-                },
-                "phoHC0gmBL1eXemK": {
-                    "id": "phoHC0gmBL1eXemK",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.phoHC0gmBL1eXemK"
-                },
-                "dAGjvbEc0eigLXgV": {
-                    "id": "dAGjvbEc0eigLXgV",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.dAGjvbEc0eigLXgV"
-                },
-                "lMYS8r6RpjFqnfhS": {
-                    "id": "lMYS8r6RpjFqnfhS",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.lMYS8r6RpjFqnfhS"
-                },
-                "qXpZs122HPwrcamI": {
-                    "id": "qXpZs122HPwrcamI",
-                    "name": "Księga (Prawo)",
-                    "description": "<p>Przepisy prawne znacznie różnią się między poszczególnymi regionami. Miasta posiadające prasy drukarskie wydają zbiory rozporządzeń w oprawionych tomiszczach, podczas gdy w mniejszych miastach sędziowie często polegają na manuskryptach spisanych setki lat wcześniej. Księgi prawne używane przez podróżujących prawników lub sędziów nierzadko łączą drukowane i ręcznie pisane stronice pochodzące z różnych miast z całego Imperium, zebrane i oprawione pod jedną okładką.</p>",
-                    "originalName": "Księga (Prawo)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.qXpZs122HPwrcamI"
-                },
-                "0Fqs1OLXRFWJ2gT2": {
-                    "id": "0Fqs1OLXRFWJ2gT2",
-                    "name": "Toga",
-                    "description": "<p></p>",
-                    "originalName": "Toga",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.0Fqs1OLXRFWJ2gT2"
-                },
-                "slM6SMJeT5h8vFfo": {
-                    "id": "slM6SMJeT5h8vFfo",
-                    "name": "Pergamin",
-                    "description": "<p></p>",
-                    "originalName": "Pergamin",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.slM6SMJeT5h8vFfo"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Local Scout": {
-            "id": "2cuFdwtSf05YqAAB",
-            "name": "Miejscowy Zwiadowca",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.2cuFdwtSf05YqAAB",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "items": {
-                "tVRfLvWOqaix2OEB": {
-                    "id": "tVRfLvWOqaix2OEB",
-                    "name": "Wiedza (Lokalna)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
-                    "originalName": "Wiedza (Lokalna)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.tVRfLvWOqaix2OEB"
-                },
-                "ga7VEeGAIcgifIy9": {
-                    "id": "ga7VEeGAIcgifIy9",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.ga7VEeGAIcgifIy9"
-                },
-                "MYHr8y6xJuitbzfu": {
-                    "id": "MYHr8y6xJuitbzfu",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.MYHr8y6xJuitbzfu"
-                },
-                "WaTLcbi51u9LQclS": {
-                    "id": "WaTLcbi51u9LQclS",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.WaTLcbi51u9LQclS"
-                },
-                "lfLwBmMrvhBWWPd1": {
-                    "id": "lfLwBmMrvhBWWPd1",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.lfLwBmMrvhBWWPd1"
-                },
-                "kzuNo0os90zKZWWV": {
-                    "id": "kzuNo0os90zKZWWV",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.kzuNo0os90zKZWWV"
-                },
-                "WPoXIT6K7JA7Lqot": {
-                    "id": "WPoXIT6K7JA7Lqot",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.WPoXIT6K7JA7Lqot"
-                },
-                "KFp0oyQHlDhiNaoQ": {
-                    "id": "KFp0oyQHlDhiNaoQ",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.KFp0oyQHlDhiNaoQ"
-                },
-                "3jQ1WeXFopiLzhwW": {
-                    "id": "3jQ1WeXFopiLzhwW",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.3jQ1WeXFopiLzhwW"
-                },
-                "3bz1qKDFY5NfSkkZ": {
-                    "id": "3bz1qKDFY5NfSkkZ",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.3bz1qKDFY5NfSkkZ"
-                },
-                "VD7zh9tb0ieunSa2": {
-                    "id": "VD7zh9tb0ieunSa2",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.VD7zh9tb0ieunSa2"
-                },
-                "8AG7TGNS9VDPXmBl": {
-                    "id": "8AG7TGNS9VDPXmBl",
-                    "name": "prowiant na dwa tygodnie",
-                    "description": "<p></p>",
-                    "originalName": "prowiant na dwa tygodnie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.8AG7TGNS9VDPXmBl"
-                },
-                "ocEH35t7OUeTm4DO": {
-                    "id": "ocEH35t7OUeTm4DO",
-                    "name": "koń wierzchowy z rzędem",
-                    "description": "<p></p>",
-                    "originalName": "koń wierzchowy z rzędem",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.ocEH35t7OUeTm4DO"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Porter": {
-            "id": "VhdI2DUAbHadGBcN",
-            "name": "Tragarz",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.VhdI2DUAbHadGBcN",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "items": {
-                "D3fOOJqZ2ZN6USj4": {
-                    "id": "D3fOOJqZ2ZN6USj4",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.D3fOOJqZ2ZN6USj4"
-                },
-                "OHPFh68o7c6glj9q": {
-                    "id": "OHPFh68o7c6glj9q",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.OHPFh68o7c6glj9q"
-                },
-                "vOaOjdJuJF281F4H": {
-                    "id": "vOaOjdJuJF281F4H",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.vOaOjdJuJF281F4H"
-                },
-                "vXhPPWv8SG7p3LHD": {
-                    "id": "vXhPPWv8SG7p3LHD",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.vXhPPWv8SG7p3LHD"
-                },
-                "5jriw8CE56gUAN1z": {
-                    "id": "5jriw8CE56gUAN1z",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.5jriw8CE56gUAN1z"
-                },
-                "BIL0pFQZ9lBvQnL5": {
-                    "id": "BIL0pFQZ9lBvQnL5",
-                    "name": "skórzane rękawice",
-                    "description": "<p></p>",
-                    "originalName": "skórzane rękawice",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.BIL0pFQZ9lBvQnL5"
-                },
-                "BrJmPjdgXJGEvDwL": {
-                    "id": "BrJmPjdgXJGEvDwL",
-                    "name": "czapka tragarza",
-                    "description": "<p>Świetnej jakości kapelusze stanowią symbol statusu w miastach i miasteczkach Imperium. Im bardziej ekstrawagancki kapelusz, tym lepiej.</p>",
-                    "originalName": "czapka tragarza",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.BrJmPjdgXJGEvDwL"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Scribe": {
-            "id": "Zmri0YUwubVPY2qu",
-            "name": "Skryba",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Zmri0YUwubVPY2qu",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "items": {
-                "EAcLdPqa2KFovtw2": {
-                    "id": "EAcLdPqa2KFovtw2",
-                    "name": "Sztuka (Pisarstwo)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka (Pisarstwo)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.EAcLdPqa2KFovtw2"
-                },
-                "mlSzVjPueYCSOToE": {
-                    "id": "mlSzVjPueYCSOToE",
-                    "name": "Język (jeden wybrany przez MG)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
-                    "originalName": "Język (jeden wybrany przez MG)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.mlSzVjPueYCSOToE"
-                },
-                "juYzyzsXw9pqoFK2": {
-                    "id": "juYzyzsXw9pqoFK2",
-                    "name": "Rzemiosło (Skryba)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
-                    "originalName": "Rzemiosło (Skryba)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.juYzyzsXw9pqoFK2"
-                },
-                "9jUhRrnh8m7EWurz": {
-                    "id": "9jUhRrnh8m7EWurz",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.9jUhRrnh8m7EWurz"
-                },
-                "wn5GwkLBXwkSArwt": {
-                    "id": "wn5GwkLBXwkSArwt",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.wn5GwkLBXwkSArwt"
-                },
-                "n37MJ0ff2A2yVws7": {
-                    "id": "n37MJ0ff2A2yVws7",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.n37MJ0ff2A2yVws7"
-                },
-                "hevr99NUuZwGyTZG": {
-                    "id": "hevr99NUuZwGyTZG",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.hevr99NUuZwGyTZG"
-                },
-                "ZuyXtwHJOPSbOfO9": {
-                    "id": "ZuyXtwHJOPSbOfO9",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.ZuyXtwHJOPSbOfO9"
-                },
-                "ijnyAukZZBcQ11ih": {
-                    "id": "ijnyAukZZBcQ11ih",
-                    "name": "Księga",
-                    "description": " ",
-                    "originalName": "Księga",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.ijnyAukZZBcQ11ih"
-                },
-                "g3lRCCP9MioSNbH2": {
-                    "id": "g3lRCCP9MioSNbH2",
-                    "name": "Pergamin",
-                    "description": "<p></p>",
-                    "originalName": "Pergamin",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.g3lRCCP9MioSNbH2"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Seasoned Mercenary": {
-            "id": "IjNH91erF0qBOfoM",
-            "name": "Doświadczony Najemnik",
-            "description": " ",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.IjNH91erF0qBOfoM",
-            "species": "Człowiek",
-            "gender": "Różne",
-            "effects": {
-                "JmLR5XdET6YixYdG": {
-                    "id": "JmLR5XdET6YixYdG",
-                    "name": "Obciążenie 1"
-                }
-            },
-            "items": {
-                "1RmQWzkxCfBJXtIe": {
-                    "id": "1RmQWzkxCfBJXtIe",
-                    "name": "Język (Bitewny)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
-                    "originalName": "Język (Bitewny)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.1RmQWzkxCfBJXtIe"
-                },
-                "6T3O7K0OUalHchL6": {
-                    "id": "6T3O7K0OUalHchL6",
-                    "name": "Muzyka (Bęben)",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
-                    "originalName": "Muzyka (Bęben)",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.6T3O7K0OUalHchL6"
-                },
-                "OEY3l68RsKIhHlSp": {
-                    "id": "OEY3l68RsKIhHlSp",
-                    "name": "Występy",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
-                    "originalName": "Występy",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.OEY3l68RsKIhHlSp"
-                },
-                "a4qpt8RhO36hVf1T": {
-                    "id": "a4qpt8RhO36hVf1T",
-                    "name": "Broń Biała",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
-                    "originalName": "Broń Biała",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.a4qpt8RhO36hVf1T"
-                },
-                "WV4m7GxQjhqj35a4": {
-                    "id": "WV4m7GxQjhqj35a4",
-                    "name": "Sztuka",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
-                    "originalName": "Sztuka",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.WV4m7GxQjhqj35a4"
-                },
-                "mpC6ixHWT78N6PqU": {
-                    "id": "mpC6ixHWT78N6PqU",
-                    "name": "Skradanie",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
-                    "originalName": "Skradanie",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.mpC6ixHWT78N6PqU"
-                },
-                "UW0u2Nry8fMMz6aC": {
-                    "id": "UW0u2Nry8fMMz6aC",
-                    "name": "Jeździectwo",
-                    "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
-                    "originalName": "Jeździectwo",
-                    "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.UW0u2Nry8fMMz6aC"
-                },
-                "EOVx6WdwCp52POU6": {
-                    "id": "kFROfGFdExfyJTg9",
-                    "name": "Bełt",
-                    "description": "<p></p>",
-                    "originalName": "Bełt",
-                    "sourceId": "Compendium.wfrp4e-core.items.Item.kFROfGFdExfyJTg9",
-                    "range": "jak broń"
-                }
-            },
-            "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
-        },
-        "Destrier": {
-            "id": "Wj9adJV0oXhajOns",
-            "name": "Rumak",
-            "description": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Konie hodowane są z przeznaczeniem do wykonywania rozmaitych prac. Należą do nich chyże wierzchowce kurierów, krzepkie rumaki rycerzy i wielkie konie ciągnące wozy farmerów. Są tak przydatne, że handel końmi stał się w Reiklandzie niemal konkurencją sportową. Nieuczciwi sprzedawcy chcą zarobić kosztem ignoranckiego nabywcy. Wypełniają luki i malują zęby podstarzałych koni albo wpychają im do nozdrzy szmaty wchłaniające śluz. Nieznający się na rzeczy kupujący powinni mieć się na baczności.</p></section>",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Wj9adJV0oXhajOns",
-            "species": "Konie",
-            "gender": "Różne",
-            "items": {
-                "j2cQmcfglta0cEbx": {
-                    "specification": "3"
-                },
-                "t92sSOfYZmj44jEg": {
-                    "specification": "Duży"
-                },
-                "POE4no8eUL5jOrRK": {
-                    "specification": "Panika"
-                },
-                "ch3YLVIU23ZqEG6L": {
-                    "specification": "Wierzchowiec"
-                },
-                "8YCML0MH5YXWHa7h": {
-                    "specification": "Bojowy"
-                },
-                "QdgEi8a6TxkIY55d": {
-                    "specification": ""
-                },
-                "tyb0VoeTQ23WJld6": {
-                    "id": "HbrwGhUl0ZXz4kLA",
-                    "name": "Twardziel",
-                    "description": "<p>Stworzenie jest w stanie przyjąć więcej obrażeń niż większość innych istot. Zwiększ Żywotność stworzenia o wartość równą jego Bonusowi z Wytrzymałości (zastosuj to przed wszelkimi modyfikatorami <i>Rozmiaru</i>).</p>",
-                    "originalName": "Twardziel",
-                    "sourceId": "Compendium.wfrp4e-core.items.HbrwGhUl0ZXz4kLA",
-                    "effects": {
-                        "yrUvulIfrQfAJmkB": {
-                            "id": "yrUvulIfrQfAJmkB",
-                            "name": "Twardziel",
-                            "scriptData": [
-                                {
-                                    "id": "yrUvulIfrQfAJmkB",
-                                    "name": "Twardziel",
-                                    "script": "[Script.GuUCErVbk5hrFzR3]"
-                                }
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "Riding Horse": {
-            "id": "v0yZmihHC6CQG1Xa",
-            "name": "Koń Wierzchowy",
-            "description": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Konie hodowane są z przeznaczeniem do wykonywania rozmaitych prac. Należą do nich chyże wierzchowce kurierów, krzepkie rumaki rycerzy i wielkie konie ciągnące wozy farmerów. Są tak przydatne, że handel końmi stał się w Reiklandzie niemal konkurencją sportową. Nieuczciwi sprzedawcy chcą zarobić kosztem ignoranckiego nabywcy. Wypełniają luki i malują zęby podstarzałych koni albo wpychają im do nozdrzy szmaty wchłaniające śluz. Nieznający się na rzeczy kupujący powinni mieć się na baczności.</p></section>",
-            "sourceId": "Compendium.wfrp4e-up-in-arms.actors.v0yZmihHC6CQG1Xa",
-            "species": "Konie",
-            "gender": "Różne",
-            "items": {
-                "j2cQmcfglta0cEbx": {
-                    "specification": "3"
-                },
-                "t92sSOfYZmj44jEg": {
-                    "specification": "Duży"
-                },
-                "UYfGOe9WZWAUr8BG": {
-                    "specification": "Panika"
-                },
-                "8dA7jNyZnPmqT0ZR": {
-                    "specification": "Wierzchowiec"
-                }
-            }
-        }
+    "items": {
+      "path": "items",
+      "converter": "fromPack",
+      "documentType": "Item",
+      "fallbackPolicy": "source-first"
     }
+  },
+  "folders": {
+    "Hireling Profiles": "Wzorce najemników",
+    "Up In Arms": "Pod Bronią"
+  },
+  "entries": {
+    "Demigryph Mount": {
+      "id": "SvY5jKrtcsmLJqPy",
+      "name": "Półgryf Wierzchowiec",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.SvY5jKrtcsmLJqPy",
+      "species": "Półgryf",
+      "gender": "Różne",
+      "items": {
+        "yOgUSeW1HZzr8C8l": {
+          "id": "yOgUSeW1HZzr8C8l",
+          "name": "Kropierz (2 PP na Korpus",
+          "description": " ",
+          "originalName": "Kropierz (2 PP na Korpus",
+          "sourceId": " "
+        },
+        "WLkQKKAxykwo0YVf": {
+          "id": "WLkQKKAxykwo0YVf",
+          "name": "Głowa",
+          "description": " ",
+          "originalName": "Głowa",
+          "sourceId": " "
+        },
+        "BIgCIK0nPKTb56i7": {
+          "id": "BIgCIK0nPKTb56i7",
+          "name": "Przednie Nogi)",
+          "description": " ",
+          "originalName": "Przednie Nogi)",
+          "sourceId": " "
+        },
+        "l9JGFkBXITGfwBzT": {
+          "id": "FmHDbCOy3pH8yKhm",
+          "name": "Widzenie w Ciemności",
+          "description": "<p>Bardzo dobrze widzisz w naturalnych ciemnościach. Jeśli masz źródło choćby słabego blasku (światło gwiazd, księżyca czy bioluminescencję), widzisz wyraźnie na 20 metrów na każde wykupienie tego Talentu. To nie koniec. Dla ciebie oświetlenie okolicy sięga dalej o 20 metrów na każde wykupienie tego Talentu.</p>",
+          "originalName": "Widzenie w Ciemności",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.FmHDbCOy3pH8yKhm"
+        },
+        "IiaaV4GjzXRJzhTJ": {
+          "specification": "Duży"
+        },
+        "dItjwv5zpgTyOygv": {
+          "specification": "Bojowy, Kawaleria Uderzeniowa, Ujarzmiony, Wierzchowiec"
+        },
+        "A7MlswtqdtboG9H7": {
+          "id": "A7MlswtqdtboG9H7",
+          "name": "Broń (Pazury)",
+          "description": "<p>Stworzenie nosi broń do walki wręcz lub używa w walce zębów, pazurów albo tym podobnych. Broń zadaje tyle Obrażeń, ile wynosi podana wartość, która już zawiera Bonus z Siły stworzenia. Zazwyczaj będzie to wynosiło 4 + Bonus z Siły (co reprezentuje broń ręczną).</p>",
+          "originalName": "Broń (Pazury)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.A7MlswtqdtboG9H7",
+          "specification": "4"
+        },
+        "AXnj7XjPQFpzoxQj": {
+          "specification": "4"
+        },
+        "rD3dIZzZn4vts3KK": {
+          "id": "rD3dIZzZn4vts3KK",
+          "name": "Pancerz (Głowa, Korpus, i Przednie Nogi)",
+          "description": "<p>Stworzenie chronione jest przez pancerz lub grubą skórę. Ma tyle Punktów Pancerza, ile wynosi wartość, na wszystkich Miejscach Trafień.</p>",
+          "originalName": "Pancerz (Głowa, Korpus, i Przednie Nogi)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.rD3dIZzZn4vts3KK",
+          "effects": {
+            "CAcGBn8sq62mVUxJ": {
+              "id": "CAcGBn8sq62mVUxJ",
+              "name": "Pancerz",
+              "scriptData": [
+                {
+                  "id": "CAcGBn8sq62mVUxJ",
+                  "name": "Pancerz",
+                  "script": "[Script.Vb7rgl8T4VRswbnZ]"
+                }
+              ]
+            }
+          },
+          "specification": "3"
+        },
+        "FpTBkO3AS6GtGZ5N": {
+          "id": "FpTBkO3AS6GtGZ5N",
+          "name": "Pancerz (Tylnie Nogi)",
+          "description": "<p>Stworzenie chronione jest przez pancerz lub grubą skórę. Ma tyle Punktów Pancerza, ile wynosi wartość, na wszystkich Miejscach Trafień.</p>",
+          "originalName": "Pancerz (Tylnie Nogi)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.SvY5jKrtcsmLJqPy.Item.FpTBkO3AS6GtGZ5N",
+          "effects": {
+            "CAcGBn8sq62mVUxJ": {
+              "id": "CAcGBn8sq62mVUxJ",
+              "name": "Pancerz",
+              "scriptData": [
+                {
+                  "id": "CAcGBn8sq62mVUxJ",
+                  "name": "Pancerz",
+                  "script": "[Script.Vb7rgl8T4VRswbnZ]"
+                }
+              ]
+            }
+          },
+          "specification": "1"
+        }
+      }
+    },
+    "Doktor": {
+      "id": "DeVqxMfNjki7ytr8",
+      "name": "Doktor",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.DeVqxMfNjki7ytr8",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "pMsAfL3q5cRsR2p1": {
+          "id": "pMsAfL3q5cRsR2p1",
+          "name": "Język (Gildii)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Gildii)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.pMsAfL3q5cRsR2p1"
+        },
+        "SUMfqgcTyftqwtrA": {
+          "id": "SUMfqgcTyftqwtrA",
+          "name": "Wiedza (Anatomia)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Anatomia)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.SUMfqgcTyftqwtrA"
+        },
+        "6sldnNUriPit4L7X": {
+          "id": "6sldnNUriPit4L7X",
+          "name": "Wiedza (Medycyna)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Medycyna)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.6sldnNUriPit4L7X"
+        },
+        "Qk1kW7lm5hCtCqF5": {
+          "id": "Qk1kW7lm5hCtCqF5",
+          "name": "Rzemiosło (Cyrulik)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
+          "originalName": "Rzemiosło (Cyrulik)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.Qk1kW7lm5hCtCqF5"
+        },
+        "wNDlpnPxX3rc0VC0": {
+          "id": "wNDlpnPxX3rc0VC0",
+          "name": "Odporny na (Choroby)",
+          "description": "<p>Twoja wielka wytrwałość pozwala ci poradzić sobie z niebezpieczeństwem. Automatycznie zdajesz pierwszy Test opierania się przeciwko konkretnemu typowi zagrożenia na danej sesji. Znane są Odporności na Choroby, Magię, Mutacje czy Trucizny. Jeśli w Teście ważne są Poziomy Sukcesu, to za ich liczbę przyjmujesz Bonus z Wytrzymałości.</p>",
+          "originalName": "Odporny na (Choroby)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.wNDlpnPxX3rc0VC0",
+          "effects": {
+            "FQv1UAIrdvtf9Tlc": {
+              "id": "FQv1UAIrdvtf9Tlc",
+              "name": "Odporny na (Choroby)",
+              "scriptData": [
+                {
+                  "id": "FQv1UAIrdvtf9Tlc",
+                  "name": "@item.system.tests.value",
+                  "script": "[Script.956dUb5sd6OtbWZR]"
+                },
+                {
+                  "id": "FQv1UAIrdvtf9Tlc",
+                  "name": "Wybierz Odporność",
+                  "script": "[Script.tCIT1a12Gt6k2ohA]"
+                }
+              ]
+            }
+          },
+          "tests": "Wszystkie Test przeciwko Chorobom"
+        },
+        "cGfcj3yi0F8S8AAS": {
+          "id": "cGfcj3yi0F8S8AAS",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.cGfcj3yi0F8S8AAS"
+        },
+        "zEDwfLQDrFHlv3wJ": {
+          "id": "zEDwfLQDrFHlv3wJ",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.zEDwfLQDrFHlv3wJ"
+        },
+        "wWgLDGhRhmJxpzXM": {
+          "id": "wWgLDGhRhmJxpzXM",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.wWgLDGhRhmJxpzXM"
+        },
+        "B9SOSnrGaQ2cgjlF": {
+          "id": "B9SOSnrGaQ2cgjlF",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.B9SOSnrGaQ2cgjlF"
+        },
+        "ZHOGMQOa7ci9LfYN": {
+          "id": "ZHOGMQOa7ci9LfYN",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.ZHOGMQOa7ci9LfYN"
+        },
+        "DKmsoWHDRR9rPkGq": {
+          "id": "DKmsoWHDRR9rPkGq",
+          "name": "Bandaże",
+          "description": "<p>Umożliwia wykonanie <strong>Testu Zręczności</strong>, zamiast <strong>Testu Leczenia</strong> do zatamowania <em>Krwawienia</em> (Leczenie). Udany Test Leczenia lub Zręczności pozwala usunąć jeden dodatkowy Stan <em>Krwawienia</em>.</p>",
+          "originalName": "Bandaże",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.DKmsoWHDRR9rPkGq"
+        },
+        "r1CYc9bYEkGYiuYF": {
+          "id": "r1CYc9bYEkGYiuYF",
+          "name": "Książka (Medycyna)",
+          "description": "<p>Teksty medyczne mogą być pisane ręcznie lub drukowane, w zależności od prestiżu lekarza będącego ich autorem. Zazwyczaj występują w nich ilustracje, zwykle włącznie z rysunkami autopsji i diagramami procedur lekarskich.</p>",
+          "originalName": "Książka (Medycyna)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.r1CYc9bYEkGYiuYF"
+        },
+        "lXMKaJZaog45TDYR": {
+          "id": "lXMKaJZaog45TDYR",
+          "name": "Narzędzia pracy (Medycyna)",
+          "description": "<p><strong>Aptekarz</strong>: Narzędzia obejmują moździerz z tłuczkiem, łyżki, słoiki oraz wagę szalkową. Warsztat wyposażony jest także w palniki olejowe i półki pełne składników.</p>\n<p><strong>Artysta</strong>: Pędzle i farby, młotek i dłuta, pilniki i skrobaki. Warsztat zawiera także sztalugi lub postumenty i zapas płócien, pergaminu, welinu, drewna, gliny lub nieociosanego kamienia.</p>\n<p><strong>Inżynier</strong>: Klepsydra, przymiar, lont, cyrkiel i przykładnica. Warsztat zawiera także wielokrążki, liny i deski kreślarskie.</p>\n<p><strong>Lekarz</strong>: Igły i szwy, bandaże, skalpel, ocet, pincety i wziernik. Warsztat zawiera także rysunki anatomiczne, różne przybory i stół operacyjny. </p>\n<p><strong>Nawigator</strong>: Kwadrant, astrolabium, wykresy i kompasy, klepsydra i sonda na linie.</p>\n<p><strong>Rzemieślnik</strong>: Potencjalny wybór narzędzi używanych przez rzemieślników jest szeroki.</p>\n<p>Przykładowe zestawy:</p>\n<ul>\n<li><strong>Grawer</strong>: Rylce, punktaki, wosk, kwas, młotek i dłuta. Warsztat zawiera także skrawarki i prasy.</li>\n</ul>\n<ul>\n<li><strong>Kowal</strong>: Młotek, cęgi, punktaki, kształtowniki, świdry i wiertła. Warsztat zawiera także kowadło, piec, dziurkownicę, młot kowalski oraz sztaby metalu.</li>\n</ul>\n<ul>\n<li><strong>Stolarz</strong>: Młotek i gwoździe, piła, przymiar, kreda, pion na sznurku. Warsztat zawiera także tokarki, heble, imadła i zapas drewna.</li>\n</ul>\n<p><strong>Przykłady innych rzemieślników</strong>: balsamista, bednarz, browarnik, dmuchacz szkła, garbarz, garncarz, jubiler, kaligraf, kamieniarz, kartograf, krawiec, kucharz, malarz, murarz, płatnerz, rusznikarz, rymarz, snycerz, szewc, szkutnik, szlifierz, świecarz, tkacz, winiarz, wytwórca łuków, zbrojmistrz i złotnik.</p>\n<p><strong>Zielarz</strong>: Moździerz z tłuczkiem, nożyki, sekator i rękawice. Warsztat zawiera także stojaki do suszenia ziół, filtry, lejki, miseczki i słoiki.</p>",
+          "originalName": "Narzędzia pracy (Medycyna)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.lXMKaJZaog45TDYR"
+        },
+        "k1VoX9x7ofQPgMJh": {
+          "id": "k1VoX9x7ofQPgMJh",
+          "name": "Pergamin",
+          "description": "<p></p>",
+          "originalName": "Pergamin",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.DeVqxMfNjki7ytr8.Item.k1VoX9x7ofQPgMJh"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Lawyer": {
+      "id": "OaODR2wDFVLfY5np",
+      "name": "Prawnik",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.OaODR2wDFVLfY5np",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "8j9rJvJ5r32r2RZE": {
+          "id": "8j9rJvJ5r32r2RZE",
+          "name": "Szkło powiększające",
+          "description": " ",
+          "originalName": "Szkło powiększające",
+          "sourceId": " "
+        },
+        "EQZ6FKekRB6qIwyk": {
+          "id": "EQZ6FKekRB6qIwyk",
+          "name": "Język (Gildii)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Gildii)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.EQZ6FKekRB6qIwyk"
+        },
+        "U51arbNU76rtMy9P": {
+          "id": "U51arbNU76rtMy9P",
+          "name": "Sekretne Znaki (Gildii)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Sekretne Znaki}",
+          "originalName": "Sekretne Znaki (Gildii)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.U51arbNU76rtMy9P"
+        },
+        "PVXmhhQ63btwKKB7": {
+          "id": "PVXmhhQ63btwKKB7",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.PVXmhhQ63btwKKB7"
+        },
+        "SF69knAcTEo9AcAf": {
+          "id": "SF69knAcTEo9AcAf",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.SF69knAcTEo9AcAf"
+        },
+        "phoHC0gmBL1eXemK": {
+          "id": "phoHC0gmBL1eXemK",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.phoHC0gmBL1eXemK"
+        },
+        "dAGjvbEc0eigLXgV": {
+          "id": "dAGjvbEc0eigLXgV",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.dAGjvbEc0eigLXgV"
+        },
+        "lMYS8r6RpjFqnfhS": {
+          "id": "lMYS8r6RpjFqnfhS",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.lMYS8r6RpjFqnfhS"
+        },
+        "qXpZs122HPwrcamI": {
+          "id": "qXpZs122HPwrcamI",
+          "name": "Księga (Prawo)",
+          "description": "<p>Przepisy prawne znacznie różnią się między poszczególnymi regionami. Miasta posiadające prasy drukarskie wydają zbiory rozporządzeń w oprawionych tomiszczach, podczas gdy w mniejszych miastach sędziowie często polegają na manuskryptach spisanych setki lat wcześniej. Księgi prawne używane przez podróżujących prawników lub sędziów nierzadko łączą drukowane i ręcznie pisane stronice pochodzące z różnych miast z całego Imperium, zebrane i oprawione pod jedną okładką.</p>",
+          "originalName": "Księga (Prawo)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.qXpZs122HPwrcamI"
+        },
+        "0Fqs1OLXRFWJ2gT2": {
+          "id": "0Fqs1OLXRFWJ2gT2",
+          "name": "Toga",
+          "description": "<p></p>",
+          "originalName": "Toga",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.0Fqs1OLXRFWJ2gT2"
+        },
+        "slM6SMJeT5h8vFfo": {
+          "id": "slM6SMJeT5h8vFfo",
+          "name": "Pergamin",
+          "description": "<p></p>",
+          "originalName": "Pergamin",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.OaODR2wDFVLfY5np.Item.slM6SMJeT5h8vFfo"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Local Scout": {
+      "id": "2cuFdwtSf05YqAAB",
+      "name": "Miejscowy Zwiadowca",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.2cuFdwtSf05YqAAB",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "tVRfLvWOqaix2OEB": {
+          "id": "tVRfLvWOqaix2OEB",
+          "name": "Wiedza (Lokalna)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
+          "originalName": "Wiedza (Lokalna)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.tVRfLvWOqaix2OEB"
+        },
+        "ga7VEeGAIcgifIy9": {
+          "id": "ga7VEeGAIcgifIy9",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.ga7VEeGAIcgifIy9"
+        },
+        "MYHr8y6xJuitbzfu": {
+          "id": "MYHr8y6xJuitbzfu",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.MYHr8y6xJuitbzfu"
+        },
+        "WaTLcbi51u9LQclS": {
+          "id": "WaTLcbi51u9LQclS",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.WaTLcbi51u9LQclS"
+        },
+        "lfLwBmMrvhBWWPd1": {
+          "id": "lfLwBmMrvhBWWPd1",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.lfLwBmMrvhBWWPd1"
+        },
+        "kzuNo0os90zKZWWV": {
+          "id": "kzuNo0os90zKZWWV",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.kzuNo0os90zKZWWV"
+        },
+        "WPoXIT6K7JA7Lqot": {
+          "id": "WPoXIT6K7JA7Lqot",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.WPoXIT6K7JA7Lqot"
+        },
+        "KFp0oyQHlDhiNaoQ": {
+          "id": "KFp0oyQHlDhiNaoQ",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.KFp0oyQHlDhiNaoQ"
+        },
+        "3jQ1WeXFopiLzhwW": {
+          "id": "3jQ1WeXFopiLzhwW",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.3jQ1WeXFopiLzhwW"
+        },
+        "3bz1qKDFY5NfSkkZ": {
+          "id": "3bz1qKDFY5NfSkkZ",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.3bz1qKDFY5NfSkkZ"
+        },
+        "VD7zh9tb0ieunSa2": {
+          "id": "VD7zh9tb0ieunSa2",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.VD7zh9tb0ieunSa2"
+        },
+        "8AG7TGNS9VDPXmBl": {
+          "id": "8AG7TGNS9VDPXmBl",
+          "name": "prowiant na dwa tygodnie",
+          "description": "<p></p>",
+          "originalName": "prowiant na dwa tygodnie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.8AG7TGNS9VDPXmBl"
+        },
+        "ocEH35t7OUeTm4DO": {
+          "id": "ocEH35t7OUeTm4DO",
+          "name": "koń wierzchowy z rzędem",
+          "description": "<p></p>",
+          "originalName": "koń wierzchowy z rzędem",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.2cuFdwtSf05YqAAB.Item.ocEH35t7OUeTm4DO"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Porter": {
+      "id": "VhdI2DUAbHadGBcN",
+      "name": "Tragarz",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.VhdI2DUAbHadGBcN",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "D3fOOJqZ2ZN6USj4": {
+          "id": "D3fOOJqZ2ZN6USj4",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.D3fOOJqZ2ZN6USj4"
+        },
+        "OHPFh68o7c6glj9q": {
+          "id": "OHPFh68o7c6glj9q",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.OHPFh68o7c6glj9q"
+        },
+        "vOaOjdJuJF281F4H": {
+          "id": "vOaOjdJuJF281F4H",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.vOaOjdJuJF281F4H"
+        },
+        "vXhPPWv8SG7p3LHD": {
+          "id": "vXhPPWv8SG7p3LHD",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.vXhPPWv8SG7p3LHD"
+        },
+        "5jriw8CE56gUAN1z": {
+          "id": "5jriw8CE56gUAN1z",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.5jriw8CE56gUAN1z"
+        },
+        "BIL0pFQZ9lBvQnL5": {
+          "id": "BIL0pFQZ9lBvQnL5",
+          "name": "skórzane rękawice",
+          "description": "<p></p>",
+          "originalName": "skórzane rękawice",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.BIL0pFQZ9lBvQnL5"
+        },
+        "BrJmPjdgXJGEvDwL": {
+          "id": "BrJmPjdgXJGEvDwL",
+          "name": "czapka tragarza",
+          "description": "<p>Świetnej jakości kapelusze stanowią symbol statusu w miastach i miasteczkach Imperium. Im bardziej ekstrawagancki kapelusz, tym lepiej.</p>",
+          "originalName": "czapka tragarza",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.VhdI2DUAbHadGBcN.Item.BrJmPjdgXJGEvDwL"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Scribe": {
+      "id": "Zmri0YUwubVPY2qu",
+      "name": "Skryba",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Zmri0YUwubVPY2qu",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "items": {
+        "EAcLdPqa2KFovtw2": {
+          "id": "EAcLdPqa2KFovtw2",
+          "name": "Sztuka (Pisarstwo)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka (Pisarstwo)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.EAcLdPqa2KFovtw2"
+        },
+        "mlSzVjPueYCSOToE": {
+          "id": "mlSzVjPueYCSOToE",
+          "name": "Język (jeden wybrany przez MG)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (jeden wybrany przez MG)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.mlSzVjPueYCSOToE"
+        },
+        "juYzyzsXw9pqoFK2": {
+          "id": "juYzyzsXw9pqoFK2",
+          "name": "Rzemiosło (Skryba)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Rzemiosło}",
+          "originalName": "Rzemiosło (Skryba)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.juYzyzsXw9pqoFK2"
+        },
+        "9jUhRrnh8m7EWurz": {
+          "id": "9jUhRrnh8m7EWurz",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.9jUhRrnh8m7EWurz"
+        },
+        "wn5GwkLBXwkSArwt": {
+          "id": "wn5GwkLBXwkSArwt",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.wn5GwkLBXwkSArwt"
+        },
+        "n37MJ0ff2A2yVws7": {
+          "id": "n37MJ0ff2A2yVws7",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.n37MJ0ff2A2yVws7"
+        },
+        "hevr99NUuZwGyTZG": {
+          "id": "hevr99NUuZwGyTZG",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.hevr99NUuZwGyTZG"
+        },
+        "ZuyXtwHJOPSbOfO9": {
+          "id": "ZuyXtwHJOPSbOfO9",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.ZuyXtwHJOPSbOfO9"
+        },
+        "ijnyAukZZBcQ11ih": {
+          "id": "ijnyAukZZBcQ11ih",
+          "name": "Księga",
+          "description": " ",
+          "originalName": "Księga",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.ijnyAukZZBcQ11ih"
+        },
+        "g3lRCCP9MioSNbH2": {
+          "id": "g3lRCCP9MioSNbH2",
+          "name": "Pergamin",
+          "description": "<p></p>",
+          "originalName": "Pergamin",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.Zmri0YUwubVPY2qu.Item.g3lRCCP9MioSNbH2"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Seasoned Mercenary": {
+      "id": "IjNH91erF0qBOfoM",
+      "name": "Doświadczony Najemnik",
+      "description": " ",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.IjNH91erF0qBOfoM",
+      "species": "Człowiek",
+      "gender": "Różne",
+      "effects": {
+        "JmLR5XdET6YixYdG": {
+          "id": "JmLR5XdET6YixYdG",
+          "name": "Obciążenie 1"
+        }
+      },
+      "items": {
+        "1RmQWzkxCfBJXtIe": {
+          "id": "1RmQWzkxCfBJXtIe",
+          "name": "Język (Bitewny)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
+          "originalName": "Język (Bitewny)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.1RmQWzkxCfBJXtIe"
+        },
+        "6T3O7K0OUalHchL6": {
+          "id": "6T3O7K0OUalHchL6",
+          "name": "Muzyka (Bęben)",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Muzyka}",
+          "originalName": "Muzyka (Bęben)",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.6T3O7K0OUalHchL6"
+        },
+        "OEY3l68RsKIhHlSp": {
+          "id": "OEY3l68RsKIhHlSp",
+          "name": "Występy",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Występy}",
+          "originalName": "Występy",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.OEY3l68RsKIhHlSp"
+        },
+        "a4qpt8RhO36hVf1T": {
+          "id": "a4qpt8RhO36hVf1T",
+          "name": "Broń Biała",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Broń Biała}",
+          "originalName": "Broń Biała",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.a4qpt8RhO36hVf1T"
+        },
+        "WV4m7GxQjhqj35a4": {
+          "id": "WV4m7GxQjhqj35a4",
+          "name": "Sztuka",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Sztuka}",
+          "originalName": "Sztuka",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.WV4m7GxQjhqj35a4"
+        },
+        "mpC6ixHWT78N6PqU": {
+          "id": "mpC6ixHWT78N6PqU",
+          "name": "Skradanie",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
+          "originalName": "Skradanie",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.mpC6ixHWT78N6PqU"
+        },
+        "UW0u2Nry8fMMz6aC": {
+          "id": "UW0u2Nry8fMMz6aC",
+          "name": "Jeździectwo",
+          "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
+          "originalName": "Jeździectwo",
+          "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Actor.IjNH91erF0qBOfoM.Item.UW0u2Nry8fMMz6aC"
+        },
+        "EOVx6WdwCp52POU6": {
+          "id": "kFROfGFdExfyJTg9",
+          "name": "Bełt",
+          "description": "<p></p>",
+          "originalName": "Bełt",
+          "sourceId": "Compendium.wfrp4e-core.items.Item.kFROfGFdExfyJTg9",
+          "range": "jak broń"
+        }
+      },
+      "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
+    },
+    "Destrier": {
+      "id": "Wj9adJV0oXhajOns",
+      "name": "Rumak",
+      "description": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Konie hodowane są z przeznaczeniem do wykonywania rozmaitych prac. Należą do nich chyże wierzchowce kurierów, krzepkie rumaki rycerzy i wielkie konie ciągnące wozy farmerów. Są tak przydatne, że handel końmi stał się w Reiklandzie niemal konkurencją sportową. Nieuczciwi sprzedawcy chcą zarobić kosztem ignoranckiego nabywcy. Wypełniają luki i malują zęby podstarzałych koni albo wpychają im do nozdrzy szmaty wchłaniające śluz. Nieznający się na rzeczy kupujący powinni mieć się na baczności.</p></section>",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.Wj9adJV0oXhajOns",
+      "species": "Konie",
+      "gender": "Różne",
+      "items": {
+        "j2cQmcfglta0cEbx": {
+          "specification": "3"
+        },
+        "t92sSOfYZmj44jEg": {
+          "specification": "Duży"
+        },
+        "POE4no8eUL5jOrRK": {
+          "specification": "Panika"
+        },
+        "ch3YLVIU23ZqEG6L": {
+          "specification": "Wierzchowiec"
+        },
+        "8YCML0MH5YXWHa7h": {
+          "specification": "Bojowy"
+        },
+        "QdgEi8a6TxkIY55d": {
+          "specification": ""
+        },
+        "tyb0VoeTQ23WJld6": {
+          "id": "HbrwGhUl0ZXz4kLA",
+          "name": "Twardziel",
+          "description": "<p>Stworzenie jest w stanie przyjąć więcej obrażeń niż większość innych istot. Zwiększ Żywotność stworzenia o wartość równą jego Bonusowi z Wytrzymałości (zastosuj to przed wszelkimi modyfikatorami <i>Rozmiaru</i>).</p>",
+          "originalName": "Twardziel",
+          "sourceId": "Compendium.wfrp4e-core.items.HbrwGhUl0ZXz4kLA",
+          "effects": {
+            "yrUvulIfrQfAJmkB": {
+              "id": "yrUvulIfrQfAJmkB",
+              "name": "Twardziel",
+              "scriptData": [
+                {
+                  "id": "yrUvulIfrQfAJmkB",
+                  "name": "Twardziel",
+                  "script": "[Script.GuUCErVbk5hrFzR3]"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Riding Horse": {
+      "id": "v0yZmihHC6CQG1Xa",
+      "name": "Koń Wierzchowy",
+      "description": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Konie hodowane są z przeznaczeniem do wykonywania rozmaitych prac. Należą do nich chyże wierzchowce kurierów, krzepkie rumaki rycerzy i wielkie konie ciągnące wozy farmerów. Są tak przydatne, że handel końmi stał się w Reiklandzie niemal konkurencją sportową. Nieuczciwi sprzedawcy chcą zarobić kosztem ignoranckiego nabywcy. Wypełniają luki i malują zęby podstarzałych koni albo wpychają im do nozdrzy szmaty wchłaniające śluz. Nieznający się na rzeczy kupujący powinni mieć się na baczności.</p></section>",
+      "sourceId": "Compendium.wfrp4e-up-in-arms.actors.v0yZmihHC6CQG1Xa",
+      "species": "Konie",
+      "gender": "Różne",
+      "items": {
+        "j2cQmcfglta0cEbx": {
+          "specification": "3"
+        },
+        "t92sSOfYZmj44jEg": {
+          "specification": "Duży"
+        },
+        "UYfGOe9WZWAUr8BG": {
+          "specification": "Panika"
+        },
+        "8dA7jNyZnPmqT0ZR": {
+          "specification": "Wierzchowiec"
+        }
+      }
+    }
+  }
 }

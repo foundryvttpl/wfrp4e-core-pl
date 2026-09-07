@@ -4,4 +4,3 @@ if (test.failed)
 {
     args.actor.addCondition("stunned")
 }
-

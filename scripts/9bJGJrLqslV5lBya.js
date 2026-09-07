@@ -1,1 +1,1 @@
- return args.characteristic == "bs"
+return args.characteristic == "bs"

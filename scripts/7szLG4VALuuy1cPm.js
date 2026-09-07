@@ -3,4 +3,4 @@ await test.roll();
 if (test.failed)
 { 
   await this.actor.addCondition("fatigued")
-} 
+}

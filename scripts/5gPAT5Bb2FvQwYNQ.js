@@ -1,3 +1,2 @@
-args.test.preData.other.push(`Dzięki '${this.effect.name}' możesz odwrócić wynik tego testu.`);
-args.test.preData.canReverse = true;
+args.test.preData.reversal = {allowed : true, if: "better"};
 this.effect.delete();

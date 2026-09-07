@@ -1,5 +1,4 @@
-
-                            let test = await this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {fields: {difficulty : "average"}, appendTitle : " - Wounded"})
+let test = await this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {fields: {difficulty : "average"}, appendTitle : " - Wounded"})
                             await test.roll();
                             if (test.failed)
                             {
@@ -8,4 +7,3 @@
                                     this.script.notification("Gained " + disease.name)
                                 })
                             }
-                            

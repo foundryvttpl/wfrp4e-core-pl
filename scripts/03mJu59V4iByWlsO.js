@@ -22,4 +22,4 @@ this.script.message(`<p><strong>${this.actor.prototypeToken.name}</strong> otrzy
     </ul>
     od Łaski Ranalda zależy, czy regeneracja okaże się silniejsza niż zatrucie.</p>
     <p>Kiedy wszystkie Stany Zatrucia zostaną usunięte, usuwana jest również cecha stworzenia Regeneracja.</p>`, 
-    { whisper: ChatMessage.getWhisperRecipients("GM"), blind: true })   
+    { whisper: ChatMessage.getWhisperRecipients("GM"), blind: true })

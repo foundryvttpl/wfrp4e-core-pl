@@ -1,4 +1,4 @@
-    if (!args.test.context.phantasmal && 
+if (!args.test.context.phantasmal && 
       (this.actor.isOpposing || args.test.context.defending) && 
       args.test.result.roll % 11 == 0 && 
       args.test.succeeded && 

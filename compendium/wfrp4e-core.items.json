@@ -39,13 +39,12 @@
     "damage": "system.damage.value",
     "god": "system.god.value",
     "overcast": "system.overcast.label",
-    "sourceId": "flags.core.sourceId",
     "overcastvalue": "system.overcast.valuePerOvercast.type",
     "overcastinitial": "system.overcast.initial.type",
     "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
     "overcastinitialvalue": "system.overcast.initial.additional",
     "specification_label": "system.specification.label",
-    "specification": "system.specification.value",
+    "specification": "system.specification.label",
     "tests": "system.tests.value",
     "alterNamePost": "system.alterName.post",
     "alterNamePre": "system.alterName.pre",
@@ -64,17 +63,17 @@
     "Injuries": "Urazy",
     "Mutations": "Mutacje",
     "Prayers": "Modlitwy",
-	  "Blessings": "Błogosławieństwa",
-	  "Manann": "Manann",
-	  "Morr": "Morr",
-	  "Myrmidia": "Myrmidia",
-	  "Ranald": "Ranald",
+    "Blessings": "Błogosławieństwa",
+    "Manann": "Manann",
+    "Morr": "Morr",
+    "Myrmidia": "Myrmidia",
+    "Ranald": "Ranald",
     "Rhya": "Rhya",
-	  "Shallya": "Shallya",
-	  "Sigmar": "Sigmar",
-	  "Taal": "Taal",
-	  "Ulric": "Ulryk",
-	  "Verena": "Verena",
+    "Shallya": "Shallya",
+    "Sigmar": "Sigmar",
+    "Taal": "Taal",
+    "Ulric": "Ulryk",
+    "Verena": "Verena",
     "Psychologies": "Czynniki Psychologiczne",
     "Skills": "Umiejętności",
     "Spells": "Zaklęcia",
@@ -9340,7 +9339,8 @@
             }
           ]
         }
-      }
+      },
+      "specification": ""
     },
     "Badly Twisted Knee": {
       "id": "TxXIUDqoon9TivpO",
@@ -9422,20 +9422,6 @@
       },
       "wounds": "2",
       "location": "Głowa"
-    },
-    "Bleeding hand": {
-      "id": "Z9aSUtiwhqVHENnR",
-      "name": "Krwawiąca dłoń",
-      "description": "<p>Głębokie cięcie sprawia, że dłoń obficie krwawi, przez co chwyt staje się śliski. Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie]. Dopóki dłoń będzie krwawić, we wszystkich Testach czynności, podczas których postać trzyma coś w dłoni, należy wykonać <strong>Przeciętny (+20) Test Zręczności</strong>. Jeśli ten się nie powiedzie, trzymany przedmiot wymyka się z dłoni.</p>",
-      "sourceId": "Compendium.wfrp4e-core.items.Z9aSUtiwhqVHENnR",
-      "effects": {
-        "5EOJYNGGp4ZPXIGL": {
-          "id": "5EOJYNGGp4ZPXIGL",
-          "name": "Krwawienie"
-        }
-      },
-      "wounds": "2",
-      "location": "Ręka"
     },
     "Broken Collar Bone": {
       "id": "39906D4BcVGzsiQp",
@@ -14176,7 +14162,7 @@
     "Drowned Man's Face": {
       "id": "i5DW3xX2lGu6Pps6",
       "name": "Twarz topielca",
-      "description": "<p>Błagasz Mananna o to, by utopił twoich wrogów. Gdy Cud jest aktywny, płuca celów nieustannie wypełniają się słoną wodą, a ich włosy powiewają w powietrzu, jakby były pod wodą. Cel otrzymuje 1 poziom @Condition[Zmęczenie]{Zmęczenia} i podczas trwania Cudu stosuje się do niego wszystkie zasady @UUID[JCompendium.wfrp4e-core.journalEntrys.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#utoniecie-i-uduszenie]{Utonięcia i Uduszenia} (strona 181). Po zakończeniu Cudu cel musi wykonać <strong>Trudny (-20) Test Odpornośći</strong>. Jeśli się nie powiedzie, cel otrzymuje Stan @Condition[Powalenie].</p>",
+      "description": "<p>Błagasz Mananna o to, by utopił twoich wrogów. Gdy Cud jest aktywny, płuca celów nieustannie wypełniają się słoną wodą, a ich włosy powiewają w powietrzu, jakby były pod wodą. Cel otrzymuje 1 poziom @Condition[Zmęczenie]{Zmęczenia} i podczas trwania Cudu stosuje się do niego wszystkie zasady @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#utoniecie-i-uduszenie]{Utonięcia i Uduszenia} (strona 181). Po zakończeniu Cudu cel musi wykonać <strong>Trudny (-20) Test Odpornośći</strong>. Jeśli się nie powiedzie, cel otrzymuje Stan @Condition[Powalenie].</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.i5DW3xX2lGu6Pps6",
       "duration": "Bonus Ogd Rund",
       "target": "1",
@@ -14320,7 +14306,7 @@
     "Howl of the Wolf": {
       "id": "9ALNZLZUZSLrLvkd",
       "name": "Wilczy zew",
-      "description": "<p>Wyjesz jak wilk, prosząc Ulryka o pomoc, a ten zsyła pomniejszego Sługę bożego w postaci Białego Wilka. Wilk będzie walczył z twoimi wrogami przez Czas Cudu, zanim zniknie i wróci na Łowisko Ulryka, wydawszy ostatnie, widmowe wycie, które mrozi krew w żyłach. Białe Wilki mają statystyki normalnych wilków (strona 317), ale dodatkowo odznaczają się także Cechami Stworzenia @UUID[Compendium.wfrp4e-core.items.yRhhOlt18COq4e1q]{Furia}, @UUID[Compendium.wfrp4e-core.items.mDgEMOoJpi8DkRYb]{Magiczny } oraz @UUID[Compendium.wfrp4e-core.items.8slW8CJ2oVTxeQ6q]{Rozmiar (Duży).</p>",
+      "description": "<p>Wyjesz jak wilk, prosząc Ulryka o pomoc, a ten zsyła pomniejszego Sługę bożego w postaci Białego Wilka. Wilk będzie walczył z twoimi wrogami przez Czas Cudu, zanim zniknie i wróci na Łowisko Ulryka, wydawszy ostatnie, widmowe wycie, które mrozi krew w żyłach. Białe Wilki mają statystyki normalnych wilków (strona 317), ale dodatkowo odznaczają się także Cechami Stworzenia @UUID[Compendium.wfrp4e-core.items.yRhhOlt18COq4e1q]{Furia}, @UUID[Compendium.wfrp4e-core.items.mDgEMOoJpi8DkRYb]{Magiczny } oraz @UUID[Compendium.wfrp4e-core.items.8slW8CJ2oVTxeQ6q]{Rozmiar (Duży)}.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.9ALNZLZUZSLrLvkd",
       "duration": "Bonus Ogd Rund",
       "target": "Specjalny",
@@ -17101,7 +17087,7 @@
     "Arrow Shield (Necromancy)": {
       "id": "iEZnh3fR7X0E0wqb",
       "name": "Niszczyciel Strzał (Nekromancja)",
-            "description": "<p>Wszelkie pociski z materii organicznej, jak np. strzały czy bełty z drewnianym promieniem, są automatycznie niszczone, jeśli wlecą w Zasięg zaklęcia - nie zadają żadnych obrażeń. Zaklęcie nie wpływa na pociski nieorganiczne, jak np. noże czy kule pistoletowe.</p>\n\n<p>Nekromancja jest starożytną i krwawą dziedziną magii zajmującą się śmiercią i poszukiwaniem nieśmiertelności, co zazwyczaj wymaga babrania się w gnijących zwłokach. Biorąc pod uwagę, że jest to jedna z najbardziej nikczemnych i heretyckich Tradycji Magii, niewielu podchodzi do studiowania jej z lekceważeniem, ponieważ niedocenianie potworności związanych z umarłymi i nieumarłymi może się bardzo źle skończyć.</p>",
+      "description": "<p>Wszelkie pociski z materii organicznej, jak np. strzały czy bełty z drewnianym promieniem, są automatycznie niszczone, jeśli wlecą w Zasięg zaklęcia - nie zadają żadnych obrażeń. Zaklęcie nie wpływa na pociski nieorganiczne, jak np. noże czy kule pistoletowe.</p>\n\n<p>Nekromancja jest starożytną i krwawą dziedziną magii zajmującą się śmiercią i poszukiwaniem nieśmiertelności, co zazwyczaj wymaga babrania się w gnijących zwłokach. Biorąc pod uwagę, że jest to jedna z najbardziej nikczemnych i heretyckich Tradycji Magii, niewielu podchodzi do studiowania jej z lekceważeniem, ponieważ niedocenianie potworności związanych z umarłymi i nieumarłymi może się bardzo źle skończyć.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.iEZnh3fR7X0E0wqb",
       "duration": "Bonus SW Rund",
       "target": "Bonus SW metrów",
@@ -18450,27 +18436,6 @@
         }
       }
     },
-    "Curse of Ill-Fortune": {
-      "id": "sq47SZ1v9Pofa4L1",
-      "name": "Klątwa pecha",
-      "description": "<p>Składnikiem do tego zaklęcia jest jakiś przedmiot, który wcześniej był w posiadaniu celu: albo coś osobistego, albo pukiel włosów. Przez czas trwania zaklęcia cel prześladuje pech. Przykładowo pękają troki i łańcuchy oraz dzieje się wiele innych nieprzyjemnych, ale drobnych efektów narracyjnych. Cel otrzymuje karę -10 do wszystkich Testów (co sumuje się ze wszystkimi innymi modyfikatorami), a ponadto nie może używać Punktów Szczęścia.</p>\n\n<p>Zaklęcia z Tradycji Czarownictwa korzystają z dowolnego dostępnego Wiatru Magii, nie zważając na niebezpieczeństwa płynące z mieszania Wiatrów. Za każdym razem, gdy postać korzystająca z Czarownictwa wywołuje Manifestację, otrzymuje też 1 Punkt Zepsucia. Każde zaklęcie tej Tradycji może zadać dodatkowo każdemu celowi 1 poziom Stanu @Condition[Krwawienie]. Poza tym Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią. Na szczęście składniki Tradycji Czarownictwa są tanie i powszechnie dostępne. Zazwyczaj są to części ciał małych zwierząt. Składniki zaklęć kosztują tyle brązowych pensów (a nie srebrnych szylingów), ile wynosi PZ. Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników, jak opisano w ramce Zdobywanie Pożywienia i Ziół na stronie 129.</p>",
-      "sourceId": "Compendium.wfrp4e-core.items.Item.sq47SZ1v9Pofa4L1",
-      "effects": {
-        "gNLrxf0HKogk6Gqi": {
-          "id": "gNLrxf0HKogk6Gqi",
-          "name": "Ograniczenie Punktów Szczęścia",
-          "script": "args.actor.status.fortune.value = 0"
-        },
-        "zFqJGepPilWiSBCm": {
-          "id": "zFqJGepPilWiSBCm",
-          "name": "Klątwa pecha",
-          "script": "args.prefillModifiers.modifier -= 10"
-        }
-      },
-      "duration": "Bonus SW dni",
-      "target": "1",
-      "range": "Bonus SW kilometrów"
-    },
     "Daemonbane": {
       "id": "PIL4yBcGlk96cvcb",
       "name": "Zguba demonów",
@@ -19169,7 +19134,7 @@
     },
     "Dome (Beasts)": {
       "id": "ILOsg4RfvpUhXhQa",
-            "name": "Kopuła (Zwierzęta)",
+      "name": "Kopuła (Zwierzęta)",
       "description": "<p>Tworzysz nad sobą kopułę z magicznej energii, która blokuje ataki. Każdy w Zasięgu zyskuje Cechę Stworzenia @UUID[Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh]{Ochrona (6+)} przeciwko magicznym lub dystansowym wyprowadzanym zza kopuły. Wszystkie ataki wewnątrz kopuły wykonywane są normalnie.</p>\n\n<p>Wiatr Bursztynowy, <i>Ghur</i>, niesie ze sobą dreszcz, pierwotną wściekłość, która wytrąca z równowagi zarówno zwierzęta, jak i stworzenia myślące. Po każdym udanym rzuceniu zaklęcia z Tradycji Zwierząt możesz dodatkowo zyskać Cechę Stworzenia @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Strach (1)} na [[/r 1d10]]{1k10} Rund.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.ILOsg4RfvpUhXhQa",
       "duration": "Bonus SW Rund",
@@ -25091,28 +25056,6 @@
       "description": "<p>Zostałeś pobłogosławiony przez swego boskiego patrona, dzięki czemu zyskujesz zdolność czynienia jednego z jego Cudów. Możesz wykupywać kolejne cuda za 100 PD pomnożone przez liczbę obecnie znanych cudów. Pełne zasady tego, jak się ich uczysz, znajdują się w @UUID[JournalEntry.NcH9OhleJFfaUdon]{Rozdziale 7: Religie i wierzenia}. W normalnych okolicznościach nie możesz wykupić tego Talentu więcej niż jeden raz. Co więcej, nie możesz też kupić Talentów@UUID[Compendium.wfrp4e-core.items.mdPGZsn2396dEpOf]{Magia Prosta} i @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Magia Tajemna (Dowolna)}, jeśli posiadasz Talent Inwokacja. Po wydaniu 100 PD możesz się pozbyć tego Talentu, ale natychmiast utracisz dostęp do wszystkich zapewnianych przez niego cudów. Narażasz się też na gniew swego boga, a MG obmyśli, jak będzie się on przejawiał.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH"
     },
-    "In-fighter": {
-      "id": "tX9R9rSYm2YyEnOK",
-      "name": "Skrócenie Dystansu",
-      "description": "<p> Wiesz, jak przyciągnąć do siebie przeciwnika, i nie dotyczą cię modyfikatory za walkę z wrogiem, który ma broń dłuższą niż Twoja. Jeśli używasz <b>opcjonalnych zasad walki kontaktowej</b>, otrzymujesz premię +10 do trafienia przeciwnika.</p>",
-      "sourceId": "Compendium.wfrp4e-core.items.Item.tX9R9rSYm2YyEnOK",
-      "effects": {
-        "Eu8Ajiixpb7rdqVW": {
-          "id": "Eu8Ajiixpb7rdqVW",
-          "name": "Skrócenie Dystansu",
-          "scriptData": [
-            {
-              "id": "Eu8Ajiixpb7rdqVW",
-              "name": "@item.system.tests.value",
-              "script": "[Script.7f6OsttTzE7Hvzfk]",
-              "activationScript": "[Script.pnB9TzSEytkxk3Rb]",
-              "hideScript": "[Script.ZrePyV2spv3v65Tg]"
-            }
-          ]
-        }
-      },
-      "tests": "Testy podczas wchodzenia w zasięg broni przeciwnika i w walce kontaktowej"
-    },
     "Iron Jaw": {
       "id": "UaDGF5MBFBwPq5YU",
       "name": "Żelazna Szczęka",
@@ -26903,7 +26846,7 @@
         }
       }
     },
-    "In–fighter": {
+    "In-fighter": {
       "id": "tX9R9rSYm2YyEnOK",
       "name": "Skrócenie Dystansu",
       "description": "<p> Wiesz, jak przyciągnąć do siebie przeciwnika, i nie dotyczą cię modyfikatory za walkę z wrogiem, który ma broń dłuższą niż Twoja. Jeśli używasz <b>opcjonalnych zasad walki kontaktowej</b>, otrzymujesz premię +10 do trafienia przeciwnika.</p>",
@@ -27036,8 +26979,7 @@
             }
           ]
         }
-      },
-      "specification": "#"
+      }
     },
     "Belligerent": {
       "id": "GbDyBCu8ZjDp6dkj",
@@ -27068,7 +27010,6 @@
       "name": "Ugryzienie",
       "description": "<p>W swojej Turze stworzenie może wykonać Darmowy Atak, wydając 1 Przewagę, z Obrażeniami o podanej wartości (zawierają już one Bonus z Siły).</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.pLW9SVX0TVTYPiPv",
-      "specification": "#",
       "effects": {
         "JqX5XmH4ZXiST9ML": {
           "id": "JqX5XmH4ZXiST9ML",
@@ -27114,7 +27055,6 @@
       "name": "Zionięcie",
       "description": "<p>Stworzenie posługuje się zionięciem jako potężną bronią. W swojej Turze, kosztem 2 Przewag, może aktywować <i>Zionięcie</i> jako Darmowy Atak. Wybierz 1 cel, który stworzenie widzi w promieniu 20 + Bonus z Wytrzymałości metrów. Trafione zostają wszystkie postacie wokół tego celu w promieniu tylu metrów, ile wynosi Bonus z Siły, podobnie jak wszystkie postacie znajdujące się między stworzeniem a celem. Przeprowadź <b>Test Przeciwstawny Umiejętności Strzeleckie/Unik</b> przeciwko wszystkim objętym efektem celom (jeden rzut stwora przeciwko wszystkim poszczególnym celom). Każdy cel, który przegrał Test, otrzymuje trafienie zadające wskazaną wartość Obrażeń. Co więcej, jeśli przy Cesze Stworzenia wymieniony jest jeden z opisanych niżej typów zionięcia, zastosuj wskazane zasady.</p><ul><li><p><strong>Dym</strong>: Obszar wypełnia się dymem, który zasłania pole widzenia na tyle Rund, ile wynosi Bonus z Wytrzymałości.</p></li><li><p><strong>Elektryczność</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Oszołomienie].</p></li><li><p><strong>Kwas</strong>: Noszony przez objęte efektem postaci pancerze oraz wszelka broń dostają 1 punkt Uszkodzeń.</p></li><li><p><strong>Ogień</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Podpalenie].</p></li><li><p><strong>Trucizna</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Zatrucie].</p></li><li><p><strong>Zimno</strong>: Cele dostają jeden Stan @Condition[Oszołomienie]{Oszołomiony} za każde pełne 5 odniesionych Ran (minimalnie 1).</p></li></ul><p>Stworzenie jest odporne na własne <i>Zionięcie</i>. Ten atak jest <i>Magiczny</i>.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.uqGxFOEqeurwkAO3",
-      "specification": "# (Typ)",
       "effects": {
         "oRrbVX38SceyNSNF": {
           "id": "oRrbVX38SceyNSNF",
@@ -27293,7 +27233,7 @@
       "name": "Spaczenie",
       "description": "<p>Stworzenie jest napiętnowane przez Chaos lub przepełnione mroczną magią. Siła spaczenia podana jest w nawiasie (@Corruption[minor]{Pomniejsze}, @Corruption[moderate]{Umiarkowane}, albo @Corruption[major]{Potężne}).</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.xsGbDFqK2qh7lsIj",
-      "specification": "Siła Korupcji",
+      "specification": "",
       "effects": {
         "rNq9moHHK0N4dC3S": {
           "id": "rNq9moHHK0N4dC3S",
@@ -27330,7 +27270,6 @@
       "name": "Demoniczny",
       "description": "<p>Esencję stworzenia stanowi surowa magia, a w tym, co uchodzi za jej żyły, płynie paskudna posoka. Demoniczne stwory nie muszą zaspokajać normalnych potrzeb życiowych. Nie potrzebują jedzenia, wody ani powietrza.</p><p>Wszystkie ataki stworzenia są <i>Magiczne</i>. Kiedy stworzenie zostanie trafione, rzuć [[/r 1d10]]{1k10}. Jeśli wyrzuci tyle, ile wynosi próg, lub więcej, cios zostaje zignorowany, nawet jeśli jest to Trafienie Krytyczne. Za to jeśli Żywotność stworzenia zostanie zredukowana do 0, jego dusza natychmiast powraca do Królestw Chaosu. Stworzenie zostaje usunięte z rozgrywki.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.v3uzEthcq0JRar0J",
-      "specification": "Wartość #",
       "effects": {
         "lCW7MgvHneroE3ox": {
           "id": "lCW7MgvHneroE3ox",
@@ -27473,15 +27412,13 @@
             }
           ]
         }
-      },
-      "specification": "#"
+      }
     },
     "EO05HX7jql0g605A": {
       "id": "EO05HX7jql0g605A",
       "name": "Latanie",
       "description": "<p>Gdy stworzenie wykonuje Ruch, może przelecieć tyle metrów, ile wynosi podana wartość. Lecąc, ignoruje wszelkie przeszkody terenowe i inne oraz postaci. Pod koniec ruchu musi zdecydować, czy wyląduje, czy będzie kontynuować lot. Może w ramach tego ruchu wykonać Szarżę. Jeśli na początku swojej Tury leci, musi wybrać jako Ruch Latanie. Jeśli nie jest w stanie tego zrobić, MG decyduje, jak daleko stworzenie upadnie.</p>\n<p>Biorąc stworzenie na cel, zmierz odległość horyzontalną jak normalnie, a następnie zwiększ dystans o 1 poziom. Zatem strzał na Dalekim zasięgu stanie się strzałem na Bardzo dalekim zasięgu. Natomiast jeśli był to Bardzo daleki zasięg, stworzenia nie można dosięgnąć strzałem.</p>\n<p>Lecąc, stworzenie dostaje karę -20 do wszystkich prób walki dystansowej, ponieważ nurkuje w powietrzu i zatacza kręgi.</p>\n<blockquote class=\"foundry-note\"><p>Efekt <strong>Latanie</strong> jest domyślnie nieaktywny. Gdy zostanie aktywowany, będzie powodować kary do testów Ataków Zasięgowych.</p></blockquote>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.EO05HX7jql0g605A",
-      "specification": "#",
       "effects": {
         "qFRVjb5kUqUPzBgB": {
           "id": "qFRVjb5kUqUPzBgB",
@@ -27606,8 +27543,7 @@
       "id": "BqPZn6q3VHn9HUrW",
       "name": "Rogi ()",
       "description": "<p>Stworzenie ma rogi lub inne ostre wyrostki (jeśli jego Cecha Stworzenia <i>Rogi</i> reprezentuje coś innego, będzie to określone w nawiasie). Gdy stworzenie zyskuje Przewagę na skutek Szarżowania, może wykonać Darmowy Atak swoimi Rogami. Taki atak przeprowadzany jest jak normalnie: wykorzystaj podaną wartość Obrażeń (Bonus z Siły stworzenia jest już wliczony).</p>",
-      "sourceId": "Compendium.wfrp4e-core.items.Item.BqPZn6q3VHn9HUrW",
-      "specification": "#"
+      "sourceId": "Compendium.wfrp4e-core.items.Item.BqPZn6q3VHn9HUrW"
     },
     "Hungry": {
       "id": "xneBqGOs1QS7kfUr",
@@ -27854,7 +27790,7 @@
       "name": "Rozmiar",
       "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.3ZynTGhFpgwv6l1n.JournalEntryPage.JY7F6lwqt2YGPddY]{Rozmiar}</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q",
-      "specification": "Rozmiar",
+      "specification": "",
       "effects": {
         "JMSrxnNcqyguP1pz": {
           "id": "JMSrxnNcqyguP1pz",
@@ -27880,7 +27816,7 @@
       "name": "Rzucanie Czarów",
       "description": "<p>Stworzenie potrafi rzucać wszystkie zaklęcia Tradycji Magii podanej w nawiasie.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.vY0CHKsJRV3gYBj3",
-      "specification": "Tradycja",
+      "specification": "",
       "effects": {
         "jpwranqt1iGvh9CR": {
           "id": "jpwranqt1iGvh9CR",
@@ -28046,7 +27982,7 @@
           ]
         }
       },
-      "specification": "Wartość"
+      "specification": ""
     },
     "Tongue Attack (Range)": {
       "id": "xg6z63j6BH5AaqLL",
@@ -28071,7 +28007,7 @@
           ]
         }
       },
-      "specification": "Wartość"
+      "specification": ""
     },
     "Tough": {
       "id": "k9539MBTFplxsysT",
@@ -28200,7 +28136,7 @@
           ]
         }
       },
-      "specification": "Trudność"
+      "specification": "Wymagający"
     },
     "Vomit": {
       "id": "JzeN9MZ0xUDvpE2l",
@@ -28258,7 +28194,7 @@
       "name": "Ochrona",
       "description": "<p>Stworzenie jest magiczne, nosi specjalny talizman albo ma szczęście – niektóre ciosy po prostu go nie trafiają. Rzuć [[/r 1d10]]{1k10} po każdym otrzymanym ciosie. Jeśli stworzenie wyrzuci tyle, ile wynosi podana wartość, lub więcej, cios zostaje zignorowany, nawet jeśli jest to Trafienie Krytyczne.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh",
-      "specification": "Wartość",
+      "specification": "",
       "effects": {
         "tIImpgQfm7FirmhR": {
           "id": "tIImpgQfm7FirmhR",
@@ -28302,19 +28238,18 @@
             }
           ]
         }
-      },
-      "specification": "#"
+      }
     },
     "# Tentacles": {
       "id": "4xF7M6ylIiGntekh",
-      "name": "# Macki",
-      "description": "<p>Stworzenie ma macki w liczbie #.</p>\n            <ul>\n            <li>Dostaje jeden Darmowy Atak na mackę.</li>\n            <li>Atak każdej macki zadaje tyle Obrażeń, ile wynosi podana wartość – zawiera już ona Bonus z Siły stworzenia.</li>\n            <li>Jeśli atak zada Obrażenia, może ponadto dać przeciwnikowi Stan Pochwycenie, co zapoczątkowuje Chwyt celu przez daną mackę.\n            <ul>\n            <li>Jeśli macka wykonuje Chwyt, aby rozstrzygnąć jego wynik, użyj Darmowego Ataku macki zamiast wykorzystywania Akcji stwora </li>\n            </ul>\n            </li>\n            </ul>",
+      "name": "Macki",
+      "description": "<p>Stworzenie ma macki w liczbie podanej w wartości cechy.</p>\n            <ul>\n            <li>Dostaje jeden Darmowy Atak na mackę.</li>\n            <li>Atak każdej macki zadaje tyle Obrażeń, ile wynosi podana wartość – zawiera już ona Bonus z Siły stworzenia.</li>\n            <li>Jeśli atak zada Obrażenia, może ponadto dać przeciwnikowi Stan Pochwycenie, co zapoczątkowuje Chwyt celu przez daną mackę.\n            <ul>\n            <li>Jeśli macka wykonuje Chwyt, aby rozstrzygnąć jego wynik, użyj Darmowego Ataku macki zamiast wykorzystywania Akcji stwora </li>\n            </ul>\n            </li>\n            </ul>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.4xF7M6ylIiGntekh",
-      "specification": "Wartość",
+      "specification": "",
       "effects": {
         "cix7lwIY68fS1N30": {
           "id": "cix7lwIY68fS1N30",
-          "name": "# Macki",
+          "name": "Macki",
           "scriptData": [
             {
               "id": "cix7lwIY68fS1N30",

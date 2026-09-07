@@ -1,4 +1,3 @@
-
 this.actor.characteristics.t.bonus = 10
 
 this.actor.details.move.value = 0;

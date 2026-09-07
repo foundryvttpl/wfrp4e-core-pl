@@ -5,7 +5,7 @@ let nightVision = (await fromUuid("Compendium.wfrp4e-core.items.FmHDbCOy3pH8yKhm
 let tracker = (await fromUuid("Compendium.wfrp4e-core.items.ClOlztW6hH8rslbp")).toObject()
 let weapon = (await fromUuid("Compendium.wfrp4e-core.items.AtpAudHA4ybXVlWM")).toObject()
 
-armour.name = "Pancerz (Skóra)"
+armour.name = "Armour (Hide)"
 armour.system.specification.value = 2
 bite.system.specification.value = 3
 fear.system.specification.value = 2
@@ -25,13 +25,13 @@ let immunity = (await fromUuid("Compendium.wfrp4e-core.items.IAWyzDfC286a9MPz"))
 let regenerate = (await fromUuid("Compendium.wfrp4e-core.items.SfUUdOGjdYpr3KSR")).toObject()//{Regenerate}
 let size = (await fromUuid("Compendium.wfrp4e-core.items.8slW8CJ2oVTxeQ6q")).toObject()//{Size (Large)}
 
-blessed.system.specification.value = "Ulryk"
-size.system.specification.value = "Duży"
+blessed.system.specification.value = "Ulric"
+size.system.specification.value = "Large"
 
 let optional = [belligerent, bestial, big, blessed, champion, die, fast, frenzy, immunity, regenerate, size];
 
-let chosen = await ItemDialog.create(optional, "unlimited", "Wybierz opcjonalne cechy");
+let chosen = await ItemDialog.create(optional, "unlimited", "Choose Optional Traits");
 
 items = items.concat(chosen || [])
-this.script.scriptNotification(`Dodano: ${items.map(i => i.name).join(", ")}`);
+this.script.notification(`Adding ${items.map(i => i.name).join(", ")}`);
 this.actor.createEmbeddedDocuments("Item", items, {fromEffect : this.effect.id})

@@ -9,4 +9,3 @@ if (!test.succeeded)
 {
 	args.actor.addCondition("unconscious")
 }
-
