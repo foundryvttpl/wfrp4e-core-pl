@@ -144,16 +144,23 @@ jobs:
 
       - name: Zip files
         run: |
+          set -euo pipefail
           zip -r wfrp4e-core-pl.zip module.json release-source.json README.md babele-register.js load-scripts-pl.js gazetteer.json modules/ scripts/ lang/ images/ fonts/ css/ compendium/
+          test -s module.json
+          test -s release-source.json
+          test -s wfrp4e-core-pl.zip
+          unzip -t wfrp4e-core-pl.zip
 
-      - name: Update Release with Files
+      - name: Publish Release with Files
         id: create_version_release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.21.0
         with:
           allowUpdates: true
+          immutableCreate: true
+          artifactErrorsFailBuild: true
           name: Release ${{steps.get_version.outputs.version}}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json, ./release-source.json, ./wfrp4e-core-pl.zip'
+          artifacts: './module.json,./release-source.json,./wfrp4e-core-pl.zip'
           tag: ${{ steps.provenance.outputs.release_tag }}
 
       - name: Get Module ID
