@@ -10,10 +10,10 @@ if (this.item.system.quantity.value)
     }
     else 
     {
-        this.script.notification("Test Leczenia nie powiódł się!", "error");
+        this.script.notification("Heal Test failed!", "error")
     }
 }
 else 
 {
-    this.script.notification("Nic nie zostało!", "error")
+    this.script.notification("None left!", "error")
 }

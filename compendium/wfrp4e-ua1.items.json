@@ -1,0 +1,185 @@
+{
+    "label": "Przedmioty (Przygody w Ubersreiku I)",
+    "mapping": {
+        "gmdescription": "system.gmdescription.value",
+        "specification_label": "system.specification.label",
+        "specification": "system.specification.label",
+        "tests": "system.tests.value",
+        "effects": {
+            "path": "effects",
+            "converter": "effects"
+        },
+        "roll": "system.rollable.skill",
+        "penalties": "system.penalty.value",
+        "range": "system.range.value",
+        "special": "system.special.value"
+    },
+    "folders": {
+        "Talents": "Talenty",
+        "Traits": "Cechy Stworzeń",
+        "Trappings": "Wyposażenie",
+        "Blessings": "Błogosławieństwa",
+        "Uliric": "Ulryk",
+        "Ammunition": "Amunicja",
+        "Armour": "Pancerz",
+        "Weapons": "Bronie",
+        "Books and Documents": "Księgi i Dokumenty",
+        "Clothing and Accessories": "Ubrania i akcesoria",
+        "Drugs and Poisons": "Narkotyki i trucizny",
+        "Food and Drink": "Jedzenie i Picie",
+        "Herbs and Draughts": "Zioła i mikstury",
+        "Miscellaneous": "Inne",
+        "Packs and Containers": "Pakunki i pojemniki",
+        "Tools and Kits": "Narzędzia i zestawy",
+        "Chaos Magic": "Magia Chaosu",
+        "Lore of Beasts": "Tradycja Zwierząt",
+        "Lore of Daemonology": "Tradycja Demonologii",
+        "Lore of Death": "Tradycja Śmierci",
+        "Lore of Fire": "Tradycja Ognia",
+        "Lore of Heavens": "Tradycja Niebios",
+        "Lore of Hedgecraft": "Tradycja Guślarstwa",
+        "Lore of Life": "Tradycja Życia",
+        "Lore of Light": "Tradycja Światła",
+        "Lore of Metal": "Tradycja Metalu",
+        "Lore of Shadow": "Tradycja Cieni",
+        "Lore of Witchcraft": "Tradycja Czarostwa",
+        "Lore of Necromancy": "Tradycja Nekromancji",
+        "Petty Spells": "Proste Zaklęcia"
+    },
+    "entries": {
+        "Cantor": {
+            "id": "10Q5DA7Y6eqO1Qu0",
+            "name": "Kantor",
+            "description": "<p>Jesteś wyszkolonym kantorem: śpiewakiem Kolegiów Magicznych, potrafiącym zbierać Wiatry Magii, by wspomagać czary rzucane przez kogoś, kto czaruje w twojej obecności. Możesz wykonać Test Występów (Śpiew), który zastąpi Test Splatania Magii. Wszyscy czarodzieje, którzy znajdują się w promieniu tylu metrów, ile wynosi twoja Ogłada, mogą wykorzystać jeden PS z twojego Wydłużonego Testu Splatania na Rundę podczas wykonywania własnych Testów Splatania Magii. Dzięki temu Talentowi istota może wykonywać Wydłużony Test Występów (Śpiew), by pomóc czarodziejowi w Testach Splatania Magii, nawet jeśli sama nie jest w stanie go wykonać z powodu braku odpowiedniej zdolności.</p>",
+            "sourceId": "Compendium.wfrp4e-ua1.items.10Q5DA7Y6eqO1Qu0",
+            "effects": {
+                "EzqI5d404kmIdYD4": {
+                    "id": "EzqI5d404kmIdYD4",
+                    "name": "Kantor",
+                    "scriptData": [
+                        {
+                            "id": "EzqI5d404kmIdYD4",
+                            "name": "Występy (Śpiew)",
+                            "script": "args.fields.successBonus++;",
+                            "activationScript": "return args.skill?.name == \"Występy (Śpiew)\" || args.skill?.name == \"Występy (Śpiew)\"",
+                            "hideScript": "return args.skill?.name != \"Występy (Śpiew)\" && args.skill?.name != \"Występy (Śpiew)\""
+                        }
+                    ]
+                }
+            },
+            "tests": "Występy (Śpiew)"
+        },
+        "Maddening Aura": {
+            "id": "f2gaVCVtVQCgwoiJ",
+            "name": "Aura Obłędu",
+            "description": "<p>Na początku każdej Rundy każda postać w promieniu 20 metrów od stwora musi wykonać <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli nie zda, rzuć w tabeli Obezwładniającej bezrozumności. Jeśli wypadnie Pech, Bohater otrzymuje dodatkowo +1 Punkt Zepsucia – co więcej, w razie gdyby Bohater w wyniku tego został spaczony, to automatycznie będzie to Zepsucie Psychiczne. W stosownych przypadkach wszelkie skutki Aury Obłędu kumulują się.</p><table style=\"width: 99.1329%; height: 128px;\" border=\"1\"><tbody><tr style=\"height: 16px;\"><td style=\"text-align: center; width: 9.09487%; height: 16px;\"><p><strong>[[/r 1d10]]</strong></p></td><td style=\"text-align: center; width: 90.1763%; height: 16px;\"><p><strong>Obezwładniająca bezrozumność</strong></p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>1-2</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Teraz ostrożnie.</strong> W swojej następnej Turze możesz wykonać albo Ruch, albo Akcję, ale nie oba. Potem otrząsasz się z tego.</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>3-4</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Co się dzieje? </strong>Ponosisz skutki Stanu @Condition[Zaskoczenie].</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>5-6</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Mój plan działa!</strong> W swojej Turze musisz podjąć takie same działania jak w poprzedniej Rundzie. Jeśli z jakiegoś powodu nie możesz tego zrobić, musisz zrobić wszystko, co możesz, żeby wykonać to działanie w swojej następnej Turze. <strong>Czas trwania:</strong> 1k10 Rund.</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>7</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Który powiedział, że jestem paranoikiem?</strong> Zyskujesz Wrogość względem losowo wybranego Bohatera. <strong>Czas trwania:</strong> długotrwały.</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>8</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Do mnie mówisz?</strong> Zyskujesz Nienawiść względem losowo wybranego Bohatera. <strong>Czas trwania:</strong> długotrwały.</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>9</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Bij, zabij! Bij, zabij!</strong> Zyskujesz efekt psychologiczny Szał Bojowy. <strong>Czas trwania:</strong> długotrwały.</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 9.09487%; height: 16px; text-align: center;\"><p>10</p></td><td style=\"width: 90.1763%; height: 16px;\"><p><strong>Tyk, tyk, tak.</strong> Zapadasz na jedno @Table[mutatemental]{Zepsucie Psychiczne}. <strong>Czas trwania:</strong> długotrwały.</p></td></tr></tbody></table><p><strong>Długotrwały:</strong> Trwa [[/r 1d10]] − Bonus z Siły Woli (minimum godzinę). Po tym czasie wykonaj <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli się nie uda, to skutek pozostaje na stałe. Poziom Trudności Testu może się zmieniać w zależności od tego, czy Bohaterowie mieli krótkotrwałą, czy przedłużającą się styczność z potworem, w zależności od decyzji MG. Gracz może wydać Punkt Bohatera, by wydostać się spod wpływu długotrwałych skutków Aury Obłędu, jednak wspomnienia straszliwego stwora nigdy nie wyblakną. Bohater może wydać 1 Punkt Determinacji, aby zignorować negatywne konsekwencje Aury Obłędu przez 1 Rundę.</p>",
+            "sourceId": "Compendium.wfrp4e-ua1.items.f2gaVCVtVQCgwoiJ",
+            "effects": {
+                "PHtCqlMVAObWnour": {
+                    "id": "PHtCqlMVAObWnour",
+                    "name": "Aura Obłędu",
+                    "scriptData": [
+                        {
+                            "id": "PHtCqlMVAObWnour",
+                            "name": "Aura Obłędu",
+                            "script": "[Script.lhemR8EP5tGNKout]"
+                        }
+                    ]
+                }
+            }
+        },
+        "Cordelia's Enhanced Restorative Tonic": {
+            "id": "agzwTlIp0snYsJn1",
+            "name": "Cudowny Regeneracyjny Tonik Cordelii",
+            "description": "<p>Przywraca utraconą Żywotność w liczbie równej dwukrotności Bonusu z Wytrzymałości.</p>",
+            "gmdescription": "<p>Wymaga zdania <strong>Trudnego (-10) Testu Odporności</strong>W wypadku porażki zażywająca go osoba cierpi na efekty uboczne przez tyle minut, ile wyniosła liczba Poziomów Sukcesu, o jaką nie zdała Testu. Rzuć [[/r 1d10]]{1k10}, by ustalić, jakiego rodzaju Stanu padła ofiarą: 1-3: Oślepienie (3), 4-6: Panika (1), 7-9: Oszołomienie (1), 10: Utrata Przytomności.</p>",
+            "sourceId": "Compendium.wfrp4e-ua1.items.agzwTlIp0snYsJn1",
+            "effects": {
+                "MvU6bcY40ZgvGgvK": {
+                    "id": "MvU6bcY40ZgvGgvK",
+                    "name": "Regeneracyjny Tonik",
+                    "scriptData": [
+                        {
+                            "id": "MvU6bcY40ZgvGgvK",
+                            "name": "Regeneracyjny Tonik",
+                            "script": "[Script.GOq4TcnWbfyfCo2V]"
+                        }
+                    ]
+                },
+                "vX8RWGlp5bPppDOU": {
+                    "id": "vX8RWGlp5bPppDOU",
+                    "name": "Zastosuj Regeneracyjny Tonik",
+                    "scriptData": [
+                        {
+                            "id": "vX8RWGlp5bPppDOU",
+                            "name": "@effect.name",
+                            "script": "[Script.xUpKYT7BZCSmAfUy]"
+                        }
+                    ]
+                }
+            }
+        },
+        "Spiky Bracers": {
+            "id": "WGkFr3bXG8hWcac9",
+            "name": "Kolczate Naramienniki",
+            "description": " ",
+            "gmdescription": "Za każdym razem, gdy dżabersmok przeprowadza udany Atak Językiem na Bohatera w kolczastej zbroi, otrzymuje trafienie Bronią +9 i przy określaniu wysokości Obrażeń używa własnych PS na trafienie. Ponadto Bohater noszący tę zbroję ignoruje każdy Stan @Condition[Spętanie], jaki atak jęzorem dżabersmoka nakłada na swój cel.",
+            "sourceId": "Compendium.wfrp4e-ua1.items.WGkFr3bXG8hWcac9"
+        },
+        "Spiky Breastplate": {
+            "id": "VjQYcISvOu2No1vK",
+            "name": "Kolczaty Napierśnik Płytowy",
+            "description": " ",
+            "gmdescription": "Za każdym razem, gdy dżabersmok przeprowadza udany Atak Językiem na Bohatera w kolczastej zbroi, otrzymuje trafienie Bronią +9 i przy określaniu wysokości Obrażeń używa własnych PS na trafienie. Ponadto Bohater noszący tę zbroję ignoruje każdy Stan @Condition[Spętanie], jaki atak jęzorem dżabersmoka nakłada na swój cel.",
+            "sourceId": "Compendium.wfrp4e-ua1.items.VjQYcISvOu2No1vK"
+        },
+        "Spiky Helm": {
+            "id": "VBb435yxLLy1BDQz",
+            "name": "Kolczaty Hełm",
+            "description": " ",
+            "gmdescription": "Za każdym razem, gdy dżabersmok przeprowadza udany Atak Językiem na Bohatera w kolczastej zbroi, otrzymuje trafienie Bronią +9 i przy określaniu wysokości Obrażeń używa własnych PS na trafienie. Ponadto Bohater noszący tę zbroję ignoruje każdy Stan @Condition[Spętanie], jaki atak jęzorem dżabersmoka nakłada na swój cel.",
+            "sourceId": "Compendium.wfrp4e-ua1.items.VBb435yxLLy1BDQz",
+            "effects": {
+                "JGym50pu5WqSp2Z5": {
+                    "id": "JGym50pu5WqSp2Z5",
+                    "name": "Kolczaty Hełm",
+                    "scriptData": [
+                        {
+                            "id": "JGym50pu5WqSp2Z5",
+                            "name": "Kolczaty Hełm",
+                            "script": "if (args.type == \"skill\" && args.item.name == game.i18n.localize(\"NAME.Perception\"))\n   args.prefillModifiers.modifier -= 20",
+                            "activationScript": "return true"
+                        }
+                    ]
+                }
+            }
+        },
+        "Spiky Plate Leggings": {
+            "id": "hqHJHkvkYmSIg2xK",
+            "name": "Kolczate Płytowe Nagolenniki",
+            "description": " ",
+            "gmdescription": "Za każdym razem, gdy dżabersmok przeprowadza udany Atak Językiem na Bohatera w kolczastej zbroi, otrzymuje trafienie Bronią +9 i przy określaniu wysokości Obrażeń używa własnych PS na trafienie. Ponadto Bohater noszący tę zbroję ignoruje każdy Stan @Condition[Spętanie], jaki atak jęzorem dżabersmoka nakłada na swój cel.",
+            "sourceId": "Compendium.wfrp4e-ua1.items.hqHJHkvkYmSIg2xK",
+            "effects": {
+                "bYvPqVB3JkdKtHys": {
+                    "id": "bYvPqVB3JkdKtHys",
+                    "name": "Kolczate Płytowe Nagolenniki",
+                    "scriptData": [
+                        {
+                            "id": "bYvPqVB3JkdKtHys",
+                            "name": "Kolczate Płytowe Nagolenniki",
+                            "script": "if (args.type == \"skill\" && args.item.name.includes(game.i18n.localize(\"NAME.Stealth\")))\n   args.prefillModifiers.modifier -= 10",
+                            "activationScript": "return true"
+                        }
+                    ]
+                }
+            }
+        },
+        "The Nineteenth Palm of Volans": {
+            "id": "76P6iODnOpT8JLfu",
+            "name": "Dziewiętnasta Dłoń Volansa",
+            "description": "<p>Jeden z dwudziestu czterech talizmanów, które zostały stworzone przez pierwszego Patriarchę Kolegiów Magii. Czerpie siłę z wnętrza właściciela, by chronić go przed działaniem mocy. Zwykle obdarowywani nimi byli arcymagowie, którym zlecano szczególnie niebezpieczne misje poza sferą wpływów rodzimego Kolegium. </p><p>Nosząc Dziewiętnastą Dłoń Volansa, postać może @UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#rozproszenie-magii]{rozproszyć czar}. Nie można jednak rozproszyć czaru, który już działa. Jeśli Bohater nie włada <strong>Językiem (Magicznym) </strong>, do rozpraszania zaklęcia może wykorzystać samą swoją Siłę Woli.</p>",
+            "sourceId": "Compendium.wfrp4e-ua1.items.76P6iODnOpT8JLfu"
+        }
+    }
+}

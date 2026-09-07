@@ -12,12 +12,15 @@
         "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
         "overcastinitialvalue": "system.overcast.initial.additional",
 		"specification_label": "system.specification.label",
-        "specification": "system.specification.value",
+        "specification": "system.specification.label",
         "tests": "system.tests.value",
         "effects": {
             "path": "effects",
             "converter": "effects"
         }
+    },
+    "folders": {
+        "RNHD Items": "Wyposażenie"
     },
     "entries": {
         "Reveal the Inner Beauty": {

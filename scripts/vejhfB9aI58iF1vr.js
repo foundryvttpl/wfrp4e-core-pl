@@ -59,4 +59,3 @@ async function dialogChoice() {
 updateObj = this.actor.toObject();
 actor = this.actor
 await dialogChoice();
-

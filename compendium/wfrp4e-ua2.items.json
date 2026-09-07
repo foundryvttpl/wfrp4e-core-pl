@@ -1,0 +1,106 @@
+{
+  "label": "Przedmioty (Przygody w Ubersreiku II)",
+  "mapping": {
+    "gmdescription": "system.gmdescription.value",
+    "duration": "system.duration.value",
+    "range": "system.range.value",
+    "target": "system.target.value",
+    "damage": "system.damage.value",
+    "overcast": "system.overcast.label",
+    "overcastvalue": "system.overcast.valuePerOvercast.type",
+    "overcastinitial": "system.overcast.initial.type",
+    "overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
+    "overcastinitialvalue": "system.overcast.initial.additional",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "penalties": "system.penalty.value",
+    "special": "system.special.value"
+  },
+  "folders": {
+    "Spells": "Zaklęcia",
+    "Trappings": "Wyposażenie"
+  },
+  "entries": {
+    "Sporoific Lull": {
+      "id": "cj6ElRtnt5i0SY06",
+      "name": "Usypiający spokój",
+      "description": "<p>Cel tego zaklęcia jest przepełniony zmęczeniem i pragnieniem snu. Otrzymuje 1k10 – Bonus z Siły Woli poziomów Stanu @Condition[Zmęczenie]. Jeżeli liczba poziomów Stanu Zmęczenie, które cel otrzyma w wyniku działania zaklęcia, jest większa niż jego Bonus z Siły Woli, zasypia, tak jakby był pod wpływem zaklęcia @UUID[Compendium.wfrp4e-core.items.4ePe5oNQakA8nJlk]{Uspienie}.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.items.cj6ElRtnt5i0SY06",
+      "effects": {
+        "mKRY39qSsPgogaTn": {
+          "id": "mKRY39qSsPgogaTn",
+          "name": "Usypiający spokój",
+          "scriptData": [
+            {
+              "id": "mKRY39qSsPgogaTn",
+              "name": "Usypiający spokój",
+              "script": "[Script.V9wD9FWHWxZUOGSI]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "1",
+      "range": "Siła Woli metrów"
+    },
+    "Uncontrollable Corporal Expulsion": {
+      "id": "4ZOJ5JFlbZzvsF6s",
+      "name": "Niekontrolowane wydalenie",
+      "description": "<p>Cel tego zaklęcia doznaje nagłego przeczyszczania ciała. Otrzymuje on 1k10 – Bonus z Siły Woli Objawów Choroby wziętych z następującej listy: @Symptom[Konwulsje], @Symptom[Kaszel i katar], @Symptom[Gorączka], @Symptom[Biegunka], oraz @Symptom[Mdłości]. MG może wybrać, których Objawów chce użyć, i stopień, w jakim ich efekty się skumulują. W przypadku Kaszlu i kataru nie rozprzestrzenia się żadna choroba, ale efekty są głośne i robią spory bałagan. Po upływie czasu trwania zaklęcia cel zdrowieje ze wszystkich Stanów spowodowanych przez symptomy, ale może wymagać kąpieli.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.items.4ZOJ5JFlbZzvsF6s",
+      "effects": {
+        "mKRY39qSsPgogaTn": {
+          "id": "mKRY39qSsPgogaTn",
+          "name": "Niekontrolowane wydalenie",
+          "scriptData": [
+            {
+              "id": "mKRY39qSsPgogaTn",
+              "name": "Niekontrolowane wydalenie",
+              "script": "[Script.BD7bVTU2pVoRSRBe]"
+            }
+          ]
+        }
+      },
+      "duration": "Bonus SW Rund",
+      "target": "1",
+      "range": "Siła Woli metrów"
+    },
+    "Vanhel's Invitation to the Dance Macabre": {
+      "id": "hIbuMlDQ9EsFHyG9",
+      "name": "Zaproszeniem Vanhela do Danse Macabre",
+      "description": "<p>Zaklęcie to, obecne jedynie na kartach straszliwej „Liber Mortis”, jest jednym z największych i najbardziej przerażających osiągnięć nekromanty Vanhela. Ogniskujesz pulsujący miazmat Dhar, gromadząc jego ogromną ilość przed wypuszczeniem plugawej magii na całą okolicę. Magia opanowuje wszystkie pobliskie świeże zwłoki, które nie zostały odpowiednio przygotowane i poświęcone do pochówku. Wszystkie zwłoki na obszarze równym twojemu Bonusowi z Siły Woli pomnożonemu przez 100 metrów powstają jako zombi lub szkielety, według twojego uznania. Jeśli chcesz, możesz zdecydować, że zaklęcie będzie oddziaływać na mniejszy obszar. Za każde 100 metrów zasięgu, zaokrąglone w górę, otrzymujesz jeden Punkt Zepsucia.</p>\n<p>Wskrzeszeni nieumarli są całkowicie pod twoją kontrolą i mogą wykonywać proste rozkazy, które im wydasz. Jeśli zostaniesz zabity lub otrzymasz Stan @Condition[Utrata Przytomności], zaklęcie się kończy i wskrzeszeni nieumarli padają.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.items.hIbuMlDQ9EsFHyG9",
+      "duration": "Do świtu",
+      "target": "liczba metrów równa Bonusowi z Siły Woli pomnożonemu przez 100",
+      "range": "Ty"
+    },
+    "The Jackal Urn": {
+      "id": "NFkDJd4wh8Tp7NLS",
+      "name": "Urna Szakala",
+      "description": "<p>Urna z Nehekhary konserwuje organy dzięki nasycaniu ich mroczną energią. Może działać jako potężny składnik do zaklęć czerpiących z różnych Tradycji Czarnoksięskich. Dodatkowo, jeśli @UUID[Compendium.wfrp4e-ua2.actors.HWnfxg0fYjkzU55F]{Leidtragende} odzyska urnę, może wyciągnąć ze środka serce i zmiażdżyć je podczas rzucania zaklęcia z Tradycji Nekromancji. Pozwala mu to natychmiast pomyślnie rzucić zaklęcie z +4 PS.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.items.NFkDJd4wh8Tp7NLS"
+    },
+    "The Nameless Blade": {
+      "id": "SWPdhKjMZdGp9Umy",
+      "name": "Bezimienne Ostrze",
+      "description": " ",
+      "gmdescription": "<p>Każdy, kto podniesie sztylet, odczuje niepokój. Rękojeść wydaje się dziwnie śliska, prawie jakby była mokra od krwi. Broń została poświęcona Khaine’owi i jest głodna. Traktuj ją jak sztylet, ale z Zaletą <em>Nadziewający </em>. Jeśli jednak dzierży ją ktoś, kto w ciągu ostatniego miesiąca nie zabił nikogo w imieniu Khaine’a, potraktuj ją jakby miała <em>Wadę Niebezpieczny </em>.Broń traktowana jest jako <em>Magiczna </em>.</p>",
+      "sourceId": "Compendium.wfrp4e-ua2.items.SWPdhKjMZdGp9Umy",
+      "effects": {
+        "U8eUeecYDRehnC8L": {
+          "id": "U8eUeecYDRehnC8L",
+          "name": "Niebezpieczna",
+          "scriptData": [
+            {
+              "id": "U8eUeecYDRehnC8L",
+              "name": "Dodaj Niebezpieczny",
+              "script": "[Script.jbZPLb4wuqJpHLUx]"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

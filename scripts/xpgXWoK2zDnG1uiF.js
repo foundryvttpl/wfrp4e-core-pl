@@ -1,4 +1,4 @@
-    let stunned = args.actor.hasCondition("stunned")
+let stunned = args.actor.hasCondition("stunned")
     if (stunned)
     {
         stunned.system.scriptData = stunned.system.scriptData.filter(s => s.trigger != "dialog")
@@ -69,4 +69,3 @@
         prone.system.scriptData = prone.system.scriptData.filter(s => s.trigger != "dialog")
         prone.system._scripts = null;
     }
-

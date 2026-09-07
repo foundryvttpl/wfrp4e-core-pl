@@ -32,3 +32,17 @@
   width: max-content;
   max-width: 270px;
 }
+
+/* Keep the three localized Corruption choices on one line in narrow chat cards. */
+.chat-log .message .chat-buttons.corruption-strength-buttons {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 0.9fr);
+  gap: 0.25rem;
+}
+
+.chat-log .message .corruption-strength-buttons .chat-button {
+  min-width: 0;
+  padding-inline: 0.25rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}

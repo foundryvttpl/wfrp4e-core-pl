@@ -10,10 +10,10 @@ let characteristics = {
     "wp" : 10,
     "fel" : 10
 }
-let skills = [game.i18n.localize("NAME.Intimidate"), game.i18n.localize("NAME.Leadership"), game.i18n.localize("NAME.Perception")]
+let skills = ["Intimidate", "Leadership", "Perception"]
 let skillAdvancements = [10, 10, 10]
-let talents = ["Zmysł Bitewny", "Musztra", "Groźny", "Krzepki"]
-let trappings = ["Broń ręczna", "Kolczuga", "Nogawice kolcze"]
+let talents = ["Combat Aware", "Drilled", "Menacing", "Robust"]
+let trappings = ["Hand Weapon", "Mail Coat", "Mail Chausses"]
 let specialItems = [ 
 ]    
 let items = [];

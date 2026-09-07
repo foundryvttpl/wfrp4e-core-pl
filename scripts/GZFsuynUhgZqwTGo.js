@@ -7,4 +7,3 @@ if (args.totalWoundLoss >= 1)
         args.actor.addCondition("poisoned");
     }
 }
-    
