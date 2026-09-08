@@ -1173,7 +1173,7 @@
     "Glorious Corruption": {
       "id": "VSE9hlaLztX5HzI9",
       "name": "Pragnienie spaczenia",
-      "description": "<p><span class=\"fontstyle0\">Gain a </span><span class=\"fontstyle2\">@Condition[Fatigued] </span><span class=\"fontstyle0\">Condition for every week you go without gaining a Corruption Point, or where you are not responsible for another Character gaining a Corruption Point; lose all Fatigued Conditions if either situation occurs</span></p>",
+      "description": "<p><span class=\"fontstyle0\">Otrzymujesz Stan </span><span class=\"fontstyle2\">@Condition[Fatigued]{Zmęczenie}</span><span class=\"fontstyle0\"> za każdy tydzień, kiedy nie otrzymasz Punktu Zepsucia lub nie będziesz odpowiedzialny za otrzymanie Punktu Zepsucia u innego Bohatera. Tracisz wszystkie Stany Zmęczenie, gdy dojdzie do którejś z powyższych sytuacji.</span></p>",
       "sourceId": "Compendium.wfrp4e-eis.items.VSE9hlaLztX5HzI9",
       "modifier": " "
     },
@@ -1270,7 +1270,7 @@
     "Hounds of Despair": {
       "id": "rSH0QjyeYQ3A6ms9",
       "name": "Czarna rozpacz",
-      "description": " Gdy nie zdasz Testu opartego na Sile Woli, Otrzymujesz objawy @Symptom[Apatii] Symptom na [[/r 1d10]] godzin</p>",
+      "description": "<p>Gdy nie zdasz Testu opartego na Sile Woli, otrzymujesz na [[/r 1d10]] godzin Objaw @Symptom[Apatia].</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.rSH0QjyeYQ3A6ms9",
       "effects": {
         "ecbpm6T0nhWbSJpg": {
@@ -1575,7 +1575,7 @@
         "fFiiAloLIhZ1jjEk": {
           "id": "fFiiAloLIhZ1jjEk",
           "name": "Szpiczastogłowy",
-          "description": "<blockquote class=\"foundry-note\"><p>This effect will remove all Head AP coming from Armour items.</p></blockquote>",
+          "description": "<blockquote class=\"foundry-note\"><p>Ten efekt usuwa wszystkie Punkty Pancerza głowy pochodzące z elementów pancerza.</p></blockquote>",
           "scriptData": [
             {
               "id": "fFiiAloLIhZ1jjEk",
@@ -1595,7 +1595,7 @@
     "Rat Head": {
       "id": "24ffgX9chl463jsM",
       "name": "Głowa Szczura",
-      "description": "<p> Otrzymujesz Cechę  @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie} +4 and @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Zaraza}; ta mutacja nie może zostać ukryta</p>",
+      "description": "<p> Otrzymujesz Cechę  @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Ugryzienie}+4 i @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Zaraza}; ta mutacja nie może zostać ukryta</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.24ffgX9chl463jsM",
       "effects": {
         "88JuLRWkZ2PKDFDQ": {
@@ -1753,7 +1753,7 @@
     "Soul Sickness": {
       "id": "outL99LlRQa3aSbe",
       "name": "Choroba duszy",
-      "description": "<p> Gdy nie zdasz Testu opartego na Sile Woli, otrzymujesz Objawy @Symptom[Konwulsji] Symptom for [[/r 1d10]] godzin</p>",
+      "description": "<p>Gdy nie zdasz Testu opartego na Sile Woli, otrzymujesz na [[/r 1d10]] godzin Objaw @Symptom[Konwulsje].</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.outL99LlRQa3aSbe",
       "effects": {
         "SseY2LhecHsExQka": {
@@ -2647,7 +2647,7 @@
     "Transformation of Tzeentch": {
       "id": "xFN6ucGC0moflQAb",
       "name": "Transformacja Tzeentcha",
-      "description": "<p>Na Twój rozkaz z ziemi wyrastają więzy eterycznego ognia, po czym chwytają wybrany przez Ciebie cel w kokon magicznej energii. Ofiara otrzymuje Stan Powalenie i jest uznana za bezbronną na czas działania zaklęcia. Gdy czas działania Transformacji Tzeentcha się skończy, cel musi wykonać <strong>Test Przeciwstawny Odporność/Język (Magiczny)</strong>. Jeżeli mu się nie powiedzie, otrzymuje 1 Punkt Zepsucia +1 za każdy PS, o który przegrał.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>Na Twój rozkaz z ziemi wyrastają więzy eterycznego ognia, po czym chwytają wybrany przez Ciebie cel w kokon magicznej energii. Ofiara otrzymuje Stan @Condition[Powalenie]{Powalenie} i jest uznana za bezbronną na czas działania zaklęcia. Gdy czas działania Transformacji Tzeentcha się skończy, cel musi wykonać <strong>Test Przeciwstawny Odporność/Język (Magiczny)</strong>. Jeżeli mu się nie powiedzie, otrzymuje 1 Punkt Zepsucia +1 za każdy PS, o który przegrał.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.xFN6ucGC0moflQAb",
       "duration": "Bonus SW metrów",
       "target": "1",

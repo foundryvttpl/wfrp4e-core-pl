@@ -73,6 +73,7 @@
     "Sigmar": "Sigmar",
     "Taal": "Taal",
     "Ulric": "Ulryk",
+    "Uliric": "Ulryk",
     "Verena": "Verena",
     "Psychologies": "Czynniki Psychologiczne",
     "Skills": "Umiejętności",
@@ -11547,7 +11548,7 @@
     "Twisted Knee": {
       "id": "wnYgHZm503oOERSf",
       "name": "Nadwyrężone kolano",
-      "description": "<p>Z powodu niezdarnego kroku kolano nie wytrzymuje. Wszystkie Testy Zwinności otrzymują karę -20 na [[/r 1d10]]{1k10} round.</p>",
+      "description": "<p>Z powodu niezdarnego kroku kolano nie wytrzymuje. Wszystkie Testy Zwinności otrzymują karę -20 na [[/r 1d10]]{1k10} Rund.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.wnYgHZm503oOERSf",
       "effects": {
         "98Ggkkm22IOSZdCE": {
@@ -23496,6 +23497,10 @@
       "description": "<p>Składnikiem do tego zaklęcia jest jakiś przedmiot, który wcześniej był w posiadaniu celu: albo coś osobistego, albo pukiel włosów. Przez czas trwania zaklęcia cel prześladuje pech. Przykładowo pękają troki i łańcuchy oraz dzieje się wiele innych nieprzyjemnych, ale drobnych efektów narracyjnych. Cel otrzymuje karę -10 do wszystkich Testów (co sumuje się ze wszystkimi innymi modyfikatorami), a ponadto nie może używać Punktów Szczęścia.</p>\n\n<p>Zaklęcia z Tradycji Czarownictwa korzystają z dowolnego dostępnego Wiatru Magii, nie zważając na niebezpieczeństwa płynące z mieszania Wiatrów. Za każdym razem, gdy postać korzystająca z Czarownictwa wywołuje Manifestację, otrzymuje też 1 Punkt Zepsucia. Każde zaklęcie tej Tradycji może zadać dodatkowo każdemu celowi 1 poziom Stanu @Condition[Krwawienie]. Poza tym Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią. Na szczęście składniki Tradycji Czarownictwa są tanie i powszechnie dostępne. Zazwyczaj są to części ciał małych zwierząt. Składniki zaklęć kosztują tyle brązowych pensów (a nie srebrnych szylingów), ile wynosi PZ. Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników, jak opisano w ramce Zdobywanie Pożywienia i Ziół na stronie 129.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.sq47SZ1v9Pofa4L1",
       "effects": {
+        "gNLrxf0HKogk6Gqi": {
+          "id": "gNLrxf0HKogk6Gqi",
+          "name": "Ograniczenie Punktów Szczęścia"
+        },
         "zFqJGepPilWiSBCm": {
           "id": "zFqJGepPilWiSBCm",
           "name": "Klątwa pecha",
@@ -27055,6 +27060,7 @@
       "name": "Zionięcie",
       "description": "<p>Stworzenie posługuje się zionięciem jako potężną bronią. W swojej Turze, kosztem 2 Przewag, może aktywować <i>Zionięcie</i> jako Darmowy Atak. Wybierz 1 cel, który stworzenie widzi w promieniu 20 + Bonus z Wytrzymałości metrów. Trafione zostają wszystkie postacie wokół tego celu w promieniu tylu metrów, ile wynosi Bonus z Siły, podobnie jak wszystkie postacie znajdujące się między stworzeniem a celem. Przeprowadź <b>Test Przeciwstawny Umiejętności Strzeleckie/Unik</b> przeciwko wszystkim objętym efektem celom (jeden rzut stwora przeciwko wszystkim poszczególnym celom). Każdy cel, który przegrał Test, otrzymuje trafienie zadające wskazaną wartość Obrażeń. Co więcej, jeśli przy Cesze Stworzenia wymieniony jest jeden z opisanych niżej typów zionięcia, zastosuj wskazane zasady.</p><ul><li><p><strong>Dym</strong>: Obszar wypełnia się dymem, który zasłania pole widzenia na tyle Rund, ile wynosi Bonus z Wytrzymałości.</p></li><li><p><strong>Elektryczność</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Oszołomienie].</p></li><li><p><strong>Kwas</strong>: Noszony przez objęte efektem postaci pancerze oraz wszelka broń dostają 1 punkt Uszkodzeń.</p></li><li><p><strong>Ogień</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Podpalenie].</p></li><li><p><strong>Trucizna</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Zatrucie].</p></li><li><p><strong>Zimno</strong>: Cele dostają jeden Stan @Condition[Oszołomienie]{Oszołomiony} za każde pełne 5 odniesionych Ran (minimalnie 1).</p></li></ul><p>Stworzenie jest odporne na własne <i>Zionięcie</i>. Ten atak jest <i>Magiczny</i>.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.uqGxFOEqeurwkAO3",
+      "specification": "# (Typ)",
       "effects": {
         "oRrbVX38SceyNSNF": {
           "id": "oRrbVX38SceyNSNF",
@@ -27233,7 +27239,7 @@
       "name": "Spaczenie",
       "description": "<p>Stworzenie jest napiętnowane przez Chaos lub przepełnione mroczną magią. Siła spaczenia podana jest w nawiasie (@Corruption[minor]{Pomniejsze}, @Corruption[moderate]{Umiarkowane}, albo @Corruption[major]{Potężne}).</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.xsGbDFqK2qh7lsIj",
-      "specification": "",
+      "specification": "Siła Spaczenia",
       "effects": {
         "rNq9moHHK0N4dC3S": {
           "id": "rNq9moHHK0N4dC3S",
@@ -27270,6 +27276,7 @@
       "name": "Demoniczny",
       "description": "<p>Esencję stworzenia stanowi surowa magia, a w tym, co uchodzi za jej żyły, płynie paskudna posoka. Demoniczne stwory nie muszą zaspokajać normalnych potrzeb życiowych. Nie potrzebują jedzenia, wody ani powietrza.</p><p>Wszystkie ataki stworzenia są <i>Magiczne</i>. Kiedy stworzenie zostanie trafione, rzuć [[/r 1d10]]{1k10}. Jeśli wyrzuci tyle, ile wynosi próg, lub więcej, cios zostaje zignorowany, nawet jeśli jest to Trafienie Krytyczne. Za to jeśli Żywotność stworzenia zostanie zredukowana do 0, jego dusza natychmiast powraca do Królestw Chaosu. Stworzenie zostaje usunięte z rozgrywki.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.v3uzEthcq0JRar0J",
+      "specification": "Cel #",
       "effects": {
         "lCW7MgvHneroE3ox": {
           "id": "lCW7MgvHneroE3ox",
@@ -27790,7 +27797,7 @@
       "name": "Rozmiar",
       "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.3ZynTGhFpgwv6l1n.JournalEntryPage.JY7F6lwqt2YGPddY]{Rozmiar}</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q",
-      "specification": "",
+      "specification": "Rozmiar",
       "effects": {
         "JMSrxnNcqyguP1pz": {
           "id": "JMSrxnNcqyguP1pz",
@@ -27816,7 +27823,7 @@
       "name": "Rzucanie Czarów",
       "description": "<p>Stworzenie potrafi rzucać wszystkie zaklęcia Tradycji Magii podanej w nawiasie.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.vY0CHKsJRV3gYBj3",
-      "specification": "",
+      "specification": "Tradycja",
       "effects": {
         "jpwranqt1iGvh9CR": {
           "id": "jpwranqt1iGvh9CR",
@@ -27982,7 +27989,7 @@
           ]
         }
       },
-      "specification": ""
+      "specification": "Wartość"
     },
     "Tongue Attack (Range)": {
       "id": "xg6z63j6BH5AaqLL",
@@ -28007,7 +28014,7 @@
           ]
         }
       },
-      "specification": ""
+      "specification": "Wartość"
     },
     "Tough": {
       "id": "k9539MBTFplxsysT",
@@ -28194,7 +28201,7 @@
       "name": "Ochrona",
       "description": "<p>Stworzenie jest magiczne, nosi specjalny talizman albo ma szczęście – niektóre ciosy po prostu go nie trafiają. Rzuć [[/r 1d10]]{1k10} po każdym otrzymanym ciosie. Jeśli stworzenie wyrzuci tyle, ile wynosi podana wartość, lub więcej, cios zostaje zignorowany, nawet jeśli jest to Trafienie Krytyczne.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh",
-      "specification": "",
+      "specification": "Wartość",
       "effects": {
         "tIImpgQfm7FirmhR": {
           "id": "tIImpgQfm7FirmhR",
@@ -28245,7 +28252,7 @@
       "name": "Macki",
       "description": "<p>Stworzenie ma macki w liczbie podanej w wartości cechy.</p>\n            <ul>\n            <li>Dostaje jeden Darmowy Atak na mackę.</li>\n            <li>Atak każdej macki zadaje tyle Obrażeń, ile wynosi podana wartość – zawiera już ona Bonus z Siły stworzenia.</li>\n            <li>Jeśli atak zada Obrażenia, może ponadto dać przeciwnikowi Stan Pochwycenie, co zapoczątkowuje Chwyt celu przez daną mackę.\n            <ul>\n            <li>Jeśli macka wykonuje Chwyt, aby rozstrzygnąć jego wynik, użyj Darmowego Ataku macki zamiast wykorzystywania Akcji stwora </li>\n            </ul>\n            </li>\n            </ul>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.4xF7M6ylIiGntekh",
-      "specification": "",
+      "specification": "Wartość",
       "effects": {
         "cix7lwIY68fS1N30": {
           "id": "cix7lwIY68fS1N30",

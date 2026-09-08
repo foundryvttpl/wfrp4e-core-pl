@@ -3,6 +3,7 @@
   "mapping": {
     "gmdescription": "system.gmdescription.value",
     "species": "system.details.species.value",
+    "status": "system.details.status.value",
     "gender": "system.details.gender.value",
     "gmnotes": "system.details.gmnotes.value",
     "effects": {
@@ -66,6 +67,7 @@
       }
     },
     "Allrella": {
+      "status": "Srebro 1",
       "id": "0Lk2REtzh9XVM8nB",
       "name": "Allrella",
       "description": " ",
@@ -122,6 +124,7 @@
       }
     },
     "Andrea Pfeffer": {
+      "status": "Złoto 1",
       "id": "L0oHLYZcGQHDWKMo",
       "name": "Andrea Pfeffer",
       "description": " ",
@@ -195,6 +198,7 @@
       }
     },
     "Bart Fehrwalder": {
+      "status": "Brąz 3",
       "id": "meBFhv03FOIxxEuv",
       "name": "Bart Fehrwalder",
       "description": " ",
@@ -376,6 +380,7 @@
       }
     },
     "Boatman": {
+      "status": "Srebro 2",
       "id": "w0lTr0FORohrZjlg",
       "name": "Przewoźnik",
       "description": " ",
@@ -434,7 +439,7 @@
     "Bodyguards and Men-At-Arms": {
       "id": "15Gl7uqdvONEUNAJ",
       "name": "Ochroniarze i Zbrojni",
-      "description": "<section id=\"secret-0Y14dFJbDJCBQwkY\" class=\"secret\"><p><strong>Status</strong>: Srebro 3</p>\n<p>The @UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{Grafini}  ma całe zastępy służby, pokojówek, zbrojnych i ochroniarzy. Wszyscy oni noszą liberię w kolorach żółtym i jasnofioletowym (magenta). W skład świty wchodzą Hans Erpresser, sługa ze skłonnością do szantażu, oraz – od niedawna – @UUID[Compendium.wfrp4e-rnhd.actors.eOlJad1Pky9vNevM]{Eliza}. Ta ostatnia nie jest tym, kim się wydaje.</p></section>",
+      "description": "<section id=\"secret-0Y14dFJbDJCBQwkY\" class=\"secret\"><p><strong>Status</strong>: Srebro 3</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{Grafini}  ma całe zastępy służby, pokojówek, zbrojnych i ochroniarzy. Wszyscy oni noszą liberię w kolorach żółtym i jasnofioletowym (magenta). W skład świty wchodzą Hans Erpresser, sługa ze skłonnością do szantażu, oraz – od niedawna – @UUID[Compendium.wfrp4e-rnhd.actors.eOlJad1Pky9vNevM]{Eliza}. Ta ostatnia nie jest tym, kim się wydaje.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.15Gl7uqdvONEUNAJ",
       "species": "Człowiek",
       "gender": "Różne",
@@ -473,6 +478,7 @@
       }
     },
     "Borgun Foambeard": {
+      "status": "Złoto 1",
       "id": "zKJF414fbWr3cYoy",
       "name": "Borgun Pianobrody",
       "description": " ",
@@ -754,6 +760,7 @@
       }
     },
     "Brecht Kavenner": {
+      "status": "Złoto 3",
       "id": "uwfulXjcWaTfVXf8",
       "name": "Brecht Kavenner",
       "description": " ",
@@ -921,6 +928,7 @@
       }
     },
     "Brocks": {
+      "status": "Srebro 3",
       "id": "VryDSEGZkxNgFKXZ",
       "name": "Broki",
       "description": " ",
@@ -967,6 +975,7 @@
       }
     },
     "Bruno Franke": {
+      "status": "Złoto 3",
       "id": "jCSHbThjx9ti6rR1",
       "name": "Bruno Franke",
       "description": " ",
@@ -1029,7 +1038,7 @@
     "Cannon and Mortar Students": {
       "id": "sJv11oVxAILGAgJe",
       "name": "Żacy z fakultetów Dział i Moździerzy",
-      "description": "<section id=\"secret-kYjLBt5BHBmjhLC6\" class=\"secret\"><p><strong>Status: </strong>Brass 4</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-2-–-a-student-prank]{Wątek 2 – Żakowskie krotochwile}</p></section>",
+      "description": "<section id=\"secret-kYjLBt5BHBmjhLC6\" class=\"secret\"><p><strong>Status: </strong>Brąz 4</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-2-–-a-student-prank]{Wątek 2 – Żakowskie krotochwile}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.sJv11oVxAILGAgJe",
       "species": "Człowiek",
       "gender": "Różne",
@@ -1100,6 +1109,7 @@
       }
     },
     "Celestine Hoch": {
+      "status": "Złoto 1",
       "id": "FIhbtcpVLsYR6wuP",
       "name": "Celestyna Hoch",
       "description": " ",
@@ -1566,6 +1576,7 @@
       }
     },
     "Clothilde Telland": {
+      "status": "Złoto 4",
       "id": "EV48uP56ar5oc1sE",
       "name": "Klotylda von Telland",
       "description": " ",
@@ -1612,6 +1623,7 @@
       }
     },
     "Coachman": {
+      "status": "Srebro 2",
       "id": "GckXBXqFfX3niw51",
       "name": "Woźnica",
       "description": " ",
@@ -1726,7 +1738,7 @@
     "Cultist of the Jade Sceptre": {
       "id": "epgCvpdVO0OBxdNo",
       "name": "Członkowie Kultu Nefrytowego Berła",
-      "description": "<section id=\"secret-oimVbag1l2hbo3z4\" class=\"secret\"><p><strong>Status: </strong>Gold 2</p><p>These foolish, young nobles are lost to the pursuit of endless indulgence in forbidden pleasures, and seek nothing more than to slake their dark thirst on the wine-dark blood of their peers. This isn’t the first time they’ve summoned @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{Daemonettes}. And, should they get their way, it will not be the last.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-5-–-unspeakable-acts]{Plot 5 – Unspeakable Acts}</p></section>",
+      "description": "<section id=\"secret-oimVbag1l2hbo3z4\" class=\"secret\"><p><strong>Status: </strong>Złoto 2</p><p>Ci nierozumni młodzi szlachcice zatracili się w pogoni za zakazanymi przyjemnościami i pragną jedynie zaspokoić swój mroczny głód ciemną niczym wino krwią rówieśników. Nie po raz pierwszy przyzwali @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{Demonetki}. I jeśli postawią na swoim, nie będzie to ostatni raz.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-5-–-unspeakable-acts]{Wątek 5 – Niewypowiedziane czyny}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.epgCvpdVO0OBxdNo",
       "species": "Człowiek",
       "gender": "Różne",
@@ -1734,7 +1746,7 @@
         "20WDbyimAPRS9z0w": {
           "id": "20WDbyimAPRS9z0w",
           "name": "Przywołanie pomniejszego demona",
-          "description": "<p>You channel a sickening ﬂow of <em>Dhar</em>, brieﬂy forcing a rent into the fabric of reality. A Lesser Daemon immediately manifests through the rent. Perform an <strong>Opposed Channel (Dhar)/Willpower</strong> Test with the Daemon. If successful, the Daemon will respond to one command issued by you, quite literally, then vanish (assuming the command is completed before the Duration ends). If failed, the Daemon immediately attacks.</p>\n<p>&nbsp;</p>\n<p>The Cultists can only cast Manifest Lesser Daemon when they are gathered together. Each Cultist cast its once, summoning a @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{Daemonette} when they do so.</p>",
+          "description": "<p>Kierujesz obrzydliwy strumień <em>Dhar</em>, na krótko rozdzierając tkaninę rzeczywistości. Przez szczelinę natychmiast przedostaje się Pomniejszy Demon. Wykonaj z Demonem <strong>Przeciwstawny Test Splatania (Dhar)/Siły Woli</strong>. Jeśli zwyciężysz, Demon dosłownie wykona jedno wydane przez ciebie polecenie, po czym zniknie (o ile zdoła je wypełnić przed końcem Czasu Działania). Jeśli przegrasz, Demon natychmiast zaatakuje.</p>\n<p>&nbsp;</p>\n<p>Kultyści mogą rzucić Przyzwanie Pomniejszego Demona tylko wtedy, gdy są zgromadzeni razem. Każdy Kultysta może rzucić to zaklęcie raz, przyzywając @UUID[Compendium.wfrp4e-core.actors.8gG2Wim6wAlJWRax]{Demonetkę}.</p>",
           "originalName": "Przywołanie pomniejszego demona",
           "sourceId": " ",
           "duration": "Bonus SW Rund",
@@ -1782,6 +1794,7 @@
       }
     },
     "Detlef Sierck": {
+      "status": "Złoto 3",
       "id": "HVtHpEXhGGMOmGzy",
       "name": "Detlef Sierck",
       "description": " ",
@@ -2205,13 +2218,14 @@
       }
     },
     "Dominique Herveaux": {
+      "status": "Złoto 1",
       "id": "eOlJad1Pky9vNevM",
       "name": "Dominique Herveaux",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.eOlJad1Pky9vNevM",
       "species": "Człowiek",
       "gender": "Kobieta",
-      "gmnotes": "<p>&lsquo;Eliza the servant&rsquo; is actually an assassin hired by @UUID[Compendium.wfrp4e-rnhd.actors.hoYxD4qqwxPJai2L]{Baron Eberhardt von Dammenblatz} to kill @UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{Gravin Maria-Ulrike's} @UUID[Compendium.wfrp4e-rnhd.actors.jCSHbThjx9ti6rR1]{judicial champion}. She plays the simpering, buxom maid perfectly, quite willing to put up with any indignity to draw closer to her target.</p>\n<p>If her cover is blown, she will swear in her native Bretonnian, her perfect Reikspiel a memory, before beating a hasty retreat.</p>",
+      "gmnotes": "<p>„Służąca Eliza” jest w rzeczywistości zabójczynią wynajętą przez @UUID[Compendium.wfrp4e-rnhd.actors.hoYxD4qqwxPJai2L]{barona Eberhardta von Dammenblatza}, aby zgładzić @UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{hrabiny Marii-Ulrike} @UUID[Compendium.wfrp4e-rnhd.actors.jCSHbThjx9ti6rR1]{czempiona sądowego}. Doskonale odgrywa przymilną, pełną wdzięków pokojówkę i chętnie zniesie każde upokorzenie, by zbliżyć się do celu.</p>\n<p>Jeśli jej przykrywka zostanie zdemaskowana, zaklnie w ojczystym bretońskim, zupełnie zapominając o perfekcyjnym reikspielu, po czym rzuci się do pospiesznej ucieczki.</p>",
       "items": {
         "gK9cWaLIozAQEh10": {
           "id": "gK9cWaLIozAQEh10",
@@ -2315,6 +2329,7 @@
       }
     },
     "Eberhardt von Dammenblatz": {
+      "status": "Złoto 7",
       "id": "hoYxD4qqwxPJai2L",
       "name": "Eberhardt von Dammenblatz",
       "description": " ",
@@ -2460,6 +2475,7 @@
       }
     },
     "Edvard Lowenhertz": {
+      "status": "Brąz 3",
       "id": "UQ2EKtuW4BmJcbJc",
       "name": "Edvard Lowenhertz",
       "description": " ",
@@ -2552,6 +2568,7 @@
       }
     },
     "Edwina Lowenhertz": {
+      "status": "Brąz 2",
       "id": "743hhaYZkzT80Y92",
       "name": "Edwina Lowenhertz",
       "description": " ",
@@ -2620,6 +2637,7 @@
       }
     },
     "Elphoise": {
+      "status": "Srebro 1",
       "id": "Q5nA8TjPG9UfgBUa",
       "name": "Elfoizy",
       "description": " ",
@@ -2682,7 +2700,7 @@
       "sourceId": "Compendium.wfrp4e-rnhd.actors.hcAF95tFaOdoZoeF",
       "species": "Człowiek",
       "gender": "Kobieta",
-      "gmnotes": "<p>Lady Emmanuelle Nacht is the Imperial Herald, representative of the Emperor in Ubersreik, and currently the true power in the fortress-town. Over 6-foot tall, she is in disguise as a Knight Panther guarding General von Dabernick to better monitor the local politics first hand. She is keen to see if she can find a resolution for the town’s rulership that will gather broad support. </p><p>Nacht is not given any statistics in this adventure as she will not interact with it directly, but may be a part of the continuing adventures after <em>Lord of Ubersreik</em> is concluded, especially if she should spot a capable group of adventurers she could hire…</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-1-–-dirty-politics]{Plot 1 – Dirty Politics}</p><blockquote class=\"foundry-note\"><p>The statistics provided for this actor do not accurately represent the character and should be considered \"blank\"</p></blockquote>",
+      "gmnotes": "<p>Lady Emmanuelle Nacht jest Imperialną Heroldką, przedstawicielką Imperatora w Ubersreiku i obecnie prawdziwą władczynią miasta-twierdzy. Ma ponad sześć stóp wzrostu i w przebraniu Rycerki Pantery strzeże generała von Dabernicka, aby z bliska obserwować miejscową politykę. Chce sprawdzić, czy uda się znaleźć rozwiązanie kwestii władzy nad miastem, które zyska szerokie poparcie.</p><p>Nacht nie otrzymała w tej przygodzie żadnych statystyk, ponieważ nie bierze bezpośredniego udziału w wydarzeniach. Może jednak pojawić się w dalszych przygodach po zakończeniu <em>Władcy Ubersreiku</em>, zwłaszcza jeśli dostrzeże zdolną grupę poszukiwaczy przygód, którą mogłaby zatrudnić…</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-1-–-dirty-politics]{Wątek 1 – Brudna polityka}</p><blockquote class=\"foundry-note\"><p>Statystyki tego aktora nie odzwierciedlają dokładnie postaci i należy je traktować jako „puste”.</p></blockquote>",
       "items": {
         "fdq3RFSOKl5b3WzW": {
           "id": "fdq3RFSOKl5b3WzW",
@@ -2722,6 +2740,7 @@
       }
     },
     "Emmanuelle von Liebwitz": {
+      "status": "Złoto 15",
       "id": "CcqiAghkzgp9u1In",
       "name": "Emmanuelle von Liebwitz",
       "description": " ",
@@ -3203,6 +3222,7 @@
       }
     },
     "Erich von Holzenauer": {
+      "status": "Złoto 2",
       "id": "6SbnET9r1ewR2QCF",
       "name": "Erich von Holzenauer",
       "description": " ",
@@ -3238,6 +3258,7 @@
       }
     },
     "Ernst Maler": {
+      "status": "Złoto 1",
       "id": "nfeuQpvBdcemCuza",
       "name": "Ernst Maler",
       "description": " ",
@@ -3325,6 +3346,7 @@
       }
     },
     "Erwin Blucher": {
+      "status": "Złoto 1",
       "id": "xJGrg8I8NsemrsNR",
       "name": "Erwin Blucher",
       "description": " ",
@@ -3398,6 +3420,7 @@
       }
     },
     "Erwin Pakker": {
+      "status": "Złoto 1",
       "id": "zCqPVYAxGQGClb0t",
       "name": "Erwin Pakker",
       "description": " ",
@@ -3447,13 +3470,14 @@
       }
     },
     "Florian Pfeifraucher": {
+      "status": "Złoto 2",
       "id": "fU0F5kleN1uzTVhW",
       "name": "Florian Pfeifraucher",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.fU0F5kleN1uzTVhW",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>Florian has been sent by his uncle, Graf Bruno Pfiefraucher, to represent his illustrious family. He is instructed to make any alliances that will advance Pfeifraucher interests and those of their friends the von Liebwitzes.&nbsp;</p>\n<p>Unfortunately for Graf Bruno, and anyone associated with the Pfiefrauchers, Florian has no interest in politics, and simply wishes to have as much of a good time as possible, preferably with free-flowing alcohol, good food, and better company. And if he can’t secure that, bad company will do.</p>",
+      "gmnotes": "<p>Florian został wysłany przez swojego wuja, grafa Bruna Pfiefrauchera, aby reprezentować znakomity ród. Polecono mu zawierać sojusze sprzyjające interesom Pfeifraucherów i ich przyjaciół, von Liebwitzów.</p>\n<p>Niestety dla grafa Bruna i wszystkich związanych z Pfeifraucherami Florian zupełnie nie interesuje się polityką. Pragnie jedynie bawić się jak najlepiej, najlepiej przy nieprzerwanym dopływie alkoholu, dobrym jedzeniu i jeszcze lepszym towarzystwie. A jeśli tego ostatniego nie znajdzie, zadowoli się kiepskim.</p>",
       "items": {
         "uz3SLMeClc1T2wu1": {
           "id": "uz3SLMeClc1T2wu1",
@@ -3493,6 +3517,7 @@
       }
     },
     "Freidrich von Pfeifraucher": {
+      "status": "Złoto 5",
       "id": "c1xQoGCb6RoiTpx8",
       "name": "Freidrich von Pfeifraucher",
       "description": " ",
@@ -3553,6 +3578,7 @@
       }
     },
     "Galina Hohengolfrid": {
+      "status": "Złoto 2",
       "id": "n6yKuzWsutGUyBml",
       "name": "Galina Hohengolfrid",
       "description": " ",
@@ -3627,7 +3653,7 @@
     "Gerhard Urteil": {
       "id": "PlOiRB8TXUoaWOPz",
       "name": "Gerhard Urteil",
-      "description": "<section id=\"secret-0aLyNzXtnT54SSlK\" class=\"secret\"><p><strong>Status</strong>: Gold 2</p><p>Magistrate @UUID[Compendium.wfrp4e-rnhd.actors.NC7pIVFvbWv9Hxz5]{Hanna Anwalt} is near blind, relying on Assistant Magistrate Gerhard Urteil to navigate. Urteil is theoretically a powerful man, but in actuality is little more than Anwalt’s eyes, ears, and general dogsbody. </p><p>@UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-5-–-a-few-gold-crowns-more]{Plot 5 – A Few Gold Crowns More}</p></section>",
+      "description": "<section id=\"secret-0aLyNzXtnT54SSlK\" class=\"secret\"><p><strong>Status</strong>: Złoto 2</p><p>Magistrat @UUID[Compendium.wfrp4e-rnhd.actors.NC7pIVFvbWv9Hxz5]{Hanna Anwalt} jest niemal niewidoma i w poruszaniu się polega na swoim zastępcy, Gerhardzie Urteilu. Teoretycznie Urteil jest wpływowym człowiekiem, lecz w praktyce pozostaje niewiele więcej niż oczami, uszami i chłopcem na posyłki Anwalt.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-5-–-a-few-gold-crowns-more]{Wątek 5 – Za kilka złotych koron więcej}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.PlOiRB8TXUoaWOPz",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -3747,6 +3773,7 @@
       }
     },
     "Glimbrin Oddsocks": {
+      "status": "Brąz 5",
       "id": "vuLTDr9TzyBQVyhH",
       "name": "Glimbrin Dziwnostopek",
       "description": " ",
@@ -3838,7 +3865,7 @@
         "5Bm3TKtldUSiTU7b": {
           "id": "5Bm3TKtldUSiTU7b",
           "name": "Nienawiść (Zielonoskórzy)",
-          "description": "<p>You are consumed with Hatred for the Target, which is normally a group of people or creatures, such as &lsquo;Hochlanders&rsquo;, &lsquo;Bog Octopuses&rsquo;, or &lsquo;Slavers&rsquo;. You will never socially interact with someone or something you hate in this manner.</p>\n<p>On encountering the object of your Hatred, you must attempt a Psychology Test.If failed, you are subject to Hatred. At the end of every subsequent Round, you may attempt another Psychology Test to bring the Hatred to an end. If you do or not, the eﬀects of Hatred naturally come to an end when all members of the specified group in your line of sight are dead or gone, or you gain the <em>@Condition[Unconscious]</em> condition.</p>\n<p>While subject to Hatred, you must immediately attempt to destroy the hated group by the fastest and most deadly means possible.</p>\n<ul>\n<li>You gain a bonus of +1 SL on all combat Tests against the specified group.</li>\n<li>You are immune to @UUID[Compendium.wfrp4e-core.items.Ib2YQYChktDFN93y]{Fear} and @UUID[Compendium.wfrp4e-core.items.I0yPc4PH5erWJLmu]{Intimidate} (but not @UUID[Compendium.wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}) caused by your hated foe.</li>\n</ul>",
+          "description": "<p>Postać skrywa w duszy głęboką Nienawiść do „x”, czyli jakiejś grupy ludzi czy stworzeń, np. „mieszkańców Hochlandu”, „ośmiornic bagiennych” czy „handlarzy niewolników”. Postać nigdy nie może nawiązać kontaktów z kimś lub czymś, czego nienawidzi.</p><p>Za każdym razem, gdy spotyka przedstawiciela znienawidzonej grupy, musi wykonać Test Psychologii. Jeśli ten się nie uda, postać nie jest w stanie dłużej powstrzymywać swojej Nienawiści. Pod koniec każdej następnej Rundy postać może wykonać kolejny Test Psychologii, by zakończyć napad Nienawiści. Taki atak sam dobiegnie końca, kiedy wszyscy członkowie znienawidzonej grupy znajdujący się w polu widzenia albo uciekną, albo zginą. Stan <em>@Condition[Utrata Przytomności]</em> przynosi identyczny skutek.</p>\n<p>Postać będąca w szale Nienawiści musi natychmiast podjąć próbę zniszczenia znienawidzonej grupy w najszybszy i najbardziej zabójczy znany jej sposób.</p>\n<ul>\n<li>Otrzymuje premię +1 PS do wszystkich Testów walki przeciwko tej grupie,</li>\n<li>jest niewrażliwa na @UUID[Compendium.wfrp4e-core.items.Ib2YQYChktDFN93y]{Strach} i @UUID[Compendium.wfrp4e-core.items.I0yPc4PH5erWJLmu]{Zastraszanie} (ale nie na @UUID[Compendium.wfrp4e-core.items.meMkLEwdJIDLxM0B]{Grozę}) wywoływane przez znienawidzonego wroga.</li>\n</ul>",
           "originalName": "Nienawiść (Zielonoskórzy)",
           "sourceId": "Compendium.wfrp4e-rnhd.actors.Actor.vuLTDr9TzyBQVyhH.Item.5Bm3TKtldUSiTU7b",
           "effects": {
@@ -3912,6 +3939,7 @@
       }
     },
     "Gunni Mohrdorfer": {
+      "status": "Brąz 3",
       "id": "8xawBmyhzCFVRCSY",
       "name": "Gunni Mohrdorfer",
       "description": " ",
@@ -3979,6 +4007,7 @@
       }
     },
     "Gunther Emming": {
+      "status": "Złoto 1",
       "id": "3iFI20RxtZFfygse",
       "name": "Gunther Emming",
       "description": " ",
@@ -4118,6 +4147,7 @@
       }
     },
     "Gustaf Rechtshandler": {
+      "status": "Złoto 1",
       "id": "hDdur1pQxsvvWzXd",
       "name": "Gustaf Rechtshandler",
       "description": " ",
@@ -4357,7 +4387,7 @@
     "Handmaids and Servants": {
       "id": "1j08h1HYbNWMF3qE",
       "name": "Pokojówki i Służący",
-      "description": "<section id=\"secret-0Y14dFJbDJCBQwkY\" class=\"secret\"><p><strong>Status</strong>: Srebro 3</p>\n<p>The @UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{Grafini}  ma całe zastępy służby, pokojówek, zbrojnych i ochroniarzy. Wszyscy oni noszą liberię w kolorach żółtym i jasnofioletowym (magenta). W skład świty wchodzą Hans Erpresser, sługa ze skłonnością do szantażu, oraz – od niedawna – @UUID[Compendium.wfrp4e-rnhd.actors.eOlJad1Pky9vNevM]{Eliza}. Ta ostatnia nie jest tym, kim się wydaje.</p></section>",
+      "description": "<section id=\"secret-0Y14dFJbDJCBQwkY\" class=\"secret\"><p><strong>Status</strong>: Srebro 3</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.J8AHNs6dcy40mhXr]{Grafini}  ma całe zastępy służby, pokojówek, zbrojnych i ochroniarzy. Wszyscy oni noszą liberię w kolorach żółtym i jasnofioletowym (magenta). W skład świty wchodzą Hans Erpresser, sługa ze skłonnością do szantażu, oraz – od niedawna – @UUID[Compendium.wfrp4e-rnhd.actors.eOlJad1Pky9vNevM]{Eliza}. Ta ostatnia nie jest tym, kim się wydaje.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.1j08h1HYbNWMF3qE",
       "species": "Człowiek",
       "gender": "Różne",
@@ -4402,7 +4432,7 @@
     "Hanna Anwalt": {
       "id": "NC7pIVFvbWv9Hxz5",
       "name": "Hanna Anwalt",
-      "description": "<section id=\"secret-vgK5elaaoApFUvc2\" class=\"secret\"><p><strong>Status</strong>:&nbsp;Gold 2</p>\n<p>Magistrate Hanna Anwalt is near blind, relying on Assistant Magistrate @UUID[Compendium.wfrp4e-rnhd.actors.PlOiRB8TXUoaWOPz]{Gerhard Urteil} to navigate. Urteil is theoretically a powerful man, but in actuality is little more than Anwalt’s eyes, ears, and general dogsbody.&nbsp;</p></section>",
+      "description": "<section id=\"secret-vgK5elaaoApFUvc2\" class=\"secret\"><p><strong>Status</strong>:&nbsp;Złoto 2</p>\n<p>Magistrat Hanna Anwalt jest niemal niewidoma i w poruszaniu się polega na swoim zastępcy, @UUID[Compendium.wfrp4e-rnhd.actors.PlOiRB8TXUoaWOPz]{Gerhardzie Urteilu}. Teoretycznie Urteil jest wpływowym człowiekiem, lecz w praktyce pozostaje niewiele więcej niż oczami, uszami i chłopcem na posyłki Anwalt.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.NC7pIVFvbWv9Hxz5",
       "species": "Człowiek",
       "gender": "Kobieta",
@@ -4466,6 +4496,7 @@
       }
     },
     "Hanna Lastkahn": {
+      "status": "Srebro 2",
       "id": "RVDzvuNLOyMHpboL",
       "name": "Hanna Lastkahn",
       "description": " ",
@@ -4535,7 +4566,7 @@
     "Hannes Richter": {
       "id": "lNFJYc1SY1wPN7on",
       "name": "Hannes Richter",
-      "description": "<section id=\"secret-vioPdwgsv59osL9h\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Gold 2</p>\n<p>Jovial Magistrate Hannes Richter is in his 60s and dyes his hair in a failed attempt to appear younger.</p></section>",
+      "description": "<section id=\"secret-vioPdwgsv59osL9h\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Złoto 2</p>\n<p>Jowialny magistrat Hannes Richter jest po sześćdziesiątce i farbuje włosy, bezskutecznie próbując wyglądać młodziej.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.lNFJYc1SY1wPN7on",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -4666,6 +4697,7 @@
       }
     },
     "Hans Orf": {
+      "status": "Srebro 2",
       "id": "Rbful1SWQ9liRKFk",
       "name": "Hans Orf",
       "description": " ",
@@ -4781,13 +4813,14 @@
       }
     },
     "Heinrich Gutenberg": {
+      "status": "Złoto 1",
       "id": "1D9An40z5DUHcj7M",
       "name": "Heinrich Gutenberg",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.1D9An40z5DUHcj7M",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>A kindly man, with a long, ﬂowing beard, Gutenberg believes knowledge is Verena’s gift, and sees it as his sacred duty to share it with as many people as possible. While this makes him a mine of interesting stories, he can appear somewhat condescending, especially at parties.</p>\n<p>&nbsp;</p>",
+      "gmnotes": "<p>Gutenberg jest dobrodusznym mężczyzną o długiej, bujnej brodzie. Wierzy, że wiedza jest darem Vereny, a dzielenie się nią z jak największą liczbą ludzi uważa za swój święty obowiązek. Dzięki temu zna mnóstwo ciekawych historii, ale bywa protekcjonalny, zwłaszcza podczas przyjęć.</p>\n<p>&nbsp;</p>",
       "items": {
         "5lhAmR4isjovXk4G": {
           "id": "5lhAmR4isjovXk4G",
@@ -4886,6 +4919,7 @@
       }
     },
     "Heinrich von Bruner": {
+      "status": "Złoto 3",
       "id": "b3Y1LZUKkptLu0sc",
       "name": "Heinrich von Bruner",
       "description": " ",
@@ -4938,6 +4972,7 @@
       }
     },
     "Heinrich von Falkenhayn": {
+      "status": "Złoto 2",
       "id": "XBFaq746bDGoUFy1",
       "name": "Heinrich von Falkenhayn",
       "description": " ",
@@ -4992,6 +5027,7 @@
       }
     },
     "Helga": {
+      "status": "Srebro 1",
       "id": "N5yE3yifdjZ77UKU",
       "name": "Helga",
       "description": " ",
@@ -5050,7 +5086,7 @@
     "Hubkind’s Mob": {
       "id": "dwCFN6z53VRNcEf2",
       "name": "Tłuszcza Hubkinda",
-      "description": "<section id=\"secret-XerHasCihJeBuTFp\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Brass 4</p>\n<p>Accomplices, spies, enforcers, and thugs of the ever-vigilant @UUID[Compendium.wfrp4e-rnhd.actors.S6MLSMjvCEjPcaEw]{Matthias Hubkind}</p></section>",
+      "description": "<section id=\"secret-XerHasCihJeBuTFp\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Brąz 4</p>\n<p>Wspólnicy, szpiedzy, egzekutorzy i zbiry zawsze czujnego @UUID[Compendium.wfrp4e-rnhd.actors.S6MLSMjvCEjPcaEw]{Matthiasa Hubkinda}.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.dwCFN6z53VRNcEf2",
       "species": "Człowiek",
       "gender": "Różne",
@@ -5091,19 +5127,20 @@
       }
     },
     "Huydermans": {
+      "status": "Srebro 1",
       "id": "YYkCsVTcW7PlLxLK",
       "name": "Huydermanów",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK",
       "species": "Człowiek",
       "gender": "Kobieta",
-      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valentina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
+      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valantina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
       "items": {
         "kQZNQrG7xuAMcul0": {
           "id": "kQZNQrG7xuAMcul0",
           "name": "Pierścień",
           "description": "<p>Złote pierścienie z wygrawerowanymi pieczęciami noszone są przez szlachtę i reprezentantów cechów, którzy używają ich do odciskania znaków herbowych lub insygniów w wosku, pieczętując listy.</p>",
-          "gmdescription": "<p>Hidden compartment with a dose of @UUID[Compendium.wfrp4e-core.items.JbSjlgUdzsl5ok95]{Sercobój}</p>",
+          "gmdescription": "<p>Ukryta przegródka z dawką @UUID[Compendium.wfrp4e-core.items.JbSjlgUdzsl5ok95]{Sercoboju}</p>",
           "originalName": "Pierścień",
           "sourceId": " "
         },
@@ -5163,7 +5200,7 @@
     "Imperial Viper": {
       "id": "ADKwPPfQu7Kk5d5m",
       "name": "Żmija Imperialna",
-      "description": "<section id=\"secret-ky6MSLGMB9NncYL4\" class=\"secret\"><p>Normally no longer than 3’ in length, the Imperial Viper is one of the more deadly snakes in the Empire. It typically inhabits meadows, fields, and rocky hillsides, and is known for its irritable disposition. It readily strikes when approached, and its venom is potent enough to kill.</p></section>",
+      "description": "<section id=\"secret-ky6MSLGMB9NncYL4\" class=\"secret\"><p>Żmije imperialne zwykle nie mają więcej niż metr długości, ale są jednymi z najbardziej zabójczych węży w Imperium. Najczęściej zamieszkują łąki, pola i kamieniste zbocza, a słyną z drażliwego usposobienia. Chętnie atakują każdego, kto się zbliży, a ich jad jest wystarczająco silny, by zabić.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.ADKwPPfQu7Kk5d5m",
       "species": "Wąz",
       "gender": "???",
@@ -5208,7 +5245,7 @@
     "Inta-Dapesht": {
       "id": "0lA6P0HZlm6gibXV",
       "name": "Inta-Dapesht",
-      "description": "<section id=\"secret-lZGMZUg3ypRorILw\" class=\"secret\"><p>Inta-Dapesht’s soul is tied to the blade he carried in life. So, now his rest is disturbed, he will kill any who stop his sword being returned to its rightful resting place.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-3-–-a-collectors-item]{Plot 3 – A Collector’s Item}</p></section>",
+      "description": "<section id=\"secret-lZGMZUg3ypRorILw\" class=\"secret\"><p>Dusza Inta-Dapeshta jest związana z ostrzem, które nosił za życia. Teraz, gdy zakłócono jego spoczynek, zabije każdego, kto przeszkodzi w zwróceniu miecza na należne mu miejsce.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-3-–-a-collectors-item]{Wątek 3 – Przedmiot kolekcjonerski}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.0lA6P0HZlm6gibXV",
       "species": "Nieumarły",
       "gender": "???",
@@ -5216,7 +5253,7 @@
         "lVeypIVfSbK8ukOq": {
           "id": "lVeypIVfSbK8ukOq",
           "name": "Niestabilny*",
-          "description": "<p>The creature’s corpus is maintained by foul magics that are inherently unstable in the material realm.</p>\n<p>Whenever it ends a round engaged with any opponent with higher Advantage, the creature is driven back, and the magics holding it together weaken. It loses as many Wounds as the diﬀerence between its Advantage, and the highest Advantage engaged with it.</p>\n<p>So, if the creature had 1 Advantage, and its opponent had 3, the creature would lose 2 Wounds. If the creature ever reach 0 Wounds, the magics holding it in place collapse, and it ‘dies’.</p>\n<p>&nbsp;</p>\n<p>If Inta-Dapesht 'dies' from the&nbsp;<em>UnstableTrait, </em>he will reform after 8 hours with full Wounds.</p>",
+          "description": "<p>Ciało stworzenia podtrzymuje plugawa magia, z natury niestabilna w świecie materialnym.</p>\n<p>Ilekroć stworzenie kończy Rundę w zwarciu z przeciwnikiem mającym więcej Punktów Przewagi, zostaje odparte, a spajająca je magia słabnie. Traci tyle Ran, ile wynosi różnica między jego Przewagą a najwyższą Przewagą spośród walczących z nim przeciwników.</p>\n<p>Jeśli więc stworzenie ma 1 Punkt Przewagi, a jego przeciwnik 3, stworzenie traci 2 Rany. Gdy liczba jego Ran spadnie do 0, podtrzymująca je magia rozpada się i stworzenie „umiera”.</p>\n<p>&nbsp;</p>\n<p>Jeśli Inta-Dapesht „umrze” wskutek Cechy <em>Niestabilny</em>, odtworzy się po 8 godzinach z pełną liczbą Ran.</p>",
           "originalName": "Niestabilny*",
           "sourceId": " "
         },
@@ -5377,6 +5414,7 @@
       }
     },
     "Jean-Luc de Cadent": {
+      "status": "Złoto 1",
       "id": "Mh5TVBLgQBv9eN31",
       "name": "Jean-Luc de Cadent",
       "description": " ",
@@ -5456,6 +5494,7 @@
       }
     },
     "Jendrik von Dabernick": {
+      "status": "Złoto 1",
       "id": "gfSfXHgfqW5QiUxu",
       "name": "Jendrik von Dabernick",
       "description": " ",
@@ -5644,6 +5683,7 @@
       }
     },
     "Joachim Bitterfeld": {
+      "status": "Srebro 1",
       "id": "Nnas6TyUYFPQJgDa",
       "name": "Joachim Bitterfeld",
       "description": " ",
@@ -5690,13 +5730,14 @@
       }
     },
     "Josef Aufwiegler": {
+      "status": "Brąz 3",
       "id": "YW7PY6OHt5krs2pj",
       "name": "Josef Aufwiegler",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.YW7PY6OHt5krs2pj",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>Josef Aufwiegler is the ‘body’ the ‘Morrians’ carry in their coffin. Aufwiegler is an agitator wanted for inciting riots in Nuln. Although he paid the smugglers to transport him to safety, he didn’t expect to be drugged. Or put in a coffin. Or be surrounded by skull-faced Morrians when he woke up!</p>\n          <p>When he does awaken, confused and addled by the drugs, Josef panics.</p>",
+      "gmnotes": "<p>Josef Aufwiegler jest „ciałem”, które „moryci” niosą w trumnie. To agitator poszukiwany za podżeganie do zamieszek w Nuln. Zapłacił przemytnikom za przewiezienie go w bezpieczne miejsce, ale nie spodziewał się, że go odurzą. Ani że zamkną go w trumnie. Ani że po przebudzeniu otoczą go moryci o twarzach przypominających czaszki!</p>\n          <p>Gdy wreszcie się budzi, oszołomiony i otępiały od narkotyków Josef wpada w panikę.</p>",
       "items": {
         "jKTbHorITvePbqAj": {
           "id": "jKTbHorITvePbqAj",
@@ -5736,6 +5777,7 @@
       }
     },
     "Josef von Angendorf": {
+      "status": "Złoto 2",
       "id": "vGgW2RxhEwGBETNb",
       "name": "Josef von Angendorf",
       "description": " ",
@@ -5818,7 +5860,7 @@
     "Kappan's Racketeers": {
       "id": "oB8Tevorn5dKg1t0",
       "name": "Rekietierzy Kappana",
-      "description": "<section id=\"secret-LclICWLy8VI5WDNX\" class=\"secret\"><p><strong>Status: </strong>Brass 3</p><p>A group of racketeers in Alfonzo Kappan’s employ are planning an explosive escape for their boss. For all they lack intelligence, they make up for it with enthusiasm and ignorance.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-2-–-breakout]{Plot 2 – Breakout}</p></section>",
+      "description": "<section id=\"secret-LclICWLy8VI5WDNX\" class=\"secret\"><p><strong>Status: </strong>Brąz 3</p><p>Grupa zbirów pracujących dla Alfonza Kappana planuje wybuchową ucieczkę swojego szefa. Braki w inteligencji nadrabiają entuzjazmem i niewiedzą.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-2-–-breakout]{Wątek 2 – Ucieczka}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.oB8Tevorn5dKg1t0",
       "species": "Człowiek",
       "gender": "Różne",
@@ -5870,7 +5912,7 @@
     "Karl-Heinz": {
       "id": "jzdgpUtkaqvY1KWE",
       "name": "Karl-Heinz",
-      "description": "<section id=\"secret-ZtgiaDCQuz9CRsys\" class=\"secret\"><p>There is turmoil building across the Empire (see the <strong>Enemy Within</strong> campaign for more on this), so many of the local nobles, especially the Toppenheimers and Pfiefrauchers, are spoiling for a fight.</p></section>",
+      "description": "<section id=\"secret-ZtgiaDCQuz9CRsys\" class=\"secret\"><p>W całym Imperium narasta zamęt (więcej na ten temat znajdziesz w kampanii <strong>Wewnętrzny Wróg</strong>), dlatego wielu miejscowych szlachciców, zwłaszcza Toppenheimerów i Pfiefraucherów, aż rwie się do walki.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.jzdgpUtkaqvY1KWE",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -5909,13 +5951,14 @@
       }
     },
     "Lorith Silverleaf": {
+      "status": "Srebro 4",
       "id": "7Y64jexu1sYbf4U4",
       "name": "Lorith Srebrny Liść",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.7Y64jexu1sYbf4U4",
       "species": "Wysoki elf",
       "gender": "Kobieta",
-      "gmnotes": "<p><span class=\"fontstyle0\">Lorith Silverleaf is attending the party out of curiosity, regarding the social drama like a scientist observes a new specimen. While she is undoubtedly arrogant and finds the other species illformed, she will discourse if approached, finding humour in the most unexpected matters. She speaks softly and has expressive hands that she uses to stress spoken points.</span> </p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Lorith Silverleaf uczestniczy w przyjęciu z ciekawości i obserwuje społeczne dramaty niczym uczona badająca nowy okaz. Bez wątpienia jest arogancka i uważa inne gatunki za istoty niedoskonałe, ale zagadnięta podejmie rozmowę, znajdując humor w najbardziej nieoczekiwanych sprawach. Mówi cicho, a wypowiadane kwestie podkreśla wyrazistymi gestami.</span> </p>",
       "items": {
         "f6C8OruQI590HP7U": {
           "id": "f6C8OruQI590HP7U",
@@ -5988,6 +6031,7 @@
       }
     },
     "Manfred von Saponatheim": {
+      "status": "Brąz 0",
       "id": "qFIdufBea1CzaGxh",
       "name": "Manfred von Saponatheim",
       "description": " ",
@@ -6107,6 +6151,7 @@
       }
     },
     "Maria-Ulrike von Liebwitz": {
+      "status": "Złoto 7",
       "id": "J8AHNs6dcy40mhXr",
       "name": "Maria Ulryka von Liebwitz",
       "description": " ",
@@ -6341,13 +6386,14 @@
       }
     },
     "Martyn Ruchen": {
+      "status": "Srebro 3",
       "id": "DkRms7jpgeA3cvdy",
       "name": "Martyn Ruchen",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.DkRms7jpgeA3cvdy",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>Martyn Ruchen has a feverish glint in his eye as he rubs his warty hands with glee. A gem holy to Nurgle, the Choas god of Disease and Despair, will soon be in his hands, and he can barely contain his excitement. All he needs to do is capture @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrecht Oldenhaller}!</p>\n<p>Ruchen has led the local cell of the Cult of the Hallowed Larva for three months — he recently watched on, tears of joy in his eyes, as the previous priestess was claimed by the Plague Lord as she died of a multitude of beautiful, blossoming diseases — and he is keen to do at least as well as his predecessor.&nbsp;</p>\n<p>If engaged in conversation, Martyn will mumble apologies in his wheezy voice and quickly retreat to his @UUID[Compendium.wfrp4e-rnhd.actors.QfuTho9iwb2q6MRp]{cultist friends}, all of whom are dressed as grubby merchants. Martyn smells vaguely of rotten, sweaty ham.</p>",
+      "gmnotes": "<p>Martyn Ruchen zaciera pokryte brodawkami dłonie, a w jego oczach lśni gorączkowa radość. Klejnot poświęcony Nurgle’owi, bogu Chaosu władającemu Chorobą i Rozpaczą, wkrótce znajdzie się w jego rękach, a on ledwie potrafi powstrzymać podniecenie. Musi tylko schwytać @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}!</p>\n<p>Ruchen od trzech miesięcy przewodzi miejscowej komórce Kultu Uświęconej Larwy. Niedawno ze łzami radości patrzył, jak poprzednia kapłanka umiera na mnóstwo pięknie rozkwitających chorób i zostaje zabrana przez Władcę Plag. Bardzo chce dorównać poprzedniczce.</p>\n<p>Zagadnięty Martyn mamrocze przeprosiny świszczącym głosem i szybko wycofuje się do swoich @UUID[Compendium.wfrp4e-rnhd.actors.QfuTho9iwb2q6MRp]{towarzyszy kultystów}, przebranych za obszarpanych kupców. Martyn pachnie nieco zgniłą, przepoconą szynką.</p>",
       "items": {
         "QdU9R77X79O84I7c": {
           "id": "QdU9R77X79O84I7c",
@@ -6524,6 +6570,7 @@
       }
     },
     "Matthias Hubkind": {
+      "status": "Srebro 3",
       "id": "S6MLSMjvCEjPcaEw",
       "name": "Matthias Hubkind",
       "description": " ",
@@ -6714,6 +6761,7 @@
       }
     },
     "Maximilian Aschaffenberg": {
+      "status": "Złoto 1",
       "id": "5hOJSHJutrmP9XlP",
       "name": "Maximilian Aschaffenberg",
       "description": " ",
@@ -6763,6 +6811,7 @@
       }
     },
     "Mercinellin 'Seedling' Thorncobble": {
+      "status": "Brąz 1",
       "id": "XDRhpsdxuqgCL3jk",
       "name": "Mercinellina 'Ziarenko' Thorncobble",
       "description": " ",
@@ -6832,7 +6881,7 @@
     "Musician": {
       "id": "bE6yT5XSLXqmMAdC",
       "name": "Muzyk",
-      "description": "<section id=\"secret-jdvdXe9yC7OpKlhp\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Silver 1</p>\n<p>The Staatsoper theatre employs staff of all kinds to service and entertain Nuln’s cultured elite. Use the following samples should statistics for these be needed.</p></section>",
+      "description": "<section id=\"secret-jdvdXe9yC7OpKlhp\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Srebro 1</p>\n<p>Teatr Staatsoper zatrudnia wszelkiego rodzaju pracowników, którzy obsługują i zabawiają kulturalną elitę Nuln. Jeśli potrzebujesz ich statystyk, użyj poniższych przykładów.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.bE6yT5XSLXqmMAdC",
       "species": "Człowiek",
       "gender": "Różne",
@@ -6890,6 +6939,7 @@
       }
     },
     "Nastassia von Saponatheim": {
+      "status": "Złoto 1",
       "id": "rRnBE8V1qUvN44ed",
       "name": "Nastassia von Saponatheim",
       "description": " ",
@@ -6965,7 +7015,7 @@
     "Noble Servant": {
       "id": "OBcm3V42JZnFufEE",
       "name": "Dobrze Urodzeni Przyboczni",
-      "description": "<section id=\"secret-qfcwQiGTyasAOW6r\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Gold 2</p>\n<p>The @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} goes nowhere without her many servants, attendants, and guards. Contrary to popular rumour, they are not all bronzed gods and goddesses, chosen because they amuse the Countess’s taste. However, most are drawn from the the lesser Noble Houses of Nuln as commoners do not normally attend royalty.&nbsp;</p>\n<p>Unlike many of the Elector Counts, the Countess chooses not to surround herself with guards drawn from the Knightly Orders, largely because she claims their incessant clanking aggravates her delicate nerves.</p></section>",
+      "description": "<section id=\"secret-qfcwQiGTyasAOW6r\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Złoto 2</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina} nigdzie nie rusza się bez licznych służących, dworzan i strażników. Wbrew popularnym plotkom nie wszyscy są opalonymi bogami i boginiami wybranymi dla zaspokojenia gustów Hrabiny. Większość pochodzi jednak z pomniejszych rodów szlacheckich Nuln, gdyż mieszczanie zwykle nie usługują władcom.</p>\n<p>W przeciwieństwie do wielu Elektorów Hrabina nie otacza się strażnikami z Zakonów Rycerskich. Twierdzi, że ich nieustanne szczękanie zbroją działa jej na delikatne nerwy.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.OBcm3V42JZnFufEE",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7010,7 +7060,7 @@
     "Nulner Watchman": {
       "id": "Hw0V6QYlIlSBd0lI",
       "name": "Strażnik miejski z Nuln",
-      "description": "<section id=\"secret-4RudtmVM88kGTO5e\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Silver 1</p>\n<p>The Watch and guards of various types are found throughout the theatre, and patrolling outside. The @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} is in attendance, so they are all keen to impress.</p>\n<p>Most of the Watch patrols are led by @UUID[Compendium.wfrp4e-rnhd.actors.nqoyWWVX4oZklgcT]{sergeants}, as their superiors are determined that nothing will go wrong given the @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} herself is under their protection.&nbsp;</p></section>",
+      "description": "<section id=\"secret-4RudtmVM88kGTO5e\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Srebro 1</p>\n<p>Strażników miejskich i innych ochroniarzy można spotkać w całym teatrze oraz na patrolach przed budynkiem. Obecna jest @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina}, więc wszystkim zależy, by dobrze wypaść.</p>\n<p>Większością patroli Straży dowodzą @UUID[Compendium.wfrp4e-rnhd.actors.nqoyWWVX4oZklgcT]{sierżanci}, ponieważ ich przełożeni są zdecydowani nie dopuścić do żadnych kłopotów, skoro pod ich ochroną znajduje się sama @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina}.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.Hw0V6QYlIlSBd0lI",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7075,7 +7125,7 @@
     "Nurgle Cultists": {
       "id": "QfuTho9iwb2q6MRp",
       "name": "Kultyści Nurgla",
-      "description": "<section id=\"secret-cimXGMgUXPEBCp3a\" class=\"secret\"><p>Martyn Ruchen has a feverish glint in his eye as he rubs his warty hands with glee. A gem holy to Nurgle, the Choas god of Disease and Despair, will soon be in his hands, and he can barely contain his excitement. All he needs to do is capture Albrecht Oldenhaller!</p><p>Ruchen has led the local cell of the Cult of the Hallowed Larva for three months — he recently watched on, tears of joy in his eyes, as the previous priestess was claimed by the Plague Lord as she died of a multitude of beautiful, blossoming diseases — and he is keen to do at least as well as his predecessor. </p><p>If engaged in conversation, Martyn will mumble apologies in his wheezy voice and quickly retreat to his cultist friends, all of whom are dressed as grubby merchants. Martyn smells vaguely of rotten, sweaty ham.</p></section>",
+      "description": "<section id=\"secret-cimXGMgUXPEBCp3a\" class=\"secret\"><p>Martyn Ruchen zaciera pokryte brodawkami dłonie, a w jego oczach lśni gorączkowa radość. Klejnot poświęcony Nurgle’owi, bogu Chaosu władającemu Chorobą i Rozpaczą, wkrótce znajdzie się w jego rękach, a on ledwie potrafi powstrzymać podniecenie. Musi tylko schwytać Albrechta Oldenhallera!</p>\n<p>Ruchen od trzech miesięcy przewodzi miejscowej komórce Kultu Uświęconej Larwy. Niedawno ze łzami radości patrzył, jak poprzednia kapłanka umiera na mnóstwo pięknie rozkwitających chorób i zostaje zabrana przez Władcę Plag. Bardzo chce dorównać poprzedniczce.</p>\n<p>Zagadnięty Martyn mamrocze przeprosiny świszczącym głosem i szybko wycofuje się do swoich towarzyszy kultystów, przebranych za obszarpanych kupców. Martyn pachnie nieco zgniłą, przepoconą szynką.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.QfuTho9iwb2q6MRp",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7144,6 +7194,7 @@
       }
     },
     "Ol' Bess": {
+      "status": "Srebro 1",
       "id": "pwoTTFN0FAQ66Vhv",
       "name": "Stara Bess",
       "description": " ",
@@ -7157,7 +7208,7 @@
         "7A2JUuuIn1xxQ1l8": {
           "id": "7A2JUuuIn1xxQ1l8",
           "name": "Uprzedzenie",
-          "description": "<p>You really dislike the Target, which is normally a group of people or creatures such as ‘Ostlanders’, ‘Elves’, or ‘Wizards’. You must attempt a Psychology Test whenever you encounter the group against which you are prejudiced. If you pass, you may frown a lot, but will otherwise act normally, only suffering a penalty of –10 to all Fellowship Tests towards that group.</p><p>Should you fail you are subject to Prejudice. At the end of every subsequent Round, you may attempt another Psychology test to bring the Prejudice to an end. If you do not, the effects of Prejudice naturally come to an end when all members of the specified group in your line of sight are gone, or you gain the <em>@Condition[Stunned]</em> or <em>@Condition[Unconscious]</em> Condition, or you become subject to another Psychology.</p>\n<p>&nbsp;</p>\n<p>When subject to Prejudice, you must immediately insult the target of your prejudice. Loudly.</p>",
+          "description": "<p>Postać naprawdę nie przepada za „x”, czyli za jakąś grupą ludzi czy stworzeń, np. „mieszkańcami Ostlandu”, „elfami” czy „czarodziejami”. Za każdym razem, gdy spotyka przedstawiciela grupy, do której jest uprzedzona, musi wykonać Test Psychologii. Jeśli ten się powiedzie, postać pewnie zmarszczy brwi, ale będzie się zachowywać normalnie, otrzymując jedynie karę -10 do wszystkich Testów Ogłady związanych z tą grupą.</p><p>Jeśli Test się nie uda, postać puszcza wodze Uprzedzeń. Pod koniec każdej następnej Rundy postać może wykonać kolejny Test Psychologii, by przerwać wzbierającą falę Uprzedzeń. Efekt zakończy się, gdy wszyscy członkowie obranej za cel grupy znajdujący się w polu widzenia odejdą albo gdy postać otrzyma Stan <em>@Condition[Oszołomienie]</em> lub <em>@Condition[Utrata Przytomności]</em>, ewentualnie ulegnie innemu Czynnikowi Psychologicznemu.</p>\n<p>&nbsp;</p>\n<p>Uprzedzenie sprawia, że postać musi natychmiast obrazić obiekt swoich uprzedzeń. Głośno. Naprawdę głośno.</p>",
           "originalName": "Uprzedzenie",
           "sourceId": "Compendium.wfrp4e-rnhd.actors.Actor.pwoTTFN0FAQ66Vhv.Item.7A2JUuuIn1xxQ1l8"
         },
@@ -7208,7 +7259,7 @@
     "Operagoer": {
       "id": "lEE5gdtTlYb0olju",
       "name": "Widz",
-      "description": "<section id=\"secret-dMdn5vFrRjH2Ga9s\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Silver 3</p>\n<p>The theatre is choked with operagoers of all types, most of whom are wealthy burghers from Nuln, like Albrecht Oldenhaller. They all rub shoulders with each other as they drink, gossip, try to catch the @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess's}eye, then make their way to their seats.</p>\n<p>Add any appropriate Traits, Skills, or Talents if you feel some unique Characters are required.</p></section>",
+      "description": "<section id=\"secret-dMdn5vFrRjH2Ga9s\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Srebro 3</p>\n<p>Teatr pęka w szwach od najrozmaitszych melomanów, głównie bogatych mieszczan z Nuln, takich jak Albrecht Oldenhaller. Popijając, plotkując i próbując zwrócić na siebie uwagę @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabiny}, tłoczą się obok siebie, a potem zajmują miejsca.</p>\n<p>Jeśli potrzebujesz wyjątkowych Bohaterów Niezależnych, dodaj im odpowiednie Cechy, Umiejętności lub Talenty.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.lEE5gdtTlYb0olju",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7307,6 +7358,7 @@
       }
     },
     "Otto Krupp": {
+      "status": "Złoto 1",
       "id": "aUPlT4HBdnEKjuM1",
       "name": "Otto Krupp",
       "description": " ",
@@ -7376,7 +7428,7 @@
     "Palace Guard": {
       "id": "4re4Z4WqfYLArQ9D",
       "name": "Gwardia Książęca",
-      "description": "<section id=\"secret-jUZ9WTEOQY9yCd3b\" class=\"secret\"><p><strong>Status:</strong> Gold 2</p>\n<p>The @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} goes nowhere without her many servants, attendants, and guards. Contrary to popular rumour, they are not all bronzed gods and goddesses, chosen because they amuse the Countess’s taste. However, most are drawn from the the lesser Noble Houses of Nuln as commoners do not normally attend royalty.&nbsp;</p>\n<p>Unlike many of the Elector Counts, the Countess chooses not to surround herself with guards drawn from the Knightly Orders, largely because she claims their incessant clanking aggravates her delicate nerves.</p></section>",
+      "description": "<section id=\"secret-jUZ9WTEOQY9yCd3b\" class=\"secret\"><p><strong>Status:</strong> Złoto 2</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina} nigdzie nie rusza się bez licznych służących, dworzan i strażników. Wbrew popularnym plotkom nie wszyscy są opalonymi bogami i boginiami wybranymi dla zaspokojenia gustów Hrabiny. Większość pochodzi jednak z pomniejszych rodów szlacheckich Nuln, gdyż mieszczanie zwykle nie usługują władcom.</p>\n<p>W przeciwieństwie do wielu Elektorów Hrabina nie otacza się strażnikami z Zakonów Rycerskich. Twierdzi, że ich nieustanne szczękanie zbroją działa jej na delikatne nerwy.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.4re4Z4WqfYLArQ9D",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7434,7 +7486,7 @@
     "Performer": {
       "id": "kNnU5lZsxkrbWVqR",
       "name": "Aktorzy",
-      "description": "<section id=\"secret-qugtc3NknFdWr1fe\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Silver 1</p>\n<p>The Staatsoper theatre employs staff of all kinds to service and entertain Nuln’s cultured elite. Use the following samples should statistics for these be needed.</p></section>",
+      "description": "<section id=\"secret-qugtc3NknFdWr1fe\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Srebro 1</p>\n<p>Teatr Staatsoper zatrudnia wszelkiego rodzaju pracowników, którzy obsługują i zabawiają kulturalną elitę Nuln. Jeśli potrzebujesz ich statystyk, użyj poniższych przykładów.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.kNnU5lZsxkrbWVqR",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7484,6 +7536,7 @@
       }
     },
     "Petra Steinmetz": {
+      "status": "Złoto 1",
       "id": "J3Lzq79iyQhC2kSQ",
       "name": "Petra Steinmetz",
       "description": " ",
@@ -7525,7 +7578,7 @@
     "Pfeifraucher Noble": {
       "id": "aEmZ8FKFdknDECQb",
       "name": "Młody Szlachcic",
-      "description": "<section id=\"secret-5MJTknqncOiVRaZ7\" class=\"secret\"><p>There is turmoil building across the Empire (see the <strong>Enemy Within</strong> campaign for more on this), so many of the local nobles, especially the Toppenheimers and Pfiefrauchers, are spoiling for a fight.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-5-–-local-rivalries]{Plot 5 – Local Rivalries}</p></section>",
+      "description": "<section id=\"secret-5MJTknqncOiVRaZ7\" class=\"secret\"><p>W całym Imperium narasta zamęt (więcej na ten temat znajdziesz w kampanii <strong>Wewnętrzny Wróg</strong>), dlatego wielu miejscowych szlachciców, zwłaszcza Toppenheimerów i Pfiefraucherów, aż rwie się do walki.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-5-–-local-rivalries]{Wątek 5 – Miejscowa rywalizacja}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.aEmZ8FKFdknDECQb",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7564,6 +7617,7 @@
       }
     },
     "Reiner": {
+      "status": "Srebro 3",
       "id": "NhqEdHAR0CjOqRra",
       "name": "Reiner",
       "description": " ",
@@ -7612,7 +7666,7 @@
     "Restless Ghost": {
       "id": "Bu8cWjtZBR6BpMVF",
       "name": "Niespokojny Duch",
-      "description": "<section id=\"secret-oLGLIlxTuYnbznjS\" class=\"secret\"><p>The enraged Ghost has no recollection of who it was in life. Nor does it know why it screams with hatred for @UUID[Compendium.wfrp4e-rnhd.actors.S6MLSMjvCEjPcaEw]{Matthias Hubkind}. But it does scream, its torment is unbearable, and it will not stop until it has had its revenge.</p>\n<p>The Ghost appears as a billowing cloud of indistinct green and ash white robes topped with a distended skull twisted with hatred and pain. Tarnished bells hang from rusted manacles about its wrists, each of which resound far too deeply given their relatively small size.</p></section>",
+      "description": "<section id=\"secret-oLGLIlxTuYnbznjS\" class=\"secret\"><p>Rozwścieczony Duch nie pamięta, kim był za życia. Nie wie też, dlaczego wykrzykuje pełne nienawiści imię @UUID[Compendium.wfrp4e-rnhd.actors.S6MLSMjvCEjPcaEw]{Matthiasa Hubkinda}. Krzyczy jednak bez ustanku, jego męka jest nie do zniesienia i nie spocznie, dopóki się nie zemści.</p>\n<p>Duch wygląda jak kłębiasta chmura niewyraźnych zielonych i popielatobiałych szat, ponad którymi unosi się wydłużona czaszka wykrzywiona bólem i nienawiścią. Z zardzewiałych kajdan na nadgarstkach zwisają zaśniedziałe dzwonki, których głos jest o wiele głębszy, niż wskazywałyby ich niewielkie rozmiary.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.Bu8cWjtZBR6BpMVF",
       "species": "Nieumarły",
       "gender": "???",
@@ -7674,13 +7728,14 @@
       }
     },
     "Rickard Aschaffenberg": {
+      "status": "Złoto 3",
       "id": "9KRZ40ZvmYXt6gFI",
       "name": "Rickard Aschaffenberg",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.9KRZ40ZvmYXt6gFI",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p><span class=\"fontstyle0\">Baron Rickard Aschaffenberg is an enormous man in his 30s, though his lifetime of war and good eating leave him looking much older. His long dark-ginger beard hides a spreading belly, and a surprising amount of muscle. His voice booms whenever he talks, and it seems he loves to talk. Rickard stands in stark contrast to his much shorter, mischievous nephew, Lord @UUID[Compendium.wfrp4e-rnhd.actors.5hOJSHJutrmP9XlP]{Maximilian Aschaffenberg}. Maximilian has no interest in the political side of the ball, and instead insults and humiliates the Bruners at every opportunity.</span></p><p> @UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-7-–-a-blot-on-the-escutcheon]{Plot 7 – A Blot on the Escutcheon}</p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Baron Rickard Aschaffenberg jest potężnie zbudowanym mężczyzną po trzydziestce, choć lata wojaczki i obfitego jedzenia sprawiają, że wygląda znacznie starzej. Długa, ciemnoruda broda skrywa rosnący brzuch i zaskakująco solidną muskulaturę. Kiedy mówi, jego głos grzmi — a Rickard uwielbia mówić. Stanowi jaskrawe przeciwieństwo znacznie niższego i psotnego siostrzeńca, lorda @UUID[Compendium.wfrp4e-rnhd.actors.5hOJSHJutrmP9XlP]{Maximiliana Aschaffenberga}. Maximilian nie interesuje się polityczną stroną balu; przy każdej okazji obraża i upokarza Brunerów.</span></p><p> @UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-7-–-a-blot-on-the-escutcheon]{Wątek 7 – Plama na herbie}</p>",
       "items": {
         "IYzJjSOB54xjsAip": {
           "id": "IYzJjSOB54xjsAip",
@@ -7747,13 +7802,14 @@
       }
     },
     "Schatzenheimer": {
+      "status": "Srebro 1",
       "id": "0LL9UcyxDQ2Qzx9T",
       "name": "Schatzenheimer",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valentina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
+      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valantina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
       "items": {
         "dQOOke2p02BHq3JC": {
           "specification": "Zdrajcy"
@@ -7811,7 +7867,7 @@
     "Servants, Cleaners, and Similar": {
       "id": "L0m0ZXE3UOGrWW2h",
       "name": "Służący, Sprzątaczki i Podobni Pracownicy",
-      "description": "<section id=\"secret-tduNZ5Ng6tPDFp65\" class=\"secret\"><p><strong>Status</strong>: Brass 3</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.Rbful1SWQ9liRKFk]{Hans Orf}, the landlord of the Three Feathers, has a variety of staff working for him, including barmen, potmen, serving girls, cleaners, ostlers, and Ol’ Bess, the smith.</p></section>",
+      "description": "<section id=\"secret-tduNZ5Ng6tPDFp65\" class=\"secret\"><p><strong>Status</strong>: Brąz 3</p>\n<p>@UUID[Compendium.wfrp4e-rnhd.actors.Rbful1SWQ9liRKFk]{Hans Orf}, właściciel Trzech Piór, zatrudnia rozmaity personel: barmanów, pomocników karczemnych, służące, sprzątaczy, stajennych oraz starą Bess, kowalkę.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.L0m0ZXE3UOGrWW2h",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7864,7 +7920,7 @@
     "Servant": {
       "id": "W2erI6AgKgmufrMk",
       "name": "Służąca",
-      "description": "<section id=\"secret-ZMqSSP5yvHjOIsoD\" class=\"secret\"><p><strong>Status: </strong>Silver 1</p>\n<p>The Staatsoper theatre employs staff of all kinds to service and entertain Nuln’s cultured elite. Use the following samples should statistics for these be needed.</p></section>",
+      "description": "<section id=\"secret-ZMqSSP5yvHjOIsoD\" class=\"secret\"><p><strong>Status: </strong>Srebro 1</p>\n<p>Teatr Staatsoper zatrudnia wszelkiego rodzaju pracowników, którzy obsługują i zabawiają kulturalną elitę Nuln. Jeśli potrzebujesz ich statystyk, użyj poniższych przykładów.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.W2erI6AgKgmufrMk",
       "species": "Człowiek",
       "gender": "Różne",
@@ -7907,13 +7963,14 @@
       }
     },
     "Siegfried von Saponatheim": {
+      "status": "Złoto 2",
       "id": "bhRLPO2mf2oRb4dv",
       "name": "Siegfried von Saponatheim",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.bhRLPO2mf2oRb4dv",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p><span class=\"fontstyle0\">Lord Siegfried von Saponatheim is the young cousin of Graf @UUID[Compendium.wfrp4e-rnhd.actors.KfVnMx7Bn1DWErM6]{Wilhelm von Saponatheim}. He has never held lands of his own, but has a reputation for understanding business. In recent years, the von Saponatheims have become very active politically in an attempt to acquire more lands and wealth. Siegfried is a tall, dark-haired man with a seemingly endless supply of hunting stories. If anyone mentions Bögenhafen, he will dismissively mention that he never goes there.</span></p><p><span class=\"fontstyle0\">If the Saponatheims did not do well from </span><span class=\"fontstyle2\">@UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz]{Nastassia’s Wedding}</span><span class=\"fontstyle0\">, it’s possible @UUID[Compendium.wfrp4e-rnhd.actors.KfVnMx7Bn1DWErM6]{Graf Wilhelm} will attend the Ubersreik party personally to support his cousin’s political manoeuvers. He will, of course, turn a blind eye to Siegfried’s liberal use of emetic powder…</span></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Lord Siegfried von Saponatheim jest młodym kuzynem grafa @UUID[Compendium.wfrp4e-rnhd.actors.KfVnMx7Bn1DWErM6]{Wilhelma von Saponatheima}. Nigdy nie władał własnymi ziemiami, ale uchodzi za człowieka rozumiejącego interesy. W ostatnich latach von Saponatheimowie stali się bardzo aktywni politycznie, próbując zdobyć kolejne ziemie i bogactwa. Siegfried jest wysokim, ciemnowłosym mężczyzną z pozornie niewyczerpanym zapasem opowieści z polowań. Jeśli ktoś wspomni Bögenhafen, z lekceważeniem oznajmi, że nigdy tam nie bywa.</span></p><p><span class=\"fontstyle0\">Jeśli Saponatheimowie nie wyszli dobrze na </span><span class=\"fontstyle2\">@UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz]{Weselu Nastassii}</span><span class=\"fontstyle0\">, możliwe, że @UUID[Compendium.wfrp4e-rnhd.actors.KfVnMx7Bn1DWErM6]{graf Wilhelm} osobiście przybędzie na przyjęcie w Ubersreiku, by wesprzeć polityczne manewry kuzyna. Oczywiście przymknie oko na swobodne korzystanie przez Siegfrieda z proszku wymiotnego…</span></p>",
       "items": {
         "6eR3cHwSSlgDR7es": {
           "id": "6eR3cHwSSlgDR7es",
@@ -7965,7 +8022,7 @@
     "Skaven Gutter Runner": {
       "id": "6VrSyiFMMWP2DF21",
       "name": "Skaveński Rynsztokowiec",
-      "description": "<section id=\"secret-3dXhQcWGMgpnbZyX\" class=\"secret\"><p>Stealthy ratmen creep through the corridors of the mansion.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-6-–-the-stars-are-right]{Plot 6 – The Stars Are Right}</p><p> </p><p> </p></section>",
+      "description": "<section id=\"secret-3dXhQcWGMgpnbZyX\" class=\"secret\"><p>Skradający się szczuroludzie przemykają korytarzami rezydencji.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.xKUxWd7rOHDNdp9h.JournalEntryPage.EObulGGxYS7Poog4#plot-6-–-the-stars-are-right]{Wątek 6 – Gwiazdy są w porządku}</p><p> </p><p> </p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.6VrSyiFMMWP2DF21",
       "species": "Skaven",
       "gender": "Mężczyzna",
@@ -8059,7 +8116,7 @@
     "Stagehand": {
       "id": "ufybUaZUN5yiuNgk",
       "name": "Pracownicy Sceny",
-      "description": "<section id=\"secret-YrhP9zSFKhGj8C8t\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Silver 1</p>\n          <p>The Staatsoper theatre employs staff of all kinds to service and entertain Nuln’s cultured elite. Use the following samples should statistics for these be needed.</p></section>",
+      "description": "<section id=\"secret-YrhP9zSFKhGj8C8t\" class=\"secret\"><p><strong>Status:&nbsp;</strong>Srebro 1</p>\n          <p>Teatr Staatsoper zatrudnia wszelkiego rodzaju pracowników, którzy obsługują i zabawiają kulturalną elitę Nuln. Jeśli potrzebujesz ich statystyk, użyj poniższych przykładów.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.ufybUaZUN5yiuNgk",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8104,7 +8161,7 @@
     "Taggee": {
       "id": "C08izmgMFxghDtZD",
       "name": "Szpiedzy z Indu",
-      "description": "<section id=\"secret-AXXeGYhnblps0USY\" class=\"secret\"><p><strong>Status: </strong>Gold 2</p><p>Raja Shrimant Rao of Ind has sent his best taggee agents to secure his rose ruby. Two are trained to fight with Tiger Claws, which appear like knuckledusters with four projecting blades. Tiger Claws use the same statistics as a Dagger but need the Melee (Brawling) Skill, and uses the following additional rules: on a successful Melee (Brawling) Test, you can make any resulting wound appear as if it were caused by a big cat or similar animal.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-7-–-the-rose-tiger]{Plot 7 – The Rose Tiger}</p></section>",
+      "description": "<section id=\"secret-AXXeGYhnblps0USY\" class=\"secret\"><p><strong>Status: </strong>Złoto 2</p><p>Radża Śrimant Rao z Indu wysłał swoich najlepszych taggee, aby odzyskali jego różany rubin. Dwaj zostali wyszkoleni w walce Tygrysimi Pazurami, przypominającymi kastety z czterema wystającymi ostrzami. Tygrysie Pazury mają statystyki Sztyletu, lecz wymagają Umiejętności Broń Biała (Bijatyka) i podlegają dodatkowej zasadzie: po udanym Teście Broni Białej (Bijatyka) można upozorować zadane Rany tak, jakby spowodował je wielki kot lub podobne zwierzę.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.7JmoqchNSsLrwZwz.JournalEntryPage.9F9hrdjcrIXmEJTm#plot-7-–-the-rose-tiger]{Wątek 7 – Różany Tygrys}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.C08izmgMFxghDtZD",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8148,6 +8205,7 @@
       }
     },
     "Thomas Prahmhandler": {
+      "status": "Złoto 1",
       "id": "1gLZGKozh6nrBjGr",
       "name": "Thomas Prahmhandler",
       "description": " ",
@@ -8213,7 +8271,7 @@
     "Toppenheimer Noble": {
       "id": "m2DUxgTl92btVq1d",
       "name": " Młody Szlachcic",
-      "description": "<section id=\"secret-LGFSnJr57w8ppFFn\" class=\"secret\"><p>There is turmoil building across the Empire (see the <strong>Enemy Within</strong> campaign for more on this), so many of the local nobles, especially the Toppenheimers and Pfiefrauchers, are spoiling for a fight.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-5-–-local-rivalries]{Plot 5 – Local Rivalries}</p></section>",
+      "description": "<section id=\"secret-LGFSnJr57w8ppFFn\" class=\"secret\"><p>W całym Imperium narasta zamęt (więcej na ten temat znajdziesz w kampanii <strong>Wewnętrzny Wróg</strong>), dlatego wielu miejscowych szlachciców, zwłaszcza Toppenheimerów i Pfiefraucherów, aż rwie się do walki.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.SsYATFVcPahLsAHN.JournalEntryPage.jmhqqWatzKzHAwoV#plot-5-–-local-rivalries]{Wątek 5 – Miejscowa rywalizacja}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.m2DUxgTl92btVq1d",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8258,7 +8316,7 @@
       "sourceId": "Compendium.wfrp4e-rnhd.actors.qKIlKSoDoQYCTMGE",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-rnhd.actors.1gLZGKozh6nrBjGr]{Thomas} Thomas to wpływowy człowiek przyzwyczajony do tego, że ma kontrolę nad sytuacją, czy chodzi o handel łodziami, jego interesy przemytnicze, czy w końcu gdy idzie o jego przyszłą żonę. Gdy dowiedział się, że jego @UUID[Compendium.wfrp4e-rnhd.actors.RVDzvuNLOyMHpboL]{narzeczona} go z baronem, wezwał swoich ludzi @UUID[Compendium.wfrp4e-rnhd.actors.qKIlKSoDoQYCTMGE]{Wuja Mho}, @UUID[Compendium.wfrp4e-rnhd.actors.0SY3YBbsrNa6bvZ6]{Szalonego Larz}, and @UUID[Compendium.wfrp4e-rnhd.actors.Wnn6QYqqbvG5gotp]{Wielkiego Kudłacza} żeby pomogli mu przekazać szlachcicowi ważną lekcję. Cała czwórka mówi z silnym akcentem reiklandzkiego pospólstwa.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.g4vOyAOCjOl4EHBO.JournalEntryPage.vCbvOWyg16kon6e7#plot-4-–-creating-a-scene]{Wątek 4 – Awantura}</p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-rnhd.actors.1gLZGKozh6nrBjGr]{Thomas} Thomas to wpływowy człowiek przyzwyczajony do tego, że ma kontrolę nad sytuacją, czy chodzi o handel łodziami, jego interesy przemytnicze, czy w końcu gdy idzie o jego przyszłą żonę. Gdy dowiedział się, że jego @UUID[Compendium.wfrp4e-rnhd.actors.RVDzvuNLOyMHpboL]{narzeczona} go z baronem, wezwał swoich ludzi @UUID[Compendium.wfrp4e-rnhd.actors.qKIlKSoDoQYCTMGE]{Wuja Mho}, @UUID[Compendium.wfrp4e-rnhd.actors.0SY3YBbsrNa6bvZ6]{Szalonego Larz} i @UUID[Compendium.wfrp4e-rnhd.actors.Wnn6QYqqbvG5gotp]{Wielkiego Kudłacza} żeby pomogli mu przekazać szlachcicowi ważną lekcję. Cała czwórka mówi z silnym akcentem reiklandzkiego pospólstwa.</p><p>@UUID[Compendium.wfrp4e-rnhd.journals.g4vOyAOCjOl4EHBO.JournalEntryPage.vCbvOWyg16kon6e7#plot-4-–-creating-a-scene]{Wątek 4 – Awantura}</p>",
       "items": {
         "wiLRVaAPgGItLedu": {
           "id": "wiLRVaAPgGItLedu",
@@ -8308,6 +8366,7 @@
       }
     },
     "Ursula Kopfgeld": {
+      "status": "Srebro 5",
       "id": "VWyYqfsr3Zd6aySO",
       "name": "Ursula Kopfgeld",
       "description": " ",
@@ -8379,13 +8438,14 @@
       }
     },
     "Valentina": {
+      "status": "Srebro 1",
       "id": "2hX69vBEAZncOLdT",
       "name": "Valantina",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT",
       "species": "Człowiek",
       "gender": "Kobieta",
-      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valentina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
+      "gmnotes": "<p>Trzy rywalizujące ze sobą organizacje przestępcze @UUID[Compendium.wfrp4e-rnhd.actors.2hX69vBEAZncOLdT]{Valantina}, @UUID[Compendium.wfrp4e-rnhd.actors.0LL9UcyxDQ2Qzx9T]{Schatzenheimerów}, i @UUID[Compendium.wfrp4e-rnhd.actors.YYkCsVTcW7PlLxLK]{Huydermansów} wysłały skrytobójców do gmachu opery. Każde z nich chce jako pierwsze zlikwidować cel: @UUID[Compendium.wfrp4e-rnhd.actors.N7Q3O6n7JH8nvyUF]{Albrechta Oldenhallera}. Mieszczanin ma jednak niespodziewanych obrońców: Kult Uświęconej Larwy, kultystów Nurgla. Zabójcy jeszcze nie wiedzą, że koledzy po fachu będę ich najmniejszym zmartwieniem.</p>",
       "items": {
         "dQOOke2p02BHq3JC": {
           "specification": "Zdrajcy"
@@ -8451,7 +8511,7 @@
     "Watchman": {
       "id": "qfO83uuJw2wgEXUx",
       "name": "Strażnik",
-      "description": "<section id=\"secret-gEKYq5YejuHKGfxI\" class=\"secret\"><p><strong>Status: </strong>Silver 1</p><p>The End Times are coming, and these watchmen fully embrace it, knowing all else is folly. Blood for the Blood God. Skulls for the Throne of Khorne.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-6-–-day-of-blood]{Plot 6 – Day of Blood}</p></section>",
+      "description": "<section id=\"secret-gEKYq5YejuHKGfxI\" class=\"secret\"><p><strong>Status: </strong>Srebro 1</p><p>Nadchodzą Czasy Końca, a ci strażnicy całkowicie je przyjmują, wiedząc, że wszystko inne jest głupotą. Krew dla Boga Krwi. Czaszki dla Tronu Khorna.</p><p> @UUID[Compendium.wfrp4e-rnhd.journals.pDZu2xSFXlFumvtN.JournalEntryPage.V5nWWGLyW9hWgUbs#plot-6-–-day-of-blood]{Wątek 6 – Dzień krwi}</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.qfO83uuJw2wgEXUx",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8541,7 +8601,7 @@
     "Watch Sergeant": {
       "id": "nqoyWWVX4oZklgcT",
       "name": "Sierżant Straży",
-      "description": "<section id=\"secret-UjrrBKx4QGlEMqjX\" class=\"secret\"><p><strong>Status: </strong>Silver 1</p>\n<p>The Watch and guards of various types are found throughout the theatre, and patrolling outside. The @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} is in attendance, so they are all keen to impress.</p>\n<p>Most of the Watch patrols are led by sergeants, as their superiors are determined that nothing will go wrong given the @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Countess} herself is under their protection.&nbsp;</p>\n<p>However, most of these representatives of the Watch are self-important, preening, and all-too-often involved in criminal activity themselves.</p></section>",
+      "description": "<section id=\"secret-UjrrBKx4QGlEMqjX\" class=\"secret\"><p><strong>Status: </strong>Srebro 1</p>\n<p>Strażników miejskich i innych ochroniarzy można spotkać w całym teatrze oraz na patrolach przed budynkiem. Obecna jest @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina}, więc wszystkim zależy, by dobrze wypaść.</p>\n<p>Większością patroli Straży dowodzą sierżanci, ponieważ ich przełożeni są zdecydowani nie dopuścić do żadnych kłopotów, skoro pod ich ochroną znajduje się sama @UUID[Compendium.wfrp4e-rnhd.actors.CcqiAghkzgp9u1In]{Hrabina}.</p>\n<p>Większość tych przedstawicieli Straży jest jednak zarozumiała, próżna i zdecydowanie zbyt często sama zamieszana w działalność przestępczą.</p></section>",
       "sourceId": "Compendium.wfrp4e-rnhd.actors.nqoyWWVX4oZklgcT",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8671,6 +8731,7 @@
       }
     },
     "Wilhelm von Saponatheim": {
+      "status": "Złoto 7",
       "id": "KfVnMx7Bn1DWErM6",
       "name": "Wilhelm von Saponatheim",
       "description": " ",

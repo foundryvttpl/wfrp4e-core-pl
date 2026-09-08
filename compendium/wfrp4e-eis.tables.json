@@ -116,7 +116,7 @@
         "1-2": "<b>Okres Świadomości</b>: Przez pewien czas odczuwasz błogi spokój. Bohater traci wszystkie Stany otrzymane wcześniej przez Delirium.",
         "3-5": "<b>Urywany Sen</b>: Postać przewraca się z boku na bok, nie mogąc porządnie się wyspać. Bohater otrzymuje 1 poziom Stanu @Condition[Unconscious]{Utrata Przytomności} utrzymujący się przez najbliższą godzinę i 1 poziom Stanu @Condition[Fatigued]{Zmęczenie} na najbliższe [[/r 1d10]] godzin.",
         "6-9": "<b>Dezorientacja</b>: Postać pada ofiarą dziwnych, chaotycznych wizji i otrzymuje Stan @Condition[Stunned]{Oszołomienie} utrzymujący się przez najbliższą godzinę.",
-        "10-10": "<b>Halucynacje</b>: Postać doświadcza dziwnych i przerażających wizji i przez najbliższą godzinę co 10 minut musi wykonywać Testy przeciwko Grozie (3). Do tego otrzymuje Stan @Condition[Stunned]{Oszołomienie} utrzymujący się przez najbliższe 1k10 godzin."
+        "10-10": "<b>Halucynacje</b>: Postać doświadcza dziwnych i przerażających wizji i przez najbliższą godzinę co 10 minut musi wykonywać Testy przeciwko Grozie (3). Do tego otrzymuje Stan @Condition[Stunned]{Oszołomienie} utrzymujący się przez najbliższe [[/r 1d10]]{1k10} godzin."
       }
     },
     "Demonic Mien - Nurgle": {
@@ -406,7 +406,7 @@
         "71-71": "Krótkie nogi",
         "72-75": "Trupia czaszka",
         "76-78": "Kolczasta skóra",
-        "79-79": "Suckered Hands and Feet",
+        "79-79": "Przyssawki na dłoniach i stopach",
         "80-81": "Ogon",
         "82-84": "Kolczaste łuski",
         "85-85": "Troje oczu",
@@ -461,7 +461,7 @@
         "70-72": "Przemodelowana twarz",
         "73-78": "Gnijące ciało",
         "79-79": "Krótkie nogi",
-        "80-81": "Suckered Hands and Feet",
+        "80-81": "Przyssawki na dłoniach i stopach",
         "82-84": "Ogon",
         "85-87": "Troje oczu",
         "88-89": "Przezroczysta skóra",
@@ -514,7 +514,7 @@
         "75-77": "Zmieniające się kolory",
         "78-78": "Krótkie nogi",
         "79-81": "Kolczasta skóra",
-        "82-83": "Suckered Hands and Feet",
+        "82-83": "Przyssawki na dłoniach i stopach",
         "84-85": "Ogon",
         "86-87": "Kolczaste łuski",
         "88-90": "Troje oczu",
@@ -569,7 +569,7 @@
         "71-73": "Przemodelowana twarz",
         "74-76": "Zmieniające się kolory",
         "77-77": "Krótkie nogi",
-        "78-79": "Suckered Hands and Feet",
+        "78-79": "Przyssawki na dłoniach i stopach",
         "80-82": "Ogon",
         "83-83": "Kolczaste łuski",
         "84-84": "Troje oczu",
@@ -637,7 +637,7 @@
         "76-77": "Krótkie nogi",
         "78-79": "Trupia czaszka",
         "80-80": "Kolczasta skóra",
-        "81-82": "Suckered Hands and Feet",
+        "81-82": "Przyssawki na dłoniach i stopach",
         "83-84": "Ogon",
         "85-85": "Kolczaste łuski",
         "86-87": "Troje oczu",

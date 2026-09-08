@@ -3180,7 +3180,27 @@
           "Id": "AYd4Sq305ul0njeW"
         }
       ],
-      "traits": []
+      "traits": [],
+      "effects": {
+        "GPWvWnhtvfc1jdvJ": {
+          "id": "GPWvWnhtvfc1jdvJ",
+          "name": "Weteran wielu przygód",
+          "scriptData": [
+            {
+              "id": "GPWvWnhtvfc1jdvJ",
+              "name": "Weteran wielu przygód"
+            },
+            {
+              "id": "GPWvWnhtvfc1jdvJ",
+              "name": "Wybór Umiejętności"
+            },
+            {
+              "id": "GPWvWnhtvfc1jdvJ",
+              "name": "Wybór broni"
+            }
+          ]
+        }
+      }
     },
     "Hireling": {
       "id": "gjtcCTmRPxTL4oAL",

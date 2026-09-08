@@ -724,7 +724,7 @@
     "Basilisk's Baleful Bile": {
       "id": "cCMhuudYsHlP1t56",
       "name": "Złowroga Żółć Bazyliszka",
-      "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[Oszołomienie] na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[Zatrucie] odpierane <strong>Problematycznym (-10) Testem Odporności</strong> Test. If the target fails to resist the @Condition[Zatrucie] zostaje permanentnie przemieniona w kamień. </p>",
+      "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[Oszołomienie] na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[Zatrucie], którym można się oprzeć <strong>Problematycznym (-10) Testem Odporności</strong>. Jeśli cel nie zdoła oprzeć się @Condition[Zatrucie], zostaje trwale przemieniony w kamień. </p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.cCMhuudYsHlP1t56",
       "effects": {
         "GFWCmFT6AtYimdnZ": {

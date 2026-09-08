@@ -2,6 +2,7 @@
   "label": "Aktorzy (Archiwa Tom I)",
   "mapping": {
     "species": "system.details.species.value",
+    "status": "system.details.status.value",
     "gender": "system.details.gender.value",
     "gmnotes": "system.details.gmnotes.value",
     "effects": {
@@ -17,6 +18,7 @@
   },
   "entries": {
     "Alrik Skagsson": {
+      "status": "Srebro 5",
       "id": "MUc9wJhTpdVCPiei",
       "name": "Alrik Skagsson",
       "description": " ",
@@ -162,6 +164,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.nSfKRqvJbwrxmQrn.JournalEntryPage.Qjp0C7Ssm6mTij0G]{Krasnoludy Imperialne}</p><p>Alrik był kowalem w wiosce Bellewald, gdy dowiedział się, że jego starszy brat, Brogar, handlarz z zawodu, zginął z ręki nekromanty w Drachenwacht. Żądny zemsty Alrik dołączył do łowcy czarownic Alfreda „Szalonego” Neumanna, pragnąc nauczyć się tego fachu i uwolnić świat od nekromantów oraz innych plugawych czarowników. Od ponad stu lat Alrik oczyszcza Imperium z niepożądanych praktyków magii, cały czas poszukując nieuchwytnego nekromanty Baldricka Nieczystego i jego diabolicznego poplecznika Schwarze Ottera. Odsetek strat wśród pracowników zatrudnianych przez Alrika jest wysoki.</p>"
     },
     "Belliquotious ‘Bella’ Lowhaven IV": {
+      "status": "Brąz 5",
       "id": "xeEMR7LvfW2JKb4C",
       "name": "Belliquotious ‘Bella’ Lowhaven IV",
       "description": " ",
@@ -312,6 +315,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.1DV9PqfwkhmGSUC2]{Lowhavenowie}</p><p>Bella przeprowadziła się do @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.icaZcokQLawViHCq]{Ubersreiku} kilka lat temu, aby pracować z ciotką, @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.cQvTuhJqYQxXRqbC]{Mercy Lowhaven}, przywódczynią odnogi klanu w Ubersreiku. Najczęściej pracuje w prowadzonej przez Lowhavenów szajce wymuszającej okupy, zbierając pieniądze za ochronę od kupców na rynkach Marktplatz i Giełdzie Kukurydzy Furlisdottir. Ewentualnie odstrasza wszelkich rywali, którzy próbują wkraść się na ich terytorium. Stała się jedną z najbardziej zaufanych pomocników ciotki. Często dostaje za zadanie posprzątać bałagan, który zostawił jej kuzyn Shufflepig (ulubiony, ale bardzo nieudolny siostrzeniec Mercy). Twarz Belli znaczą ślady trudnego życia: złamany nos i dziesiątki blizn. Wszystko to wzmacnia otaczającą ją aurę jawnej groźby. Belle można spotkać, gdy terroryzuje firmy lub bije jakiegoś nieszczęśnika, który opóźnia się z opłatami. Równie łatwo można ją wynająć, aby narobiła gdzieś kłopotów, jak i po to, by strzegła kogoś, kto się takich kłopotów spodziewa. Jeśli można gdzieś zarobić pieniądze i potrzeba do tego przemocy, należy uderzać do Belli. Mówi z zaskakująco zgrzytliwym akcentem reiklandzkim. Często odzywa się cichym głosem dla pokreślenia groźnej aury.</p>"
     },
     "Gurniksson Hammerback": {
+      "status": "Srebro 4",
       "id": "Nz3bdsPngtcaBUGK",
       "name": "Gurniksson Młotogrzbiety",
       "description": " ",
@@ -426,6 +430,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.De6yFCVO4shYbAUx.JournalEntryPage.kGXBEEzgBQM1WkNm#council-of-elders]{Rada Starszych}</p><p>Gurniksson Młotogrzbiety jest świadomy, że kopalnie pod Szczytem Orle Gniazdo są prawie wyczerpane. Badania potwierdziły, że na terenach kontrolowanych przez plemiona zielonoskórych prawdopodobnie znajdują się nowe złoża. Ze względu na swoje obawy Gurniksson jest zdecydowanym zwolennikiem agresywnej polityki króla Thuringara. Liczył na to, że mistrz inżynierii opowie się po stronie tych, którzy chcą zlikwidować zielonoskórych, ale ten głupiec ciągle gada o jakiejś zniewadze, o której Gurniksson nie pamięta.</p>"
     },
     "Karstin Largsdottir": {
+      "status": "Złoto 1",
       "id": "Fr29qkxhq13sO6t3",
       "name": "Karstin Largsdottir",
       "description": " ",
@@ -537,6 +542,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.nSfKRqvJbwrxmQrn.JournalEntryPage.Qjp0C7Ssm6mTij0G]{Krasnoludy Imperialne}</p><p>Utalentowana jubilerka, pochodząca z Marienburga. Karstin przybyła do Altdorfu jako przedstawicielka starszego krewnego, nadzorcy Arkata Foogera. Miała rozszerzyć jego działalność ubezpieczeniową o stolicę Imperium. Nie wiodło jej się najlepiej, gdyż przekonała się, że kupcy z Imperium mają mniejszą wiedzę na temat procedur biznesowych i warunków rynkowych niż ich odpowiednicy z Marienburga. Karstin jest zdolną, młodą krasnoludką i z pewnością wypełni swoje zadanie. Jest także skutecznym szpiegiem w służbie klanu Fooger. Co ciekawe, ostatnio otrzymuje anonimowe pogróżki.</p>"
     },
     "Luitpoldstrasse ‘Louis’ Lostpockets": {
+      "status": "Brąz 4",
       "id": "LAMkZIc9l2SUhD5g",
       "name": "Luitpoldstrasse ‘Louis’ Lostpockets",
       "description": " ",
@@ -767,6 +773,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.EW9yEcpHZTHiUycv]{Lostpockets}</p><p>Louis to znajda odkryta na Luitpoldstrasse w Altdorfie. Wychowywał się w sierocińcu prowadzonym pod pozorem instytucji filantropijnej (i jako pralnia pieniędzy) przez Wolfganga von Arripova, szlachcica z @UUID[JournalEntry.S1ONBYW4uxw9POV8.JournalEntryPage.560B5HOv7H4S976Z]{Ostlandu}. Gdy jego oszukańcza działalność wyszła na jaw, został wtrącony do Twierdzy Munsden, sierociniec zamknięty, a Louis znalazł się na ulicy. Dołączał do różnych gangów dziecięcych w @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb.JournalEntryPage.zH91GyRZYb536WSK]{Kolonii Altmünze}. Obecnie ma 50-kilka lat i należy do Ekipy Kaisera, gangu żebraków działającego na @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodnim Krańcu Altdorfu}. Louis od urodzenia potrafi przezwyciężać trudności, dlatego stale szuka okazji, by wyrwać się ze stanu nędzarza. Gdy spotyka kogokolwiek majętnego, równie łatwo może zacząć mu schlebiać, jak i okraść kieszenie. Mówi wysokim, nieco przymilnym głosem z silnym akcentem ze Wschodniego Krańca Altdorfu. Do wszystkich zwraca się per <em>„szefuńciu”</em>.</p>"
     },
     "Misodoctakleidist ‘Doc’ Ashfield": {
+      "status": "Srebro 3",
       "id": "fkdwQATSTneWFb3P",
       "name": "Misodoctakleidist ‘Doc’ Ashfield",
       "description": " ",
@@ -913,6 +920,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.DsxKmaEa3fRy4GHc]{Ashfield}</p><p>To Ashfield z dziada pradziada. Doc Ashfield wychował się w @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.so1ZUXSSYFRvxkhp]{Grissenwaldzie}. Od krewnych nauczył się strzelać i wraz z nimi walczył ze zwierzoludźmi i mutantami, którzy czają się w tamtejszych gęstych lasach. Doc dołączył do 1. Brygady Strzeleckiej Krainy Zgromadzenia, razem z około tuzinem najbliższych kuzynów. Liczył na to, że pójdzie w ślady prapradziada ciotecznego w trzecim stopniu pokrewieństwa, legendarnego strzelca, kapitana Ashfielda zwanego „Zabójcze Oko”. Gdy nie patroluje okolic Altdorfu, Doc najprawdopodobniej ćwiczy strzelectwo w @UUID[Compendium.wfrp4e-altdorf.journals.cDOlXEpTvnuaOJ0P.JournalEntryPage.Sk2zs5EOYGYzywSq]{altdorfskich koszarach dla niziołków} lub popija w @UUID[Compendium.wfrp4e-altdorf.journals.EmhvOkkzAir6pzCB.JournalEntryPage.E5g3x091ECljn1LL]{„Pod Kogutem Północy”}, jednej z wielu świetnych i zbudowanych w niziołczych proporcjach gospód w Haffenstadt. Mówi kwieciście z lekkim akcentem reiklandzkim, często przerywając, by z namysłem przygryźć wargę, zanim odpowie na zadane pytania.</p>"
     },
     "Ragni Thorisson": {
+      "status": "Złoto 1",
       "id": "KfVQtG1yKNxIfAQs",
       "name": "Ragni Thorisson",
       "description": " ",
@@ -1059,6 +1067,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.De6yFCVO4shYbAUx.JournalEntryPage.kGXBEEzgBQM1WkNm#young-beards]{Krótkobrodzi}</p><p>Ragni, znakomity kapitan zwiadowców i utalentowany strateg, zwrócił na siebie uwagę króla Thuringera po serii wypraw na orków z plemienia Czarnego Kła i bohaterskich czynach w wielkim starciu z goblinami z plemienia Krwawego Szpikulca. Mimo sprzeciwu Rady, władca mianował Ragniego na dowódcę osobistego oddziału młociarzy po tym, jak poprzedni oficer zginął w potyczce przeciwko Czarnym Kłom. Ragni doskonale zdaje sobie sprawę z niechęci innych młociarzy, ale wie, że służy na życzenie króla.</p>"
     },
     "Spoondrift ‘Spoony’ Skelfsider": {
+      "status": "Brąz 3",
       "id": "095JYzaaI37Nnx88",
       "name": "Spoondrift ‘Spoony’ Skelfsider",
       "description": " ",
@@ -1222,6 +1231,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.nMVgtl0fpBMYwu4f]{Skelfsider}</p><p>Spoony nigdy nie miał zamiaru łamać prawa, gdy jako młody niziołek pracował w wybielarniach Dunkelbergu. Jednak ta praca skończyła się na skutek szczególnie niszczycielskiego najazdu goblinów i zdesperowany niziołek zaczął szukać innego, bardziej dochodowego zajęcia. Gdy podstarzały doktor Heinz Liebrich zaproponował mu stancję w zamian za „lekkie obowiązki” w jego kamienicy, Spoony uwierzył, że mu się poszczęściło, nie zdając sobie sprawy z prawdziwych zamiarów pracodawcy. Teraz Spoony ograbia groby dla swojego pana, co noc modląc się do Esmereldy, by Liebrich był tylko dociekliwym medykiem, a nie ambitnym nekromantą. Za dnia Spoony wykonuje sprawunki dla tajemniczego chlebodawcy. Ma bladą cerę z podkrążonymi oczami nienawykłymi do promieni słońca. Po zmroku często można go spotkać w pobliżu Ogrodów Morra, gdzie czai się w cieniach podczas kolejnego nocnego wypadu. Jest nieustannie zgarbiony. Po latach rozkopywania grobów i dźwigania ciał kręgosłup zgiął mu się prawie w pół. Z ochotą (co zrozumiałe) skorzysta z propozycji pracy dla kogokolwiek, jeśli uzna, że pomoże mu to uciec z Dunkelbergu. Melancholijny głos Spoony’ego jest dość cichy. Mówi z lekkim akcentem reiklandzkim.</p>"
     },
     "Suffonsification ‘Suffy’ Rumster LVI": {
+      "status": "Brąz 2",
       "id": "q28RUYjHAQEoJA9e",
       "name": "Suffonsification ‘Suffy’ Rumster LVI",
       "description": " ",
@@ -1378,6 +1388,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.ShGIxlTNbsJqpoB9]{Rumster}</p><p>Suffy uwielbia jedzenie – zwłaszcza placki – jeszcze bardziej niż większość jego kuzynów. W związku z tym jest równie szeroki jak wysoki. Przez całe swoje krótkie życie nie pragnął niczego więcej, niż pójść śladami świetnych przodków, by szerzyć chwałę rodu @UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.ShGIxlTNbsJqpoB9]{Rumsterów} wśród żarłoków i smakoszy Reiklandu. Chociaż obecnie jest czeladnikiem u kuzyna Parsimoniousa „Pietruszki” Rumstera w Kemperbadzie, Suffy marzy o otwarciu własnej firmy w Altdorfie, gdzie mógłby eksperymentować z unikalnymi połączeniami smaków. Jego ostatnim eksperymentem była suszona ryba z jeżyną. Być może to i dobrze, że spełnienie marzeń zabierze mu jeszcze trochę czasu. Suffy dniem i nocą pracuje na ulicach Kemperbadu, handlując plackami kuzyna. Ma niepokojąco głęboki, dudniący głos, w którym daje się usłyszeć śpiewny akcent Averlandczyka (przybrał tę pozę, uważając, że zapewni mu lepszą sprzedaż placków).</p>"
     },
     "Thelonius Hardcastle Monkenbridge Thorncobble XII": {
+      "status": "Złoto 1",
       "id": "ppLdZOHf1Wh9EI05",
       "name": "Thelonius Hardcastle Monkenbridge Thorncobble XII",
       "description": " ",
@@ -1521,6 +1532,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.mj67PWAwhbEZyL1x]{Thorncobble}</p><p>Najwcześniejsze wspomnienia Theloniusa to chwila, gdy odziany w zielony aksamit zabrany został na dwór do @UUID[Compendium.wfrp4e-altdorf.journals.cDOlXEpTvnuaOJ0P.JournalEntryPage.H8Ms2RAB5ocarR5o]{Pałacu Imperialnego} w Altdorfie. Nigdzie indziej nie czuje się tak bardzo w swoim żywiole, jak wtedy, gdy zadaje się z wielkimi, czcigodnymi i wspaniałymi osobistościami Reiklandu, z dala od smrodu ubóstwa, nieczystości i @UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.vZxU3AH0YoKF9zVn]{Brambledownów}. Obecnie odwiedza dwór w towarzystwie jednej lub kilku matek (ma ich co najmniej tuzin), tak często, jak tylko może. Jako lew bankietowy z radością uczęszcza na przyjęcia, salony towarzyskie i obiady proszone, starając się zacieśniać więzy z podobnymi sobie. Można go spotkać w Pałacu Imperialnym lub w domu którejś ze szlacheckich rodzin w Altdorfie. Thelonius mówi z wymuskanym akcentem reiklandzkich klas wyższych. W jego głosie pobrzmiewa szydercza pogarda. W obecności gorszych od siebie (czyli każdego, w którego żyłach nie płynie błękitna krew) trzyma fason i prostuje plecy, wyciągając się na pełen wzrost swoich 106 cm, w daremnym staraniu przybrania imponującej postury.</p>"
     },
     "Thomasina ‘Tina’ Brambledown": {
+      "status": "Srebro 3",
       "id": "FU55StE2N4IqKoDT",
       "name": "Thomasina ‘Tina’ Brambledown",
       "description": " ",
@@ -1665,6 +1677,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.BFPQ1LqmGjaSmoz5.JournalEntryPage.vZxU3AH0YoKF9zVn]{Brambledown}</p><p>W ciągu 73 lat życia Tina Brambeldown przemierzyła cały nurt Reiku, od Gór Czarnych po Marienburg. Poznała też wiele kanałów i mniejszych odnóg wodnych @UUID[JournalEntry.S1ONBYW4uxw9POV8.JournalEntryPage.llSesDaWN4kVch1E]{Reiklandu} włącznie z Bögen. Z natury przyjacielska i gadatliwa, Tina jest dobrze znana wzdłuż i wszerz rzeki. Ma przyjaciół w większości portów, gdzie doskonaliła umiejętność wiązania węzłów. Dzięki znajomości @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.Zhp59VXYiv6dGfhR]{Reiku} niedawno zdobyła posadę sternika w Domu Kupieckim Auftrager. Praca dla tak dużej firmy pozwala jej zmieniać przemierzaną trasę co kilka miesięcy, zaspokaja żądzę podróżowania, a jednocześnie zapewnia stałe dochody. Można ją spotkać w jednej z nadrzecznych gospód, rozsianych po całym Reiklandzie. Jeśli ktokolwiek potrzebuje przewozu w dół rzeki – bez zadawania pytań – to właśnie Tina załatwi sprawę za odpowiednią cenę. Mówi (stale i z wielkim entuzjazmem) z dość neutralnym akcentem, co wynika z jej wędrownego stylu życia.</p>"
     },
     "Thyk Hurgarsson": {
+      "status": "Srebro 5",
       "id": "jSrwJR3kW9tpjam1",
       "name": "Thyk Hurgarsson",
       "description": " ",
@@ -1811,6 +1824,7 @@
       "gmnotes": "<p>@UUID[JournalEntry.nSfKRqvJbwrxmQrn.JournalEntryPage.Qjp0C7Ssm6mTij0G]{Krasnoludy Imperialne}</p><p>Niegdyś profesor historii wczesnego Imperium w @UUID[Compendium.wfrp4e-middenheim.journals.PuIrlGBOjxuWpK3P.JournalEntryPage.PJSTe8IXwh6oy78t]{Collegium Historica} w Altdorfie. Po dekadach nauczania niewdzięcznych, niezdyscyplinowanych i nieuważnych dziedziców szlacheckich rodów stał się celem fałszywego oskarżenia o plagiat. To był dla Thyka punkt przełomowy. W poszukiwaniu wiedzy (i skarbów na opłacenie dalszych poszukiwań) postanowił zająć się eksploracją dawno opuszczonych imperialnych osad w @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.UqeZNqbpV8uocCUN]{Reikwaldzie} i Wielkiego Lasu, a także krasnoludzkich ruin w Górach Szarych i Czarnych. Z tego czy innego powodu rotacja wynajmowanych przez niego pracowników jest dość wysoka.</p>"
     },
     "Volund Sliverscar": {
+      "status": "Złoto 2",
       "id": "fSTn6Ux1mvawMExc",
       "name": "Volund Srebrzysta Blizna",
       "description": " ",

@@ -3,6 +3,7 @@
   "mapping": {
     "gmdescription": "system.gmdescription.value",
     "species": "system.details.species.value",
+    "status": "system.details.status.value",
     "gender": "system.details.gender.value",
     "gmnotes": "system.details.gmnotes.value",
     "effects": {
@@ -119,6 +120,7 @@
       }
     },
     "Doktor": {
+      "status": "Srebro 5",
       "id": "DeVqxMfNjki7ytr8",
       "name": "Doktor",
       "description": " ",
@@ -247,6 +249,7 @@
       "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
     },
     "Lawyer": {
+      "status": "Srebro 3",
       "id": "OaODR2wDFVLfY5np",
       "name": "Prawnik",
       "description": " ",
@@ -335,6 +338,7 @@
       "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
     },
     "Local Scout": {
+      "status": "Srebro 1",
       "id": "2cuFdwtSf05YqAAB",
       "name": "Miejscowy Zwiadowca",
       "description": " ",
@@ -437,6 +441,7 @@
       "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
     },
     "Porter": {
+      "status": "Srebro 1",
       "id": "VhdI2DUAbHadGBcN",
       "name": "Tragarz",
       "description": " ",
@@ -497,6 +502,7 @@
       "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
     },
     "Scribe": {
+      "status": "Srebro 2",
       "id": "Zmri0YUwubVPY2qu",
       "name": "Skryba",
       "description": " ",
@@ -578,6 +584,7 @@
       "gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Dodaj cechę @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Najemnik} aby stworzyć Najmitę.</p><p>Więcej szczegółów znajdziesz w @UUID[Compendium.wfrp4e-up-in-arms.journals.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Statystyki Najmitów}.</p></blockquote>"
     },
     "Seasoned Mercenary": {
+      "status": "Srebro 3",
       "id": "IjNH91erF0qBOfoM",
       "name": "Doświadczony Najemnik",
       "description": " ",
