@@ -267,6 +267,7 @@ const SOURCE_ONLY_PATCH_IDS = new Set([
 ]);
 
 const BEHAVIOR_PATCH_HASHES = {
+	"KGK9vL1Yl0qmCeCN": "9c8dbd43",
 	"0FWto1oEr3jbWggw": "d785a2dd",
 	"190PHSHKGaJ74wsR": "fefea31e",
 	"2W9uMTT6iJhfQ044": "00da6c0c",
@@ -1086,6 +1087,24 @@ function martyrdomScript({polish}) {
 function applyBehaviorPatches(id, source, {sourceHash, polish}) {
 	if (BEHAVIOR_PATCH_HASHES[id] !== sourceHash) {
 		return source;
+	}
+	if (id === "KGK9vL1Yl0qmCeCN") {
+		// The displayed specification is read back on subsequent uses. Keep the
+		// switch and persisted training flags in English, regardless of display language.
+		const trainingKeys = {
+			ujarzmiony: "broken", pociągowy: "drive", maskotka: "entertain",
+			aportujący: "fetch", stróżujący: "guard", stóżujący: "guard",
+			powracający: "home", magiczny: "magic", wierzchowiec: "mount", bojowy: "war",
+		};
+		const keyExpression = "(" + JSON.stringify(trainingKeys) + ")[i.trim().toLocaleLowerCase()] || i.trim().toLowerCase()";
+		const labels = polish
+			? {broken: "Ujarzmiony", drive: "Pociągowy", entertain: "Maskotka", fetch: "Aportujący", guard: "Stróżujący", home: "Powracający", magic: "Magiczny", mount: "Wierzchowiec", war: "Bojowy"}
+			: {broken: "Broken", drive: "Drive", entertain: "Entertain", fetch: "Fetch", guard: "Guard", home: "Home", magic: "Magic", mount: "Mount", war: "War"};
+		return source
+			.replace(/!specification \|\| specification == "[^"]+"/,
+				'!specification || ["Trained Skills", "Umiejętności Wyuczone", "Wyszkolona Umiejętność"].includes(specification)')
+			.replace("id : i.toLowerCase()", "id : " + keyExpression)
+			.replace("name : i\n", "name : (" + JSON.stringify(labels) + ")[" + keyExpression + "] || i\n");
 	}
 
 	if (id === "0FWto1oEr3jbWggw") {

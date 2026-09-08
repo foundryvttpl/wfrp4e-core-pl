@@ -11723,7 +11723,7 @@
             {
               "id": "1xVfoqV99kcaZqiY",
               "name": "@effect.name",
-              "script": "let difficulty = \"\"\nif (this.effect.name.includes(\"Umiarkowany\"))\n    difficulty = \"easy\"\nelse if (this.effect.name.includes(\"Poważny\"))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
+              "script": "let difficulty = \"\"\nif (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n    difficulty = \"easy\"\nelse if (/(?:severe|poważn|wysok)/i.test(this.effect.name))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
             }
           ]
         },
@@ -11996,7 +11996,7 @@
             {
               "id": "oFHtNUS1enRKQlzH",
               "name": "@effect.name",
-              "script": "let modifier = 0\nif (this.effect.name.includes(\"Umiarkowane\"))\n    modifier = -20\nelse\n     modifier = -10\nargs.fields.modifier += modifier",
+              "script": "let modifier = 0\nif (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n    modifier = -20\nelse\n     modifier = -10\nargs.fields.modifier += modifier",
               "activationScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
               "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
             }
@@ -12080,7 +12080,7 @@
             {
               "id": "cDP1okuOrLjaTrSv",
               "name": "@effect.name",
-              "script": "let difficulty = \"\"\nif (this.effect.name.includes(\"Umiarkowany\"))\n    difficulty = \"easy\"\nelse if (this.effect.name.includes(\"Poważny\"))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
+              "script": "let difficulty = \"\"\nif (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n    difficulty = \"easy\"\nelse if (/(?:severe|poważn|wysok)/i.test(this.effect.name))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
             }
           ]
         },
@@ -12114,7 +12114,7 @@
             {
               "id": "Tq200nbnRCqccoWF",
               "name": "Uwiąd",
-              "script": "let difficulty = \"\"\nif (this.effect.name.includes(\"Umiarkowany\"))\n    difficulty = \"easy\"\nelse if (this.effect.name.includes(\"Poważny\"))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
+              "script": "let difficulty = \"\"\nif (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n    difficulty = \"easy\"\nelse if (/(?:severe|poważn|wysok)/i.test(this.effect.name))\n    difficulty = \"average\"\nelse\n    difficulty = \"veasy\"\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"dead\");\n}"
             }
           ]
         },
@@ -17387,7 +17387,7 @@
         "cu2P7Zg9f68sp27i": {
           "id": "cu2P7Zg9f68sp27i",
           "name": "Rozbłysk",
-          "filter": "return this.actor.items.getName(\"Magia Tajemna (Światło)\")",
+          "filter": "return this.actor.items.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Light)\",\"Magia Tajemna (Światła)\",\"Magia Tajemna (Światło)\"]))",
           "scriptData": [
             {
               "id": "cu2P7Zg9f68sp27i",
@@ -18449,7 +18449,7 @@
         "qZBJSHohaj8XIWqk": {
           "id": "qZBJSHohaj8XIWqk",
           "name": "Zguba demonów",
-          "filter": "return this.actor.items.getName(\"Magia Tajemna (Światło)\")",
+          "filter": "return this.actor.items.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Light)\",\"Magia Tajemna (Światła)\",\"Magia Tajemna (Światło)\"]))",
           "scriptData": [
             {
               "id": "qZBJSHohaj8XIWqk",
@@ -20791,7 +20791,7 @@
         "gGxgfn6fxA0gZjY1": {
           "id": "gGxgfn6fxA0gZjY1",
           "name": "Uczta kruków",
-          "filter": "return this.actor.itemTypes.talent.find(i => i.name == \"Arcane Magic (Beasts)\")",
+          "filter": "return this.actor.itemTypes.talent.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Beasts)\",\"Magia Tajemna (Zwierząt)\"]))",
           "scriptData": [
             {
               "id": "gGxgfn6fxA0gZjY1",
@@ -20826,7 +20826,7 @@
         "3x5jSYFsX8fx42oy": {
           "id": "3x5jSYFsX8fx42oy",
           "name": "Pole cierniowe",
-          "filter": "return this.actor.itemTypes.talent.find(i => i.name == \"Magia Tajemna (Życia)\")\n",
+          "filter": "return this.actor.itemTypes.talent.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Life)\",\"Magia Tajemna (Życia)\"]))\n",
           "scriptData": [
             {
               "id": "3x5jSYFsX8fx42oy",
@@ -20986,7 +20986,7 @@
         "TEqFWdqydduNVGa4": {
           "id": "TEqFWdqydduNVGa4",
           "name": "Zmora",
-          "filter": "return this.actor.itemTypes.talent.find(i => i.name == \"Magia Tajemna (Czarownictwo)\")",
+          "filter": "return this.actor.itemTypes.talent.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Witchcraft)\",\"Magia Tajemna (Czarownictwa)\",\"Magia Tajemna (Czarownictwo)\"]))",
           "scriptData": [
             {
               "id": "TEqFWdqydduNVGa4",
@@ -21682,7 +21682,7 @@
         "PN345hPPQdbkVjii": {
           "id": "PN345hPPQdbkVjii",
           "name": "Strefa zamętu",
-          "filter": "return this.actor.itemTypes.talent.find(i => i.name == \"Magia Tajemna (Cień)\")",
+          "filter": "return this.actor.itemTypes.talent.find(i => game.wfrp4eCorePl.names.oneOf(i, [\"Arcane Magic (Shadow)\",\"Magia Tajemna (Cieni)\",\"Magia Tajemna (Cień)\"]))",
           "scriptData": [
             {
               "id": "PN345hPPQdbkVjii",

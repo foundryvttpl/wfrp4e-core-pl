@@ -318,7 +318,7 @@
             {
               "id": "FfzDGn3C7lGejtMw",
               "name": "@effect.name",
-              "script": "let difficulty = \"\"\n                            if (this.effect.name.includes(\"Moderate\"))\n                                difficulty = \"easy\"\n                            else if (this.effect.name.includes(\"Severe\"))\n                                difficulty = \"average\"\n                            else\n                                difficulty = \"veasy\"\n        \n                            let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" dies from Blight\"}, fields: {difficulty}, appendTitle : \" - Blight\"})\n                            await test.roll();\n                            if (test.failed)\n                            {\n                                this.actor.addCondition(\"dead\");\n                            }"
+              "script": "let difficulty = \"\"\n                            if (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n                                difficulty = \"easy\"\n                            else if (/(?:severe|poważn|wysok)/i.test(this.effect.name))\n                                difficulty = \"average\"\n                            else\n                                difficulty = \"veasy\"\n        \n                            let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : this.actor.name + \" umiera z powodu Uwiądu\"}, fields: {difficulty}, appendTitle : \" - Uwiąd\"})\n                            await test.roll();\n                            if (test.failed)\n                            {\n                                this.actor.addCondition(\"dead\");\n                            }"
             }
           ]
         },
@@ -350,7 +350,7 @@
             {
               "id": "zYT2EGXLTx4C4Sqm",
               "name": "@effect.name",
-              "script": "let modifier = 0\n                            if (this.effect.name.includes(\"Moderate\"))\n                                modifier = -20\n                            else\n                                modifier = -10\n                            args.fields.modifier += modifier",
+              "script": "let modifier = 0\n                            if (/(?:moderate|umiarkowan)/i.test(this.effect.name))\n                                modifier = -20\n                            else\n                                modifier = -10\n                            args.fields.modifier += modifier",
               "activationScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
               "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)"
             }

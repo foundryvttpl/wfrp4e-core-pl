@@ -8,7 +8,11 @@
     },
     "units": "grid.units",
     "scene_note": "flags.wfrp4e-archives1.scene-note",
-    "initialization_folder": "flags.wfrp4e-archives1.initialization-folder"
+    "initialization_folder": "flags.wfrp4e-archives1.initialization-folder",
+    "drawings": {
+      "path": "drawings",
+      "converter": "drawings"
+    }
   },
   "entries": {
     "The Laurelorn": {
@@ -75,7 +79,114 @@
         }
       },
       "units": "km",
-      "initialization_folder": "Archiwa Imperium Tom I"
+      "initialization_folder": "Archiwa Imperium Tom I",
+      "drawings": {
+        "0pcWMYab51PO9EVw": {
+          "text": "Zrujnowany Most"
+        },
+        "7iqHiGQQza2PNW8W": {
+          "text": "Vorbergwerk"
+        },
+        "84P5jLQKGeNIkGuQ": {
+          "text": "Schlaghügel"
+        },
+        "9ANSyCplu4huayQl": {
+          "text": "Skogholm"
+        },
+        "9fHpVhFooTHmlQio": {
+          "text": "Heiligdorf"
+        },
+        "CmaaNajG7O6oYPCJ": {
+          "text": "GRAFENRICH"
+        },
+        "Dbsu2P5PUbwKIrw1": {
+          "text": "BEECKERHOVEN"
+        },
+        "Eyov6JHqBHwSDoSm": {
+          "text": "NEUES EMSKRANK"
+        },
+        "IDZiJg6eOoguKQmQ": {
+          "text": "Middenheim"
+        },
+        "IlkmVm5VpfRxSR5k": {
+          "text": "Loenen"
+        },
+        "T0PD0UvXCSTi1o12": {
+          "text": "DIETERSHAFEN"
+        },
+        "UEYRvkVhGV3ErwcX": {
+          "text": "Leifhafen"
+        },
+        "XALI6xdT6kCFjxEF": {
+          "text": "Harskamp"
+        },
+        "XxJbFcaJ7GaHbvNu": {
+          "text": "Ruiny Kor Immarmor"
+        },
+        "ZZcLO9NTRqHiAw2h": {
+          "text": "Oostwald"
+        },
+        "Zga9iLHo30z4GUJu": {
+          "text": "Jałowa Kraina"
+        },
+        "ZpPW6AU3co9L3GY3": {
+          "text": "Nordland"
+        },
+        "adyxeWz9ZQ1s9GEM": {
+          "text": "Dunkelkiefer"
+        },
+        "anxzziC4Aa9eRQHy": {
+          "text": "Forstfast"
+        },
+        "fGZ2o5Bpc6CFgzXr": {
+          "text": "Karczma Pęknięte Koło"
+        },
+        "fmKrcTwXHEfio2va": {
+          "text": "Beilen"
+        },
+        "iEXashoXvwcnOtJv": {
+          "text": "OLDENLITZ"
+        },
+        "irUBCRLMvXvaZsB5": {
+          "text": "Zęby Mananna"
+        },
+        "k2sApDzppsJWM88X": {
+          "text": "Stary Szlak Północny"
+        },
+        "kQQGkBcSXpUnBGgi": {
+          "text": "SALZENMUND"
+        },
+        "kYXVP4cHj2AJmOjY": {
+          "text": "Diever"
+        },
+        "pKyXqYqslWOVvAnk": {
+          "text": "Zatopiony Las"
+        },
+        "pwAZ1pk26vG0CNDK": {
+          "text": "Kammendun"
+        },
+        "q0ozr5H3rutOE9z9": {
+          "text": "Kuśtykający Ork"
+        },
+        "q8yLGPF79s43igIm": {
+          "text": "Ueblingen"
+        },
+        "sN24PDoBUVf2LW5u": {
+          "text": "Hargendorf"
+        },
+        "xErtOHYmWbSA3oK7": {
+          "text": "Ukryte Pasmo"
+        },
+        "yGno2lU7dgw59kfE": {
+          "text": "Bagna Schadensumpf"
+        },
+        "yQRrQR1DzFePSVS4": {
+          "text": "Wulfhafen"
+        },
+        "zgwb9xqsbxTiiXig": {
+          "text": "Kronven"
+        }
+      }
     },
     "The Mootland": {
       "id": "SmQJpAnynYyOBusA",
