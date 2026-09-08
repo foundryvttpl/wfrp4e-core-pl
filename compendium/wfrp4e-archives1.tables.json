@@ -1,7 +1,11 @@
 {
   "label": "Tabele (Archiwa Tom I)",
   "mapping": {
-    "initialization_folder": "flags.wfrp4e-archives1.initialization-folder"
+    "initialization_folder": "flags.wfrp4e-archives1.initialization-folder",
+    "results": {
+      "path": "results",
+      "converter": "tableResults"
+    }
   },
   "folders": {
     "Career Tables": "Profesje",

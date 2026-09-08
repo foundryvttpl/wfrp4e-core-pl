@@ -165,7 +165,7 @@
         "3-3": "@UUID[Compendium.wfrp4e-core.items.tNWrJUOArwfWXsPw]{Eteryczny}",
         "5-5": "@UUID[Compendium.wfrp4e-core.items.EO05HX7jql0g605A]{Lot (9)}",
         "6-6": "@UUID[Compendium.wfrp4e-core.items.mDgEMOoJpi8DkRYb]{Magiczny}",
-        "7-7": "@UUID[Compendium.wfrp4e-core.items.yrkI7ATjqLPDTFmZ]{Odporność na Magię (2)}}",
+        "7-7": "@UUID[Compendium.wfrp4e-core.items.yrkI7ATjqLPDTFmZ]{Odporność na Magię (2)}",
         "10-10": "@UUID[Compendium.wfrp4e-core.items.vY0CHKsJRV3gYBj3]{Rzucanie czarów (dowolne)}"
       }
     },
@@ -839,6 +839,13 @@
         "66-90": "@UUID[Compendium.wfrp4e-eis.journals.1tdhntCNqK83TS94.JournalEntryPage.WHkF67bhn4ZHktqe#snieg]{Śnieg}",
         "91-100": "@UUID[Compendium.wfrp4e-eis.journals.1tdhntCNqK83TS94.JournalEntryPage.WHkF67bhn4ZHktqe#zamiec]{Zamieć}"
       }
+    }
+  },
+  "mapping": {
+    "initialization_folder": "flags.wfrp4e-eis.initialization-folder",
+    "results": {
+      "path": "results",
+      "converter": "tableResults"
     }
   }
 }

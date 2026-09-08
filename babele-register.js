@@ -1,3 +1,5 @@
+import "./modules/folder-compatibility.js";
+
 const MODULE_ID = import.meta.url.match(/modules\/([^/]+)/)?.[1] || "wfrp4e-core-pl";
 const MODULE_PATH = `modules/${MODULE_ID}`;
 
@@ -453,25 +455,81 @@ Hooks.once("babele.init", (babele) => {
 		},
 
 		tableResults: (results, translations) => {
-  			return results.map(data => {
+			return results.map(data => {
 				if (translations) {
-					const translation = translations[data._id] || translations[`${data.range[0]}-${data.range[1]}`];
+					const translation = translations[data._id] || translations[`${data.range?.[0]}-${data.range?.[1]}`];
 					if (translation) {
-						if (translation.name) {
-							data = foundry.utils.mergeObject(data, translation, {translated: true});
-						}
-						else {
-							data = foundry.utils.mergeObject(data, foundry.utils.mergeObject({'description': translation}, {translated: true}));
+						if (typeof translation === "object" && translation !== null) {
+							data = foundry.utils.mergeObject(data, translation, { translated: true });
+							if (translation.name && !data.text) {
+								data.text = translation.name;
+							}
+						} else if (typeof translation === "string") {
+							const str = translation.trim();
+							const boldMatch = str.match(/^\s*<(?:b|strong)>(.*?)<\/(?:b|strong)>\s*[:\-–—.]?\s*(.*)$/s);
+							if (boldMatch) {
+								const title = boldMatch[1].replace(/<[^>]+>/g, "").trim();
+								const desc = boldMatch[2].trim();
+								data = foundry.utils.mergeObject(data, {
+									name: title,
+									description: desc,
+									text: str,
+									translated: true
+								});
+							} else {
+								const colonMatch = data.name && data.name.trim() ? str.match(/^([^<:\n]{2,50}):\s*(.+)$/s) : null;
+								if (colonMatch) {
+									const title = colonMatch[1].trim();
+									const desc = colonMatch[2].trim();
+									data = foundry.utils.mergeObject(data, {
+										name: title,
+										description: desc,
+										text: str,
+										translated: true
+									});
+								} else if (data.name && data.name.trim() && (!data.description || !data.description.trim())) {
+									data = foundry.utils.mergeObject(data, {
+										name: str,
+										description: "",
+										text: str,
+										translated: true
+									});
+								} else if ((!data.name || !data.name.trim()) && data.description && data.description.trim()) {
+									data = foundry.utils.mergeObject(data, {
+										description: str,
+										text: str,
+										translated: true
+									});
+								} else {
+									if (data.name && data.name.trim()) {
+										data = foundry.utils.mergeObject(data, {
+											name: str,
+											text: str,
+											translated: true
+										});
+									} else {
+										data = foundry.utils.mergeObject(data, {
+											description: str,
+											text: str,
+											translated: true
+										});
+									}
+								}
+							}
 						}
 					}
 				}
 				if (data.documentUuid) {
-					const text = game.babele.translateField('name', foundry.utils.parseUuid(data.documentUuid).collection.collection, {'name': data.name});
-					if (text) {
-						return foundry.utils.mergeObject(data, foundry.utils.mergeObject({'name': text}, {translated: true}));
-					} else {
-						return data;
-					}
+					try {
+						const parsed = foundry.utils.parseUuid(data.documentUuid);
+						if (parsed?.collection?.collection) {
+							const text = game.babele.translateField("name", parsed.collection.collection, { name: data.name });
+							if (text) {
+								return foundry.utils.mergeObject(data, { name: text, text: text, translated: true });
+							}
+						}
+					} catch (e) {}
+					return data;
 				}
 				return data;
 			});

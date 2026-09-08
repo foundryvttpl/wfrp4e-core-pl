@@ -1,106 +1,110 @@
 {
-    "label": "Tabele (Zestaw Startowy)",
-    "mapping": {
-        "initialization_folder": "flags.wfrp4e-core.initialization-folder"
-    },
-    "folders": {
-        "Career Tables": "Profesje",
-        "Character Creation": "Tworzenie Bohatera",
-        "Core Rulebook": "Podręcznik Główny",
-        "Corruption & Mutation Tables": "Zepsucie i Mutacje",
-        "Critical Hit Tables": "Trafienia Krytyczne",
-        "GM Booklet": "Przybornik Mistrza Gry",
-        "Hit Location": "Miejsca Trafień",
-        "Moo's Homebrew": "Zasady domowe Moo"
-    },
-    "entries": {
-        "3m4LPj58xoNju80B": {
-            "id": "3m4LPj58xoNju80B",
-            "name": "Trafienie Krytyczne (Zestaw Startowy)",
-            "description": " ",
-            "results": {
-                "1-10": "Rozcięcie",
-                "11-20": "Cios w bebechy",
-                "21-30": "Poniżej pasa!",
-                "31-40": "Bez tchu",
-                "41-50": "Potłuczenie",
-                "51-60": "Rana szarpana",
-                "61-65": "Pęknięta kość",
-                "66-70": "Rana otwarta",
-                "71-75": "Bolesne rozcięcie",
-                "76-80": "Złamana kość",
-                "81-85": "Naderwany mięsień",
-                "86-90": "Okaleczenie",
-                "91-95": "Roztrzaskana kość",
-                "96-99": "Pokonany",
-                "100-100": "Na kawałki"
-            }
-        },
-        "BlDLji1LeqHOVj8r": {
-            "id": "BlDLji1LeqHOVj8r",
-            "name": "Trafienie Krytyczne (Zestaw Startowy)",
-            "description": " ",
-            "results": {
-                "1-10": "Rozcięcie",
-                "11-20": "Cios w bebechy",
-                "21-30": "Poniżej pasa!",
-                "31-40": "Pozbawienie tchu",
-                "41-50": "Potłuczenie",
-                "51-60": "Rana szarpana",
-                "61-65": "Pęknięta kość",
-                "66-70": "Rana otwarta",
-                "71-75": "Bolesne rozcięcie",
-                "76-80": "Złamana kość",
-                "81-85": "Naderwany mięsień",
-                "86-90": "Okaleczenie",
-                "91-95": "Roztrzaskana kość",
-                "96-99": "Pokonany",
-                "100-100": "Na kawałki"
-            }
-        },
-        "yvzv7xxQuxX7N16b": {
-            "id": "yvzv7xxQuxX7N16b",
-            "name": "Trafienie Krytyczne (Zestaw Startowy)",
-            "description": " ",
-            "results": {
-                "1-10": "Rozcięcie",
-                "11-20": "Cios w bebechy",
-                "21-30": "Poniżej pasa!",
-                "31-40": "Pozbawienie tchu",
-                "41-50": "Potłuczenie",
-                "51-60": "Rana szarpana",
-                "61-65": "Pęknięta kość",
-                "66-70": "Rana otwarta",
-                "71-75": "Bolesne rozcięcie",
-                "76-80": "Złamana kość",
-                "81-85": "Naderwany mięsień",
-                "86-90": "Okaleczenie",
-                "91-95": "Roztrzaskana kość",
-                "96-99": "Pokonany",
-                "100-100": "Na kawałki"
-            }
-        },
-        "yYfGtudjckO3bubF": {
-            "id": "yYfGtudjckO3bubF",
-            "name": "Trafienie Krytyczne (Zestaw Startowy)",
-            "description": " ",
-            "results": {
-                "1-10": "Rozcięcie",
-                "11-20": "Cios w bebechy",
-                "21-30": "Poniżej pasa!",
-                "31-40": "Pozbawienie tchu",
-                "41-50": "Potłuczenie",
-                "51-60": "Rana szarpana",
-                "61-65": "Pęknięta kość",
-                "66-70": "Rana otwarta",
-                "71-75": "Bolesne rozcięcie",
-                "76-80": "Złamana kość",
-                "81-85": "Naderwany mięsień",
-                "86-90": "Okaleczenie",
-                "91-95": "Roztrzaskana kość",
-                "96-99": "Pokonany",
-                "100-100": "Na kawałki"
-            }
-        }
+  "label": "Tabele (Zestaw Startowy)",
+  "mapping": {
+    "initialization_folder": "flags.wfrp4e-starter-set.initialization-folder",
+    "results": {
+      "path": "results",
+      "converter": "tableResults"
     }
+  },
+  "folders": {
+    "Career Tables": "Profesje",
+    "Character Creation": "Tworzenie Bohatera",
+    "Core Rulebook": "Podręcznik Główny",
+    "Corruption & Mutation Tables": "Zepsucie i Mutacje",
+    "Critical Hit Tables": "Trafienia Krytyczne",
+    "GM Booklet": "Przybornik Mistrza Gry",
+    "Hit Location": "Miejsca Trafień",
+    "Moo's Homebrew": "Zasady domowe Moo"
+  },
+  "entries": {
+    "3m4LPj58xoNju80B": {
+      "id": "3m4LPj58xoNju80B",
+      "name": "Trafienie Krytyczne (Zestaw Startowy)",
+      "description": " ",
+      "results": {
+        "1-10": "Rozcięcie",
+        "11-20": "Cios w bebechy",
+        "21-30": "Poniżej pasa!",
+        "31-40": "Bez tchu",
+        "41-50": "Potłuczenie",
+        "51-60": "Rana szarpana",
+        "61-65": "Pęknięta kość",
+        "66-70": "Rana otwarta",
+        "71-75": "Bolesne rozcięcie",
+        "76-80": "Złamana kość",
+        "81-85": "Naderwany mięsień",
+        "86-90": "Okaleczenie",
+        "91-95": "Roztrzaskana kość",
+        "96-99": "Pokonany",
+        "100-100": "Na kawałki"
+      }
+    },
+    "BlDLji1LeqHOVj8r": {
+      "id": "BlDLji1LeqHOVj8r",
+      "name": "Trafienie Krytyczne (Zestaw Startowy)",
+      "description": " ",
+      "results": {
+        "1-10": "Rozcięcie",
+        "11-20": "Cios w bebechy",
+        "21-30": "Poniżej pasa!",
+        "31-40": "Pozbawienie tchu",
+        "41-50": "Potłuczenie",
+        "51-60": "Rana szarpana",
+        "61-65": "Pęknięta kość",
+        "66-70": "Rana otwarta",
+        "71-75": "Bolesne rozcięcie",
+        "76-80": "Złamana kość",
+        "81-85": "Naderwany mięsień",
+        "86-90": "Okaleczenie",
+        "91-95": "Roztrzaskana kość",
+        "96-99": "Pokonany",
+        "100-100": "Na kawałki"
+      }
+    },
+    "yvzv7xxQuxX7N16b": {
+      "id": "yvzv7xxQuxX7N16b",
+      "name": "Trafienie Krytyczne (Zestaw Startowy)",
+      "description": " ",
+      "results": {
+        "1-10": "Rozcięcie",
+        "11-20": "Cios w bebechy",
+        "21-30": "Poniżej pasa!",
+        "31-40": "Pozbawienie tchu",
+        "41-50": "Potłuczenie",
+        "51-60": "Rana szarpana",
+        "61-65": "Pęknięta kość",
+        "66-70": "Rana otwarta",
+        "71-75": "Bolesne rozcięcie",
+        "76-80": "Złamana kość",
+        "81-85": "Naderwany mięsień",
+        "86-90": "Okaleczenie",
+        "91-95": "Roztrzaskana kość",
+        "96-99": "Pokonany",
+        "100-100": "Na kawałki"
+      }
+    },
+    "yYfGtudjckO3bubF": {
+      "id": "yYfGtudjckO3bubF",
+      "name": "Trafienie Krytyczne (Zestaw Startowy)",
+      "description": " ",
+      "results": {
+        "1-10": "Rozcięcie",
+        "11-20": "Cios w bebechy",
+        "21-30": "Poniżej pasa!",
+        "31-40": "Pozbawienie tchu",
+        "41-50": "Potłuczenie",
+        "51-60": "Rana szarpana",
+        "61-65": "Pęknięta kość",
+        "66-70": "Rana otwarta",
+        "71-75": "Bolesne rozcięcie",
+        "76-80": "Złamana kość",
+        "81-85": "Naderwany mięsień",
+        "86-90": "Okaleczenie",
+        "91-95": "Roztrzaskana kość",
+        "96-99": "Pokonany",
+        "100-100": "Na kawałki"
+      }
+    }
+  }
 }

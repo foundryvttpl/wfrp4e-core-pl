@@ -61,8 +61,8 @@
                             "id": "EzqI5d404kmIdYD4",
                             "name": "Występy (Śpiew)",
                             "script": "args.fields.successBonus++;",
-                            "activationScript": "return args.skill?.name == \"Występy (Śpiew)\" || args.skill?.name == \"Występy (Śpiew)\"",
-                            "hideScript": "return args.skill?.name != \"Występy (Śpiew)\" && args.skill?.name != \"Występy (Śpiew)\""
+                            "activationScript": "return game.wfrp4eCorePl.names.oneOf(args.skill, [\"Entertain (Sing)\", \"Entertain (Singing)\", \"Występy (Śpiew)\"]);",
+                            "hideScript": "return !game.wfrp4eCorePl.names.oneOf(args.skill, [\"Entertain (Sing)\", \"Entertain (Singing)\", \"Występy (Śpiew)\"]);"
                         }
                     ]
                 }

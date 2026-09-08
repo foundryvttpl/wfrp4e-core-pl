@@ -91,7 +91,9 @@
     "modules/corruption-compatibility.js",
     "modules/chat-command-compatibility.js",
     "modules/script-compatibility.js",
-    "modules/config-polish.js"
+    "modules/config-polish.js",
+    "modules/income-compatibility.js",
+    "modules/folder-compatibility.js"
   ],
   "scripts": [
     "modules/initialization.js",
@@ -107,7 +109,7 @@
       "path": "lang/pl.json"
     }
   ],
-  "version": "7.3.5",
+  "version": "7.3.6",
   "url": "https://github.com/foundryvttpl/wfrp4e-core-pl",
   "manifest": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/module.json",
   "download": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/wfrp4e-core-pl.zip"
