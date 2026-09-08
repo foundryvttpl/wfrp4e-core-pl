@@ -5,6 +5,10 @@
     "gender": "system.details.gender.value",
     "gmnotes": "system.details.gmnotes.value",
     "status": "system.details.status.value",
+    "height": "system.details.height.value",
+    "weight": "system.details.weight.value",
+    "haircolour": "system.details.haircolour.value",
+    "eyecolour": "system.details.eyecolour.value",
     "effects": {
       "path": "effects",
       "converter": "effects"
@@ -673,7 +677,7 @@
           "originalName": "Wiedza (Lokalna)"
         },
         "GwjvDLZz3PvK6xgs": {
-          "specification": "The\r Rich"
+          "specification": "Bogaci"
         },
         "3CmztzUGxOQgEW6s": {
           "id": "3CmztzUGxOQgEW6s",
@@ -710,7 +714,7 @@
     "Arwin (Guard)": {
       "id": "ChApB7ffcJyqNbC6",
       "name": "Arwin (Ochroniarz)",
-      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{The Boatman Inn}</p><p><span class=\"fontstyle0\">The two nobles are accompanied by four bodyguards. Hulking brutes, each is over 6ft tall and heavily muscled. They rarely speak, content to lurk near their masters, ever-ready to intervene should anyone dare to talk to or even lay hands upon the pampered jewels of the Reikland’s nobility. If pressed to talk, their growling accents are typical of the lowest of low-lifes from @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Altdorf ’s East End}.</span> </p></section>",
+      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{Zajazd „Przewoźnik”}</p><p><span class=\"fontstyle0\">Dwóm szlachcicom towarzyszy czterech ochroniarzy. To potężne draby, każdy ma ponad 180 centymetrów wzrostu i jest silnie umięśniony. Rzadko się odzywają; wolą czaić się przy swoich panach, zawsze gotowi zareagować, gdyby ktoś ośmielił się odezwać do rozpieszczonych klejnotów reiklandzkiej szlachty, a tym bardziej ich dotknąć. Zmuszeni do rozmowy mówią warkliwym akcentem typowym dla najniższych mętów z @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodniej Dzielnicy Altdorfu}.</span> </p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.ChApB7ffcJyqNbC6",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -1179,7 +1183,7 @@
       "gender": "???",
       "items": {
         "yuGObELH7iLhKKRW": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         },
         "Dc6kMdiQva3YvTxQ": {
           "specification": "1"
@@ -1244,7 +1248,7 @@
     "Boar (Vorbergland Hog)": {
       "id": "43DTVruW8MPuRui4",
       "name": "Knur (Vorberglandzki Wieprz)",
-      "description": "<section id=\"secret-N2SbOaEihv8MMnCk\" class=\"secret\"><p>The following Characteristics describe common farm animals of the Reikland. If you feel an animal is not enough of a challenge, or are presenting the same encounter for a second time, use the  listed Optional Traits, or the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits}.</p></section>",
+      "description": "<section id=\"secret-N2SbOaEihv8MMnCk\" class=\"secret\"><p>Poniższe Charakterystyki opisują pospolite zwierzęta gospodarskie Reiklandu. Jeśli uznasz, że zwierzę nie stanowi wystarczającego wyzwania albo przedstawiasz to samo spotkanie po raz drugi, użyj wymienionych Cech opcjonalnych lub @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólnych cech stworzeń}.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.43DTVruW8MPuRui4",
       "species": "Dzik",
       "gender": "Mężczyzna",
@@ -1399,7 +1403,7 @@
         },
         "XQiiwS9m2Du1IMUz": {
           "id": "XQiiwS9m2Du1IMUz",
-          "name": "Language\r (Guilder)",
+          "name": "Język (Cechowy)",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Język}",
           "originalName": "Language\r (Guilder)"
         },
@@ -1583,7 +1587,7 @@
     "Bögenhafen Watchman": {
       "id": "nCzNGuS22drsDAIe",
       "name": "Strażnik Miejski Bögenhafen",
-      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Although this is the first Chapter where the Characters definitely face the Watch, it’s possible a confrontation with Bögenhafen’s finest will happen earlier. Patrols in the town usually consist of a @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sergeant} leading three @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{watchmen} and a @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{recruit}. By comparison, at the @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfest}, a patrol is usually a watchman leading three  fresh recruits drafted in to help during the fair.</p></section>",
+      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Chociaż to pierwszy rozdział, w którym Bohaterowie z pewnością zmierzą się ze strażą, do konfrontacji z najlepszymi Bögenhafen może dojść wcześniej. Miejski patrol zwykle składa się z @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sierżanta} dowodzącego trzema @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{strażnikami} i @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{rekrutem}. Natomiast podczas @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfestu} patrolowi zazwyczaj przewodzi strażnik, któremu towarzyszy trzech świeżo wcielonych rekrutów pomagających podczas jarmarku.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe",
       "species": "Człowiek",
       "gender": "Różne",
@@ -1619,7 +1623,7 @@
     "Bögenhafen Watch Recruits": {
       "id": "4RZRWe2dSK8hA9OZ",
       "name": "Rekrut Straży miejskiej Bögenhafen",
-      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Although this is the first Chapter where the Characters definitely face the Watch, it’s possible a confrontation with Bögenhafen’s finest will happen earlier. Patrols in the town usually consist of a @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sergeant} leading three @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{watchmen} and a @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{recruit}. By comparison, at the @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfest}, a patrol is usually a watchman leading three  fresh recruits drafted in to help during the fair.</p></section>",
+      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Chociaż to pierwszy rozdział, w którym Bohaterowie z pewnością zmierzą się ze strażą, do konfrontacji z najlepszymi Bögenhafen może dojść wcześniej. Miejski patrol zwykle składa się z @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sierżanta} dowodzącego trzema @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{strażnikami} i @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{rekrutem}. Natomiast podczas @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfestu} patrolowi zazwyczaj przewodzi strażnik, któremu towarzyszy trzech świeżo wcielonych rekrutów pomagających podczas jarmarku.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ",
       "species": "Człowiek",
       "gender": "Różne",
@@ -1632,7 +1636,7 @@
     "Bögenhafen Watch Sergeant": {
       "id": "opX8C6mLOuvFvV0B",
       "name": "Sierżant Straży miejskiej Bögenhafen",
-      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Although this is the first Chapter where the Characters definitely face the Watch, it’s possible a confrontation with Bögenhafen’s finest will happen earlier. Patrols in the town usually consist of a @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sergeant} leading three @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{watchmen} and a @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{recruit}. By comparison, at the @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfest}, a patrol is usually a watchman leading three  fresh recruits drafted in to help during the fair.</p></section>",
+      "description": "<section id=\"secret-wuwkQDehqXeAAALI\" class=\"secret\"><p>Chociaż to pierwszy rozdział, w którym Bohaterowie z pewnością zmierzą się ze strażą, do konfrontacji z najlepszymi Bögenhafen może dojść wcześniej. Miejski patrol zwykle składa się z @UUID[Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B]{sierżanta} dowodzącego trzema @UUID[Compendium.wfrp4e-eis.actors.nCzNGuS22drsDAIe]{strażnikami} i @UUID[Compendium.wfrp4e-eis.actors.4RZRWe2dSK8hA9OZ]{rekrutem}. Natomiast podczas @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfestu} patrolowi zazwyczaj przewodzi strażnik, któremu towarzyszy trzech świeżo wcielonych rekrutów pomagających podczas jarmarku.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.opX8C6mLOuvFvV0B",
       "species": "Człowiek",
       "gender": "Różne",
@@ -1736,7 +1740,7 @@
       "gender": "???",
       "items": {
         "xsGbDFqK2qh7lsIj": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         },
         "utOssR5ycCYzv6jW": {
           "specification": "0"
@@ -1803,12 +1807,12 @@
         "Kf3e2q0sGr0JreXu": {
           "id": "Kf3e2q0sGr0JreXu",
           "name": "Koń Wierzchowy z Rzędem",
-          "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J]{Riding Horse} (aka Palfrey)</p>\n<p>Carrying Capacity: 16</p>",
+          "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J]{Koń wierzchowy} (palfrey)</p>\n<p>Udźwig: 16</p>",
           "originalName": "Koń Wierzchowy z Rzędem"
         },
         "adUf8PjPjikycxPf": {
           "id": "adUf8PjPjikycxPf",
-          "name": "Symbol\r of Rank",
+          "name": "Symbol rangi",
           "description": " ",
           "originalName": "Symbol\r of Rank"
         },
@@ -1823,7 +1827,7 @@
     "Cow (Stimmigen Dairy Cattle)": {
       "id": "Y8rPjEHnWmPLyo0I",
       "name": "Krowa (Stimmigeńska Mleczna)",
-      "description": "<section id=\"secret-VFQRiToR0eMQRlkz\" class=\"secret\"><p>The following Characteristics describe common farm animals of the Reikland. If you feel an animal is not enough of a challenge, or are presenting the same encounter for a second time, use the listed Optional Traits, or the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits}.</p></section>",
+      "description": "<section id=\"secret-VFQRiToR0eMQRlkz\" class=\"secret\"><p>Poniższe Charakterystyki opisują pospolite zwierzęta gospodarskie Reiklandu. Jeśli uznasz, że zwierzę nie stanowi wystarczającego wyzwania albo przedstawiasz to samo spotkanie po raz drugi, użyj wymienionych Cech opcjonalnych lub @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólnych cech stworzeń}.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.Y8rPjEHnWmPLyo0I",
       "species": "Krowa",
       "gender": "Kobieta",
@@ -1870,7 +1874,7 @@
         },
         "eptDwFXMM1cCNg0w": {
           "id": "eptDwFXMM1cCNg0w",
-          "name": "Goods worth\r 2d10 silver shillings",
+          "name": "Towary warte 2k10 srebrnych szylingów",
           "description": " ",
           "originalName": "Goods worth\r 2d10 silver shillings"
         },
@@ -1959,7 +1963,7 @@
     "Dog": {
       "id": "iaVpUaCKx1qEYkq1",
       "name": "Pies",
-      "description": "<section id=\"secret-CVnRstTnrrNdDJ5s\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>Halflings, and many Humans in remote communities, breed large dogs to pull two-wheeled carts and carriages. A few Halflings have tried riding dogs but that rarely turns out well for the dog. Halflings may be short, but they are rarely light.</p></section>",
+      "description": "<section id=\"secret-CVnRstTnrrNdDJ5s\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Niziołki oraz wielu ludzi z odległych osad hoduje duże psy do ciągnięcia dwukołowych wózków i powozów. Kilku niziołków próbowało jeździć na psach, lecz rzadko dobrze kończy się to dla zwierzęcia. Niziołki mogą być niskie, ale rzadko bywają lekkie.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.iaVpUaCKx1qEYkq1",
       "species": "Pies",
       "gender": "Różne",
@@ -2039,7 +2043,7 @@
     "Draught Horse": {
       "id": "guaFC5d5WK8ExDhk",
       "name": "Koń pociągowy",
-      "description": "<section id=\"secret-zAdKu0TanxPHwn5N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>These medium-sized horses are popular with farmers who can afford them and value their versatility. They pull ploughs or carts — a pair can handle all but the heaviest wagons — and make reasonably docile mounts for trips into town on market days.</p></section>",
+      "description": "<section id=\"secret-zAdKu0TanxPHwn5N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Te średniej wielkości konie są popularne wśród rolników, których na nie stać i którzy cenią ich wszechstronność. Ciągną pługi i wozy — para poradzi sobie ze wszystkimi poza najcięższymi wozami — a podczas wypraw do miasta w dni targowe mogą służyć za dość potulne wierzchowce.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.guaFC5d5WK8ExDhk",
       "species": "Konie",
       "gender": "Różne",
@@ -2394,13 +2398,13 @@
     "Erik (Mutant Brigand)": {
       "id": "50xLTGTs9Cq2VrGF",
       "name": "Erik (Mutant Zbój)",
-      "description": "<section id=\"secret-O4LQDiXj4yRMbG9N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{The Mayhem Mystery Tour}</p><p><span class=\"fontstyle0\">Knud’s Mutant brigands are a disturbing bunch, all the more horrifying as the vestigial remains of their humanity are plain to see. This one </span>has the legs of a goat, and speaks with a surprisingly refined Reiklander accent.</p><p>*2 Wounds Remaining</p></section>",
+      "description": "<section id=\"secret-O4LQDiXj4yRMbG9N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{Tajemnicza wycieczka pełna zamętu}</p><p><span class=\"fontstyle0\">Zmutowani zbóje Knuda to niepokojąca gromada, tym straszniejsza, że wyraźnie widać szczątkowe pozostałości ich człowieczeństwa. Ten </span>ma koźle nogi i mówi zaskakująco wytwornym reiklandzkim akcentem.</p><p>*Pozostały 2 Rany</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.50xLTGTs9Cq2VrGF",
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "items": {
         "UxaMncqiI08LwCkd": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         }
       }
     },
@@ -2418,14 +2422,14 @@
           "id": "8dMsZ6H65jrqv2Dj",
           "name": "Pijawki i ich lecznicze właściwości",
           "description": "<p>Księgi zaklęć są zwykle spisywane przez czarodziejów, a ich okładki często bywają zabezpieczone zamknięciami na klucz. Czasami tomy chronione są także magicznymi alarmami lub pieczęciami. Posiadanie księgi zaklęć jest karalne jako herezja, o ile jej posiadacz nie jest czarodziejem licencjonowanym przez Kolegia Magii.</p>",
-          "gmdescription": "<p> Księga Ernsta ma fałszywą okładkę.  W rzeczywistości jest to <em>De Vitae Occultae Daemoniis </em> ( „Sekretne Życie Demonów”)</p><p> Księga jest napisana w języku klasycznym. Bohater, który ją przeczyta, pozna podstawową wiedzę na temat demonów, jak opisano w @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.NS7k4xBGElPSynkI]{bestiariuszu} and suffers a @Corruption[minor]{Pomniejszego źródła} spaczenia  Oznacza to, że będzie musiał zdać Wymagający (+0) Test Opanowania lub otrzyma 1 punkt Zepsucia.</p>",
+          "gmdescription": "<p> Księga Ernsta ma fałszywą okładkę.  W rzeczywistości jest to <em>De Vitae Occultae Daemoniis </em> ( „Sekretne Życie Demonów”)</p><p> Księga jest napisana w języku klasycznym. Bohater, który ją przeczyta, pozna podstawową wiedzę na temat demonów, jak opisano w @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.NS7k4xBGElPSynkI]{bestiariuszu} i zostanie wystawiony na działanie @Corruption[minor]{pomniejszego źródła Spaczenia}. Oznacza to, że będzie musiał zdać Wymagający (+0) Test Opanowania lub otrzyma 1 punkt Zepsucia.</p>",
           "originalName": "Pijawki i ich lecznicze właściwości"
         },
         "IcZ7G6FjfRpo5NUZ": {
           "id": "IcZ7G6FjfRpo5NUZ",
           "name": "Podróżny sakwojaż",
           "description": "Zawiera osobiste rzeczy Ernsta.",
-          "gmdescription": "<p>A hidden compartment holds the preparations he is delivering to Altdorf: six vials of bubbling green liquids, colourful powders, and whatever other materials you care to invent.</p>\n<p>Ernst doesn’t know what they are for, only that they are to be delivered to a Doktor Schmidt at the University of Altdorf. A successful&nbsp;<strong>Challenging (+0) Trade (Apothecary)</strong>&nbsp;Test, or&nbsp;<strong>Difficult (−10) Lore (Chemistry)</strong>&nbsp;Test or similar identifies them as preparations to alleviate palsy and restore strength. Should any unskilled Character get hold of these preparations, they are unable to use them and may even accidentally poison themselves. Consuming any two different substances causes ([[/r 1d10]]{1k10} − Toughness Bonus) @Condition[Poisoned] Conditions (minimum of 1), resisted by a&nbsp;<strong>Challenging (+0) Endurance&nbsp;</strong>Test.</p>",
+          "gmdescription": "<p>W skrytce znajdują się preparaty, które Ernst ma dostarczyć do Altdorfu: sześć fiolek bulgoczącego, zielonego płynu, barwne proszki i jakiekolwiek inne materiały zechcesz wymyślić.</p>\n<p>Ernst nie wie, jakie jest przeznaczenie tych rzeczy, wie jedynie, że musi je dostarczyć doktorowi Schmidtowi z altdorfskiego uniwersytetu. Każdy, kto zda <strong>Wymagający (+0) Test Rzemiosła (Aptekarstwa)</strong> lub <strong>Problematyczny (-10) Test Wiedzy (Chemii)</strong> czy dowolnej innej, podobnej Umiejętności, rozpozna w dostarczanych preparatach komponenty potrzebne do łagodzenia paraliżu i wzmacniania sił witalnych. Niedoświadczony Bohater, który wejdzie w ich posiadanie, nie tylko nie będzie potrafił ich właściwie spożytkować, ale prawdopodobnie się przy tym otruje. Zjedzenie dowolnych dwóch różnych substancji wywoła u pechowca Stan @Condition[Poisoned]{Zatrucie} o poziomie ([[/r 1d10]]{1k10} - Bonus z Wytrzymałości) (minimum 1), który da się odeprzeć <strong>Wymagającym (+0) Testem Odporności</strong>.</p>",
           "originalName": "Podróżny sakwojaż"
         },
         "DwoHJT7Ale0J73Ev": {
@@ -2463,7 +2467,7 @@
     "Fang": {
       "id": "U19UPgmCmwEub4pj",
       "name": " Kieł",
-      "description": "<section id=\"secret-SAqm1Ilc0gNFx02b\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.67GdZ4epIhCwPcOT]{The Steinhäger Offices}</p><p><span class=\"fontstyle0\">@UUID[Compendium.wfrp4e-eis.actors.FF4U0ls9YObaK0q5]{ Schutzowi}  towarzyszy Kieł, wierna, ogromna i czarna suka z ostrymi zębiskami. Jednakże, mimo że Kieł to tellandzki pitbull, czyli jedna z najgroźniejszych ras psów @UUID[Compendium.wfrp4e-core.actors.R1iWvfV9EvgIc8bJ]{psów},  ona sama jest znacznie mniej groźna, niż wygląda. Podąża za głosem żołądka i ochoczo zaprzyjaźni się z każdym Bohaterem, który da jej jedzenie albo zda  </span><span class=\"fontstyle2\"><strong> Przeciętny (+20) Test Oswajania. </strong></span><span class=\"fontstyle0\">Test. She is a good girl.</span></p></section>",
+      "description": "<section id=\"secret-SAqm1Ilc0gNFx02b\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.67GdZ4epIhCwPcOT]{Biura Steinhägerów}</p><p><span class=\"fontstyle0\">@UUID[Compendium.wfrp4e-eis.actors.FF4U0ls9YObaK0q5]{ Schutzowi}  towarzyszy Kieł, wierna, ogromna i czarna suka z ostrymi zębiskami. Jednakże, mimo że Kieł to tellandzki pitbull, czyli jedna z najgroźniejszych ras psów @UUID[Compendium.wfrp4e-core.actors.R1iWvfV9EvgIc8bJ]{psów},  ona sama jest znacznie mniej groźna, niż wygląda. Podąża za głosem żołądka i ochoczo zaprzyjaźni się z każdym Bohaterem, który da jej jedzenie albo zda  </span><span class=\"fontstyle2\"><strong> Przeciętny (+20) Test Oswajania. </strong></span><span class=\"fontstyle0\">To dobra psina.</span></p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.U19UPgmCmwEub4pj",
       "species": "Tellandzki Pitbull",
       "gender": "Mężczyzna",
@@ -2520,7 +2524,7 @@
       "gender": "???",
       "items": {
         "xsGbDFqK2qh7lsIj": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         },
         "51YmiXHGsxybuZS1": {
           "specification": "2"
@@ -2536,7 +2540,7 @@
     "Frank (Guard)": {
       "id": "nQ9SiPe6AX2a2mHg",
       "name": "Frank (Ochroniarz)",
-      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{The Boatman Inn}</p><p><span class=\"fontstyle0\">The two nobles are accompanied by four bodyguards. Hulking brutes, each is over 6ft tall and heavily muscled. They rarely speak, content to lurk near their masters, ever-ready to intervene should anyone dare to talk to or even lay hands upon the pampered jewels of the Reikland’s nobility. If pressed to talk, their growling accents are typical of the lowest of low-lifes from @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Altdorf ’s East End}.</span> </p></section>",
+      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{Zajazd „Przewoźnik”}</p><p><span class=\"fontstyle0\">Dwóm szlachcicom towarzyszy czterech ochroniarzy. To potężne draby, każdy ma ponad 180 centymetrów wzrostu i jest silnie umięśniony. Rzadko się odzywają; wolą czaić się przy swoich panach, zawsze gotowi zareagować, gdyby ktoś ośmielił się odezwać do rozpieszczonych klejnotów reiklandzkiej szlachty, a tym bardziej ich dotknąć. Zmuszeni do rozmowy mówią warkliwym akcentem typowym dla najniższych mętów z @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodniej Dzielnicy Altdorfu}.</span> </p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.nQ9SiPe6AX2a2mHg",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -2590,7 +2594,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Złoto 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.qxnXlkXKtBuIHNfu.JournalEntryPage.0ZrNDqAfjPTAPgN1#uninvited-guests]{Uninvited Guests}</p><p><span class=\"fontstyle0\">Baumann is a lean man in his mid-30s with greasy hair and brown eyes. He is ‘the management’ of the Crossed Pikes and a ranking member of the Ranaldan Crooked Fingers. He is a likeable rogue who prefers to avoid violence if possible. However, if he feels his crew are in danger of being compromised in any way, he is not quite so peaceful. He is well connected in the town’s underworld, and thanks to a web of blackmail, threats, and ‘special arrangements’ he has a surprisingly wide sphere of influence at all levels.</span></p><p><span class=\"fontstyle0\">For any Character who befriends him, he makes a very useful patron, source, or mentor. He speaks with an easy, street Reiklander accent, and frequently cleans his fingernails with his dagger.</span></p><p><span class=\"fontstyle2\"><strong>Note</strong>: </span><span class=\"fontstyle0\">Baumann has no Blessings or Miracles of Ranald. Like most in the cults, he is not a blessed priest, but he is a ranking member of the Crooked Fingers Order.</span></p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.qxnXlkXKtBuIHNfu.JournalEntryPage.0ZrNDqAfjPTAPgN1#uninvited-guests]{Nieproszeni goście}</p><p><span class=\"fontstyle0\">Baumann jest szczupłym mężczyzną po trzydziestce, o przetłuszczonych włosach i brązowych oczach. Zarządza „Skrzyżowanymi Pikami” i zajmuje wysoką pozycję w ranaldyckim Zakonie Skrzyżowanych Palców. To sympatyczny łotr, który w miarę możliwości unika przemocy. Jeżeli jednak uzna, że jego ludzie mogą zostać w jakikolwiek sposób zdemaskowani lub zagrożeni, przestaje być pokojowo nastawiony. Ma szerokie kontakty w miejskim półświatku, a dzięki sieci szantażu, gróźb i „specjalnych układów” dysponuje zaskakująco rozległymi wpływami na wszystkich szczeblach.</span></p><p><span class=\"fontstyle0\">Dla Bohatera, który się z nim zaprzyjaźni, może stać się bardzo użytecznym patronem, źródłem informacji albo mentorem. Mówi swobodnym, ulicznym reiklandzkim akcentem i często czyści paznokcie sztyletem.</span></p><p><span class=\"fontstyle2\"><strong>Uwaga</strong>: </span><span class=\"fontstyle0\">Baumann nie posiada Błogosławieństw ani Cudów Ranalda. Jak większość członków kultu nie jest wyświęconym kapłanem, lecz wysoko postawionym członkiem Zakonu Skrzyżowanych Palców.</span></p><p></p>",
       "items": {
         "Lxf0emO9VXTxa6V7": {
           "id": "Lxf0emO9VXTxa6V7",
@@ -2715,7 +2719,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Złoto 3",
-      "gmnotes": "<p><span class=\"fontstyle0\">Franz Steinhäger is short, grey-haired, and corpulent, and waddles as he walks. He sees @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen’s} plan as a means to get rich quick.</span></p><p><span class=\"fontstyle0\">Once the ritual is completed, he hopes to depose @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen} and take over the running of the Ordo Septenarius. To aid in this he is currently learning the basics of magic from @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen} and @UUID[Compendium.wfrp4e-eis.actors.IvvkdVTJzutEsrlX]{Gideon}, which he was surprised he could learn at all (in truth, it’s the Chaotic influence of Gideon changing Steinhäger’s soul, making it now possible for him to learn magic).</span></p><p><span class=\"fontstyle0\">Both @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen} and @UUID[Compendium.wfrp4e-eis.actors.IvvkdVTJzutEsrlX]{Gideon} suspect Steinhäger’s plan, but see no reason not to play him along until his demise at the ritual. Steinhäger speaks with a gruff Reiklander accent, and frowns perpetually.</span></p><p> </p><p></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Franz Steinhäger jest niski, siwy i korpulentny, a podczas chodzenia kołysze się na boki. Traktuje plan @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugena} jako sposób na szybkie wzbogacenie się.</span></p><p><span class=\"fontstyle0\">Po zakończeniu rytuału zamierza obalić @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugena} i przejąć kierownictwo nad Ordo Septenarius. Aby się do tego przygotować, uczy się obecnie podstaw magii od @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugena} i @UUID[Compendium.wfrp4e-eis.actors.IvvkdVTJzutEsrlX]{Gideona}. Ku własnemu zaskoczeniu w ogóle jest w stanie je pojąć. W rzeczywistości to chaotyczny wpływ Gideona przeobraża duszę Steinhägera i umożliwia mu naukę magii.</span></p><p><span class=\"fontstyle0\">Zarówno @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen}, jak i @UUID[Compendium.wfrp4e-eis.actors.IvvkdVTJzutEsrlX]{Gideon} podejrzewają, co planuje Steinhäger, lecz nie widzą powodu, by nie podtrzymywać jego złudzeń aż do śmierci podczas rytuału. Steinhäger mówi szorstkim reiklandzkim akcentem i nieustannie krzywi się z niesmakiem.</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "BPgKiQjdUltERKtu": {
           "id": "BPgKiQjdUltERKtu",
@@ -2874,7 +2878,7 @@
     "Georg Handelsson": {
       "id": "4JYaYJqgsJMnTDe3",
       "name": "Georg Handelsson",
-      "description": "<section id=\"secret-dY0rrKJaMzplgKkL\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.aI05RCFli7s2SPP2.JournalEntryPage.uWlg0JgRwaUQNInI#warehouse-17]{Warehouse 17}</p><p>Big Georg is in his 50s, 6’5” tall, and has a snow-white beard. He lives alone with his two dogs, and for the last three years has barely said more than, ‘<em>Oi</em>!’ when an idiot pokes a nose into his warehouse when they shouldn’t.</p></section>",
+      "description": "<section id=\"secret-dY0rrKJaMzplgKkL\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.aI05RCFli7s2SPP2.JournalEntryPage.uWlg0JgRwaUQNInI#warehouse-17]{Magazyn 17}</p><p>Wielki Georg jest po pięćdziesiątce, mierzy niemal dwa metry i ma śnieżnobiałą brodę. Mieszka samotnie z dwoma psami, a przez ostatnie trzy lata ledwie powiedział coś więcej niż „<em>Hej</em>!”, gdy jakiś idiota wściubia nos do jego magazynu, choć nie powinien.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.4JYaYJqgsJMnTDe3",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -2998,7 +3002,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.67GdZ4epIhCwPcOT]{The Steinhäger Offices}</p><p><span class=\"fontstyle0\">Gerhard, a thin man with shocking-white hair and deep-grey eyes, has served the @UUID[Compendium.wfrp4e-eis.actors.Coxv92EfL6VmlpCS]{Steinhäger} family for the majority of his 63 years. He is very loyal and does his utmost to stop any break-ins. However, he is not suicidal and surrenders or flees if things are looking bad. His accent is unrefined and he speaks with a wheeze.</span></p><p> </p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.67GdZ4epIhCwPcOT]{Biura Steinhägerów}</p><p><span class=\"fontstyle0\">Gerhard to szczupły mężczyzna o śnieżnobiałych włosach i ciemnoszarych oczach. Przez większość swoich 63 lat służył rodzinie @UUID[Compendium.wfrp4e-eis.actors.Coxv92EfL6VmlpCS]{Steinhägerów}. Jest bardzo lojalny i robi wszystko, co w jego mocy, aby powstrzymać włamywaczy. Nie ma jednak skłonności samobójczych i podda się albo ucieknie, jeśli sytuacja zacznie wyglądać źle. Mówi niewyszukanym akcentem i przy tym świszczy.</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "LhhqJBDGLKDoATBq": {
           "id": "LhhqJBDGLKDoATBq",
@@ -3050,7 +3054,7 @@
     "Goat (Booted Rottgeist)": {
       "id": "CTE9Gs7ZibYYv2f0",
       "name": "Koza (Wierzgająca Rottgeiska)",
-      "description": "<section id=\"secret-eLMtofCBtmn4QLnS\" class=\"secret\"><p>The following Characteristics describe common farm animals of the Reikland. If you feel an animal is not enough of a challenge, or are presenting the same encounter for a second time, use the  listed Optional Traits, or the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits}.</p></section>",
+      "description": "<section id=\"secret-eLMtofCBtmn4QLnS\" class=\"secret\"><p>Poniższe Charakterystyki opisują pospolite zwierzęta gospodarskie Reiklandu. Jeśli uznasz, że zwierzę nie stanowi wystarczającego wyzwania albo przedstawiasz to samo spotkanie po raz drugi, użyj wymienionych Cech opcjonalnych lub @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólnych cech stworzeń}.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.CTE9Gs7ZibYYv2f0",
       "species": "Koza",
       "gender": "Różne",
@@ -3083,7 +3087,7 @@
     "Gorrof (Guard)": {
       "id": "kcWh61fvE7EppOox",
       "name": "Gorrof (Ochroniarz)",
-      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{The Boatman Inn}</p><p><span class=\"fontstyle0\">The two nobles are accompanied by four bodyguards. Hulking brutes, each is over 6ft tall and heavily muscled. They rarely speak, content to lurk near their masters, ever-ready to intervene should anyone dare to talk to or even lay hands upon the pampered jewels of the Reikland’s nobility. If pressed to talk, their growling accents are typical of the lowest of low-lifes from @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Altdorf ’s East End}.</span> </p></section>",
+      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{Zajazd „Przewoźnik”}</p><p><span class=\"fontstyle0\">Dwóm szlachcicom towarzyszy czterech ochroniarzy. To potężne draby, każdy ma ponad 180 centymetrów wzrostu i jest silnie umięśniony. Rzadko się odzywają; wolą czaić się przy swoich panach, zawsze gotowi zareagować, gdyby ktoś ośmielił się odezwać do rozpieszczonych klejnotów reiklandzkiej szlachty, a tym bardziej ich dotknąć. Zmuszeni do rozmowy mówią warkliwym akcentem typowym dla najniższych mętów z @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodniej Dzielnicy Altdorfu}.</span> </p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.kcWh61fvE7EppOox",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -3137,7 +3141,7 @@
       "species": "Krasnolud",
       "gender": "Mężczyzna",
       "status": "Brąz 0",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#key-scene:-the-drunken-dwarf]{Key Scene: The Drunken Dwarf}</p><p><span class=\"fontstyle0\">Gottri is flabby, filthy, has matted greying hair and a matted beard, and has bloodshot brown eyes. He is a smelly, disgusting creature, whose earlier engineering life is long behind him. When the Characters first see him, he seems an object of pity, but should they free him, their opinions will likely change when Gottri reaches for his next drink. And his next. His beard and clothing are stained with rotten fruit, and he scratches at lice incessantly. When in the stocks, he is only semiconscious, with a chalkboard hung around his neck bearing the words ‘DRUNKARD AND VAGRANT’. He speaks in slurs and is prone to drunken diversions that make very little sense.</span></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#key-scene:-the-drunken-dwarf]{Kluczowa scena: Pijany krasnolud}</p><p><span class=\"fontstyle0\">Gottri jest obwisły i brudny, ma skołtunione, siwiejące włosy, równie skołtunioną brodę oraz przekrwione brązowe oczy. To cuchnąca, odrażająca istota, której dawne życie inżyniera należy do odległej przeszłości. Kiedy Bohaterowie widzą go po raz pierwszy, budzi litość, ale jeśli go uwolnią, ich zdanie zapewne zmieni się, gdy Gottri sięgnie po kolejny trunek. A potem następny. Jego broda i ubranie są poplamione zgniłymi owocami, a on bez przerwy drapie się z powodu wszy. Zakuty w dyby jest zaledwie półprzytomny, a na szyi ma zawieszoną tabliczkę z napisem „PIJAK I WŁÓCZĘGA”. Mówi niewyraźnie i ma skłonność do pijackich dygresji, które nie mają wiele sensu.</span></p>",
       "items": {
         "Ut1ITIRi2bTk4CId": {
           "id": "Ut1ITIRi2bTk4CId",
@@ -3225,7 +3229,7 @@
     "Great Cat": {
       "id": "8OyCmwhJL4YQFI0N",
       "name": "Wielki kot ",
-      "description": "<section id=\"secret-CbO9d4DQo4Z8wD7G\" class=\"secret\"><p>Great Cats live in forest and mountain areas away from Humans. They are slender, rangy creatures, about the size of a large Hunting Dog, standing about 2 ft at the shoulder and measuring almost 6 ft from nose to tail. Their fur is mottled with black and brown stripes, providing them with near-perfect camouflage in a shadowed forest. They feed on Deer, Giant Rats, and small game of various kinds.</p></section>",
+      "description": "<section id=\"secret-CbO9d4DQo4Z8wD7G\" class=\"secret\"><p>Wielkie koty żyją w lasach i górach, z dala od ludzi. Są smukłymi, żylastymi stworzeniami wielkości dużego psa myśliwskiego; w kłębie mierzą około 60 centymetrów, a od nosa po koniec ogona niemal 180 centymetrów. Ich futro jest cętkowane czarnymi i brązowymi pasami, co zapewnia im niemal doskonały kamuflaż w cienistym lesie. Polują na jelenie, ogromne szczury i wszelkiego rodzaju małą zwierzynę.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.8OyCmwhJL4YQFI0N",
       "species": "Kot",
       "gender": "Różne",
@@ -3282,7 +3286,7 @@
       "species": "Krasnolud",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#doctor-malthusiuss-zoocopeia]{Doctor Malthusius's Zoocopeia}</p><p><span class=\"fontstyle0\">Slate-eyed Grunni is much more seedy-looking than his @UUID[Compendium.wfrp4e-eis.actors.kQyaJB0lSLQ2NLu8]{employer}. He constantly scratches at his dirty-grey beard, muttering to himself and sneering as he goes. He is full of self-pity, and takes out his disgruntlement on the Zoocopeia’s exhibits by poking them viciously with the pointed stick he always carries. He grew up in Altdorf, and his gruff accent reflects it, but he’ll be  happy if he never sees that city again.</span></p><p> </p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#doctor-malthusiuss-zoocopeia]{Menażeria doktora Malthusiusa}</p><p><span class=\"fontstyle0\">Stalowooki Grunni wygląda na znacznie bardziej podejrzanego typa niż jego @UUID[Compendium.wfrp4e-eis.actors.kQyaJB0lSLQ2NLu8]{pracodawca}. Bez przerwy drapie się po brudnoszarej brodzie, mamrocze do siebie i szydzi. Użala się nad sobą, a niezadowolenie wyładowuje na okazach menażerii, dźgając je złośliwie ostrym kijkiem, który zawsze nosi przy sobie. Dorastał w Altdorfie, co słychać w jego szorstkim akcencie, ale będzie szczęśliwy, jeśli już nigdy nie zobaczy tego miasta.</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "CrMByMjiq7IERxXz": {
           "id": "CrMByMjiq7IERxXz",
@@ -3437,7 +3441,7 @@
           "specification": "5"
         },
         "AcxMaeuFn3jKVu8c": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         }
       }
     },
@@ -3449,7 +3453,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p><span class=\"fontstyle2\">Sandy-haired Gunnar and dark-bearded @UUID[Compendium.wfrp4e-eis.actors.uzWAvJDoBl0osDnW]{Hultz} are the coachmen for @UUID[Compendium.wfrp4e-eis.journals.XGUpnYfS67guNIWJ.JournalEntryPage.R2BCxi4CJH4hUrru#ratchett-lines]{Ratchett Lines}. Both men are of medium height; but Hultz, now in his 40s, is a good bit fatter. The two coachmen have very little to say to the Characters unless bought a beer or three (preferrably more) after which they become</span> fast friends and are a potentially great source of information (see @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Rumours}).</p><p> </p><p></p>",
+      "gmnotes": "<p><span class=\"fontstyle2\">Jasnowłosy Gunnar i ciemnobrody @UUID[Compendium.wfrp4e-eis.actors.uzWAvJDoBl0osDnW]{Hultz} pracują jako woźnice dla kompanii przewozowej @UUID[Compendium.wfrp4e-eis.journals.XGUpnYfS67guNIWJ.JournalEntryPage.R2BCxi4CJH4hUrru#ratchett-lines]{Zębatka}. Obydwaj są średniego wzrostu, ale Hultz, już koło czterdziestki, jest nieco tęższy. Woźnice nie są zbyt rozmowni, o ile Bohaterowie nie postawią im piwa lub trzech, a najlepiej jeszcze więcej. Zaraz po tym staną się ich najlepszymi przyjaciółmi i potencjalnie znakomitym źródłem informacji (zobacz @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Plotki}).</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "lJbLDJtg3EJrR1DB": {
           "id": "lJbLDJtg3EJrR1DB",
@@ -3490,7 +3494,7 @@
         "cxAO6tiJpd0Kif1X": {
           "id": "cxAO6tiJpd0Kif1X",
           "name": "płaszcz (duży i ciepły)",
-          "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Protects wearer against the elements and extreme cold; without a good coat or similar, you will receive penalties to resist Cold Exposure</p>",
+            "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
           "originalName": "płaszcz (duży i ciepły)"
         }
       }
@@ -3523,7 +3527,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p>Gustav is 5’7”, bald, and has bushy grey side-whiskers and blue eyes. In his mid-50s, he is a large and jolly fellow who always has plenty to say to everyone, whether or not they show any inclination to listen. Most of Gustav's conversation revolves around ensuring his guests are well looked after, the state of the weather, the condition of the roads, and anything else that springs into his mind. Gustav will talk for hours in his Altdorf accent if given the chance, and can be a very valuable source of information (see @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Rumours}).</p><p><span class=\"fontstyle0\">Gustav typically keeps his blunderbuss under the bar. His trappings also include the @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.U1AyyYhJ5Oqyb6VP]{Coach and Horses Inn}, and seeds (to feed @UUID[Compendium.wfrp4e-eis.actors.fuSC9ZpTC5GfxZJT]{Blackie}).</span></p>",
+      "gmnotes": "<p>Gustav ma około 170 centymetrów wzrostu, jest łysy, ma krzaczaste, siwe bokobrody i niebieskie oczy. Ten pięćdziesięciokilkuletni, postawny i wesoły człowiek zawsze ma wszystkim wiele do powiedzenia, niezależnie od tego, czy ktokolwiek chce go słuchać. Większość jego rozmów dotyczy troski o gości, pogody, stanu dróg i wszystkiego, co akurat przyjdzie mu do głowy. Jeśli tylko dostanie szansę, potrafi godzinami mówić altdorfskim akcentem i może być bardzo cennym źródłem informacji (zobacz @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Plotki}).</p><p><span class=\"fontstyle0\">Gustav zwykle trzyma garłacz pod barem. Do jego wyposażenia należy również zajazd @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.U1AyyYhJ5Oqyb6VP]{„Powóz i Konie”} oraz woreczek z ziarnem dla @UUID[Compendium.wfrp4e-eis.actors.fuSC9ZpTC5GfxZJT]{Czarnulka}.</span></p>",
       "items": {
         "52of2fa5jN4BEaE2": {
           "id": "52of2fa5jN4BEaE2",
@@ -3577,7 +3581,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#doctor-malthusiuss-zoocopeia]{Doctor Malthusius's Zoocopeia}</p><p><span class=\"fontstyle0\">He may not be the tallest man, or the most handsome, but his eyes glitter. Doctor Malthusius has shoulder-length, shiny blond hair and a dazzling smile. He is gaudily dressed, like many of the performers at the fair, but his clothes are old, faded, and worn. However, for all he is somewhat seedy-looking, Malthusius is a natural entertainer with a gift for hyperbole that never fails to attract attention. His accent is deeply @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{East End Altdorf}, but he somehow makes every word sound like poetry. Behind all the flashing smiles, Malthusius's real name is Hans Pfliefer, a notorious conman from @UUID[Compendium.wfrp4e-middenheim.journals.PuIrlGBOjxuWpK3P]{Middenheim}. He fled the city over a decade ago with the Watch hot on his heels. He is quietly proud that there is still a bounty of 5 GC on his head.</span></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#doctor-malthusiuss-zoocopeia]{Menażeria doktora Malthusiusa}</p><p><span class=\"fontstyle0\">Może nie jest najwyższy ani najprzystojniejszy, ale jego oczy błyszczą. Doktor Malthusius ma sięgające do ramion, lśniące blond włosy i olśniewający uśmiech. Ubiera się krzykliwie, jak wielu wykonawców na jarmarku, lecz jego stroje są stare, wyblakłe i znoszone. Mimo nieco podejrzanego wyglądu Malthusius jest urodzonym artystą estradowym, obdarzonym talentem do przesady, który zawsze przyciąga uwagę. Mówi wyraźnym akcentem @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodniej Dzielnicy Altdorfu}, ale każde słowo potrafi przemienić w poezję. Za błyskotliwymi uśmiechami kryje się Hans Pfliefer, osławiony oszust z @UUID[Compendium.wfrp4e-middenheim.journals.PuIrlGBOjxuWpK3P]{Middenheimu}. Ponad dekadę temu uciekł z miasta, mając straż tuż za plecami. Skrycie napawa go dumą, że za jego głowę nadal wyznaczona jest nagroda 5 złotych koron.</span></p>",
       "items": {
         "VnYPpHDhxPZ8aQWa": {
           "id": "VnYPpHDhxPZ8aQWa",
@@ -3634,6 +3638,7 @@
       "species": "Niziołek",
       "gender": "Mężczyzna",
       "status": "Brąz 2",
+      "haircolour": "Jasnobrązowe",
       "items": {
         "kSZo2gFKHhZEqjyy": {
           "id": "kSZo2gFKHhZEqjyy",
@@ -3774,7 +3779,7 @@
     "Heavy Draught Horse": {
       "id": "PZiW5RRL0sqmGjaL",
       "name": "Ciężki koń pociągowy",
-      "description": "<section id=\"secret-6TGpHtiUV60MNa8U\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>These are the largest horses in the Empire, and probably the largest in the Old World. Large draught horses can weigh more than a ton and pull almost anything. They can be ridden, but few are trained to accept a rider. Although most nobles would deny it, draught horses are the original breeding stock used to produce heavy warhorses.</p></section>",
+      "description": "<section id=\"secret-6TGpHtiUV60MNa8U\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>To największe konie w Imperium, a prawdopodobnie także w Starym Świecie. Wielkie konie pociągowe mogą ważyć ponad tonę i ciągnąć niemal wszystko. Można na nich jeździć, lecz niewiele z nich wyszkolono do przyjmowania jeźdźca. Chociaż większość szlachciców temu zaprzeczy, to właśnie konie pociągowe stanowią pierwotną linię hodowlaną ciężkich koni bojowych.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.PZiW5RRL0sqmGjaL",
       "species": "Konie",
       "gender": "Różne",
@@ -3796,7 +3801,7 @@
     "Heavy Warhorse": {
       "id": "NJxgxApkhZixXYEj",
       "name": "Ciężki koń bojowy",
-      "description": "<section id=\"secret-xIp5ElOCFEAf5F2N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>The largest warhorses, sometimes called ‘destriers’, are ridden by armoured knights and other heavy cavalry. These are rarely used for travelling, because it makes no sense to use such an expensive and battle-hardened animal for trivial tasks. While not as fast as their smaller counterparts, they are well trained and their charge is almost unstoppable.</p></section>",
+      "description": "<section id=\"secret-xIp5ElOCFEAf5F2N\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Największe konie bojowe, zwane czasem destrierami, dosiadają opancerzeni rycerze i inni ciężkozbrojni kawalerzyści. Rzadko używa się ich w podróży, gdyż nie ma sensu zaprzęgać tak drogiego i zahartowanego w boju zwierzęcia do błahych zadań. Choć nie są tak szybkie jak ich mniejsi krewni, są doskonale wyszkolone, a ich szarża niemal nie do zatrzymania.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.NJxgxApkhZixXYEj",
       "species": "Konie",
       "gender": "Różne",
@@ -3873,7 +3878,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Brąz 5",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.UvLra86Mr3grVstE.JournalEntryPage.G9MK38M69rVeXrtu#szachraje]{Szachraje}</p><p>Bystry, komicznie przygarbiony, o gęstych brwiach, zwinnych dłoniach i znaczącym spojrzeniu: Heinrich „Zrzęda” Marken urodził się, by być aktorem. Może by i nim został, gdyby nie przegrał życia w karty, nie musiał uciekać przed złymi ludźmi i nie zarabiał w niewłaściwy sposób. Obecnie Zrzęda – prześladowany rozmyślaniami o tym, kim mógł zostać, gdyby nie parszywy los – rozgrywa ludzi w imperialnych miastach. Przyciąga ich wyglądem, rozbraja żartami i okrada zwinnymi palcami. A jednak większość odchodzi uśmiechnięta od ucha do ucha.</p><h4>Bracie mój, gdzie jesteś?</h4><p>Markenowie zaczęli szukać zaginionego krewnego. Nie spoczną, póki nie zmuszą go, aby zapłacił za to, że porzucił rodzinę i zobowiązania. Oferują niezłą sumę za wiadomość o miejscu pobytu krewniaka. Zapłacą też znacznie więcej każdemu, kto dostarczy go żywego. Dlaczego Markenowie tak desperacko chcą dorwać krnąbrnego brata? Co zrobią Bohaterowie, gdy Zrzęda zaoferuje im gorzej płatną, lecz znacznie zabawniejszą misję oszukania krewnych i posłania ich w diabły? </p><blockquote class=\"sidebar\"><div class=\"journal-image float-right\"><img src=\"modules/wfrp4e-eis/assets/signs-symbols/purple-hand-stamp.webp\" width=\"63\" height=\"60\"></div><h3 style=\"text-align: center\"><em>The OBSADA CIENI - DUPA, A NIE KULTYSTA…</em></h3><p><em>Możesz użyć Zrzędy, by dodać kolorytu @UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI]{Schaffenfest}. Jego historia jest znacznie głębsza i mroczniejsza. Jeżeli chcesz, możesz wplątać w nią Bohaterów. Szachraj poznał już kiedyś Kastora Lieberunga. Marken nie pracował bowiem sam, on i jego bracia przeprowadzili wspólnie całą masę rozmaitych szwindli. Pewnego dnia jego rodzina wdała się w interesy z egzotyczną grupą. Heinrich odkrył w końcu, że organizacja była znacznie bardziej mroczna niż jej nazwa – Purpurowa Dłoń. Marken uciekł, gdyż jak sam mówi: „Nie dołączyłbym do żadnego kultu, który chciałby mnie na członka”. Wie jednak o niej znacznie więcej niż Bohaterowie, chociaż nie dość, by móc znacząco pokrzyżować plany Dłoni. Możesz zatem użyć Zrzędy, by przekazać Bohaterom potrzebne im informacje o kulcie. Tak bystry szarlatan jak on szybko się zorientuje, że ma do czynienia z sobowtórem, a nie prawdziwym Lieberungiem. Jeżeli uzna awanturników za porządnych gości, zaczepi ich pewnego dnia i zaprosi na kolejkę piwa i krótką rozmowę.</em></p></blockquote>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.UvLra86Mr3grVstE.JournalEntryPage.G9MK38M69rVeXrtu#szachraje]{Szachraje}</p><p>Bystry, komicznie przygarbiony, o gęstych brwiach, zwinnych dłoniach i znaczącym spojrzeniu: Heinrich „Zrzęda” Marken urodził się, by być aktorem. Może by i nim został, gdyby nie przegrał życia w karty, nie musiał uciekać przed złymi ludźmi i nie zarabiał w niewłaściwy sposób. Obecnie Zrzęda – prześladowany rozmyślaniami o tym, kim mógł zostać, gdyby nie parszywy los – rozgrywa ludzi w imperialnych miastach. Przyciąga ich wyglądem, rozbraja żartami i okrada zwinnymi palcami. A jednak większość odchodzi uśmiechnięta od ucha do ucha.</p><h4>Bracie mój, gdzie jesteś?</h4><p>Markenowie zaczęli szukać zaginionego krewnego. Nie spoczną, póki nie zmuszą go, aby zapłacił za to, że porzucił rodzinę i zobowiązania. Oferują niezłą sumę za wiadomość o miejscu pobytu krewniaka. Zapłacą też znacznie więcej każdemu, kto dostarczy go żywego. Dlaczego Markenowie tak desperacko chcą dorwać krnąbrnego brata? Co zrobią Bohaterowie, gdy Zrzęda zaoferuje im gorzej płatną, lecz znacznie zabawniejszą misję oszukania krewnych i posłania ich w diabły? </p><blockquote class=\"sidebar\"><div class=\"journal-image float-right\"><img src=\"modules/wfrp4e-eis/assets/signs-symbols/purple-hand-stamp.webp\" width=\"63\" height=\"60\"></div><h3 style=\"text-align: center\"><em>OBSADA CIENI - DUPA, A NIE KULTYSTA…</em></h3><p><em>Możesz użyć Zrzędy, by dodać kolorytu @UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI]{Schaffenfest}. Jego historia jest znacznie głębsza i mroczniejsza. Jeżeli chcesz, możesz wplątać w nią Bohaterów. Szachraj poznał już kiedyś Kastora Lieberunga. Marken nie pracował bowiem sam, on i jego bracia przeprowadzili wspólnie całą masę rozmaitych szwindli. Pewnego dnia jego rodzina wdała się w interesy z egzotyczną grupą. Heinrich odkrył w końcu, że organizacja była znacznie bardziej mroczna niż jej nazwa – Purpurowa Dłoń. Marken uciekł, gdyż jak sam mówi: „Nie dołączyłbym do żadnego kultu, który chciałby mnie na członka”. Wie jednak o niej znacznie więcej niż Bohaterowie, chociaż nie dość, by móc znacząco pokrzyżować plany Dłoni. Możesz zatem użyć Zrzędy, by przekazać Bohaterom potrzebne im informacje o kulcie. Tak bystry szarlatan jak on szybko się zorientuje, że ma do czynienia z sobowtórem, a nie prawdziwym Lieberungiem. Jeżeli uzna awanturników za porządnych gości, zaczepi ich pewnego dnia i zaprosi na kolejkę piwa i krótką rozmowę.</em></p></blockquote>",
       "items": {
         "RjXsGEYoO2yqKNTC": {
           "id": "RjXsGEYoO2yqKNTC",
@@ -4002,7 +4007,7 @@
         },
         "Z9hQe46ykQBZneoU": {
           "id": "Z9hQe46ykQBZneoU",
-          "name": "Ranged\r (Blackpowder)",
+          "name": "Broń Dystansowa (Czarnoprochowa)",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{Broń Zasięgowa}</p>",
           "originalName": "Ranged\r (Blackpowder)"
         },
@@ -4112,7 +4117,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Złoto 2",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#festival-court-and-stocks]{Festival Court and Stocks}</p><p><span class=\"fontstyle0\">Councillor Heinz Richter is in his 50s and has neat, grey hair and pale-blue eyes. He tries hard to look stern, but cannot conceal his basic good nature and kindheartedness. He is welldressed and has a marvellous lawyer’s wig, as befits his position. During his university days in Nuln, Richter was a picture of muscular health, but now his once well-built frame is soft and flabby, spoilt by too many years of good living.</span></p><p><span class=\"fontstyle0\">Richter is no fool, and cannot easily be bluffed or bamboozled. He speaks with careful, clipped tones that betray his expensive education. If any of the Characters know Lore (Law), and are civil, Richter takes a shining to them, and could even become a potential long-term ally or mentor. If the Characters have come from Ubersreik and know @UUID[Compendium.wfrp4e-starter-set.actors.aUTBY5s6vCJhZsZp]{Osanna Winandus}, Richter will be delighted. He has been sharing letters with the quick-witted barrister, and will be keen to enquire after her well-being.</span></p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#festival-court-and-stocks]{Sąd Festiwalowy i dyby}</p><p><span class=\"fontstyle0\">Rajca Heinz Richter przekroczył już pięćdziesiątkę, ma proste, siwe włosy i bladoniebieskie oczy. Stara się wyglądać na surowego, ale nie potrafi ukryć swej dobrodusznej i poczciwej natury. Ubiera się odpowiednio do piastowanego stanowiska i nosi wspaniałą perukę prawnika. Za czasów studenckich w Nuln Richter był okazem umięśnionego zdrowia, lecz niegdyś krzepka sylwetka stała się miękka i obwisła po zbyt wielu latach wygodnego życia.</span></p><p><span class=\"fontstyle0\">Richter nie jest głupcem i nie da się łatwo oszukać. Mówi z wyważoną, staranną manierą, zdradzającą kosztowną edukację. Jeżeli któryś z Bohaterów zna Wiedzę (Prawo) i zachowuje się uprzejmie, Richter nabierze do niego sympatii, a nawet może zostać długoterminowym sojusznikiem lub mentorem. Jeżeli Bohaterowie przybyli z Ubersreiku i znają @UUID[Compendium.wfrp4e-starter-set.actors.aUTBY5s6vCJhZsZp]{Osannę Winandus}, Richter będzie zachwycony. Koresponduje z bystrą adwokatką i chętnie zapyta o jej zdrowie.</span></p><p></p>",
       "items": {
         "4DCH9ISIjvAjX23o": {
           "id": "4DCH9ISIjvAjX23o",
@@ -4320,7 +4325,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Brąz 3",
-      "gmnotes": "<p><span class=\"fontstyle0\">Herpin has a thick Middenlander accent, greying mid-brown hair, and blue eyes. He is almost 30, but looks older. He’s tall, thin, and taciturn, and has no desire to make anyone feel welcome. He hails from the nearby hamlet of Moersum, and is employed for his brewing skills and work ethic, not his interpersonal skills.</span></p>\n                              <p>&nbsp;</p>\n                              <p><span class=\"fontstyle0\"></span></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Herpin ma ciężki middenlandzki akcent, siwiejące brązowe włosy i niebieskie oczy. Zbliża się do trzydziestki, ale wygląda na starszego. Jest wysoki, chudy i małomówny. Nie stara się szczególnie, by ktokolwiek czuł się w zajeździe jak w domu. Pochodzi z pobliskiej osady Moersum. Dostał tę pracę, ponieważ potrafi warzyć piwo i jest pracowity, a nie dlatego, że potrzebowano duszy towarzystwa.</span></p>\n                              <p>&nbsp;</p>\n                              <p><span class=\"fontstyle0\"></span></p>",
       "items": {
         "2uFVs4jW95hjoElr": {
           "id": "2uFVs4jW95hjoElr",
@@ -4368,7 +4373,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p><span class=\"fontstyle2\">Sandy-haired @UUID[Compendium.wfrp4e-eis.actors.ND9BHKtUxtQqty7w]{Gunnar} and dark-bearded Hultz are the coachmen for @UUID[Compendium.wfrp4e-eis.journals.XGUpnYfS67guNIWJ.JournalEntryPage.R2BCxi4CJH4hUrru#ratchett-lines]{Ratchett Lines}. Both men are of medium height; but Hultz, now in his 40s, is a good bit fatter. The two coachmen have very little to say to the Characters un</span>less bought a beer or three (preferrably more) after which they become fast friends and are a potentially great source of information (see @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Rumours}).</p><p> </p><p></p>",
+      "gmnotes": "<p><span class=\"fontstyle2\">Jasnowłosy @UUID[Compendium.wfrp4e-eis.actors.ND9BHKtUxtQqty7w]{Gunnar} i ciemnobrody Hultz pracują jako woźnice dla kompanii przewozowej @UUID[Compendium.wfrp4e-eis.journals.XGUpnYfS67guNIWJ.JournalEntryPage.R2BCxi4CJH4hUrru#ratchett-lines]{Zębatka}. Obydwaj są średniego wzrostu, ale Hultz, już koło czterdziestki, jest nieco tęższy. Woźnice nie są zbyt rozmowni, o ile Bohaterowie nie postawią im piwa lub trzech, a najlepiej jeszcze więcej. Zaraz po tym staną się ich najlepszymi przyjaciółmi i potencjalnie znakomitym źródłem informacji (zobacz @UUID[Compendium.wfrp4e-eis.journals.mbXVJGCGSm8m7ANd.JournalEntryPage.LwuezrkCidrmlovt]{Plotki}).</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "eDLm5jiAynAW66J8": {
           "id": "eDLm5jiAynAW66J8",
@@ -4409,7 +4414,7 @@
         "HLawVzA5bAPCKpCH": {
           "id": "HLawVzA5bAPCKpCH",
           "name": "płaszcz (duży i ciepły)",
-          "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Protects wearer against the elements and extreme cold; without a good coat or similar, you will receive penalties to resist Cold Exposure</p>",
+            "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
           "originalName": "płaszcz (duży i ciepły)"
         }
       }
@@ -4422,12 +4427,12 @@
       "species": "Człowiek",
       "gender": "Kobieta",
       "status": "Złoto 1",
-      "gmnotes": "<p><span class=\"fontstyle2\">A typical Drakwalder noblewoman, Lady Isolde von Strudeldorf is willowy with red-golden hair, green eyes, and a refined Reiklander noble accent. She is young, headstrong, and covers her lack of confidence with an air of snobbishness. She dresses in the finest clothing. She has a variety of unusual, elegant hats: her hat-boxes take up a great deal of room on the coach roof. During the coach journey she sits clutching her lute-case, and will object most strongly if the Characters attempt to force their way in, threatening all kinds of retribution from her important relatives in Altdorf.</span></p>\n                                                                      <p>&nbsp;</p>\n                                                                      <p></p>\n                                                                      <p>Lady Isolde’s valuables are kept in a trunk in her room. The trunk has a <strong>Difficult (−10)</strong> lock requiring<strong> 2 SL</strong> to open and contains expensive clothes and jewellery to the value of 7 GC.</p>",
+      "gmnotes": "<p><span class=\"fontstyle2\">Lady Isolde von Strudeldorf, jak każda typowa drakwaldzka szlachcianka, ma smukłą sylwetkę, miedzianozłote włosy, zielone oczy i wysławia się z wytwornym reiklandzkim akcentem. Jest młoda, uparta, a brak pewności siebie maskuje aurą snobizmu. Ubiera się w najszykowniejsze stroje. Posiada kolekcję nietypowych, eleganckich kapeluszy, a pudła z nimi zajmują ogromną większość miejsca na dachu dyliżansu. Podczas podróży kurczowo ściska przy sobie futerał z lutnią. Będzie głośno protestować, jeżeli któryś z Bohaterów spróbuje wprosić się do powozu, strasząc intruzów wszelkiego rodzaju zemstą ze strony jej ważnych krewnych z Altdorfu.</span></p>\n                                                                      <p>&nbsp;</p>\n                                                                      <p></p>\n                                                                      <p>Lady Isolde trzyma swoje kosztowności w kufrze, w swoim pokoju. Kufer ma <strong>Trudny (-10)</strong> zamek, wymagający <strong>2 PS</strong>, aby go otworzyć, i zawiera kosztowną garderobę oraz biżuterię wartą 7 złotych koron.</p>",
       "items": {
         "MQWgoCwhlwSII9cA": {
           "id": "MQWgoCwhlwSII9cA",
           "name": "Kufer (Zamknięty)",
-          "description": "<p>Isolde's valuables.</p>\n<p>The trunk has a&nbsp;<strong>Difficult (-10)&nbsp;</strong>lock requiring 2 SL to open.&nbsp;</p>",
+            "description": "<p>Kosztowności Isolde.</p>\n<p>Kufer ma <strong>Trudny (-10)</strong> zamek, wymagający 2 PS, aby go otworzyć.</p>",
           "originalName": "Kufer (Zamknięty)"
         },
         "AxmxrUi8rSBZ1Vdv": {
@@ -4476,7 +4481,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Mikhail}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Michaił}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
       "items": {
         "3Lwm0SYM3AqDb60h": {
           "id": "3Lwm0SYM3AqDb60h",
@@ -4603,7 +4608,7 @@
       "species": "Człowiek",
       "gender": "Kobieta",
       "status": "Srebro 3",
-      "gmnotes": "<p><span class=\"fontstyle0\">Only 16, Janna is thin with fine, mousy hair and blue-grey eyes. She says very little, although sometimes @UUID[Compendium.wfrp4e-eis.actors.goVesadmHWsl5E98]{Lady Isolde} forces her to speak on her behalf. When this happens, she speaks with a soft Drakwalder accent, and looks deeply uncomfortable. For all her timidity, Janna is very good at her job.<br></span></p>\n                              <p>&nbsp;</p>\n                              <p><span class=\"fontstyle0\"></span></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Janna ma zaledwie 16 lat, delikatne, mysie włosy i niebieskoszare oczy. Jest małomówna, choć czasem @UUID[Compendium.wfrp4e-eis.actors.goVesadmHWsl5E98]{lady Isolde} zmusza ją do wypowiadania się w swoim imieniu. Gdy tak się stanie, dziewczyna mówi z miękkim drakwaldzkim akcentem i wydaje się czuć bardzo niezręcznie. Mimo całej swojej nieśmiałości Janna bardzo dobrze wykonuje pracę.<br></span></p><p>&nbsp;</p><p><span class=\"fontstyle0\"></span></p>",
       "items": {
         "NcCXfc5KVSWUhU6Z": {
           "id": "NcCXfc5KVSWUhU6Z",
@@ -4849,7 +4854,7 @@
     "Johann The Ghost": {
       "id": "rKQ6GURYq0iWHf7s",
       "name": " Duch Johanna",
-      "description": "<section id=\"secret-MXm2wh6qyd9OZN59\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.8nRRXBpv18FDsG8d.JournalEntryPage.itIjEiNtkkGBZRql]{A Friend In Need}</p><p>Johann is not evil by nature, nor controlled by a necromancer, so he has a Fellowship score.</p></section>",
+      "description": "<section id=\"secret-MXm2wh6qyd9OZN59\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.8nRRXBpv18FDsG8d.JournalEntryPage.itIjEiNtkkGBZRql]{Przyjaciel w potrzebie}</p><p>Johann nie jest z natury zły ani kontrolowany przez nekromantę, dlatego ma współczynnik Ogłady.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.rKQ6GURYq0iWHf7s",
       "species": "Nieumarły",
       "gender": "Mężczyzna",
@@ -4857,7 +4862,7 @@
         "Jls491gvR3y6Z7Wn": {
           "id": "Jls491gvR3y6Z7Wn",
           "name": "Niestabilny*",
-          "description": "<p>The creature’s corpus is maintained by foul magics that are inherently unstable in the material realm.</p>\n<p>Whenever it ends a round engaged with any opponent with higher Advantage, the creature is driven back, and the magics holding it together weaken. It loses as many Wounds as the difference between its Advantage, and the highest Advantage engaged with it.</p>\n<p>So, if the creature had 1 Advantage, and its opponent had 3, the creature would lose 2 Wounds. If the creature ever reach 0 Wounds, the magics holding it in place collapse, and it ‘dies’.</p>\n<p>&nbsp;</p>\n<p><em>*Johann is only Unstable if he goes more than 100 yards from his bones</em></p>",
+            "description": "<p>Ciało stworzenia podtrzymują plugawe magiki, z natury niestabilne w świecie materialnym.</p>\n<p>Za każdym razem, gdy kończy Rundę w zwarciu z przeciwnikiem mającym wyższą Przewagę, stworzenie zostaje odepchnięte, a podtrzymująca je magia słabnie. Traci tyle Ran, ile wynosi różnica między jego Przewagą a najwyższą Przewagą przeciwnika walczącego z nim w zwarciu.</p>\n<p>Jeśli więc stworzenie ma 1 Przewagi, a jego przeciwnik 3, traci 2 Rany. Jeśli kiedykolwiek osiągnie 0 Ran, magia utrzymująca je na miejscu załamuje się i stworzenie „umiera”.</p>\n<p>&nbsp;</p>\n<p><em>*Johann jest Niestabilny tylko wtedy, gdy oddali się dalej niż 100 metrów od swoich kości.</em></p>",
           "originalName": "Niestabilny*"
         },
         "JQa5DLnTs2SEzRrc": {
@@ -4875,13 +4880,13 @@
     "Johann (Mutant Brigand)": {
       "id": "CC24r6wLC9Gce4GL",
       "name": "Johann (Mutant Zbój)",
-      "description": "<section id=\"secret-Yracefjb0u3Di3Ra\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{The Mayhem Mystery Tour}</p><p><span class=\"fontstyle0\">Knud’s Mutant brigands are a disturbing bunch, all the more horrifying as the vestigial remains of their humanity are plain to see. This one </span>has a distinctively pointed head, and emits a near-constant, pain-laced groan.</p></section>",
+      "description": "<section id=\"secret-Yracefjb0u3Di3Ra\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{Tajemnicza wycieczka pełna zamętu}</p><p><span class=\"fontstyle0\">Zmutowani zbóje Knuda to niepokojąca gromada, tym straszniejsza, że wyraźnie widać szczątkowe pozostałości ich człowieczeństwa. Ten </span>ma charakterystycznie spiczastą głowę i niemal bez przerwy jęczy z bólu.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.CC24r6wLC9Gce4GL",
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "items": {
         "Pabq6YWd4wGt3Rn5": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         }
       }
     },
@@ -4893,6 +4898,8 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
+      "height": "177 cm",
+      "haircolour": "Szatynowe",
       "items": {
         "yM8I19wZZm5O5aLm": {
           "id": "yM8I19wZZm5O5aLm",
@@ -4940,7 +4947,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 5",
-      "gmnotes": "<p><span class=\"fontstyle0\">Josef is a tall man with long, greying hair and an ever-present smile. He is broad-shouldered and well-muscled, though both are hidden by a generous layer of fat. He has a large, bristly beard that grows right down over his huge belly. Josef has a jolly temperament and enjoys good company.</span></p><p><span class=\"fontstyle0\">He speaks loudly in a broad Middenlander accent. He is prone to praising the Gods when things go well — most commonly thanking Sigmar, Taal, and Grandfather Reik — and beseeching their aid when things go awry</span></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Josef jest wysokim mężczyzną o długich, siwiejących włosach i nieustannym uśmiechu. Ma szerokie barki i jest dobrze umięśniony, choć jedno i drugie skrywa pokaźna warstwa tłuszczu. Wielka, szczeciniasta broda opada aż na jego ogromny brzuch. Josef ma pogodne usposobienie i ceni dobre towarzystwo.</span></p><p><span class=\"fontstyle0\">Mówi głośno, szerokim middenlandzkim akcentem. Gdy sprawy idą dobrze, ma zwyczaj wychwalać bogów — najczęściej dziękuje Sigmarowi, Taalowi i Dziadkowi Reikowi — a kiedy coś idzie nie tak, błaga ich o pomoc.</span></p>",
       "items": {
         "6zJnonscgaSh9KPn": {
           "id": "6zJnonscgaSh9KPn",
@@ -5153,7 +5160,7 @@
         },
         "MvRqfzEx93KNwdEX": {
           "id": "MvRqfzEx93KNwdEX",
-          "name": "Exotic Spices\r and Rare Metals",
+          "name": "Egzotyczne przyprawy i rzadkie metale",
           "description": " ",
           "originalName": "Exotic Spices\r and Rare Metals"
         },
@@ -5240,7 +5247,7 @@
     "Khornate Beastmen": {
       "id": "GobEXAohbxX9cK3o",
       "name": "Khornijscy Zwierzoludzie",
-      "description": "<section id=\"secret-wRdcoOdZAJeUqKSr\" class=\"secret\"><p>Normally savage creatures, the three Khornate Beastmen have been cowed. They are now terrified of fire, and will do anything to stay away from a flame, even something as innocuous as a candle. A live goat is thrown into their cage at feeding time, which is always a crowd-pleasing event.&nbsp;</p>\n                    <p>These Beastmen all bear the mark of the Blood God somewhere on their bodies. One has a massive chest scar in the form of the skull-rune, another’s face has been warped into the same symbol, and the third has the design picked out in yellow fur on its dark-red back. All have wickedly sharp horns, long fangs, and clawed hands and feet. Unlike Urzo, these three are still full of blood-lust, and their ferocity is no act. They will happily destroy anyone or anything they can reach. Luckily, they can only reach a couple of feet beyond the bars of their cage.</p></section>",
+      "description": "<section id=\"secret-wRdcoOdZAJeUqKSr\" class=\"secret\"><p>Zazwyczaj wyjątkowo dzicy, ci trzej zwierzoludzie zostali skutecznie zastraszeni. Przeraźliwie boją się ognia i zrobią wszystko, by oddalić się od niego, choćby tak małego jak płomień świeczki. W czasie pokazu rzuca się im żywą kozę, co zawsze przyciąga uwagę tłumu.</p>\n                    <p>Wszyscy trzej zwierzoludzie noszą na ciałach znamiona Boga Krwi. Jeden ma ogromną bliznę w kształcie runy czaszki na klatce piersiowej, pysk drugiego zniekształcił się w podobny kształt, u trzeciego zaś symbol objawił się na ciemnoczerwonym futrze grzbietu, uformowany przez żółte przebarwienie. Wszystkie potwory mają ostre rogi, długie kły i pazurzaste kończyny. W przeciwieństwie do Urzo przepełnieni są żądzą krwi i nie udają wściekłości przed publicznością. Z chęcią rozszarpaliby każdego, kto dostałby się w ich łapska. Na szczęście nie mogą sięgnąć daleko z głębin swojej klatki.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.GobEXAohbxX9cK3o",
       "species": "???",
       "gender": "???",
@@ -5303,6 +5310,9 @@
       "species": "Człowiek",
       "gender": "Kobieta",
       "status": "Brąz 1",
+      "height": "155 cm",
+      "haircolour": "Szatynowe",
+      "eyecolour": "Jasnoniebieskie",
       "items": {
         "59jj3TdWE93uiYuA": {
           "id": "59jj3TdWE93uiYuA",
@@ -5357,7 +5367,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Brąz 5",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#wrestling-ring]{Wrestling Ring}</p><p><span class=\"fontstyle0\">Dark-haired Schattiger is typical of the small-time entertainers who work the fairs of the Old World. He is of indeterminate age, probably somewhere between 30 and 50 years old. He dresses in garish clothes with bright clashing colours.</span></p><p><span class=\"fontstyle0\">On stage, his voice is mellifluous and deep, sounding almost upper-class, and he punctuates every utterance with grand arm gestures. Off stage, he has a somewhat nasal, whiny Hochlander accent and he swears frequently.</span></p><p>Also has <span class=\"fontstyle0\"> Cart, Chest (containing 5 GCs 107/56), Clothing (colourful), Key (for chest)), Mule, Sand-Glass (times 3½ minutes), Wrestling Ring (collapsible)</span></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#wrestling-ring]{Arena zapaśnicza}</p><p><span class=\"fontstyle0\">Ciemnowłosy Schattiger jest typowym przedstawicielem pomniejszych artystów pracujących na jarmarkach Starego Świata. Trudno określić jego wiek, lecz zapewne ma od 30 do 50 lat. Ubiera się w krzykliwe stroje o jaskrawych, gryzących się kolorach.</span></p><p><span class=\"fontstyle0\">Na scenie przemawia melodyjnym, głębokim głosem, brzmiącym niemal arystokratycznie, a każdą wypowiedź podkreśla szerokimi gestami. Poza sceną mówi nieco nosowym, jękliwym hochlandzkim akcentem i często przeklina.</span></p><p>Ma również <span class=\"fontstyle0\">wózek, skrzynię (zawierającą 5 zk, 107 szylingów i 56 pensów), kolorowe ubrania, klucz do skrzyni, muła, klepsydrę odmierzającą 3,5 minuty oraz składaną arenę zapaśniczą.</span></p>",
       "items": {
         "qUakVJG6uiTvaFmH": {
           "id": "qUakVJG6uiTvaFmH",
@@ -5450,7 +5460,7 @@
           "specification": "1"
         },
         "T87iCoFB6h0nFyYg": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         },
         "uzsBZnLnQpk2RD97": {
           "id": "uzsBZnLnQpk2RD97",
@@ -5764,7 +5774,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Mikhail}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Michaił}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
       "items": {
         "3Lwm0SYM3AqDb60h": {
           "id": "3Lwm0SYM3AqDb60h",
@@ -6057,7 +6067,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 4",
-      "gmnotes": "<p><span class=\"fontstyle0\">A wiry man of average height, Pflaster has close-cropped black hair, dark skin, and deep-brown eyes. He is a seasoned officer from @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} who takes no nonsense from anyone. His job is to keep the roads safe, and while this sometimes involves protecting travellers, he places more value on the security of the highways than on individual lives. He speaks at pace with a lower-class accent and a firm tone. He doesn’t normally work these roads, but recently learned @UUID[Compendium.wfrp4e-eis.actors.1KyqwFkCeyOkJ3l7]{his sister} is making her way to @UUID[Compendium.wfrp4e-middenheim.journals.PuIrlGBOjxuWpK3P]{Middenheim} by herself. He is keen to track her down to persuade her from such foolishness.</span></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Pflaster jest żylastym mężczyzną przeciętnego wzrostu, o krótko przyciętych czarnych włosach, ciemnej skórze i głębokich brązowych oczach. To doświadczony oficer z @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorfu}, który nie toleruje głupoty. Jego zadaniem jest utrzymywanie bezpieczeństwa na drogach. Choć czasem oznacza to ochronę podróżnych, bardziej ceni bezpieczeństwo szlaków niż życie pojedynczych ludzi. Mówi szybko, stanowczym tonem i akcentem niższych klas. Zwykle nie pełni służby na tych drogach, lecz niedawno dowiedział się, że @UUID[Compendium.wfrp4e-eis.actors.1KyqwFkCeyOkJ3l7]{jego siostra} samotnie zmierza do @UUID[Compendium.wfrp4e-middenheim.journals.PuIrlGBOjxuWpK3P]{Middenheimu}. Chce ją odnaleźć i odwieść od tego szaleństwa.</span></p>",
       "items": {
         "F2AR2Jge6hasyxnu": {
           "specification": "Przestępcy"
@@ -6233,7 +6243,7 @@
         "FqGDoaUZsyKAxuZg": {
           "id": "FqGDoaUZsyKAxuZg",
           "name": "Koń wierzchowy z rzędem",
-          "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J]{Riding Horse} (aka Palfrey)</p>\n<p>Carrying Capacity: 16</p>",
+          "description": "<p>@UUID[Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J]{Koń wierzchowy} (palfrey)</p>\n<p>Udźwig: 16</p>",
           "originalName": "Koń wierzchowy z rzędem"
         },
         "buc3LXdJbyT6dZqC": {
@@ -6288,7 +6298,7 @@
       "species": "Człowiek",
       "gender": "Kobieta",
       "status": "Srebro 3",
-      "gmnotes": "<p><span class=\"fontstyle0\">Like a Middenlander warrior-woman of legend, Marie is unusually tall, athletic, and muscular, and has thick, dark-blonde hair and ice-blue eyes. In her early 30s, she wears dark, sombre clothing, and never smiles. Marie has worked for the von Strudeldorf family for 15 years, and is more than capable of looking after her @UUID[Compendium.wfrp4e-eis.actors.goVesadmHWsl5E98]{Lady Isolde}. She speaks very little, usually only to tell people: </span><span class=\"fontstyle2\">‘<em>Do not bother the Mistress</em>.’ </span><span class=\"fontstyle0\">If it comes to a fight, she prefers to act defensively, protecting her charge above all other things.</span></p>\n                              <p>&nbsp;</p>\n                              <p></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Niczym legendarna wojowniczka z Middenlandu, Marie jest niezwykle wysoka, wysportowana i umięśniona. Ma gęste, ciemnoblond włosy i lodowoniebieskie oczy. Jest po trzydziestce, nosi ciemne, ponure ubrania i nigdy się nie uśmiecha. Od 15 lat służy rodzinie von Strudeldorfów i z nawiązką potrafi zadbać o swoją @UUID[Compendium.wfrp4e-eis.actors.goVesadmHWsl5E98]{lady Isolde}. Odzywa się rzadko, zwykle tylko po to, by powiedzieć: </span><span class=\"fontstyle2\">„<em>Nie przeszkadzać pani</em>”. </span><span class=\"fontstyle0\">Jeżeli dojdzie do walki, działa defensywnie i ponad wszystko chroni swoją podopieczną.</span></p><p>&nbsp;</p><p></p>",
       "items": {
         "EMlPwNTYSg8eLKVt": {
           "id": "EMlPwNTYSg8eLKVt",
@@ -6330,7 +6340,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{The Boatman Inn}</p><p><span class=\"fontstyle0\">@UUID[Compendium.wfrp4e-eis.actors.G7YJHGe4JkHvcNja]{Jacob von Katzenreik} and @UUID[Compendium.wfrp4e-eis.actors.bur6uaXdENjetLwT]{Georg von Ostbrun} are precisely the type of obnoxious, privileged degenerates that so incense the firebrands and agitators of the Kaiserplatz. They are overconfident and both exude an enormous sense of entitlement. They are dressed in garishly impractical finery, fingers dripping with rings, their cheeks rouged, and their wigs powdered. Fabulously wealthy and casually dismissive of the thoughts, feelings, and struggles of the common folk of the Empire, they speak in crisp upper-class Reiklander accents. They are prone to fits of giggles, especially when they have said or done something insulting.</span> </p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{Karczma „U Przewoźnika”}</p><p><span class=\"fontstyle0\">Max Ernst to parszywy, zimnokrwisty sadysta. Jest silny, wysoki i pewny siebie. Jest szatynem, ma zaczesane do tyłu włosy i oczy barwy stalowego błękitu. Roztacza wokół siebie aurę autorytetu i zawsze ubiera się w czarne, skórzane odzienie. Max niewiele mówi, ale gdy się już odzywa, w jego niskim, ochrypłym głosie wyraźnie słychać szorstki altdorfski akcent. Ma zwyczaj niezwykle niepokojąco patrzeć w oczy każdemu, z kim rozmawia. Ernst sporo pije i kiedy jest sam, topi wspomnienia swego trudnego życia w brandy i łzach.</span></p>",
       "items": {
         "r3GkQJM6QL0idfMR": {
           "id": "r3GkQJM6QL0idfMR",
@@ -6485,7 +6495,7 @@
     "Mikael (Mutant Brigand)": {
       "id": "cKp4JV3XNZ5l67eM",
       "name": "Mikael (Mutant Zbój)",
-      "description": "<section id=\"secret-o28bqow7JYMaB9ar\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{The Mayhem Mystery Tour}</p><p><span class=\"fontstyle0\">Knud’s Mutant brigands are a disturbing bunch, all the more horrifying as the vestigial remains of their humanity are plain to see. This one bears the head of a vicious dog, and is capable only of animalistic barks, yelps, and whines.</span></p><p><span class=\"fontstyle0\">*1 Wound Remaining</span></p></section>",
+      "description": "<section id=\"secret-o28bqow7JYMaB9ar\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{Tajemnicza wycieczka pełna zamętu}</p><p><span class=\"fontstyle0\">Zmutowani zbóje Knuda to niepokojąca gromada, tym straszniejsza, że wyraźnie widać szczątkowe pozostałości ich człowieczeństwa. Ten ma głowę zajadłego psa i potrafi wydawać jedynie zwierzęce szczeknięcia, skomlenia i wycia.</span></p><p><span class=\"fontstyle0\">*Pozostała 1 Rana</span></p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.cKp4JV3XNZ5l67eM",
       "species": "Człowiek",
       "gender": "Różne",
@@ -6520,7 +6530,7 @@
           "specification": "2"
         },
         "qh6XZHoXMRO0V1s4": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         },
         "yKWOMEZSgSK2FaVR": {
           "id": "yKWOMEZSgSK2FaVR",
@@ -6558,7 +6568,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Mikhail}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.hB1BlDxTLm6Ns2HO.JournalEntryPage.aLqSIrQIbz4XvbxU]{Wolfgang i Jego Trupa}</p><p>@UUID[Compendium.wfrp4e-eis.actors.fPNb4zcIyMULXPcv]{Ivan} i  @UUID[Compendium.wfrp4e-eis.actors.iKdTkeS0wG8C5ghJ]{Magda}  są parą w średnim wieku, oboje ponurzy i pracowici. Ich syn, @UUID[Compendium.wfrp4e-eis.actors.prlR1ebuM1fURSFj]{Michaił}  , to nastolatek i zwykle trzyma się na uboczu, bo boi się zwierzoludzi. </p><blockquote><p><em><strong>Cytaty</strong></em>: „Nie wtykaj tam palców, jeżeli ci na nich zależy!” </p></blockquote><p>Chociaż menażeria najlepsze lata ma już za sobą, wciąż daje łatwiejszą i przyjemniejszą pracę niż hodowla owiec czy oranie pola. Większość pracowników Wolfganga tym się właśnie zajmowała, zanim dołączyła do karnawału. Zaczynali oni często jako widzowie i skorzystali z okazji, by uciec od wiejskiego życia, prze- żyć przygodę i zobaczyć kawał świata. Co więcej, jeszcze im za to płacą czymś więcej niż rzepą i baraniną. Pracownicy karnawału lubią czuć się lepsi od widzów i często popisują się swoją wiedzą na temat zwierzoludzi czy dalekich stron.</p>",
       "items": {
         "3Lwm0SYM3AqDb60h": {
           "id": "3Lwm0SYM3AqDb60h",
@@ -6607,7 +6617,7 @@
     "Miltrud (Guard)": {
       "id": "c1cOIarsrRIv93Ny",
       "name": "Miltrud (Ochroniarz)",
-      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{The Boatman Inn}</p><p><span class=\"fontstyle0\">The two nobles are accompanied by four bodyguards. Hulking brutes, each is over 6ft tall and heavily muscled. They rarely speak, content to lurk near their masters, ever-ready to intervene should anyone dare to talk to or even lay hands upon the pampered jewels of the Reikland’s nobility. If pressed to talk, their growling accents are typical of the lowest of low-lifes from @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Altdorf ’s East End}.</span> </p></section>",
+      "description": "<section id=\"secret-4UorWorAR19Lv3BK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{Zajazd „Przewoźnik”}</p><p><span class=\"fontstyle0\">Dwóm szlachcicom towarzyszy czterech ochroniarzy. To potężne draby, każdy ma ponad 180 centymetrów wzrostu i jest silnie umięśniony. Rzadko się odzywają; wolą czaić się przy swoich panach, zawsze gotowi zareagować, gdyby ktoś ośmielił się odezwać do rozpieszczonych klejnotów reiklandzkiej szlachty, a tym bardziej ich dotknąć. Zmuszeni do rozmowy mówią warkliwym akcentem typowym dla najniższych mętów z @UUID[Compendium.wfrp4e-altdorf.journals.85UN6bKPTfGEBtBb]{Wschodniej Dzielnicy Altdorfu}.</span> </p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.c1cOIarsrRIv93Ny",
       "species": "Człowiek",
       "gender": "Kobieta",
@@ -6723,7 +6733,7 @@
     "Ox": {
       "id": "l7G0hmzl6VMnAXtL",
       "name": "Wół",
-      "description": "<section id=\"secret-N8LpJSAIuCFFuEnP\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>Oxen are slow, but immensely tough, bovines. Farmers commonly use them to pull carts and wagons, and some merchants prefer them for pulling heavy cargo wagons.</p></section>",
+      "description": "<section id=\"secret-N8LpJSAIuCFFuEnP\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Woły są powolne, lecz niezwykle wytrzymałe. Rolnicy powszechnie wykorzystują je do ciągnięcia wózków i wozów, a niektórzy kupcy wolą zaprzęgać je do ciężkich wozów towarowych.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.l7G0hmzl6VMnAXtL",
       "species": "Wół",
       "gender": "Różne",
@@ -6751,7 +6761,7 @@
       "items": {
         "p5I8U0ofWQxo05G9": {
           "id": "p5I8U0ofWQxo05G9",
-          "name": "Selection of Scripts",
+          "name": "Wybór scenariuszy",
           "description": " ",
           "originalName": "Selection of Scripts"
         },
@@ -6867,7 +6877,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Brąz 1",
-      "gmnotes": "<p><span class=\"fontstyle0\">Phillipe is from Parravon in Bretonnia, and has been travelling the Empire for six months. Now in his 40s, he was previously a mercenary sergeant in the army of a local duke before deserting across the Grey Lady Pass into the Empire. Phillipe claims to be heading for @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} to visit an old friend, but in fact he is just working the inns on the Empire’s roads. He is tall, handsome, and wears a lace-trimmed shirt and embroidered jacket and breeches. He has long, dark curly hair and an artificial ‘beauty spot’ on his left cheek. Despite his foppish appearance, Phillipe is very capable of looking after himself and is not afraid of danger.</span></p><p> </p><p></p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Phillipe pochodzi z Parravonu w Bretonnii i od sześciu miesięcy podróżuje po Imperium. Ma już ponad czterdzieści lat; wcześniej był sierżantem najemników w armii miejscowego księcia, zanim zdezerterował przez Przełęcz Szarej Damy do Imperium. Phillipe twierdzi, że jedzie do @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorfu}, by odwiedzić starego przyjaciela, lecz w rzeczywistości po prostu włóczy się po zajazdach przy imperialnych drogach. Jest wysoki, przystojny i nosi koszulę obszytą koronką oraz haftowany kaftan i bryczesy. Ma długie, ciemne, kręcone włosy i sztuczny „pieprzyk” na lewym policzku. Mimo fircykowatego wyglądu Phillipe potrafi o siebie zadbać i nie boi się niebezpieczeństwa.</span></p><p> </p><p></p>",
       "items": {
         "q9zSArgmFTYdBC3U": {
           "id": "q9zSArgmFTYdBC3U",
@@ -6918,7 +6928,7 @@
       "gender": "???",
       "items": {
         "BJhL3LJnDWkBw3lu": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         },
         "7I45LEXl6GdZs3TA": {
           "specification": "8+"
@@ -7064,7 +7074,7 @@
     "Pony": {
       "id": "12ARFrc7Dokxc72q",
       "name": "Kucyk",
-      "description": "<section id=\"secret-O11OQKGmByCtF7v7\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>Ponies are a small breed of horse no more than 15 hands (about five feet) high at the shoulder; donkeys are tough, resilient, and notoriously stubborn cousins of horses; mules are sterile crossbreeds of horses and donkeys. If anything, mules are even more awkward than their donkey relatives, but make up for it by being seemingly tireless. </p><p>All three animals are used as mounts by the rural lower classes. They can be hitched to small, two-wheeled carts, or loaded with goods and led by a person on foot. It is not uncommon to hitch teams of up to twenty mules to a medium or large wagon.</p></section>",
+      "description": "<section id=\"secret-O11OQKGmByCtF7v7\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Kucyki to mała rasa koni, osiągająca w kłębie najwyżej około 150 centymetrów; osły są twardymi, wytrzymałymi i osławionymi uporem krewniakami koni; muły to bezpłodne mieszańce koni i osłów. Muły bywają jeszcze bardziej krnąbrne od osłów, lecz wynagradza to ich pozorna niestrudzoność.</p><p>Wszystkich trzech zwierząt używają jako wierzchowców wiejskie niższe warstwy społeczne. Można je zaprzęgać do małych, dwukołowych wózków albo obciążać towarem i prowadzić pieszo. Nierzadko do średniego lub dużego wozu zaprzęga się zaprzęg liczący nawet dwadzieścia mułów.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.12ARFrc7Dokxc72q",
       "species": "Kucyk",
       "gender": "Różne",
@@ -7080,7 +7090,7 @@
     "Rassarak": {
       "id": "DdUPpamfa9HF0Vek",
       "name": "Rassarak",
-      "description": "<section id=\"secret-tcxaQps7z70owj3M\" class=\"secret\"><p>Note that Rassarak cannot use missile weapons effectively due to his blindness.</p>\n          <p>Rassarak is a pure-white Skaven, a Clanrat who has been blind from birth. His hearing, smell and whiskers have become incredibly sensitive to compensate for his loss of vision. He can ‘watch’ spectators with uncanny and alarming accuracy. He is chafing at his imprisonment, but is patiently waiting for the right opportunity to escape.</p></section>",
+      "description": "<section id=\"secret-tcxaQps7z70owj3M\" class=\"secret\"><p>Rassarak nie może korzystać z broni dystansowych ze względu na ślepotę.</p>\n          <p>Rassarak to skaven o białym futrze, ślepy od urodzenia. Jego słuch, węch i wąsiki stały się niebywale czułe, rekompensując mu brak wzroku. Może „obserwować” widzów z niezwykłą spostrzegawczością. Nie znosi niewoli i cierpliwie wyczekuje na właściwy moment do ucieczki.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.DdUPpamfa9HF0Vek",
       "species": "Skaven",
       "gender": "Mężczyzna",
@@ -7115,7 +7125,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Złoto 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.Z3QGbxxJlrP3lm7q]{The Watch Barracks}</p><p><span class=\"fontstyle0\">Goertrin is tall and lean with hair the colour of bleached bone, and a face that is almost cadaverous in its thinness. He is currently concerned with ensuring that law is maintained at the @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfest}, and has little time for anything else. He has a brisk manner and is very used to intimidating people of lower social status, which is most people. He has a firm upper-class accent and interrupts anyone that talks for too long. He just doesn’t have time to waste talking about inconsequential matters.</span></p><p> </p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.Z3QGbxxJlrP3lm7q]{Koszary straży miejskiej}</p><p><span class=\"fontstyle0\">Goertrin to wysoki, szczupły mężczyzna o włosach koloru bladej kości i obliczu tak chudym, że przypomina czaszkę. Obecnie jest całkowicie pochłonięty zachowaniem porządku na @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.HlvtyG6davRZ3Xlk]{Schaffenfest} i nie ma zbyt wiele czasu na nic innego. Jest energiczny i przyzwyczajony do zastraszania ludzi o niższym statusie – czyli prawie każdego. Ma akcent osoby wywodzącej się z wyższych sfer i zwyczaj przerywania każdemu, kto mówi zbyt długo. Kapitan nie ma czasu na ględzenie o błahostkach.</span></p><p> </p><p></p>",
       "items": {
         "t678d36jZKs2sJsE": {
           "id": "t678d36jZKs2sJsE",
@@ -7497,7 +7507,7 @@
     "Riding Horse": {
       "id": "4DTXl9hXbWlfLa5J",
       "name": "Koń Wierzchowy",
-      "description": "<section id=\"secret-ErGVHIZwEhNiFwxw\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Mounts and Vehicles}</p><p>This profile represents the most common riding horse available in the Empire. Estalian and Arabyan purebloods are rarer, better-looking, much more expensive, and also have the Fast Trait. Often a noble will have a ‘palfrey’ as an everyday riding horse, reserving a heavy warhorse for use in battle.</p></section>",
+      "description": "<section id=\"secret-ErGVHIZwEhNiFwxw\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i pojazdy}</p><p>Ten profil przedstawia najpospolitszego konia wierzchowego dostępnego w Imperium. Czystej krwi konie estalijskie i arabijskie są rzadsze, ładniejsze, znacznie droższe i mają także Cechę Szybki. Szlachcic często ma na co dzień „palafrena”, zachowując ciężkiego konia bojowego na czas bitwy.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.4DTXl9hXbWlfLa5J",
       "species": "Konie",
       "gender": "Różne",
@@ -7519,7 +7529,7 @@
     "Rolf Hurtsis": {
       "id": "qULdvMqcLZgULyCX",
       "name": "Rolf Hurtsis",
-      "description": "<section id=\"secret-uU4qoiSMwOM6toIR\" class=\"secret\"><p><span class=\"fontstyle0\">Rolf was once an average man, of average height and build, but now he bears the mark of a hideous mutation that has left his face a grotesque, festering ruin, the skin having sloughed fromhis pus-riddled visage. He is dressed in dirty, tattered rags that are stained with his previous meals and his own blood. Thanks to his Mutation, Rolf ’s vocal cords have atrophied and rotted, leaving him incapable of uttering anything more than a low, menacing growl</span></p></section>",
+      "description": "<section id=\"secret-uU4qoiSMwOM6toIR\" class=\"secret\"><p><span class=\"fontstyle0\">Rolf był kiedyś zwykłym człowiekiem przeciętnej budowy i wzrostu. Teraz jednak nosi piętno ohydnej mutacji, która przemieniła jego oblicze w groteskową, ropiejącą ruinę; skóra odpadła od przeżartej ropą twarzy. Mężczyzna nosi brudne, podarte łachmany, wiecznie poplamione pozostałościami poprzednich posiłków i własną krwią. Z powodu mutacji struny głosowe Rolfa uległy atrofii i zgniły. Nie może on wydobyć z siebie żadnego innego dźwięku poza niskim, groźnym warkotem.</span></p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.qULdvMqcLZgULyCX",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -7668,7 +7678,7 @@
     "Sheep (Hugeltal Longwool)": {
       "id": "KxYyRAicno7YtmVR",
       "name": "Owca (Hugeltalska Długowełnista)",
-      "description": "<section id=\"secret-hotWbMpRp9ZpETH7\" class=\"secret\"><p>The following Characteristics describe common farm animals of the Reikland. If you feel an animal is not enough of a challenge, or are presenting the same encounter for a second time, use the  listed Optional Traits, or the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits}.</p></section>",
+      "description": "<section id=\"secret-hotWbMpRp9ZpETH7\" class=\"secret\"><p>Poniższe Charakterystyki opisują pospolite zwierzęta gospodarskie Reiklandu. Jeśli uznasz, że zwierzę nie stanowi wystarczającego wyzwania albo przedstawiasz to samo spotkanie po raz drugi, użyj wymienionych Cech opcjonalnych lub @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólnych cech stworzeń}.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.KxYyRAicno7YtmVR",
       "species": "Owca",
       "gender": "Różne",
@@ -7708,7 +7718,7 @@
         "Mwfts7c76mXBZEgt": {
           "id": "Mwfts7c76mXBZEgt",
           "name": "Pocisk spaczenia",
-          "description": "<p><span class=\"fontstyle0\">You channel dark magic into a damaging bolt of corrosive power. This is a magic missile with a Damage of +6. Targets affected by the spell must pass a </span><strong><span class=\"fontstyle2\">Challenging (+0) Endurance </span></strong><span class=\"fontstyle0\">Test, or gain 1 Corruption.</span></p><p>\n\n <b>Lore:</b> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.<p>",
+            "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w wyładowanie niszczycielskiej energii. Uznawane jest za magiczny pocisk o współczynniku Obrażeń +6. Trafiona ofiara musi zdać </span><strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong><span class=\"fontstyle0\"> lub otrzymać 1 Punkt Zepsucia.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
           "originalName": "Pocisk spaczenia",
           "effects": {
             "BcIqqg2LrTJdON5l": {
@@ -7731,7 +7741,7 @@
         "WuJf2YV4RaCkUyAk": {
           "id": "WuJf2YV4RaCkUyAk",
           "name": "Potęga Chaosu",
-          "description": "<p><span class=\"fontstyle0\">You call on the Dark Gods of Chaos to aid your efforts by tearing a small rent to the aethyr. Any spells cast within Fellowship Bonus yards of the point targeted by the spell have their CN halved. Anyone within the AoE must pass an </span><strong><span class=\"fontstyle2\">Average (+20) Endurance </span></strong><span class=\"fontstyle0\"><strong>Test</strong> at the end of each Round or gain +1 Corruption Point. Anyone casting a spell within the AoE makes their Test at </span><span class=\"fontstyle2\"><strong>Average (+20) Difficulty</strong>.</span></p><p>\n\n <b>Lore:</b> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.<p>",
+            "description": "<p><span class=\"fontstyle0\">Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania Potęgi Chaosu ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać </span><strong><span class=\"fontstyle2\">Przeciętny (+20) Test Odporności</span></strong><span class=\"fontstyle0\"><strong> na koniec każdej Rundy</strong> lub otrzymać +1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają </span><span class=\"fontstyle2\"><strong>Przeciętną (+20) Trudność</strong>.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
           "originalName": "Potęga Chaosu",
           "effects": {
             "OpjmUwcDJXeOUSWe": {
@@ -7792,7 +7802,7 @@
           "specification": "5"
         },
         "BjTKcbovE1TzfBQV": {
-          "specification": "Moderate"
+          "specification": "Umiarkowane"
         },
         "zaPLGw4xE4R8drYH": {
           "specification": "8+"
@@ -7810,7 +7820,7 @@
       "species": "Niziołek",
       "gender": "Mężczyzna",
       "status": "Srebro 1",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.fLREtWAYHixfuvg3.JournalEntryPage.kSgaxWVL7EpIjb3Y]{3. The Kitchen Area}</p><p>Sleeves jest niski, nawet jak na niziołka. Ma kręcone brązowe włosy, zdradzające pierwsze oznaki siwizny. Niziołek zbliża się już do dziewięćdziesiątki. Ma ponure spojrzenie, fatalistyczne podejście do życia i biegania na każde zawołanie Czarnych Strzał. Poza tym jest idealnym kamerdynerem i mówi z dziwnym, zagranicznym akcentem.</p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.fLREtWAYHixfuvg3.JournalEntryPage.kSgaxWVL7EpIjb3Y]{3. Kuchnia}</p><p>Sleeves jest niski, nawet jak na niziołka. Ma kręcone brązowe włosy, zdradzające pierwsze oznaki siwizny. Niziołek zbliża się już do dziewięćdziesiątki. Ma ponure spojrzenie, fatalistyczne podejście do życia i biegania na każde zawołanie Czarnych Strzał. Poza tym jest idealnym kamerdynerem i mówi z dziwnym, zagranicznym akcentem.</p>",
       "items": {
         "7rSWuvsHuGZkqYHB": {
           "id": "7rSWuvsHuGZkqYHB",
@@ -7990,20 +8000,20 @@
     "Terenz (Mutant Brigand)": {
       "id": "IdVTzDu27riIsWKq",
       "name": "Terenz (Mutant Zbój)",
-      "description": "<section id=\"secret-haIYXtMIzD7jCZye\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{The Mayhem Mystery Tour}</p><p><span class=\"fontstyle0\">Knud’s Mutant brigands are a disturbing bunch, all the more horrifying as the vestigial remains of their humanity are plain to see. This one has a tiny head, speaking (and often giggling) with the high-pitched, lisping voice of a child.</span></p></section>",
+      "description": "<section id=\"secret-haIYXtMIzD7jCZye\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.2JX9k58tn9lJfkqS.JournalEntryPage.CfHPEuCzlIow7PAV]{Tajemnicza wycieczka pełna zamętu}</p><p><span class=\"fontstyle0\">Zmutowani zbóje Knuda to niepokojąca gromada, tym straszniejsza, że wyraźnie widać szczątkowe pozostałości ich człowieczeństwa. Ten ma maleńką głowę i mówi (często przy tym chichocząc) wysokim, sepleniącym głosem dziecka.</span></p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.IdVTzDu27riIsWKq",
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "items": {
         "Ho27djKgVS7VWusz": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         }
       }
     },
     "The Farmyard Beasts": {
       "id": "1NjOXvY20AhKd326",
       "name": "Bestie z domowego obejścia",
-      "description": "<section id=\"secret-Q7iMHn3Z3IZ4mgc9\" class=\"secret\"><p>The ‘farmyard’ collection of a goat-headed, a cow-headed, and two chicken-headed Beastmen is the menagerie’s ‘comedy item’. However, all four are more dangerous than they appear due to their venomous spittle. Each Beastman can spit poison up to 3 yards, using their BS score. Those struck must make a&nbsp;<strong>Challenging (+0) Endurance&nbsp;</strong>Test or receive a <a></a>@Condition[Poisoned] Condition.</p>\n                                        <p>The workers are always careful to keep the paying public at a safe distance, and to have buckets of water to wash anyone unlucky enough to be spat upon.</p></section>",
+      "description": "<section id=\"secret-Q7iMHn3Z3IZ4mgc9\" class=\"secret\"><p>Kozogłowy, krowogłowy i dwóch kurogłowych zwierzoludzi to zbieranina „z domowego obejścia”. Stanowią kabaretowy element menażerii. Jednakże czwórka stworów jest znacznie bardziej niebezpieczna, niż się z pozoru wydaje. Każdy z nich potrafi pluć jadem na odległość trzech metrów, korzystając z Umiejętności Strzeleckich. Trafione ofiary muszą zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzymają Stan @Condition[Poisoned]{Zatrucie}.</p>\n                                        <p>Pracownicy zawsze trzymają publiczność w bezpiecznej odległości od klatki stworów i mają w pogotowiu wiadra z wodą, by w razie czego szybko zmyć jad z oplutego pechowca.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.1NjOXvY20AhKd326",
       "species": "???",
       "gender": "???",
@@ -8051,7 +8061,7 @@
     "The Imperial Beast": {
       "id": "upw302o9B92ZLVfq",
       "name": "Imperialna Bestia",
-      "description": "<section id=\"secret-nEwZruifqxZTS3N9\" class=\"secret\"><p>Imperialna Bestia jest rozmiarów niziołka i nosi cechy rozmaitych zwierząt. Przede wszystkim przykuwa uwagę niesamowitym futrem o barwie czystego złota! Wolfgang żartuje, że zwierzoczłek zarobi na siebie dopiero po śmierci. Doktor wie, że istota jest prawdziwym cudem natury, i nigdy nie pozwoliłby jej zabić dla futra. Zapewnia ono dodatkowo zwierzoczłekowi odporność na liczne zagrożenia, takie jak kwas, elektryczność i ogień.</p>\n                                                                                <p>Jeżeli Imperialna Bestia zginie, jej futro jest warte minimum [[/r 2d100]]{2k100} złotych koron. Można z niego prząść złote nici i uszyć najwyższej jakości złotą tkaninę. Jednakże każdy, kto wdziałby strój z takiego materiału, w każdej godzinie narażony byłby na działanie Pomniejszego Źródła Spaczenia.</p>\n                                                                                <p>Zamiast tego futro można przetopić na monety. Dostarczy dość złota, aby wybić [[/r 10d10]]{10k10} złotych koron. Każdy zaangażowany w proces przetopu wystawiłby się na działanie <a></a>@Corruption[umoarkowane]{Umiarkowanego Źródła} Spaczenia. Obracanie monetami czy sztabkami wytworzonymi tym sposobem oznaczałoby wystawienie się na działanie <a></a>@Corruption[pomniejsze]{Pomniejszego Źródła} Spaczenia, aczkolwiek rękawiczki chroniłyby przed tym efektem. Nie ma sposobu na usunięcie skazy Chaosu ze złota. Nawet zmieszane z kruszcem pochodzącym z innego źródła przeniosłoby Zepsucie na resztę surowca.</p></section>",
+      "description": "<section id=\"secret-nEwZruifqxZTS3N9\" class=\"secret\"><p>Imperialna Bestia jest rozmiarów niziołka i nosi cechy rozmaitych zwierząt. Przede wszystkim przykuwa uwagę niesamowitym futrem o barwie czystego złota! Wolfgang żartuje, że zwierzoczłek zarobi na siebie dopiero po śmierci. Doktor wie, że istota jest prawdziwym cudem natury, i nigdy nie pozwoliłby jej zabić dla futra. Zapewnia ono dodatkowo zwierzoczłekowi odporność na liczne zagrożenia, takie jak kwas, elektryczność i ogień.</p>\n                                                                                <p>Jeżeli Imperialna Bestia zginie, jej futro jest warte minimum [[/r 2d100]]{2k100} złotych koron. Można z niego prząść złote nici i uszyć najwyższej jakości złotą tkaninę. Jednakże każdy, kto wdziałby strój z takiego materiału, w każdej godzinie narażony byłby na działanie Pomniejszego Źródła Spaczenia.</p>\n                                                                                <p>Zamiast tego futro można przetopić na monety. Dostarczy dość złota, aby wybić [[/r 10d10]]{10k10} złotych koron. Każdy zaangażowany w proces przetopu wystawiłby się na działanie <a></a>@Corruption[moderate]{Umiarkowanego Źródła} Spaczenia. Obracanie monetami czy sztabkami wytworzonymi tym sposobem oznaczałoby wystawienie się na działanie <a></a>@Corruption[minor]{Pomniejszego Źródła} Spaczenia, aczkolwiek rękawiczki chroniłyby przed tym efektem. Nie ma sposobu na usunięcie skazy Chaosu ze złota. Nawet zmieszane z kruszcem pochodzącym z innego źródła przeniosłoby Zepsucie na resztę surowca.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.upw302o9B92ZLVfq",
       "species": "???",
       "gender": "???",
@@ -8081,7 +8091,7 @@
     "The Twins": {
       "id": "bjsLDOCdgYsyWYro",
       "name": "Bliźnięta",
-      "description": "<section id=\"secret-0PUuHYC81oR5w1mx\" class=\"secret\"><p>The Twins occupy about one third of cage 4, with the Imperial Beast in the remaining section. The Twins are tiny Beastmen less than a foot tall, but they are fierce out of all proportion to their size and will hurl themselves at the bars of their cage, snarling and snapping at anything that moves.</p></section>",
+      "description": "<section id=\"secret-0PUuHYC81oR5w1mx\" class=\"secret\"><p>Bliźnięta zajmują jedną trzecią czwartej klatki, którą dzielą z Imperialną Bestią. Są malutkimi zwierzoludźmi o wysokości nawet nie 30 centymetrów. Mimo to rzucają się na kraty z większą zaciekłością, niż wskazywałby ich rozmiar, warcząc i próbując ugryźć wszystko, co się porusza.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.bjsLDOCdgYsyWYro",
       "species": "???",
       "gender": "???",
@@ -8156,7 +8166,7 @@
     "Thug Boss": {
       "id": "YTdkvlDr6bU2mbmt",
       "name": "Szef Gangu",
-      "description": "<section id=\"secret-pqs7k84GLJlnOZIK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.qekbEPjyKirEPlD7#hired-muscle]{Hired Muscle}</p><p>There are various thugs in @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8]{Bögenhafen} that may accost the Characters. Most are stevedores in the employ of @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen} or hired muscle supporting one of the other influential NPCs. In most cases the thugs are grim, brutal, and speak with a lower-class accent.</p><p>Character Profiles are supplied here for typical thugs and for their brutish bosses. If your Players do not have many (or any) combat-capable Characters, you should stick to using the basic thugs. However, if you feel the party needs more of a challenge, throw in a thug boss or two, and maybe even add some of the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits} to personalise the group.</p></section>",
+      "description": "<section id=\"secret-pqs7k84GLJlnOZIK\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.qekbEPjyKirEPlD7#hired-muscle]{Wynajęte zbiry}</p><p>W @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8]{Bögenhafen} działa rozmaita hołota, która może zaczepić Bohaterów. Większość stanowią dokerzy pracujący dla @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugena} lub najęte mięśnie wspierające innych wpływowych BN-ów. Zazwyczaj są ponurzy, brutalni i mówią akcentem niższych klas.</p><p>Podano tu profile typowych zbirów i ich brutalnych hersztów. Jeśli wśród Postaci Graczy nie ma wielu (lub żadnych) zdolnych do walki, trzymaj się podstawowych zbirów. Jeżeli jednak drużyna potrzebuje większego wyzwania, dodaj herszta lub dwóch, a nawet niektóre @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólne cechy stworzeń}, aby nadać grupie charakter.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.YTdkvlDr6bU2mbmt",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8222,7 +8232,7 @@
     "Thug": {
       "id": "JOvvyUSDLR5XkN9R",
       "name": "Zakapiorka",
-      "description": "<section id=\"secret-M7ie1uRhbOYPQfa3\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.qekbEPjyKirEPlD7#hired-muscle]{Hired Muscle}</p><p>There are various thugs in @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8]{Bögenhafen} that may accost the Characters. Most are stevedores in the employ of @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugen} or hired muscle supporting one of the other influential NPCs. In most cases the thugs are grim, brutal, and speak with a lower-class accent.</p><p>Character Profiles are supplied here for typical thugs and for their brutish bosses. If your Players do not have many (or any) combat-capable Characters, you should stick to using the basic thugs. However, if you feel the party needs more of a challenge, throw in a thug boss or two, and maybe even add some of the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Generic Creature Traits} to personalise the group.</p></section>",
+      "description": "<section id=\"secret-M7ie1uRhbOYPQfa3\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.qekbEPjyKirEPlD7#hired-muscle]{Wynajęte zbiry}</p><p>W @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8]{Bögenhafen} działa rozmaita hołota, która może zaczepić Bohaterów. Większość stanowią dokerzy pracujący dla @UUID[Compendium.wfrp4e-eis.actors.LG5qATEIFPE9bezB]{Teugena} lub najęte mięśnie wspierające innych wpływowych BN-ów. Zazwyczaj są ponurzy, brutalni i mówią akcentem niższych klas.</p><p>Podano tu profile typowych zbirów i ich brutalnych hersztów. Jeśli wśród Postaci Graczy nie ma wielu (lub żadnych) zdolnych do walki, trzymaj się podstawowych zbirów. Jeżeli jednak drużyna potrzebuje większego wyzwania, dodaj herszta lub dwóch, a nawet niektóre @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.UyUu4g8GQRp16paM#generic-creature-traits]{Ogólne cechy stworzeń}, aby nadać grupie charakter.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.JOvvyUSDLR5XkN9R",
       "species": "Człowiek",
       "gender": "Różne",
@@ -8448,7 +8458,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Złoto 2",
-      "gmnotes": "<p><span class=\"fontstyle0\">Drauchen, the founder of the @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.6pjg22hcwtaCERBb]{Cult of the Vigilant Eye}, spends much of his time meditating on the arcane machinations of the Great Architect, Tzeentch. He </span>floats within a chamber carved with bafflingly intricate patterns - irregular, overlapping spirals and whorls that he claims map the myriad schemes of the Changer of Ways.</p><p>This secret chamber lies beneath a nondescript warehouse in Bögenseite. Though he has dreamed for decades, the actions of the Ordo Septenarius cause him to stir. As @UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.DiVj3o5EkDkj5oQ3]{Morrslieb waxes full}<span class=\"fontstyle0\"> his eyes snap open and his consciousness returns to the present. And he has purpose.</span></p><p><span class=\"fontstyle0\">Years of dark sorcery have altered Drauchen. He stands almost 7ft tall with long, gangly limbs and a thin face. A long, bulbous nose projects from furrowed brows and vibrant brightblue eyes glimmer unnaturally from deep-set sockets. He is entirely hairless, and has shrouded his twisted body in tattered robes of black and blue.</span></p><p> </p><p> </p>",
+      "gmnotes": "<p><span class=\"fontstyle0\">Twórca @UUID[Compendium.wfrp4e-eis.journals.ro7SIltM899Ogrk8.JournalEntryPage.6pjg22hcwtaCERBb]{Kultu Czujnego Oka}, Volker Drauchen, spędza obecnie większość czasu medytując nad machinacjami Wielkiego Architekta, Tzeentcha. Lewituje wewnątrz sekretnej komnaty o ścianach pokrytych zawiłymi symbolami – nieregularnymi, nakładającymi się na siebie spiralami i zawijasami, które Volker uważa za mapę nieskończonych intryg Tego, Który Zmienia Drogi.</span></p><p>Sekretna komnata leży pod jednym z niewyróżniających się niczym magazynów w Bögenseite. Po dekadach snu Drauchena wybudziły z transu działania Ordo Septenarius. Gdy @UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.DiVj3o5EkDkj5oQ3]{Morrslieb pojawia się w pełni}, jego oczy otwierają się, a świadomość powraca do teraźniejszości. Volker ma nowy cel.</p><p><span class=\"fontstyle0\">Lata studiowania czarnej magii odmieniły Drauchena. Ma ponad dwa metry wzrostu, długie kończyny i wychudzoną twarz. Spod zmarszczonych brwi wyrasta długi, bulwiasty nos, a w głęboko osadzonych oczodołach nienaturalnie lśnią jasnoniebieskie oczy. Jest całkowicie pozbawiony włosów, a swe wypaczone ciało skrywa pod postrzępionymi szatami w czerni i błękicie.</span></p><p> </p><p> </p>",
       "items": {
         "wfTWHpW7skEy6TE9": {
           "id": "wfTWHpW7skEy6TE9",
@@ -8707,7 +8717,7 @@
         "mS5vOqnIzkewf4D3": {
           "id": "mS5vOqnIzkewf4D3",
           "name": "Księga Zaklęć",
-          "description": "<p><em>Contains 4 Lore of Heavens spells of your choice</em></p>\n<p>Spell grimoires are usually scribed by wizards, and their covers are often secured with locks. Sometimes grimoires are even protected by magical alarms or wards. Carrying a spell grimoire is punishable as heresy unless the owning wizard is licensed by the Colleges of Magic.</p>",
+            "description": "<p><em>Zawiera 4 wybrane przez Ciebie zaklęcia z Tradycji Niebios.</em></p>\n<p>Grimuary zaklęć są zwykle spisywane przez czarodziejów, a ich okładki często zabezpiecza się zamkami. Czasem chronią je nawet magiczne alarmy lub osłony. Noszenie grimuaru zaklęć jest karane jako herezja, chyba że jego właściciel ma licencję Kolegiów Magii.</p>",
           "originalName": "Księga Zaklęć"
         },
         "ZggxJSLsTpYAOKPw": {
@@ -8775,7 +8785,7 @@
     "Werner Murrmann": {
       "id": "YWmr1W2O1TOmDBXM",
       "name": "Werner Murrmann",
-      "description": "<h3>Osobowość i Wygląd</h3><p style=\"text-align: justify\"><em>„Myślisz, że masz nudne życie? Próbowałeś kiedyś wiercić dziury w drewnie przez cały dzień?”</em></p><p style=\"text-align: justify\">Werner ma krótkie ciemnobrązowe włosy i głębokie ciemnoniebieskie oczy. Jest ufną i bardzo szczerą osobą, zawsze chętną, by dać innym drugą szansę. Wielbiciel reiklandzkiego piwa. Werner rzadko się denerwuje, ale gdy już wybuchnie, nie panuje nad swoimi odruchami. Eksplozję gniewu zwiastuje błysk w ciemnoniebieskich oczach – to ostrzeżenie, by jeszcze raz zastanowić się przed jego dalszym prowokowaniem. Werner jest dwukrotnie wyższy od Harbulla, dobrze zbudowany i muskularny. Tworzy przez to dziwaczny duet z pękatym niziołkiem. Mimo fizycznych różnic ta dwójka szybko się polubiła, a przyjazna osobowość młodego człowieka sprawiła, że stał się dobrym kompanem podróży dla wszystkich członków drużyny.</p><h3>Przeszłość</h3><p style=\"text-align: justify\">Werner wychował się w rodzinnej gospodzie, „Odpoczynku Podróżnika”, niedaleko wioski Mittelmund. Życie syna karczmarza to powtarzające się czynności, między innymi pomaganie woźnicom, praca za barem, naprawa zepsutych stołów czy załatwianie rozmaitych robót. Ta egzystencja szybko mu się znudziła, tym bardziej że słuchając w gospodzie opowieści wszelakich podróżnych o przygodach, wiedział, że można żyć inaczej. Gdy tylko nastał dzień, w którym jego rodziców stać było na wynajęcie pomocy przy prowadzeniu gospody, chłopak zaczął szukać towarzyszy podróży. Szczery charakter i czarujący uśmiech Wernera przekonały grupę świeżo poznanych, dziwnych osobników i zawiązała się spółka. Aktualnie ta ciekawa zbieranina wyrusza do Altdorfu, wspaniałej stolicy Imperium.</p><h3>Secrets</h3><ul><li><p style=\"text-align: justify\">Werner jest zakochany w jednym z towarzyszy podróży i postanowił podążać za nim lub za nią, dokądkolwiek się udadzą. Powinieneś porozmawiać o tym sekrecie z MG i być może również z obiektem twoich westchnień.</p></li><li><p style=\"text-align: justify\">Rodzice Wernera byli nadopiekuńczy i nigdy nie pozwalali mu wyjechać. Dlatego wymknął się w środku nocy razem z nowymi przyjaciółmi. Tymczasem za jego „porywaczami” wystawiono list gończy. Werner marzy o zdobyciu takich bogactw, by umknąć swoim rodzicom.</p></li><li><p style=\"text-align: justify\">Werner dorastał w bezpiecznym miejscu i śmiertelnie boi się tego, co czyha w imperialnych lasach. Otrzymujesz Czynnik Psychologiczny Lęk (Głębokie lasy) (Głęboki las wywołuje Strach (0) u Wernera).</p></li><li><p style=\"text-align: justify\">Werner, kończąc 10 lat, tak bardzo bał się wizyty u Czarnowidza, że uciekł. Przez to nie otrzymał Wróżby Losu, co oznacza, że z punktu widzenia prawa nie jest osobą dorosłą. Takie sytuacje w Imperium to temat tabu i mogą przysporzyć niewyobrażalnych kłopotów, jeżeli wyjdą na jaw. Tracisz Talent Wróżba Losu.</p></li></ul><p style=\"text-align: justify\">Zaczynasz z dodatkowymi [[/r 1d10]]{1k10} brązowymi pensami za każdy wybrany sekret.</p>",
+      "description": "<h3>Osobowość i Wygląd</h3><p style=\"text-align: justify\"><em>„Myślisz, że masz nudne życie? Próbowałeś kiedyś wiercić dziury w drewnie przez cały dzień?”</em></p><p style=\"text-align: justify\">Werner ma krótkie ciemnobrązowe włosy i głębokie ciemnoniebieskie oczy. Jest ufną i bardzo szczerą osobą, zawsze chętną, by dać innym drugą szansę. Wielbiciel reiklandzkiego piwa. Werner rzadko się denerwuje, ale gdy już wybuchnie, nie panuje nad swoimi odruchami. Eksplozję gniewu zwiastuje błysk w ciemnoniebieskich oczach – to ostrzeżenie, by jeszcze raz zastanowić się przed jego dalszym prowokowaniem. Werner jest dwukrotnie wyższy od Harbulla, dobrze zbudowany i muskularny. Tworzy przez to dziwaczny duet z pękatym niziołkiem. Mimo fizycznych różnic ta dwójka szybko się polubiła, a przyjazna osobowość młodego człowieka sprawiła, że stał się dobrym kompanem podróży dla wszystkich członków drużyny.</p><h3>Przeszłość</h3><p style=\"text-align: justify\">Werner wychował się w rodzinnej gospodzie, „Odpoczynku Podróżnika”, niedaleko wioski Mittelmund. Życie syna karczmarza to powtarzające się czynności, między innymi pomaganie woźnicom, praca za barem, naprawa zepsutych stołów czy załatwianie rozmaitych robót. Ta egzystencja szybko mu się znudziła, tym bardziej że słuchając w gospodzie opowieści wszelakich podróżnych o przygodach, wiedział, że można żyć inaczej. Gdy tylko nastał dzień, w którym jego rodziców stać było na wynajęcie pomocy przy prowadzeniu gospody, chłopak zaczął szukać towarzyszy podróży. Szczery charakter i czarujący uśmiech Wernera przekonały grupę świeżo poznanych, dziwnych osobników i zawiązała się spółka. Aktualnie ta ciekawa zbieranina wyrusza do Altdorfu, wspaniałej stolicy Imperium.</p><h3>Sekrety</h3><ul><li><p style=\"text-align: justify\">Werner jest zakochany w jednym z towarzyszy podróży i postanowił podążać za nim lub za nią, dokądkolwiek się udadzą. Powinieneś porozmawiać o tym sekrecie z MG i być może również z obiektem twoich westchnień.</p></li><li><p style=\"text-align: justify\">Rodzice Wernera byli nadopiekuńczy i nigdy nie pozwalali mu wyjechać. Dlatego wymknął się w środku nocy razem z nowymi przyjaciółmi. Tymczasem za jego „porywaczami” wystawiono list gończy. Werner marzy o zdobyciu takich bogactw, by umknąć swoim rodzicom.</p></li><li><p style=\"text-align: justify\">Werner dorastał w bezpiecznym miejscu i śmiertelnie boi się tego, co czyha w imperialnych lasach. Otrzymujesz Czynnik Psychologiczny Lęk (Głębokie lasy) (Głęboki las wywołuje Strach (0) u Wernera).</p></li><li><p style=\"text-align: justify\">Werner, kończąc 10 lat, tak bardzo bał się wizyty u Czarnowidza, że uciekł. Przez to nie otrzymał Wróżby Losu, co oznacza, że z punktu widzenia prawa nie jest osobą dorosłą. Takie sytuacje w Imperium to temat tabu i mogą przysporzyć niewyobrażalnych kłopotów, jeżeli wyjdą na jaw. Tracisz Talent Wróżba Losu.</p></li></ul><p style=\"text-align: justify\">Zaczynasz z dodatkowymi [[/r 1d10]]{1k10} brązowymi pensami za każdy wybrany sekret.</p>",
       "sourceId": "Compendium.wfrp4e-eis.actors.YWmr1W2O1TOmDBXM",
       "species": "Człowiek",
       "gender": "Mężczyzna",
@@ -9035,7 +9045,7 @@
           "id": "mv60NWUuk4s9pbyo",
           "name": "O Toksycznym Wpływie Chaosu na Umysły i Ciała Sług Jego oraz o Znakach, po Których Tenże Rozpoznany Być Może we Wczesnych Stadiach Niegodziwości",
           "description": " ",
-          "gmdescription": "<p>The subject matter of this work is self-explanatory. While it is very detailed in many respects, it is also incorrect in some of its observations. It claims, for example, that Chaos always marks its victim with a visible mutation before any moral rot sets in, which is often the exact opposite of the truth.</p>\n<p>The notes and marginalia that Magnus and Wolfgang have added are probably of much more interest to a true scholar of Chaos than the original text. It could be sold for up to 40GCs — if the right customer could be found. Many witch hunters would be willing to pay good money for this book. But most would accuse the book’s holder of an unhealthy interest in the ‘witcherie of Chaos’— just so that they could get their hands on it for nothing!</p>",
+            "gmdescription": "<p>Łatwo domyślić się, o czym traktuje to dzieło. Chociaż jest to bardzo szczegółowa praca, zawiera parę nieprawdziwych spostrzeżeń. Twierdzi na przykład, że Chaos zawsze znaczy swoje ofiary widoczną mutacją, zanim dojdzie do moralnego upadku, podczas gdy często prawda jest dokładnie odwrotna.</p>\n<p>Notatki i marginalia dodane przez Magnusa i Wolfganga będą prawdopodobnie o wiele bardziej interesujące dla prawdziwego badacza Chaosu niż oryginalny tekst. Księgę można sprzedać nawet za 40 złotych koron — jeśli znajdzie się odpowiedniego kupca. Wielu łowców czarownic chętnie zapłaciłoby za nią dobre pieniądze. Większość jednak oskarżyłaby posiadacza o niezdrowe zainteresowanie „czarostwem Chaosu”, tylko po to, by zagarnąć ją za darmo!</p>",
           "originalName": "O Toksycznym Wpływie Chaosu na Umysły i Ciała Sług Jego oraz o Znakach, po Których Tenże Rozpoznany Być Może we Wczesnych Stadiach Niegodziwości"
         },
         "btaJ66F1PqKadcma": {
@@ -9049,7 +9059,7 @@
           "id": "9WqXgAFCW2W7dm7b",
           "name": "O Naturze Spaczenia i Jego Zastosowaniach w Sztukach Alchemicznych i Medycznych",
           "description": " ",
-          "gmdescription": "<p>Ostatnie dzieło to drukowany traktat Wolfganga O Naturze Spaczenia i Jego Zastosowaniach w Sztukach Alchemicznych i Medycznych. Książka została wydrukowana w Parravon w Bretonii. Obszerny zbiór notatek Wolfganga sugeruje, że pracuje już nad drugim wydaniem. To rozbudowane dzieło można sprzedać za 50 złotych koron odpowiedniemu (i niemal na pewno heretyckiemu) nabywcy. Każdy łowca czarownic uznałby właściciela tomu za niebezpiecznego sługę Chaosu, gdyż księga zawiera liczne przepisy na wykorzystanie spaczenia. Dzieło obejmuje sposoby na leczenie każdej powszechnej choroby. Ich zastosowanie obniża Trudność Testów pozbycia się infekcji. <strong>Wymagające </strong>testy stają się <strong>Przeciętne</strong>, <strong>Przeciętne</strong> - <strong>Łatve</strong>i tak dalej. Testy <strong>Bardzo Łatwe</strong> są zdawane automatycznie. Jednakże użycie spaczenia jako składnika lekarstw powoduje, że kuracje te oznaczają wystawienie się na @Corruption[pomniejsze]{Pomniejsze Źródło} Spaczenia. W notatkach Wolfganga umieszczono ostrzeżenie przed tym zagrożeniem, jednak doktor nie znalazł sposobu na pozbycie się tych efektów ubocznych. Aptekarz będący w posiadaniu tej księgi może użyć spaczenia zamiast dowolnego składnika podczas produkcji lekarstw, jednak proces ten oznacza wystawienie się na @Corruption[umiarkowane]{Umiarkowane Źródło} Spaczenia. Każdy, kto zażyje stworzony w ten sposób specyfik, wystawi się na działanie @Corruption[pomniejsze]{Pomniejszego Źródła} Spaczenia. Wolfgang ma dużo szczęścia, że mimo wieloletnich eksperymentów nie widać po nim śladu mutacji!</p>",
+          "gmdescription": "<p>Ostatnie dzieło to drukowany traktat Wolfganga O Naturze Spaczenia i Jego Zastosowaniach w Sztukach Alchemicznych i Medycznych. Książka została wydrukowana w Parravon w Bretonii. Obszerny zbiór notatek Wolfganga sugeruje, że pracuje już nad drugim wydaniem. To rozbudowane dzieło można sprzedać za 50 złotych koron odpowiedniemu (i niemal na pewno heretyckiemu) nabywcy. Każdy łowca czarownic uznałby właściciela tomu za niebezpiecznego sługę Chaosu, gdyż księga zawiera liczne przepisy na wykorzystanie spaczenia. Dzieło obejmuje sposoby na leczenie każdej powszechnej choroby. Ich zastosowanie obniża Trudność Testów pozbycia się infekcji. <strong>Wymagające </strong>testy stają się <strong>Przeciętne</strong>, <strong>Przeciętne</strong> - <strong>Łatve</strong>i tak dalej. Testy <strong>Bardzo Łatwe</strong> są zdawane automatycznie. Jednakże użycie spaczenia jako składnika lekarstw powoduje, że kuracje te oznaczają wystawienie się na @Corruption[minor]{Pomniejsze Źródło} Spaczenia. W notatkach Wolfganga umieszczono ostrzeżenie przed tym zagrożeniem, jednak doktor nie znalazł sposobu na pozbycie się tych efektów ubocznych. Aptekarz będący w posiadaniu tej księgi może użyć spaczenia zamiast dowolnego składnika podczas produkcji lekarstw, jednak proces ten oznacza wystawienie się na @Corruption[moderate]{Umiarkowane Źródło} Spaczenia. Każdy, kto zażyje stworzony w ten sposób specyfik, wystawi się na działanie @Corruption[minor]{Pomniejszego Źródła} Spaczenia. Wolfgang ma dużo szczęścia, że mimo wieloletnich eksperymentów nie widać po nim śladu mutacji!</p>",
           "originalName": "O Naturze Spaczenia i Jego Zastosowaniach w Sztukach Alchemicznych i Medycznych"
         },
         "HVkGs1BmsxMz1xc9": {
@@ -9072,7 +9082,7 @@
         },
         "sYbgpSnRqSZWgwFP": {
           "id": "sYbgpSnRqSZWgwFP",
-          "name": "Etiquette\r (Merchants)",
+          "name": "Etykieta (Kupcy)",
           "description": "<p>Dopóki jesteś odpowiednio ubrany i zachowujesz się należycie, potrafisz wtopić się w tłum wybranej grupy społecznej. Oto przykłady kilku z nich: Członkowie Gildii lub Cechu, Kultyści, Przestępcy, Służba, Szlachta, Uczeni, Żołnierze. Jeśli nie posiadasz tego Talentu, ci, którzy go mają, łatwo zauważą, że nie pasujesz do obcego środowiska. Widać to w zachowaniu bohatera. To oczywiście zależy od odgrywania, ale MG może wprowadzić tu odpowiedni modyfikator do Testów Ogłady.</p>",
           "originalName": "Etiquette\r (Merchants)",
           "effects": {
@@ -9140,7 +9150,7 @@
         },
         "f6gvcfw9yW4cbdok": {
           "id": "T8nErqWnkqdvcNVz",
-          "name": "Dart",
+          "name": "Strzałka",
           "description": "<p>Sprawiasz, że malutka strzałka, cała z magicznej energii, wystrzeliwuje ci z palców. Uznaje się ją za magiczny pocisk ze współczynnikiem Obrażeń +0.</p><p>\n\n <b>Tradycja:</b> Żaden<p>",
           "originalName": "Dart",
           "sourceId": "Compendium.wfrp4e-core.items.Item.T8nErqWnkqdvcNVz",
@@ -9274,7 +9284,7 @@
           "originalName": "ubranie (z ukrytymi kieszeniami i schowkami)"
         },
         "xsGbDFqK2qh7lsIj": {
-          "specification": "Minor"
+          "specification": "Pomniejsze"
         },
         "lV7Bxi3T3ps4QBlc": {
           "specification": "Uzależnienie od adrenaliny"
@@ -9373,7 +9383,7 @@
       "species": "Człowiek",
       "gender": "Mężczyzna",
       "status": "Srebro 2",
-      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#wrestling-ring]{Wrestling Ring}</p><p><span class=\"fontstyle0\">‘Crusher’ Braugen is a brute of a man that could intimidate a wall. When working, he strips to the waist and stands in the middle of the ring waiting for his next challenger. He breathes heavily, just as @UUID[Compendium.wfrp4e-eis.actors.akfYzVvdVRvSjl6q]{Klaus Schattiger} showed him, ensuring he always appears to be on the verge of exhaustion. He and Klaus have enjoyed a mutually beneficial partnership for years — Schattiger draws the crowds and looks after the cash, while Braugen roars in the ring and does the fighting. The two trust each other implicitly, but the rest of the world is fair game. Out of the ring, Braugen is a sensitive, deliberate man with a soft Middenlander accent.</span></p><p> </p><p></p>",
+      "gmnotes": "<p>@UUID[Compendium.wfrp4e-eis.journals.MB5a0zBGJcZhEYUI.JournalEntryPage.bJXsdQq1rSN5tfqd#wrestling-ring]{Arena zapaśnicza}</p><p><span class=\"fontstyle0\">„Miażdżyciel” Braugen to brutal, który mógłby zastraszyć nawet kamienny mur. Kiedy pracuje, odsłania nagi tors i stoi na środku areny, czekając na przeciwnika. Ciężko oddycha, tak jak pokazał mu @UUID[Compendium.wfrp4e-eis.actors.akfYzVvdVRvSjl6q]{Klaus Schattiger}, udając skrajnie wyczerpanego. Braugen współpracuje z Schattigerem od lat. Klaus przyciąga tłumy i pilnuje finansów, a „Miażdżyciel” zajmuje się walką na ringu. Obydwaj ufają sobie bezgranicznie, ale reszta świata niech się strzeże. Poza areną Braugen jest czułym, zamyślonym mężczyzną mówiącym z miękkim middenlandzkim akcentem.</span></p><p> </p><p></p>",
       "items": {
         "oxQU3NxPhjFFVxmq": {
           "id": "oxQU3NxPhjFFVxmq",
