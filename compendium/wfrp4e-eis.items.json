@@ -2,11 +2,20 @@
   "label": "Przedmioty (Wróg w Cieniach)",
   "mapping": {
     "gmdescription": "system.gmdescription.value",
-    "skills": "system.skills",
-    "talents": "system.talents",
+    "skills": {
+        "path": "system.skills",
+        "converter": "templateSkills"
+    },
+    "talents": {
+        "path": "system.talents",
+        "converter": "templateTalents"
+    },
     "class": "system.class.value",
     "careergroup": "system.careergroup.value",
-    "trappings": "system.trappings",
+    "trappings": {
+        "path": "system.trappings",
+        "converter": "templateTrappings"
+    },
     "duration_value": "system.duration.value",
     "duration_unit": "system.duration.unit",
     "incubation_value": "system.incubation.value",
@@ -675,7 +684,7 @@
     "Blasted Mind": {
       "id": "MUPhnpdYek3h1mm8",
       "name": "Zniszczony umysł",
-      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.IAWyzDfC286a9MPz]{ Niewrażliwość na Psychologię} na [[/r 1d10]]&nbsp;  Rund za każdym razem, kiedy miałbyś otrzymać Stan @Condition[Panika]  Po tym czasie otrzymujesz  [[/r 1d10]] stanu Panika</p>",
+      "description": "<p> Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.IAWyzDfC286a9MPz]{ Niewrażliwość na Psychologię} na [[/r 1d10]]&nbsp;  Rund za każdym razem, kiedy miałbyś otrzymać Stan @Condition[broken]{Panika}  Po tym czasie otrzymujesz  [[/r 1d10]] stanu Panika</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.MUPhnpdYek3h1mm8",
       "effects": {
         "tMO4lna22MZ6UXyF": {
@@ -783,7 +792,7 @@
     "Burning Skin": {
       "id": "4AxwPjHE5H7qh6FD",
       "name": "Płonąca skóra",
-      "description": "<p>Istoty i przedmioty, których dotkniesz, muszą zdać Test Atletyki albo otrzymują Stan @Condition[Podpalenie]; Tej mutacji nie da się ukryć.</p>",
+      "description": "<p>Istoty i przedmioty, których dotkniesz, muszą zdać Test Atletyki albo otrzymują Stan @Condition[ablaze]{Podpalenie}; Tej mutacji nie da się ukryć.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.4AxwPjHE5H7qh6FD",
       "modifier": " "
     },
@@ -895,7 +904,7 @@
     "Deafening Cry": {
       "id": "Fn4oyaEu8T7ulH5r",
       "name": "Ogłuszający wrzask",
-      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp.</p>",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp;.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.Fn4oyaEu8T7ulH5r",
       "effects": {
         "7aVwqW5QAIE1iCPK": {
@@ -1119,7 +1128,7 @@
     "Foul Odour": {
       "id": "P7D3Iuh2ueGNTqdg",
       "name": "Okropny odór",
-      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp.</p>",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Dekoncentrujący}&nbsp;.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.P7D3Iuh2ueGNTqdg",
       "effects": {
         "4UX2ZiDJ85UiooOr": {
@@ -1290,7 +1299,7 @@
     "Hurried Masochism": {
       "id": "vgQ9GK4S6kcZgCS8",
       "name": "Radosny masochizm",
-      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.GbDyBCu8ZjDp6dkj]{Wojowniczy}; nie możesz @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#ucieczka]{uciec} z własnej woli</p>",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.GbDyBCu8ZjDp6dkj]{Wojowniczy}; nie możesz @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#fleeing]{uciec} z własnej woli</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.vgQ9GK4S6kcZgCS8",
       "effects": {
         "LMr7iruJt1GyIvG5": {
@@ -1983,7 +1992,7 @@
     "Warp Frenzy": {
       "id": "VvMSLXiRF4mI2KSY",
       "name": "Spaczeniowy szał",
-      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.yRhhOlt18COq4e1q]{Szał Bojowy}&nbsp. Kiedy jesteś w szale, czasowo dostajesz dodatkową, losową fizyczną mutację.</p>",
+      "description": "<p>Otrzymujesz Cechę @UUID[Compendium.wfrp4e-core.items.yRhhOlt18COq4e1q]{Szał Bojowy}&nbsp;. Kiedy jesteś w szale, czasowo dostajesz dodatkową, losową fizyczną mutację.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.VvMSLXiRF4mI2KSY",
       "effects": {
         "AnA7OcRZyIghYQfy": {
@@ -2161,7 +2170,7 @@
     "Blue Fire of Tzeentch": {
       "id": "wY6JAt76eArBroYC",
       "name": "Niebieski płomień Tzeentcha",
-      "description": "<p>Przyzywasz wirującą kulę iskrzącego błękitnego ognia, która po chłania Twoich wrogów. <em>Niebieski Płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +3 zadawanym wszystkim Celom na Obszarze działania. Każdy trafiony otrzymuje również jeden Stan @Condition[Podpalenie].</p><p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nią Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p><p>Tradycja<strong>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha. </p>",
+      "description": "<p>Przyzywasz wirującą kulę iskrzącego błękitnego ognia, która po chłania Twoich wrogów. <em>Niebieski Płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +3 zadawanym wszystkim Celom na Obszarze działania. Każdy trafiony otrzymuje również jeden Stan @Condition[ablaze]{Podpalenie}.</p><p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nią Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p><p>Tradycja<strong>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha. </p>",
       "sourceId": "Compendium.wfrp4e-eis.items.wY6JAt76eArBroYC",
       "effects": {
         "kpfKJaxLFqOnbIli": {
@@ -2415,7 +2424,7 @@
     "Mindfire": {
       "id": "Wmo0Yr7EyukRCOJq",
       "name": "Płomień umysłu",
-      "description": "<p>Powietrze wypacza się wokół Twoich palców, tworząc kulę błyszczącej, mglistej energii, którą możesz cisnąć w przeciwnika. Cel trafiony przez <em>Płomień umysłu</em> musi zdać <strong>Wymagający (+0) Test Opanowania</strong> lub otrzymuje 1 Punkt Zepsucia. Za każde 2 PS uzyskane w Teście rzucania zaklęcia możesz przyznać ofierze kolejny Punkt Zepsucia, jeżeli nie zda Testu Opanowania. Gdyby nieszczęśnik miał z tego powodu otrzymać mutację, rzuca w Tabeli @Table[mutatemental]{Zepsucia Psychicznego} oraz dostaje jeden poziom Stanu @Condition[Podpalenie], kiedy nienaturalny ogień bucha z jego oczu, ust, nozdrzy i uszu.</p>\n<p><strong>Tradycja: </strong>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>Powietrze wypacza się wokół Twoich palców, tworząc kulę błyszczącej, mglistej energii, którą możesz cisnąć w przeciwnika. Cel trafiony przez <em>Płomień umysłu</em> musi zdać <strong>Wymagający (+0) Test Opanowania</strong> lub otrzymuje 1 Punkt Zepsucia. Za każde 2 PS uzyskane w Teście rzucania zaklęcia możesz przyznać ofierze kolejny Punkt Zepsucia, jeżeli nie zda Testu Opanowania. Gdyby nieszczęśnik miał z tego powodu otrzymać mutację, rzuca w Tabeli @Table[mutatemental]{Zepsucia Psychicznego} oraz dostaje jeden poziom Stanu @Condition[ablaze]{Podpalenie}, kiedy nienaturalny ogień bucha z jego oczu, ust, nozdrzy i uszu.</p>\n<p><strong>Tradycja: </strong>Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.Wmo0Yr7EyukRCOJq",
       "effects": {
         "tktZi4OuuYUujjbM": {
@@ -2455,7 +2464,7 @@
     "Pink Fire of Tzeentch": {
       "id": "sklbZU3K8ogeu3mC",
       "name": "Różowy płomień Tzeentcha",
-      "description": "<p>Wirujące pociski różowego ognia tryskają z Twoich rozczapierzonych palców, rozdzierając wrzeszczącą z bólu rzeczywistość. <em>Różowy płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +6. Dodatkowo Cel otrzymuje Stan @Condition[Podpalenie].</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]{1k10}. Gdy wypadnie 9, @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowy strachulec} wydziera sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>Wirujące pociski różowego ognia tryskają z Twoich rozczapierzonych palców, rozdzierając wrzeszczącą z bólu rzeczywistość. <em>Różowy płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +6. Dodatkowo Cel otrzymuje Stan @Condition[ablaze]{Podpalenie}.</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowy strachulec} wydziera sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.sklbZU3K8ogeu3mC",
       "effects": {
         "prljNzFYTk5xHTcl": {
@@ -2647,7 +2656,7 @@
     "Transformation of Tzeentch": {
       "id": "xFN6ucGC0moflQAb",
       "name": "Transformacja Tzeentcha",
-      "description": "<p>Na Twój rozkaz z ziemi wyrastają więzy eterycznego ognia, po czym chwytają wybrany przez Ciebie cel w kokon magicznej energii. Ofiara otrzymuje Stan @Condition[Powalenie]{Powalenie} i jest uznana za bezbronną na czas działania zaklęcia. Gdy czas działania Transformacji Tzeentcha się skończy, cel musi wykonać <strong>Test Przeciwstawny Odporność/Język (Magiczny)</strong>. Jeżeli mu się nie powiedzie, otrzymuje 1 Punkt Zepsucia +1 za każdy PS, o który przegrał.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>Na Twój rozkaz z ziemi wyrastają więzy eterycznego ognia, po czym chwytają wybrany przez Ciebie cel w kokon magicznej energii. Ofiara otrzymuje Stan @Condition[prone]{Powalenie} i jest uznana za bezbronną na czas działania zaklęcia. Gdy czas działania Transformacji Tzeentcha się skończy, cel musi wykonać <strong>Test Przeciwstawny Odporność/Język (Magiczny)</strong>. Jeżeli mu się nie powiedzie, otrzymuje 1 Punkt Zepsucia +1 za każdy PS, o który przegrał.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.xFN6ucGC0moflQAb",
       "duration": "Bonus SW metrów",
       "target": "1",
@@ -2656,7 +2665,7 @@
     "Tzeentch's Firestorm": {
       "id": "R0uUNtxsHEEddMLV",
       "name": "Burza ognia Tzeentcha",
-      "description": "<p>W wybranym miejscu wybucha burza purpurowego ognia, przywołana Twoim opętańczym śmiechem. Jest uznawana za magiczny pocisk o współczynniku Obrażeń +9, jego ofiary otrzymują również jeden Stan @Condition[Podpalenie].</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowe strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>W wybranym miejscu wybucha burza purpurowego ognia, przywołana Twoim opętańczym śmiechem. Jest uznawana za magiczny pocisk o współczynniku Obrażeń +9, jego ofiary otrzymują również jeden Stan @Condition[ablaze]{Podpalenie}.</p>\n<p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nie Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{różowe strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.R0uUNtxsHEEddMLV",
       "effects": {
         "FRfP4hUQarIWkpfA": {
@@ -2711,7 +2720,7 @@
     "Word of Tzeentch": {
       "id": "dzVPZv5iuUYeAfaI",
       "name": "Słowo Tzeentcha",
-      "description": "<p>Gdy Twój język formułuje dziwaczne dźwięki tego bluźnierczego zaklęcia, dwa głosy wydobywają się z Twojego gardła w przeklętej, nienaturalnej harmonii. Wypowiedziane słowa niosą dodatkowe znaczenie dla istoty będącej celem zaklęcia, choć ofiara nigdy nie zapamięta, co powiedziano. Pozostaje pełna złych przeczuć, jak gdyby zapomniała o czymś wielce istotnym dla swojej przyszłości.</p>\n<p>Czarownik i żyjąca istota będąca celem zaklęcia muszą wykonać <strong>Test Przeciwstawny Inteligencji</strong>. Jeżeli czarownik wygra Test, cel Czaru otrzymuje jeden poziom Stanu @Condition[Oszołomienie] i +1 poziom za każdy PS różnicy. Jeśli ofiara zaklęcia miała Pecha, otrzymuje Stan @Condition[Utrata Przytomności] i 1 Punkt Zepsucia.</p>\n<p>Gdy wszystkie Stany zostaną usunięte, cel zaklęcia musi zdać <strong>Przeciętny (+20) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia. Jeżeli Test zakończy się Pechem, ofiara natychmiast otrzymuje jedną @Table[mutatemental]{mutację psychiczną} i nie może wybrać żadnej nowej Ambicji krótkoterminowej przez następne [[/r 1d10]]{1k10} tygodni.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
+      "description": "<p>Gdy Twój język formułuje dziwaczne dźwięki tego bluźnierczego zaklęcia, dwa głosy wydobywają się z Twojego gardła w przeklętej, nienaturalnej harmonii. Wypowiedziane słowa niosą dodatkowe znaczenie dla istoty będącej celem zaklęcia, choć ofiara nigdy nie zapamięta, co powiedziano. Pozostaje pełna złych przeczuć, jak gdyby zapomniała o czymś wielce istotnym dla swojej przyszłości.</p>\n<p>Czarownik i żyjąca istota będąca celem zaklęcia muszą wykonać <strong>Test Przeciwstawny Inteligencji</strong>. Jeżeli czarownik wygra Test, cel Czaru otrzymuje jeden poziom Stanu @Condition[stunned]{Oszołomienie} i +1 poziom za każdy PS różnicy. Jeśli ofiara zaklęcia miała Pecha, otrzymuje Stan @Condition[unconscious]{Utrata Przytomności} i 1 Punkt Zepsucia.</p>\n<p>Gdy wszystkie Stany zostaną usunięte, cel zaklęcia musi zdać <strong>Przeciętny (+20) Test Odporności</strong> lub otrzymuje 1 Punkt Zepsucia. Jeżeli Test zakończy się Pechem, ofiara natychmiast otrzymuje jedną @Table[mutatemental]{mutację psychiczną} i nie może wybrać żadnej nowej Ambicji krótkoterminowej przez następne [[/r 1d10]]{1k10} tygodni.</p>\n<p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.dzVPZv5iuUYeAfaI",
       "effects": {
         "7e8tRh93XBV8ATSv": {
@@ -2827,7 +2836,7 @@
     "Absorb": {
       "id": "nMZamRegEI8TtE5I",
       "name": "Wchłanianie",
-      "description": "<p><span class=\"fontstyle0\">Na koniec Rundy, jeżeli istota ma więcej Przewag niż którykolwiek z jej przeciwników będących z nią w zwarciu, pochłania jednego z nich o rozmiarze jej równym lub mniejszym. Wchłonięta ofiara otrzymuje tyle poziomów Stanu </span>@Condition[Pochwycenie] <span class=\"fontstyle0\">, ile wynosi Bonus z Siły atakującej istoty, a ponadto jest traktowana, jakby siłowała się z przeciwnikiem w @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#zapasy]{Zapasach}. Na koniec każdej Rundy ofiara traci tyle punktów Żywotności, ile wynosi Bonus z Siły wchłaniającego ją stworzenia. Punkty Pancerza i Bonus z Wytrzymałości nie zmniejszają tych Ran. Pochłaniająca istota „leczy” tyle samo punktów swojej Żywotności. Jeżeli wchłonięta ofiara umrze, stwór wycofuje się, by w ciągu najbliższych kilku dni trawić unoszące się w jego ciele zwłoki. Każdy atak wymierzony w istotę z tą Cechą zadaje tyle samo Obra- żeń pochłoniętej ofierze.</span></p>",
+      "description": "<p><span class=\"fontstyle0\">Na koniec Rundy, jeżeli istota ma więcej Przewag niż którykolwiek z jej przeciwników będących z nią w zwarciu, pochłania jednego z nich o rozmiarze jej równym lub mniejszym. Wchłonięta ofiara otrzymuje tyle poziomów Stanu </span>@Condition[entangled]{Pochwycenie} <span class=\"fontstyle0\">, ile wynosi Bonus z Siły atakującej istoty, a ponadto jest traktowana, jakby siłowała się z przeciwnikiem w @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#grappling]{Zapasach}. Na koniec każdej Rundy ofiara traci tyle punktów Żywotności, ile wynosi Bonus z Siły wchłaniającego ją stworzenia. Punkty Pancerza i Bonus z Wytrzymałości nie zmniejszają tych Ran. Pochłaniająca istota „leczy” tyle samo punktów swojej Żywotności. Jeżeli wchłonięta ofiara umrze, stwór wycofuje się, by w ciągu najbliższych kilku dni trawić unoszące się w jego ciele zwłoki. Każdy atak wymierzony w istotę z tą Cechą zadaje tyle samo Obra- żeń pochłoniętej ofierze.</span></p>",
       "sourceId": "Compendium.wfrp4e-eis.items.nMZamRegEI8TtE5I"
     },
     "Amorphous": {

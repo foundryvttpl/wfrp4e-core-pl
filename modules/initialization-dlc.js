@@ -140,22 +140,22 @@ Hooks.once("ready", async () => {
             if (batter) {
                 batter.name = "Grzmotnięcie";
                 batter.description = "Kiedy masz do czynienia z bardziej uzdolnionym przeciwnikiem, czasem brutalna siła pozwala zwyciężyć tam, gdzie inne podejścia zawiodą.";
-                batter.effect = "<strong>Akcja Specjalna</strong>: Aby postać Grzmotnęła przeciwnika, musi wykonać Test Przeciwstawny Siła/Siła. Jeśli Bohater wygrał w Teście, to jego przeciwnik otrzymuje +1 do Przewagi oraz Stan @Condition[Powalenie]. Jeżeli Bohater przegra Test Przeciwstawny, to jego przeciwnik otrzymuje +1 do Przewagi, a Akcja się kończy. Postać nie otrzymuje Przewagi za Wygraną, gdy wygrywa ten Test Przeciwstawny";
+                batter.effect = "<strong>Akcja Specjalna</strong>: Aby postać Grzmotnęła przeciwnika, musi wykonać Test Przeciwstawny Siła/Siła. Jeśli Bohater wygrał w Teście, otrzymuje +1 do Przewagi, a jego przeciwnik otrzymuje Stan @Condition[Prone]{Powalenie}. Jeżeli Bohater przegra Test Przeciwstawny, to jego przeciwnik otrzymuje +1 do Przewagi, a Akcja się kończy. Postać nie otrzymuje Przewagi za Wygraną (patrz strona 133), gdy wygrywa ten Test Przeciwstawny.";
             }
             if (trick) {
                 trick.name = "Sztuczka";
                 trick.description = "Poświęcasz moment na rzucenie przeciwnikowi ziemią w oczy albo podpalenie go chluśniętym płonącym olejem. To ryzykowny manewr i niewielu wrogów da się oszukać w ten sam sposób więcej niż raz.";
-                trick.effect = "<strong>Akcja Specjalna</strong>: Sztuczka wymaga wykonania Testu Przeciwstawnego Zwinność/Zwinność z przeciwnikiem. Jeśli Bohater wygra w Teście, otrzymuje +1 do Przewagi. Jeżeli MG uzna, że okoliczności to uzasadniają, może również przyznać przeciwnikowi jeden z podanych Stanów: @Condition[Podpalenie], @Condition[Oślepienie] albo @Condition[Pochwycenie]. Jeśli Bohater przegra Test Przeciwstawny, to przeciwnik otrzymuje +1 do Przewagi, a Akcja się kończy. MG może nie zgodzić się na przyznanie żadnego z wymienionych wyżej Stanów, jeżeli postać nie ma pod ręką odpowiedniego przedmiotu albo przyznała wcześniej ten Stan temu samemu przeciwnikowi. Postać nie otrzymuje Przewagi za Wygraną, gdy wygrywa ten Test Przeciwstawny.";
+                trick.effect = "<strong>Akcja Specjalna</strong>: Sztuczka wymaga wykonania Testu Przeciwstawnego Zwinność/Zwinność z przeciwnikiem. Jeśli Bohater wygra w Teście, otrzymuje +1 do Przewagi. Jeżeli MG uzna, że okoliczności to uzasadniają, może również przyznać przeciwnikowi jeden z podanych Stanów: @Condition[Ablaze]{Podpalenie}, @Condition[Blinded]{Oślepienie} albo @Condition[Entangled]{Pochwycenie}. Jeśli Bohater przegra Test Przeciwstawny, to przeciwnik otrzymuje +1 do Przewagi, a Akcja się kończy. MG może nie zgodzić się na przyznanie żadnego z wymienionych wyżej Stanów, jeżeli postać nie ma pod ręką odpowiedniego przedmiotu albo przyznała wcześniej ten Stan temu samemu przeciwnikowi. Postać nie otrzymuje Przewagi za Wygraną (patrz strona 133), gdy wygrywa ten Test Przeciwstawny.";
             }
             if (additionalEffort) {
-                additionalEffort.name = "Dodatkowy Wysiłek";
+                additionalEffort.name = "Dodatkowy wysiłek";
                 additionalEffort.description = "W desperackich okolicznościach możesz wykorzystać swój impet, by zwiększyć szanse na sukces.";
                 additionalEffort.effect = "<strong>Darmowa Akcja</strong>: Postać otrzymuje premię +10 do dowolnego Testu, zanim go wykona. Może wydać dodatkowe punkty, aby otrzymać kumulatywną premię +10 za każdy wydany punkt Przewagi. Dla przykładu, postać może wydać 3 punkty Przewagi, aby otrzymać premię +20, albo 4 punkty Przewagi, by otrzymać premię +30. Test, do którego została użyta ta premia, nigdy nie generuje Przewagi wykonującemu go Bohaterowi.";
             }
             if (fleeFromHarm) {
-                fleeFromHarm.name = "Ucieczka przed Zagrożeniem";
+                fleeFromHarm.name = "Ucieczka przed zagrożeniem";
                 fleeFromHarm.description = "Wykorzystujesz moment chwilowego spokoju albo rozproszenie uwagi przeciwnika i wycofujesz się z walki.";
-                fleeFromHarm.effect = "<strong>Ruch</strong>: Postać może odsunąć się od przeciwnika bez żadnych kar. Ta Akcja ignoruje zasady @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#disengaging]{Odwrotu}.";
+                fleeFromHarm.effect = "<strong>Ruch</strong>: Postać może odsunąć się od przeciwnika bez żadnych kar. Ta Akcja ignoruje zasady @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#disengaging]{Odwrotu} ze strony 165 WFRP.";
             }
             if (additionalAction) {
                 additionalAction.name = "Dodatkowa Akcja";

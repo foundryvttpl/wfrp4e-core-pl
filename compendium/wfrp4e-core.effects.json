@@ -55,7 +55,7 @@
           "label": "Zapobieganie usunięciu"
         }
       ],
-      "description": "<p>Twoje oczy na [[/r 1d10]] godzin przybierają barwę twojej Tradycji Magicznej. W tym czasie otrzymujesz 1 Stan @Condition[Oślepienie].</p>"
+      "description": "<p>Twoje oczy na [[/r 1d10]] godzin przybierają barwę twojej Tradycji Magicznej. W tym czasie otrzymujesz 1 Stan @Condition[blinded]{Oślepienie}.</p>"
     },
     "1kIZuOtH2zxONi3B": {
       "id": "1kIZuOtH2zxONi3B",
@@ -104,7 +104,7 @@
           "label": "Zapobieganie usunięciu"
         }
       ],
-      "description": "<p>Twoje oczy przybierają nienaturalną barwę powiązaną z twoją Tradycją Magiczną na [[/r 1d10]] godzin. Dopóki są odbarwione, masz 1 Stan @Condition[Oślepienie], którego nie można usunąć żadnym sposobem.</p>"
+      "description": "<p>Twoje oczy przybierają nienaturalną barwę powiązaną z twoją Tradycją Magiczną na [[/r 1d10]] godzin. Dopóki są odbarwione, masz 1 Stan @Condition[blinded]{Oślepienie}, którego nie można usunąć żadnym sposobem.</p>"
     },
     "3lE9UsIYYTWPpvyk": {
       "id": "3lE9UsIYYTWPpvyk",
@@ -114,7 +114,7 @@
           "label": "Aktualizacja składników"
         }
       ],
-      "description": "<p>Chaos omiata twoje składniki do zaklęć. Każde zaklęcie rzucone z ich użyciem cierpi z powodu @UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#zlowrogie-wplywy]{Złowrogich Wpływów}.</p>"
+      "description": "<p>Chaos omiata twoje składniki do zaklęć. Każde zaklęcie rzucone z ich użyciem cierpi z powodu @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#malignant-influences]{Złowrogich Wpływów}.</p>"
     },
     "4HHuBFYebRTJQ8PX": {
       "id": "4HHuBFYebRTJQ8PX",
@@ -124,7 +124,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Wszyscy w zasięgu Bonusu Siły Woli jardów otrzymują [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza oraz padają @Condition[Powalenie]. Jeśli w zasięgu nie ma żadnych celów, magia nie ma ujścia i twoja głowa eksploduje, rozrzucając krwawe szczątki na [[/r 1d10]] jardów.</p>"
+      "description": "<p>Wszyscy w zasięgu Bonusu Siły Woli jardów otrzymują [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza oraz padają @Condition[prone]{Powalenie}. Jeśli w zasięgu nie ma żadnych celów, magia nie ma ujścia i twoja głowa eksploduje, rozrzucając krwawe szczątki na [[/r 1d10]] jardów.</p>"
     },
     "5NzC3j1fokWiADQs": {
       "id": "5NzC3j1fokWiADQs",
@@ -134,7 +134,7 @@
           "label": "Krwawienie"
         }
       ],
-      "description": "<p>Twój nos, oczy i uszy obficie krwawią. Otrzymujesz 1 Stan @Condition[Krwawienie].</p>"
+      "description": "<p>Twój nos, oczy i uszy obficie krwawią. Otrzymujesz 1 Stan @Condition[bleeding]{Krwawienie}.</p>"
     },
     "8LOs3E24tP5QPGdD": {
       "id": "8LOs3E24tP5QPGdD",
@@ -154,7 +154,7 @@
           "label": "Żywotność"
         }
       ],
-      "description": "<p>Twoja Żywotność zostaje zredukowana do 0, o ile już nie była równa 0. Następnie otrzymujesz Stan @Condition[Utrata Przytomności], którego nie można usunąć, dopóki nie odzyskasz przynajmniej 1 punktu Żywotności.</p>"
+      "description": "<p>Twoja Żywotność zostaje zredukowana do 0, o ile już nie była równa 0. Następnie otrzymujesz Stan @Condition[unconscious]{Utrata Przytomności}, którego nie można usunąć, dopóki nie odzyskasz przynajmniej 1 punktu Żywotności.</p>"
     },
     "9tmyx3fWsFJJrTX8": {
       "id": "9tmyx3fWsFJJrTX8",
@@ -164,7 +164,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 1d10]] + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Trudny (-10) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Otrzymujesz [[/r 1d10]] + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Trudny (-10) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "C2CJmUhiN0exLdJs": {
       "id": "C2CJmUhiN0exLdJs",
@@ -200,7 +200,7 @@
           "label": "Zmęczenie"
         }
       ],
-      "description": "<p>Otrzymujesz 1 Stan @Condition[Zmęczenie], który utrzymuje się przez [[/r 1d10]] godzin.</p>"
+      "description": "<p>Otrzymujesz 1 Stan @Condition[fatigued]{Zmęczenie}, który utrzymuje się przez [[/r 1d10]] godzin.</p>"
     },
     "F57JdPNmGvDFv0y5": {
       "id": "F57JdPNmGvDFv0y5",
@@ -210,7 +210,7 @@
           "label": "Dodaj Ogłuszenie słuchu"
         }
       ],
-      "description": "<p>Twoje uszy natychmiast zatykają się gęstą woskowiną. Otrzymujesz 1 Stan @Condition[Ogłuszenie], którego nie można usunąć, dopóki ktoś nie oczyści ci uszu udanym Testem Leczenia.</p>"
+      "description": "<p>Twoje uszy natychmiast zatykają się gęstą woskowiną. Otrzymujesz 1 Stan @Condition[deafened]{Ogłuszenie}, którego nie można usunąć, dopóki ktoś nie oczyści ci uszu udanym Testem Leczenia.</p>"
     },
     "G2BnlTlC0sQ7tY53": {
       "id": "G2BnlTlC0sQ7tY53",
@@ -220,7 +220,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 2d10]] + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Bardzo Trudny (-20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[Oszołomienie]. Jeśli porażka wynosi -4 PS lub mniej, otrzymujesz Stan @Condition[Utrata Przytomności] na minimum [[/r 1d10]] Rund.</p>"
+      "description": "<p>Otrzymujesz [[/r 2d10]] + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Bardzo Trudny (-20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}. Jeśli porażka wynosi -4 PS lub mniej, otrzymujesz Stan @Condition[unconscious]{Utrata Przytomności} na minimum [[/r 1d10]] Rund.</p>"
     },
     "GL0v9tNALqWtiQp1": {
       "id": "GL0v9tNALqWtiQp1",
@@ -230,7 +230,7 @@
           "label": "Test"
         }
       ],
-      "description": "<p>Przytłacza cię ból. Otrzymujesz 1 Stan @Condition[Oszołomienie]. Wykonaj Bardzo Trudny (-40) Test Odporności albo upadasz @Condition[Powalenie].</p>"
+      "description": "<p>Przytłacza cię ból. Otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}. Wykonaj Bardzo Trudny (-40) Test Odporności albo upadasz @Condition[prone]{Powalenie}.</p>"
     },
     "H2LonRUXOvkoiZmO": {
       "id": "H2LonRUXOvkoiZmO",
@@ -240,7 +240,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Zostajesz wyrzucony w powietrze i lecisz [[/r 1d10]] jardów w losowym kierunku. Przy lądowaniu otrzymujesz [[/r 1d10]] Ran ignorujących Punkty Pancerza oraz Stan @Condition[Powalenie].</p>"
+      "description": "<p>Zostajesz wyrzucony w powietrze i lecisz [[/r 1d10]] jardów w losowym kierunku. Przy lądowaniu otrzymujesz [[/r 1d10]] Ran ignorujących Punkty Pancerza oraz Stan @Condition[prone]{Powalenie}.</p>"
     },
     "HrsHkC0ysUhJWpb5": {
       "id": "HrsHkC0ysUhJWpb5",
@@ -270,7 +270,7 @@
           "label": "Test Zepsucia"
         }
       ],
-      "description": "<p>Magia burzy się wokół ciebie, wywołując straszliwe stygmaty. Wszyscy w zasięgu liczby jardów równej twojej Sile Woli otrzymują 1 Ranę i muszą wykonać Wymagający (+0) Test Opanowania albo otrzymują Stan @Condition[Panika]. Jeśli w tym zasięgu nie ma innych stworzeń, natychmiast otrzymujesz [[/r 2d10]] Ran.</p>"
+      "description": "<p>Magia burzy się wokół ciebie, wywołując straszliwe stygmaty. Wszyscy w zasięgu liczby jardów równej twojej Sile Woli otrzymują 1 Ranę i muszą wykonać Wymagający (+0) Test Opanowania albo otrzymują Stan @Condition[broken]{Panika}. Jeśli w tym zasięgu nie ma innych stworzeń, natychmiast otrzymujesz [[/r 2d10]] Ran.</p>"
     },
     "KgZLkJEHUlC0G7Lj": {
       "id": "KgZLkJEHUlC0G7Lj",
@@ -280,7 +280,7 @@
           "label": "Wybór"
         }
       ],
-      "description": "<p>Zostajesz wciągnięty do Królestwa Chaosu i przepadasz na zawsze, chyba że wydasz Punkt Przeznaczenia. Jeśli to zrobisz, otrzymujesz 1 Punkt Zepsucia oraz 1 Stan @Condition[Oszołomienie], gdy koszmar ledwie unikniętego losu uderza w twój umysł.</p>"
+      "description": "<p>Zostajesz wciągnięty do Królestwa Chaosu i przepadasz na zawsze, chyba że wydasz Punkt Przeznaczenia. Jeśli to zrobisz, otrzymujesz 1 Punkt Zepsucia oraz 1 Stan @Condition[stunned]{Oszołomienie}, gdy koszmar ledwie unikniętego losu uderza w twój umysł.</p>"
     },
     "KusAeo60hFZASpe6": {
       "id": "KusAeo60hFZASpe6",
@@ -310,7 +310,7 @@
           "label": "Krwawienie"
         }
       ],
-      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Stanów @Condition[Krwawienie].</p>"
+      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Stanów @Condition[bleeding]{Krwawienie}.</p>"
     },
     "NmIJ4CC0tvKWRVPE": {
       "id": "NmIJ4CC0tvKWRVPE",
@@ -320,7 +320,7 @@
           "label": "Krwawienie"
         }
       ],
-      "description": "<p>Każdego ranka otrzymujesz 1 + Punkty Grzechu Stanów @Condition[Krwawienie], dopóki nie odprawisz Pokuty.</p>"
+      "description": "<p>Każdego ranka otrzymujesz 1 + Punkty Grzechu Stanów @Condition[bleeding]{Krwawienie}, dopóki nie odprawisz Pokuty.</p>"
     },
     "OgWN6Emwg1SVsea5": {
       "id": "OgWN6Emwg1SVsea5",
@@ -343,7 +343,7 @@
           "label": "Powalenie"
         }
       ],
-      "description": "<p>Wszystkie stworzenia w promieniu [[/r 1d10]] jardów muszą zdać Przeciętny (+0) Test Atletyki albo otrzymują Stan @Condition[Powalenie].</p>"
+      "description": "<p>Wszystkie stworzenia w promieniu [[/r 1d10]] jardów muszą zdać Przeciętny (+0) Test Atletyki albo otrzymują Stan @Condition[prone]{Powalenie}.</p>"
     },
     "Qv2pA5xJJ4OFUgbX": {
       "id": "Qv2pA5xJJ4OFUgbX",
@@ -353,7 +353,7 @@
           "label": "Zepsucie"
         }
       ],
-      "description": "<p>Otrzymujesz 1 Punkt Zepsucia, Stan @Condition[Powalenie] oraz Stan @Condition[Zmęczenie].</p>"
+      "description": "<p>Otrzymujesz 1 Punkt Zepsucia, Stan @Condition[prone]{Powalenie} oraz Stan @Condition[fatigued]{Zmęczenie}.</p>"
     },
     "RfD4gEXjvQF7tvfh": {
       "id": "RfD4gEXjvQF7tvfh",
@@ -363,7 +363,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza: paznokcie czernieją i odpadają, energia Wiatru smaga twoje ciało, krew na chwilę wrze w żyłach lub dzieje się coś równie strasznego. Zdaj Przeciętny (+20) Test Odporności albo otrzymujesz Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Otrzymujesz [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza: paznokcie czernieją i odpadają, energia Wiatru smaga twoje ciało, krew na chwilę wrze w żyłach lub dzieje się coś równie strasznego. Zdaj Przeciętny (+20) Test Odporności albo otrzymujesz Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "SZK6g6PgExylCtHu": {
       "id": "SZK6g6PgExylCtHu",
@@ -406,7 +406,7 @@
           "label": "Zepsucie"
         }
       ],
-      "description": "<p>Wiatry niosą pasmo Chaosu, dusząc twoją duszę i powalając cię na kolana. Otrzymujesz 1 Punkt Zepsucia, 1 Stan @Condition[Zmęczenie] oraz Stan @Condition[Powalenie].</p>"
+      "description": "<p>Wiatry niosą pasmo Chaosu, dusząc twoją duszę i powalając cię na kolana. Otrzymujesz 1 Punkt Zepsucia, 1 Stan @Condition[fatigued]{Zmęczenie} oraz Stan @Condition[prone]{Powalenie}.</p>"
     },
     "UzcTxjHNVngBGnWh": {
       "id": "UzcTxjHNVngBGnWh",
@@ -416,7 +416,7 @@
           "label": "Żywotność"
         }
       ],
-      "description": "<p>Twój bóg razi cię piorunem. Twoja Żywotność zostaje zredukowana do 0, o ile już nie była równa 0, i otrzymujesz Stan @Condition[Podpalenie].</p>"
+      "description": "<p>Twój bóg razi cię piorunem. Twoja Żywotność zostaje zredukowana do 0, o ile już nie była równa 0, i otrzymujesz Stan @Condition[ablaze]{Podpalenie}.</p>"
     },
     "Va8YSsW9BgpYJ7fT": {
       "id": "Va8YSsW9BgpYJ7fT",
@@ -426,7 +426,7 @@
           "label": "Podpalenie"
         }
       ],
-      "description": "<p>Otrzymujesz Stan @Condition[Podpalenie], gdy otaczają cię bezbożne płomienie o barwie powiązanej z twoją Tradycją Magiczną.</p>"
+      "description": "<p>Otrzymujesz Stan @Condition[ablaze]{Podpalenie}, gdy otaczają cię bezbożne płomienie o barwie powiązanej z twoją Tradycją Magiczną.</p>"
     },
     "VdIXOJJoGm1X0ZVo": {
       "id": "VdIXOJJoGm1X0ZVo",
@@ -452,7 +452,7 @@
           "label": "Zapobieganie usunięciu"
         }
       ],
-      "description": "<p>Otrzymujesz Stan @Condition[Powalenie]. Nie można go usunąć, dopóki nie osiągniesz Sukcesu w Przeciętnym (+20) Teście Modlitwy.</p>"
+      "description": "<p>Otrzymujesz Stan @Condition[prone]{Powalenie}. Nie można go usunąć, dopóki nie osiągniesz Sukcesu w Przeciętnym (+20) Teście Modlitwy.</p>"
     },
     "X4gsRyQtS2nNUq6E": {
       "id": "X4gsRyQtS2nNUq6E",
@@ -485,7 +485,7 @@
           "label": "Dodaj Ogłuszenie słuchu"
         }
       ],
-      "description": "<p>Twoje uszy zatykają się nienaturalną woskowiną, którą można usunąć wyłącznie przy użyciu Umiejętności Leczenie. Do tego czasu masz 1 Stan @Condition[Ogłuszenie].</p>"
+      "description": "<p>Twoje uszy zatykają się nienaturalną woskowiną, którą można usunąć wyłącznie przy użyciu Umiejętności Leczenie. Do tego czasu masz 1 Stan @Condition[deafened]{Ogłuszenie}.</p>"
     },
     "XuHkhXzaSh0A0Fqe": {
       "id": "XuHkhXzaSh0A0Fqe",
@@ -495,7 +495,7 @@
           "label": "Splątanie"
         }
       ],
-      "description": "<p>Twoje ubrania wiją się, jakby miały własną wolę. Otrzymujesz 1 Stan @Condition[Splątanie] o Sile [[/r 1d10*5]] do opierania się.</p>"
+      "description": "<p>Twoje ubrania wiją się, jakby miały własną wolę. Otrzymujesz 1 Stan @Condition[entangled]{Splątanie} o Sile [[/r 1d10*5]] do opierania się.</p>"
     },
     "YeboVMf4f6lL6hTo": {
       "id": "YeboVMf4f6lL6hTo",
@@ -518,7 +518,7 @@
           "label": "Podpalenie"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 1d5]] Stanów @Condition[Podpalenie], gdy otaczają cię bezbożne płomienie.</p>"
+      "description": "<p>Otrzymujesz [[/r 1d5]] Stanów @Condition[ablaze]{Podpalenie}, gdy otaczają cię bezbożne płomienie.</p>"
     },
     "a7hHNM0z5j0VGIW1": {
       "id": "a7hHNM0z5j0VGIW1",
@@ -538,7 +538,7 @@
           "label": "Powalenie"
         }
       ],
-      "description": "<p>Otrzymujesz Stan @Condition[Powalenie].</p>"
+      "description": "<p>Otrzymujesz Stan @Condition[prone]{Powalenie}.</p>"
     },
     "cV1R0DvRq9o6VgL6": {
       "id": "cV1R0DvRq9o6VgL6",
@@ -591,7 +591,7 @@
           "label": "Panika"
         }
       ],
-      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Stanów @Condition[Panika].</p>"
+      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Stanów @Condition[broken]{Panika}.</p>"
     },
     "fwr7eFadUrL2Ck10": {
       "id": "fwr7eFadUrL2Ck10",
@@ -601,7 +601,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 1d10]] + Punkty Grzechu Ran. Następnie wykonaj Wymagający (+0) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Otrzymujesz [[/r 1d10]] + Punkty Grzechu Ran. Następnie wykonaj Wymagający (+0) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "ggexcGnWkWoZCcp8": {
       "id": "ggexcGnWkWoZCcp8",
@@ -624,7 +624,7 @@
           "label": "Test Paniki"
         }
       ],
-      "description": "<p>Zdaj Trudny (-20) Test Opanowania albo otrzymujesz 1 Stan @Condition[Panika].</p>"
+      "description": "<p>Zdaj Trudny (-20) Test Opanowania albo otrzymujesz 1 Stan @Condition[broken]{Panika}.</p>"
     },
     "hKRZZXzPPbHB317y": {
       "id": "hKRZZXzPPbHB317y",
@@ -634,7 +634,7 @@
           "label": "Zaskoczenie"
         }
       ],
-      "description": "<p>Jeśli jesteś zaangażowany w walkę, otrzymujesz Stan @Condition[Zaskoczenie]. W przeciwnym razie coś kompletnie cię wybija z równowagi: serce bije jak szalone, a ty przez chwilę nie możesz się skupić.</p>"
+      "description": "<p>Jeśli jesteś zaangażowany w walkę, otrzymujesz Stan @Condition[surprised]{Zaskoczenie}. W przeciwnym razie coś kompletnie cię wybija z równowagi: serce bije jak szalone, a ty przez chwilę nie możesz się skupić.</p>"
     },
     "j5vwzjFvcSE3YQ2o": {
       "id": "j5vwzjFvcSE3YQ2o",
@@ -700,7 +700,7 @@
           "label": "Zepsucie"
         }
       ],
-      "description": "<p>Wizja Chaosu przytłacza twoje zmysły i przynosi straszliwe objawienie. Otrzymujesz [[/r 1d10]] Punktów Zepsucia oraz Stan @Condition[Oszołomienie], którego nie można usunąć przez taką samą liczbę Rund.</p>"
+      "description": "<p>Wizja Chaosu przytłacza twoje zmysły i przynosi straszliwe objawienie. Otrzymujesz [[/r 1d10]] Punktów Zepsucia oraz Stan @Condition[stunned]{Oszołomienie}, którego nie można usunąć przez taką samą liczbę Rund.</p>"
     },
     "kJlRfQiar7xB7oHP": {
       "id": "kJlRfQiar7xB7oHP",
@@ -710,7 +710,7 @@
           "label": "Test Paniki"
         }
       ],
-      "description": "<p>Zdaj Trudny (-20) Test Opanowania albo otrzymujesz 1 Stan @Condition[Panika].</p>"
+      "description": "<p>Zdaj Trudny (-20) Test Opanowania albo otrzymujesz 1 Stan @Condition[broken]{Panika}.</p>"
     },
     "lFViy4F8sj84tB9c": {
       "id": "lFViy4F8sj84tB9c",
@@ -740,7 +740,7 @@
           "label": "Oślepienie"
         }
       ],
-      "description": "<p>Wiatry zalewają twój wzrok wizjami bezbożnych czynów. Otrzymujesz 1 Stan @Condition[Oślepienie]; zdaj Wymagający (+0) Test Opanowania albo otrzymujesz kolejny.</p>"
+      "description": "<p>Wiatry zalewają twój wzrok wizjami bezbożnych czynów. Otrzymujesz 1 Stan @Condition[blinded]{Oślepienie}; zdaj Wymagający (+0) Test Opanowania albo otrzymujesz kolejny.</p>"
     },
     "n97KMGAa6QVNnpcz": {
       "id": "n97KMGAa6QVNnpcz",
@@ -753,7 +753,7 @@
           "label": "Usuń Oślepienie"
         }
       ],
-      "description": "<p>Otrzymujesz Stan @Condition[Powalenie]. Otrzymujesz też 1 + Punkty Grzechu Stanów @Condition[Oślepienie], które można usunąć wyłącznie zdanym Wymagającym (+0) Testem Modlitwy; Sukces usuwa 1 + PS Stanów @Condition[Oślepienie].</p>"
+      "description": "<p>Otrzymujesz Stan @Condition[prone]{Powalenie}. Otrzymujesz też 1 + Punkty Grzechu Stanów @Condition[blinded]{Oślepienie}, które można usunąć wyłącznie zdanym Wymagającym (+0) Testem Modlitwy; Sukces usuwa 1 + PS Stanów @Condition[blinded]{Oślepienie}.</p>"
     },
     "nIvxxRfsSKItoSxC": {
       "id": "nIvxxRfsSKItoSxC",
@@ -773,7 +773,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Przeciętny (+20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Otrzymujesz 1 + Punkty Grzechu Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Następnie wykonaj Przeciętny (+20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "nuMJN3wsbfldRrjp": {
       "id": "nuMJN3wsbfldRrjp",
@@ -783,7 +783,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Otrzymujesz [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Zdaj Przeciętny (+20) Test Odporności albo otrzymujesz także Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Otrzymujesz [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza. Zdaj Przeciętny (+20) Test Odporności albo otrzymujesz także Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "oPmCAsSeFq30dD9y": {
       "id": "oPmCAsSeFq30dD9y",
@@ -793,7 +793,7 @@
           "label": "Test"
         }
       ],
-      "description": "<p>Wszyscy w zasięgu liczby jardów równej twojemu Bonusowi Siły Woli, zarówno przyjaciele, jak i wrogowie, otrzymują [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza oraz Stan @Condition[Powalenie]. Jeśli w zasięgu nie ma żadnych celów, magia nie ma ujścia i rozsadza twoją głowę. Giniesz natychmiast.</p>"
+      "description": "<p>Wszyscy w zasięgu liczby jardów równej twojemu Bonusowi Siły Woli, zarówno przyjaciele, jak i wrogowie, otrzymują [[/r 1d10]] Ran ignorujących Bonus z Wytrzymałości i Punkty Pancerza oraz Stan @Condition[prone]{Powalenie}. Jeśli w zasięgu nie ma żadnych celów, magia nie ma ujścia i rozsadza twoją głowę. Giniesz natychmiast.</p>"
     },
     "pH5IdAhXRC2pvdQc": {
       "id": "pH5IdAhXRC2pvdQc",
@@ -803,7 +803,7 @@
           "label": "Oślepienie"
         }
       ],
-      "description": "<p>Przemijające wizje bluźnierczych i bezbożnych czynów dręczą twój wzrok. Otrzymujesz Stan @Condition[Oślepienie]; zdaj Wymagający (+0) Test Opanowania albo otrzymujesz kolejny.</p>"
+      "description": "<p>Przemijające wizje bluźnierczych i bezbożnych czynów dręczą twój wzrok. Otrzymujesz Stan @Condition[blinded]{Oślepienie}; zdaj Wymagający (+0) Test Opanowania albo otrzymujesz kolejny.</p>"
     },
     "pX3ptqYMzz7D7weu": {
       "id": "pX3ptqYMzz7D7weu",
@@ -826,7 +826,7 @@
           "label": "Oszołomienie"
         }
       ],
-      "description": "<p>Wymiotujesz niekontrolowanie, wyrzucając z siebie znacznie więcej cuchnących wymiocin, niż powinno pomieścić twoje ciało. Otrzymujesz Stan @Condition[Oszołomienie], który trwa [[/r 1d10]] Rund.</p>"
+      "description": "<p>Wymiotujesz niekontrolowanie, wyrzucając z siebie znacznie więcej cuchnących wymiocin, niż powinno pomieścić twoje ciało. Otrzymujesz Stan @Condition[stunned]{Oszołomienie}, który trwa [[/r 1d10]] Rund.</p>"
     },
     "r414pjrzqzvcijlq": {
       "id": "r414pjrzqzvcijlq",
@@ -836,7 +836,7 @@
           "label": "Zmęczenie"
         }
       ],
-      "description": "<p>Otrzymujesz 1 Stan @Condition[Zmęczenie] na [[/r 1d10]] godzin, gdy Wiatry wysysają część twojej mocy.</p>"
+      "description": "<p>Otrzymujesz 1 Stan @Condition[fatigued]{Zmęczenie} na [[/r 1d10]] godzin, gdy Wiatry wysysają część twojej mocy.</p>"
     },
     "s1ux2GmOpyHySpLi": {
       "id": "s1ux2GmOpyHySpLi",
@@ -849,7 +849,7 @@
           "label": "Zapobieganie usunięciu"
         }
       ],
-      "description": "<p>Twoje jelita poruszają się niekontrolowanie i brudzisz ubranie. Otrzymujesz 1 Stan @Condition[Zmęczenie], którego nie można usunąć, dopóki nie zmienisz ubrania i się nie oczyścisz.</p>"
+      "description": "<p>Twoje jelita poruszają się niekontrolowanie i brudzisz ubranie. Otrzymujesz 1 Stan @Condition[fatigued]{Zmęczenie}, którego nie można usunąć, dopóki nie zmienisz ubrania i się nie oczyścisz.</p>"
     },
     "s26fYiDzzrBpXKWK": {
       "id": "s26fYiDzzrBpXKWK",
@@ -859,7 +859,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Na chwilę unosisz się nad ziemią, po czym zostajesz wyrzucony [[/r 1d10]] jardów w losowym kierunku. Przy lądowaniu otrzymujesz [[/r 1d10]] Ran ignorujących Pancerz i padajesz @Condition[Powalenie].</p>"
+      "description": "<p>Na chwilę unosisz się nad ziemią, po czym zostajesz wyrzucony [[/r 1d10]] jardów w losowym kierunku. Przy lądowaniu otrzymujesz [[/r 1d10]] Ran ignorujących Pancerz i padajesz @Condition[prone]{Powalenie}.</p>"
     },
     "ssrNkR0QrnSGsxlg": {
       "id": "ssrNkR0QrnSGsxlg",
@@ -889,7 +889,7 @@
           "label": "Zaskoczenie"
         }
       ],
-      "description": "<p>Owady wypełniają przestrzeń wokół ciebie, bzycząc i pełzając. Jeśli jesteś w walce, wykonaj Wymagający (+0) Test Opanowania albo otrzymujesz Stan @Condition[Zaskoczenie].</p>"
+      "description": "<p>Owady wypełniają przestrzeń wokół ciebie, bzycząc i pełzając. Jeśli jesteś w walce, wykonaj Wymagający (+0) Test Opanowania albo otrzymujesz Stan @Condition[surprised]{Zaskoczenie}.</p>"
     },
     "to0VPZr1cHxVVhJ7": {
       "id": "to0VPZr1cHxVVhJ7",
@@ -899,7 +899,7 @@
           "label": "Krwawienie"
         }
       ],
-      "description": "<p>Twój nos, oczy i uszy obficie krwawią. Otrzymujesz 1 Stan @Condition[Krwawienie].</p>"
+      "description": "<p>Twój nos, oczy i uszy obficie krwawią. Otrzymujesz 1 Stan @Condition[bleeding]{Krwawienie}.</p>"
     },
     "tvYmlY4WUq2fkOCH": {
       "id": "tvYmlY4WUq2fkOCH",
@@ -909,7 +909,7 @@
           "label": "Splątanie"
         }
       ],
-      "description": "<p>Twoje ubrania zdają się wić z własnej woli. Otrzymujesz 1 Stan @Condition[Splątanie] o Sile [[/r 1d10*5]] do opierania się.</p>"
+      "description": "<p>Twoje ubrania zdają się wić z własnej woli. Otrzymujesz 1 Stan @Condition[entangled]{Splątanie} o Sile [[/r 1d10*5]] do opierania się.</p>"
     },
     "uBGIoMnueUPVhaXo": {
       "id": "uBGIoMnueUPVhaXo",
@@ -932,7 +932,7 @@
           "label": "Oszołomienie"
         }
       ],
-      "description": "<p>Wymiotujesz nienaturalną ilością żółci, krwi, cuchnącego śluzu, owadów lub podobnych plugastw. Otrzymujesz 1 Stan @Condition[Oszołomienie].</p>"
+      "description": "<p>Wymiotujesz nienaturalną ilością żółci, krwi, cuchnącego śluzu, owadów lub podobnych plugastw. Otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}.</p>"
     },
     "uyVMjwosjEfBB4Vh": {
       "id": "uyVMjwosjEfBB4Vh",
@@ -945,7 +945,7 @@
           "label": "Obrażenia"
         }
       ],
-      "description": "<p>Magia zawarta w twojej krwi rozpada się. Wybuchasz kolumną chaotycznej energii na [[/r 1d10]] Rund. Dopóki trwa Stos Duszy, masz Stan @Condition[Oszołomienie], którego nie można usunąć, nie możesz się poruszać i co Rundę otrzymujesz [[/r 2d10]] Ran wywołujących efekty twojej Tradycji. Stworzenia rozpoczynające turę w zasięgu Bonusu Siły Woli jardów od ciebie także otrzymują te obrażenia.</p>"
+      "description": "<p>Magia zawarta w twojej krwi rozpada się. Wybuchasz kolumną chaotycznej energii na [[/r 1d10]] Rund. Dopóki trwa Stos Duszy, masz Stan @Condition[stunned]{Oszołomienie}, którego nie można usunąć, nie możesz się poruszać i co Rundę otrzymujesz [[/r 2d10]] Ran wywołujących efekty twojej Tradycji. Stworzenia rozpoczynające turę w zasięgu Bonusu Siły Woli jardów od ciebie także otrzymują te obrażenia.</p>"
     },
     "xycIOtaHw60fxn63": {
       "id": "xycIOtaHw60fxn63",
@@ -955,7 +955,7 @@
           "label": "Wybierz kończynę"
         }
       ],
-      "description": "<p>Jedna losowo określona kończyna zostaje zamrożona w miejscu na [[/r 1d10]] godzin. Kończyna jest bezużyteczna, jakby została @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#amputated-parts]{amputowana}.</p>"
+      "description": "<p>Jedna losowo określona kończyna zostaje zamrożona w miejscu na [[/r 1d10]] godzin. Kończyna jest bezużyteczna, jakby została @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#amputated-parts]{amputowana}.</p>"
     },
     "zmIcU8VmmnallB2j": {
       "id": "zmIcU8VmmnallB2j",
@@ -965,7 +965,7 @@
           "label": "Oszołomienie"
         }
       ],
-      "description": "<p>Wizje twojego boga dręczą twoje zmysły. Wykonaj Przeciętny (+20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[Oszołomienie]. MG określa, co dokładnie przedstawiają wizje.</p>"
+      "description": "<p>Wizje twojego boga dręczą twoje zmysły. Wykonaj Przeciętny (+20) Test Odporności. W razie porażki otrzymujesz 1 Stan @Condition[stunned]{Oszołomienie}. MG określa, co dokładnie przedstawiają wizje.</p>"
     }
   }
 }

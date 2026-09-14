@@ -259,6 +259,22 @@ Hooks.once("babele.init", (babele) => {
 
 	function resolveModuleAssetPath(val) {
 		if (typeof val !== "string") return val;
+		// Repair verified asset renames only in standalone paths and HTML image sources.
+		const assetAliases = {
+		  "modules/wfrp4e-core/icons/traits/trait.webp": "modules/wfrp4e-core/icons/traits/trait.png",
+		  "modules/wfrp4e-core/icons/equipment/weapons/quarterstaff.png": "modules/wfrp4e-core/icons/equipment/weapons/quarter-staff.png",
+		  "modules/wfrp4e-soc/assets/items/upgrade.png": "modules/wfrp4e-soc/assets/icons/upgrade.png",
+		  "modules/wfrp4e-core/icons/equipment/armour/open-plate-helm.png": "modules/wfrp4e-core/icons/equipment/armour/plate-open-helm.png",
+		  "modules/wfrp4e-core/icons/equipment/money/silver-shilling.png": "modules/wfrp4e-core/icons/currency/silvershilling.png",
+		  "modules/wfrp4e-zoo/assets/actors/chameleoleech.webp": "modules/wfrp4e-zoo/assets/actors/chameleo_leeches.webp",
+		  "modules/wfrp4e-zoo/assets/actors/amoebae.webp": "modules/wfrp4e-zoo/assets/actors/amoeba.webp",
+		  "modules/wfrp4e-zoo/assets/actors/il-potente-granchio.webp": "modules/wfrp4e-zoo/assets/actors/leviathan.webp"
+		};
+		if (Object.hasOwn(assetAliases, val)) val = assetAliases[val];
+		else if (val.includes("<img")) {
+			val = val.replace(/(<img\b[^>]*?\bsrc\s*=\s*)(["'])([^"']+)\2/gi,
+				(match, prefix, quote, src) => Object.hasOwn(assetAliases, src) ? prefix + quote + assetAliases[src] + quote : match);
+		}
 		const activeId = game.wfrp4eCorePl?.MODULE_ID 
 			|| (game.modules.get("wfrp4e-core-pl")?.active ? "wfrp4e-core-pl" : "wfrp4e-core-pl");
 		return val
@@ -466,10 +482,11 @@ Hooks.once("babele.init", (babele) => {
 							}
 						} else if (typeof translation === "string") {
 							const str = translation.trim();
-							const boldMatch = str.match(/^\s*<(?:b|strong)>(.*?)<\/(?:b|strong)>\s*[:\-–—.]?\s*(.*)$/s);
+							// Keep the paragraph wrapper in the description when splitting its title.
+							const boldMatch = str.match(/^\s*(<p(?:\s[^>]*)?>\s*)?<(b|strong)(?:\s[^>]*)?>(.*?)<\/\2>\s*[:\-–—.]?\s*(.*)$/s);
 							if (boldMatch) {
-								const title = boldMatch[1].replace(/<[^>]+>/g, "").trim();
-								const desc = boldMatch[2].trim();
+								const title = boldMatch[3].replace(/<[^>]+>/g, "").trim();
+								const desc = ((boldMatch[1] || "") + boldMatch[4]).trim();
 								data = foundry.utils.mergeObject(data, {
 									name: title,
 									description: desc,

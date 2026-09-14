@@ -1,3 +1,270 @@
+
+// Safe advancement handlers for Randomize buttons (C, U, T)
+export async function safeAdvanceSpeciesSkills(actor) {
+	const rawSpecies = actor?.system?.details?.species?.value;
+	const rawSubspecies = actor?.system?.details?.species?.subspecies;
+	const resolveSpecies = game.wfrp4eCorePl?.names?.resolveSpeciesKey || ((s) => s);
+	const resolveSubspecies = game.wfrp4eCorePl?.names?.resolveSubspeciesKey || ((k, sub) => sub);
+	const speciesKey = resolveSpecies(rawSpecies);
+	const subspeciesKey = resolveSubspecies(speciesKey, rawSubspecies);
+
+	if (!speciesKey || speciesKey === "N/A") {
+		ui.notifications?.warn("Wybierz najpierw rasę na karcie postaci.");
+		return;
+	}
+
+	let skillData = game.wfrp4e?.utility?.speciesSkillsTalents(speciesKey, subspeciesKey);
+	let skills = skillData?.skills || game.wfrp4e?.config?.speciesSkills?.[speciesKey];
+
+	if (!skills || !skills.length) {
+		ui.notifications?.warn(game.i18n?.format("ERROR.Species", { name: rawSpecies || speciesKey }));
+		return;
+	}
+
+	const displayFn = game.wfrp4eCorePl?.names?.display;
+	if (typeof displayFn === "function") {
+		skills = skills.map(s => displayFn(s, "skill") || s);
+	}
+
+	const maxSkills = Math.min(6, skills.length);
+	const skillSelector = new Roll(`1d${skills.length} - 1`);
+	await skillSelector.roll({ allowInteractive: false });
+
+	const skillsSelected = [];
+	let attempts = 0;
+	while (skillsSelected.length < maxSkills && attempts < 100) {
+		attempts++;
+		const r = await skillSelector.reroll();
+		const idx = Math.max(0, Math.min(skills.length - 1, Number(r.total)));
+		if (!isNaN(idx) && !skillsSelected.includes(idx)) {
+			skillsSelected.push(idx);
+		}
+	}
+	for (let i = 0; i < skills.length && skillsSelected.length < maxSkills; i++) {
+		if (!skillsSelected.includes(i)) skillsSelected.push(i);
+	}
+
+	const toUpdate = [];
+	const toCreate = [];
+
+	for (let i = 0; i < skillsSelected.length; i++) {
+		const skillName = skills[skillsSelected[i]];
+		const advances = i <= 2 ? 5 : 3;
+
+		let existingSkill = actor.has?.(skillName, "skill");
+		if (existingSkill) {
+			const obj = existingSkill.toObject();
+			obj.system.advances.value = Math.max(obj.system.advances.value || 0, advances);
+			toUpdate.push(obj);
+		} else {
+			try {
+				let skillDoc = await game.wfrp4e?.utility?.findSkill(skillName);
+				if (skillDoc) {
+					const obj = skillDoc.toObject();
+					delete obj._id;
+					obj.system.advances.value = advances;
+					toCreate.push(obj);
+				}
+			} catch (err) {
+				console.error("Could not find skill: " + skillName, err);
+			}
+		}
+	}
+
+	if (toUpdate.length) await actor.updateEmbeddedDocuments("Item", toUpdate);
+	if (toCreate.length) await actor.createEmbeddedDocuments("Item", toCreate);
+
+	ui.notifications?.info(`Wylosowano umiejętności rasowe (${skillsSelected.length}) dla rasy ${rawSpecies || speciesKey}.`);
+}
+
+export async function safeAdvanceSpeciesCharacteristics(actor) {
+	const rawSpecies = actor?.system?.details?.species?.value;
+	const rawSubspecies = actor?.system?.details?.species?.subspecies;
+	const resolveSpecies = game.wfrp4eCorePl?.names?.resolveSpeciesKey || ((s) => s);
+	const resolveSubspecies = game.wfrp4eCorePl?.names?.resolveSubspeciesKey || ((k, sub) => sub);
+	const speciesKey = resolveSpecies(rawSpecies);
+	const subspeciesKey = resolveSubspecies(speciesKey, rawSubspecies);
+
+	if (actor.type !== "creature" && (!speciesKey || speciesKey === "N/A")) {
+		ui.notifications?.warn("Wybierz najpierw rasę na karcie postaci.");
+		return;
+	}
+
+	let creatureMethod = actor.type === "creature" || !speciesKey;
+	let characteristics = actor.toObject().system.characteristics;
+
+	if (!creatureMethod) {
+		try {
+			let averageCharacteristics = await game.wfrp4e.utility.speciesCharacteristics(speciesKey, true, subspeciesKey);
+			for (let char in characteristics) {
+				if (characteristics[char].initial != averageCharacteristics[char].value) {
+					creatureMethod = true;
+					break;
+				}
+			}
+		} catch (e) {
+			creatureMethod = true;
+		}
+	}
+
+	if (!creatureMethod) {
+		try {
+			let rolledCharacteristics = await game.wfrp4e.utility.speciesCharacteristics(speciesKey, false, subspeciesKey);
+			for (let char in rolledCharacteristics) {
+				characteristics[char].initial = rolledCharacteristics[char].value;
+			}
+			await actor.update({ "system.characteristics": characteristics });
+			ui.notifications?.info(`Wylosowano cechy dla rasy ${rawSpecies || speciesKey}.`);
+			return;
+		} catch (e) {
+			creatureMethod = true;
+		}
+	}
+
+	let roll = new Roll("2d10");
+	await roll.roll({ allowInteractive: false });
+	for (let char in characteristics) {
+		if (characteristics[char].initial == 0) continue;
+		characteristics[char].modifier = -10;
+		characteristics[char].modifier += (await roll.reroll()).total;
+	}
+	await actor.update({ "system.characteristics": characteristics });
+	ui.notifications?.info("Wylosowano modyfikatory cech.");
+}
+
+export async function findAndRollTalentFromTable() {
+	try {
+		const res = await game.wfrp4e?.tables?.rollTable("talents");
+		const name = res?.text || res?.object?.name || res?.name;
+		if (name) return name;
+	} catch (e) {}
+
+	const tablePacks = game.packs.filter(p => p.metadata?.type === "RollTable" || p.documentName === "RollTable");
+	for (const pack of tablePacks) {
+		let index = pack.indexed ? pack.index : await pack.getIndex({ fields: ["flags.wfrp4e.key", "name"] });
+		const entry = index.find(i => 
+			i.flags?.wfrp4e?.key === "talents" ||
+			i.name === "Talents - Character Creation" ||
+			i.name === "Losowe Talenty" ||
+			(i.name?.toLowerCase().includes("talent") && (i.name.includes("Creation") || i.name.includes("Losowe") || i.name.includes("Character")))
+		);
+		if (entry) {
+			try {
+				const tableDoc = await pack.getDocument(entry._id);
+				if (tableDoc) {
+					const roll = await tableDoc.roll({ async: true });
+					const rollResult = roll?.results?.[0];
+					if (rollResult) {
+						const rawText = rollResult.getChatText?.() || rollResult.text || rollResult.name;
+						const label = game.wfrp4e?.utility?.extractLinkLabel?.(rawText) || rollResult.name || rawText;
+						if (label) return label;
+					}
+				}
+			} catch (e) {
+				console.error("Error rolling compendium table:", e);
+			}
+		}
+	}
+	return null;
+}
+
+export async function safeAdvanceSpeciesTalents(actor) {
+	const rawSpecies = actor?.system?.details?.species?.value;
+	const rawSubspecies = actor?.system?.details?.species?.subspecies;
+	const resolveSpecies = game.wfrp4eCorePl?.names?.resolveSpeciesKey || ((s) => s);
+	const resolveSubspecies = game.wfrp4eCorePl?.names?.resolveSubspeciesKey || ((k, sub) => sub);
+	const speciesKey = resolveSpecies(rawSpecies);
+	const subspeciesKey = resolveSubspecies(speciesKey, rawSubspecies);
+
+	if (!speciesKey || speciesKey === "N/A") {
+		ui.notifications?.warn("Wybierz najpierw rasę na karcie postaci.");
+		return;
+	}
+
+	let talentData = game.wfrp4e?.utility?.speciesSkillsTalents(speciesKey, subspeciesKey);
+	let talents = talentData?.talents || game.wfrp4e?.config?.speciesTalents?.[speciesKey];
+
+	if (!talents || !talents.length) {
+		ui.notifications?.warn(game.i18n?.format("ERROR.Species", { name: rawSpecies || speciesKey }));
+		return;
+	}
+
+	let talentsToAdd = [];
+	for (let talent of talents) {
+		if (!isNaN(talent)) {
+			const count = Number(talent);
+			for (let i = 0; i < count; i++) {
+				const talentName = await findAndRollTalentFromTable();
+				if (talentName) {
+					let talentDoc = await game.wfrp4e?.utility?.findTalent(talentName);
+					if (talentDoc) {
+						const obj = talentDoc.toObject();
+						delete obj._id;
+						talentsToAdd.push(obj);
+					}
+				}
+			}
+			continue;
+		}
+
+		let talentOptions = String(talent).split(',').map(item => item.trim());
+		let chosenTalent = talentOptions[0];
+		if (talentOptions.length > 1) {
+			let talentSelector = await new Roll(`1d${talentOptions.length} - 1`).roll({ allowInteractive: false });
+			chosenTalent = talentOptions[talentSelector.total];
+		}
+		let talentDoc = await game.wfrp4e?.utility?.findTalent(chosenTalent);
+		if (talentDoc) {
+			const obj = talentDoc.toObject();
+			delete obj._id;
+			talentsToAdd.push(obj);
+		}
+	}
+
+	if (talentsToAdd.length) {
+		await actor.createEmbeddedDocuments("Item", talentsToAdd);
+		ui.notifications?.info(`Wylosowano talenty rasowe (${talentsToAdd.length}) dla rasy ${rawSpecies || speciesKey}.`);
+	}
+}
+
+export function installSafeRandomizer() {
+	const sheetClasses = [
+		game.wfrp4e?.apps?.ActorSheetWFRP4e,
+		game.wfrp4e?.apps?.ActorSheetWFRP4eCharacter,
+		game.wfrp4e?.apps?.ActorSheetWFRP4eNPC,
+		game.wfrp4e?.apps?.ActorSheetWFRP4eCreature
+	].filter(Boolean);
+
+	for (const sheetClass of sheetClasses) {
+		if (sheetClass._safeRandomizeInstalled) continue;
+		sheetClass._safeRandomizeInstalled = true;
+
+		const originalRandomize = sheetClass._randomize;
+		sheetClass._randomize = async function (ev, target) {
+			const type = target?.dataset?.type || ev?.currentTarget?.dataset?.type || ev?.target?.dataset?.type;
+			const actor = this.actor || (this.document instanceof Actor ? this.document : null);
+			if (!actor) {
+				if (typeof originalRandomize === "function") return originalRandomize.call(this, ev, target);
+				return;
+			}
+			try {
+				if (type === "skills") return await safeAdvanceSpeciesSkills(actor);
+				if (type === "characteristics") return await safeAdvanceSpeciesCharacteristics(actor);
+				if (type === "talents") return await safeAdvanceSpeciesTalents(actor);
+			} catch (err) {
+				console.error("Safe randomize error:", err);
+			}
+			if (typeof originalRandomize === "function") {
+				return originalRandomize.call(this, ev, target);
+			}
+		};
+
+		if (sheetClass.DEFAULT_OPTIONS?.actions?.randomize) {
+			sheetClass.DEFAULT_OPTIONS.actions.randomize = sheetClass._randomize;
+		}
+	}
+}
+
 // Keep the WFRP4e configuration owned by the system and the official modules.
 // The previous implementation copied PrepareSystemItems and large parts of the
 // configuration from an older system release. In v14 that replaces new data
@@ -913,4 +1180,155 @@ Hooks.on("renderTradeDialog", (app, html) => {
 	}
 });
 
+ 
+// Localize HR-generated lore effects without replacing their mechanics.
+function localizeHornedRatGeneratedLabels() {
+  if (globalThis.game?.system?.id !== "wfrp4e" || game.i18n?.lang !== "pl") return;
+  const config = game.wfrp4e?.config;
+  if (!config) return;
+  const labels = {
+    "Lore of Plague": "Tradycja Zarazy",
+    "Lore of Stealth": "Tradycja Skrytości",
+    "Lore of Ruin": "Tradycja Zniszczenia",
+    "Apply Lore Effect": "Zastosuj efekt Tradycji",
+    "Add Distracting": "Dodaj cechę Dekoncentrujący",
+    "Add Stealthy": "Dodaj cechę Skryty",
+    "Initiative or Agility based Tests": "Testy oparte na Inicjatywie lub Zwinności",
+    "Lore effect added for ": "Efekt Tradycji dodany na ",
+    " rounds.": " Rund."
+  };
+  for (const key of ["plague", "stealth", "ruin"]) {
+    const effect = config.loreEffects?.[key];
+    if (!effect) continue;
+    if (labels[effect.name]) effect.name = labels[effect.name];
+    for (const data of effect.system?.scriptData ?? []) {
+      if (labels[data.label]) data.label = labels[data.label];
+      if (data.trigger !== "rollCastTest" || typeof data.script !== "string") continue;
+      // Exact quoted literals only. Status keys, nested scripts, UUIDs and dice stay intact.
+      for (const [english, polish] of Object.entries(labels)) {
+        data.script = data.script.split(JSON.stringify(english)).join(JSON.stringify(polish));
+      }
+    }
+  }
+}
 
+Hooks.once("init", () => queueMicrotask(localizeHornedRatGeneratedLabels));
+Hooks.once("i18nInit", localizeHornedRatGeneratedLabels);
+Hooks.once("ready", () => queueMicrotask(localizeHornedRatGeneratedLabels));
+
+// Localize randomize buttons (C S T -> C U T) and clean solitary movement units on actor sheets
+function polishActorSheet(app, html) {
+	if (game.i18n?.lang !== "pl") return;
+	const root = html instanceof HTMLElement ? html : html?.[0] || app?.element;
+	if (!root || typeof root.querySelectorAll !== "function") return;
+
+	
+	// Intercept randomize clicks to safely run without freeze
+	root.querySelectorAll('a[data-action="randomize"]').forEach(btn => {
+		if (btn._safeRandomizeAttached) return;
+		btn._safeRandomizeAttached = true;
+		btn.addEventListener("click", async (e) => {
+			e.stopPropagation();
+			e.preventDefault();
+			const type = btn.dataset.type;
+			const actor = app.actor || app.document;
+			if (!actor) return;
+			if (type === "skills") await safeAdvanceSpeciesSkills(actor);
+			else if (type === "characteristics") await safeAdvanceSpeciesCharacteristics(actor);
+			else if (type === "talents") await safeAdvanceSpeciesTalents(actor);
+		}, { capture: true });
+	});
+
+	// Randomize buttons: C S T -> C U T
+	const randomizeSkills = root.querySelector('a[data-action="randomize"][data-type="skills"]');
+	if (randomizeSkills && randomizeSkills.textContent.trim() === "S") {
+		randomizeSkills.textContent = game.i18n?.localize?.("SHEET.RandomizeSkillAbbr") || "U";
+	}
+
+	// Movement walk / run: clean solitary "yds" / "m" or convert lingering "yds" to "m"
+	const moveInputs = root.querySelectorAll('input[name="system.details.move.walk"], input[name="system.details.move.run"], .movement input, .movement-box input');
+	moveInputs.forEach(input => {
+		if (input.readOnly) {
+			const val = input.value.trim();
+			if (val === "yds" || val === "m" || val === "NaN yds" || val === "NaN m" || val === "undefined yds" || val === "undefined m") {
+				input.value = "";
+			} else if (/\byds\b/.test(val)) {
+				input.value = val.replace(/\byds\b/g, "m");
+			}
+		}
+	});
+}
+
+Hooks.on("renderActorSheet", (app, html) => polishActorSheet(app, html));
+Hooks.on("renderApplicationV2", (app, html) => polishActorSheet(app, html));
+
+// Polish translations and DOM cleanup for settings dialogs
+function polishSettingsWindows(app, html) {
+	if (game.i18n?.lang !== "pl") return;
+	const root = html instanceof HTMLElement ? html : html?.[0] || app?.element;
+	if (!root || typeof root.querySelectorAll !== "function") return;
+
+	// 1. Homebrew settings: window title and unescaping &lt;br&gt; in notes/hints
+	if (app?.constructor?.name === "HomebrewConfig" || root.classList?.contains("homebrew-config")) {
+		const titleEl = app.element?.querySelector?.(".window-title") || root.closest?.(".window-app")?.querySelector?.(".window-title");
+		if (titleEl && (titleEl.textContent.trim() === "Homebrew Settings Configuration" || titleEl.textContent.trim() === "SETTINGS.Menu.HouseRules")) {
+			titleEl.textContent = game.i18n?.localize?.("SETTINGS.Menu.HouseRules") || "Zasady domowe";
+		}
+		root.querySelectorAll(".hint, .notes").forEach(el => {
+			if (el.innerHTML.includes("&lt;br&gt;")) {
+				el.innerHTML = el.innerHTML.replace(/&lt;br&gt;/g, "<br>");
+			}
+		});
+	}
+
+	// 2. Table settings: window title and Grimoire Miscast label
+	if (app?.constructor?.name === "TableSettings" || root.classList?.contains("table-settings")) {
+		const titleEl = app.element?.querySelector?.(".window-title") || root.closest?.(".window-app")?.querySelector?.(".window-title");
+		if (titleEl && (titleEl.textContent.trim() === "Table Settings Configuration" || titleEl.textContent.trim() === "SETTINGS.Menu.TableSettings")) {
+			titleEl.textContent = game.i18n?.localize?.("SETTINGS.Menu.TableSettings") || "Ustawienia tabel";
+		}
+		root.querySelectorAll("label").forEach(lbl => {
+			if (lbl.textContent.trim() === "Grimoire Miscast" || lbl.textContent.trim() === "SETTINGS.TABLE_grimoire-miscast") {
+				lbl.textContent = game.i18n?.localize?.("SETTINGS.TABLE_grimoire-miscast") || "Manifestacja Ksiąg Zaklęć";
+			}
+		});
+	}
+
+	// 3. Main settings list: Theme Configuration submenu
+	if (app?.constructor?.name === "SettingsConfig" || root.querySelector?.('[data-category="wfrp4e"]')) {
+		root.querySelectorAll(".form-group.submenu, .settings-list .setting").forEach(row => {
+			const label = row.querySelector("label");
+			const button = row.querySelector("button");
+			const notes = row.querySelector(".notes, .hint");
+			if (label && (label.textContent.trim() === "Theme Configuration" || label.textContent.trim() === "WH.Theme.Config")) {
+				label.textContent = game.i18n?.localize?.("WH.Theme.Config") || "Konfiguracja motywu";
+			}
+			if (button && (button.textContent.trim() === "Configure Theme" || button.textContent.trim() === "WH.Theme.ConfigButton")) {
+				button.innerHTML = '<i class="fa-solid fa-table-layout"></i> ' + (game.i18n?.localize?.("WH.Theme.ConfigButton") || "Konfiguruj motyw");
+			}
+			if (notes && (notes.textContent.trim() === "Enable or disable the styling provided by the system." || notes.textContent.trim() === "WH.Theme.ConfigHint")) {
+				notes.textContent = game.i18n?.localize?.("WH.Theme.ConfigHint") || "Włącz lub wyłącz stylizację dostarczaną przez system.";
+			}
+		});
+	}
+
+	// 4. WFRP4eThemeConfig: window title and footer buttons
+	if (app?.constructor?.name === "WFRP4eThemeConfig" || root.id === "theme-config") {
+		const titleEl = app.element?.querySelector?.(".window-title") || root.closest?.(".window-app")?.querySelector?.(".window-title");
+		if (titleEl && (titleEl.textContent.trim() === "Theme Configuration" || titleEl.textContent.trim() === "WH.Theme.Config")) {
+			titleEl.textContent = game.i18n?.localize?.("WH.Theme.Config") || "Konfiguracja motywu";
+		}
+		root.querySelectorAll("button").forEach(btn => {
+			const t = btn.textContent.trim();
+			if (t === "Reset") btn.textContent = game.i18n?.localize?.("Reset") || "Zresetuj";
+			if (t === "Save Changes") btn.textContent = game.i18n?.localize?.("Save Changes") || "Zapisz zmiany";
+		});
+	}
+}
+
+Hooks.on("renderApplication", (app, html) => polishSettingsWindows(app, html));
+Hooks.on("renderApplicationV2", (app, html) => polishSettingsWindows(app, html));
+Hooks.on("renderSettingsConfig", (app, html) => polishSettingsWindows(app, html));
+
+Hooks.once("init", () => installSafeRandomizer());
+Hooks.once("ready", () => installSafeRandomizer());

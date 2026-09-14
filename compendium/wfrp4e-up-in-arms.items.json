@@ -2349,7 +2349,7 @@
     "Dramatic Injury": {
       "id": "9iZhTYysrv5QaRAL",
       "name": "Zawadiacka rana",
-      "description": "<p>Zadraśnięcie policzka. Postać otrzymuje 1 poziom @Condition[Krwawienie]{Krwawienia}. Po wyleczeniu takiej rany pozostaje blizna, która zapewnia premię +1 PS do odpowiednich Testów w kontaktach społecznych. Premię tę można otrzymać tylko raz.</p>",
+      "description": "<p>Zadraśnięcie policzka. Postać otrzymuje 1 poziom @Condition[bleeding]{Krwawienia}. Po wyleczeniu takiej rany pozostaje blizna, która zapewnia premię +1 PS do odpowiednich Testów w kontaktach społecznych. Premię tę można otrzymać tylko raz.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.9iZhTYysrv5QaRAL",
       "effects": {
         "lTsRrd6n16wDzOeZ": {
@@ -2375,7 +2375,7 @@
     "Jarred Arm": {
       "id": "kkE4Yt01G38yFGwA",
       "name": "Zdrętwiałe ramię",
-      "description": "<p>Postać upuszcza wszystko, co trzymała w dłoni. Ramię pozostaje bezużyteczne przez [[/r 1d10]]{1k10} - Bonus z Wytrzymałości Rund (minimum 1). W tym czasie postać traktuje daną rękę tak, jakby ją straciła (patrz @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#amputacje]{Amputacje}).</p>",
+      "description": "<p>Postać upuszcza wszystko, co trzymała w dłoni. Ramię pozostaje bezużyteczne przez [[/r 1d10]]{1k10} - Bonus z Wytrzymałości Rund (minimum 1). W tym czasie postać traktuje daną rękę tak, jakby ją straciła (patrz @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#amputated-parts]{Amputacje}).</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.kkE4Yt01G38yFGwA",
       "effects": {
         "dx2Rcp03P3wA89Uu": {
@@ -2424,7 +2424,7 @@
     "Lost Footing": {
       "id": "K884HpZT9sZ28nqO",
       "name": "Utrata równowagi",
-      "description": "<p>Postać musi zdać <strong>Wymagający (+0) Test Atletyki</strong>, w przeciwnym wypadku otrzyma Stan @Condition[Powalenie]{Powalenie}.</p>",
+      "description": "<p>Postać musi zdać <strong>Wymagający (+0) Test Atletyki</strong>, w przeciwnym wypadku otrzyma Stan @Condition[prone]{Powalenie}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.K884HpZT9sZ28nqO",
       "effects": {
         "UEnlvAwvGq0076To": {
@@ -2494,7 +2494,7 @@
     "Winded": {
       "id": "uHClSevjSROgA0iL",
       "name": "Bez tchu",
-      "description": "<p>Postać otrzymuje 1 poziom @Condition[Oszołomienie]{Oszołomienia}. Musi również zdać <strong>Przeciętny (+20) Test Odporności</strong> albo otrzyma Stan @Condition[Powalenie]{Powalenie}. Szybkość zmniejsza się o połowę na [[/r 1d10]]{1k10} Rund, czyli dopóki postać nie zacznie oddychać normalnie.</p>",
+      "description": "<p>Postać otrzymuje 1 poziom @Condition[stunned]{Oszołomienia}. Musi również zdać <strong>Przeciętny (+20) Test Odporności</strong> albo otrzyma Stan @Condition[prone]{Powalenie}. Szybkość zmniejsza się o połowę na [[/r 1d10]]{1k10} Rund, czyli dopóki postać nie zacznie oddychać normalnie.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.UC2zRorETcI8rheP",
       "effects": {
         "5r5Q7yjXn9xQ2zKf": {
@@ -2537,7 +2537,7 @@
     "Rattling Blow": {
       "id": "M15Fg1Wdl047rD8L",
       "name": "Bolesne uderzenie",
-      "description": "<p>Cios jest na tyle mocny, że w polu widzenia pojawiają się plamki i gwiazdki. Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie].</p>",
+      "description": "<p>Cios jest na tyle mocny, że w polu widzenia pojawiają się plamki i gwiazdki. Postać otrzymuje 1 poziom Stanu @Condition[stunned]{Oszołomienie}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.M15Fg1Wdl047rD8L",
       "effects": {
         "VJ0bwQJne0HNmtph": {
@@ -2592,7 +2592,7 @@
     "In Good Order": {
       "id": "VkvYRSrcObPz0D7z",
       "name": "Z zachowaniem porządku",
-      "description": "<p>Wiedząc, że sytuacja jest beznadziejna, modlisz się, aby twoje siły nie padły ofiarą katastrofalnej klęski. W czasie trwania tego Cudu każdy sojusznik może wycofać się z walki bez przyznawania przeciwnikowi Przewagi ani bez prowokowania darmowego ataku (patrz @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#ucieczka]{Ucieczka}).</p>",
+      "description": "<p>Wiedząc, że sytuacja jest beznadziejna, modlisz się, aby twoje siły nie padły ofiarą katastrofalnej klęski. W czasie trwania tego Cudu każdy sojusznik może wycofać się z walki bez przyznawania przeciwnikowi Przewagi ani bez prowokowania darmowego ataku (patrz @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#fleeing]{Ucieczka}).</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.VkvYRSrcObPz0D7z",
       "duration": "Bonus SW Rund",
       "target": "Siła Woli metrów",
@@ -2612,7 +2612,7 @@
     "On Deadly Ground": {
       "id": "6zjMJEZOeDC5Z68G",
       "name": "Na zabójczej ziemi",
-      "description": "<p>Wiedząc, że nie osiągniesz zwycięstwa, jeżeli twoje szeregi zaczną się łamać, wzywasz Myrmidię, by wygnała z umysłów twoich sojuszników wszelkie myśli o odwrocie. Podczas trwania Cudu twoi sojusznicy nie mogą otrzymać Stanu @Condition[Panika]{Panika}.</p>",
+      "description": "<p>Wiedząc, że nie osiągniesz zwycięstwa, jeżeli twoje szeregi zaczną się łamać, wzywasz Myrmidię, by wygnała z umysłów twoich sojuszników wszelkie myśli o odwrocie. Podczas trwania Cudu twoi sojusznicy nie mogą otrzymać Stanu @Condition[broken]{Panika}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.6zjMJEZOeDC5Z68G",
       "duration": "Bonus SW Rund",
       "target": "Siła Woli metrów",
@@ -2775,7 +2775,7 @@
     "Drilled": {
       "id": "J9MK0AIaTbvd5oF6",
       "name": "Musztra",
-      "description": "<p>Zostałeś wyszkolony w walce obok innych żołnierzy. Postać z Talentem <em>Musztra</em> jest traktowana jak dwóch walczących, kiedy ustala się @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#utrata-przewagi]{utratę Przewagi}.</p>",
+      "description": "<p>Zostałeś wyszkolony w walce obok innych żołnierzy. Postać z Talentem <em>Musztra</em> jest traktowana jak dwóch walczących, kiedy ustala się @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#utrata-przewagi]{utratę Przewagi}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.J9MK0AIaTbvd5oF6",
       "tests": "Testy broni białej, kiedy jesteś w pobliżu sojuszniczej postaci z tym talentem.",
       "effects": {
@@ -2817,7 +2817,7 @@
     "Gunner": {
       "id": "0ep8BNMiZGVLTHpr",
       "name": "Artylerzysta",
-      "description": "<p>Z łatwością przeładowujesz broń prochową. Dodaj PS równe liczbie wykupień tego Talentu do każdego Testu Wydłużonego związanego z przeładowaniem broni prochowej. Przeładowanie broni prochowej podczas walki jest traktowane jako Akcja @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#zmiany-w-akcjach-podczas-walki]{Ocena Sytuacji}. Otrzymujesz dodatkowy punkt Przewagi, kiedy wykonujesz ten Test Oceny Sytuacji</p>",
+      "description": "<p>Z łatwością przeładowujesz broń prochową. Dodaj PS równe liczbie wykupień tego Talentu do każdego Testu Wydłużonego związanego z przeładowaniem broni prochowej. Przeładowanie broni prochowej podczas walki jest traktowane jako Akcja @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#zmiany-w-akcjach-podczas-walki]{Ocena Sytuacji}. Otrzymujesz dodatkowy punkt Przewagi, kiedy wykonujesz ten Test Oceny Sytuacji</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.0ep8BNMiZGVLTHpr",
       "effects": {
         "PJUMX039BpjHTzDL": {
@@ -2838,7 +2838,7 @@
     "Rapid Reload": {
       "id": "769B469sqx6FXPfn",
       "name": "Szybkie Przeładowanie",
-      "description": "<p>Potrafisz z łatwością przeładowywać bronie strzeleckie. Dodaj PS równe liczbie wykupień tego Talentu do każdego Testu Wydłużonego związanego z przeładowaniem broni zasięgowej. Przeładowanie broni zasięgowej podczas walki jest traktowane jako Akcja @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#zmiany-w-akcjach-podczas-walki]{Ocena Sytuacji}. Otrzymujesz dodatkowy punkt Przewagi, kiedy wykonujesz ten Test Oceny Sytuacji.</p>",
+      "description": "<p>Potrafisz z łatwością przeładowywać bronie strzeleckie. Dodaj PS równe liczbie wykupień tego Talentu do każdego Testu Wydłużonego związanego z przeładowaniem broni zasięgowej. Przeładowanie broni zasięgowej podczas walki jest traktowane jako Akcja @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#zmiany-w-akcjach-podczas-walki]{Ocena Sytuacji}. Otrzymujesz dodatkowy punkt Przewagi, kiedy wykonujesz ten Test Oceny Sytuacji.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.769B469sqx6FXPfn",
       "effects": {
         "ZkErOxDxU4UAEIPx": {
@@ -2859,7 +2859,7 @@
     "Relentless": {
       "id": "SgjJMBgc85aswvhm",
       "name": "Nieustępliwy",
-      "description": "<p>Kiedy skupisz się na celu, nie sposób cię powstrzymać przed dotarciem do niego. Koszt wykonania Akcji @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#korzysci-z-przewagi]{Ucieczka przed zagrożeniem} zostaje zmniejszony do 1 Przewagi.</p>",
+      "description": "<p>Kiedy skupisz się na celu, nie sposób cię powstrzymać przed dotarciem do niego. Koszt wykonania Akcji @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#korzysci-z-przewagi]{Ucieczka przed zagrożeniem} zostaje zmniejszony do 1 Przewagi.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.SgjJMBgc85aswvhm"
     },
     "Reversal": {
@@ -3315,7 +3315,7 @@
     "Ballock Knife": {
       "id": "AyhuzfJxwZGIKhsI",
       "name": "Mizerykordia",
-      "description": "<p>Krótkie, wąskie ostrze mizerykordii stanowi kiepską broń, chyba że akurat na twojej łasce znajduje się opancerzony przeciwnik.</p><p>* Broń staje się <em>Nadziewająca</em> i <em>Precyzyjna</em>, gdy przeciwnik jest @Condition[Zaskoczenie]{Zaskoczony} lub @Condition[Powalenie]{Powalony}.</p>",
+      "description": "<p>Krótkie, wąskie ostrze mizerykordii stanowi kiepską broń, chyba że akurat na twojej łasce znajduje się opancerzony przeciwnik.</p><p>* Broń staje się <em>Nadziewająca</em> i <em>Precyzyjna</em>, gdy przeciwnik jest @Condition[surprised]{Zaskoczony} lub @Condition[prone]{Powalony}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.AyhuzfJxwZGIKhsI",
       "effects": {
         "Cc3h8E4NlaceWOtg": {
@@ -3397,7 +3397,7 @@
     "2hdBYV1uH62i4csv": {
       "id": "2hdBYV1uH62i4csv",
       "name": "Bomba",
-      "description": "<p><blockquote class=\"foundry-note\"><p>Ten przedmiot służy jako Amunicja do @UUID[JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#bron-obleznicza]{Broni Oblężniczej}. Dla broni rzucanej, użyj tej @UUID[Compendium.wfrp4e-core.items.X8WFQf0HB9yXKjdD]{Bomby}. Dla broni Prochowej lub Eksperymentalnej, użyj tej @UUID[Compendium.wfrp4e-up-in-arms.items.A9QGISjhQq3w9uhK]{Bomby}</p></blockquote></p>",
+      "description": "<p><blockquote class=\"foundry-note\"><p>Ten przedmiot służy jako Amunicja do @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#bron-obleznicza]{Broni Oblężniczej}. Dla broni rzucanej, użyj tej @UUID[Compendium.wfrp4e-core.items.X8WFQf0HB9yXKjdD]{Bomby}. Dla broni Prochowej lub Eksperymentalnej, użyj tej @UUID[Compendium.wfrp4e-up-in-arms.items.A9QGISjhQq3w9uhK]{Bomby}</p></blockquote></p>",
       "range": "jak broń",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.2hdBYV1uH62i4csv"
     },
@@ -3581,7 +3581,7 @@
     "Grapple": {
       "id": "0Qfj9Swv75b9bCUH",
       "name": "Pocisk hakowy",
-      "description": "<p>Zaprojektowane dla imperialnej floty do wykorzystania podczas abordażu lub do uszkodzenia takielunku wroga. Pociski hakowe to haki owinięte grubą warstwą przebitki i połączone mniej więcej dwudziestometrową liną, przeznaczone do wystrzeliwania jedynie z @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerzy ręcznych}. Można ich użyć, aby zaczepić linę do odległego miejsca albo oplątać uciekającego wroga – w takim wypadku ofiara trafienia pociskiem hakowym otrzymuje jeden poziom Stanu @Condition[Pochwycenie]{Pochwycenie}. Tym, którzy chcieliby wykorzystać tego typu amunicję do cichego przedostawania się w różne miejsca, należy przypomnieć o niezwykle głośnym huku, jaki towarzyszy wystrzałowi.</p>",
+      "description": "<p>Zaprojektowane dla imperialnej floty do wykorzystania podczas abordażu lub do uszkodzenia takielunku wroga. Pociski hakowe to haki owinięte grubą warstwą przebitki i połączone mniej więcej dwudziestometrową liną, przeznaczone do wystrzeliwania jedynie z @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerzy ręcznych}. Można ich użyć, aby zaczepić linę do odległego miejsca albo oplątać uciekającego wroga – w takim wypadku ofiara trafienia pociskiem hakowym otrzymuje jeden poziom Stanu @Condition[entangled]{Pochwycenie}. Tym, którzy chcieliby wykorzystać tego typu amunicję do cichego przedostawania się w różne miejsca, należy przypomnieć o niezwykle głośnym huku, jaki towarzyszy wystrzałowi.</p>",
       "range": "1/2 zasięgu broni",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.0Qfj9Swv75b9bCUH",
       "effects": {
@@ -3674,7 +3674,7 @@
     "MQV1cMMZQZnyzZx2": {
       "id": "MQV1cMMZQZnyzZx2",
       "name": "Ładunek zapalający",
-      "description": "<blockquote class=\"foundry-note\"><p>Ten przedmiot służy jako Amunicja do @UUID[JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#siege-weapons]{Broni Oblężniczej}. Dla broni rzucanej, użyj tego @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunku zapalającego}. Jako amunicja do broni Prochowej lub Eksperymentalnej, użyj tego @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunku zapalającego}</p><p>Do użycia z @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{Moździerzem}, zamień typ amunicji na <strong>Czarnoprochową i Eksperymentalną</strong></p></blockquote>",
+      "description": "<blockquote class=\"foundry-note\"><p>Ten przedmiot służy jako Amunicja do @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#siege-weapons]{Broni Oblężniczej}. Dla broni rzucanej, użyj tego @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunku zapalającego}. Jako amunicja do broni Prochowej lub Eksperymentalnej, użyj tego @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunku zapalającego}</p><p>Do użycia z @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{Moździerzem}, zamień typ amunicji na <strong>Czarnoprochową i Eksperymentalną</strong></p></blockquote>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.MQV1cMMZQZnyzZx2",
       "range": "1/2 zasięgu broni",
       "effects": {
@@ -3694,7 +3694,7 @@
     "gCRiirLG9h9yxKzp": {
       "id": "gCRiirLG9h9yxKzp",
       "name": "Ładunek zapalający",
-      "description": "<blockquote class=\"foundry-note\"><p>Ten przedmiot jest amunicją do Broni @UUID[JournalEntry.2EGaOiGaaunZ2RuS.JournalEntryPage.SGWjMaw6OrZ06Nbp]{Czarnoprochowej i Eksperymentalnej}. Dla broni rzucanej, użyj @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunek zapalający}, jako amunicja do broni oblężniczej, użyj @UUID[Compendium.wfrp4e-up-in-arms.items.MQV1cMMZQZnyzZx2]{Ładunek zapalający}</p><p>Żeby używać z @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{Moździerzem}, zamień typ amunicji na <strong>Czarnoprochowa i Eksperymentalna</strong></p></blockquote><p>Zwykle jest to broń miotana, ale podejmowano wiele prób stworzenia broni zdolnej rzucić przedmiotami wypełnionymi czarnym prochem, pakiem węglowym albo smołą dalej, niż potrafi to siła ramion. Powstałą podczas tych prób amunicję można załadować do @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerza ręcznego} i wystrzelić na naprawdę spory dystans.</p><p>Amunicja tego typu posiada lont, który należy odpalić bezpośrednio przed umieszczeniem pocisku w lufie @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerza}. Dlatego nie można załadować broni zawczasu. Podczas ładowania tego typu amunicji postać musi określić w Rundach długość użytego lontu.</p><p>Lont przeznaczony na jedną Rundę oznacza, że pocisk wybuchnie pod koniec twojej aktualnej Tury; przeznaczony na dwie Rundy, że eksploduje pod koniec twojej następnej Tury, i tak dalej. Amunicja ulegnie detonacji niezależnie od tego, czy postać wystrzeliła z broni, czy też nie. Gracz powinien sam pilnować, kiedy bomba albo ładunek zapalający wybuchnie, ponieważ MG nie ma obowiązku przypominać o tym do momentu, w którym nastąpi eksplozja.</p>",
+      "description": "<blockquote class=\"foundry-note\"><p>Ten przedmiot jest amunicją do Broni @UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.2EGaOiGaaunZ2RuS.JournalEntryPage.SGWjMaw6OrZ06Nbp]{Czarnoprochowej i Eksperymentalnej}. Dla broni rzucanej, użyj @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Ładunek zapalający}, jako amunicja do broni oblężniczej, użyj @UUID[Compendium.wfrp4e-up-in-arms.items.MQV1cMMZQZnyzZx2]{Ładunek zapalający}</p><p>Żeby używać z @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{Moździerzem}, zamień typ amunicji na <strong>Czarnoprochowa i Eksperymentalna</strong></p></blockquote><p>Zwykle jest to broń miotana, ale podejmowano wiele prób stworzenia broni zdolnej rzucić przedmiotami wypełnionymi czarnym prochem, pakiem węglowym albo smołą dalej, niż potrafi to siła ramion. Powstałą podczas tych prób amunicję można załadować do @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerza ręcznego} i wystrzelić na naprawdę spory dystans.</p><p>Amunicja tego typu posiada lont, który należy odpalić bezpośrednio przed umieszczeniem pocisku w lufie @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerza}. Dlatego nie można załadować broni zawczasu. Podczas ładowania tego typu amunicji postać musi określić w Rundach długość użytego lontu.</p><p>Lont przeznaczony na jedną Rundę oznacza, że pocisk wybuchnie pod koniec twojej aktualnej Tury; przeznaczony na dwie Rundy, że eksploduje pod koniec twojej następnej Tury, i tak dalej. Amunicja ulegnie detonacji niezależnie od tego, czy postać wystrzeliła z broni, czy też nie. Gracz powinien sam pilnować, kiedy bomba albo ładunek zapalający wybuchnie, ponieważ MG nie ma obowiązku przypominać o tym do momentu, w którym nastąpi eksplozja.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.gCRiirLG9h9yxKzp",
       "range": "jak broń",
       "effects": {
@@ -3738,7 +3738,7 @@
     "Large Bullet and Powder": {
       "id": "lN4K2kCeInZf6wIL",
       "name": "Duży pocisk i proch",
-      "description": "<p>Technicznie rzecz biorąc, są to niewielkie kule armatnie, które można załadować do broni posiadającej dużą lufę, takiej jak @UUID[Compendium.wfrp4e-up-in-arms.items.HblRPlASKOI73aOE]{arkebuz} czy @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerz ręczny}. Strzelający z takich pocisków oraz każdy, kto stoi w promieniu dwóch metrów od strzelca, musi zdać <strong>Wymagający (+0) Test Odporności</strong> albo otrzymuje Stan @Condition[Ogłuszenie]{Ogłuszenie}.</p>",
+      "description": "<p>Technicznie rzecz biorąc, są to niewielkie kule armatnie, które można załadować do broni posiadającej dużą lufę, takiej jak @UUID[Compendium.wfrp4e-up-in-arms.items.HblRPlASKOI73aOE]{arkebuz} czy @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{moździerz ręczny}. Strzelający z takich pocisków oraz każdy, kto stoi w promieniu dwóch metrów od strzelca, musi zdać <strong>Wymagający (+0) Test Odporności</strong> albo otrzymuje Stan @Condition[deafened]{Ogłuszenie}.</p>",
       "range": "jak broń",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.lN4K2kCeInZf6wIL"
     },
@@ -3763,7 +3763,7 @@
     "Mancatcher": {
       "id": "VDXhEK2KWgCGt2SV",
       "name": "Łapacz",
-      "description": "<p>Łapacz to dziwna broń drzewcowa z półkolistym żeleźcem najeżonym do wewnątrz krótkimi kolcami. Broń ma chwycić ofiarę za szyję i zmusić ją do zaprzestania zmagań ze strachu przed dalszymi obrażeniami. Nie jest często widywana w Imperium, ale skaveny i hobgobliny regularnie z niej korzystają. Niektóre łapacze są zaopatrzone w mechanizm sprężynowy. Kosztują wówczas 4 ZK, ale zapewniają premię +20 do Siły, z jaką nakładany jest na przeciwników Stan @Condition[Pochwycenie]{Pochwycenie}.</p>",
+      "description": "<p>Łapacz to dziwna broń drzewcowa z półkolistym żeleźcem najeżonym do wewnątrz krótkimi kolcami. Broń ma chwycić ofiarę za szyję i zmusić ją do zaprzestania zmagań ze strachu przed dalszymi obrażeniami. Nie jest często widywana w Imperium, ale skaveny i hobgobliny regularnie z niej korzystają. Niektóre łapacze są zaopatrzone w mechanizm sprężynowy. Kosztują wówczas 4 ZK, ale zapewniają premię +20 do Siły, z jaką nakładany jest na przeciwników Stan @Condition[entangled]{Pochwycenie}.</p>",
       "sourceId": "Compendium.wfrp4e-up-in-arms.items.Item.VDXhEK2KWgCGt2SV"
     },
     "Matchlock Blunderbuss": {
