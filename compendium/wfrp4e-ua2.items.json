@@ -26,7 +26,7 @@
     "Sporoific Lull": {
       "id": "cj6ElRtnt5i0SY06",
       "name": "Usypiający spokój",
-      "description": "<p>Cel tego zaklęcia jest przepełniony zmęczeniem i pragnieniem snu. Otrzymuje 1k10 – Bonus z Siły Woli poziomów Stanu @Condition[Zmęczenie]. Jeżeli liczba poziomów Stanu Zmęczenie, które cel otrzyma w wyniku działania zaklęcia, jest większa niż jego Bonus z Siły Woli, zasypia, tak jakby był pod wpływem zaklęcia @UUID[Compendium.wfrp4e-core.items.4ePe5oNQakA8nJlk]{Uspienie}.</p>",
+      "description": "<p>Cel tego zaklęcia jest przepełniony zmęczeniem i pragnieniem snu. Otrzymuje 1k10 – Bonus z Siły Woli poziomów Stanu @Condition[fatigued]{Zmęczenie}. Jeżeli liczba poziomów Stanu Zmęczenie, które cel otrzyma w wyniku działania zaklęcia, jest większa niż jego Bonus z Siły Woli, zasypia, tak jakby był pod wpływem zaklęcia @UUID[Compendium.wfrp4e-core.items.4ePe5oNQakA8nJlk]{Uspienie}.</p>",
       "sourceId": "Compendium.wfrp4e-ua2.items.cj6ElRtnt5i0SY06",
       "effects": {
         "mKRY39qSsPgogaTn": {
@@ -70,7 +70,7 @@
     "Vanhel's Invitation to the Dance Macabre": {
       "id": "hIbuMlDQ9EsFHyG9",
       "name": "Zaproszeniem Vanhela do Danse Macabre",
-      "description": "<p>Zaklęcie to, obecne jedynie na kartach straszliwej „Liber Mortis”, jest jednym z największych i najbardziej przerażających osiągnięć nekromanty Vanhela. Ogniskujesz pulsujący miazmat Dhar, gromadząc jego ogromną ilość przed wypuszczeniem plugawej magii na całą okolicę. Magia opanowuje wszystkie pobliskie świeże zwłoki, które nie zostały odpowiednio przygotowane i poświęcone do pochówku. Wszystkie zwłoki na obszarze równym twojemu Bonusowi z Siły Woli pomnożonemu przez 100 metrów powstają jako zombi lub szkielety, według twojego uznania. Jeśli chcesz, możesz zdecydować, że zaklęcie będzie oddziaływać na mniejszy obszar. Za każde 100 metrów zasięgu, zaokrąglone w górę, otrzymujesz jeden Punkt Zepsucia.</p>\n<p>Wskrzeszeni nieumarli są całkowicie pod twoją kontrolą i mogą wykonywać proste rozkazy, które im wydasz. Jeśli zostaniesz zabity lub otrzymasz Stan @Condition[Utrata Przytomności], zaklęcie się kończy i wskrzeszeni nieumarli padają.</p>",
+      "description": "<p>Zaklęcie to, obecne jedynie na kartach straszliwej „Liber Mortis”, jest jednym z największych i najbardziej przerażających osiągnięć nekromanty Vanhela. Ogniskujesz pulsujący miazmat Dhar, gromadząc jego ogromną ilość przed wypuszczeniem plugawej magii na całą okolicę. Magia opanowuje wszystkie pobliskie świeże zwłoki, które nie zostały odpowiednio przygotowane i poświęcone do pochówku. Wszystkie zwłoki na obszarze równym twojemu Bonusowi z Siły Woli pomnożonemu przez 100 metrów powstają jako zombi lub szkielety, według twojego uznania. Jeśli chcesz, możesz zdecydować, że zaklęcie będzie oddziaływać na mniejszy obszar. Za każde 100 metrów zasięgu, zaokrąglone w górę, otrzymujesz jeden Punkt Zepsucia.</p>\n<p>Wskrzeszeni nieumarli są całkowicie pod twoją kontrolą i mogą wykonywać proste rozkazy, które im wydasz. Jeśli zostaniesz zabity lub otrzymasz Stan @Condition[unconscious]{Utrata Przytomności}, zaklęcie się kończy i wskrzeszeni nieumarli padają.</p>",
       "sourceId": "Compendium.wfrp4e-ua2.items.hIbuMlDQ9EsFHyG9",
       "duration": "Do świtu",
       "target": "liczba metrów równa Bonusowi z Siły Woli pomnożonemu przez 100",

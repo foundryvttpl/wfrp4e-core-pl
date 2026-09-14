@@ -2,6 +2,52 @@ const MODULE_ID = "wfrp4e-core-pl";
 const PATCH_MARK = Symbol.for(MODULE_ID + ".nameCompatibility");
 const FORMULA_PATCH_MARK = Symbol.for(MODULE_ID + ".formulaCompatibility");
 const MIGRATION_PATCH_MARK = Symbol.for(MODULE_ID + ".migrationCompatibility");
+const WEAPON_SKILL_PATCH_MARK = Symbol.for(MODULE_ID + ".weaponSkillCompatibility");
+
+// Canonical EN group labels used by the upstream skill selector. These are
+// lookup aliases, not translated UI labels or new weapon-group definitions.
+const ENGLISH_WEAPON_GROUPS = Object.freeze({
+	basic: "Basic", cavalry: "Cavalry", fencing: "Fencing", brawling: "Brawling",
+	flail: "Flail", parry: "Parry", polearm: "Polearm", twohanded: "Two-handed",
+	blackpowder: "Blackpowder", bow: "Bow", crossbow: "Crossbow",
+	entangling: "Entangling", engineering: "Engineering", explosives: "Explosives",
+	sling: "Sling", throwing: "Throwing", vehicle: "Vehicle",
+});
+
+export function installWeaponSkillCompatibility() {
+	const prototype = globalThis.CONFIG?.Item?.dataModels?.weapon?.prototype;
+	if (!prototype || prototype[WEAPON_SKILL_PATCH_MARK]
+		|| typeof prototype.getSkillToUse !== "function") return false;
+	const originalGetSkill = prototype.getSkillToUse;
+	prototype.getSkillToUse = function (actor) {
+		const owner = actor || this.parent?.actor;
+		const skills = owner?.itemTags?.skill ?? [];
+		const override = this.skill?.value;
+		if (typeof override === "string" && override.length) {
+			// An explicit override must beat the generic weapon-group fallback.
+			// Keep the upstream preference for a current exact name.
+			const exact = skills.find(item => item.name.toLowerCase() === override.toLowerCase());
+			const selected = exact ?? skills.find(item => matches(item, override, {caseInsensitive: true}));
+			if (selected) return selected;
+		}
+
+		const result = originalGetSkill.call(this, actor);
+		const group = ENGLISH_WEAPON_GROUPS[this.weaponGroup?.value];
+		if (!group) return result;
+		const token = "(" + group.toLowerCase() + ")";
+		const sourceMatches = (item, includeCurrent = true) => aliases(item, {includeCurrent})
+			.some(name => name.toLowerCase().includes(token));
+		if (!result) return skills.find(item => sourceMatches(item));
+
+		// Two different source skills can acquire the same translated name.
+		// Disambiguate only that collision using the original specialization;
+		// do not replace a unique current-name match or deduplicate documents.
+		const sameName = skills.filter(item => item.name.toLowerCase() === result.name.toLowerCase());
+		return sameName.length > 1 ? sameName.find(item => sourceMatches(item, false)) ?? result : result;
+	};
+	Object.defineProperty(prototype, WEAPON_SKILL_PATCH_MARK, {value: true});
+	return true;
+}
 
 // Formula fields in the official compendia are system data, so Babele leaves
 // them in English. WFRP4e, however, compares those fields with the currently
@@ -189,7 +235,7 @@ function sourceIndexEntry(document) {
  * Return every name by which a translated document may safely be addressed.
  * Current names come first so a real Polish name always wins over an alias.
  */
-export function aliases(document) {
+export function aliases(document, {includeCurrent = true} = {}) {
 	if (!document) {
 		return [];
 	}
@@ -197,7 +243,7 @@ export function aliases(document) {
 	const indexEntry = sourceIndexEntry(document);
 	const dynamicAliases = valueAt(document, "flags." + MODULE_ID + ".nameAliases") ?? [];
 	const candidates = [
-		document.name,
+		includeCurrent ? document.name : undefined,
 		document.originalName,
 		valueAt(document, "flags.babele.originalName"),
 		...(Array.isArray(dynamicAliases) ? dynamicAliases : []),
@@ -357,6 +403,61 @@ function localizedChoice(value, type) {
 	}).join(", ");
 }
 
+
+export const POLISH_SPECIES_MAP = Object.freeze({
+	"człowiek": "human",
+	"krasnolud": "dwarf",
+	"niziołek": "halfling",
+	"niziolek": "halfling",
+	"wysoki elf": "helf",
+	"wysokielf": "helf",
+	"high elf": "helf",
+	"leśny elf": "welf",
+	"lesny elf": "welf",
+	"lesnyelf": "welf",
+	"wood elf": "welf",
+	"gnom": "gnome",
+	"ogr": "ogre",
+	"skink": "skink",
+	"kameleon": "chameleonskink"
+});
+
+export function resolveSpeciesKey(species) {
+	if (!species) return "";
+	const s = String(species).trim();
+	const lower = s.toLowerCase();
+	if (POLISH_SPECIES_MAP[lower]) return POLISH_SPECIES_MAP[lower];
+	const config = game.wfrp4e?.config;
+	if (!config) return s;
+	if (config.species?.[s]) return s;
+	if (config.species?.[lower]) return lower;
+	const key = warhammer?.utility?.findKey?.(s, config.species, {caseInsensitive: true});
+	if (key) return key;
+	for (const [k, v] of Object.entries(config.species || {})) {
+		if (k.toLowerCase() === lower || String(v).toLowerCase() === lower) {
+			return k;
+		}
+	}
+	return s;
+}
+
+export function resolveSubspeciesKey(speciesKey, subspecies) {
+	if (!subspecies) return "";
+	const s = String(subspecies).trim();
+	const lower = s.toLowerCase();
+	if (lower === "reiklandczyk" || lower === "reiklander") return "reiklander";
+	const subs = game.wfrp4e?.config?.subspecies?.[speciesKey];
+	if (!subs) return s;
+	if (subs[s]) return s;
+	if (subs[lower]) return lower;
+	for (const [k, v] of Object.entries(subs)) {
+		if (k.toLowerCase() === lower || String(v?.name || "").toLowerCase() === lower) {
+			return k;
+		}
+	}
+	return s;
+}
+
 export function localizeSpeciesSkillsTalents(data) {
 	if (!data || game.i18n?.lang !== "pl") {
 		return data;
@@ -370,9 +471,9 @@ export function localizeSpeciesSkillsTalents(data) {
 	}
 	return {
 		...data,
-		skills: (data.skills ?? []).map(value => localizedChoice(value, "skill")),
-		talents: (data.talents ?? []).map(value => localizedChoice(value, "talent")),
-		traits: (data.traits ?? []).map(value => localizedChoice(value, "trait")),
+		skills: data.skills ? data.skills.map(value => localizedChoice(value, "skill")) : undefined,
+		talents: data.talents ? data.talents.map(value => localizedChoice(value, "talent")) : undefined,
+		traits: data.traits ? data.traits.map(value => localizedChoice(value, "trait")) : undefined,
 		randomTalents: {...(data.randomTalents ?? {})},
 		talentReplacement,
 	};
@@ -496,6 +597,8 @@ export function installNameCompatibility() {
 	const originalHas = ActorClass.prototype.has;
 	const originalSetupSkill = ActorClass.prototype.setupSkill;
 	const originalSpeciesSkillsTalents = utility.speciesSkillsTalents;
+	const originalSpeciesCharacteristics = utility.speciesCharacteristics;
+	const originalSpeciesMovement = utility.speciesMovement;
 
 	utility.findExactName = async function (name, type) {
 		const result = await originalFindExactName.call(this, name, type);
@@ -524,8 +627,27 @@ export function installNameCompatibility() {
 	};
 
 	if (typeof originalSpeciesSkillsTalents === "function") {
-		utility.speciesSkillsTalents = function (...args) {
-			return localizeSpeciesSkillsTalents(originalSpeciesSkillsTalents.apply(this, args));
+		utility.speciesSkillsTalents = function (species, subspecies, ...args) {
+			const speciesKey = resolveSpeciesKey(species);
+			const subspeciesKey = resolveSubspeciesKey(speciesKey, subspecies);
+			const result = originalSpeciesSkillsTalents.call(this, speciesKey, subspeciesKey, ...args);
+			return localizeSpeciesSkillsTalents(result);
+		};
+	}
+
+	if (typeof originalSpeciesCharacteristics === "function") {
+		utility.speciesCharacteristics = function (species, average, subspecies, ...args) {
+			const speciesKey = resolveSpeciesKey(species);
+			const subspeciesKey = resolveSubspeciesKey(speciesKey, subspecies);
+			return originalSpeciesCharacteristics.call(this, speciesKey, average, subspeciesKey, ...args);
+		};
+	}
+
+	if (typeof originalSpeciesMovement === "function") {
+		utility.speciesMovement = function (species, subspecies, ...args) {
+			const speciesKey = resolveSpeciesKey(species);
+			const subspeciesKey = resolveSubspeciesKey(speciesKey, subspecies);
+			return originalSpeciesMovement.call(this, speciesKey, subspeciesKey, ...args);
 		};
 	}
 
@@ -541,6 +663,8 @@ export function installNameCompatibility() {
 		localizedSpecializedName: localizedSpecializedName.bind(null, utility),
 		localizedSpecialization,
 		localizeSpeciesSkillsTalents,
+		resolveSpeciesKey,
+		resolveSubspeciesKey,
 		oneOf,
 		original,
 	};
@@ -552,6 +676,7 @@ if (globalThis.Hooks) {
 		installNameCompatibility();
 		installFormulaCompatibility();
 		installMigrationCompatibility();
+		installWeaponSkillCompatibility();
 	});
 	Hooks.once("ready", () => {
 		// Retry after Babele and every premium module have initialized. The
@@ -560,6 +685,7 @@ if (globalThis.Hooks) {
 		installNameCompatibility();
 		installFormulaCompatibility();
 		installMigrationCompatibility();
+		installWeaponSkillCompatibility();
 	});
 
 	const elements = (html, selector) => {

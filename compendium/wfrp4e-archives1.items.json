@@ -2,11 +2,20 @@
   "label": "Przedmioty (Archiwa Tom I)",
   "mapping": {
     "gmdescription": "system.gmdescription.value",
-    "skills": "system.skills",
-    "talents": "system.talents",
+    "skills": {
+        "path": "system.skills",
+        "converter": "templateSkills"
+    },
+    "talents": {
+        "path": "system.talents",
+        "converter": "templateTalents"
+    },
     "class": "system.class.value",
     "careergroup": "system.careergroup.value",
-    "trappings": "system.trappings",
+    "trappings": {
+        "path": "system.trappings",
+        "converter": "templateTrappings"
+    },
     "specification_label": "system.specification.label",
     "specification": "system.specification.label",
     "tests": "system.tests.value",
@@ -452,7 +461,7 @@
     },
     "Karak Mountain Strider": {
       "id": "Redw0hR56YLisVVs",
-      "name": "Zwiadowczyni z Karaku",
+      "name": "Górołazka z Karaku",
       "description": "<p>@UUID[Compendium.wfrp4e-archives1.journals.q6lCSarhMecgeiD8.JournalEntryPage.GIoxmaazR63VSdBw]{Zwiadowczyni z Karaku}</p>",
       "sourceId": "Compendium.wfrp4e-archives1.items.Redw0hR56YLisVVs",
       "careergroup": "Zwiadowczyni z Karaku",

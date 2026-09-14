@@ -1101,7 +1101,7 @@
     "Dwarf": {
       "id": "ImdVnI8mEiOmKriI",
       "name": "Krasnolud",
-      "description": "<section id=\"secret-h5cBaU8rkw7UFZmU\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#krasnoludy]{Krasnoludy}</p></section>",
+      "description": "<section id=\"secret-h5cBaU8rkw7UFZmU\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#dwarfs]{Krasnoludy}</p></section>",
       "sourceId": "Compendium.wfrp4e-core.actors.ImdVnI8mEiOmKriI",
       "gender": "Różne",
       "species": "Krasnolud",
@@ -1774,7 +1774,7 @@
     "Halfling": {
       "id": "r70e6JNM3MjWIb7N",
       "name": "Niziołek",
-      "description": "<section id=\"secret-d1ADsyWS6KDQFxDE\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#niziolki]{Niziołki}</p></section>",
+      "description": "<section id=\"secret-d1ADsyWS6KDQFxDE\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Niziołki}</p></section>",
       "sourceId": "Compendium.wfrp4e-core.actors.r70e6JNM3MjWIb7N",
       "gender": "Różne",
       "species": "Niziołek",
@@ -1840,7 +1840,7 @@
     "High Elf": {
       "id": "QutqbzpxKqsjQ6yN",
       "name": "Wysoki elf",
-      "description": "<section id=\"secret-1iA2MDDwFn6grbL6\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#wysokie-elfy]{Wysokie Elfy}</p></section>",
+      "description": "<section id=\"secret-1iA2MDDwFn6grbL6\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#high-elves]{Wysokie Elfy}</p></section>",
       "sourceId": "Compendium.wfrp4e-core.actors.QutqbzpxKqsjQ6yN",
       "gender": "Różne",
       "species": "Wysoki elf",
@@ -2089,7 +2089,7 @@
     "Human": {
       "id": "7ihBjcHcewZ2Obul",
       "name": "Człowiek",
-      "description": "<section id=\"secret-vD5MVV7CgllMC91b\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#ludzie-(reiklandczycy)]{Ludzie (Reiklandczycy)}</p></section>",
+      "description": "<section id=\"secret-vD5MVV7CgllMC91b\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humans-(reiklander)]{Ludzie (Reiklandczycy)}</p></section>",
       "sourceId": "Compendium.wfrp4e-core.actors.7ihBjcHcewZ2Obul",
       "gender": "Różne",
       "species": "Człowiek",
@@ -3677,7 +3677,7 @@
     "Wood Elf": {
       "id": "5wl3KH6hXsGwUcZa",
       "name": "Leśny elf",
-      "description": "<section id=\"secret-HaVbfBaaBSzWZbNX\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#lesne-elfy]{Leśne Elfy}</p></section>",
+      "description": "<section id=\"secret-HaVbfBaaBSzWZbNX\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-core.journals.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#wood-elves]{Leśne Elfy}</p></section>",
       "sourceId": "Compendium.wfrp4e-core.actors.5wl3KH6hXsGwUcZa",
       "gender": "Różne",
       "species": "Leśny elf",
@@ -3842,7 +3842,7 @@
         "KgqX2TeFg2QOJmxM": {
           "id": "uqGxFOEqeurwkAO3",
           "name": "Zionięcie",
-          "description": "<p>Stworzenie posługuje się zionięciem jako potężną bronią. W swojej Turze, kosztem 2 Przewag, może aktywować <i>Zionięcie</i> jako Darmowy Atak. Wybierz 1 cel, który stworzenie widzi w promieniu 20 + Bonus z Wytrzymałości metrów. Trafione zostają wszystkie postacie wokół tego celu w promieniu tylu metrów, ile wynosi Bonus z Siły, podobnie jak wszystkie postacie znajdujące się między stworzeniem a celem. Przeprowadź <b>Test Przeciwstawny Umiejętności Strzeleckie/Unik</b> przeciwko wszystkim objętym efektem celom (jeden rzut stwora przeciwko wszystkim poszczególnym celom). Każdy cel, który przegrał Test, otrzymuje trafienie zadające wskazaną wartość Obrażeń. Co więcej, jeśli przy Cesze Stworzenia wymieniony jest jeden z opisanych niżej typów zionięcia, zastosuj wskazane zasady.</p><ul><li><p><strong>Dym</strong>: Obszar wypełnia się dymem, który zasłania pole widzenia na tyle Rund, ile wynosi Bonus z Wytrzymałości.</p></li><li><p><strong>Elektryczność</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Oszołomienie].</p></li><li><p><strong>Kwas</strong>: Noszony przez objęte efektem postaci pancerze oraz wszelka broń dostają 1 punkt Uszkodzeń.</p></li><li><p><strong>Ogień</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Podpalenie].</p></li><li><p><strong>Trucizna</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[Zatrucie].</p></li><li><p><strong>Zimno</strong>: Cele dostają jeden Stan @Condition[Oszołomienie]{Oszołomiony} za każde pełne 5 odniesionych Ran (minimalnie 1).</p></li></ul><p>Stworzenie jest odporne na własne <i>Zionięcie</i>. Ten atak jest <i>Magiczny</i>.</p>",
+          "description": "<p>Stworzenie posługuje się zionięciem jako potężną bronią. W swojej Turze, kosztem 2 Przewag, może aktywować <i>Zionięcie</i> jako Darmowy Atak. Wybierz 1 cel, który stworzenie widzi w promieniu 20 + Bonus z Wytrzymałości metrów. Trafione zostają wszystkie postacie wokół tego celu w promieniu tylu metrów, ile wynosi Bonus z Siły, podobnie jak wszystkie postacie znajdujące się między stworzeniem a celem. Przeprowadź <b>Test Przeciwstawny Umiejętności Strzeleckie/Unik</b> przeciwko wszystkim objętym efektem celom (jeden rzut stwora przeciwko wszystkim poszczególnym celom). Każdy cel, który przegrał Test, otrzymuje trafienie zadające wskazaną wartość Obrażeń. Co więcej, jeśli przy Cesze Stworzenia wymieniony jest jeden z opisanych niżej typów zionięcia, zastosuj wskazane zasady.</p><ul><li><p><strong>Dym</strong>: Obszar wypełnia się dymem, który zasłania pole widzenia na tyle Rund, ile wynosi Bonus z Wytrzymałości.</p></li><li><p><strong>Elektryczność</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[stunned]{Oszołomienie}.</p></li><li><p><strong>Kwas</strong>: Noszony przez objęte efektem postaci pancerze oraz wszelka broń dostają 1 punkt Uszkodzeń.</p></li><li><p><strong>Ogień</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[ablaze]{Podpalenie}.</p></li><li><p><strong>Trucizna</strong>: Obrażenia ignorują Punkty Pancerza. Cele otrzymują Stan @Condition[poisoned]{Zatrucie}.</p></li><li><p><strong>Zimno</strong>: Cele dostają jeden Stan @Condition[stunned]{Oszołomiony} za każde pełne 5 odniesionych Ran (minimalnie 1).</p></li></ul><p>Stworzenie jest odporne na własne <i>Zionięcie</i>. Ten atak jest <i>Magiczny</i>.</p>",
           "originalName": "Zionięcie",
           "sourceId": "Compendium.wfrp4e-core.items.uqGxFOEqeurwkAO3",
           "effects": {

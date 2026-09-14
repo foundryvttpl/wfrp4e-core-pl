@@ -93,7 +93,7 @@
     "Cracked Bone": {
       "id": "vcM1EnJXXM02anIi",
       "name": "Pęknięta kość",
-      "description": "<p>Zyskujesz stan @Condition[Ogłuszenia]. Wszystkie testy otrzymują karę -10, dopóki nie otrzymasz udanego testu leczenia.</p>",
+      "description": "<p>Zyskujesz stan @Condition[stunned]{Oszołomienia}. Wszystkie testy otrzymują karę -10, dopóki nie otrzymasz udanego testu leczenia.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.vcM1EnJXXM02anIi",
       "effects": {
         "PKfdEwRZh5DCZSwC": {
@@ -160,7 +160,7 @@
     "Flensed Muscle": {
       "id": "CsnWW8GohpZyEAYG",
       "name": "Naderwany mięsień",
-      "description": "<p>Dostajesz 4 Stany @Condition[Krwawienie]. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia przez następne 4 tygodnie, będą wywoływać także 2 Stany <em>Krwawienie</em>, ponieważ rana wciąż się otwiera.</p>",
+      "description": "<p>Dostajesz 4 Stany @Condition[bleeding]{Krwawienie}. Wszelkie Rany, które odniesiesz w tym Miejscu Trafienia przez następne 4 tygodnie, będą wywoływać także 2 Stany <em>Krwawienie</em>, ponieważ rana wciąż się otwiera.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.CsnWW8GohpZyEAYG",
       "effects": {
         "3MNCFqmWfDVYnYbu": {
@@ -185,7 +185,7 @@
     "Fractured Bone": {
       "id": "SdB0sthOSurZWqYe",
       "name": "Złamana kość",
-      "description": "<p>Dostajesz Stan Oszołomienie. Przejdź <strong>Test Odporności</strong> albo dostaniesz także Stan @Condition[Powalenie]. Wszystkie Testy dostają karę -10 przez następne 4 tygodnie.</p>",
+      "description": "<p>Dostajesz Stan Oszołomienie. Przejdź <strong>Test Odporności</strong> albo dostaniesz także Stan @Condition[prone]{Powalenie}. Wszystkie Testy dostają karę -10 przez następne 4 tygodnie.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.SdB0sthOSurZWqYe",
       "effects": {
         "ftiYT4Sxl2RlzOvB": {
@@ -249,7 +249,7 @@
     "Gash": {
       "id": "6cojY1IRxvJev8kt",
       "name": "Rozcięcie",
-      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie].</p>",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[bleeding]{Krwawienie}.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.6cojY1IRxvJev8kt",
       "effects": {
         "p5XumBXXpYWcXo7X": {
@@ -263,7 +263,7 @@
     "Gut Blow": {
       "id": "vj8VdUbOpT1vepsL",
       "name": "Cios w bebechy",
-      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie].</p>",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[stunned]{Oszołomienie}.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.vj8VdUbOpT1vepsL",
       "effects": {
         "PKfdEwRZh5DCZSwC": {
@@ -285,7 +285,7 @@
     "Low Blow!": {
       "id": "HPszYSWoB4ObYOBM",
       "name": "Poniżej pasa!",
-      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie]. Musi również wykonać <strong>Trudny (-20) Test Odporności</strong> jeśli ten się nie uda, postać otrzyma dodatkowe 2 Stany @Condition[Oszołomienie].</p>",
+      "description": "<p>Postać otrzymuje 1 poziom Stanu @Condition[stunned]{Oszołomienie}. Musi również wykonać <strong>Trudny (-20) Test Odporności</strong> jeśli ten się nie uda, postać otrzyma dodatkowe 2 Stany @Condition[stunned]{Oszołomienie}.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.HPszYSWoB4ObYOBM",
       "effects": {
         "dys96YM5JQYiJjtZ": {
@@ -318,7 +318,7 @@
     "Painful Cut": {
       "id": "Vj7jkZ1ZtJKXKYmu",
       "name": "Bolesne rozcięcie",
-      "description": "<p>Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie] oraz 1 poziom Stanu @Condition[Oszołomienie]. Musi także zdać <strong>Trudny (-20) Test Odporności</strong>, w przeciwnym wypadku nastąpi @Condition[Nieprzytomny] Utrata Przytomności z powodu bólu.</p>",
+      "description": "<p>Postać otrzymuje 2 poziomy Stanu @Condition[bleeding]{Krwawienie} oraz 1 poziom Stanu @Condition[stunned]{Oszołomienie}. Musi także zdać <strong>Trudny (-20) Test Odporności</strong>, w przeciwnym wypadku nastąpi @Condition[unconscious]{Nieprzytomny} Utrata Przytomności z powodu bólu.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.Vj7jkZ1ZtJKXKYmu",
       "effects": {
         "eDYPhQ4BZxsoN3S3": {
@@ -355,7 +355,7 @@
     "Ruined": {
       "id": "M181psxcR6fA3wNB",
       "name": "Pokonany",
-      "description": "<p>Postać otrzymuje Stan @Condition[Oszołomienie], który można usunąć tylko przy pomocy udanego <strong>Prostego (+0) Testu Leczenia</strong>. To Miejsce Trafienia staje się bezużyteczne, o ile nie spędzisz miesiąca na odpoczynku w łóżku.</p>",
+      "description": "<p>Postać otrzymuje Stan @Condition[stunned]{Oszołomienie}, który można usunąć tylko przy pomocy udanego <strong>Prostego (+0) Testu Leczenia</strong>. To Miejsce Trafienia staje się bezużyteczne, o ile nie spędzisz miesiąca na odpoczynku w łóżku.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.M181psxcR6fA3wNB",
       "effects": {
         "a8bUPcOi4uFCDICJ": {
@@ -435,7 +435,7 @@
     "Torn Flesh": {
       "id": "7u2XsoTaIdEMsnzG",
       "name": "Rana szarpana",
-      "description": "<p>Dostajesz 2 Stany @Condition[Krwawienie].</p>",
+      "description": "<p>Dostajesz 2 Stany @Condition[bleeding]{Krwawienie}.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.7u2XsoTaIdEMsnzG",
       "effects": {
         "OcAC7jjpeR86HSSK": {
@@ -449,7 +449,7 @@
     "Winded": {
       "id": "JxCMVZYWoLpaMiWR",
       "name": "Pozbawienie tchu",
-      "description": "<p>Dostajesz 2 Stany @Condition[Oszołomienie]. Przejdź <strong>Przeciętny (+20) Test Odporności</strong> albo dostaniesz Stan @Condition[Powalenie]. Twoja Szybkość jest zmniejszona o połowę przez [[/r 1d10]]{1k10} Rund, gdy próbujesz złapać oddech.</p>",
+      "description": "<p>Dostajesz 2 Stany @Condition[stunned]{Oszołomienie}. Przejdź <strong>Przeciętny (+20) Test Odporności</strong> albo dostaniesz Stan @Condition[prone]{Powalenie}. Twoja Szybkość jest zmniejszona o połowę przez [[/r 1d10]]{1k10} Rund, gdy próbujesz złapać oddech.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.JxCMVZYWoLpaMiWR",
       "effects": {
         "PKfdEwRZh5DCZSwC": {
@@ -543,7 +543,7 @@
     "Clutch of Eyes": {
       "id": "iBS0fYHCX9VHdyVR",
       "name": "Wylęg Oczu",
-      "description": "<p>Pod skórą zaczynają nabrzmiewać drgające cysty, potem przeszywa cię ból, gdy krwawe wrzody rosną, pękają i odsłaniają skupisko nowych, przerażonych oczu.</p><p>Rzuć 1k100, by ustalić @Table[hitloc]{Miejsce Trafienia}, w którym wyłonią się twoje nowe oczy. Teraz możesz widzieć z tego Miejsca Trafienia. Zwiększ swoją Inicjatywę o +[[/r 1d10]]. Jeśli nie masz Inicjatywy, dostajesz także +[[/r 2d10]]{2k10}. Ponadto wszystkie trafienia w miejsce Wylęgu oczu powodują stan @Condition[Oślepienie].</p>",
+      "description": "<p>Pod skórą zaczynają nabrzmiewać drgające cysty, potem przeszywa cię ból, gdy krwawe wrzody rosną, pękają i odsłaniają skupisko nowych, przerażonych oczu.</p><p>Rzuć 1k100, by ustalić @Table[hitloc]{Miejsce Trafienia}, w którym wyłonią się twoje nowe oczy. Teraz możesz widzieć z tego Miejsca Trafienia. Zwiększ swoją Inicjatywę o +[[/r 1d10]]. Jeśli nie masz Inicjatywy, dostajesz także +[[/r 2d10]]{2k10}. Ponadto wszystkie trafienia w miejsce Wylęgu oczu powodują stan @Condition[blinded]{Oślepienie}.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.iBS0fYHCX9VHdyVR",
       "effects": {
         "qcgzN9lKYCUuG2T6": {
@@ -724,7 +724,7 @@
     "Basilisk's Baleful Bile": {
       "id": "cCMhuudYsHlP1t56",
       "name": "Złowroga Żółć Bazyliszka",
-      "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[Oszołomienie] na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[Zatrucie], którym można się oprzeć <strong>Problematycznym (-10) Testem Odporności</strong>. Jeśli cel nie zdoła oprzeć się @Condition[Zatrucie], zostaje trwale przemieniony w kamień. </p>",
+      "description": "<p>Ta trucizna została wytworzona z połączenia oczu i woreczków jadowych świeżo zabitego bazyliszka. Jest to odrażająca w smaku toksyna i każdy, kto spożyje ją w jedzeniu czy\nnapoju, powinien wykonać<strong>Łatwy (+40) Test Percepcji</strong> . Sukces oznacza, że wyczuł on niepokojący posmak, zanim ucierpiał od działania trucizny,\nale otrzymał Stan @Condition[stunned]{Oszołomienie} na jedną Rundę, gdy wymiotował posiłek. Przetrawiona mikstura wywołuje 2 poziomy Stanu @Condition[poisoned]{Zatrucie}, którym można się oprzeć <strong>Problematycznym (-10) Testem Odporności</strong>. Jeśli cel nie zdoła oprzeć się @Condition[poisoned]{Zatrucie}, zostaje trwale przemieniony w kamień. </p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.cCMhuudYsHlP1t56",
       "effects": {
         "GFWCmFT6AtYimdnZ": {
@@ -844,7 +844,7 @@
       "name": "Likier Fortuny",
       "description": " ",
       "sourceId": "Compendium.wfrp4e-starter-set.items.bycar0CfYqx6OOft",
-      "gmdescription": "<p>Jasnobłękitny likier o lekkim aromacie lukrecji. Jego spożycie daje +1 Punkt Szczęścia, a kiedy eliksir działa i Bohater wyda Punkt Szczęścia, gracz powinien rzucić [[/r 1d100]]. Jeśli wynikiem będzie dublet, postać odzyskuje wydany punkt. Kiedy napar przestanie działać, Bohater traci wszystkie Punkty Szczęścia i otrzymuje 1 Stan @Condition[Zmęczenie], który utrzymuje się przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
+      "gmdescription": "<p>Jasnobłękitny likier o lekkim aromacie lukrecji. Jego spożycie daje +1 Punkt Szczęścia, a kiedy eliksir działa i Bohater wyda Punkt Szczęścia, gracz powinien rzucić [[/r 1d100]]. Jeśli wynikiem będzie dublet, postać odzyskuje wydany punkt. Kiedy napar przestanie działać, Bohater traci wszystkie Punkty Szczęścia i otrzymuje 1 Stan @Condition[fatigued]{Zmęczenie}, który utrzymuje się przynajmniej jeden dzień. </p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} minut</p>"
     },
     "Reactionary Restorative": {
       "id": "mZHMUtVLsASroIQH",
@@ -882,7 +882,7 @@
           ]
         }
       },
-      "gmdescription": "<p>Gęsty, krwiście czerwony płyn o ohydnym smaku wyostrza zmysły pijącego, który jest świadomy każdego zagrożenia. Kiedy eliksir działa, Bohater nie może otrzymać Stanu Zaskoczony. Gdy napar skończy działać, postać otrzymuje 1 Stan @Condition[Zmęczenie], którego nie da się usunąć przez całą dobę.</p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin.</p>"
+      "gmdescription": "<p>Gęsty, krwiście czerwony płyn o ohydnym smaku wyostrza zmysły pijącego, który jest świadomy każdego zagrożenia. Kiedy eliksir działa, Bohater nie może otrzymać Stanu Zaskoczony. Gdy napar skończy działać, postać otrzymuje 1 Stan @Condition[fatigued]{Zmęczenie}, którego nie da się usunąć przez całą dobę.</p><p><strong>Czas działania</strong>: [[/r 1d10]]{1k10} godzin.</p>"
     },
     "Saif al-Janub": {
       "id": "rIBB37yMATXRnFbp",
@@ -919,7 +919,7 @@
           ]
         }
       },
-      "gmdescription": "<p>Okropny, trącący rybą olej. Aby go w ogóle wypić, trzeba zdać <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli się uda, Bohater otrzymuje 1 Stan @Condition[Zmęczenie], który usunąć można tylko całonocnym snem. Poza tym eliksir nie ma żadnego innego działania. Klienci von Holzenauera są przekonani, że okropny smak idzie w parze z leczniczym działaniem przeciwko każdej przypadłości</p>"
+      "gmdescription": "<p>Okropny, trącący rybą olej. Aby go w ogóle wypić, trzeba zdać <strong>Przeciętny (+20) Test Opanowania</strong>. Jeśli się uda, Bohater otrzymuje 1 Stan @Condition[fatigued]{Zmęczenie}, który usunąć można tylko całonocnym snem. Poza tym eliksir nie ma żadnego innego działania. Klienci von Holzenauera są przekonani, że okropny smak idzie w parze z leczniczym działaniem przeciwko każdej przypadłości</p>"
     },
     "Tonic of Sight Beyond Sight": {
       "id": "AulAEeUVTGuCmQPX",
