@@ -95,6 +95,9 @@ export function localizedSpecialization(value) {
 		return value;
 	}
 	const expected = value.trim().toLocaleLowerCase();
+	if (expected === "choose one" || expected === "choose group" || expected === "any one") {
+		return "dowolne";
+	}
 	for (const [key, english] of Object.entries(ENGLISH_MAGIC_LORES)) {
 		const configured = game.wfrp4e?.config?.magicLores?.[key]
 			?? "WFRP4E.MagicLores." + key;
@@ -386,6 +389,17 @@ export function display(query, type) {
 		const matchedAlias = matchingBaseAlias(utility, baseDocument, query);
 		return localizedSpecializedName(utility, baseDocument, query, matchedAlias);
 	}
+	if (utility && query.includes("(") && query.includes(")")) {
+		const base = extractBaseName(utility, query);
+		const translatedBase = translatedCompendiumName(base + " ()", types) || translatedCompendiumName(base, types);
+		if (translatedBase) {
+			const displayBase = extractBaseName(utility, translatedBase);
+			const opening = query.indexOf("(");
+			const closing = query.lastIndexOf(")");
+			const spec = query.slice(opening + 1, closing);
+			return `${displayBase} (${localizedSpecialization(spec)})`;
+		}
+	}
 	return query;
 }
 
@@ -406,20 +420,36 @@ function localizedChoice(value, type) {
 
 export const POLISH_SPECIES_MAP = Object.freeze({
 	"człowiek": "human",
+	"human": "human",
 	"krasnolud": "dwarf",
+	"dwarf": "dwarf",
 	"niziołek": "halfling",
 	"niziolek": "halfling",
+	"halfling": "halfling",
 	"wysoki elf": "helf",
 	"wysokielf": "helf",
 	"high elf": "helf",
+	"highelf": "helf",
+	"helf": "helf",
 	"leśny elf": "welf",
 	"lesny elf": "welf",
+	"leśnyelf": "welf",
 	"lesnyelf": "welf",
 	"wood elf": "welf",
+	"woodelf": "welf",
+	"welf": "welf",
 	"gnom": "gnome",
+	"gnome": "gnome",
 	"ogr": "ogre",
+	"ogre": "ogre",
 	"skink": "skink",
-	"kameleon": "chameleonskink"
+	"kameleon": "chameleonskink",
+	"kameleon skink": "chameleonskink",
+	"chameleonskink": "chameleonskink",
+	"chameleon skink": "chameleonskink",
+	"chowaniec": "familiar",
+	"familiar": "familiar",
+	"animal familiar": "familiar"
 });
 
 export function resolveSpeciesKey(species) {
@@ -431,7 +461,7 @@ export function resolveSpeciesKey(species) {
 	if (!config) return s;
 	if (config.species?.[s]) return s;
 	if (config.species?.[lower]) return lower;
-	const key = warhammer?.utility?.findKey?.(s, config.species, {caseInsensitive: true});
+	const key = globalThis.warhammer?.utility?.findKey?.(s, config.species, {caseInsensitive: true});
 	if (key) return key;
 	for (const [k, v] of Object.entries(config.species || {})) {
 		if (k.toLowerCase() === lower || String(v).toLowerCase() === lower) {
@@ -446,12 +476,16 @@ export function resolveSubspeciesKey(speciesKey, subspecies) {
 	const s = String(subspecies).trim();
 	const lower = s.toLowerCase();
 	if (lower === "reiklandczyk" || lower === "reiklander") return "reiklander";
+	if (lower === "tileańczyk" || lower === "tileanczyk" || lower === "tilean") return "tilean";
+	if (lower === "imperialny tileańczyk" || lower === "imperialny tileanczyk" || lower === "imperial-tilean") return "imperial-tilean";
 	const subs = game.wfrp4e?.config?.subspecies?.[speciesKey];
 	if (!subs) return s;
 	if (subs[s]) return s;
 	if (subs[lower]) return lower;
 	for (const [k, v] of Object.entries(subs)) {
-		if (k.toLowerCase() === lower || String(v?.name || "").toLowerCase() === lower) {
+		const vName = String(v?.name || "");
+		const locName = game.i18n?.localize ? game.i18n.localize(vName) : vName;
+		if (k.toLowerCase() === lower || vName.toLowerCase() === lower || locName.toLowerCase() === lower) {
 			return k;
 		}
 	}

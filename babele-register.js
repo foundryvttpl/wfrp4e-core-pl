@@ -52,6 +52,14 @@ game.wfrp4eCorePl.setEffectDuration = (effect, value, units = "rounds", {source 
 };
 
 Hooks.once("babele.init", (babele) => {
+	const origIsTranslated = babele.isTranslated;
+	if (typeof origIsTranslated === "function") {
+		babele.isTranslated = function(pack) {
+			const key = pack?.collection ?? pack?.metadata?.id ?? pack;
+			return origIsTranslated.call(this, key);
+		};
+	}
+
 	babele.register({
 		module: MODULE_ID,
 		lang: "pl",
@@ -144,8 +152,74 @@ Hooks.once("babele.init", (babele) => {
 	// does not need an explicit override.
 	if (game.release?.generation >= 14) {
 		const hasOwn = (object, key) => Object.prototype.hasOwnProperty.call(object || {}, key);
+		const SIZE_MAP = {
+			"Tiny": "Drobny",
+			"Little": "Niewielki",
+			"Small": "Mały",
+			"Average": "Średni",
+			"Large": "Duży",
+			"Enormous": "Wielki",
+			"Monstrous": "Monstrualny"
+		};
+		const KNOWN_SPECS = {
+			"Beasts": "Zwierząt",
+			"Heavens": "Niebios",
+			"Life": "Życia",
+			"Light": "Światła",
+			"Death": "Śmierci",
+			"Fire": "Ognia",
+			"Metal": "Metalu",
+			"Shadow": "Cienia",
+			"Aqshy": "Aqshy",
+			"Chamon": "Chamon",
+			"Ghur": "Ghur",
+			"Ghyran": "Ghyran",
+			"Hysh": "Hysh",
+			"Shyish": "Shyish",
+			"Ulgu": "Ulgu",
+			"Azyr": "Azyr",
+			"Petty": "Prosta",
+			"Challenging": "Wymagający",
+			"Hard": "Trudny",
+			"Difficult": "Trudny",
+			"Very Hard": "Bardzo trudny",
+			"Average": "Przeciętny",
+			"Mount": "Wierzchowiec",
+			"War": "Bojowy",
+			"Guard": "Strażnik",
+			"Broken": "Ujeżdżony",
+			"Drive": "Powożenie",
+			"Magic": "Magia",
+			"Dwarfs": "Krasnoludy",
+			"Greenskins": "Zielonoskórzy",
+			"Moderate": "Umiarkowane",
+			"Minor": "Niewielkie",
+			"Major": "Poważne",
+			"Cataleptic Ague": "Katatoniczna febra",
+			"Fungal Takeover": "Grzybicze przejęcie",
+			"Ratte Fever": "Szczurza gorączka",
+			"Yellow Skull Fever": "Gorączka żółtej czaszki",
+			"Bloody Flux": "Krwawa biegunka"
+		};
+		const PLACEHOLDER_SPECS = new Set([
+			"#", "Rozmiar", "Wiedza", "Trudność", "Umiejętności Wyuczone",
+			"Obrażenia", "Typ", "Wartość", "Cel", "Siła Korupcji", "Wartość #",
+			"Specification", "Rating", "Value", "Difficulty", "Target", "Damage"
+		]);
 		const localizeKnownSpecification = value => {
-			if (typeof value === "string" && game.i18n.has?.(value)) {
+			if (typeof value !== "string") return value;
+			if (SIZE_MAP[value]) return SIZE_MAP[value];
+			if (KNOWN_SPECS[value]) return KNOWN_SPECS[value];
+			if (value.includes(",")) {
+				return value.split(",").map(s => {
+					const trimmed = s.trim();
+					return SIZE_MAP[trimmed] || KNOWN_SPECS[trimmed] || (game.i18n.has?.("SPEC." + trimmed) ? game.i18n.localize("SPEC." + trimmed) : (game.i18n.has?.(trimmed) ? game.i18n.localize(trimmed) : trimmed));
+				}).join(", ");
+			}
+			if (game.i18n.has?.("SPEC." + value)) {
+				return game.i18n.localize("SPEC." + value);
+			}
+			if (game.i18n.has?.(value)) {
 				return game.i18n.localize(value);
 			}
 			return value;
@@ -237,18 +311,22 @@ Hooks.once("babele.init", (babele) => {
 					sourceItem,
 					"system.specification.label"
 				);
+				const sourceValue = foundry.utils.getProperty(sourceItem, "system.specification.value");
 
 				let value = foundry.utils.getProperty(item, "system.specification.value");
-				if (hasOwn(translation, "specification_value")) {
+				if (hasOwn(translation, "specification_value") && !PLACEHOLDER_SPECS.has(translation.specification_value)) {
 					value = translation.specification_value;
 				}
 				// Older actor catalogs used `specification` for both the field label
 				// and its actor-specific value. Never replace a real value such as 8
-				// with the source label "Rating". New catalogs use the unambiguous
-				// `specification_value` key above.
+				// with template placeholders like '#' or source labels like 'Rating'.
 				else if (hasOwn(translation, "specification")
-					&& translation.specification !== sourceSpecificationLabel) {
+					&& translation.specification !== sourceSpecificationLabel
+					&& !PLACEHOLDER_SPECS.has(translation.specification)) {
 					value = translation.specification;
+				}
+				else if (sourceValue !== undefined && (value === undefined || value === "" || PLACEHOLDER_SPECS.has(value))) {
+					value = sourceValue;
 				}
 				if (value !== undefined) {
 					foundry.utils.setProperty(item, "system.specification.value", localizeKnownSpecification(value));
@@ -471,15 +549,22 @@ Hooks.once("babele.init", (babele) => {
 		},
 
 		tableResults: (results, translations) => {
+			const isV13Plus = Boolean(game.release?.generation >= 13);
 			return results.map(data => {
 				if (translations) {
 					const translation = translations[data._id] || translations[`${data.range?.[0]}-${data.range?.[1]}`];
 					if (translation) {
 						if (typeof translation === "object" && translation !== null) {
-							data = foundry.utils.mergeObject(data, translation, { translated: true });
-							if (translation.name && !data.text) {
-								data.text = translation.name;
+							const patch = { ...translation, translated: true };
+							if (isV13Plus) {
+								if (patch.text && !patch.description) {
+									patch.description = patch.text;
+								}
+								delete patch.text;
+							} else if (patch.name && !patch.text) {
+								patch.text = patch.name;
 							}
+							data = foundry.utils.mergeObject(data, patch);
 						} else if (typeof translation === "string") {
 							const str = translation.trim();
 							// Keep the paragraph wrapper in the description when splitting its title.
@@ -487,49 +572,57 @@ Hooks.once("babele.init", (babele) => {
 							if (boldMatch) {
 								const title = boldMatch[3].replace(/<[^>]+>/g, "").trim();
 								const desc = ((boldMatch[1] || "") + boldMatch[4]).trim();
-								data = foundry.utils.mergeObject(data, {
+								const patch = {
 									name: title,
 									description: desc,
-									text: str,
 									translated: true
-								});
+								};
+								if (!isV13Plus) patch.text = str;
+								data = foundry.utils.mergeObject(data, patch);
 							} else {
-								const colonMatch = data.name && data.name.trim() ? str.match(/^([^<:\n]{2,50}):\s*(.+)$/s) : null;
+								const hasName = Boolean(data.name && data.name.trim());
+								const hasDesc = Boolean(data.description && data.description.trim());
+								const colonMatch = hasName ? str.match(/^([^<:\n]{2,50}):\s*(.+)$/s) : null;
 								if (colonMatch) {
 									const title = colonMatch[1].trim();
 									const desc = colonMatch[2].trim();
-									data = foundry.utils.mergeObject(data, {
+									const patch = {
 										name: title,
 										description: desc,
-										text: str,
 										translated: true
-									});
-								} else if (data.name && data.name.trim() && (!data.description || !data.description.trim())) {
-									data = foundry.utils.mergeObject(data, {
+									};
+									if (!isV13Plus) patch.text = str;
+									data = foundry.utils.mergeObject(data, patch);
+								} else if (hasName && !hasDesc) {
+									const patch = {
 										name: str,
 										description: "",
-										text: str,
 										translated: true
-									});
-								} else if ((!data.name || !data.name.trim()) && data.description && data.description.trim()) {
-									data = foundry.utils.mergeObject(data, {
+									};
+									if (!isV13Plus) patch.text = str;
+									data = foundry.utils.mergeObject(data, patch);
+								} else if (!hasName && hasDesc) {
+									const patch = {
 										description: str,
-										text: str,
 										translated: true
-									});
+									};
+									if (!isV13Plus) patch.text = str;
+									data = foundry.utils.mergeObject(data, patch);
 								} else {
-									if (data.name && data.name.trim()) {
-										data = foundry.utils.mergeObject(data, {
+									if (hasName) {
+										const patch = {
 											name: str,
-											text: str,
 											translated: true
-										});
+										};
+										if (!isV13Plus) patch.text = str;
+										data = foundry.utils.mergeObject(data, patch);
 									} else {
-										data = foundry.utils.mergeObject(data, {
+										const patch = {
 											description: str,
-											text: str,
 											translated: true
-										});
+										};
+										if (!isV13Plus) patch.text = str;
+										data = foundry.utils.mergeObject(data, patch);
 									}
 								}
 							}
@@ -542,7 +635,9 @@ Hooks.once("babele.init", (babele) => {
 						if (parsed?.collection?.collection) {
 							const text = game.babele.translateField("name", parsed.collection.collection, { name: data.name });
 							if (text) {
-								return foundry.utils.mergeObject(data, { name: text, text: text, translated: true });
+								const patch = { name: text, translated: true };
+								if (!isV13Plus) patch.text = text;
+								return foundry.utils.mergeObject(data, patch);
 							}
 						}
 					} catch (e) {}

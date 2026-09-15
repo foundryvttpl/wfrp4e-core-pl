@@ -228,4 +228,51 @@ export function initFolderCompatibility() {
         // Fallback in case babele.ready already fired or was skipped
         setTimeout(() => translateWorldFolderTree(), 100);
     });
+
+    // --- 5. Compendium Window Folder Translation ---
+    function translateCompendiumApp(app, html) {
+        const pack = app?.collection ?? (typeof app?.metadata?.id === "string" ? app : null);
+        if (!pack) return;
+
+        if (pack.folders) {
+            game.babele?.translatePackFolders?.(pack);
+        }
+
+        const root = html instanceof HTMLElement ? html : (html?.[0] instanceof HTMLElement ? html[0] : (app?.element instanceof HTMLElement ? app.element : null));
+        if (!root) return;
+
+        const folderElements = root.querySelectorAll(".folder");
+        folderElements.forEach(folderEl => {
+            const folderId = folderEl.dataset?.folderId;
+            const header = folderEl.querySelector(".folder-header h3, .folder-name");
+            if (!header) return;
+
+            let originalName = header.textContent.trim();
+            const packFolder = folderId && pack.folders ? pack.folders.get(folderId) : null;
+            if (packFolder) {
+                if (packFolder.name && packFolder.name !== packFolder.originalName) {
+                    header.textContent = packFolder.name;
+                    return;
+                }
+                originalName = packFolder.originalName || packFolder.name;
+            }
+
+            const translatedName = getTranslatedFolderName(originalName, pack.collection);
+            if (translatedName && translatedName !== originalName) {
+                header.textContent = translatedName;
+                if (packFolder) {
+                    packFolder.originalName = originalName;
+                    packFolder.name = translatedName;
+                }
+            }
+        });
+    }
+
+    Hooks.on("renderCompendium", (app, html) => {
+        translateCompendiumApp(app, html);
+    });
+
+    Hooks.on("renderCompendiumCollection", (app, html) => {
+        translateCompendiumApp(app, html);
+    });
 }

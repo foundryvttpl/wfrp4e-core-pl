@@ -5,11 +5,152 @@ const COMMAND_CALL_PATCH_MARK = Symbol.for(`${MODULE_ID}.chatCommandCallCompatib
 const MONEY_PATCH_MARK = Symbol.for(`${MODULE_ID}.moneyCommandCompatibility`);
 const AVAILABILITY_PATCH_MARK = Symbol.for(`${MODULE_ID}.availabilityCompatibility`);
 
-const COMMAND_ALIASES = {
-  "dostępność": "avail",
-  "dostepnosc": "avail",
-  "dostępnosc": "avail",
-  "dostepność": "avail",
+const COMMAND_DEFINITIONS = {
+  table: {
+    aliases: ["tabela", "tabelka"],
+    description: "Rzut na tabelę (alias /table)",
+    examples: "<br><span font-family:'monospaced'>/tabela critarm</span><br><span font-family:'monospaced'>/tabela mutatephys modyfikator=20 kolumna=khorne</span>",
+  },
+  pay: {
+    aliases: ["płać", "plac", "zapłać", "zaplac"],
+    description: "Żądanie opłaty lub opłacenie kosztu (alias /pay)",
+    examples: "<br><span font-family:'monospaced'>/płać 12ss za=Pokój i wikt</span>",
+  },
+  credit: {
+    aliases: ["kredyt", "wpłać", "wplac"],
+    description: "Żądanie otrzymania pieniędzy / nagroda (alias /credit)",
+    examples: "<br><span font-family:'monospaced'>/kredyt 100zk powód=Nagroda podział=3</span>",
+  },
+  char: {
+    aliases: ["postać", "postac", "tworzenie"],
+    description: "Rozpocznij tworzenie postaci (alias /char)",
+  },
+  cond: {
+    aliases: ["stan", "warunek"],
+    description: "Wyświetl opis stanu (alias /cond)",
+    examples: "<br><span font-family:'monospaced'>/stan krwawienie</span>",
+  },
+  prop: {
+    aliases: ["cecha", "zaleta", "wada"],
+    description: "Wyświetl opis cechy, zalety lub wady (alias /prop)",
+    examples: "<br><span font-family:'monospaced'>/cecha druzgocący</span>",
+  },
+  name: {
+    aliases: ["imię", "imie"],
+    description: "Wygeneruj imię (alias /name)",
+    examples: "<br><span font-family:'monospaced'>/imię płeć=mężczyzna rasa=człowiek</span>",
+  },
+  avail: {
+    aliases: ["dostępność", "dostepnosc", "dostępnosc", "dostepność"],
+    description: "Wykonaj test dostępności (alias /avail)",
+    examples: "<br><span font-family:'monospaced'>/dostępność Wioska Rzadki 10</span>",
+  },
+  corruption: {
+    aliases: ["spaczenie", "korupcja", "zepsucie"],
+    description: "Wykonaj test spaczenia (alias /corruption)",
+    examples: "<br><span font-family:'monospaced'>/spaczenie siła=umiarkowane źródło=Rzeka</span>",
+  },
+  fear: {
+    aliases: ["strach"],
+    description: "Wykonaj test strachu (alias /fear)",
+    examples: "<br><span font-family:'monospaced'>/strach 1 źródło=Nieumarły</span>",
+  },
+  terror: {
+    aliases: ["groza"],
+    description: "Wykonaj test grozy (alias /terror)",
+    examples: "<br><span font-family:'monospaced'>/groza 2 źródło=Smok</span>",
+  },
+  exp: {
+    aliases: ["pd", "doświadczenie", "doswiadczenie", "punkty"],
+    description: "Przyznaj punkty doświadczenia (alias /exp)",
+    examples: "<br><span font-family:'monospaced'>/pd 100 powód=Wygrana walka</span>",
+  },
+  travel: {
+    aliases: ["podróż", "podroz"],
+    description: "Kalkulator odległości podróży (alias /travel)",
+    examples: "<br><span font-family:'monospaced'>/podróż Altdorf Middenheim</span>",
+  },
+  trade: {
+    aliases: ["handel", "targuj"],
+    description: "Otwórz okno handlu (alias /trade)",
+  },
+};
+
+const COMMAND_ALIASES = {};
+for (const [targetCmd, def] of Object.entries(COMMAND_DEFINITIONS)) {
+  for (const alias of def.aliases) {
+    COMMAND_ALIASES[alias.toLowerCase()] = targetCmd;
+  }
+}
+
+const ARG_ALIASES = {
+  modyfikator: "modifier",
+  mod: "modifier",
+  kolumna: "column",
+  za: "for",
+  dla: "for",
+  cel: "target",
+  gracz: "target",
+  powód: "reason",
+  powod: "reason",
+  przyczyna: "reason",
+  podział: "split",
+  podzial: "split",
+  tryb: "mode",
+  umiejętność: "skill",
+  umiejetnosc: "skill",
+  źródło: "source",
+  zrodlo: "source",
+  rasa: "species",
+  płeć: "gender",
+  plec: "gender",
+  siła: "strength",
+  sila: "strength",
+  poziom: "rating",
+  od: "from",
+  z: "from",
+  do: "to",
+  osada: "settlement",
+  miejsce: "settlement",
+  wielkość: "settlement",
+  wielkosc: "settlement",
+  rzadkość: "rarity",
+  rzadkosc: "rarity",
+};
+
+const SPECIES_MAP = {
+  człowiek: "human",
+  czlowiek: "human",
+  ludzie: "human",
+  krasnolud: "dwarf",
+  krasnoludy: "dwarf",
+  "wysoki elf": "helf",
+  "leśny elf": "welf",
+  "lesny elf": "welf",
+  elf: "helf",
+  elfy: "helf",
+  niziołek: "halfling",
+  niziolek: "halfling",
+  niziołki: "halfling",
+  niziolki: "halfling",
+};
+
+const GENDER_MAP = {
+  mężczyzna: "male",
+  mezczyzna: "male",
+  męski: "male",
+  meski: "male",
+  facet: "male",
+  chłopak: "male",
+  chlopak: "male",
+  m: "male",
+  male: "male",
+  kobieta: "female",
+  żeński: "female",
+  zenski: "female",
+  dziewczyna: "female",
+  k: "female",
+  female: "female",
 };
 
 function plainChatCommand(text) {
@@ -19,6 +160,73 @@ function plainChatCommand(text) {
     .replace(/<[^>]+>/gu, "")
     .replace(/&nbsp;|&#160;/giu, " ")
     .trim();
+}
+
+function normalizeMoneyInText(text) {
+  if (typeof text !== "string") return text;
+  return text.replace(/(\d+)\s*(zk|gc|ss|bp)\b/giu, (_match, amt, curr) => {
+    const c = curr.toLowerCase() === "zk" ? "gc" : curr.toLowerCase();
+    return amt + c;
+  });
+}
+
+function normalizeNamedArgs(text) {
+  if (typeof text !== "string") return text;
+  let res = text;
+  for (const [pl, en] of Object.entries(ARG_ALIASES)) {
+    const reg = new RegExp(`(?<=^|\\s)${pl}=`, "giu");
+    res = res.replace(reg, `${en}=`);
+  }
+  return res;
+}
+
+function normalizeNameText(text) {
+  if (typeof text !== "string" || !text.trim()) return text;
+  let normalized = normalizeNamedArgs(text);
+
+  normalized = normalized.replace(/(?<=^|\s)gender=([^\s]+)/giu, (_m, val) => {
+    const g = GENDER_MAP[val.toLowerCase()] || val;
+    return `gender=${g}`;
+  });
+  normalized = normalized.replace(/(?<=^|\s)species=([^\s]+)/giu, (_m, val) => {
+    const s = SPECIES_MAP[val.toLowerCase()] || val;
+    return `species=${s}`;
+  });
+
+  const tokens = normalized.trim().split(/\s+/).filter(t => !t.includes("="));
+  let gender = null;
+  let species = null;
+
+  for (const token of tokens) {
+    const low = token.toLowerCase();
+    if (!gender && GENDER_MAP[low]) gender = GENDER_MAP[low];
+    else if (!species && SPECIES_MAP[low]) species = SPECIES_MAP[low];
+  }
+
+  if (gender || species) {
+    let out = [];
+    if (gender) out.push(gender);
+    if (species) out.push(`species=${species}`);
+    const namedArgs = normalized.match(/[a-zA-Z]+=[^\s]+/g) || [];
+    for (const na of namedArgs) {
+      if (!na.startsWith("gender=") && !na.startsWith("species=")) {
+        out.push(na);
+      }
+    }
+    return out.join(" ");
+  }
+
+  return normalized;
+}
+
+function normalizeCommandText(command, text) {
+  if (typeof text !== "string") return text;
+  let normalized = normalizeMoneyInText(text);
+  normalized = normalizeNamedArgs(normalized);
+  if (command === "name") {
+    normalized = normalizeNameText(normalized);
+  }
+  return normalized;
 }
 
 function commandMatch(commands, text) {
@@ -65,8 +273,10 @@ function installCommandCaller() {
   if (!commands || commands[COMMAND_CALL_PATCH_MARK] || typeof commands.call !== "function") return false;
   const originalCall = commands.call;
   commands.call = function(command, text) {
-    const resolved = COMMAND_ALIASES[command?.toLocaleLowerCase()] || command;
-    return originalCall.call(this, resolved, text);
+    const lower = command?.toLocaleLowerCase();
+    const resolved = COMMAND_ALIASES[lower] || command;
+    const normalizedText = normalizeCommandText(resolved, text);
+    return originalCall.call(this, resolved, normalizedText);
   };
   Object.defineProperty(commands, COMMAND_CALL_PATCH_MARK, { value: true });
   return true;
@@ -74,21 +284,27 @@ function installCommandCaller() {
 
 function installCommandAliases() {
   const commands = game.wfrp4e?.commands;
-  if (!commands?.commands?.avail) return false;
+  if (!commands?.commands) return false;
 
-  const avail = commands.commands.avail;
-  const aliases = ["dostępność", "dostepnosc", "dostepność", "dostępnosc"];
+  let installed = 0;
+  for (const [targetKey, def] of Object.entries(COMMAND_DEFINITIONS)) {
+    const baseCommand = commands.commands[targetKey];
+    if (!baseCommand) continue;
 
-  for (const alias of aliases) {
-    if (!commands.commands[alias]) {
-      commands.commands[alias] = {
-        ...avail,
-        description: "Wykonaj test dostępności (alias /avail)",
-        pattern: new RegExp(`^(?:<.+?>)*${commands.prefix || "/"}(?<command>${alias})\\s?(?<args>.+?)?(?:<\\/.+>)*$`, "iu"),
-      };
+    for (const alias of def.aliases) {
+      if (!commands.commands[alias]) {
+        commands.commands[alias] = {
+          ...baseCommand,
+          description: def.description || baseCommand.description,
+          notes: def.notes || baseCommand.notes,
+          examples: def.examples || baseCommand.examples,
+          pattern: new RegExp(`^(?:<.+?>)*${commands.prefix || "/"}(?<command>${alias})\\s?(?<args>.+?)?(?:<\\/.+>)*$`, "iu"),
+        };
+        installed++;
+      }
     }
   }
-  return true;
+  return installed > 0;
 }
 
 function normalizeMoneyAbbreviations(value) {
@@ -250,11 +466,36 @@ function installCommandArgParser() {
   const originalParseArgs = commands.parseArgs;
 
   commands.parseArgs = function(command, text) {
-    const resolved = COMMAND_ALIASES[command?.toLocaleLowerCase()] || command;
+    const lower = command?.toLocaleLowerCase();
+    const resolved = COMMAND_ALIASES[lower] || command;
+    const normalizedText = normalizeCommandText(resolved, text);
+
     if (resolved === "avail") {
-      return parseAvailArgs(text);
+      return parseAvailArgs(normalizedText);
     }
-    return originalParseArgs.call(this, command, text);
+
+    if (resolved === "travel" && normalizedText && !normalizedText.includes("from=") && !normalizedText.includes("to=")) {
+      const tokens = normalizedText.trim().split(/\s+/).filter(Boolean);
+      if (tokens.length >= 2) {
+        return [tokens[0], tokens.slice(1).join(" ")];
+      }
+    }
+
+    if ((resolved === "fear" || resolved === "terror") && normalizedText && !normalizedText.includes("source=")) {
+      const tokens = normalizedText.trim().split(/\s+/).filter(Boolean);
+      if (tokens.length >= 2 && /^\d+$/.test(tokens[0])) {
+        return [tokens[0], tokens.slice(1).join(" ")];
+      }
+    }
+
+    if (resolved === "exp" && normalizedText && !normalizedText.includes("reason=")) {
+      const tokens = normalizedText.trim().split(/\s+/).filter(Boolean);
+      if (tokens.length >= 2 && /^\d+$/.test(tokens[0])) {
+        return [tokens[0], tokens.slice(1).join(" ")];
+      }
+    }
+
+    return originalParseArgs.call(this, resolved, normalizedText);
   };
   Object.defineProperty(commands, COMMAND_ARGS_PATCH_MARK, { value: true });
   return true;
@@ -327,4 +568,16 @@ if (globalThis.Hooks) {
   Hooks.once("ready", installChatCommandCompatibility);
 }
 
-export { commandMatch, normalizeMoneyAbbreviations, plainChatCommand, resolveSettlementAndRarity, parseAvailArgs, SETTLEMENT_MAP, RARITY_MAP, COMMAND_ALIASES };
+export {
+  commandMatch,
+  normalizeMoneyAbbreviations,
+  normalizeCommandText,
+  plainChatCommand,
+  resolveSettlementAndRarity,
+  parseAvailArgs,
+  SETTLEMENT_MAP,
+  RARITY_MAP,
+  COMMAND_ALIASES,
+  COMMAND_DEFINITIONS,
+  ARG_ALIASES,
+};

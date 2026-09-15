@@ -133,6 +133,7 @@ export async function safeAdvanceSpeciesCharacteristics(actor) {
 }
 
 export async function findAndRollTalentFromTable() {
+	await ensureCompendiumTablesLoaded();
 	try {
 		const res = await game.wfrp4e?.tables?.rollTable("talents");
 		const name = res?.text || res?.object?.name || res?.name;
@@ -605,23 +606,58 @@ const SUPPLEMENT_SUBSPECIES_REQUIREMENTS = {
 	},
 };
 
-function isPackJournalAvailable(packKey) {
-	const pack = game.packs?.get(packKey);
-	if (!pack) {
-		return false;
-	}
-	if (game.i18n?.lang === "pl") {
-		return Boolean(game.babele?.isTranslated?.(pack));
-	}
-	return true;
+function isPackAvailable(packKey) {
+	if (!packKey) return true;
+	const packs = Array.isArray(packKey) ? packKey : [packKey];
+	return packs.some(pk => {
+		if (game.packs?.get(pk)) return true;
+		const moduleId = pk.split(".")[0];
+		return Boolean(game.modules?.get(moduleId)?.active);
+	});
+}
+
+function isPackTranslated(packKey) {
+	if (!packKey) return true;
+	if (game.i18n?.lang !== "pl") return false;
+	const packs = Array.isArray(packKey) ? packKey : [packKey];
+	return packs.some(pk => {
+		const pack = game.packs?.get(pk);
+		if (!pack) return false;
+		return Boolean(
+			game.babele?.isTranslated?.(pk) ||
+			game.babele?.isTranslated?.(pack.collection) ||
+			game.babele?.translations?.for?.(pk) ||
+			game.babele?.translations?.for?.(pack.collection)
+		);
+	});
 }
 
 function isRequirementMet(requirement) {
 	if (!requirement) {
 		return true;
 	}
-	const packs = Array.isArray(requirement) ? requirement : [requirement];
-	return packs.some(packKey => isPackJournalAvailable(packKey));
+	return isPackAvailable(requirement);
+}
+
+const isPackJournalAvailable = isPackAvailable;
+
+function getLocalizedSubspeciesName(species, subKey, fallbackName) {
+	if (game.i18n?.lang !== "pl") return fallbackName;
+	const directKey = `SUBSPECIES.${subKey}`;
+	if (game.i18n?.has?.(directKey)) return game.i18n.localize(directKey);
+	if (game.i18n?.has?.(fallbackName)) return game.i18n.localize(fallbackName);
+	if (subKey === "reiklander") return "Reiklandczyk";
+	if (subKey === "tilean") return "Tileańczyk";
+	if (subKey === "imperial-tilean") return "Imperialny Tileańczyk";
+	return fallbackName;
+}
+
+function resolveSpecies(species) {
+	return game.wfrp4eCorePl?.names?.resolveSpeciesKey?.(species) ?? species;
+}
+
+function resolveSubspecies(speciesKey, subspecies) {
+	return game.wfrp4eCorePl?.names?.resolveSubspeciesKey?.(speciesKey, subspecies) ?? subspecies;
 }
 
 function patchSpeciesStage(SpeciesStage) {
@@ -630,14 +666,15 @@ function patchSpeciesStage(SpeciesStage) {
 	}
 
 	const origSetSpecies = SpeciesStage.prototype.setSpecies;
-	SpeciesStage.prototype.setSpecies = function(species) {
+	SpeciesStage.prototype.setSpecies = function(species, subspecies) {
+		const resolvedSpecies = resolveSpecies(species) || species;
+		const resolvedSubspecies = resolveSubspecies(resolvedSpecies, subspecies) || subspecies;
 		if (typeof origSetSpecies === "function") {
-			origSetSpecies.call(this, species);
+			origSetSpecies.call(this, resolvedSpecies, resolvedSubspecies);
 		} else {
-			this.context.species = species;
-			const subspecies = Object.keys(game.wfrp4e?.config?.subspecies?.[species] || {})[0];
-			if (subspecies) {
-				this.context.subspecies = subspecies;
+			this.context.species = resolvedSpecies;
+			if (resolvedSubspecies) {
+				this.context.subspecies = resolvedSubspecies;
 			} else {
 				delete this.context.subspecies;
 			}
@@ -661,8 +698,36 @@ function patchSpeciesStage(SpeciesStage) {
 		}
 	};
 
+	const origOnRollSpecies = SpeciesStage.prototype.onRollSpecies;
+	if (typeof origOnRollSpecies === "function") {
+		SpeciesStage.prototype.onRollSpecies = async function(event) {
+			event.stopPropagation();
+			this.context.exp = 20;
+			this.context.roll = await game.wfrp4e.tables.rollTable("species");
+			this.context.choose = false;
+			const speciesKey = resolveSpecies(this.context.roll?.name) || this.context.roll?.name;
+			const localizedRollName = game.wfrp4e?.config?.species?.[speciesKey] || this.context.roll?.name;
+			this.updateMessage("Rolled", {rolled : localizedRollName});
+			this.setSpecies(speciesKey);
+		};
+	}
+
+	const origOnSelectSpecies = SpeciesStage.prototype.onSelectSpecies;
+	if (typeof origOnSelectSpecies === "function") {
+		SpeciesStage.prototype.onSelectSpecies = function(event) {
+			this.context.exp = 0;
+			const rawKey = event.currentTarget?.dataset?.species;
+			const speciesKey = resolveSpecies(rawKey) || rawKey;
+			this.context.choose = speciesKey;
+			const localizedName = game.wfrp4e?.config?.species?.[speciesKey] || speciesKey;
+			this.updateMessage("Chosen", {chosen : localizedName});
+			this.setSpecies(speciesKey);
+		};
+	}
+
 	const origGetData = SpeciesStage.prototype.getData;
 	SpeciesStage.prototype.getData = async function() {
+		await ensureCompendiumTablesLoaded();
 		if (this.context.species) {
 			const extraReq = SUPPLEMENT_SPECIES_REQUIREMENTS[this.context.species];
 			if (extraReq && !isRequirementMet(extraReq)) {
@@ -690,12 +755,40 @@ function patchSpeciesStage(SpeciesStage) {
 
 		const data = await origGetData.apply(this, arguments);
 
+		// Ensure all species from the species table are properly resolved into data.species
+		// even if the table has English names (Human, Dwarf, etc.) which cause warhammer.utility.findKey
+		// to fail against Polish config.species, resulting in only Ogre (or nothing) appearing!
+		let speciesTable = game.wfrp4e?.tables?.findTable?.("species");
+		if (speciesTable?.results) {
+			const resolvedSpecies = {};
+			for (const result of speciesTable.results) {
+				const rName = result.name || result.text || "";
+				const speciesKey = resolveSpecies(rName);
+				if (speciesKey && game.wfrp4e?.config?.species?.[speciesKey]) {
+					resolvedSpecies[speciesKey] = game.wfrp4e.config.species[speciesKey];
+				} else if (speciesKey) {
+					resolvedSpecies[speciesKey] = rName;
+				}
+			}
+			if (Object.keys(resolvedSpecies).length > 0) {
+				data.species = resolvedSpecies;
+			}
+		}
+
 		if (data.extraSpecies) {
 			const filteredExtra = {};
 			for (const [key, label] of Object.entries(data.extraSpecies)) {
+				// Don't duplicate species that are already in the main species table (e.g. Ogre from Archives 2)
+				if (data.species?.[key]) {
+					continue;
+				}
 				const req = SUPPLEMENT_SPECIES_REQUIREMENTS[key];
 				if (!req || isRequirementMet(req)) {
-					filteredExtra[key] = label;
+					if (!req || isPackTranslated(req)) {
+						filteredExtra[key] = game.wfrp4e?.config?.species?.[key] || label;
+					} else {
+						filteredExtra[key] = label;
+					}
 				}
 			}
 			if (Object.keys(filteredExtra).length > 0) {
@@ -711,7 +804,14 @@ function patchSpeciesStage(SpeciesStage) {
 			for (const [subKey, subData] of Object.entries(data.subspeciesChoices)) {
 				const req = speciesSub?.[subKey];
 				if (!req || isRequirementMet(req)) {
-					filteredSub[subKey] = subData;
+					const cloned = { ...subData };
+					if (!req || isPackTranslated(req)) {
+						const locName = getLocalizedSubspeciesName(this.context.species, subKey, subData.name);
+						if (locName) {
+							cloned.name = locName;
+						}
+					}
+					filteredSub[subKey] = cloned;
 				}
 			}
 
@@ -722,8 +822,20 @@ function patchSpeciesStage(SpeciesStage) {
 				if (this.context.subspecies) {
 					delete this.context.subspecies;
 				}
+			}
+
+			if (this.context.subspecies) {
+				const chosenName = filteredSub[this.context.subspecies]?.name || game.wfrp4e?.config?.subspecies?.[this.context.species]?.[this.context.subspecies]?.name;
+				const baseSpecies = game.wfrp4e?.config?.species?.[this.context.species] ?? this.context.species;
+				data.speciesDisplay = chosenName ? `${baseSpecies} (${chosenName})` : baseSpecies;
+			} else {
 				data.speciesDisplay = game.wfrp4e?.config?.species?.[this.context.species] ?? this.context.species;
 			}
+		}
+
+		if (data.preview?.skills && game.i18n?.lang === "pl") {
+			const or = game.i18n.localize("SkillsOr") || "lub";
+			data.preview.skills = data.preview.skills.map(t => t.replace(/ <em>or<\/em> /g, ` <em>${or}</em> `));
 		}
 
 		return data;
@@ -763,9 +875,141 @@ function patchChargenStages() {
 	}
 }
 
+const TABLE_PATCH_MARK = Symbol.for("wfrp4e-core-pl.tableCompatibility");
+let compendiumTablesPromise = null;
+let compendiumTablesLoaded = false;
+
+export async function ensureCompendiumTablesLoaded() {
+	if (compendiumTablesLoaded) return true;
+	if (compendiumTablesPromise) return compendiumTablesPromise;
+
+	compendiumTablesPromise = (async () => {
+		try {
+			const tablePacks = game.packs?.filter?.(p => p.metadata?.type === "RollTable" || p.documentName === "RollTable") || [];
+			for (const pack of tablePacks) {
+				await pack.getDocuments();
+			}
+			compendiumTablesLoaded = true;
+		} catch (err) {
+			console.warn("wfrp4e-core-pl | Błąd ładowania tabel z kompendium:", err);
+		} finally {
+			compendiumTablesPromise = null;
+		}
+		return compendiumTablesLoaded;
+	})();
+
+	return compendiumTablesPromise;
+}
+
+export function findCompendiumTable(key, column) {
+	if (!key) return null;
+	const normKey = String(key).toLowerCase().trim();
+	const normCol = column ? String(column).toLowerCase().trim() : null;
+
+	const tablePacks = game.packs?.filter?.(p => p.metadata?.type === "RollTable" || p.documentName === "RollTable") || [];
+	let matchedTables = [];
+
+	for (const pack of tablePacks) {
+		const docs = pack.contents || [];
+		for (const table of docs) {
+			const tableKey = table.getFlag?.("wfrp4e", "key")?.toLowerCase();
+			const origName = (table.flags?.babele?.originalName || table._source?.name || "").toLowerCase();
+			const tableName = (table.name || "").toLowerCase();
+
+			// 1. Direct key match
+			if (tableKey === normKey) {
+				matchedTables.push(table);
+				continue;
+			}
+
+			// 2. Special aliases for species
+			if (normKey === "species" && (tableKey === "species" || origName === "species" || tableName === "species" || tableName === "rasy")) {
+				matchedTables.push(table);
+				continue;
+			}
+
+			// 3. Special aliases for talents
+			if (normKey === "talents" && (tableKey === "talents" || origName.includes("talents") || tableName.includes("talenty") || (tableName.includes("talent") && (tableName.includes("losowe") || tableName.includes("creation") || tableName.includes("tworzenie"))))) {
+				matchedTables.push(table);
+				continue;
+			}
+
+			// 4. Exact name match
+			if (tableName === normKey || origName === normKey) {
+				matchedTables.push(table);
+				continue;
+			}
+		}
+	}
+
+	if (matchedTables.length === 0) return null;
+
+	if (normKey === "species") {
+		const settingId = game.settings?.get?.("wfrp4e", "tableSettings")?.species;
+		if (settingId) {
+			const settingTable = matchedTables.find(t => t.id === settingId || t._id === settingId);
+			if (settingTable) return settingTable;
+		}
+		const coreTable = matchedTables.find(t => t.pack === "wfrp4e-core.tables" || t.collection?.collection === "wfrp4e-core.tables");
+		if (coreTable) return coreTable;
+	}
+
+	if (normCol) {
+		const colTable = matchedTables.find(t => {
+			const colFlag = t.getFlag?.("wfrp4e", "column")?.toLowerCase();
+			const origName = (t.flags?.babele?.originalName || t._source?.name || "").toLowerCase();
+			const tableName = (t.name || "").toLowerCase();
+			return colFlag === normCol || origName.includes(normCol) || tableName.includes(normCol);
+		});
+		if (colTable) return colTable;
+	}
+
+	if (matchedTables.length === 1 || matchedTables.filter(t => t.getFlag?.("wfrp4e", "column")).length < 1) {
+		return matchedTables[0];
+	}
+
+	return {
+		name: matchedTables[0].name.split("-")[0].trim(),
+		columns: matchedTables,
+		roll: async () => {
+			const ItemDialog = game.wfrp4e?.apps?.ItemDialog || window.ItemDialog;
+			if (ItemDialog) {
+				let selected = await ItemDialog.create(matchedTables, 1, game.i18n.localize("CHAT.ColumnPrompt"));
+				return await selected[0]?.roll();
+			}
+			return await matchedTables[0]?.roll();
+		}
+	};
+}
+
+export function patchTableCompatibility() {
+	const Tables = game.wfrp4e?.tables;
+	if (!Tables || Tables[TABLE_PATCH_MARK] || typeof Tables.findTable !== "function") return;
+
+	const origFindTable = Tables.findTable;
+	Tables.findTable = function(key, column) {
+		const table = origFindTable.call(this, key, column);
+		if (table) return table;
+		return findCompendiumTable(key, column);
+	};
+
+	const origRollTable = Tables.rollTable;
+	if (typeof origRollTable === "function") {
+		Tables.rollTable = async function(tableKey, options = {}, column = null) {
+			if (!Tables.findTable(tableKey, column)) {
+				await ensureCompendiumTablesLoaded();
+			}
+			return origRollTable.call(this, tableKey, options, column);
+		};
+	}
+
+	Object.defineProperty(Tables, TABLE_PATCH_MARK, { value: true });
+}
+
 function tryPatchComponents() {
 	tryPatchSpeciesStage();
 	patchChargenStages();
+	patchTableCompatibility();
 	patchTradeManager();
 	patchTradeDialog();
 	sanitizeTradeGazetteers();
@@ -773,7 +1017,8 @@ function tryPatchComponents() {
 
 Hooks.on("init", tryPatchComponents);
 Hooks.on("ready", tryPatchComponents);
-Hooks.on("wfrp4e:chargen", chargen => {
+Hooks.on("wfrp4e:chargen", async chargen => {
+	await ensureCompendiumTablesLoaded();
 	patchChargenStages();
 
 	const speciesStage = chargen?.stages?.find(s => s.key === "species")?.class;
@@ -1331,4 +1576,7 @@ Hooks.on("renderApplicationV2", (app, html) => polishSettingsWindows(app, html))
 Hooks.on("renderSettingsConfig", (app, html) => polishSettingsWindows(app, html));
 
 Hooks.once("init", () => installSafeRandomizer());
-Hooks.once("ready", () => installSafeRandomizer());
+Hooks.once("ready", () => {
+	installSafeRandomizer();
+	ensureCompendiumTablesLoaded();
+});
