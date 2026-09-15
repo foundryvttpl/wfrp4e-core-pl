@@ -1,4 +1,8 @@
 {
+  "Yes": "Tak",
+  "No": "Nie",
+  "Cancel": "Anuluj",
+  "Confirm": "Potwierdź",
   "WFRP4E.Properties.Slash": "<em>Sieczna</em> broń skupia swój tnący potencjał tak, że pozostawia otwarte rany. Jeśli broń zada Ranę Krytyczną, to poza wszystkimi innymi efektami Rany Krytycznej ofiara otrzymuje również 1 poziom @Condition[Bleeding]{Krwawienia}. Możesz wydać X Przewag, aby twój przeciwnik otrzymał dodatkowy 1 poziom <em>Krwawienia</em>.",
   "WFRP4E.Properties.Trip": "<em>Przewracająca</em> broń została zaprojektowana tak, aby zahaczać o nogę przeciwnika albo w jakiś inny sposób go przewracać. Po trafieniu we wroga postać może wydać 2 Przewagi i wykonać Test Przeciwstawny Siła/Atletyka. W przypadku sukcesu przeciwnik otrzymuje Stan @Condition[Prone]{Powalenie} (jeżeli siedzi na wierzchowcu, upada z wysokości 2 metrów, a następnie otrzymuje Stan Powalenie). Jeśli postać przegra Test, nie wydarzy się nic poza normalnym następstwem przegranego Testu Przeciwstawnego w walce.",
   "WFRP4E.Properties.Unbalanced": "Środek ciężkości niektórych rodzajów oręża jest przesunięty do przodu, przez co parowanie nimi jest utrudnione. Kiedy tego rodzaju broń jest wykorzystywana do parowania nadchodzącego ataku, jej użytkownik otrzymuje karę -1 PS do Testu.",

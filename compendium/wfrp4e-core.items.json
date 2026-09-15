@@ -27797,7 +27797,6 @@
       "name": "Rozmiar",
       "description": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.3ZynTGhFpgwv6l1n.JournalEntryPage.JY7F6lwqt2YGPddY]{Rozmiar}</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q",
-      "specification": "Rozmiar",
       "effects": {
         "JMSrxnNcqyguP1pz": {
           "id": "JMSrxnNcqyguP1pz",
