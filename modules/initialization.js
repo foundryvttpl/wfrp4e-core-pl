@@ -17,6 +17,7 @@ const TRANSLATED_ACTOR_MODULES = [
     "wfrp4e-ua1",
     "wfrp4e-ua2",
     "wfrp4e-wom",
+    "wfrp4e-zoo",
 ];
 
 function activeCorePlModuleId() {
