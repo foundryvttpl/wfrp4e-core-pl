@@ -331,6 +331,26 @@ Hooks.once("babele.init", (babele) => {
 				if (value !== undefined) {
 					foundry.utils.setProperty(item, "system.specification.value", localizeKnownSpecification(value));
 				}
+
+				// Localize embedded item effects if their name is still untranslated
+				if (item.effects) {
+					for (const effect of valuesOf(item.effects)) {
+						if (!effect.name) continue;
+						if (effect.name === "We See You") {
+							effect.name = "Widzimy Was";
+						} else if (effect.name === "Magical") {
+							effect.name = "Magiczny";
+						} else if (effect.name === "Bite") {
+							effect.name = "Ugryzienie";
+						} else if (effect.name === "Size") {
+							effect.name = "Rozmiar";
+						} else if (effect.name === "Flying" || effect.name === "Flight") {
+							effect.name = "Latanie";
+						} else if (item.originalName && effect.name === item.originalName && item.name) {
+							effect.name = item.name;
+						}
+					}
+				}
 			}
 		});
 	}
@@ -346,7 +366,8 @@ Hooks.once("babele.init", (babele) => {
 		  "modules/wfrp4e-core/icons/equipment/money/silver-shilling.png": "modules/wfrp4e-core/icons/currency/silvershilling.png",
 		  "modules/wfrp4e-zoo/assets/actors/chameleoleech.webp": "modules/wfrp4e-zoo/assets/actors/chameleo_leeches.webp",
 		  "modules/wfrp4e-zoo/assets/actors/amoebae.webp": "modules/wfrp4e-zoo/assets/actors/amoeba.webp",
-		  "modules/wfrp4e-zoo/assets/actors/il-potente-granchio.webp": "modules/wfrp4e-zoo/assets/actors/leviathan.webp"
+		  "modules/wfrp4e-zoo/assets/actors/il-potente-granchio.webp": "modules/wfrp4e-zoo/assets/actors/leviathan.webp",
+		  "modules/wfrp4e-core/icons/effects/miscast.png": "modules/wfrp4e-core/art/other/miscast.webp"
 		};
 		if (Object.hasOwn(assetAliases, val)) val = assetAliases[val];
 		else if (val.includes("<img")) {
@@ -368,6 +389,9 @@ Hooks.once("babele.init", (babele) => {
 		}
 		if (updated.includes(".journals.JournalEntry.")) {
 			updated = updated.replaceAll(".journals.JournalEntry.", ".journals.");
+		}
+		if (updated.includes("\\n")) {
+			updated = updated.replaceAll(/>\\n/g, ">\n").replaceAll(/\\n</g, "\n<");
 		}
 		return updated;
 	}
@@ -416,6 +440,13 @@ Hooks.once("babele.init", (babele) => {
 			}
 		}
 
+		if (context.source?.img) {
+			const resolvedImg = resolveModuleAssetPath(context.source.img);
+			if (resolvedImg !== context.source.img) {
+				context.translated.img = resolvedImg;
+			}
+		}
+
 		if (context.translated && typeof context.translated === "object") {
 			sanitizeDocumentData(context.translated);
 		}
@@ -436,6 +467,9 @@ Hooks.once("babele.init", (babele) => {
 		const system = ensureEffectSystem(result);
 
 		result.translated = true;
+		if (result.img) {
+			result.img = resolveModuleAssetPath(result.img);
+		}
 		if (translation.name) {
 			result.name = translation.name;
 			if (originalName && originalName !== translation.name) {

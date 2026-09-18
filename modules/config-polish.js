@@ -475,6 +475,36 @@ Hooks.on("init", patchActorSystemEffects);
 Hooks.on("i18nInit", patchActorSystemEffects);
 Hooks.on("ready", patchActorSystemEffects);
 
+// Fix broken image path for miscast effects (modules/wfrp4e-core/icons/effects/miscast.png -> modules/wfrp4e-core/art/other/miscast.webp)
+function patchActiveEffectImages() {
+	const ActiveEffectClass = CONFIG.ActiveEffect?.documentClass;
+	if (!ActiveEffectClass || ActiveEffectClass.prototype._wfrp4eCorePlImagesPatched) {
+		return;
+	}
+
+	const origPrepareBaseData = ActiveEffectClass.prototype.prepareBaseData;
+	if (typeof origPrepareBaseData === "function") {
+		ActiveEffectClass.prototype.prepareBaseData = function() {
+			origPrepareBaseData.call(this);
+			if (this.img === "modules/wfrp4e-core/icons/effects/miscast.png") {
+				this.img = "modules/wfrp4e-core/art/other/miscast.webp";
+			}
+		};
+	}
+
+	ActiveEffectClass.prototype._wfrp4eCorePlImagesPatched = true;
+}
+
+Hooks.on("init", patchActiveEffectImages);
+Hooks.on("i18nInit", patchActiveEffectImages);
+Hooks.on("ready", patchActiveEffectImages);
+
+Hooks.on("preCreateActiveEffect", (effect) => {
+	if (effect?.img === "modules/wfrp4e-core/icons/effects/miscast.png") {
+		effect.updateSource?.({ img: "modules/wfrp4e-core/art/other/miscast.webp" });
+	}
+});
+
 // Fix SpellModel.migrateData throwing when source.lore is undefined during partial item updates
 function patchSpellMigration() {
 	const SpellModel = CONFIG.Item?.dataModels?.spell ?? game.wfrp4e?.models?.SpellModel;
@@ -850,6 +880,217 @@ function tryPatchSpeciesStage() {
 	}
 }
 
+const CAREER_CLASS_MAP = {
+	"Academics": "Uczeni",
+	"Burghers": "Mieszczanie",
+	"Courtiers": "Dworzanie",
+	"Peasants": "Pospólstwo",
+	"Rangers": "Wędrowcy",
+	"Riverfolk": "Wodniacy",
+	"Rogues": "Łotry",
+	"Warriors": "Wojownicy",
+};
+
+const CAREER_GROUP_FALLBACK = {
+	"Advisor": "Doradca",
+	"Agitator": "Agitator",
+	"Apothecary": "Aptekarka",
+	"Artisan": "Rzemieślniczka",
+	"Artist": "Artystka",
+	"Bailiff": "Zarządca",
+	"Bawd": "Rajfur",
+	"Beggar": "Żebrak",
+	"Boatman": "Przewoźnik",
+	"Bounty Hunter": "Łowczyni Nagród",
+	"Cavalryman": "Kawalerzysta",
+	"Charlatan": "Szarlatan",
+	"Coachman": "Woźnica",
+	"Duellist": "Zwadźca",
+	"Engineer": "Inżynier",
+	"Entertainer": "Kuglarka",
+	"Envoy": "Poseł",
+	"Fence": "Paser",
+	"Flagellant": "Biczownik",
+	"Grave Robber": "Hiena Cmentarna",
+	"Guard": "Ochroniarz",
+	"Hedge Witch": "Guślarz",
+	"Herbalist": "Zielarka",
+	"Huffer": "Pilotka Rzeczna",
+	"Hunter": "Łowczyni",
+	"Investigator": "Śledczy",
+	"Knight": "Rycerz",
+	"Lawyer": "Prawniczka",
+	"Merchant": "Kupiec",
+	"Messenger": "Posłaniec",
+	"Miner": "Górnik",
+	"Mystic": "Mistyczka",
+	"Noble": "Szlachcic",
+	"Nun": "Mniszka",
+	"Outlaw": "Banita",
+	"Pedlar": "Domokrążca",
+	"Physician": "Medyczka",
+	"Pit Fighter": "Gladiator",
+	"Priest": "Kapłan",
+	"Protagonist": "Oprych",
+	"Racketeer": "Rekieterka",
+	"Rat Catcher": "Szczurołap",
+	"Riverwarden": "Strażnik Rzeczny",
+	"Riverwoman": "Flisak",
+	"Road warden": "Strażniczka Dróg",
+	"Road Warden": "Strażniczka Dróg",
+	"Scholar": "Uczony",
+	"Scout": "Zwiadowca",
+	"Seaman": "Żeglarz",
+	"Servant": "Służąca",
+	"Slayer": "Zabójca",
+	"Smuggler": "Przemytniczka",
+	"Soldier": "Żołnierz",
+	"Spy": "Szpieg",
+	"Stevedore": "Doker",
+	"Thief": "Złodziej",
+	"Townsman": "Mieszczka",
+	"Villager": "Chłopka",
+	"Warden": "Namiestnik",
+	"Warrior Priest": "Kapłan Bitewny",
+	"Watchman": "Strażnik",
+	"Witch": "Czarownica",
+	"Witch Hunter": "Łowca Czarownic",
+	"Wizard": "Czarodziej",
+	"Wrecker": "Pirat Rzeczny",
+	// Up in Arms & expansions
+	"Artillerist": "Artylerzysta",
+	"Archer": "Łuczniczka",
+	"Pikeman": "Pikinier",
+	"Camp Follower": "Ciura Obozowa",
+	"Light Cavalry": "Lekki Kawalerzysta",
+	"Cartographer": "Kartografka",
+	"Knight of the White Wolf": "Rycerz Białego Wilka",
+	"Knight Panther": "Rycerz Pantery",
+	"Siege Specialist": "Specjalista Oblężniczy",
+	"Freelance": "Rycerz Najemny",
+	"Greatsword": "Gwardzista Elektorski",
+	"Halberdier": "Halabardnik",
+	"Handgunner": "Strzelec",
+	"Knight of the Blazing Sun": "Rycerz Płonącego Słońca",
+	// Winds of Magic
+	"Alchemist": "Alchemik",
+	"Mundane Alchemist": "Świecka Alchemiczka",
+	"Astromancer": "Astromanta",
+	"Beadle": "Bedel",
+	"Combat Familiar": "Chowaniec Bojowy",
+	"Druid": "Druidka",
+	"Hierophant": "Hierofant",
+	"Magister Vigilant": "Magister Rewizor",
+	"Pyromancer": "Piromanta",
+	"Scryer": "Jasnowidząca",
+	"Shaman": "Szamanka",
+	"Spell Familiar": "Chowaniec Zaklęć",
+	"Spiriter": "Spirytysta",
+	"Shadowmancer": "Czarodziej Kolegium Cieni",
+	// Archives of the Empire
+	"Badger Rider": "Borsuczy Jeździec",
+	"Fieldwarden": "Strażniczka Pól",
+	"Ghost Strider": "Wędrowny Duch",
+	"Karak Ranger": "Zwiadowczyni z Karaku",
+	"Ogre Butcher": "Ogrzy Rzeźnik",
+	"Maneater": "Ludojad",
+	"Rhinox Herder": "Poganiacz Rhinoxów",
+};
+
+function patchCareerSelector() {
+	const CareerSelectorClass = game.wfrp4e?.apps?.CareerSelector;
+	if (!CareerSelectorClass || CareerSelectorClass.prototype._wfrp4eCorePlPatched) return;
+
+	const origLoadCareers = CareerSelectorClass.prototype.loadCareers;
+	CareerSelectorClass.prototype.loadCareers = async function() {
+		await origLoadCareers.call(this);
+
+		if (!Array.isArray(this.careers) || !this.careers.length) return;
+
+		for (const tier of this.careers) {
+			if (!tier?.system) continue;
+
+			// 1. Resolve Babele compendium translation if available
+			if (tier.uuid && globalThis.game?.babele) {
+				try {
+					const parsed = foundry.utils.parseUuid(tier.uuid);
+					if (parsed?.collection) {
+						const packId = parsed.collection.collection ?? parsed.collection.metadata?.id ?? parsed.collection;
+						const compendium = game.babele.translatedCompendiumFor?.(packId);
+						if (compendium) {
+							const entry = compendium.translationsFor?.({
+								_id: parsed.id,
+								id: parsed.id,
+								name: tier.name
+							});
+							if (entry?.careergroup) {
+								tier.system.careergroup.value = entry.careergroup;
+							}
+							if (entry?.class) {
+								tier.system.class.value = entry.class;
+							}
+						}
+					}
+				} catch (e) {}
+			}
+
+			// 2. Normalize class (English -> Polish)
+			const rawClass = tier.system.class?.value;
+			if (rawClass && CAREER_CLASS_MAP[rawClass]) {
+				tier.system.class.value = CAREER_CLASS_MAP[rawClass];
+			}
+
+			// 3. Normalize careergroup if still English
+			const rawGroup = tier.system.careergroup?.value;
+			if (rawGroup && CAREER_GROUP_FALLBACK[rawGroup]) {
+				tier.system.careergroup.value = CAREER_GROUP_FALLBACK[rawGroup];
+			}
+		}
+
+		// Normalize current career if present
+		if (this.currentCareer?.system) {
+			const curClass = this.currentCareer.system.class?.value;
+			if (curClass && CAREER_CLASS_MAP[curClass]) {
+				this.currentCareer.system.class.value = CAREER_CLASS_MAP[curClass];
+			}
+			const curGroup = this.currentCareer.system.careergroup?.value;
+			if (curGroup && CAREER_GROUP_FALLBACK[curGroup]) {
+				this.currentCareer.system.careergroup.value = CAREER_GROUP_FALLBACK[curGroup];
+			}
+		}
+
+		// Re-sort with Polish collation and prioritize current career group at the top
+		const currentCareerGroup = this.currentCareer?.system?.careergroup?.value;
+		this.careers.sort((a, b) => (a.system?.careergroup?.value || "").localeCompare(b.system?.careergroup?.value || "", "pl"));
+		if (currentCareerGroup) {
+			const currentCareers = this.careers.filter((a) => a.system?.careergroup?.value === currentCareerGroup);
+			this.careers = this.careers.filter((a) => a.system?.careergroup?.value !== currentCareerGroup);
+			this.careers.unshift(...currentCareers);
+		}
+	};
+
+	// Clean up any cross-section duplicates (inClass vs outOfClass) in sortCareers
+	const origSortCareers = CareerSelectorClass.prototype.sortCareers;
+	CareerSelectorClass.prototype.sortCareers = function() {
+		const careerList = origSortCareers.call(this);
+		if (careerList?.inClass && careerList?.outOfClass) {
+			for (const [groupName, tiers] of Object.entries(careerList.inClass)) {
+				if (careerList.outOfClass[groupName]) {
+					careerList.outOfClass[groupName] = careerList.outOfClass[groupName].filter(
+						outTier => !tiers.some(inTier => inTier.name === outTier.name)
+					);
+					if (!careerList.outOfClass[groupName].length) {
+						delete careerList.outOfClass[groupName];
+					}
+				}
+			}
+		}
+		return careerList;
+	};
+
+	CareerSelectorClass.prototype._wfrp4eCorePlPatched = true;
+}
+
 function patchChargenStages() {
 	const CharGenClass = game.wfrp4e?.apps?.CharGenWfrp4e;
 	if (CharGenClass && !CharGenClass.prototype._wfrp4eCorePlPatched) {
@@ -1009,6 +1250,7 @@ export function patchTableCompatibility() {
 function tryPatchComponents() {
 	tryPatchSpeciesStage();
 	patchChargenStages();
+	patchCareerSelector();
 	patchTableCompatibility();
 	patchTradeManager();
 	patchTradeDialog();
@@ -1569,6 +1811,159 @@ function polishSettingsWindows(app, html) {
 			if (t === "Save Changes") btn.textContent = game.i18n?.localize?.("Save Changes") || "Zapisz zmiany";
 		});
 	}
+
+	// 5. CareerSelector: localize "Add Career" button and attach search filter
+	if (app?.constructor?.name === "CareerSelector" || root.classList?.contains("career-selector")) {
+		const btn = root.querySelector(".form-footer button[type=submit], button[type=submit]");
+		if (btn && btn.textContent.trim() === "Add Career") {
+			btn.textContent = game.i18n?.localize?.("CAREER.AddCareer") || game.i18n?.localize?.("Add Career") || "Dodaj Profesję";
+		}
+		setupCareerSelectorSearch(root);
+	}
+}
+
+function setupCareerSelectorSearch(root) {
+	const list = root.querySelector(".dialog-list");
+	if (!list || root.querySelector(".career-search-bar")) return;
+
+	const searchBar = document.createElement("div");
+	searchBar.className = "career-search-bar";
+	searchBar.innerHTML = `
+		<div class="career-search-wrapper" style="display: flex; align-items: center; gap: 6px; padding: 4px 8px; margin: 4px 6px 6px 6px; background: rgba(0, 0, 0, 0.35); border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);">
+			<i class="fa-solid fa-magnifying-glass" style="opacity: 0.6; font-size: 0.85em;"></i>
+			<input type="text" class="career-search-input" placeholder="Szukaj profesji... (Enter = przejdź)" style="flex: 1; height: 22px; font-size: 0.85em; background: transparent; border: none; color: inherit; outline: none; padding: 0;" autocomplete="off" spellcheck="false">
+			<span class="career-search-count" style="display: none; font-size: 0.75em; padding: 1px 5px; border-radius: 3px; background: rgba(255, 255, 255, 0.1); white-space: nowrap;"></span>
+			<button type="button" class="career-search-clear" style="display: none; width: 18px; height: 18px; line-height: 16px; padding: 0; background: transparent; border: none; cursor: pointer; color: inherit; opacity: 0.6;" title="Wyczyść"><i class="fa-solid fa-xmark"></i></button>
+		</div>
+	`;
+
+	list.parentNode.insertBefore(searchBar, list);
+
+	if (!document.getElementById("career-search-custom-styles")) {
+		const styleEl = document.createElement("style");
+		styleEl.id = "career-search-custom-styles";
+		styleEl.textContent = `
+			.career-search-match {
+				background: rgba(255, 204, 0, 0.12) !important;
+			}
+			.career-search-active {
+				outline: 2px solid #ffcc00 !important;
+				outline-offset: -1px;
+				background: rgba(255, 204, 0, 0.3) !important;
+				box-shadow: 0 0 10px rgba(255, 204, 0, 0.5) !important;
+				transition: background 0.2s ease, outline 0.2s ease;
+			}
+			.career-search-input:focus {
+				outline: none !important;
+				box-shadow: none !important;
+			}
+		`;
+		document.head.appendChild(styleEl);
+	}
+
+	const input = searchBar.querySelector(".career-search-input");
+	const countBadge = searchBar.querySelector(".career-search-count");
+	const clearBtn = searchBar.querySelector(".career-search-clear");
+
+	let matches = [];
+	let currentIndex = -1;
+
+	const normalize = (str) => (str || "").toLowerCase().replace(/ł/g, "l").normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+
+	function clearActiveHighlight() {
+		if (currentIndex >= 0 && matches[currentIndex]) {
+			matches[currentIndex].classList.remove("career-search-active");
+		}
+	}
+
+	function clearAllHighlights() {
+		clearActiveHighlight();
+		list.querySelectorAll(".career-search-match, .career-search-active").forEach(el => {
+			el.classList.remove("career-search-match", "career-search-active");
+		});
+		matches = [];
+		currentIndex = -1;
+	}
+
+	function updateSearch() {
+		clearAllHighlights();
+		const query = normalize(input.value);
+
+		if (!query) {
+			countBadge.style.display = "none";
+			clearBtn.style.display = "none";
+			return;
+		}
+
+		clearBtn.style.display = "inline-block";
+
+		const elements = Array.from(list.querySelectorAll("h2, li.dialog-item"));
+		for (const el of elements) {
+			const text = normalize(el.textContent);
+			if (text.includes(query)) {
+				matches.push(el);
+				el.classList.add("career-search-match");
+			}
+		}
+
+		countBadge.style.display = "inline-block";
+		if (!matches.length) {
+			countBadge.textContent = "0";
+			countBadge.style.color = "#ff6b6b";
+		} else {
+			countBadge.textContent = `${matches.length}`;
+			countBadge.style.color = "#ffcc00";
+		}
+	}
+
+	function jumpToMatch(forward = true) {
+		if (!matches.length) return;
+
+		clearActiveHighlight();
+
+		if (forward) {
+			currentIndex = (currentIndex + 1) % matches.length;
+		} else {
+			currentIndex = (currentIndex - 1 + matches.length) % matches.length;
+		}
+
+		const target = matches[currentIndex];
+		target.classList.add("career-search-active");
+		target.scrollIntoView({ behavior: "smooth", block: "center" });
+
+		countBadge.textContent = `${currentIndex + 1}/${matches.length}`;
+		countBadge.style.color = "#ffcc00";
+	}
+
+	function clearSearch() {
+		input.value = "";
+		clearAllHighlights();
+		countBadge.style.display = "none";
+		clearBtn.style.display = "none";
+		input.focus();
+	}
+
+	input.addEventListener("input", () => {
+		currentIndex = -1;
+		updateSearch();
+	});
+
+	input.addEventListener("keydown", (e) => {
+		if (e.key === "Enter") {
+			e.preventDefault();
+			e.stopPropagation();
+			jumpToMatch(!e.shiftKey);
+		} else if (e.key === "Escape") {
+			e.preventDefault();
+			e.stopPropagation();
+			clearSearch();
+		}
+	});
+
+	clearBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		clearSearch();
+	});
 }
 
 Hooks.on("renderApplication", (app, html) => polishSettingsWindows(app, html));

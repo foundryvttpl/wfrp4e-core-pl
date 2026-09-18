@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "source_repository": "foundryvttpl/wfrp4e-core-pl-pre",
-  "source_commit": "636221d620ac5384aa35fbf2134d5e5a9e9258da",
+  "source_commit": "5c42139466d182c5d254202ac8d0faab48f0c3c4",
   "source_ref": "refs/heads/main",
-  "version": "7.3.8",
-  "source_tag": "dev-v7.3.8.2",
+  "version": "7.3.9",
+  "source_tag": "dev-v7.3.9.2",
   "released_modules_sha256": "b028d9580d1a5e818b0bf6ed329823ed7b5f6d2878963fddfdacaa8b9687cb41"
 }
