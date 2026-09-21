@@ -301,9 +301,133 @@ Hooks.once("babele.init", (babele) => {
 			const sourceItemsById = new Map(
 				sourceItems.map(item => [itemId(item), item]).filter(([id]) => id)
 			);
+			// The published Zoo character sheets correct a handful of upstream
+			// embedded values. Target immutable actor/item IDs, never translated names.
+			const zooPdfOverrides = {
+				"Jorunn Gromsdottir": {
+					LmoIzvPxktX3R8aP: { quantity: 1 },
+					rqc9RhPJwC03Lz3P: { quantity: 9 },
+				},
+				"Lynathryn Nightsong": {
+					"5DaH67F2lpzKoBtw": { quantity: 2 },
+					"6cqfcwWPvb4pKQ3C": { quantity: 6 },
+				},
+				"Theodosius Schreiber": {
+					"8pBZUOkYWE1pWrUi": { advances: 5 },
+					xaQxfWArRkLIfoUO: { advances: 5 },
+					pLURhwQ6Uds6OZ2Q: { advances: 3 },
+					dpJYAjtD23pa2p94: { quantity: 30 },
+				},
+				"Kistiane Brockdorf": {
+					NfyTTmZZbFDwXnfe: { quantity: 10 },
+				},
+			};
+			const zooOverrides = zooPdfOverrides[context.source?.name] || {};
+			// PDF page 122 gives Erich one additional canonical skill absent from the
+			// upstream actor. This is a complete copy of the core Tilean skill, with
+			// only its character-specific advancement changed.
+			if (context.source?.name === "Erich Massenbach") {
+				const hasTilean = valuesOf(context.translated?.items)
+					.some(item => itemId(item) === "12e3H6NX4JH0bwI3");
+				if (!hasTilean) {
+					const tilean = {
+						_id: "12e3H6NX4JH0bwI3",
+						name: "Język (Tileański)",
+						type: "skill",
+						img: "modules/wfrp4e-core/icons/skills/adv-skill-int.png",
+						effects: [],
+						flags: { _sheetTab: {}, core: {} },
+						system: {
+							description: { type: "String", label: "Description", value: "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}</p>" },
+							gmdescription: { type: "String", label: "Description", value: "" },
+							advanced: { value: "adv", type: "String" },
+							grouped: { value: "isSpec", type: "String" },
+							characteristic: { type: "String", label: "Characteristic", value: "int" },
+							advances: { type: "Number", label: "Advances", value: 10, costModifier: 0, force: false },
+							modifier: { type: "Number", label: "Advances", value: 0 },
+							total: { type: "Number", label: "Total" },
+							source: { type: "String", label: "Source" },
+						},
+					};
+					if (Array.isArray(context.translated?.items)) {
+						context.translated.items.push(tilean);
+					} else if (context.translated?.items) {
+						context.translated.items[tilean._id] = tilean;
+					}
+				}
+				// PDF page 122 also lists two personal belongings that are absent from
+				// the upstream actor. They are inert trapping documents: no effects,
+				// tests, rules, or source item data are inferred for them.
+				const erichPdfEquipment = [
+					{
+						_id: "ErichBrush260919",
+						name: "Szczotka",
+						type: "trapping",
+						img: "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/face-powder.png",
+						effects: [],
+						flags: { _sheetTab: {}, core: {} },
+						system: {
+							description: { type: "String", label: "Description", value: "<p></p>" },
+							gmdescription: { type: "String", label: "Description", value: "" },
+							quantity: { type: "Number", label: "Quantity", value: 1 },
+							encumbrance: { type: "Number", label: "Encumbrance", value: 0 },
+							price: { type: "String", label: "Price", gc: 0, ss: 0, bp: 0 },
+							availability: { type: "String", label: "Availability", value: "None" },
+							location: { type: "Number", label: "Location", value: "" },
+							trappingType: { type: "String", label: "Trapping Type", value: "toolsAndKits" },
+							worn: false,
+							spellIngredient: { type: "String", value: "" },
+							qualities: { label: "Qualities", value: [] },
+							flaws: { label: "Flaws", value: [] },
+							damageToItem: { value: null, shield: null },
+						},
+					},
+					{
+						_id: "ErchLetters26091",
+						name: "Listy do ojca (niewysłane)",
+						type: "trapping",
+						img: "modules/wfrp4e-core/icons/equipment/book_documents/parchmentsheet.png",
+						effects: [],
+						flags: { _sheetTab: {}, core: {} },
+						system: {
+							description: { type: "String", label: "Description", value: "<p></p>" },
+							gmdescription: { type: "String", label: "Description", value: "" },
+							quantity: { type: "Number", label: "Quantity", value: 1 },
+							encumbrance: { type: "Number", label: "Encumbrance", value: 0 },
+							price: { type: "String", label: "Price", gc: 0, ss: 0, bp: 0 },
+							availability: { type: "String", label: "Availability", value: "None" },
+							location: { type: "Number", label: "Location", value: "" },
+							trappingType: { type: "String", label: "Trapping Type", value: "booksAndDocuments" },
+							worn: false,
+							spellIngredient: { type: "String", value: "" },
+							qualities: { label: "Qualities", value: [] },
+							flaws: { label: "Flaws", value: [] },
+							damageToItem: { value: null, shield: null },
+						},
+					},
+				];
+				const existingErichItemIds = new Set(
+					valuesOf(context.translated?.items).map(item => itemId(item)).filter(Boolean)
+				);
+				for (const equipment of erichPdfEquipment) {
+					if (existingErichItemIds.has(equipment._id)) continue;
+					if (Array.isArray(context.translated?.items)) {
+						context.translated.items.push(equipment);
+					} else if (context.translated?.items) {
+						context.translated.items[equipment._id] = equipment;
+					}
+				}
+			}
 			for (const item of valuesOf(context.translated?.items)) {
 				const itemId = item?._id ?? item?.id;
 				if (!itemId) continue;
+				const zooOverride = zooOverrides[itemId];
+				if (zooOverride?.quantity !== undefined) {
+					foundry.utils.setProperty(item, "system.quantity.value", zooOverride.quantity);
+				}
+				if (zooOverride?.advances !== undefined) {
+					foundry.utils.setProperty(item, "system.advances.value", zooOverride.advances);
+				}
 				const translation = itemTranslations[itemId]
 					?? valuesOf(itemTranslations).find(entry => (entry?._id ?? entry?.id) === itemId);
 				const sourceItem = sourceItemsById.get(itemId);
@@ -601,25 +725,24 @@ Hooks.once("babele.init", (babele) => {
 							data = foundry.utils.mergeObject(data, patch);
 						} else if (typeof translation === "string") {
 							const str = translation.trim();
-							// Keep the paragraph wrapper in the description when splitting its title.
-							const boldMatch = str.match(/^\s*(<p(?:\s[^>]*)?>\s*)?<(b|strong)(?:\s[^>]*)?>(.*?)<\/\2>\s*[:\-–—.]?\s*(.*)$/s);
-							if (boldMatch) {
-								const title = boldMatch[3].replace(/<[^>]+>/g, "").trim();
-								const desc = ((boldMatch[1] || "") + boldMatch[4]).trim();
+							const isUuidLink = /@(?:UUID|Compendium)\[[^\]]+\](?:\{([^}]+)\})?/i.test(str);
+							if (isUuidLink) {
+								const labelMatch = str.match(/\{([^}]+)\}/);
+								const label = labelMatch ? labelMatch[1].trim() : str.replace(/<[^>]+>/g, "").trim();
+								const desc = str.startsWith("<p") ? str : `<p>${str}</p>`;
 								const patch = {
-									name: title,
+									name: label,
 									description: desc,
 									translated: true
 								};
 								if (!isV13Plus) patch.text = str;
 								data = foundry.utils.mergeObject(data, patch);
 							} else {
-								const hasName = Boolean(data.name && data.name.trim());
-								const hasDesc = Boolean(data.description && data.description.trim());
-								const colonMatch = hasName ? str.match(/^([^<:\n]{2,50}):\s*(.+)$/s) : null;
-								if (colonMatch) {
-									const title = colonMatch[1].trim();
-									const desc = colonMatch[2].trim();
+								// Keep the paragraph wrapper in the description when splitting its title.
+								const boldMatch = str.match(/^\s*(<p(?:\s[^>]*)?>\s*)?<(b|strong)(?:\s[^>]*)?>(.*?)<\/\2>\s*[:\-–—.]?\s*(.*)$/s);
+								if (boldMatch) {
+									const title = boldMatch[3].replace(/<[^>]+>/g, "").trim();
+									const desc = ((boldMatch[1] || "") + boldMatch[4]).trim();
 									const patch = {
 										name: title,
 										description: desc,
@@ -627,36 +750,51 @@ Hooks.once("babele.init", (babele) => {
 									};
 									if (!isV13Plus) patch.text = str;
 									data = foundry.utils.mergeObject(data, patch);
-								} else if (hasName && !hasDesc) {
-									const patch = {
-										name: str,
-										description: "",
-										translated: true
-									};
-									if (!isV13Plus) patch.text = str;
-									data = foundry.utils.mergeObject(data, patch);
-								} else if (!hasName && hasDesc) {
-									const patch = {
-										description: str,
-										translated: true
-									};
-									if (!isV13Plus) patch.text = str;
-									data = foundry.utils.mergeObject(data, patch);
 								} else {
-									if (hasName) {
+									const hasName = Boolean(data.name && data.name.trim());
+									const hasDesc = Boolean(data.description && data.description.trim());
+									const colonMatch = hasName ? str.match(/^([^<:\n]{2,50}):\s*(.+)$/s) : null;
+									if (colonMatch) {
+										const title = colonMatch[1].trim();
+										const desc = colonMatch[2].trim();
 										const patch = {
-											name: str,
+											name: title,
+											description: desc,
 											translated: true
 										};
 										if (!isV13Plus) patch.text = str;
 										data = foundry.utils.mergeObject(data, patch);
-									} else {
+									} else if (hasName && !hasDesc) {
+										const patch = {
+											name: str,
+											description: "",
+											translated: true
+										};
+										if (!isV13Plus) patch.text = str;
+										data = foundry.utils.mergeObject(data, patch);
+									} else if (!hasName && hasDesc) {
 										const patch = {
 											description: str,
 											translated: true
 										};
 										if (!isV13Plus) patch.text = str;
 										data = foundry.utils.mergeObject(data, patch);
+									} else {
+										if (hasName) {
+											const patch = {
+												name: str,
+												translated: true
+											};
+											if (!isV13Plus) patch.text = str;
+											data = foundry.utils.mergeObject(data, patch);
+										} else {
+											const patch = {
+												description: str,
+												translated: true
+											};
+											if (!isV13Plus) patch.text = str;
+											data = foundry.utils.mergeObject(data, patch);
+										}
 									}
 								}
 							}

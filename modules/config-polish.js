@@ -933,6 +933,7 @@ const CAREER_GROUP_FALLBACK = {
 	"Priest": "Kapłan",
 	"Protagonist": "Oprych",
 	"Racketeer": "Rekieterka",
+	"Rekietierka": "Rekieterka",
 	"Rat Catcher": "Szczurołap",
 	"Riverwarden": "Strażnik Rzeczny",
 	"Riverwoman": "Flisak",
@@ -996,6 +997,13 @@ const CAREER_GROUP_FALLBACK = {
 	"Maneater": "Ludojad",
 	"Rhinox Herder": "Poganiacz Rhinoxów",
 };
+
+const REVERSE_CAREER_GROUP_FALLBACK = Object.freeze(
+	Object.entries(CAREER_GROUP_FALLBACK).reduce((acc, [en, pl]) => {
+		acc[pl] = en;
+		return acc;
+	}, {})
+);
 
 function patchCareerSelector() {
 	const CareerSelectorClass = game.wfrp4e?.apps?.CareerSelector;
@@ -1091,6 +1099,152 @@ function patchCareerSelector() {
 	CareerSelectorClass.prototype._wfrp4eCorePlPatched = true;
 }
 
+function patchCareerStage(CareerStageClass) {
+	if (!CareerStageClass || CareerStageClass.prototype._wfrp4eCorePlPatched) return;
+
+	const origFindT1Careers = CareerStageClass.prototype.findT1Careers;
+	CareerStageClass.prototype.findT1Careers = async function(careerNames) {
+		const careers = await this.careers;
+		const careersFound = [];
+
+		if (typeof careerNames === "string") {
+			careerNames = [careerNames];
+		}
+
+		for (const targetName of careerNames) {
+			if (!targetName) continue;
+			const cleanTarget = String(targetName).trim();
+			const lowerTarget = cleanTarget.toLowerCase();
+			const plTarget = CAREER_GROUP_FALLBACK[cleanTarget];
+			const enTarget = REVERSE_CAREER_GROUP_FALLBACK[cleanTarget];
+
+			const targetAliases = new Set([
+				cleanTarget,
+				lowerTarget,
+				plTarget,
+				plTarget?.toLowerCase(),
+				enTarget,
+				enTarget?.toLowerCase()
+			].filter(Boolean));
+
+			const match = careers.find(c => {
+				if (Number(c.system?.level?.value) !== 1) return false;
+
+				const group = c.system?.careergroup?.value;
+				if (group && (targetAliases.has(group) || targetAliases.has(group.toLowerCase()))) {
+					return true;
+				}
+
+				const name = c.name;
+				if (name && (targetAliases.has(name) || targetAliases.has(name.toLowerCase()))) {
+					return true;
+				}
+
+				const origName = c.flags?.babele?.originalName || c._source?.name;
+				if (origName && (targetAliases.has(origName) || targetAliases.has(origName.toLowerCase()))) {
+					return true;
+				}
+
+				return false;
+			});
+
+			if (match) {
+				careersFound.push(match);
+			}
+		}
+
+		if (careerNames.length !== careersFound.length) {
+			this.showError("CareerItems", {
+				num: careerNames.length - careersFound.length,
+				careers: careerNames.toString()
+			});
+		}
+
+		return careersFound;
+	};
+
+	const origRollCareerTable = CareerStageClass.prototype.rollCareerTable;
+	CareerStageClass.prototype.rollCareerTable = async function(species) {
+		let rollSpecies = resolveSpecies(species) || species;
+		let table = game.wfrp4e?.tables?.findTable?.("career", rollSpecies);
+
+		if (!table && typeof rollSpecies === "string" && rollSpecies.includes("-")) {
+			const baseSpecies = rollSpecies.split("-")[0];
+			if (game.wfrp4e?.tables?.findTable?.("career", baseSpecies)) {
+				rollSpecies = baseSpecies;
+			}
+		}
+
+		let result;
+		try {
+			result = await game.wfrp4e.tables.rollTable("career", {}, rollSpecies);
+		} catch (err) {
+			console.warn("wfrp4e-core-pl | Błąd podczas rollTable('career'):", err);
+			if (rollSpecies !== "human") {
+				try {
+					result = await game.wfrp4e.tables.rollTable("career", {}, "human");
+				} catch (e) {}
+			}
+			if (!result) throw err;
+		}
+
+		if (result) {
+			const WFRP_Utility = game.wfrp4e?.utility || window.WFRP_Utility;
+			const rawText = result.text || (WFRP_Utility ? WFRP_Utility.extractLinkLabel(result.result) : null) || result.name;
+			if (rawText && CAREER_GROUP_FALLBACK[rawText]) {
+				result.text = CAREER_GROUP_FALLBACK[rawText];
+			} else if (rawText) {
+				result.text = rawText;
+			}
+		}
+
+		return result;
+	};
+
+	const origAddCareerChoice = CareerStageClass.prototype.addCareerChoice;
+	CareerStageClass.prototype.addCareerChoice = async function(number = 1) {
+		let rollSpecies = this.data.species;
+
+		const subspeciesCareerTable = this.data.subspecies && game.wfrp4e?.config?.subspecies?.[this.data.species]?.[this.data.subspecies]?.careerTable || null;
+		if (subspeciesCareerTable && game.wfrp4e.tables.findTable("career", subspeciesCareerTable)) {
+			rollSpecies = game.wfrp4e.config.subspecies[this.data.species][this.data.subspecies]?.careerTable;
+		} else if (this.data.subspecies && game.wfrp4e.tables.findTable("career", rollSpecies + "-" + this.data.subspecies)) {
+			rollSpecies += "-" + this.data.subspecies;
+		} else if (this.data.species === "human" && !game.wfrp4e.tables.findTable("career", "human") && game.wfrp4e.tables.findTable("career", "human-reiklander")) {
+			rollSpecies = "human-reiklander";
+		}
+
+		for (let i = 0; i < number; i++) {
+			let careerResult = await this.rollCareerTable(rollSpecies);
+			let careerName = careerResult?.text || careerResult?.name;
+
+			const altName = CAREER_GROUP_FALLBACK[careerName] || REVERSE_CAREER_GROUP_FALLBACK[careerName];
+			const specRepl = game.wfrp4e?.config?.speciesCareerReplacements || {};
+			const baseRepl = specRepl[this.data.species] || {};
+			const subRepl = specRepl[`${this.data.species}-${this.data.subspecies}`] || {};
+
+			let replacementOptions = (baseRepl[careerName] || []).concat(subRepl[careerName] || []);
+			if (altName) {
+				replacementOptions = replacementOptions.concat(baseRepl[altName] || []).concat(subRepl[altName] || []);
+			}
+			replacementOptions = Array.from(new Set(replacementOptions));
+
+			let t1Careers = await this.findT1Careers(careerName);
+			this.context.careers = this.context.careers.concat(t1Careers);
+
+			if (replacementOptions.length > 0) {
+				let replacements = await this.findT1Careers(replacementOptions);
+				this.context.replacements = this.context.replacements.concat(replacements);
+			}
+
+			this.updateMessage("Rolled", { rolled: t1Careers.map(c => c.name).join(", ") });
+		}
+		this.render(true);
+	};
+
+	CareerStageClass.prototype._wfrp4eCorePlPatched = true;
+}
+
 function patchChargenStages() {
 	const CharGenClass = game.wfrp4e?.apps?.CharGenWfrp4e;
 	if (CharGenClass && !CharGenClass.prototype._wfrp4eCorePlPatched) {
@@ -1101,6 +1255,9 @@ function patchChargenStages() {
 			if ((key === "star-sign" || key === "starsign") && !isPackJournalAvailable("wfrp4e-archives2.journals")) {
 				return;
 			}
+			if (stage?.class && key === "career") {
+				patchCareerStage(stage.class);
+			}
 			return origAddStage.call(this, stage, index, stageData);
 		};
 
@@ -1109,10 +1266,17 @@ function patchChargenStages() {
 			if (key === "career" && stage?.name === "SoCCareerStage" && !isPackJournalAvailable("wfrp4e-soc.journals")) {
 				return;
 			}
+			if (stage && key === "career") {
+				patchCareerStage(stage);
+			}
 			return origReplaceStage.call(this, key, stage);
 		};
 
 		CharGenClass.prototype._wfrp4eCorePlPatched = true;
+	}
+
+	if (game.wfrp4e?.apps?.CareerStage) {
+		patchCareerStage(game.wfrp4e.apps.CareerStage);
 	}
 }
 
@@ -1196,13 +1360,20 @@ export function findCompendiumTable(key, column) {
 	}
 
 	if (normCol) {
+		const resolvedColSpecies = game.wfrp4eCorePl?.names?.resolveSpeciesKey?.(normCol)?.toLowerCase();
 		const colTable = matchedTables.find(t => {
 			const colFlag = t.getFlag?.("wfrp4e", "column")?.toLowerCase();
 			const origName = (t.flags?.babele?.originalName || t._source?.name || "").toLowerCase();
 			const tableName = (t.name || "").toLowerCase();
-			return colFlag === normCol || origName.includes(normCol) || tableName.includes(normCol);
+			return colFlag === normCol || 
+				(resolvedColSpecies && colFlag === resolvedColSpecies) ||
+				origName === normCol || 
+				tableName === normCol || 
+				origName.includes(normCol) || 
+				tableName.includes(normCol);
 		});
 		if (colTable) return colTable;
+		return null;
 	}
 
 	if (matchedTables.length === 1 || matchedTables.filter(t => t.getFlag?.("wfrp4e", "column")).length < 1) {
@@ -1237,10 +1408,41 @@ export function patchTableCompatibility() {
 	const origRollTable = Tables.rollTable;
 	if (typeof origRollTable === "function") {
 		Tables.rollTable = async function(tableKey, options = {}, column = null) {
-			if (!Tables.findTable(tableKey, column)) {
-				await ensureCompendiumTablesLoaded();
+			let resolvedCol = column ? String(column).trim() : null;
+			if (resolvedCol && tableKey?.toLowerCase() === "career") {
+				resolvedCol = resolveSpecies(resolvedCol) || resolvedCol;
 			}
-			return origRollTable.call(this, tableKey, options, column);
+
+			let table = Tables.findTable(tableKey, resolvedCol);
+			if (!table) {
+				await ensureCompendiumTablesLoaded();
+				table = Tables.findTable(tableKey, resolvedCol);
+			}
+
+			// If column was specified with hyphen (e.g. human-reiklander), fall back to base species if specific table doesn't exist
+			if (!table && resolvedCol && resolvedCol.includes("-") && tableKey?.toLowerCase() === "career") {
+				const baseSpecies = resolvedCol.split("-")[0];
+				if (Tables.findTable(tableKey, baseSpecies)) {
+					resolvedCol = baseSpecies;
+					table = Tables.findTable(tableKey, resolvedCol);
+				}
+			}
+
+			// If column was explicitly specified but no table matches it anywhere, do not let upstream fallback pick an arbitrary table
+			if (resolvedCol && !table) {
+				const errorMsg = game.i18n?.format?.("ERROR.Table", { key: `${tableKey} (${resolvedCol})` }) || `Nie znaleziono tabeli: ${tableKey} (${resolvedCol})`;
+				return ui.notifications?.error?.(errorMsg);
+			}
+
+			const result = await origRollTable.call(this, tableKey, options, resolvedCol);
+			if (result && tableKey?.toLowerCase() === "career") {
+				const WFRP_Utility = game.wfrp4e?.utility || window.WFRP_Utility;
+				const rawText = result.text || (WFRP_Utility ? WFRP_Utility.extractLinkLabel(result.result) : null) || result.name;
+				if (rawText && CAREER_GROUP_FALLBACK[rawText]) {
+					result.text = CAREER_GROUP_FALLBACK[rawText];
+				}
+			}
+			return result;
 		};
 	}
 
@@ -1274,11 +1476,14 @@ Hooks.on("wfrp4e:chargen", async chargen => {
 		}
 	}
 
+	const careerStage = chargen?.stages?.find(s => s.key === "career");
 	if (!isPackJournalAvailable("wfrp4e-soc.journals")) {
-		const careerStage = chargen?.stages?.find(s => s.key === "career");
 		if (careerStage && careerStage.class?.name === "SoCCareerStage") {
 			careerStage.class = Object.getPrototypeOf(careerStage.class);
 		}
+	}
+	if (careerStage?.class) {
+		patchCareerStage(careerStage.class);
 	}
 });
 
