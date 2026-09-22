@@ -1,2 +1,2 @@
-this.script.scriptNotification("Cannot attack targets that are not Entangled")
+this.script.scriptNotification("Nie można atakować celów bez Stanu Pochwycony")
 args.abort = true;
