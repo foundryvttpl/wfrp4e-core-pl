@@ -1419,9 +1419,19 @@ export function installScriptCompatibility() {
 
 	const originalHandleScriptId = ScriptClass.prototype._handleScriptId;
 	ScriptClass.prototype._handleScriptId = function (reference) {
-		const source = originalHandleScriptId.call(this, reference);
-		const id = Array.from(String(reference).matchAll(/\[Script\.([a-zA-Z0-9]{16})\]/g))[0]?.[1];
-		if (!id || source === reference) {
+		let source = originalHandleScriptId.call(this, reference);
+		let id = Array.from(String(reference).matchAll(/\[Script\.([a-zA-Z0-9]{16})\]/g))[0]?.[1];
+		if (!id && typeof reference === "string" && reference.length > 20) {
+			const refTrim = reference.trim();
+			for (const [srcId, srcCode] of Object.entries(sourceScripts)) {
+				if (srcCode && srcCode.trim() === refTrim) {
+					id = srcId;
+					source = srcCode;
+					break;
+				}
+			}
+		}
+		if (!id || !translations[id]) {
 			return source;
 		}
 
@@ -1429,7 +1439,7 @@ export function installScriptCompatibility() {
 		const translation = translations[id];
 		const cacheKey = id + "\u0000" + polish + "\u0000" + source + "\u0000" + translation;
 		if (!effectiveScriptCache.has(cacheKey)) {
-			effectiveScriptCache.set(cacheKey, resolveScript(id, source, translation, {polish}));
+			effectiveScriptCache.set(cacheKey, resolveScript(id, source || translations[id], translation, {polish}));
 		}
 		return effectiveScriptCache.get(cacheKey);
 	};

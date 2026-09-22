@@ -303,6 +303,399 @@ function localizeSubspecies(object) {
 	}
 }
 
+const CONDITION_NAME_MAP = {
+	"ablaze": "Podpalenie",
+	"bleeding": "Krwawienie",
+	"blinded": "Oślepienie",
+	"broken": "Panika",
+	"deafened": "Ogłuszenie",
+	"entangled": "Pochwycenie",
+	"fatigued": "Zmęczenie",
+	"poisoned": "Zatrucie",
+	"prone": "Powalenie",
+	"stunned": "Oszołomienie",
+	"surprised": "Zaskoczenie",
+	"unconscious": "Utrata Przytomności",
+	"grappling": "Zapasy",
+	"fear": "Strach",
+	"terror": "Groza",
+	"engaged": "Związany Walką",
+	"dead": "Martwy"
+};
+
+const SCRIPT_LABEL_TRANSLATIONS = {
+	"penalty to all tests not involving running and hiding.": "EFFECT.BrokenPenalty",
+	"tests related to movement of any kind": "EFFECT.TestsRelatedToMovementOfAnyKind",
+	"tests related to sight": "EFFECT.TestsRelatedToSight",
+	"tests related to hearing": "EFFECT.TestsRelatedToHearing",
+	"bonus to melee attacks": "EFFECT.BonusToMeleeAttacks",
+	"roll to remove stunned": "EFFECT.RollToRemoveStunned",
+	"roll to remove fear": "EFFECT.RollToRemoveFear",
+	"roll to remove terror": "EFFECT.RollToRemoveTerror",
+	"half movement": "EFFECT.HalfMovement",
+	"start turn": "Początek Tury",
+	"accurate": "PROPERTY.Accurate",
+	"defensive": "PROPERTY.Defensive",
+	"precise": "PROPERTY.Precise",
+	"imprecise": "PROPERTY.Imprecise",
+	"blast": "PROPERTY.Blast",
+	"entangle": "PROPERTY.Entangle",
+	"damaging": "PROPERTY.Damaging",
+	"fast": "PROPERTY.Fast",
+	"hack": "PROPERTY.Hack",
+	"impact": "PROPERTY.Impact",
+	"impale": "PROPERTY.Impale",
+	"penetrating": "PROPERTY.Penetrating",
+	"pistol": "PROPERTY.Pistol",
+	"pummel": "PROPERTY.Pummel",
+	"repeater": "PROPERTY.Repeater",
+	"shield": "PROPERTY.Shield",
+	"trapblade": "PROPERTY.TrapBlade",
+	"unbreakable": "PROPERTY.Unbreakable",
+	"wrap": "PROPERTY.Wrap",
+	"magical": "PROPERTY.Magical",
+	"dangerous": "PROPERTY.Dangerous",
+	"reload": "PROPERTY.Reload",
+	"slow": "PROPERTY.Slow",
+	"tiring": "PROPERTY.Tiring",
+	"undamaging": "PROPERTY.Undamaging",
+	"ugly": "PROPERTY.Ugly",
+	"shoddy": "PROPERTY.Shoddy",
+	"unreliable": "PROPERTY.Unreliable",
+	"bulky": "PROPERTY.Bulky",
+	"durable": "PROPERTY.Durable",
+	"fine": "PROPERTY.Fine",
+	"lightweight": "PROPERTY.Lightweight",
+	"practical": "PROPERTY.Practical",
+	"unbalanced": "PROPERTY.Unbalanced"
+};
+
+const SCRIPT_LABEL_FALLBACKS = {
+	"EFFECT.BrokenPenalty": "Kara do wszystkich Testów niezwiązanych z ucieczką i ukrywaniem się.",
+	"EFFECT.TestsRelatedToMovementOfAnyKind": "Testy związane z jakimkolwiek ruchem",
+	"EFFECT.TestsRelatedToSight": "Testy związane ze wzrokiem",
+	"EFFECT.TestsRelatedToHearing": "Testy związane ze słuchem",
+	"EFFECT.BonusToMeleeAttacks": "Premia do ataków w zwarciu",
+	"EFFECT.RollToRemoveStunned": "Rzut na usunięcie Oszołomienia",
+	"EFFECT.RollToRemoveFear": "Rzut na usunięcie Strachu",
+	"EFFECT.RollToRemoveTerror": "Rzut na usunięcie Grozy",
+	"EFFECT.HalfMovement": "Połowa Ruchu"
+};
+
+export function localizeScriptLabel(rawLabel, script = null) {
+	if (!rawLabel || typeof rawLabel !== "string") {
+		return rawLabel;
+	}
+
+	const trimmed = rawLabel.trim();
+
+	// 1. Dynamic penalty: "Penalty to all Tests (...)"
+	const penaltyMatch = trimmed.match(/^Penalty to all Tests\s*\((.+)\)$/i);
+	if (penaltyMatch) {
+		const rawName = penaltyMatch[1].trim();
+		let conditionName = rawName;
+
+		if (rawName === "@effect.name") {
+			if (script?.effect?.name) {
+				conditionName = script.effect.name;
+			}
+		} else {
+			const lower = rawName.toLowerCase();
+			if (CONDITION_NAME_MAP[lower]) {
+				conditionName = CONDITION_NAME_MAP[lower];
+			} else if (game.i18n) {
+				const i18nKey = "WFRP4E.ConditionName." + rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+				const trans = game.i18n.localize(i18nKey);
+				if (trans && trans !== i18nKey) {
+					conditionName = trans;
+				}
+			}
+		}
+
+		if (game.i18n?.format) {
+			const formatted = game.i18n.format("EFFECT.PenaltyToAllTests", { name: conditionName });
+			if (formatted && formatted !== "EFFECT.PenaltyToAllTests") {
+				return formatted;
+			}
+		}
+		return `Kara do wszystkich Testów (${conditionName})`;
+	}
+
+	// 2. Direct dictionary lookup
+	const lower = trimmed.toLowerCase();
+	const translationKey = SCRIPT_LABEL_TRANSLATIONS[lower];
+	if (translationKey) {
+		if (translationKey.startsWith("EFFECT.") || translationKey.startsWith("PROPERTY.")) {
+			const trans = game.i18n?.localize?.(translationKey);
+			if (trans && trans !== translationKey) {
+				return trans;
+			}
+			if (SCRIPT_LABEL_FALLBACKS[translationKey]) {
+				return SCRIPT_LABEL_FALLBACKS[translationKey];
+			}
+		}
+		return translationKey;
+	}
+
+	// 3. Condition name directly
+	if (CONDITION_NAME_MAP[lower]) {
+		return CONDITION_NAME_MAP[lower];
+	}
+
+	// 4. Property with optional value/rating, e.g. "Accurate (1)" or "Defensive 2"
+	const propMatch = trimmed.match(/^([A-Za-z]+)(\s*[\(0-9].*)$/);
+	if (propMatch) {
+		const propKey = propMatch[1].toLowerCase();
+		const propTransKey = SCRIPT_LABEL_TRANSLATIONS[propKey];
+		if (propTransKey && propTransKey.startsWith("PROPERTY.")) {
+			const trans = game.i18n?.localize?.(propTransKey) || propMatch[1];
+			return `${trans}${propMatch[2]}`;
+		}
+	}
+
+	return rawLabel;
+}
+
+function localizeScriptData(scripts) {
+	if (!Array.isArray(scripts)) return;
+	for (const script of scripts) {
+		if (script && typeof script.label === "string") {
+			script.label = localizeScriptLabel(script.label, script);
+		}
+	}
+}
+
+export function localizeSystemEffectsConfig() {
+	const config = game.wfrp4e?.config;
+	const statusEffects = CONFIG.statusEffects || config?.statusEffects;
+	if (Array.isArray(statusEffects)) {
+		for (const effect of statusEffects) {
+			localizeScriptData(effect?.system?.scriptData);
+		}
+	}
+	if (Array.isArray(config?.statusEffects) && config.statusEffects !== statusEffects) {
+		for (const effect of config.statusEffects) {
+			localizeScriptData(effect?.system?.scriptData);
+		}
+	}
+
+	const propertyEffects = config?.propertyEffects;
+	if (propertyEffects && typeof propertyEffects === "object") {
+		for (const prop of Object.values(propertyEffects)) {
+			localizeScriptData(prop?.system?.scriptData);
+		}
+	}
+}
+
+const EFFECT_DIFFICULTY_TRANSLATIONS = {
+	"very easy (+60)": "Banalny (+60)",
+	"very easy": "Banalny (+60)",
+	"easy (+40)": "Prosty (+40)",
+	"easy": "Prosty (+40)",
+	"average (+20)": "Przeciętny (+20)",
+	"average": "Przeciętny (+20)",
+	"challenging (+0)": "Wymagający (+0)",
+	"challenging": "Wymagający (+0)",
+	"difficult (-10)": "Trudny (-10)",
+	"difficult (–10)": "Trudny (-10)",
+	"difficult": "Trudny (-10)",
+	"hard (-20)": "Bardzo trudny (-20)",
+	"hard (–20)": "Bardzo trudny (-20)",
+	"hard": "Bardzo trudny (-20)",
+	"very hard (-30)": "Bardzo trudny (-30)",
+	"very hard (–30)": "Bardzo trudny (-30)",
+	"very hard": "Bardzo trudny (-30)"
+};
+
+const EFFECT_SKILL_CHAR_GENITIVE = {
+	"endurance": "Odporności",
+	"cool": "Opanowania",
+	"willpower": "Siły Woli",
+	"toughness": "Wytrzymałości",
+	"strength": "Siły",
+	"agility": "Zwinności",
+	"dexterity": "Zręczności",
+	"intelligence": "Inteligencji",
+	"initiative": "Inicjatywy",
+	"fellowship": "Ogłady",
+	"weapon skill": "Walki Wręcz",
+	"ballistic skill": "Umiejętności Strzeleckich",
+	"athletics": "Atletyki",
+	"dodge": "Uniku",
+	"perception": "Spostrzegawczości",
+	"stealth": "Skradania",
+	"sail": "Żeglarstwa",
+	"trade (carpenter)": "Rzemiosła (Stolarstwo)",
+	"trade (carpentry)": "Rzemiosła (Stolarstwo)",
+	"trade (tailor)": "Rzemiosła (Krawiectwo)",
+	"trade (engineer)": "Rzemiosła (Inżynieria)"
+};
+
+function translateEffectTestTarget(targetText) {
+	const trimmed = targetText.trim();
+	const lower = trimmed.toLowerCase();
+	for (const [diffEn, diffPl] of Object.entries(EFFECT_DIFFICULTY_TRANSLATIONS)) {
+		if (lower.startsWith(diffEn)) {
+			const remainder = lower.slice(diffEn.length).trim();
+			const skillPl = EFFECT_SKILL_CHAR_GENITIVE[remainder] || remainder;
+			return `${diffPl} Test ${skillPl}`;
+		}
+	}
+	if (EFFECT_SKILL_CHAR_GENITIVE[lower]) {
+		return `Test ${EFFECT_SKILL_CHAR_GENITIVE[lower]}`;
+	}
+	return `Test ${trimmed}`;
+}
+
+const EFFECT_PHRASE_REPLACEMENTS = [
+	[/<b>Infected:\s*/gi, "<b>Zaraza: "],
+	[/Finished repairing <em>(.*?)<\/em>\./gi, "Zakończono naprawę: <em>$1</em>."],
+	[/Ward value is now (\d+)/gi, "Wartość Ochrony wynosi teraz $1"],
+	[/Healed (\d+) Wounds/gi, "Uleczono $1 Ran"],
+	[/Automatically passes any (.*?)(?=[.<]|$)/gi, "Automatycznie zdaje każdy test: $1"],
+	[/Fortune point stolen from\s+/gi, "Skradziono Punkt Szczęścia postaci: "],
+	[/Fortune points? increased from (\d+) to (\d+)/gi, "Punkty Szczęścia wzrosły z $1 do $2"],
+	[/Fortune points? reduced to (\d+)/gi, "Punkty Szczęścia zmniejszone do $1"],
+	[/Cannot enter (.*?)!/gi, "Nie można wkroczyć: $1!"],
+	[/Cannot attack targets that are not Entangled/gi, "Nie można atakować celów bez Stanu Pochwycony"],
+	[/None left!/gi, "Nic nie zostało!"],
+	[/No Festering Wounds!/gi, "Brak Ropiejących Ran!"],
+	[/duration reduced by (\d+)!/gi, "czas trwania zmniejszony o $1!"],
+	[/Dropped (.*?)!/gi, "Upuszczono $1!"],
+	[/Removed Broken\./gi, "Usunięto Stan Załamania."],
+	[/Blinded while wearing the (.*?)(?=[.<]|$)/gi, "Oślepiony podczas noszenia: $1"]
+];
+
+export function localizeEffectChatMessage(content) {
+	if (!content || typeof content !== "string") return content;
+	let result = content;
+
+	// 1. "must pass [an?|a] (<b>)?(...)Test or (gain|contract|acquire|suffer) (...)"
+	const mustPassRegex = /must pass (?:an?|a)\s+(<b>|<strong>)?(.*?)(?:<\/b>|<\/strong>)?\s+Test\s+(?:or|lub)\s+(gain|contract|acquire|suffer)(?:\s+(?:a|an|the|one))?\s*/gi;
+	result = result.replace(mustPassRegex, (match, openTag, testPart, verb) => {
+		const transTest = translateEffectTestTarget(testPart);
+		let transVerb = "otrzyma";
+		if (verb.toLowerCase() === "contract") transVerb = "nabawi się";
+		const tag = openTag ? "<b>" : "";
+		const closeTag = openTag ? "</b>" : "";
+		return `musi zdać ${tag}${transTest}${closeTag} albo ${transVerb} `;
+	});
+
+	// 2. Trait/Condition/Disease specific links and terms in message
+	result = result.replace(/@UUID\[([^\]]*Compendium\.wfrp4e-core\.items\.kKccDTGzWzSXCBOb[^\]]*)\]\{([^}]+)\}/g, (match, uuid) => {
+		return `@UUID[${uuid}]{Ropiejącą Ranę}`;
+	});
+	result = result.replace(/@UUID\[([^\]]*Compendium\.wfrp4e-core\.items\.9GNpAqgsKzxZKJpp[^\]]*)\]\{([^}]+)\}\s*Trait/gi, (match, uuid) => {
+		return `Cechę @UUID[${uuid}]{Głupota}`;
+	});
+	result = result.replace(/(?:\ba\s+)?@Condition\[Deafened\]\s+Condition/gi, "Stan @Condition[Głuchy]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Blinded\]\s+Condition/gi, "Stan @Condition[Oślepiony]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Stunned\]\s+Condition/gi, "Stan @Condition[Ogłuszony]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Broken\]\s+Condition/gi, "Stan @Condition[Załamany]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Fatigued\]\s+Condition/gi, "Stan @Condition[Zmęczony]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Poisoned\]\s+Condition/gi, "Stan @Condition[Zatrucie]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Ablaze\]\s+Condition/gi, "Stan @Condition[Podpalony]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Bleeding\]\s+Condition/gi, "Stan @Condition[Krwawienie]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Prone\]\s+Condition/gi, "Stan @Condition[Powalony]");
+	result = result.replace(/(?:\ba\s+)?@Condition\[Unconscious\]\s+Condition/gi, "Stan @Condition[Nieprzytomny]");
+
+	result = result.replace(/(?:\ba\s+)?Deafened Condition/gi, "Stan @Condition[Głuchy]");
+	result = result.replace(/(?:\ba\s+)?Blinded Condition/gi, "Stan @Condition[Oślepiony]");
+	result = result.replace(/(?:\ba\s+)?Stunned Condition/gi, "Stan @Condition[Ogłuszony]");
+	result = result.replace(/(?:\ba\s+)?Broken Condition/gi, "Stan @Condition[Załamany]");
+	result = result.replace(/(?:\ba\s+)?Fatigued Condition/gi, "Stan @Condition[Zmęczony]");
+	result = result.replace(/(?:\ba\s+)?Poisoned Condition/gi, "Stan @Condition[Zatrucie]");
+	result = result.replace(/(?:\ba\s+)?Ablaze Condition/gi, "Stan @Condition[Podpalony]");
+	result = result.replace(/(?:\ba\s+)?Bleeding Condition/gi, "Stan @Condition[Krwawienie]");
+	result = result.replace(/(?:\ba\s+)?Prone Condition/gi, "Stan @Condition[Powalony]");
+	result = result.replace(/(?:\ba\s+)?Unconscious Condition/gi, "Stan @Condition[Nieprzytomny]");
+
+	result = result.replace(/suffer (\d+d?\d*) Wounds \(ignoring Armour\)/gi, "otrzyma $1 Ran (z ignorowaniem Pancerza)");
+	result = result.replace(/suffer (\d+d?\d*) Wounds/gi, "otrzyma $1 Ran");
+	result = result.replace(/and suffer\s+/gi, "i otrzyma ");
+
+	// 3. Simple phrases
+	for (const [pattern, replacement] of EFFECT_PHRASE_REPLACEMENTS) {
+		result = result.replace(pattern, replacement);
+	}
+
+	return result;
+}
+
+export function patchWarhammerScript() {
+	const WarhammerScript = globalThis.warhammer?.apps?.WarhammerScript;
+	if (!WarhammerScript || WarhammerScript.prototype._wfrp4eCorePlPatched) {
+		return;
+	}
+
+	const origDescriptor = Object.getOwnPropertyDescriptor(WarhammerScript.prototype, "Label");
+	const origGetLabel = origDescriptor?.get;
+
+	Object.defineProperty(WarhammerScript.prototype, "Label", {
+		get() {
+			let label = origGetLabel ? origGetLabel.call(this) : Roll.replaceFormulaData(this.label, this);
+			return localizeScriptLabel(label, this);
+		},
+		configurable: true,
+		enumerable: origDescriptor ? origDescriptor.enumerable : true
+	});
+
+	const origMessage = WarhammerScript.prototype.message;
+	if (typeof origMessage === "function") {
+		WarhammerScript.prototype.message = function (content, chatData = {}) {
+			content = localizeEffectChatMessage(content);
+			return origMessage.call(this, content, chatData);
+		};
+	}
+
+	const origNotification = WarhammerScript.prototype.notification;
+	if (typeof origNotification === "function") {
+		WarhammerScript.prototype.notification = function (content, type = "info", permanent = false) {
+			content = localizeEffectChatMessage(content);
+			return origNotification.call(this, content, type, permanent);
+		};
+	}
+
+	WarhammerScript.prototype._wfrp4eCorePlPatched = true;
+}
+
+if (globalThis.Hooks) {
+	Hooks.on("preCreateChatMessage", (doc, data, options, userId) => {
+		const polish = game.i18n?.lang === "pl" || game.i18n?.lang?.startsWith("pl-");
+		if (!polish) return;
+		const content = doc?.content || data?.content;
+		if (typeof content === "string" && (
+			content.includes("must pass") ||
+			content.includes("Infected:") ||
+			content.includes("Festering Wound") ||
+			content.includes("Finished repairing") ||
+			content.includes("Cannot enter") ||
+			content.includes("Fortune point stolen")
+		)) {
+			const localized = localizeEffectChatMessage(content);
+			if (localized !== content) {
+				doc.updateSource({ content: localized });
+			}
+		}
+	});
+}
+
+function hookPrepareSystemItems() {
+	const config = game.wfrp4e?.config;
+	if (!config || config._wfrp4eCorePlPrepareHooked) return;
+	const origPrepare = config["PrepareSystemItems"];
+	if (typeof origPrepare === "function") {
+		config["PrepareSystemItems"] = function(...args) {
+			const result = origPrepare.apply(this, args);
+			localizeSystemEffectsConfig();
+			return result;
+		};
+		config._wfrp4eCorePlPrepareHooked = true;
+	}
+}
+
+patchWarhammerScript();
+
 Hooks.on("i18nInit", () => {
 	const config = game.wfrp4e?.config;
 	if (!config) {
@@ -321,6 +714,10 @@ Hooks.on("i18nInit", () => {
 	}
 	localizeNamedEntries(config.loreEffects);
 	localizeNamedEntries(config.symptomEffects);
+
+	localizeSystemEffectsConfig();
+	patchWarhammerScript();
+	hookPrepareSystemItems();
 });
 
 // Safe evaluation of ammunition range and damage modifiers. System WFRP4e runs
@@ -2175,8 +2572,20 @@ Hooks.on("renderApplication", (app, html) => polishSettingsWindows(app, html));
 Hooks.on("renderApplicationV2", (app, html) => polishSettingsWindows(app, html));
 Hooks.on("renderSettingsConfig", (app, html) => polishSettingsWindows(app, html));
 
-Hooks.once("init", () => installSafeRandomizer());
+Hooks.once("init", () => {
+	installSafeRandomizer();
+	patchWarhammerScript();
+	hookPrepareSystemItems();
+});
 Hooks.once("ready", () => {
 	installSafeRandomizer();
 	ensureCompendiumTablesLoaded();
+	localizeSystemEffectsConfig();
+	patchWarhammerScript();
 });
+
+game.wfrp4eCorePl = game.wfrp4eCorePl || {};
+game.wfrp4eCorePl.localizeScriptLabel = localizeScriptLabel;
+game.wfrp4eCorePl.localizeSystemEffectsConfig = localizeSystemEffectsConfig;
+game.wfrp4eCorePl.patchWarhammerScript = patchWarhammerScript;
+
