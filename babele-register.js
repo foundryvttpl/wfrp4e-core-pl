@@ -491,7 +491,16 @@ Hooks.once("babele.init", (babele) => {
 		  "modules/wfrp4e-zoo/assets/actors/chameleoleech.webp": "modules/wfrp4e-zoo/assets/actors/chameleo_leeches.webp",
 		  "modules/wfrp4e-zoo/assets/actors/amoebae.webp": "modules/wfrp4e-zoo/assets/actors/amoeba.webp",
 		  "modules/wfrp4e-zoo/assets/actors/il-potente-granchio.webp": "modules/wfrp4e-zoo/assets/actors/leviathan.webp",
-		  "modules/wfrp4e-core/icons/effects/miscast.png": "modules/wfrp4e-core/art/other/miscast.webp"
+		  "modules/wfrp4e-core/icons/effects/miscast.png": "modules/wfrp4e-core/art/other/miscast.webp",
+		  "modules/wfrp4e-wom/assets/misc/wheel-of-magic.webp": "modules/wfrp4e-core-pl/images/wom/the Colleges of Magic.webp",
+		  "modules/wfrp4e-ua2/assets/images/fishrook-returns.webp": "modules/wfrp4e-core-pl/images/ua2/maps/fishrook-sightings.webp",
+		  "modules/wfrp4e-horned-rat/assets/handouts/web.webp": "modules/wfrp4e-core-pl/images/horned-rat/handouts/web.webp",
+		  "modules/wfrp4e-rnhd/assets/images/ambosstein.webp": "modules/wfrp4e-core-pl/images/rnhd/dom-ambosstein.webp",
+		  "modules/wfrp4e-middenheim/assets/misc/low-king-turf.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/low-king-turf.webp",
+		  "modules/wfrp4e-middenheim/assets/misc/purple-hand-org.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/purple-hand-org.webp",
+		  "modules/wfrp4e-middenheim/assets/misc/middenball-kicking.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/middenball-kicking.webp",
+		  "modules/wfrp4e-middenheim/assets/misc/middenball-pursuits.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/middenball-pursuits.webp",
+		  "modules/wfrp4e-middenheim/assets/misc/middenball-throwing.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/middenball-throwing.webp"
 		};
 		if (Object.hasOwn(assetAliases, val)) val = assetAliases[val];
 		else if (val.includes("<img")) {

@@ -320,7 +320,8 @@ const CONDITION_NAME_MAP = {
 	"fear": "Strach",
 	"terror": "Groza",
 	"engaged": "Związany Walką",
-	"dead": "Martwy"
+	"dead": "Martwy",
+	"besmirched": "Splamienie"
 };
 
 const SCRIPT_LABEL_TRANSLATIONS = {
@@ -367,7 +368,12 @@ const SCRIPT_LABEL_TRANSLATIONS = {
 	"fine": "PROPERTY.Fine",
 	"lightweight": "PROPERTY.Lightweight",
 	"practical": "PROPERTY.Practical",
-	"unbalanced": "PROPERTY.Unbalanced"
+	"unbalanced": "PROPERTY.Unbalanced",
+	"inflict": "PROPERTY.Inflict",
+	"parry": "PROPERTY.Parry",
+	"advantage on melee tests": "Przewaga w testach walki wręcz",
+	"disadvantage on fellowship tests": "Utrudnienie w testach Ogłady",
+	"prevent momentum gain": "Uniemożliwia zyskanie Impetu"
 };
 
 const SCRIPT_LABEL_FALLBACKS = {
@@ -2414,7 +2420,25 @@ function polishSettingsWindows(app, html) {
 		});
 	}
 
-	// 5. CareerSelector: localize "Add Career" button and attach search filter
+	// 5. EditionManager: window title and notifications
+	if (app?.constructor?.name === "EditionManager" || root.classList?.contains("edition-manager")) {
+		const titleEl = app.element?.querySelector?.(".window-title") || root.closest?.(".window-app")?.querySelector?.(".window-title");
+		if (titleEl && (titleEl.textContent.trim() === "Edition Configuration" || titleEl.textContent.trim() === "SETTINGS.Menu.EditionManagerLabel")) {
+			titleEl.textContent = game.i18n?.localize?.("SETTINGS.Menu.EditionManagerLabel") || "Menedżer edycji";
+		}
+		root.querySelectorAll(".notification.warning").forEach(el => {
+			if (el.innerHTML.includes("5th Edition rules are a") || el.innerHTML.includes("Work in Progress")) {
+				el.innerHTML = "Zasady 5. edycji są wciąż <strong>w fazie rozwoju!</strong> Niektóre funkcje mogą nie być jeszcze zaimplementowane.";
+			}
+		});
+		root.querySelectorAll(".notification.info").forEach(el => {
+			if (el.innerHTML.includes("In the future, this window will include") || el.innerHTML.includes("join the Discord")) {
+				el.innerHTML = "W przyszłości to okno będzie zawierać różne opcje do wyboru. Jeśli chcesz zaproponować nową opcję, dołącz do naszego Discorda!";
+			}
+		});
+	}
+
+	// 6. CareerSelector: localize "Add Career" button and attach search filter
 	if (app?.constructor?.name === "CareerSelector" || root.classList?.contains("career-selector")) {
 		const btn = root.querySelector(".form-footer button[type=submit], button[type=submit]");
 		if (btn && btn.textContent.trim() === "Add Career") {
