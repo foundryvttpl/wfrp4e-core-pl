@@ -975,6 +975,8 @@ const SUPPLEMENT_SPECIES_REQUIREMENTS = {
 	skink: "wfrp4e-lustria.journals",
 	chameleonskink: "wfrp4e-lustria.journals",
 	familiar: "wfrp4e-archives3.journals",
+	gnome: "wfrp4e-rnhd.journals",
+	ogre: "wfrp4e-archives2.journals",
 };
 
 const SUPPLEMENT_SUBSPECIES_REQUIREMENTS = {
@@ -1208,6 +1210,16 @@ function patchSpeciesStage(SpeciesStage) {
 			}
 		}
 
+		// Species added by active modules (e.g. Gnome, Ogre) are only listed by their own species table,
+		// which replaces the core one in the table settings. Offer every species that has a career table.
+		for (const key of Object.keys(game.wfrp4e?.config?.species || {})) {
+			if (data.species?.[key] || data.extraSpecies?.[key]) continue;
+			if (!game.wfrp4e?.config?.speciesCharacteristics?.[key]) continue;
+			if (!hasCareerTableColumn(key)) continue;
+			data.extraSpecies ??= {};
+			data.extraSpecies[key] = game.wfrp4e.config.species[key];
+		}
+
 		if (data.extraSpecies) {
 			const filteredExtra = {};
 			for (const [key, label] of Object.entries(data.extraSpecies)) {
@@ -1275,6 +1287,12 @@ function patchSpeciesStage(SpeciesStage) {
 	};
 
 	SpeciesStage.prototype._wfrp4eCorePlFilterPatched = true;
+}
+
+function hasCareerTableColumn(column) {
+	const isCareerTable = table => table?.getFlag?.("wfrp4e", "key") === "career" && table.getFlag("wfrp4e", "column") === column;
+	if (game.tables?.some?.(isCareerTable)) return true;
+	return (game.packs?.filter?.(p => p.documentName === "RollTable") || []).some(pack => pack.contents?.some?.(isCareerTable));
 }
 
 function tryPatchSpeciesStage() {
@@ -1502,72 +1520,208 @@ function patchCareerSelector() {
 	CareerSelectorClass.prototype._wfrp4eCorePlPatched = true;
 }
 
-function patchCareerStage(CareerStageClass) {
-	if (!CareerStageClass || CareerStageClass.prototype._wfrp4eCorePlPatched) return;
+const CAREER_LINK_LABEL = /@(?:UUID|Compendium)\[[^\]]+\]\{([^}]+)\}/i;
+const CAREER_LINK_ANY = /@(?:UUID|Compendium)\[/i;
 
-	const origFindT1Careers = CareerStageClass.prototype.findT1Careers;
-	CareerStageClass.prototype.findT1Careers = async function(careerNames) {
+/**
+ * Normalize a career name for comparison (case, whitespace, typographic apostrophes).
+ */
+function normalizeCareerKey(value) {
+	return String(value ?? "")
+		.normalize("NFC")
+		.replace(/[‘’ʼ`´]/g, "'")
+		.replace(/\s+/g, " ")
+		.trim()
+		.toLowerCase();
+}
+
+const NORMALIZED_CAREER_ALIASES = (() => {
+	const aliases = new Map();
+	const add = (from, to) => {
+		const key = normalizeCareerKey(from);
+		if (!key || !to) return;
+		if (!aliases.has(key)) aliases.set(key, new Set());
+		aliases.get(key).add(normalizeCareerKey(to));
+	};
+	for (const [en, pl] of Object.entries(CAREER_GROUP_FALLBACK)) {
+		add(en, pl);
+		add(pl, en);
+	}
+	return aliases;
+})();
+
+function careerAliases(name) {
+	const key = normalizeCareerKey(name);
+	const result = new Set(key ? [key] : []);
+	for (const alias of NORMALIZED_CAREER_ALIASES.get(key) ?? []) {
+		result.add(alias);
+	}
+	return result;
+}
+
+/**
+ * Plain career label from a table result field: "@UUID[...]{Label}" -> "Label", HTML stripped.
+ */
+function plainCareerLabel(value) {
+	if (typeof value !== "string") return "";
+	const link = value.match(CAREER_LINK_LABEL);
+	if (link) return link[1].trim();
+	if (CAREER_LINK_ANY.test(value)) return "";
+	return value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Career name rolled on a career/seafarer table, read from the result data.
+ * TableUtility.rollTable() derives `text` from the rendered HTML; on Foundry V13+ that yields
+ * markup such as "<p>" or "<i class=...>" whenever a result has no name or is a document link,
+ * so the data fields are checked first and the rendered text only as a last resort.
+ */
+function careerNameFromTableResult(result) {
+	if (!result || typeof result !== "object") return "";
+	const data = result.object ?? {};
+	for (const value of [data.name, data.description, data.text]) {
+		const label = plainCareerLabel(value);
+		if (label) return label;
+	}
+	if (data.documentUuid) {
+		try {
+			const document = fromUuidSync(data.documentUuid, {strict: false});
+			if (document?.name) return document.name;
+		} catch (err) {}
+	}
+	for (const value of [result.name, result.text]) {
+		const label = plainCareerLabel(value);
+		if (label) return label;
+	}
+	return "";
+}
+
+function sanitizeCareerTableResult(result) {
+	if (!result || typeof result !== "object") return result;
+	const careerName = careerNameFromTableResult(result);
+	if (careerName) {
+		const display = CAREER_GROUP_FALLBACK[careerName] || careerName;
+		result.name = display;
+		result.text = display;
+	}
+	return result;
+}
+
+function careerGroupKey(career) {
+	return normalizeCareerKey(career?.system?.careergroup?.value);
+}
+
+/**
+ * Find the tier 1 career for a career group name.
+ * Accepts English or Polish names, the group name or the name of any of its levels
+ * (e.g. "Ironbreaker" -> group of "Żelazny brat"), so mixed EN/PL data from DLC modules still resolves.
+ */
+function findTier1Career(careers, targetName) {
+	const aliases = careerAliases(targetName);
+	if (!aliases.size) return null;
+
+	const tier1 = careers.filter(c => Number(c.system?.level?.value) === 1);
+	const byGroup = tier1.find(c => aliases.has(careerGroupKey(c)));
+	if (byGroup) return byGroup;
+
+	const named = careers.filter(c => aliases.has(normalizeCareerKey(c.name))
+		|| aliases.has(normalizeCareerKey(c.flags?.babele?.originalName)));
+	// Prefer the level that names its group (e.g. SoC "Officer" over the Soldier rank "Officer")
+	const isNamesake = c => normalizeCareerKey(c.name) === careerGroupKey(c) ? 1 : 0;
+	named.sort((a, b) => isNamesake(b) - isNamesake(a));
+	for (const career of named) {
+		const group = careerGroupKey(career);
+		if (!group) continue;
+		const match = tier1.find(t => t.pack === career.pack && careerGroupKey(t) === group)
+			?? tier1.find(t => careerGroupKey(t) === group);
+		if (match) return match;
+	}
+	return null;
+}
+
+function careerReplacementOptions(species, subspecies, careerNames) {
+	const replacements = game.wfrp4e?.config?.speciesCareerReplacements || {};
+	const sources = [replacements[species], subspecies ? replacements[`${species}-${subspecies}`] : null].filter(Boolean);
+	const wanted = new Set();
+	for (const name of careerNames) {
+		for (const alias of careerAliases(name)) wanted.add(alias);
+	}
+	const options = [];
+	for (const source of sources) {
+		for (const [career, list] of Object.entries(source)) {
+			if (wanted.has(normalizeCareerKey(career)) && Array.isArray(list)) options.push(...list);
+		}
+	}
+	return Array.from(new Set(options.filter(Boolean)));
+}
+
+/**
+ * The class that defines the career stage methods (CareerStage). Module stages such as SoCCareerStage
+ * extend it and override rollCareerTable/onRollCareer, so only the base class is patched; the subclass
+ * overrides keep working and reach the patched methods through super.
+ */
+function baseCareerStageClass(CareerStageClass) {
+	let cls = CareerStageClass;
+	while (cls?.prototype && !Object.hasOwn(cls.prototype, "findT1Careers")) {
+		cls = Object.getPrototypeOf(cls);
+	}
+	return cls?.prototype ? cls : CareerStageClass;
+}
+
+/**
+ * Sea of Claws asks about Seafarer careers for every species; skip the question when the species
+ * has no Seafarer table instead of failing with "Could not find imported Seafarer Table".
+ */
+function patchSeafarerCareerStage(StageClass) {
+	const proto = StageClass?.prototype;
+	if (!proto || !Object.hasOwn(proto, "handleSeafarerReplacement") || Object.hasOwn(proto, "_wfrp4eCorePlSeafarerPatched")) return;
+
+	const origOnRollCareer = proto.onRollCareer;
+	const baseOnRollCareer = Object.getPrototypeOf(proto).onRollCareer;
+	proto.onRollCareer = async function(event) {
+		if (typeof baseOnRollCareer === "function" && !game.wfrp4e?.tables?.findTable?.("seafarer", this.data?.species)) {
+			this.context.useSeafarer = false;
+			return baseOnRollCareer.call(this, event);
+		}
+		return origOnRollCareer.call(this, event);
+	};
+	proto._wfrp4eCorePlSeafarerPatched = true;
+}
+
+function patchCareerStage(CareerStageClass) {
+	patchSeafarerCareerStage(CareerStageClass);
+	const BaseClass = baseCareerStageClass(CareerStageClass);
+	if (!BaseClass?.prototype || Object.hasOwn(BaseClass.prototype, "_wfrp4eCorePlPatched")) return;
+
+	BaseClass.prototype.findT1Careers = async function(careerNames) {
 		const careers = await this.careers;
 		const careersFound = [];
 
-		if (typeof careerNames === "string") {
-			careerNames = [careerNames];
+		if (!Array.isArray(careerNames)) {
+			careerNames = careerNames ? [careerNames] : [];
 		}
 
+		const missing = [];
 		for (const targetName of careerNames) {
-			if (!targetName) continue;
-			const cleanTarget = String(targetName).trim();
-			const lowerTarget = cleanTarget.toLowerCase();
-			const plTarget = CAREER_GROUP_FALLBACK[cleanTarget];
-			const enTarget = REVERSE_CAREER_GROUP_FALLBACK[cleanTarget];
-
-			const targetAliases = new Set([
-				cleanTarget,
-				lowerTarget,
-				plTarget,
-				plTarget?.toLowerCase(),
-				enTarget,
-				enTarget?.toLowerCase()
-			].filter(Boolean));
-
-			const match = careers.find(c => {
-				if (Number(c.system?.level?.value) !== 1) return false;
-
-				const group = c.system?.careergroup?.value;
-				if (group && (targetAliases.has(group) || targetAliases.has(group.toLowerCase()))) {
-					return true;
-				}
-
-				const name = c.name;
-				if (name && (targetAliases.has(name) || targetAliases.has(name.toLowerCase()))) {
-					return true;
-				}
-
-				const origName = c.flags?.babele?.originalName || c._source?.name;
-				if (origName && (targetAliases.has(origName) || targetAliases.has(origName.toLowerCase()))) {
-					return true;
-				}
-
-				return false;
-			});
-
+			const match = targetName ? findTier1Career(careers, String(targetName)) : null;
 			if (match) {
 				careersFound.push(match);
+			} else {
+				missing.push(targetName ? String(targetName) : "?");
 			}
 		}
 
-		if (careerNames.length !== careersFound.length) {
+		if (missing.length) {
 			this.showError("CareerItems", {
-				num: careerNames.length - careersFound.length,
-				careers: careerNames.toString()
+				num: missing.length,
+				careers: missing.join(", ")
 			});
 		}
 
 		return careersFound;
 	};
 
-	const origRollCareerTable = CareerStageClass.prototype.rollCareerTable;
-	CareerStageClass.prototype.rollCareerTable = async function(species) {
+	BaseClass.prototype.rollCareerTable = async function(species) {
 		let rollSpecies = resolveSpecies(species) || species;
 		let table = game.wfrp4e?.tables?.findTable?.("career", rollSpecies);
 
@@ -1591,26 +1745,19 @@ function patchCareerStage(CareerStageClass) {
 			if (!result) throw err;
 		}
 
-		if (result) {
-			const WFRP_Utility = game.wfrp4e?.utility || window.WFRP_Utility;
-			const rawText = result.text || (WFRP_Utility ? WFRP_Utility.extractLinkLabel(result.result) : null) || result.name;
-			if (rawText && CAREER_GROUP_FALLBACK[rawText]) {
-				result.text = CAREER_GROUP_FALLBACK[rawText];
-			} else if (rawText) {
-				result.text = rawText;
-			}
+		// rollTable() returns the notification when the table is missing
+		if (!result || typeof result !== "object" || !("total" in result)) {
+			return {name: "", text: ""};
 		}
-
-		return result;
+		return sanitizeCareerTableResult(result);
 	};
 
-	const origAddCareerChoice = CareerStageClass.prototype.addCareerChoice;
-	CareerStageClass.prototype.addCareerChoice = async function(number = 1) {
+	BaseClass.prototype.addCareerChoice = async function(number = 1) {
 		let rollSpecies = this.data.species;
 
 		const subspeciesCareerTable = this.data.subspecies && game.wfrp4e?.config?.subspecies?.[this.data.species]?.[this.data.subspecies]?.careerTable || null;
 		if (subspeciesCareerTable && game.wfrp4e.tables.findTable("career", subspeciesCareerTable)) {
-			rollSpecies = game.wfrp4e.config.subspecies[this.data.species][this.data.subspecies]?.careerTable;
+			rollSpecies = subspeciesCareerTable;
 		} else if (this.data.subspecies && game.wfrp4e.tables.findTable("career", rollSpecies + "-" + this.data.subspecies)) {
 			rollSpecies += "-" + this.data.subspecies;
 		} else if (this.data.species === "human" && !game.wfrp4e.tables.findTable("career", "human") && game.wfrp4e.tables.findTable("career", "human-reiklander")) {
@@ -1618,25 +1765,17 @@ function patchCareerStage(CareerStageClass) {
 		}
 
 		for (let i = 0; i < number; i++) {
-			let careerResult = await this.rollCareerTable(rollSpecies);
-			let careerName = careerResult?.text || careerResult?.name;
+			const careerResult = await this.rollCareerTable(rollSpecies);
+			const careerName = careerNameFromTableResult(careerResult);
 
-			const altName = CAREER_GROUP_FALLBACK[careerName] || REVERSE_CAREER_GROUP_FALLBACK[careerName];
-			const specRepl = game.wfrp4e?.config?.speciesCareerReplacements || {};
-			const baseRepl = specRepl[this.data.species] || {};
-			const subRepl = specRepl[`${this.data.species}-${this.data.subspecies}`] || {};
-
-			let replacementOptions = (baseRepl[careerName] || []).concat(subRepl[careerName] || []);
-			if (altName) {
-				replacementOptions = replacementOptions.concat(baseRepl[altName] || []).concat(subRepl[altName] || []);
-			}
-			replacementOptions = Array.from(new Set(replacementOptions));
-
-			let t1Careers = await this.findT1Careers(careerName);
+			const t1Careers = await this.findT1Careers(careerName);
 			this.context.careers = this.context.careers.concat(t1Careers);
 
+			// Replacement keys come from several modules, in English or Polish
+			const lookupNames = [careerName, ...t1Careers.map(c => c.system?.careergroup?.value)];
+			const replacementOptions = careerReplacementOptions(this.data.species, this.data.subspecies, lookupNames);
 			if (replacementOptions.length > 0) {
-				let replacements = await this.findT1Careers(replacementOptions);
+				const replacements = await this.findT1Careers(replacementOptions);
 				this.context.replacements = this.context.replacements.concat(replacements);
 			}
 
@@ -1645,7 +1784,7 @@ function patchCareerStage(CareerStageClass) {
 		this.render(true);
 	};
 
-	CareerStageClass.prototype._wfrp4eCorePlPatched = true;
+	BaseClass.prototype._wfrp4eCorePlPatched = true;
 }
 
 function patchChargenStages() {
@@ -1838,12 +1977,8 @@ export function patchTableCompatibility() {
 			}
 
 			const result = await origRollTable.call(this, tableKey, options, resolvedCol);
-			if (result && tableKey?.toLowerCase() === "career") {
-				const WFRP_Utility = game.wfrp4e?.utility || window.WFRP_Utility;
-				const rawText = result.text || (WFRP_Utility ? WFRP_Utility.extractLinkLabel(result.result) : null) || result.name;
-				if (rawText && CAREER_GROUP_FALLBACK[rawText]) {
-					result.text = CAREER_GROUP_FALLBACK[rawText];
-				}
+			if (result && ["career", "seafarer"].includes(tableKey?.toLowerCase())) {
+				sanitizeCareerTableResult(result);
 			}
 			return result;
 		};

@@ -12,6 +12,22 @@ const equivalenceCache = new Map();
 const effectiveScriptCache = new Map();
 
 const SOURCE_PATCHES = {
+	YDqpKJVy8ijEKdLX: {
+		hash: "871f9562",
+		postTransplant: true,
+		replacements: [["args.skill?.name.includes ==", "args.skill?.name =="]],
+	},
+	EGWF3LHav3e2zFL4: {
+		hash: "a922edf6",
+		postTransplant: true,
+		replacements: [["args.item?.name == game.i18n.localize(\"NAME.Charm\")", "args.skill?.name == game.i18n.localize(\"NAME.Charm\")"]],
+	},
+	MSJWJEUrX7ZmMvAD: {
+		hash: "2ca043fb",
+		postTransplant: true,
+		replacements: [["args.item?.name == game.i18n.localize(\"NAME.Charm\")", "args.skill?.name == game.i18n.localize(\"NAME.Charm\")"]],
+	},
+
 	A1odAcuRbq9797ZB: {
 		hash: "f382f9ad",
 		postTransplant: true,
@@ -293,6 +309,12 @@ const BEHAVIOR_PATCH_HASHES = {
 	"LOL2TGf8p8KxP14D": "e84a34ba",
 	"WRe1eGmGVGejPcS8": "6e4e52b6",
 };
+
+// Verified current WOM wind filters use lore.value[0]; retain earlier supported scripts.
+const ADDITIONAL_BEHAVIOR_PATCH_HASHES = Object.freeze({
+  "LOL2TGf8p8KxP14D": "23b14c20",
+  "WRe1eGmGVGejPcS8": "3e3c6874"
+});
 
 const PARENTHESIZED_LORE_IDS = new Set([
 	"BHbFqhJPzZI2txLs",
@@ -866,20 +888,24 @@ function randomCasterScript({polish, id}) {
 	const scope = ", " + JSON.stringify(id);
 	return [
 		"const spells = await warhammer.utility.findAllItems(\"spell\", " + JSON.stringify(loading) + ", true, [\"system.lore.value\"]);",
-		"const displayedLore = (await game.wfrp4e.tables.rollTable(\"random-caster\", {hideDSN: true})).text;",
+		"const rolledLore = await game.wfrp4e.tables.rollTable(\"random-caster\", {hideDSN: true});",
+		"const displayedLore = rolledLore.text;",
+		"const loreAnchor = rolledLore.result.match(/#([^\\]]+)\\]/)?.[1];",
 		"this.script.notification(displayedLore);",
 		"",
 		"if (game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"GM's Choice\"" + scope + ")) return;",
 		"",
 		"let spellsWithLore;",
-		"if (game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"Arcane Magic\"" + scope + ")) {",
-		"    spellsWithLore = spells.filter(spell => !spell.system.lore.value);",
+		"if (loreAnchor === \"arcane-spells\" || game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"Arcane Magic\"" + scope + ")) {",
+		"    spellsWithLore = spells.filter(spell => (Array.isArray(spell.system.lore.value) ? spell.system.lore.value : [spell.system.lore.value]).some(lore => !lore));",
 		"}",
 		"else {",
-		"    const loreKey = game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"Petty Magic\"" + scope + ")",
+		"    const loreKey = loreAnchor === \"petty-spells\" || game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"Petty Magic\"" + scope + ")",
 		"        ? \"petty\"",
+		"        : loreAnchor?.startsWith(\"the-lore-of-\") ? loreAnchor.slice(12)",
+		"        : loreAnchor?.startsWith(\"lore-of-\") ? loreAnchor.slice(8)",
 		"        : game.wfrp4eCorePl.scripts.loreKey(displayedLore" + scope + ");",
-		"    spellsWithLore = spells.filter(spell => spell.system.lore.value === loreKey);",
+		"    spellsWithLore = spells.filter(spell => (Array.isArray(spell.system.lore.value) ? spell.system.lore.value : [spell.system.lore.value]).includes(loreKey));",
 		"}",
 		"",
 		"const selectedSpell = spellsWithLore[Math.floor(CONFIG.Dice.randomUniform() * spellsWithLore.length)];",
@@ -1085,7 +1111,8 @@ function martyrdomScript({polish}) {
 }
 
 function applyBehaviorPatches(id, source, {sourceHash, polish}) {
-	if (BEHAVIOR_PATCH_HASHES[id] !== sourceHash) {
+	if (BEHAVIOR_PATCH_HASHES[id] !== sourceHash
+        && ADDITIONAL_BEHAVIOR_PATCH_HASHES[id] !== sourceHash) {
 		return source;
 	}
 	if (id === "KGK9vL1Yl0qmCeCN") {
@@ -1160,7 +1187,7 @@ function applyBehaviorPatches(id, source, {sourceHash, polish}) {
 	}
 	if (PARENTHESIZED_LORE_IDS.has(id)) {
 		const expression = "this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase()";
-		const originalName = "game.wfrp4eCorePl.names.original(this.effect)";
+		const originalName = "(game.wfrp4eCorePl.names.original(this.effect).includes(\"(Lore)\") ? this.effect.name : game.wfrp4eCorePl.names.original(this.effect))";
 		return source.replace(
 			expression,
 			"game.wfrp4eCorePl.scripts.loreKey(" + originalName + ".split(\"(\")[1].split(\")\")[0], " + JSON.stringify(id) + ")",
@@ -1169,7 +1196,7 @@ function applyBehaviorPatches(id, source, {sourceHash, polish}) {
 	if (id === "s6eZXfZkC1My6EXl") {
 		return source.replace(
 			"this.effect.name.split(\" \")[2].toLowerCase()",
-			"game.wfrp4eCorePl.scripts.loreKey(game.wfrp4eCorePl.names.original(this.effect).split(\" \")[2], " + JSON.stringify(id) + ")",
+			"game.wfrp4eCorePl.scripts.loreKey((game.wfrp4eCorePl.names.original(this.effect).includes(\"<Lore>\") ? this.effect.name : game.wfrp4eCorePl.names.original(this.effect)).split(\" \")[2], " + JSON.stringify(id) + ")",
 		);
 	}
 	if (MAGIC_WIND_NAME_IDS.has(id)) {
@@ -1388,9 +1415,18 @@ export function resolveScript(id, source, translation, {polish = true} = {}) {
 	if (transplanted.templateFallbacks.length) {
 		console.warn(MODULE_ID + " | Original template retained in script " + id, transplanted.templateFallbacks);
 	}
-	const localized = postTransplant
+	let localized = postTransplant
 		? applyPatchSet(id, transplanted.code, {sourceHash, fallback: corrected})
 		: transplanted.code;
+
+	// This source-only script retains its existing syntax repair and translation
+	// exclusion. Localize only the known visible prefix, for this source hash.
+	if (id === "nGTxNWBUBgTr87wU" && polish && sourceHash === "cc423286") {
+		localized = localized.replace(
+			"Becomes lodged in the armour or flesh of the opponent. See @UUID[",
+			"Ostrze klinuje się w pancerzu lub ciele przeciwnika. Zobacz @UUID[",
+		);
+	}
 	const patched = applyBehaviorPatches(id, localized, {sourceHash, polish});
 	return applyBilingualTransforms(patched, {id, polish});
 }
