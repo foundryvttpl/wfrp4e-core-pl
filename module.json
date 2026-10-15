@@ -88,6 +88,8 @@
     "babele-register.js",
     "load-scripts-pl.js",
     "modules/name-compatibility.js",
+    "modules/wom-embedded-compatibility.js",
+    "modules/wom-formula-compatibility.js",
     "modules/corruption-compatibility.js",
     "modules/chat-command-compatibility.js",
     "modules/script-compatibility.js",
@@ -111,7 +113,7 @@
       "path": "lang/pl.json"
     }
   ],
-  "version": "7.4.0",
+  "version": "7.4.1",
   "url": "https://github.com/foundryvttpl/wfrp4e-core-pl",
   "manifest": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/module.json",
   "download": "https://github.com/foundryvttpl/wfrp4e-core-pl/releases/latest/download/wfrp4e-core-pl.zip"

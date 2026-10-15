@@ -191,7 +191,7 @@ Hooks.once("ready", async () => {
                     "Kawalerzysta": ["Lekki Kawalerzysta"],
                     "Rycerz": ["Rycerz Najemny", "Rycerz Płonącego Słońca", "Rycerz Białego Wilka", "Rycerz Pantery"],
                     "Żołnierz": ["Łuczniczka", "Halabardnik", "Strzelec", "Gwardzista Elektorski", "Pikinier", "Specjalista Oblężniczy"],
-                    "Kapłan Bitewny": ["Kapłan Myrmidii"],
+                    "Kapłan Bitewny": ["Kapłanka Bitewna Myrmidii"],
                 },
                 dwarf: {
                     "Inżynier": ["Artylerzysta"],

@@ -265,7 +265,12 @@ Hooks.once("babele.init", (babele) => {
 				.map(itemId)
 				.filter(Boolean);
 			const hasCanonicalMelee = canonicalMeleeIds.length > 0;
-			const legacyMeleeIds = hasCanonicalMelee
+			// WOM 8.0.0 must retain both source skill documents. The PBTT
+			// cleanup otherwise removes a native WOM item during localisation.
+			const preserveWomItems = context.metadata?.id === "wfrp4e-wom.actors"
+				&& context.translation?.id === context.source?._id
+				&& game.modules.get("wfrp4e-wom")?.version === "8.0.0";
+			const legacyMeleeIds = hasCanonicalMelee && !preserveWomItems
 				? sourceItems
 					.filter(item => isMeleeSkill(item, "Melee")
 						&& Number(foundry.utils.getProperty(item, "system.advances.value")) === 0)
@@ -555,6 +560,40 @@ Hooks.once("babele.init", (babele) => {
 	// Dynamically routes modules/wfrp4e-core-pl/images to the currently active module ID
 	// and sanitizes journal pages, links, and embedded documents.
 	Hooks.on("babele.translateDocumentData", context => {
+// These three embedded traits were verified against their EN rule text,
+// effect identities and the exact Middenheim actor/item source identities.
+// A local name does not prevent a generic same-name pack from supplying
+// another rule's description or specification before the local override.
+if (context.metadata.type === "Item" && context.metadata.id !== "wfrp4e-core.items") {
+    const verifiedTraits = {
+        "Compendium.wfrp4e-middenheim.actors.Actor.AGyoIt9stdSin46x.Item.qfIcOnnYrq1gizBb": { sourceName: "Terror", name: "Groza" },
+        "Compendium.wfrp4e-middenheim.actors.Actor.3v8tiA5R7By89Jba.Item.ZIR0P9o1RS6zd9fY": { sourceName: "Terror", name: "Groza" },
+        "Compendium.wfrp4e-middenheim.actors.Actor.yKhanffLSWLcsY1C.Item.9MjH4xyVrd3Inzak": { sourceName: "Fast", name: "Szybki" }
+    };
+    const sourceUuid = context.source?.flags?.core?.sourceId || context.source?._stats?.compendiumSource;
+    const sourceId = context.source?.flags?.core?.sourceId;
+    const compendiumSource = context.source?._stats?.compendiumSource;
+    const consistentSource = !sourceId || !compendiumSource || sourceId === compendiumSource;
+    const rule = verifiedTraits[sourceUuid];
+    const originalName = context.source?.flags?.babele?.originalName ?? context.source?.name;
+    if (rule && consistentSource && context.source?._id === sourceUuid.split(".").at(-1)
+        && context.source?.type === "trait" && originalName === rule.sourceName) {
+        const corePack = babele.mappedCompendiumFor("wfrp4e-core.items");
+        const lookup = foundry.utils.mergeObject(context.source, { name: rule.sourceName }, { inplace: false });
+        if (corePack?.translated && corePack.hasTranslation(lookup, "Item")) {
+            // Translate the actual embedded document through the verified Core
+            // pack; existing effect IDs and mechanics come from this document.
+            context.translated = corePack.translate(lookup, true);
+            return;
+        }
+        // Missing Core is incomplete localisation, never permission to use
+        // an unrelated rule. Only the already approved local name is applied.
+        context.translated = { name: rule.name };
+        console.warn("WFRP4e PL: verified Core trait translation unavailable", sourceUuid);
+        return;
+    }
+}
+
 		if (context.metadata?.type === "Scene") {
 			if (context.translation?.image) {
 				const sourceLevels = Array.isArray(context.source?.levels)
@@ -571,6 +610,36 @@ Hooks.once("babele.init", (babele) => {
 					context.translated.background.src = resolveModuleAssetPath(context.translation.image);
 				}
 			}
+// QA proposal only. Insert inside the existing Scene branch of
+// babele.translateDocumentData, after the image/Level compatibility block.
+// Scope comes from Babele's actual pack metadata plus document type and ID.
+if (context.metadata.id === "wfrp4e-middenheim.scenes"
+    && context.translation?.id === context.source?._id) {
+    if (typeof context.translation.level_name === "string") {
+        const sourceLevels = context.translated.levels ?? context.source.levels ?? [];
+        const levels = foundry.utils.deepClone(Array.isArray(sourceLevels)
+            ? sourceLevels : Array.from(sourceLevels, level => level.toObject?.() ?? level));
+        const level = levels.find(level => level._id === context.source.initialLevel) ?? levels[0];
+        if (level) {
+            level.name = context.translation.level_name;
+            context.translated.levels = levels;
+        }
+    }
+    const sourceTiles = context.source.tiles ?? [];
+    const tiles = foundry.utils.deepClone(Array.isArray(sourceTiles)
+        ? sourceTiles : Array.from(sourceTiles, tile => tile.toObject?.() ?? tile));
+    let changedTile = false;
+    for (const tile of tiles) {
+        const original = tile.texture?.src;
+        const resolved = resolveModuleAssetPath(original);
+        if (resolved !== original) {
+            tile.texture.src = resolved;
+            changedTile = true;
+        }
+    }
+    if (changedTile) context.translated.tiles = tiles;
+}
+
 		}
 
 		if (context.source?.img) {

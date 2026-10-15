@@ -90,11 +90,111 @@ const ENGLISH_MAGIC_LORES = Object.freeze({
 	tzeentch: "Tzeentch",
 });
 
-export function localizedSpecialization(value) {
+const WOM_CONTEXTUAL_SPECIALIZATIONS = {
+  "skill:Channelling": {
+    "any colour": "Dowolne",
+    "wind": "Wiatr"
+  },
+  "skill:Lore": {
+    "magic": "Magia",
+    "local": "Lokalna",
+    "astronomy": "Astronomia",
+    "warfare": "Sztuka Wojenna",
+    "prophecy": "Proroctwa",
+    "chemistry": "Chemia",
+    "medicine": "Medycyna",
+    "any": "Dowolna",
+    "plants": "Rośliny",
+    "politics": "Polityka",
+    "undead": "Ożywieńcy",
+    "beasts": "Zwierzęta",
+    "daemonology": "Demonologia"
+  },
+  "skill:Language": {
+    "battle": "Bitewny",
+    "any": "Dowolny",
+    "guilder": "Gildii"
+  },
+  "skill:Secret Signs": {
+    "any": "Dowolne",
+    "amber order": "Kolegium Bursztynu"
+  },
+  "skill:Entertain": {
+    "fortune telling": "Wróżenie",
+    "acting": "Aktorstwo"
+  },
+  "skill:Melee": {
+    "any two": "Dowolne dwie",
+    "any": "Dowolna"
+  },
+  "skill:Stealth": {
+    "rural or urban": "Wieś lub Miasto"
+  },
+  "skill:Trade": {
+    "poisoner": "Trucizny",
+    "blacksmith or goldsmith or engineer": "Kowalstwo albo Złotnik, albo Inżynieria",
+    "engineer": "Inżynieria",
+    "blacksmith or goldsmith or engineer)": "Kowalstwo albo Złotnik, albo Inżynieria"
+  },
+  "talent:Arcane Magic": {
+    "lore of metal": "Metalu",
+    "wind": "Tradycja",
+    "lore of beasts": "Zwierząt",
+    "any arcane lore": "Dowolna Tradycja",
+    "lore of fire": "Ognia",
+    "shadows": "Cienia"
+  },
+  "talent:Master Tradesman": {
+    "poisoner": "Trucizny",
+    "alchemist": "Alchemik"
+  },
+  "talent:Resistance": {
+    "poison": "Trucizny",
+    "poison or disease": "Trucizny lub Choroby"
+  },
+  "talent:Savant": {
+    "alchemy": "Alchemia"
+  },
+  "talent:Etiquette": {
+    "guilder": "Członkowie Gildii",
+    "nobles": "Szlachta",
+    "scholars": "Uczeni"
+  },
+  "skill:Animal Training": {
+    "any": "Dowolna"
+  },
+  "talent:Craftsman": {
+    "blacksmith or goldsmith or engineer": "Inżynier albo Kowalstwo, albo Złotnik",
+    "alchemist": "Alchemik"
+  },
+  "talent:Fearless": {
+    "intruders": "Intruzi"
+  }
+};
+
+export function localizedSpecialization(value, {type, base} = {}) {
 	if (typeof value !== "string") {
 		return value;
 	}
 	const expected = value.trim().toLocaleLowerCase();
+	// Full base AND document type prevent collisions such as Lore (Beasts)
+	// versus Arcane Magic (Beasts), or Alchemist skill versus talent labels.
+	const contextKey = type + ":" + base;
+	const table = supportedWomSkillChoices() && Object.hasOwn(WOM_CONTEXTUAL_SPECIALIZATIONS, contextKey)
+		? WOM_CONTEXTUAL_SPECIALIZATIONS[contextKey] : undefined;
+	const contextual = table && Object.hasOwn(table, expected) ? table[expected] : undefined;
+	if (typeof contextual === "string") return contextual;
+	// WOM's owner-selected skill specialization. This is a display label,
+	// never a profession/talent rename or a stored rule/control-field change.
+	// Existing explicit Polish queries retain their names; native EN stays
+	// available through addRequestedAlias on the generated generic document.
+	if (game.i18n?.lang === "pl" && type === "skill" && base === "Trade"
+		&& expected === "alchemist"
+		&& game.modules?.get("wfrp4e-wom")?.active === true
+		&& game.modules.get("wfrp4e-wom").version === "8.0.0"
+		&& game.modules?.get("wfrp4e-core")?.version === "8.0.1") {
+		return "Alchemia";
+	}
 	if (expected === "choose one" || expected === "choose group" || expected === "any one") {
 		return "dowolne";
 	}
@@ -397,7 +497,7 @@ export function display(query, type) {
 			const opening = query.indexOf("(");
 			const closing = query.lastIndexOf(")");
 			const spec = query.slice(opening + 1, closing);
-			return `${displayBase} (${localizedSpecialization(spec)})`;
+			return `${displayBase} (${localizedSpecialization(spec, {type: types.length === 1 ? types[0] : undefined, base})})`;
 		}
 	}
 	return query;
@@ -552,7 +652,7 @@ export function localizedSpecializedName(utility, document, query, matchedAlias)
 		return displayBase + " " + requested.slice(opening);
 	}
 	const specialization = requested.slice(opening + 1, closing);
-	const suffix = "(" + localizedSpecialization(specialization) + ")" + requested.slice(closing + 1);
+	const suffix = "(" + localizedSpecialization(specialization, {type: document?.type, base: matchedBase}) + ")" + requested.slice(closing + 1);
 	return displayBase + " " + suffix;
 }
 
@@ -617,6 +717,53 @@ async function findAliasBase(utility, name, type) {
 	item.updateSource({name: localizedSpecializedName(utility, document, name, matchedAlias)});
 	addRequestedAlias(item, name);
 	return item;
+}
+
+
+// Exact current WFRP SkillModel source guard: this small facade is safe only
+// while the upstream method reads the explicitly supplied public properties.
+const SKILL_CHOICE_SOURCE = "async _handleSpecialisationChoice(data, options, user)\n    {\n        if (this.parent.isEmbedded && !options.skipSpecialisationChoice)\n        {\n            // If skill has (any) or (), ask for a specialisation\n            if (this.parent.specifier.toLowerCase() == game.i18n.localize(\"SPEC.Any\").toLowerCase() || (this.isGrouped && !(this.parent.specifier)))\n            {\n                let skills = await warhammer.utility.findAllItems(\"skill\", game.i18n.localize(\"SHEET.LoadingSkills\"), true);\n                let specialisations = skills.filter(i => i.name.split(\"(\")[0]?.trim() == this.parent.baseName);\n                let effects = [];\n\n                // if specialisations are found, prompt it, if not, skip to value dialog\n                let choice = specialisations.length > 0 ? await ItemDialog.create(specialisations, 1, {title : game.i18n.localize(\"SHEET.SkillSpecialization\"), text : game.i18n.localize(\"SHEET.SkillSpecializationText\")}) : [];\n                let newName = \"\";\n                if (choice[0])\n                {\n                    // Need to fetch the item to get effects...\n                    let chosenSkill = await fromUuid(choice[0].uuid);\n                    newName = chosenSkill.name;\n                    effects = chosenSkill.effects?.contents.map(i => i.toObject());\n                }\n                else \n                {\n                    newName = this.parent.baseName + ` (${await ValueDialog.create({text: game.i18n.localize(\"SHEET.SkillSpecializationEnter\"), title : game.i18n.localize(\"SHEET.SkillSpecialization\")})})`;\n\n                }\n\n                if (newName)\n                {\n                    this._handleSkillNameChange(newName, this.parent.name, options.career);\n                    this.parent.updateSource({name : newName, effects});\n                }\n            }\n        }\n    }";
+const SKILL_CHOICE_PATCH_MARK = Symbol.for(MODULE_ID + ".womSkillChoiceCompatibility");
+const WOM_SINGLE_SKILL_CHOICES = new Set([
+	"sekretne znaki (dowolne)", "broń biała (dowolna)",
+	"wiedza (dowolna)", "tresura (dowolna)",
+]);
+function supportedWomSkillChoices() {
+	return game.i18n?.lang === "pl"
+		&& game.modules?.get("wfrp4e-wom")?.active === true
+		&& game.modules.get("wfrp4e-wom").version === "8.0.0"
+		&& game.modules?.get("wfrp4e-core")?.version === "8.0.1";
+}
+export function installSkillChoiceCompatibility() {
+	const prototype = globalThis.CONFIG?.Item?.dataModels?.skill?.prototype;
+	const original = prototype?._handleSpecialisationChoice;
+	if (!prototype || prototype[SKILL_CHOICE_PATCH_MARK]
+		|| typeof original !== "function" || !supportedWomSkillChoices()
+		|| original.toString().replace(/\r\n/g, "\n").trim() !== SKILL_CHOICE_SOURCE) return false;
+	prototype._handleSpecialisationChoice = function (data, options, user) {
+		const parent = this.parent;
+		if (!supportedWomSkillChoices() || !parent?.isEmbedded || !this.isGrouped
+			|| options.skipSpecialisationChoice
+			|| !WOM_SINGLE_SKILL_CHOICES.has(String(parent.name).toLocaleLowerCase())) {
+			return original.call(this, data, options, user);
+		}
+		// Only the comparison view sees the canonical Any token. All real names,
+		// selected effects, source documents and career-link arguments stay intact.
+		const context = {
+			isGrouped: this.isGrouped,
+			parent: {
+				isEmbedded: parent.isEmbedded,
+				specifier: game.i18n.localize("SPEC.Any"),
+				baseName: parent.baseName,
+				name: parent.name,
+				updateSource: parent.updateSource.bind(parent),
+			},
+			_handleSkillNameChange: (...args) => this._handleSkillNameChange(...args),
+		};
+		return original.call(context, data, options, user);
+	};
+	Object.defineProperty(prototype, SKILL_CHOICE_PATCH_MARK, {value: true});
+	return true;
 }
 
 export function installNameCompatibility() {
@@ -707,12 +854,14 @@ export function installNameCompatibility() {
 
 if (globalThis.Hooks) {
 	Hooks.once("init", () => {
+		installSkillChoiceCompatibility();
 		installNameCompatibility();
 		installFormulaCompatibility();
 		installMigrationCompatibility();
 		installWeaponSkillCompatibility();
 	});
 	Hooks.once("ready", () => {
+		installSkillChoiceCompatibility();
 		// Retry after Babele and every premium module have initialized. The
 		// patch is idempotent, so this only matters when the system API was not
 		// yet exposed during this module's init callback.
