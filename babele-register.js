@@ -1,4 +1,11 @@
+import "./modules/content-lifecycle.js";
+import {registerLegacyActorItemsConverter} from "./modules/legacy-actor-items-converter.js";
+import "./modules/bulk-content-update.js";
+import "./modules/content-organization.js";
+import "./modules/scene-map-compatibility.js";
 import "./modules/folder-compatibility.js";
+import "./modules/orphaned-test-messages.js";
+import { patchBabeleIndexTranslation } from "./modules/compendium-browser-compatibility.js";
 
 const MODULE_ID = import.meta.url.match(/modules\/([^/]+)/)?.[1] || "wfrp4e-core-pl";
 const MODULE_PATH = `modules/${MODULE_ID}`;
@@ -52,6 +59,8 @@ game.wfrp4eCorePl.setEffectDuration = (effect, value, units = "rounds", {source 
 };
 
 Hooks.once("babele.init", (babele) => {
+    if (game.release?.generation >= 14) registerLegacyActorItemsConverter(babele);
+	patchBabeleIndexTranslation(babele);
 	const origIsTranslated = babele.isTranslated;
 	if (typeof origIsTranslated === "function") {
 		babele.isTranslated = function(pack) {
@@ -253,186 +262,14 @@ Hooks.once("babele.init", (babele) => {
 			}
 			if (context.metadata?.type !== "Actor") return;
 
-			// PBTT contains a repeatable upstream data defect: some Actors have both
-			// the real Melee (Basic) skill and an obsolete, zero-advance Melee skill.
-			// They legitimately become the same Polish name, which exposes the bad
-			// source record. Remove only that exact legacy pair; never deduplicate by
-			// translated name. Persist the verified source IDs so reinitialization can
-			// also migrate Actors which were imported before this correction.
 			const sourceItems = valuesOf(context.source?.items);
-			const canonicalMeleeIds = sourceItems
-				.filter(item => isMeleeSkill(item, "Melee (Basic)"))
-				.map(itemId)
-				.filter(Boolean);
-			const hasCanonicalMelee = canonicalMeleeIds.length > 0;
-			// WOM 8.0.0 must retain both source skill documents. The PBTT
-			// cleanup otherwise removes a native WOM item during localisation.
-			const preserveWomItems = context.metadata?.id === "wfrp4e-wom.actors"
-				&& context.translation?.id === context.source?._id
-				&& game.modules.get("wfrp4e-wom")?.version === "8.0.0";
-			const legacyMeleeIds = hasCanonicalMelee && !preserveWomItems
-				? sourceItems
-					.filter(item => isMeleeSkill(item, "Melee")
-						&& Number(foundry.utils.getProperty(item, "system.advances.value")) === 0)
-					.map(itemId)
-					.filter(Boolean)
-				: [];
-			if (legacyMeleeIds.length) {
-				const legacyIdSet = new Set(legacyMeleeIds);
-				context.translated.items = removeItemsById(context.translated?.items, legacyIdSet);
-				foundry.utils.setProperty(
-					context.translated,
-					`flags.${MODULE_ID}.legacyMeleeItemIds`,
-					legacyMeleeIds
-				);
-				foundry.utils.setProperty(
-					context.translated,
-					`flags.${MODULE_ID}.canonicalMeleeItemIds`,
-					canonicalMeleeIds
-				);
-				foundry.utils.setProperty(
-					context.translated,
-					"flags.wfrp4e-core-pl.legacyMeleeItemIds",
-					legacyMeleeIds
-				);
-				foundry.utils.setProperty(
-					context.translated,
-					"flags.wfrp4e-core-pl.canonicalMeleeItemIds",
-					canonicalMeleeIds
-				);
-			}
-
 			const itemTranslations = context.translation?.items || {};
 			const sourceItemsById = new Map(
 				sourceItems.map(item => [itemId(item), item]).filter(([id]) => id)
 			);
-			// The published Zoo character sheets correct a handful of upstream
-			// embedded values. Target immutable actor/item IDs, never translated names.
-			const zooPdfOverrides = {
-				"Jorunn Gromsdottir": {
-					LmoIzvPxktX3R8aP: { quantity: 1 },
-					rqc9RhPJwC03Lz3P: { quantity: 9 },
-				},
-				"Lynathryn Nightsong": {
-					"5DaH67F2lpzKoBtw": { quantity: 2 },
-					"6cqfcwWPvb4pKQ3C": { quantity: 6 },
-				},
-				"Theodosius Schreiber": {
-					"8pBZUOkYWE1pWrUi": { advances: 5 },
-					xaQxfWArRkLIfoUO: { advances: 5 },
-					pLURhwQ6Uds6OZ2Q: { advances: 3 },
-					dpJYAjtD23pa2p94: { quantity: 30 },
-				},
-				"Kistiane Brockdorf": {
-					NfyTTmZZbFDwXnfe: { quantity: 10 },
-				},
-			};
-			const zooOverrides = zooPdfOverrides[context.source?.name] || {};
-			// PDF page 122 gives Erich one additional canonical skill absent from the
-			// upstream actor. This is a complete copy of the core Tilean skill, with
-			// only its character-specific advancement changed.
-			if (context.source?.name === "Erich Massenbach") {
-				const hasTilean = valuesOf(context.translated?.items)
-					.some(item => itemId(item) === "12e3H6NX4JH0bwI3");
-				if (!hasTilean) {
-					const tilean = {
-						_id: "12e3H6NX4JH0bwI3",
-						name: "Język (Tileański)",
-						type: "skill",
-						img: "modules/wfrp4e-core/icons/skills/adv-skill-int.png",
-						effects: [],
-						flags: { _sheetTab: {}, core: {} },
-						system: {
-							description: { type: "String", label: "Description", value: "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}</p>" },
-							gmdescription: { type: "String", label: "Description", value: "" },
-							advanced: { value: "adv", type: "String" },
-							grouped: { value: "isSpec", type: "String" },
-							characteristic: { type: "String", label: "Characteristic", value: "int" },
-							advances: { type: "Number", label: "Advances", value: 10, costModifier: 0, force: false },
-							modifier: { type: "Number", label: "Advances", value: 0 },
-							total: { type: "Number", label: "Total" },
-							source: { type: "String", label: "Source" },
-						},
-					};
-					if (Array.isArray(context.translated?.items)) {
-						context.translated.items.push(tilean);
-					} else if (context.translated?.items) {
-						context.translated.items[tilean._id] = tilean;
-					}
-				}
-				// PDF page 122 also lists two personal belongings that are absent from
-				// the upstream actor. They are inert trapping documents: no effects,
-				// tests, rules, or source item data are inferred for them.
-				const erichPdfEquipment = [
-					{
-						_id: "ErichBrush260919",
-						name: "Szczotka",
-						type: "trapping",
-						img: "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/face-powder.png",
-						effects: [],
-						flags: { _sheetTab: {}, core: {} },
-						system: {
-							description: { type: "String", label: "Description", value: "<p></p>" },
-							gmdescription: { type: "String", label: "Description", value: "" },
-							quantity: { type: "Number", label: "Quantity", value: 1 },
-							encumbrance: { type: "Number", label: "Encumbrance", value: 0 },
-							price: { type: "String", label: "Price", gc: 0, ss: 0, bp: 0 },
-							availability: { type: "String", label: "Availability", value: "None" },
-							location: { type: "Number", label: "Location", value: "" },
-							trappingType: { type: "String", label: "Trapping Type", value: "toolsAndKits" },
-							worn: false,
-							spellIngredient: { type: "String", value: "" },
-							qualities: { label: "Qualities", value: [] },
-							flaws: { label: "Flaws", value: [] },
-							damageToItem: { value: null, shield: null },
-						},
-					},
-					{
-						_id: "ErchLetters26091",
-						name: "Listy do ojca (niewysłane)",
-						type: "trapping",
-						img: "modules/wfrp4e-core/icons/equipment/book_documents/parchmentsheet.png",
-						effects: [],
-						flags: { _sheetTab: {}, core: {} },
-						system: {
-							description: { type: "String", label: "Description", value: "<p></p>" },
-							gmdescription: { type: "String", label: "Description", value: "" },
-							quantity: { type: "Number", label: "Quantity", value: 1 },
-							encumbrance: { type: "Number", label: "Encumbrance", value: 0 },
-							price: { type: "String", label: "Price", gc: 0, ss: 0, bp: 0 },
-							availability: { type: "String", label: "Availability", value: "None" },
-							location: { type: "Number", label: "Location", value: "" },
-							trappingType: { type: "String", label: "Trapping Type", value: "booksAndDocuments" },
-							worn: false,
-							spellIngredient: { type: "String", value: "" },
-							qualities: { label: "Qualities", value: [] },
-							flaws: { label: "Flaws", value: [] },
-							damageToItem: { value: null, shield: null },
-						},
-					},
-				];
-				const existingErichItemIds = new Set(
-					valuesOf(context.translated?.items).map(item => itemId(item)).filter(Boolean)
-				);
-				for (const equipment of erichPdfEquipment) {
-					if (existingErichItemIds.has(equipment._id)) continue;
-					if (Array.isArray(context.translated?.items)) {
-						context.translated.items.push(equipment);
-					} else if (context.translated?.items) {
-						context.translated.items[equipment._id] = equipment;
-					}
-				}
-			}
 			for (const item of valuesOf(context.translated?.items)) {
 				const itemId = item?._id ?? item?.id;
 				if (!itemId) continue;
-				const zooOverride = zooOverrides[itemId];
-				if (zooOverride?.quantity !== undefined) {
-					foundry.utils.setProperty(item, "system.quantity.value", zooOverride.quantity);
-				}
-				if (zooOverride?.advances !== undefined) {
-					foundry.utils.setProperty(item, "system.advances.value", zooOverride.advances);
-				}
 				const translation = itemTranslations[itemId]
 					?? valuesOf(itemTranslations).find(entry => (entry?._id ?? entry?.id) === itemId);
 				const sourceItem = sourceItemsById.get(itemId);
@@ -488,6 +325,25 @@ Hooks.once("babele.init", (babele) => {
 		if (typeof val !== "string") return val;
 		// Repair verified asset renames only in standalone paths and HTML image sources.
 		const assetAliases = {
+		  "modules/wfrp4e-eis/assets/actors/gottri-gurnisson.webp": "modules/wfrp4e-core-pl/images/eis/gottri-gurnisson.webp",
+		  "modules/wfrp4e-eis/assets/set-pictures/gottri-gurnisson2.webp": "modules/wfrp4e-core-pl/images/eis/gottri-gurnisson2.webp",
+		  "modules/wfrp4e-eis/assets/handouts/purple-hand.webp": "modules/wfrp4e-core-pl/images/eis/handouts/purple-hand.webp",
+		  "modules/wfrp4e-horned-rat/assets/maps/middenheim-karak-skygg.webp": "modules/wfrp4e-core-pl/images/horned-rat/maps/middenheim-karak-skygg.webp",
+		  "modules/wfrp4e-horned-rat/assets/maps/road-to-brasskeep.webp": "modules/wfrp4e-core-pl/images/horned-rat/maps/road-to-brasskeep.webp",
+		  "modules/wfrp4e-horned-rat/assets/misc/council-vote.webp": "modules/wfrp4e-core-pl/images/horned-rat/misc/council-vote.webp",
+		  "modules/wfrp4e-middenheim/assets/handouts/rudolf-wanted.webp": "modules/wfrp4e-core-pl/images/middenheim/handouts/rudolf-wanted.webp",
+		  "modules/wfrp4e-pbtt/assets/images/dwarf-valley-choirs.webp": "modules/wfrp4e-core-pl/images/pbtt/images/dwarf-valley-choirs.webp",
+		  "modules/wfrp4e-pbtt/assets/images/festival-of-fine-ales.webp": "modules/wfrp4e-core-pl/images/pbtt/images/festival-of-fine-ales.webp",
+		  "modules/wfrp4e-pbtt/assets/images/handout-menu.webp": "modules/wfrp4e-core-pl/images/pbtt/images/handout-menu.webp",
+		  "modules/wfrp4e-pbtt/assets/images/party-invitation.webp": "modules/wfrp4e-core-pl/images/pbtt/images/party-invitation.webp",
+		  "modules/wfrp4e-pbtt/assets/images/powers-that-be.webp": "modules/wfrp4e-core-pl/images/pbtt/images/powers-that-be.webp",
+		  "modules/wfrp4e-pbtt/assets/images/schedule-royal-college.webp": "modules/wfrp4e-core-pl/images/pbtt/images/schedule-royal-college.webp",
+		  "modules/wfrp4e-pbtt/assets/images/schedule-royal-gardens.webp": "modules/wfrp4e-core-pl/images/pbtt/images/schedule-royal-gardens.webp",
+		  "modules/wfrp4e-pbtt/assets/images/schedule-square-of-martials.webp": "modules/wfrp4e-core-pl/images/pbtt/images/schedule-square-of-martials.webp",
+		  "modules/wfrp4e-pbtt/assets/images/schedule-the-great-park.webp": "modules/wfrp4e-core-pl/images/pbtt/images/schedule-the-great-park.webp",
+		  "modules/wfrp4e-pbtt/assets/images/templars-arms.webp": "modules/wfrp4e-core-pl/images/pbtt/images/templars-arms.webp",
+		  "modules/wfrp4e-pbtt/assets/maps/altdorf-to-middenheim.webp": "modules/wfrp4e-core-pl/images/pbtt/maps/altdorf-to-middenheim.webp",
+		  "modules/wfrp4e-pbtt/assets/maps/lair-of-the-pawns.webp": "modules/wfrp4e-core-pl/images/pbtt/maps/lair-of-the-pawns.webp",
 		  "modules/wfrp4e-core/icons/traits/trait.webp": "modules/wfrp4e-core/icons/traits/trait.png",
 		  "modules/wfrp4e-core/icons/equipment/weapons/quarterstaff.png": "modules/wfrp4e-core/icons/equipment/weapons/quarter-staff.png",
 		  "modules/wfrp4e-soc/assets/items/upgrade.png": "modules/wfrp4e-soc/assets/icons/upgrade.png",
@@ -500,6 +356,7 @@ Hooks.once("babele.init", (babele) => {
 		  "modules/wfrp4e-wom/assets/misc/wheel-of-magic.webp": "modules/wfrp4e-core-pl/images/wom/the Colleges of Magic.webp",
 		  "modules/wfrp4e-ua2/assets/images/fishrook-returns.webp": "modules/wfrp4e-core-pl/images/ua2/maps/fishrook-sightings.webp",
 		  "modules/wfrp4e-horned-rat/assets/handouts/web.webp": "modules/wfrp4e-core-pl/images/horned-rat/handouts/web.webp",
+		  "modules/wfrp4e-horned-rat/assets/handouts/handout2.webp": "modules/wfrp4e-core-pl/images/horned-rat/handouts/handout2.webp",
 		  "modules/wfrp4e-rnhd/assets/images/ambosstein.webp": "modules/wfrp4e-core-pl/images/rnhd/dom-ambosstein.webp",
 		  "modules/wfrp4e-middenheim/assets/misc/low-king-turf.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/low-king-turf.webp",
 		  "modules/wfrp4e-middenheim/assets/misc/purple-hand-org.webp": "modules/wfrp4e-core-pl/images/middenheim/misc/purple-hand-org.webp",
@@ -730,7 +587,7 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 		return result;
 	};
 	
-	babele.registerConverters({
+	const contentConverters = {
 		effects: (effects, translations) => {
 			return effects.map((data) => {
 				if (translations){
@@ -751,6 +608,7 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 		notes: (notes, translations) => {
 			// TODO: notes on map.
 			return notes.map((data) => {
+				data = foundry.utils.deepClone(data);
 				if (translations){ 
 					const translation = translations[data.id] ?? translations[data._id];
 					if (translation) {
@@ -771,6 +629,7 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 		// dedicated "drawings" converter that matches by _id, mirroring "notes" above.
 		drawings: (drawings, translations) => {
 			return drawings.map((data) => {
+				data = foundry.utils.deepClone(data);
 				if (translations){
 					const translation = translations[data.id] ?? translations[data._id];
 					if (translation) {
@@ -784,9 +643,11 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 			});
 		},
 
-		tableResults: (results, translations) => {
+		tableResults: (results, translations, source, context, allTranslations) => {
 			const isV13Plus = Boolean(game.release?.generation >= 13);
+			const restoring = allTranslations && allTranslations === source?.flags?.babele?.originalPayload;
 			return results.map(data => {
+				data = foundry.utils.deepClone(data);
 				if (translations) {
 					const translation = translations[data._id] || translations[`${data.range?.[0]}-${data.range?.[1]}`];
 					if (translation) {
@@ -879,7 +740,7 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 						}
 					}
 				}
-				if (data.documentUuid) {
+				if (data.documentUuid && !restoring) {
 					try {
 						const parsed = foundry.utils.parseUuid(data.documentUuid);
 						if (parsed?.collection?.collection) {
@@ -962,5 +823,15 @@ if (context.metadata.id === "wfrp4e-middenheim.scenes"
 			}
 			return trappings;
 		},
-	});
+	};
+	// Custom collection converters also need an export phase. Babele uses it
+	// to retain the native source for rollback and safe update comparisons.
+	for (const name of ['effects', 'notes', 'drawings', 'tableResults']) {
+		contentConverters[name].extract = values => Object.fromEntries((values ?? []).map(value =>
+			[value._id ?? value.id ?? value.name, foundry.utils.deepClone(value)]));
+	}
+	for (const name of ['templateSkills', 'templateTalents', 'templateTrappings', 'templateTraits']) {
+		contentConverters[name].extract = values => values != null ? foundry.utils.deepClone(values) : values;
+	}
+	babele.registerConverters(contentConverters);
 });

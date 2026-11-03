@@ -6,7 +6,8 @@
             "path": "notes",
             "converter": "notes"
         },
-        "units": "grid.units"
+        "units": "grid.units",
+        "distance": "grid.distance"
     },
     "entries": {
         "Barony of Böhrn": {
@@ -207,7 +208,8 @@
                 "obnX6g5vGCJj6N22": {
                     "text": ""
                 }
-            }
+            },
+            "distance": 4.02336
         }
     }
 }

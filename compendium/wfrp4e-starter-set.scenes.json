@@ -7,7 +7,8 @@
             "converter": "notes"
         },
         "units": "grid.units",
-        "scene_note": "flags.wfrp4e-starter-set.scene-note"
+        "scene_note": "flags.wfrp4e-starter-set.scene-note",
+        "distance": "grid.distance"
     },
     "entries": {
         "Ubersreik City": {
@@ -279,13 +280,15 @@
                     "text": "Księstwo Czarnej Skały"
                 }
             },
-            "units": "km"
+            "units": "km",
+            "distance": 0.160934
         },
         "Ubersreik Surrounds": {
             "id": "dffFQGeXYq79AE8p",
             "name": "Okolice Ubersreiku",
             "image": "modules/wfrp4e-core-pl/images/starter-set/ubersreik-surrounds.webp",
-            "units": "km"
+            "units": "km",
+            "distance": 8.04672
         }
     }
 }

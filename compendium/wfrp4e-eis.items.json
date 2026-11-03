@@ -3,18 +3,18 @@
   "mapping": {
     "gmdescription": "system.gmdescription.value",
     "skills": {
-        "path": "system.skills",
-        "converter": "templateSkills"
+      "path": "system.skills",
+      "converter": "templateSkills"
     },
     "talents": {
-        "path": "system.talents",
-        "converter": "templateTalents"
+      "path": "system.talents",
+      "converter": "templateTalents"
     },
     "class": "system.class.value",
     "careergroup": "system.careergroup.value",
     "trappings": {
-        "path": "system.trappings",
-        "converter": "templateTrappings"
+      "path": "system.trappings",
+      "converter": "templateTrappings"
     },
     "duration_value": "system.duration.value",
     "duration_unit": "system.duration.unit",
@@ -87,7 +87,8 @@
     "Lore of Witchcraft": "Tradycja Czarostwa",
     "Lore of Necromancy": "Tradycja Nekromancji",
     "Undivided": "Niepodzielnego",
-    "Petty Spells": "Proste Zaklęcia"
+    "Petty Spells": "Proste Zaklęcia",
+    "Lore of Tzeentch": "Tradycja Tzeentcha"
   },
   "entries": {
     "Chosen of Tzeentch": {
@@ -886,7 +887,7 @@
           "scriptData": [
             {
               "id": "pd25Q5jvE4qEnucM",
-              "name": " Testy Charyzma przeciwko mutantom",
+              "name": "Testy Charyzma przeciwko mutantom",
               "script": "[Script.956dUb5sd6OtbWZR]",
               "hideScript": "[Script.yIGItnshXI4W46cp]",
               "submissionScript": "[Script.3jm0NoYpgB6ZuUSl]"
@@ -2170,7 +2171,7 @@
     "Blue Fire of Tzeentch": {
       "id": "wY6JAt76eArBroYC",
       "name": "Niebieski płomień Tzeentcha",
-      "description": "<p>Przyzywasz wirującą kulę iskrzącego błękitnego ognia, która po chłania Twoich wrogów. <em>Niebieski Płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +3 zadawanym wszystkim Celom na Obszarze działania. Każdy trafiony otrzymuje również jeden Stan @Condition[ablaze]{Podpalenie}.</p><p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nią Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p><p>Tradycja<strong>: Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha. </p>",
+      "description": "<p>Przyzywasz wirującą kulę iskrzącego błękitnego ognia, która pochłania Twoich wrogów. <em>Niebieski Płomień Tzeentcha</em> uznawany jest za <em>magiczny pocisk</em> o współczynniku Obrażeń +3 zadawanym wszystkim Celom na Obszarze działania. Każdy trafiony otrzymuje również jeden Stan @Condition[ablaze]{Podpalenie}.</p><p>Jeżeli w wyniku tego zaklęcia albo wywołanego przez nią Stanu <em>Podpalenie</em> Żywotność istoty o Rozmiarze (Mały) lub większej zostanie obniżona do 0, rzuć [[/r 1d10]]{1k10}. Gdy wypadnie 9, dwa @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{niebieskie strachulce} wydzierają sobie drogę pazurami z ciała ofiary czaru, zabijając ją na miejscu.</p><p><strong>Tradycja:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać <strong>Wymagający (+0) Test Odporności</strong> lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha. </p>",
       "sourceId": "Compendium.wfrp4e-eis.items.wY6JAt76eArBroYC",
       "effects": {
         "kpfKJaxLFqOnbIli": {
@@ -2203,7 +2204,7 @@
     "Bolt of Change": {
       "id": "UOGORIbMyGWflehS",
       "name": "Pocisk przemiany",
-      "description": "<p> Pulsujący pocisk migotliwej energii Chaosu przecina powietrze i jest traktowany jak <em>magiczny pocisk</em>o współczynniku obrażeń +7. Co więcej, trafiony cel musi wykonać <strong>Wymagający (+0) Test Odporności</strong> lub dostaje 1 Punkt Zepsucia.  W przypadku Pecha w tym Teście ofiara natychmiast musi wylosować Mutację (@Table[mutatemental]{Psychiczną} or @Table[mutatephys]{Fizyczną}) i otrzymuje Talent @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Talent Magia Chaosu (Tzeentch)} . Bohater poddany mutującemu wpływowi tego zaklęcia może wydać Punkt Bohatera, aby oprzeć się przemianie. </p><p><strong>Atrybut Tradycji:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p><p></p>",
+      "description": "<p>Pulsujący pocisk migotliwej energii Chaosu przecina powietrze i traktowany jest jak <em>magiczny pocisk</em> o współczynniku Obrażeń +7. Co więcej, trafiony cel musi wykonać <strong>Wymagający (+0) Test Odporności</strong> lub dostaje 1 Punkt Zepsucia.  W przypadku Pecha w tym Teście ofiara natychmiast musi wylosować mutację (@Table[mutatemental]{Psychiczną} lub @Table[mutatephys]{Fizyczną}) i otrzymuje Talent @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Magia Chaosu (Tzeentch)}. Bohater poddany mutującemu wpływowi tego zaklęcia może wydać Punkt Bohatera, aby oprzeć się przemianie. </p><p><strong>Atrybut Tradycji:</strong> Cele zaklęć Tradycji Tzeentcha są rozdzierane przez mutujące moce Chaosu. Cel poddany działaniu Czaru z Tradycji Tzeentcha musi zdać Wymagający (+0) Test Odporności lub otrzyma 1 Punkt Zepsucia. Zdany Test oznacza, że zamiast tego cel otrzymuje 1 Punkt Szczęścia, który można wydać zgodnie z zasadami. Taka jest bowiem kapryśna natura Tzeentcha.</p><p></p>",
       "sourceId": "Compendium.wfrp4e-eis.items.UOGORIbMyGWflehS",
       "effects": {
         "35UAihuCR5o2saMI": {
@@ -2841,17 +2842,17 @@
     },
     "Amorphous": {
       "id": "wOf9AwaFctvEx5gQ",
-      "name": "Bezkształtny ",
+      "name": "Bezkształtny",
       "description": "<p>Stworzenie jest amorficzną plamą. Otrzymuje połowę Ran od ataków, jeśli nie są zadane ogniem, zimnem lub magią. Ignoruje wszystkie Rany Krytyczne i może zostać zabite jedynie wtedy, gdy jego Żywotność spadnie do 0 na skutek Obrażeń zadanych magią, zimnem lub ogniem. Jeżeli Żywotność zostanie zredukowana do 0 przez inny rodzaj ataku, istota zapada w letarg na [[/r 1d10]]{1k10} Rund, po których regeneruje 1 punkt Żywotności. Bezkształtne stworzenia unkają ekstremalnych źródeł ciepła czy zimna.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.wOf9AwaFctvEx5gQ",
       "effects": {
         "lKNdxLICyt0l9hli": {
           "id": "lKNdxLICyt0l9hli",
-          "name": "Bezkształtny ",
+          "name": "Bezkształtny",
           "scriptData": [
             {
               "id": "lKNdxLICyt0l9hli",
-              "name": "Bezkształtny ",
+              "name": "Bezkształtny",
               "script": "[Script.pR4Q2OnPxXtwRVli]"
             },
             {
@@ -2865,7 +2866,7 @@
     },
     "Blighted": {
       "id": "nJJU7N7pjtscQIHi",
-      "name": "Siewca Zarazy (Typ)",
+      "name": "Siewca Zarazy",
       "description": "<p>Istota jest nosicielem choroby wymienionej w nawiasie, którą może przekazywać przy pomocy dotyku. Dotknięta ofiara musi wykonać odpowiedni Test, aby uniknąć Zarażenia, lecz jest on o dwa stopnie trudniejszy niż normalnie. Jeżeli ofiara zostanie zarażona, Inkubacja choroby staje się &lsquo;Natychmiastowa&rsquo;.</p>",
       "sourceId": "Compendium.wfrp4e-eis.items.nJJU7N7pjtscQIHi",
       "specification": "Choroba"

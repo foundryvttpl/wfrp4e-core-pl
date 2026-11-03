@@ -1,25 +1,3 @@
-const EMBEDDED_ACTOR_TRANSLATION_VERSION = 2;
-const TRANSLATED_ACTOR_MODULES = [
-    "wfrp4e-core",
-    "wfrp4e-up-in-arms",
-    "wfrp4e-archives1",
-    "wfrp4e-dotr",
-    "wfrp4e-dwarfs",
-    "wfrp4e-eis",
-    "wfrp4e-empire-ruins",
-    "wfrp4e-horned-rat",
-    "wfrp4e-lustria",
-    "wfrp4e-pbtt",
-    "wfrp4e-rnhd",
-    "wfrp4e-salzenmund",
-    "wfrp4e-soc",
-    "wfrp4e-starter-set",
-    "wfrp4e-ua1",
-    "wfrp4e-ua2",
-    "wfrp4e-wom",
-    "wfrp4e-zoo",
-];
-
 function activeCorePlModuleId() {
     return game.wfrp4eCorePl?.MODULE_ID
         ?? (game.modules.get("wfrp4e-core-pl")?.active ? "wfrp4e-core-pl" : "wfrp4e-core-pl");
@@ -29,38 +7,18 @@ function activeCorePlModulePath() {
     return game.wfrp4eCorePl?.MODULE_PATH ?? `modules/${activeCorePlModuleId()}`;
 }
 
-function getTranslatedActorModules() {
-    const modules = new Set(TRANSLATED_ACTOR_MODULES);
-    for (const module of game.modules?.values() ?? []) {
-        if (!module.active || module.id === activeCorePlModuleId()) continue;
-        if (!module.id.startsWith("wfrp4e-")) continue;
-        const actorPack = (module.flags?.initializationPacks || [])
-            .map(id => game.packs.get(id))
-            .find(p => p?.documentName === "Actor") ?? game.packs.get(`${module.id}.actors`);
-        if (actorPack && game.babele?.isTranslated?.(actorPack)) {
-            modules.add(module.id);
-        }
-    }
-    return modules;
-}
-
 Hooks.on("init", () => {
 	CONFIG.supportedLanguages["pl"] = "Polski";
     if (game.data?.packs) {
         game.data.packs = game.data.packs.filter(i => i.name != "basic" || i.system != "wfrp4e");
     }
-    game.settings.register(activeCorePlModuleId(), "embeddedActorTranslationVersions", {
-        scope: "world",
-        config: false,
-        type: Object,
-        default: {},
-    });
 });
 
 WarhammerModuleInitializationV2.initialize = async function (ev, target) {
     let key = target.closest("[data-module]").dataset.module;
     let module = game.modules.get(key);
-    let dialogContent = game.i18n.format("WH.Initializer.DialogContent", {title : module.title, description : module.description});
+    const moduleTitle = premiumModuleTitle(key, module.title);
+    let dialogContent = game.i18n.format("WH.Initializer.DialogContent", {title : moduleTitle, description : module.description});
     const packLines = await Promise.all(module.flags.initializationPacks.map(async p =>
     {
         let pack = game.packs.get(p);
@@ -79,22 +37,54 @@ WarhammerModuleInitializationV2.initialize = async function (ev, target) {
     <hr>
     ${systemConfig().copyrightText.replace("@AUTHORS@", authorNames)}
     `;
-    if (await foundry.applications.api.DialogV2.confirm({window: {title : `${game.i18n.localize("WH.Initialize")} ${module.title}`}, content : dialogContent, classes : ["initialization"]}))
+    if (await foundry.applications.api.DialogV2.confirm({window: {title : `${game.i18n.localize("WH.Initialize")} ${moduleTitle}`}, content : dialogContent, classes : ["initialization"]}))
     {
         try {
             const completed = await new WarhammerModuleContentHandler(module).initialize();
             if (completed) {
                 await game.settings.set(key, "initialized", true);
-                ui.notifications.info(`${module.title}: ${game.i18n.localize("WH.Initialization.Complete")}`);
+                ui.notifications.info(`${moduleTitle}: ${game.i18n.localize("WH.Initialization.Complete")}`);
             }
         }
         catch(error) {
             console.error(`Could not initialize ${module.title}`, error);
-            ui.notifications.error(`${module.title}: initialization failed. Check console for details.`);
+            ui.notifications.error(`${moduleTitle}: inicjalizacja nie powiodła się. Szczegóły w konsoli.`);
         }
     }
 }
 WarhammerModuleInitializationV2.DEFAULT_OPTIONS.actions.initialize = WarhammerModuleInitializationV2.initialize;
+
+const originalDeleteModuleContent = WarhammerModuleInitializationV2.DEFAULT_OPTIONS.actions.delete;
+const deletingModuleContent = new Set();
+WarhammerModuleInitializationV2.delete = async function(ev, target) {
+    const key = target.closest("[data-module]").dataset.module;
+    const module = game.modules.get(key);
+    const managed = game.system?.id === "wfrp4e" && game.i18n?.lang === "pl"
+        && game.wfrp4eCorePl?.contentLifecycle && module?.id?.startsWith("wfrp4e-")
+        && (module.protected || Object.hasOwn(game.wfrp4e?.config?.premiumModules ?? {}, key));
+    if (!managed) return originalDeleteModuleContent.call(this, ev, target);
+    if (!game.user?.isGM || deletingModuleContent.has(key)) return false;
+    deletingModuleContent.add(key);
+    try {
+        const title = premiumModuleTitle(key, module.title);
+        const confirmed = await foundry.applications.api.DialogV2.confirm({
+            window: {title: game.i18n.format("WH.Initializer.DeleteModuleContent", {module: title})},
+            content: game.i18n.format("WH.Initializer.DeleteModuleContentDesc", {module: title}),
+            classes: ["initialization"]
+        });
+        if (!confirmed) return false;
+        const completed = await new WarhammerModuleContentHandler(module).delete();
+        // Await the operation before refreshing the tile and its three actions.
+        // A rejected/cancelled deletion must keep the initialized state visible.
+        if (completed && this.rendered) await this.render();
+        return completed;
+    } catch (error) {
+        console.error(`Could not delete content of ${key}`, error);
+        ui.notifications.error(error.message, {permanent: true});
+        return false;
+    } finally {deletingModuleContent.delete(key);}
+};
+WarhammerModuleInitializationV2.DEFAULT_OPTIONS.actions.delete = WarhammerModuleInitializationV2.delete;
 
 // warhammer-lib 3.3.4 catches errors for each initialization pack and then
 // reports success to the caller. Make the result explicit so a cancelled or
@@ -138,8 +128,16 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization
             if (!target) {
                 throw new Error(`Unsupported initialization document type: ${documentName}`);
             }
-            ui.notifications.notify(`${this.module.title}: ${game.i18n.localize(target[1])}`);
+            // Jeden zbiorczy komunikat na paczkę zamiast komunikatu o każdym dokumencie.
+            const createdCount = documents.filter(document => !target[0].has(document.id)).length;
+            this._wfrp4eCorePlUpdatedCount = 0;
             await this.createOrUpdateDocuments(documents, target[0]);
+            ui.notifications.info(game.i18n.format("WH.Initialization.PackSummary", {
+                module: premiumModuleTitle(this.module.id, this.module.title),
+                type: game.i18n.localize(target[0].documentClass.metadata.labelPlural),
+                created: createdCount,
+                updated: this._wfrp4eCorePlUpdatedCount,
+            }));
             const missingDocumentIds = documents
                 .map(document => document.id)
                 .filter(documentId => !target[0].has(documentId));
@@ -154,6 +152,34 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization
         return true;
     };
     WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization = true;
+}
+
+// warhammer-lib wysyła na sztywno angielskie "Updated existing document {name}"
+// dla każdego dokumentu. Wyciszamy je i tylko zliczamy; podsumowanie pokazuje initialize().
+// Musi być zdefiniowane przed nakładkami createOrUpdateDocuments niżej,
+// bo każda z nich zapamiętuje wcześniejszą wersję metody.
+if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlLocalizedUpdateNotice) {
+    const baseCreateOrUpdateDocuments = WarhammerModuleContentHandler.prototype.createOrUpdateDocuments;
+    WarhammerModuleContentHandler.prototype.createOrUpdateDocuments = async function(...args) {
+        const handler = this;
+        const notifications = ui.notifications;
+        const notify = notifications.notify;
+        notifications.notify = function(message, ...rest) {
+            const match = typeof message === "string" && message.match(/^Updated existing document (.*)$/s);
+            if (match) {
+                handler._wfrp4eCorePlUpdatedCount = (handler._wfrp4eCorePlUpdatedCount ?? 0) + 1;
+                return;
+            }
+            return notify.call(this, message, ...rest);
+        };
+        try {
+            return await baseCreateOrUpdateDocuments.apply(this, args);
+        }
+        finally {
+            notifications.notify = notify;
+        }
+    };
+    WarhammerModuleContentHandler.prototype._wfrp4eCorePlLocalizedUpdateNotice = true;
 }
 
 function normalizeFolderName(name) {
@@ -225,7 +251,7 @@ function findInitializationFolderName(data) {
 const folderTranslationCatalogs = new Map();
 const packFolderTranslationCatalogs = new Map();
 const worldFolders = () => game.folders ?? game.collections?.get?.("Folder") ?? [];
-const parentFolderId = folder => folder.folder?.id ?? folder.folder ?? null;
+const parentFolderId = folder => folder.folder?.id ?? folder.folder ?? folder._source?.folder ?? null;
 const folderSource = folder => folder.getFlag?.("warhammer-lib", "source")
     ?? foundry.utils.getProperty(folder, "flags.warhammer-lib.source");
 
@@ -456,7 +482,7 @@ const translatedPackFolderName = async (pack, originalName) => {
     const packageName = pack?.metadata?.packageName ?? pack?.metadata?.package ?? packId.split('.')[0];
     const candidatePacks = [`${packageName}.actors`, `${packageName}.journals`, `${packageName}.scenes`];
     for (const cand of candidatePacks) {
-        if (cand === packId) continue;
+        if (cand === packId || !game.packs.has(cand)) continue;
         const candFolders = await getFoldersFromPackId(cand);
         if (candFolders[originalName]) return candFolders[originalName];
         for (const [k, v] of Object.entries(candFolders)) {
@@ -476,6 +502,10 @@ const translatedPackFolderName = async (pack, originalName) => {
 const mergeRootFolder = async (source, target) => {
     if (!source || !target || source.id === target.id) {
         return;
+    }
+    if (game.wfrp4eCorePl?.contentOrganization?.mergeModuleRoot) {
+        if (!folderSource(source) || folderSource(source) !== folderSource(target)) return;
+        return game.wfrp4eCorePl.contentOrganization.mergeModuleRoot(source, target);
     }
     for (const document of Array.from(source.contents ?? [])) {
         await document.update({folder: target.id});
@@ -631,17 +661,89 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlInitializationFolderRo
 // roots instead of producing one English and one Polish folder.
 if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFolderTranslation) {
 
-    WarhammerModuleContentHandler.prototype.createFolders = async function(pack) {
+    // Read-only companion to createFolders: content can be identical while
+    // translated folder names/parents still need repair. Never call parentFor
+    // here, as that API is allowed to create/update world categories.
+    WarhammerModuleContentHandler.prototype.folderChangesRequired = async function(pack, {folderIds = null} = {}) {
+        const type = pack.documentName ?? pack.metadata.type;
+        const organization = game.wfrp4eCorePl?.contentOrganization;
+        const group = organization?.category?.(this.module.id);
+        const folders = Array.from(worldFolders());
+        const parent = group ? folders.find(folder => folder.type === type
+            && (folder.flags?.['warhammer-lib']?.contentCategory === group.id
+                || (!parentFolderId(folder) && folder.name === group.name))) : null;
+        if (group && (!parent || parent.name !== group.name || parentFolderId(parent)
+            || parent.flags?.['warhammer-lib']?.contentCategory !== group.id
+            || (parent.color?.css ?? parent.color ?? null) !== group.color)) return true;
+        const layout = organization?.folderLayout?.(pack, {folderIds});
+        const sourceFolders = layout?.sourceFolders ?? Array.from(pack.folders?.contents ?? pack.folders ?? [], folder => folder.toObject());
+        const sourceIds = new Set(sourceFolders.map(folder => folder._id));
+        const roots = folders.filter(folder => folder.type === type && (!sourceIds.has(folder.id) || folder.id === layout?.rootSourceId)
+            && folderSource(folder) === this.module.id
+            && (folder.id === layout?.rootSourceId || (organization?.isModuleRoot?.(folder, this.module.id)
+                ?? (!parentFolderId(folder) || parentFolderId(folder) === parent?.id))));
+        if (roots.length !== 1) return true;
+        const root = roots[0];
+        if (layout?.rootSourceId && (root.id !== layout.rootSourceId || root.flags?.['warhammer-lib']?.contentRootSource !== root.id)) return true;
+        if (root.name !== await translatedRootName(pack, this.module.flags?.folder?.name)
+            || root.flags?.['warhammer-lib']?.contentRoot !== true
+            || (parent && parentFolderId(root) !== parent.id)) return true;
+        const required = folderIds === null ? null : new Set(folderIds);
+        const byId = new Map(sourceFolders.map(folder => [folder._id, folder]));
+        if (required) for (const id of required) {
+            const parent = byId.get(id)?.folder;
+            if (parent) required.add(parent);
+        }
+        for (const source of sourceFolders) {
+            if (source._id === layout?.rootSourceId) continue;
+            if (required && !required.has(source._id)) continue;
+            const current = worldFolders().get(source._id);
+            const name = await translatedPackFolderName(pack, source.name);
+            if (!current || current.type !== type || folderSource(current) !== this.module.id
+                || current.name !== name
+                || parentFolderId(current) !== (sourceIds.has(source.folder) ? source.folder : root.id)) return true;
+            if (layout?.sortedFolderIds?.includes(source._id) && current.sort !== source.sort) return true;
+            if (name !== source.name && folders.some(duplicate => duplicate.id !== current.id
+                && !sourceIds.has(duplicate.id) && duplicate.type === type && duplicate.name === source.name
+                && (folderSource(duplicate) === this.module.id || parentFolderId(duplicate) === root.id
+                    || parentFolderId(duplicate) === current.id))) return true;
+        }
+        return false;
+    };
+
+    WarhammerModuleContentHandler.prototype.createFolders = async function(pack, options = {}) {
+        const invoke = () => createManagedFolders.call(this, pack, options);
+        const organization = game.wfrp4eCorePl?.contentOrganization;
+        return organization?.withFolderWrites ? organization.withFolderWrites(invoke) : invoke();
+    };
+
+    async function updateManagedFolder(folder, data) {
+        const patch = {};
+        const same = foundry.utils.equals ?? ((a, b) => JSON.stringify(a) === JSON.stringify(b));
+        for (const [key, value] of Object.entries(data)) {
+            if (key === 'flags') {
+                for (const [scope, flags] of Object.entries(value)) for (const [flag, wanted] of Object.entries(flags)) {
+                    if (!same(folder.flags?.[scope]?.[flag], wanted)) patch[`flags.${scope}.${flag}`] = wanted;
+                }
+            } else if (!same(key === 'folder' ? parentFolderId(folder) : folder[key], value)) patch[key] = value;
+        }
+        if (Object.keys(patch).length) await folder.update(patch, {pack: null});
+    }
+
+    // organize: false lets a managed operation organize all its packs once.
+    async function createManagedFolders(pack, {folderIds = null, organize = true} = {}) {
+        const layout = game.wfrp4eCorePl?.contentOrganization?.folderLayout?.(pack, {folderIds});
         const root = foundry.utils.deepClone(this.module.flags.folder || {});
         root.type = pack.metadata.type;
-        root._id = foundry.utils.randomID();
-        root.flags = {"warhammer-lib": {source: this.module.id}};
+        root._id = layout?.rootSourceId ?? foundry.utils.randomID();
+        root.flags = {"warhammer-lib": {source: this.module.id, contentRoot: true}};
+        if (layout?.rootSourceId) root.flags['warhammer-lib'].contentRootSource = layout.rootSourceId;
 
         const originalRootName = root.name;
         root.name = await translatedRootName(pack, originalRootName);
 
-        let campaignFolderId = null;
-        if (ENEMY_WITHIN_MODULES.has(this.module.id)) {
+        let campaignFolderId = await game.wfrp4eCorePl?.contentOrganization?.parentFor(this.module.id, root.type) ?? null;
+        if (!campaignFolderId && game.i18n?.lang !== "pl" && ENEMY_WITHIN_MODULES.has(this.module.id)) {
             const campaignName = game.i18n?.lang === "pl" ? "Wewnętrzny Wróg" : "The Enemy Within";
             let campaignFolder = Array.from(worldFolders()).find(f =>
                 f.type === root.type
@@ -663,66 +765,112 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFolderTranslation) {
             root.folder = campaignFolderId;
         }
 
+        if (campaignFolderId) root.folder = campaignFolderId;
+
+        const sourceFolderIds = new Set(pack.folders.contents.map(folder => folder.id ?? folder._id));
         const existingRoots = Array.from(worldFolders()).filter(folder =>
             folder.type === root.type
-            && (!parentFolderId(folder) || parentFolderId(folder) === campaignFolderId)
+            && (!sourceFolderIds.has(folder.id) || folder.id === layout?.rootSourceId)
+            && (folder.id === layout?.rootSourceId || (game.wfrp4eCorePl?.contentOrganization?.isModuleRoot(folder, this.module.id)
+                ?? (!parentFolderId(folder) || parentFolderId(folder) === campaignFolderId)))
             && folderSource(folder) === this.module.id
         );
-        let rootFolder = existingRoots.find(folder => folder.name === root.name)
+        let rootFolder = (layout?.rootSourceId ? existingRoots.find(folder => folder.id === layout.rootSourceId) : null)
+            ?? (!layout?.rootSourceId ? game.wfrp4eCorePl?.contentOrganization?.chooseRoot?.(existingRoots)
+            ?? existingRoots.find(folder => folder.name === root.name)
             ?? existingRoots.find(folder => folder.name === originalRootName)
-            ?? existingRoots[0];
+            ?? existingRoots[0] : null);
 
         if (rootFolder) {
             const updates = {
                 name: root.name,
-                flags: {"warhammer-lib": {source: this.module.id}},
+                flags: {"warhammer-lib": {source: this.module.id, contentRoot: true}},
             };
+            if (layout?.rootSourceId) updates.flags['warhammer-lib'].contentRootSource = layout.rootSourceId;
             if (campaignFolderId && parentFolderId(rootFolder) !== campaignFolderId) {
                 updates.folder = campaignFolderId;
             }
-            await rootFolder.update(updates);
+            await updateManagedFolder(rootFolder, updates);
             for (const duplicate of existingRoots) {
                 await mergeRootFolder(duplicate, rootFolder);
             }
         }
         else {
             [rootFolder] = await CONFIG.Folder.documentClass.create([root], {keepId: true});
+            for (const duplicate of existingRoots) await mergeRootFolder(duplicate, rootFolder);
         }
 
         this.rootFolders[pack.metadata.id] = rootFolder.id;
 
-        const packFolders = pack.folders.contents.map(folder => {
-            const data = folder.toObject();
-            data._originalName = folder.name;
+        let packFolders = (layout?.folders ?? pack.folders.contents.map(folder => folder.toObject())).map(folder => {
+            const data = foundry.utils.deepClone(folder);
+            data._originalName = pack.folders.get?.(data._id)?.name ?? data.name;
             return data;
-        });
+        }).filter(folder => folder._id !== layout?.rootSourceId);
+        if (folderIds !== null) {
+            const required = new Set(folderIds);
+            const byId = new Map(packFolders.map(folder => [folder._id, folder]));
+            for (const id of required) {
+                const parent = byId.get(id)?.folder;
+                if (parent) required.add(parent);
+            }
+            packFolders = packFolders.filter(folder => required.has(folder._id));
+        }
         for (const folder of packFolders) {
             folder.name = await translatedPackFolderName(pack, folder._originalName ?? folder.name);
-            if (!folder.folder) {
+            if (!folder.folder || !sourceFolderIds.has(folder.folder)) {
                 folder.folder = rootFolder.id;
             }
             folder.flags ??= {};
             foundry.utils.setProperty(folder.flags, "warhammer-lib.source", this.module.id);
         }
 
-        const folders = [rootFolder];
-        const foldersToCreate = [];
-        for (const folderData of packFolders) {
-            const existingFolder = worldFolders().get?.(folderData._id);
-            if (existingFolder) {
-                await existingFolder.update({
-                    name: folderData.name,
-                    folder: folderData.folder,
-                    flags: folderData.flags,
-                });
-                folders.push(existingFolder);
-            }
-            else {
-                foldersToCreate.push(folderData);
-            }
+        // Shorten an existing branch before inserting a formerly adopted root
+        // below a new book container. Otherwise the intermediate tree can hit
+        // five levels even when the final hierarchy has only four.
+        for (const data of packFolders) {
+            const existing = worldFolders().get?.(data._id);
+            const parent = worldFolders().get?.(data.folder);
+            if (!existing || !parent || folderSource(existing) !== this.module.id
+                || parentFolderId(existing) === data.folder) continue;
+            const depth = folder => {
+                const seen = new Set();
+                while (folder && !seen.has(folder.id)) {
+                    seen.add(folder.id); folder = worldFolders().get?.(parentFolderId(folder));
+                }
+                return seen.size;
+            };
+            if (depth(parent) + 1 <= depth(existing)) await updateManagedFolder(existing, {folder: parent.id,
+                ...(layout?.sortedFolderIds?.includes(data._id) ? {sort: data.sort} : {})});
         }
-        if (foldersToCreate.length) {
-            folders.push(...await CONFIG.Folder.documentClass.create(foldersToCreate, {keepId: true}));
+        const folders = [rootFolder], pending = [...packFolders];
+        // Restore parents before updating/creating their children. Foundry's
+        // foreign-document getter returns null while an ancestor is missing.
+        while (pending.length) {
+            const pendingIds = new Set(pending.map(data => data._id));
+            const ready = pending.filter(data => !pendingIds.has(data.folder) && worldFolders().get?.(data.folder));
+            if (!ready.length) throw new Error(`Nie można odtworzyć hierarchii folderów modułu ${this.module.title}. Kopia operacji jest zachowana.`);
+            const create = [];
+            for (const data of ready) {
+                const existing = worldFolders().get?.(data._id);
+                if (existing) {
+                    if (existing.type !== root.type) throw new Error(`Folder „${existing.name}” ma niezgodny typ. Kopia operacji jest zachowana.`);
+                    const updates = {name: data.name, folder: data.folder, flags: data.flags};
+                    if (existing.flags?.['warhammer-lib']?.contentRootSource === existing.id) {
+                        updates.flags['warhammer-lib'].contentRoot = false;
+                        updates.flags['warhammer-lib'].contentRootSource = null;
+                    }
+                    if (layout?.sortedFolderIds?.includes(data._id)) updates.sort = data.sort;
+                    await updateManagedFolder(existing, updates);
+                } else create.push(data);
+            }
+            if (create.length) await CONFIG.Folder.documentClass.create(create, {pack: null, keepId: true});
+            for (const data of ready) {
+                const saved = worldFolders().get?.(data._id);
+                if (!saved || parentFolderId(saved) !== data.folder) throw new Error(`Foundry nie zapisało prawidłowego folderu „${data.name}”. Kopia operacji jest zachowana.`);
+                folders.push(saved);
+                pending.splice(pending.indexOf(data), 1);
+            }
         }
 
         // Scal zawartość i usuń osierocone angielskie foldery utworzone przez błędny routing
@@ -734,6 +882,7 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFolderTranslation) {
 
             const duplicateEnglishFolders = Array.from(worldFolders()).filter(f =>
                 f.id !== targetFolder.id
+                && !sourceFolderIds.has(f.id)
                 && f.type === pack.metadata.type
                 && f.name === originalName
                 && (folderSource(f) === this.module.id || parentFolderId(f) === rootFolder.id || f.folder?.id === rootFolder.id)
@@ -743,10 +892,13 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFolderTranslation) {
             }
         }
 
-        await organizeEnemyWithinFolders();
+        if (!organize) return folders;
+        if (game.i18n?.lang === 'pl' && game.wfrp4eCorePl?.contentOrganization) {
+            await game.wfrp4eCorePl.contentOrganization.organizeWorldFolders({managed: true, moduleIds: [this.module.id]});
+        } else await organizeEnemyWithinFolders();
         ui.sidebar?.render?.();
         return folders;
-    };
+    }
 
     WarhammerModuleContentHandler.prototype._wfrp4eCorePlFolderTranslation = true;
 }
@@ -785,14 +937,15 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlStableDocumentIds) {
 }
 
 // Foundry V14 requires embedded documents to be updated through their parent.
-// A parent update does not reliably persist Actor Items, Journal pages or Scene
-// Levels, so explicitly synchronize them after the module resolver selects the
-// source document.
+// Journal pages and Scene Levels need explicit V14 synchronization after the
+// original module resolver selects the source document. Actor initialization
+// deliberately uses the library's original update path without a second Item
+// merge: different modules can reuse an Actor ID with different embedded IDs.
 if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlEmbeddedSync) {
     const createOrUpdateDocuments = WarhammerModuleContentHandler.prototype.createOrUpdateDocuments;
 
     WarhammerModuleContentHandler.prototype.createOrUpdateDocuments = async function(documents, collection) {
-        if (!documents.length || !["Actor", "JournalEntry", "Scene"].includes(documents[0].documentName)) {
+        if (!documents.length || !["JournalEntry", "Scene"].includes(documents[0].documentName)) {
             return createOrUpdateDocuments.call(this, documents, collection);
         }
 
@@ -852,10 +1005,7 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlEmbeddedSync) {
         for (const documentId of updatedDocumentIds) {
             const document = collection.get(documentId);
             const incomingDocument = incomingDocuments.get(documentId);
-            if (documentName === "Actor") {
-                await synchronizeActorItems(document, incomingDocument);
-            }
-            else if (documentName === "JournalEntry") {
+            if (documentName === "JournalEntry") {
                 await synchronizeJournalPages(document, incomingDocument);
             }
             else {
@@ -941,203 +1091,6 @@ async function synchronizeSceneEmbeddedDocuments(scene, incomingScene) {
     }
 }
 
-const LOCALIZED_ITEM_PATHS = [
-    "name",
-    "flags.babele.originalName",
-    "system.description",
-    "system.gmdescription",
-    "system.skills",
-    "system.talents",
-    "system.class",
-    "system.careergroup",
-    "system.trappings",
-    "system.wounds",
-    "system.location",
-    "system.duration",
-    "system.incubation",
-    "system.contraction",
-    "system.symptoms",
-    "system.permanent",
-    "system.penalty",
-    "system.modifier",
-    "system.range",
-    "system.target",
-    "system.damage",
-    "system.god",
-    "system.overcast",
-    "system.specification",
-    "system.tests",
-    "system.alterName",
-    "system.traits",
-    "system.rollable.skill",
-    "system.special"
-];
-
-const LOCALIZED_ACTOR_PATHS = [
-    "name",
-    "system.details.species.value",
-    "system.details.gender.value",
-    "system.details.status.value",
-    "system.details.gmnotes.value",
-];
-
-const LOCALIZED_EFFECT_PATHS = [
-    "name",
-    "flags.babele.originalName",
-    "description",
-    "duration",
-    "system.changes",
-    "system.transferData",
-    "system.scriptData",
-    "system.condition",
-    "system.sourceData"
-];
-
-function localizedEmbeddedUpdate(data, paths) {
-    const update = {_id: data._id};
-    for (const path of paths) {
-        if (foundry.utils.hasProperty(data, path)) {
-            foundry.utils.setProperty(update, path, foundry.utils.deepClone(foundry.utils.getProperty(data, path)));
-        }
-    }
-    return update;
-}
-
-async function synchronizeActorItems(actor, incomingActor) {
-    const incomingItems = Array.from(incomingActor.items || []).map(item => item.toObject());
-    if (!incomingItems.length) {
-        return;
-    }
-
-    // The Babele Actor correction records only IDs of a verified upstream
-    // PBTT defect: a zero-advance legacy `Melee` beside `Melee (Basic)`. This
-    // narrowly scoped migration removes that obsolete embedded Item from Actors
-    // imported before the correction. It does not perform name-based deduping
-    // and therefore cannot remove a user's legitimate second specialization.
-    const moduleId = activeCorePlModuleId();
-    let legacyMeleeItemIds = [];
-    let canonicalMeleeItemIds = [];
-    try {
-        legacyMeleeItemIds = incomingActor.getFlag?.(moduleId, "legacyMeleeItemIds") ?? [];
-        canonicalMeleeItemIds = incomingActor.getFlag?.(moduleId, "canonicalMeleeItemIds") ?? [];
-    } catch (_error) {
-        // Bezpieczne pominięcie, jeśli getFlag rzuci błąd nieaktywnego scope
-    }
-    if (!legacyMeleeItemIds?.length) {
-        legacyMeleeItemIds = foundry.utils.getProperty(incomingActor, `flags.${moduleId}.legacyMeleeItemIds`)
-            ?? foundry.utils.getProperty(incomingActor, "flags.wfrp4e-core-pl.legacyMeleeItemIds")
-            ?? [];
-    }
-    if (!canonicalMeleeItemIds?.length) {
-        canonicalMeleeItemIds = foundry.utils.getProperty(incomingActor, `flags.${moduleId}.canonicalMeleeItemIds`)
-            ?? foundry.utils.getProperty(incomingActor, "flags.wfrp4e-core-pl.canonicalMeleeItemIds")
-            ?? [];
-    }
-    const canonicalMeleeIdSet = new Set(canonicalMeleeItemIds);
-    const hasCanonicalMelee = incomingItems.some(item => canonicalMeleeIdSet.has(item._id)
-        && item.type === "skill"
-        && foundry.utils.getProperty(item, "system.characteristic.value") === "ws"
-        && foundry.utils.getProperty(item, "system.grouped.value") === "isSpec");
-    if (hasCanonicalMelee && legacyMeleeItemIds.length) {
-        const removableIds = legacyMeleeItemIds.filter(id => {
-            const item = actor.items.get(id);
-            return item?.type === "skill"
-                && Number(foundry.utils.getProperty(item, "system.advances.value")) === 0
-                && foundry.utils.getProperty(item, "system.characteristic.value") === "ws"
-                && foundry.utils.getProperty(item, "system.grouped.value") === "isSpec";
-        });
-        if (removableIds.length) {
-            await actor.deleteEmbeddedDocuments("Item", removableIds);
-        }
-    }
-
-    const existingItemIds = new Set(actor.items.map(item => item.id));
-    // Synchronize localization-owned fields without resetting quantities,
-    // advances, equipped state or other world-specific item data. Items and
-    // effects added by the user are deliberately never deleted.
-    const itemUpdates = incomingItems
-        .filter(item => existingItemIds.has(item._id))
-        .map(item => localizedEmbeddedUpdate(item, LOCALIZED_ITEM_PATHS));
-    const itemCreates = incomingItems.filter(item => !existingItemIds.has(item._id));
-
-    if (itemUpdates.length) {
-        for (const update of itemUpdates) {
-            const item = actor.items.get(update._id);
-            if (item?.type === "spell") {
-                update.system ??= {};
-                update.system.lore ??= {};
-            }
-        }
-        await actor.updateEmbeddedDocuments("Item", itemUpdates, {pack: null});
-    }
-    if (itemCreates.length) {
-        await actor.createEmbeddedDocuments("Item", itemCreates, {keepId: true, pack: null});
-    }
-
-    // Active Effects are descendants of the embedded Items in V14. Keep their
-    // translated names, descriptions, and scripts in sync as well.
-    for (const incomingItemData of incomingItems) {
-        const item = actor.items.get(incomingItemData._id);
-        const incomingEffects = incomingItemData.effects || [];
-        if (!item || !incomingEffects.length) {
-            continue;
-        }
-
-        const existingEffectIds = new Set(item.effects.map(effect => effect.id));
-        const effectUpdates = incomingEffects
-            .filter(effect => existingEffectIds.has(effect._id))
-            .map(effect => localizedEmbeddedUpdate(effect, LOCALIZED_EFFECT_PATHS));
-        const effectCreates = incomingEffects.filter(effect => !existingEffectIds.has(effect._id));
-
-        if (effectUpdates.length) {
-            await item.updateEmbeddedDocuments("ActiveEffect", effectUpdates);
-        }
-        if (effectCreates.length) {
-            await item.createEmbeddedDocuments("ActiveEffect", effectCreates, {keepId: true});
-        }
-    }
-}
-
-async function synchronizeWorldJournals() {
-    if (!game.user?.isGM || game.i18n?.lang !== "pl") return;
-
-    for (const pack of game.packs) {
-        if (pack.documentName !== "JournalEntry" || !game.babele?.isTranslated?.(pack)) {
-            continue;
-        }
-        const moduleId = pack.metadata.packageName;
-        if (!game.modules.get(moduleId)?.active) {
-            continue;
-        }
-
-        try {
-            const translatedJournals = await pack.getDocuments();
-            for (const incomingJournal of translatedJournals) {
-                const journal = game.journal.get(incomingJournal.id);
-                if (!journal) {
-                    continue;
-                }
-
-                const nameDiffers = journal.name !== incomingJournal.name;
-                const incomingPages = Array.from(incomingJournal.pages || []);
-                const pagesDiffer = incomingPages.some(ip => {
-                    const ep = journal.pages.get(ip.id);
-                    return !ep || ep.name !== ip.name || (ip.text?.content && ep.text?.content !== ip.text.content);
-                });
-
-                if (nameDiffers || pagesDiffer) {
-                    if (nameDiffers) {
-                        await journal.update({ name: incomingJournal.name }, { pack: null });
-                    }
-                    await synchronizeJournalPages(journal, incomingJournal);
-                }
-            }
-        } catch (error) {
-            console.error(`Błąd synchronizacji dzienników z ${pack.collection}:`, error);
-        }
-    }
-}
-
 async function organizeEnemyWithinFolders() {
     if (!game.user?.isGM) return;
     const campaignName = game.i18n?.lang === "pl" ? "Wewnętrzny Wróg" : "The Enemy Within";
@@ -1181,126 +1134,42 @@ async function organizeEnemyWithinFolders() {
     }
 }
 
-// Actor links in initialized Journals resolve to world Actors rather than the
-// live translated compendium. Imports made by an older initializer retained a
-// translated Actor name but left embedded Skills, Talents and trappings in
-// English. Repair those legacy Actors once, using the same narrow set of
-// localization-owned fields as normal reinitialization.
-Hooks.once("ready", async () => {
-    if (!game.user?.isGM || game.i18n?.lang !== "pl") {
-        return;
-    }
+// Polskie tytuły kafelków w oknie inicjalizacji (system bierze je z
+// WFRP4E.premiumModules, którego nie nadpisujemy, bo służy też do etykiet źródeł).
+// Moduły bez polskiego tłumaczenia celowo zostają z nazwą angielską.
+const PREMIUM_MODULE_TITLES_PL = {
+    "wfrp4e-core": "Podręcznik Podstawowy",
+    "wfrp4e-starter-set": "Zestaw Startowy",
+    "wfrp4e-rnhd": "Ciężkie Dnie i Niespokojne Noce",
+    "wfrp4e-eis": "Wróg w Cieniach",
+    "wfrp4e-ua1": "Przygody w Ubersreiku I",
+    "wfrp4e-dotr": "Śmierć na rzece Reik",
+    "wfrp4e-middenheim": "Middenheim: Miasto Białego Wilka",
+    "wfrp4e-archives1": "Archiwa Imperium Tom I",
+    "wfrp4e-pbtt": "Szara Eminencja",
+    "wfrp4e-altdorf": "Altdorf: Korona Imperium",
+    "wfrp4e-ua2": "Przygody w Ubersreiku II",
+    "wfrp4e-owb1": "Pakiet Starego Świata I",
+    "wfrp4e-horned-rat": "Rogaty Szczur",
+    "wfrp4e-empire-ruins": "Imperium w Ruinie",
+    "wfrp4e-archives2": "Archiwa Imperium Tom II",
+    "wfrp4e-up-in-arms": "Pod Bronią",
+    "wfrp4e-wom": "Wiatry Magii",
+    "wfrp4e-zoo": "Imperialny Zwierzyniec",
+    "wfrp4e-salzenmund": "Salzenmund: Miasto Soli i Srebra",
+    "wfrp4e-lustria": "Lustria",
+};
 
-    await organizeEnemyWithinFolders();
-    await synchronizeWorldJournals();
-
-    const translationModuleId = activeCorePlModuleId();
-    const versions = foundry.utils.deepClone(
-        game.settings.get(translationModuleId, "embeddedActorTranslationVersions") || {}
-    );
-    let versionsChanged = false;
-    let repairedActors = 0;
-
-    for (const moduleId of getTranslatedActorModules()) {
-        if (versions[moduleId] >= EMBEDDED_ACTOR_TRANSLATION_VERSION) {
-            continue;
-        }
-        const module = game.modules.get(moduleId);
-        if (!module?.active) {
-            continue;
-        }
-        const declaredActorPackId = (module.flags?.initializationPacks || []).find(packId =>
-            game.packs.get(packId)?.documentName === "Actor"
-        );
-        // Some official modules (notably Winds of Magic) expose an Actor pack
-        // but omit it from initializationPacks because Journals import those
-        // Actors lazily. Still use that pack as the localization source.
-        const actorPack = game.packs.get(declaredActorPackId)
-            ?? game.packs.get(`${moduleId}.actors`);
-        if (!actorPack || !game.babele?.isTranslated?.(actorPack)) {
-            continue;
-        }
-
-        try {
-            const translatedActors = await actorPack.getDocuments();
-            for (const incomingActor of translatedActors) {
-                const actor = game.actors.get(incomingActor.id);
-                if (!actor || actor.getFlag("warhammer-lib", "source") !== moduleId) {
-                    continue;
-                }
-                if (actorEmbeddedTranslationDiffers(actor, incomingActor)) {
-                    await synchronizeActorLocalization(actor, incomingActor);
-                    await synchronizeActorItems(actor, incomingActor);
-                    repairedActors++;
-                }
-            }
-            versions[moduleId] = EMBEDDED_ACTOR_TRANSLATION_VERSION;
-            versionsChanged = true;
-        }
-        catch (error) {
-            console.error(`${translationModuleId} | Nie udało się naprawić osadzonych tłumaczeń aktorów z ${moduleId}.`, error);
-        }
-    }
-
-    if (versionsChanged) {
-        await game.settings.set(translationModuleId, "embeddedActorTranslationVersions", versions);
-    }
-    if (repairedActors) {
-        ui.notifications.info(`Naprawiono osadzone tłumaczenia ${repairedActors} aktorów WFRP.`);
-    }
-});
-
-function actorEmbeddedTranslationDiffers(actor, incomingActor) {
-    const incomingActorData = incomingActor.toObject();
-    const actorData = actor.toObject();
-    for (const path of LOCALIZED_ACTOR_PATHS) {
-        if (foundry.utils.hasProperty(incomingActorData, path)
-            && JSON.stringify(foundry.utils.getProperty(incomingActorData, path))
-                !== JSON.stringify(foundry.utils.getProperty(actorData, path))) {
-            return true;
-        }
-    }
-    const incomingItems = Array.from(incomingActor.items || []);
-    for (const incomingItem of incomingItems) {
-        const existingItem = actor.items.get(incomingItem.id);
-        if (!existingItem) {
-            return true;
-        }
-        for (const path of LOCALIZED_ITEM_PATHS) {
-            if (!foundry.utils.hasProperty(incomingItem, path)) {
-                continue;
-            }
-            const incomingValue = foundry.utils.getProperty(incomingItem, path);
-            const existingValue = foundry.utils.getProperty(existingItem, path);
-            if (JSON.stringify(incomingValue) !== JSON.stringify(existingValue)) {
-                return true;
-            }
-        }
-    }
-    return false;
-}
-
-async function synchronizeActorLocalization(actor, incomingActor) {
-    const incomingActorData = incomingActor.toObject();
-    const update = {};
-    for (const path of LOCALIZED_ACTOR_PATHS) {
-        if (foundry.utils.hasProperty(incomingActorData, path)) {
-            foundry.utils.setProperty(
-                update,
-                path,
-                foundry.utils.deepClone(foundry.utils.getProperty(incomingActorData, path))
-            );
-        }
-    }
-    if (Object.keys(update).length) {
-        await actor.update(update);
-    }
+function premiumModuleTitle(key, fallback) {
+    if (game.i18n?.lang !== "pl") return fallback;
+    return PREMIUM_MODULE_TITLES_PL[key] ?? fallback;
 }
 
 const prepareInitializationContext = WarhammerModuleInitializationV2.prototype._prepareContext;
 WarhammerModuleInitializationV2.prototype._prepareContext = async function(options) {
     const context = await prepareInitializationContext.call(this, options);
     for (const module of context.modules || []) {
+        module.title = premiumModuleTitle(module.key, module.title);
         module.tooltip ??= module.title || "";
     }
     return context;
@@ -1308,8 +1177,10 @@ WarhammerModuleInitializationV2.prototype._prepareContext = async function(optio
 
 // Bezpiecznik: automatyczne przypisanie do właściwych folderów dokumentów
 // posiadających nieistniejące (osierocone) ID folderu z oficjalnych paczek DLC (np. UA1, UA2, Zestaw Startowy, Archiwa).
+// W polskiej wersji rozmieszczenie należy wyłącznie do zarządzanej operacji:
+// aktualizacja książki odtwarza brakujące foldery, bez zgadywania po nazwach przy starcie.
 Hooks.once("ready", async () => {
-    if (!game.user?.isGM) return;
+    if (!game.user?.isGM || game.i18n?.lang === "pl") return;
 
     for (const collection of [game.scenes, game.journal, game.actors, game.items, game.tables]) {
         if (!collection?.contents?.length) continue;

@@ -145,6 +145,10 @@
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Język}",
           "originalName": "Język (Cechu)",
           "sourceId": "Compendium.wfrp4e-starter-set.actors.Actor.njohRTHP8jMyApA9.Item.eWwNB2TuDeRk4J4P"
+        },
+        "HPI5VRbUabsT1AA8": {
+          "id": "HPI5VRbUabsT1AA8",
+          "name": "Miecz"
         }
       }
     },
@@ -217,6 +221,10 @@
               ]
             }
           }
+        },
+        "HP2aZ4Hb7JL9URFF": {
+          "id": "HP2aZ4Hb7JL9URFF",
+          "name": "Miecz"
         }
       },
       "gmnotes": "<p>Kapitan Pfeffer ma bujną grzywę jasnoczerwonych włosów ciemnoniebieskie oczy w odcieniu zimnej stali. Dwudziestoparoletnia Pfeffer jest młoda jak na tak trudny przydział, ale ci, którzy znają historię jej rodziny, nie są zaskoczeni: Pfefferowie prowadzili armie Imperium od stuleci. Pfeffer mówi bez ogródek i ma żołnierskie, ciężkie poczucie humoru. Nie cierpi wymówek, ale zdaje sobie sprawę, że niektóre sytuacje wymagają „taktycznej finezji”. Na wiele przymyka oczy, jeśli przynosi to dobre rezultaty. Wszystko to, co dyskredytuje Straż, wywoła jej wielkie niezadowolenie.</p>"
@@ -674,6 +682,10 @@
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie",
           "sourceId": "Compendium.wfrp4e-starter-set.actors.Actor.Q89Gj2QfksawqmnT.Item.heUSKGXgvB05Kih2"
+        },
+        "ELGulvIYFfa1afyu": {
+          "id": "ELGulvIYFfa1afyu",
+          "name": "Miecz"
         }
       }
     },
@@ -1055,6 +1067,10 @@
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie",
           "sourceId": "Compendium.wfrp4e-starter-set.actors.Actor.2UdufyQ0BauhQz5T.Item.McTtmZu3Ac8Lh48W"
+        },
+        "isxHPdMSgccFprMQ": {
+          "id": "isxHPdMSgccFprMQ",
+          "name": "Miecz"
         }
       }
     },
@@ -1212,6 +1228,10 @@
           "target": "1",
           "range": "Siła Woli metrów",
           "damage": "+0"
+        },
+        "SFwZ2UC4xf8ausDr": {
+          "id": "SFwZ2UC4xf8ausDr",
+          "name": "Kosa"
         }
       }
     },
@@ -1834,6 +1854,10 @@
               ]
             }
           }
+        },
+        "isezKfxSJICd1m8s": {
+          "id": "isezKfxSJICd1m8s",
+          "name": "Topór"
         }
       }
     },
@@ -2156,6 +2180,10 @@
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Stealth",
           "sourceId": "Compendium.wfrp4e-starter-set.actors.Actor.5nUNhvoRVnaBE4hw.Item.PVTadvkiPuspzsBI"
+        },
+        "oIaGQZ8Lth7NiQs6": {
+          "id": "oIaGQZ8Lth7NiQs6",
+          "name": "Miecz"
         }
       },
       "gmnotes": "<p>Fassenwütend nie ma za sobą lekkiego życia. Jej niegdyś brązowe włosy pokrywają teraz pasma siwizny, a od prawego oka do żuchwy biegnie zakrzywiona blizna. Notorycznie pociąga ze starej piersiówki. Wszystko w jej wyglądzie jest znoszone lub zaniedbane, za wyjątkiem nieskazitelnych pistoletów. Ich drewniane kolby są wypolerowane, a stal pieczołowicie naoliwiona. Pistolety są gotowe do wystrzału w każdej chwili.</p>"
@@ -2522,7 +2550,7 @@
           "sourceId": "Compendium.wfrp4e-core.items.JQa5DLnTs2SEzRrc"
         },
         "GfQpUg50QqRYpkRv": {
-          "specification": "Rozmiar (Duży)"
+          "specification": "Duży"
         }
       }
     },
@@ -3041,6 +3069,10 @@
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Wiedza}",
           "originalName": "Wiedza (Reikland)",
           "sourceId": "Compendium.wfrp4e-starter-set.actors.Actor.Z5D8INeGdPo4esse.Item.40NZ93UmUsR5jzyk"
+        },
+        "bveINhDV7OMCqTzw": {
+          "id": "bveINhDV7OMCqTzw",
+          "name": "Miecz"
         }
       }
     },

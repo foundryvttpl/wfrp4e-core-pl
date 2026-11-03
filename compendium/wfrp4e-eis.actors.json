@@ -18,7 +18,10 @@
       "converter": "fromPack",
       "documentType": "Item",
       "fallbackPolicy": "source-first"
-    }
+    },
+    "motivation": "system.details.motivation.value",
+    "vehicleDescription": "system.details.description.value",
+    "motivePower": "system.details.motivePower.value"
   },
   "folders": {
     "Adventure": "Przygoda",
@@ -66,6 +69,10 @@
           "originalName": "Bełt",
           "sourceId": "Compendium.wfrp4e-core.items.Item.kFROfGFdExfyJTg9",
           "range": "jak broń"
+        },
+        "72JvTKiQ42OpXvnK": {
+          "id": "72JvTKiQ42OpXvnK",
+          "name": "Miecz"
         }
       }
     },
@@ -99,9 +106,9 @@
         },
         "KB8HgDz56dh2w7w1": {
           "id": "KB8HgDz56dh2w7w1",
-          "name": "1k10 srebrnych szylingów",
+          "name": "1d10 srebrnych szylingów",
           "description": " ",
-          "originalName": "1k10 srebrnych szylingów"
+          "originalName": "1d10 Silver Shilling"
         },
         "w6ao8E6acHxUde1m": {
           "id": "w6ao8E6acHxUde1m",
@@ -135,7 +142,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Konkurencyjne gangi"
         },
         "kaS6WxzQev6ec3vX": {
           "id": "kaS6WxzQev6ec3vX",
@@ -297,9 +305,9 @@
       "items": {
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "6k10 brązowych pensów",
+          "name": "6d10 brązowych pensów",
           "description": " ",
-          "originalName": "6k10 brązowych pensów"
+          "originalName": "6d10 Brass Penny"
         },
         "x0WMGwuQzReXcQrs": {
           "id": "x0WMGwuQzReXcQrs",
@@ -603,9 +611,9 @@
         },
         "6f3WbEPLwNoCaSqv": {
           "id": "6f3WbEPLwNoCaSqv",
-          "name": "3k10 srebrnych szylingów",
+          "name": "3d10 srebrnych szylingów",
           "description": " ",
-          "originalName": "3k10 srebrnych szylingów"
+          "originalName": "3d10 Silver Shilling"
         },
         "0q6BaycOUXZcVoHh": {
           "id": "kFROfGFdExfyJTg9",
@@ -644,6 +652,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "B5O98hROvCl8BCDA": {
+          "id": "B5O98hROvCl8BCDA",
+          "name": "Miecz"
         }
       }
     },
@@ -708,6 +720,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "0MYOJFx3vkYA95B4": {
+          "id": "0MYOJFx3vkYA95B4",
+          "name": "8d10 brązowych pensów"
         }
       }
     },
@@ -807,6 +823,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "yiIACOyzZOCrmX8r": {
+          "id": "yiIACOyzZOCrmX8r",
+          "name": "Pałka"
         }
       }
     },
@@ -822,7 +842,7 @@
       "items": {
         "sRTo1WigsfQFGBhi": {
           "id": "sRTo1WigsfQFGBhi",
-          "name": "ubranie podróżne ",
+          "name": "ubranie podróżne",
           "description": " ",
           "originalName": "ubranie podróżne "
         },
@@ -943,6 +963,14 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "2d10 srebrnych szylingów"
+        },
+        "h0F0HGhJrTiqXav3": {
+          "id": "h0F0HGhJrTiqXav3",
+          "name": "Miecz"
         }
       }
     },
@@ -966,6 +994,10 @@
         },
         "yZsIqkGeHfROdQFp": {
           "specification": "bogaci ludzie"
+        },
+        "pnsAFONUL0smzZUb": {
+          "id": "pnsAFONUL0smzZUb",
+          "name": "Pałka"
         }
       }
     },
@@ -1020,6 +1052,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -1074,6 +1110,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "CjmM2Rm28haJsHWt": {
+          "id": "CjmM2Rm28haJsHWt",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -1171,6 +1211,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "0MYOJFx3vkYA95B4": {
+          "id": "0MYOJFx3vkYA95B4",
+          "name": "2d10 brązowych pensów"
         }
       }
     },
@@ -1217,7 +1261,7 @@
         },
         "QYEw1Eag3sPLJw6Q": {
           "id": "QYEw1Eag3sPLJw6Q",
-          "name": " Atak Językiem (3 metry)",
+          "name": "Atak Językiem (3 metry)",
           "description": "<p>Chwytny jęzor stworzenia może owinąć się wokół ofiary, ciągnąc ją do makabrycznego końca.</p>\n                <ul>\n                <li>W swojej turze może wykonać darmowy atak, wydając 1 Przewagę.</li>\n                <li>To jest atak dystansowy, który zadaje obrażenia równe jego wartości (zasięg podano w nawiadach).</li>\n                <li>Jeżeli atak trafi, cel otrzymuje 1 stan Splątanie i, jeśli jest mniejszy zostaje przyciągnięty oraz zostaje zaangażowany w walke wręcz..\n                <ul>\n                <li>Następnie stworzenie może wybrać:\n                <ul>\n                <li>Uwolnić cel</li>\n                <li>Wykonać darmowy atak</li>\n                <li>Utrzymać cel owowinięty językiem, inicjując Pochwycenie</li>\n                </ul>\n                </li>\n                </ul>\n                </li>\n                </ul>",
           "originalName": " Atak Językiem (3 metry)",
           "effects": {
@@ -1376,6 +1420,14 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "1d10 srebrnych szylingów"
+        },
+        "bBpxSMrHP1MCTDOA": {
+          "id": "bBpxSMrHP1MCTDOA",
+          "name": "Krótka włócznia"
         }
       }
     },
@@ -1397,9 +1449,9 @@
         },
         "3Jur46XXDRmiL8n7": {
           "id": "3Jur46XXDRmiL8n7",
-          "name": "1k10 srebrnych szylingów",
+          "name": "1d10 srebrnych szylingów",
           "description": " ",
-          "originalName": "1k10 srebrnych szylingów"
+          "originalName": "1d10 Silver Shilling"
         },
         "XQiiwS9m2Du1IMUz": {
           "id": "XQiiwS9m2Du1IMUz",
@@ -1421,7 +1473,7 @@
         },
         "GRRN3XAKIpEVCY7z": {
           "id": "GRRN3XAKIpEVCY7z",
-          "name": " Wytwórca (Kowal) ",
+          "name": "Wytwórca (Kowal)",
           "description": "Jesteś prawdziwie uzdolniony. Dodaj rzemiosło powiązane z tym Talentem do listy Umiejętności aktualnej Profesji. Jeśli już wcześniej było na niej wymienione, za każde jego Rozwinięcie płacisz 5 PD mniej.",
           "originalName": " Wytwórca (Kowal) ",
           "effects": {
@@ -1581,6 +1633,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "OkMrI5kOEBrvlHn9": {
+          "id": "OkMrI5kOEBrvlHn9",
+          "name": "Pałka"
         }
       }
     },
@@ -1818,9 +1874,13 @@
         },
         "JzrdM0KNXvXRxTh0": {
           "id": "JzrdM0KNXvXRxTh0",
-          "name": "oddział 5 strażników dróg ",
+          "name": "oddział 5 strażników dróg",
           "description": " ",
           "originalName": "oddział 5 strażników dróg "
+        },
+        "CDMC1syTsJV2o8mN": {
+          "id": "CDMC1syTsJV2o8mN",
+          "name": "Miecz"
         }
       }
     },
@@ -1880,9 +1940,9 @@
         },
         "SRUbbFMjsStdthhL": {
           "id": "SRUbbFMjsStdthhL",
-          "name": "8k10 brązowych pensów",
+          "name": "8d10 brązowych pensów",
           "description": " ",
-          "originalName": "8k10 brązowych pensów"
+          "originalName": "8d10 Brass Penny"
         },
         "W26lvGYT2xrZILwi": {
           "id": "W26lvGYT2xrZILwi",
@@ -1953,7 +2013,7 @@
         },
         "FvRa9GjVsfHEXsuZ": {
           "id": "FvRa9GjVsfHEXsuZ",
-          "name": "Broń (Rozmaita) ",
+          "name": "Broń (Rozmaita)",
           "description": "<p>Stworzenie nosi broń do walki wręcz lub używa w walce zębów, pazurów albo tym podobnych. Broń zadaje tyle Obrażeń, ile wynosi podana wartość, która już zawiera Bonus z Siły stworzenia. Zazwyczaj będzie to wynosiło 4 + Bonus z Siły (co reprezentuje broń ręczną).</p>",
           "originalName": "Broń (Rozmaita) ",
           "specification": "4"
@@ -2071,7 +2131,7 @@
       "items": {
         "5wAoT8cPl7rnmFhV": {
           "id": "5wAoT8cPl7rnmFhV",
-          "name": "paź ",
+          "name": "paź",
           "description": " ",
           "originalName": "paź "
         },
@@ -2251,7 +2311,7 @@
         },
         "hRqiT161ALQhonfQ": {
           "id": "hRqiT161ALQhonfQ",
-          "name": "narzędzia pracy (Aptekarza) ",
+          "name": "narzędzia pracy (Aptekarza)",
           "description": "<p><strong>Aptekarz</strong>: Narzędzia obejmują moździerz z tłuczkiem, łyżki, słoiki oraz wagę szalkową. Warsztat wyposażony jest także w palniki olejowe i półki pełne składników.</p>\n<p></p>\n<p><strong>Rzemieślnik</strong>: Potencjalny wybór narzędzi używanych przez rzemieślników jest szeroki.</p>\n<p>Przykładowe zestawy:</p>\n<ul type=\"disc\">\n<li><strong>Grawer</strong>: Rylce, punktaki, wosk, kwas, młotek i dłuta. Warsztat zawiera także skrawarki i prasy.</li>\n<li><strong>Kowal</strong>: Młotek, cęgi, punktaki, kształtowniki, świdry i wiertła. Warsztat zawiera także kowadło, piec, dziurkownicę, młot kowalski oraz sztaby metalu.</li>\n<li><strong>Stolarz</strong>: Młotek i gwoździe, piła, przymiar, kreda, pion na sznurku. Warsztat zawiera także tokarki, heble, imadła i zapas drewna.</li>\n</ul>\n<p></p>\n<p><strong>Przykłady innych rzemieślników</strong>: balsamista, bednarz, browarnik, dmuchacz szkła, garbarz, garncarz, jubiler, kaligraf, kamieniarz, kartograf, krawiec, kucharz, malarz, murarz, płatnerz, rusznikarz, rymarz, snycerz, szewc, szkutnik, szlifierz, świecarz, tkacz, winiarz, wytwórca łuków, zbrojmistrz i złotnik.</p>\n<p></p>\n<p><strong>Artysta</strong>: Pędzle i farby, młotek i dłuta, pilniki i skrobaki. Warsztat zawiera także sztalugi lub postumenty i zapas płócien, pergaminu, welinu, drewna, gliny lub nieociosanego kamienia.</p>\n<p><strong>Inżynier</strong>: Klepsydra, przymiar, lont, cyrkiel i przykładnica. Warsztat zawiera także wielokrążki, liny i deski kreślarskie.</p>\n<p><strong>Lekarz</strong>: Igły i szwy, bandaże, skalpel, ocet, pincety i wziernik. Warsztat zawiera także rysunki anatomiczne, różne przybory i stół operacyjny.</p>\n<p><strong>Nawigator</strong>: Kwadrant, astrolabium, wykresy i kompasy, klepsydra i sonda na linie.</p>\n<p><strong>Zielarz</strong>: Moździerz z tłuczkiem, nożyki, sekator i rękawice. Warsztat zawiera także stojaki do suszenia ziół, filtry, lejki, miseczki i słoiki.</p>",
           "originalName": "narzędzia pracy (Aptekarza) "
         },
@@ -2299,7 +2359,7 @@
       "items": {
         "03Hq1HJBAaAo3eUS": {
           "id": "03Hq1HJBAaAo3eUS",
-          "name": "ubranie podróżne ",
+          "name": "ubranie podróżne",
           "description": " ",
           "originalName": "ubranie podróżne "
         },
@@ -2466,7 +2526,7 @@
     },
     "Fang": {
       "id": "U19UPgmCmwEub4pj",
-      "name": " Kieł",
+      "name": "Kieł",
       "description": "<section id=\"secret-SAqm1Ilc0gNFx02b\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.abUCs0O1oBGNonyi.JournalEntryPage.67GdZ4epIhCwPcOT]{Biura Steinhägerów}</p><p><span class=\"fontstyle0\">@UUID[Compendium.wfrp4e-eis.actors.FF4U0ls9YObaK0q5]{ Schutzowi}  towarzyszy Kieł, wierna, ogromna i czarna suka z ostrymi zębiskami. Jednakże, mimo że Kieł to tellandzki pitbull, czyli jedna z najgroźniejszych ras psów @UUID[Compendium.wfrp4e-core.actors.R1iWvfV9EvgIc8bJ]{psów},  ona sama jest znacznie mniej groźna, niż wygląda. Podąża za głosem żołądka i ochoczo zaprzyjaźni się z każdym Bohaterem, który da jej jedzenie albo zda  </span><span class=\"fontstyle2\"><strong> Przeciętny (+20) Test Oswajania. </strong></span><span class=\"fontstyle0\">To dobra psina.</span></p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.U19UPgmCmwEub4pj",
       "species": "Tellandzki Pitbull",
@@ -2616,7 +2676,7 @@
         },
         "tEePG1rdJLcPwyRH": {
           "id": "tEePG1rdJLcPwyRH",
-          "name": "Wyczulony Zmysł (Dotyk) ",
+          "name": "Wyczulony Zmysł (Dotyk)",
           "description": "<p>Jeden z twoich pięciu zmysłów jest tak wyczulony, że wyczuwasz to, co umyka innym. Możesz wykonać Test Percepcji, by dowiedzieć się czegoś więcej niż inni, opierając się na tym szczególnym zmyśle. Przykładowo może to być dostrzeżenie dalekiego orła, którego nie widzą inni, wywęszenie prawie niewyczuwalnej trucizny, dosłyszenie bicia serca myszy kryjącej się w ścianie, wyczucie dotykiem ukrytej wiadomości wyskrobanej na papierze czy porównanie smaku dwóch piw od tego samego piwowara, by dowiedzieć się, czy zostały nalane z dwóch różnych beczek.</p>",
           "originalName": "Wyczulony Zmysł (Dotyk) ",
           "tests": "Percepcja (Dotyk)"
@@ -2821,7 +2881,7 @@
         },
         "iDWwsy9T9APxd4ud": {
           "id": "iDWwsy9T9APxd4ud",
-          "name": "strój kupca (najlepszej jakości) ",
+          "name": "strój kupca (najlepszej jakości)",
           "description": " ",
           "originalName": "strój kupca (najlepszej jakości) "
         },
@@ -2918,6 +2978,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "VCsncxM1Ze4zGJOs": {
+          "id": "VCsncxM1Ze4zGJOs",
+          "name": "Miecz"
         }
       }
     },
@@ -2957,7 +3021,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Ubodzy"
         },
         "RwoB9p4h8RhvWWx9": {
           "specification": "Plebejusze"
@@ -3048,6 +3113,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "Fw1FCfkLtO1hsr5q": {
+          "id": "Fw1FCfkLtO1hsr5q",
+          "name": "Pałka"
         }
       }
     },
@@ -3228,7 +3297,7 @@
     },
     "Great Cat": {
       "id": "8OyCmwhJL4YQFI0N",
-      "name": "Wielki kot ",
+      "name": "Wielki kot",
       "description": "<section id=\"secret-CbO9d4DQo4Z8wD7G\" class=\"secret\"><p>Wielkie koty żyją w lasach i górach, z dala od ludzi. Są smukłymi, żylastymi stworzeniami wielkości dużego psa myśliwskiego; w kłębie mierzą około 60 centymetrów, a od nosa po koniec ogona niemal 180 centymetrów. Ich futro jest cętkowane czarnymi i brązowymi pasami, co zapewnia im niemal doskonały kamuflaż w cienistym lesie. Polują na jelenie, ogromne szczury i wszelkiego rodzaju małą zwierzynę.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.8OyCmwhJL4YQFI0N",
       "species": "Kot",
@@ -3494,8 +3563,12 @@
         "cxAO6tiJpd0Kif1X": {
           "id": "cxAO6tiJpd0Kif1X",
           "name": "płaszcz (duży i ciepły)",
-            "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
+          "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
           "originalName": "płaszcz (duży i ciepły)"
+        },
+        "znDsSw8L4UGj55NJ": {
+          "id": "znDsSw8L4UGj55NJ",
+          "name": "Miecz"
         }
       }
     },
@@ -3516,6 +3589,10 @@
         },
         "ky37HZcgAj7ftMNp": {
           "specification": "bogaci ludzie"
+        },
+        "CujdYSAFTHF396O1": {
+          "id": "CujdYSAFTHF396O1",
+          "name": "Pałka"
         }
       }
     },
@@ -3648,9 +3725,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "4k10 brązowych pensów",
+          "name": "4d10 brązowych pensów",
           "description": " ",
-          "originalName": "4k10 brązowych pensów"
+          "originalName": "4d10 Brass Penny"
         },
         "axjGvZJkO5wU8qcv": {
           "id": "axjGvZJkO5wU8qcv",
@@ -3774,7 +3851,8 @@
           },
           "tests": "Testy Atletyki przy przemieszczaniu się przez tereny wiejskie."
         }
-      }
+      },
+      "motivation": "Ciekawość"
     },
     "Heavy Draught Horse": {
       "id": "PZiW5RRL0sqmGjaL",
@@ -3888,9 +3966,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "10k10 brązowych pensów",
+          "name": "10d10 brązowych pensów",
           "description": " ",
-          "originalName": "10k10 brązowych pensów"
+          "originalName": "10d10 Brass Penny"
         },
         "0CwV96kTDRF0jUhk": {
           "id": "0CwV96kTDRF0jUhk",
@@ -3995,9 +4073,9 @@
         },
         "bVeWCSg3OAkWGdVO": {
           "id": "bVeWCSg3OAkWGdVO",
-          "name": "1k10 złotych koron",
+          "name": "1d10 złotych koron",
           "description": " ",
-          "originalName": "1k10 złotych koron"
+          "originalName": "1d10 Gold Crown"
         },
         "DRO5DLF6UcfkvNSh": {
           "id": "DRO5DLF6UcfkvNSh",
@@ -4106,6 +4184,10 @@
             }
           },
           "tests": "Siła Woli (Opór wobec kultystów)"
+        },
+        "iK66PaGNgKOFaFRy": {
+          "id": "iK66PaGNgKOFaFRy",
+          "name": "Miecz"
         }
       }
     },
@@ -4196,7 +4278,7 @@
         },
         "9ZG8i57h8Hkqlerf": {
           "id": "9ZG8i57h8Hkqlerf",
-          "name": " szaty (prawnicze)",
+          "name": "szaty (prawnicze)",
           "description": " ",
           "originalName": " szaty (prawnicze)"
         },
@@ -4414,8 +4496,12 @@
         "HLawVzA5bAPCKpCH": {
           "id": "HLawVzA5bAPCKpCH",
           "name": "płaszcz (duży i ciepły)",
-            "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
+          "description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Chroni noszącego przed warunkami atmosferycznymi i skrajnym zimnem; bez dobrego płaszcza lub podobnego okrycia otrzymujesz ujemne modyfikatory do Testów przeciwko Wychłodzeniu.</p>",
           "originalName": "płaszcz (duży i ciepły)"
+        },
+        "dL5CVJ4Dxg3hIrCz": {
+          "id": "dL5CVJ4Dxg3hIrCz",
+          "name": "Miecz"
         }
       }
     },
@@ -4432,7 +4518,7 @@
         "MQWgoCwhlwSII9cA": {
           "id": "MQWgoCwhlwSII9cA",
           "name": "Kufer (Zamknięty)",
-            "description": "<p>Kosztowności Isolde.</p>\n<p>Kufer ma <strong>Trudny (-10)</strong> zamek, wymagający 2 PS, aby go otworzyć.</p>",
+          "description": "<p>Kosztowności Isolde.</p>\n<p>Kufer ma <strong>Trudny (-10)</strong> zamek, wymagający 2 PS, aby go otworzyć.</p>",
           "originalName": "Kufer (Zamknięty)"
         },
         "AxmxrUi8rSBZ1Vdv": {
@@ -4524,6 +4610,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "awhN9q1s4Qqv33oL": {
+          "id": "awhN9q1s4Qqv33oL",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -4563,7 +4653,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Ubodzy"
         },
         "jGE67thdPndrVwst": {
           "specification": "Plebejusze"
@@ -4661,7 +4752,7 @@
         },
         "yczyTKxASEa2M5o6": {
           "id": "yczyTKxASEa2M5o6",
-          "name": "Sztuka (Dramaturgia) ",
+          "name": "Sztuka (Dramaturgia)",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Sztuka}",
           "originalName": "Sztuka (Dramaturgia) "
         },
@@ -4853,7 +4944,7 @@
     },
     "Johann The Ghost": {
       "id": "rKQ6GURYq0iWHf7s",
-      "name": " Duch Johanna",
+      "name": "Duch Johanna",
       "description": "<section id=\"secret-MXm2wh6qyd9OZN59\" class=\"secret\"><p>@UUID[Compendium.wfrp4e-eis.journals.8nRRXBpv18FDsG8d.JournalEntryPage.itIjEiNtkkGBZRql]{Przyjaciel w potrzebie}</p><p>Johann nie jest z natury zły ani kontrolowany przez nekromantę, dlatego ma współczynnik Ogłady.</p></section>",
       "sourceId": "Compendium.wfrp4e-eis.actors.rKQ6GURYq0iWHf7s",
       "species": "Nieumarły",
@@ -4862,7 +4953,7 @@
         "Jls491gvR3y6Z7Wn": {
           "id": "Jls491gvR3y6Z7Wn",
           "name": "Niestabilny*",
-            "description": "<p>Ciało stworzenia podtrzymują plugawe magiki, z natury niestabilne w świecie materialnym.</p>\n<p>Za każdym razem, gdy kończy Rundę w zwarciu z przeciwnikiem mającym wyższą Przewagę, stworzenie zostaje odepchnięte, a podtrzymująca je magia słabnie. Traci tyle Ran, ile wynosi różnica między jego Przewagą a najwyższą Przewagą przeciwnika walczącego z nim w zwarciu.</p>\n<p>Jeśli więc stworzenie ma 1 Przewagi, a jego przeciwnik 3, traci 2 Rany. Jeśli kiedykolwiek osiągnie 0 Ran, magia utrzymująca je na miejscu załamuje się i stworzenie „umiera”.</p>\n<p>&nbsp;</p>\n<p><em>*Johann jest Niestabilny tylko wtedy, gdy oddali się dalej niż 100 metrów od swoich kości.</em></p>",
+          "description": "<p>Ciało stworzenia podtrzymują plugawe magiki, z natury niestabilne w świecie materialnym.</p>\n<p>Za każdym razem, gdy kończy Rundę w zwarciu z przeciwnikiem mającym wyższą Przewagę, stworzenie zostaje odepchnięte, a podtrzymująca je magia słabnie. Traci tyle Ran, ile wynosi różnica między jego Przewagą a najwyższą Przewagą przeciwnika walczącego z nim w zwarciu.</p>\n<p>Jeśli więc stworzenie ma 1 Przewagi, a jego przeciwnik 3, traci 2 Rany. Jeśli kiedykolwiek osiągnie 0 Ran, magia utrzymująca je na miejscu załamuje się i stworzenie „umiera”.</p>\n<p>&nbsp;</p>\n<p><em>*Johann jest Niestabilny tylko wtedy, gdy oddali się dalej niż 100 metrów od swoich kości.</em></p>",
           "originalName": "Niestabilny*"
         },
         "JQa5DLnTs2SEzRrc": {
@@ -4937,7 +5028,8 @@
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
         }
-      }
+      },
+      "motivation": "Stać się lepszym"
     },
     "Josef Quartjin": {
       "id": "nxLsH2WvU6xmjzfg",
@@ -4957,7 +5049,7 @@
         },
         "CxA9YCxTHHBl2UzD": {
           "id": "CxA9YCxTHHBl2UzD",
-          "name": "Wiedza (Szlaki Rzeczne) ",
+          "name": "Wiedza (Szlaki Rzeczne)",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Wiedza}",
           "originalName": "Wiedza (Szlaki Rzeczne) "
         },
@@ -5004,6 +5096,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "sK972EbyXO3GnJhu": {
+          "id": "sK972EbyXO3GnJhu",
+          "name": "Topór"
         }
       }
     },
@@ -5133,6 +5229,14 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "0MYOJFx3vkYA95B4": {
+          "id": "0MYOJFx3vkYA95B4",
+          "name": "2d10 brązowych pensów"
+        },
+        "FcDYeIJD0aUv0mDp": {
+          "id": "FcDYeIJD0aUv0mDp",
+          "name": "Miecz"
         }
       }
     },
@@ -5166,9 +5270,9 @@
         },
         "KB8HgDz56dh2w7w1": {
           "id": "KB8HgDz56dh2w7w1",
-          "name": "5k10 srebrnych szylingów",
+          "name": "5d10 srebrnych szylingów",
           "description": " ",
-          "originalName": "5k10 srebrnych szylingów"
+          "originalName": "5d10 Silver Shilling"
         },
         "pUpeT9KWIrG5QTjv": {
           "id": "pUpeT9KWIrG5QTjv",
@@ -5322,9 +5426,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "2k10 brązowych pensów",
+          "name": "2d10 brązowych pensów",
           "description": " ",
-          "originalName": "2k10 brązowych pensów"
+          "originalName": "2d10 Brass Penny"
         },
         "1RiN2f9uVOGMtWtJ": {
           "id": "1RiN2f9uVOGMtWtJ",
@@ -5356,8 +5460,13 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "t6gVJ9S0aRUEtThK": {
+          "id": "t6gVJ9S0aRUEtThK",
+          "name": "Miecz"
         }
-      }
+      },
+      "motivation": "Przechytrzyć władze"
     },
     "Klaus Schattiger": {
       "id": "akfYzVvdVRvSjl6q",
@@ -5425,6 +5534,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "GfIX0l3czIRqFshm": {
+          "id": "GfIX0l3czIRqFshm",
+          "description": "<p>Muły to bezpłodne mieszanki koni i osłów. Są bardziej niezdarne niż osły, ale przywarę tę nadrabiają niespożytą wytrzymałością, warto to mieć na uwadze.</p>"
         }
       }
     },
@@ -5499,6 +5612,10 @@
           "originalName": "Bełt",
           "sourceId": "Compendium.wfrp4e-core.items.Item.kFROfGFdExfyJTg9",
           "range": "Jak Broń"
+        },
+        "c1FVjBe29Sba1URb": {
+          "id": "c1FVjBe29Sba1URb",
+          "name": "Miecz"
         }
       }
     },
@@ -5514,9 +5631,9 @@
       "items": {
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "10k10 brązowych pensów",
+          "name": "10d10 brązowych pensów",
           "description": " ",
-          "originalName": "10k10 brązowych pensów"
+          "originalName": "10d10 Brass Penny"
         },
         "IN9eExNvl6IrrtAd": {
           "id": "IN9eExNvl6IrrtAd",
@@ -5637,6 +5754,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "yiIACOyzZOCrmX8r": {
+          "id": "yiIACOyzZOCrmX8r",
+          "name": "Pałka"
         }
       }
     },
@@ -5763,6 +5884,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "bdzcdQmXDXmATY9g": {
+          "id": "bdzcdQmXDXmATY9g",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -5817,6 +5942,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "rCLXmgDj3odh1Lqm": {
+          "id": "rCLXmgDj3odh1Lqm",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -5832,9 +5961,9 @@
       "items": {
         "Ggx0bRaCuq8MbF0g": {
           "id": "Ggx0bRaCuq8MbF0g",
-          "name": "1k10 złotych koron",
+          "name": "1d10 złotych koron",
           "description": " ",
-          "originalName": "1k10 złotych koron"
+          "originalName": "1d10 Gold Crown"
         },
         "me8jMyZk53SHib4l": {
           "id": "me8jMyZk53SHib4l",
@@ -6101,6 +6230,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "7gIA2xUoevs4rolE": {
+          "id": "7gIA2xUoevs4rolE",
+          "name": "Miecz"
         }
       }
     },
@@ -6121,9 +6254,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "6k10 brązowych pensów",
+          "name": "6d10 brązowych pensów",
           "description": " ",
-          "originalName": "6k10 brązowych pensów"
+          "originalName": "6d10 Brass Penny"
         },
         "V1iW0zjVWHQDSjdC": {
           "id": "V1iW0zjVWHQDSjdC",
@@ -6227,8 +6360,13 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "opJFMwzNWfXNNkG3": {
+          "id": "opJFMwzNWfXNNkG3",
+          "name": "Miecz"
         }
-      }
+      },
+      "motivation": "Odkrywać"
     },
     "Maria Braund": {
       "id": "BcIxWkR7esu5IMLm",
@@ -6248,9 +6386,9 @@
         },
         "buc3LXdJbyT6dZqC": {
           "id": "buc3LXdJbyT6dZqC",
-          "name": "4k10 brązowych pensów",
+          "name": "4d10 brązowych pensów",
           "description": " ",
-          "originalName": "4k10 brązowych pensów"
+          "originalName": "4d10 Brass Penny"
         },
         "El3bMuii1yhjBAvr": {
           "id": "El3bMuii1yhjBAvr",
@@ -6329,6 +6467,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "N8kSHxoplWYWdH3c": {
+          "id": "N8kSHxoplWYWdH3c",
+          "name": "Miecz"
         }
       }
     },
@@ -6380,6 +6522,10 @@
         },
         "R0uw94C1qVkK7Qvj": {
           "specification": "Ci, którzy wyglądają na słabeuszy"
+        },
+        "bfnFxTTbwqwgiVG6": {
+          "id": "bfnFxTTbwqwgiVG6",
+          "name": "Miecz"
         }
       }
     },
@@ -6611,6 +6757,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "kB7yazvWGnNORPft": {
+          "id": "kB7yazvWGnNORPft",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -6773,9 +6923,9 @@
         },
         "StGOUVgHe50sDfQE": {
           "id": "StGOUVgHe50sDfQE",
-          "name": "10k10 brązowych pensów",
+          "name": "10d10 brązowych pensów",
           "description": " ",
-          "originalName": "10k10 brązowych pensów"
+          "originalName": "10d10 Brass Penny"
         },
         "0CwV96kTDRF0jUhk": {
           "id": "0CwV96kTDRF0jUhk",
@@ -6916,6 +7066,10 @@
             }
           },
           "tests": "Charyzma i plotkowanie (Żołnierze)"
+        },
+        "lcfaf4su4aKhN2hA": {
+          "id": "lcfaf4su4aKhN2hA",
+          "name": "Miecz"
         }
       }
     },
@@ -7017,9 +7171,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "6k10 brązowych pensów",
+          "name": "6d10 brązowych pensów",
           "description": " ",
-          "originalName": "6k10 brązowych pensów"
+          "originalName": "6d10 Brass Penny"
         },
         "ycn9LbdLAxYqAu5y": {
           "id": "ycn9LbdLAxYqAu5y",
@@ -7169,7 +7323,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Przestępcy"
         },
         "Iiy1ubLpSFQjuj6S": {
           "id": "Iiy1ubLpSFQjuj6S",
@@ -7226,6 +7381,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "lpKy4KYAewAnsdzR": {
+          "id": "lpKy4KYAewAnsdzR",
+          "name": "Miecz"
         }
       }
     },
@@ -7357,9 +7516,9 @@
       "items": {
         "3icXxxVEyp2kSuYq": {
           "id": "3icXxxVEyp2kSuYq",
-          "name": "4k10 brązowych pensów",
+          "name": "4d10 brązowych pensów",
           "description": " ",
-          "originalName": "4k10 brązowych pensów"
+          "originalName": "4d10 Brass Penny"
         },
         "DRO5DLF6UcfkvNSh": {
           "id": "DRO5DLF6UcfkvNSh",
@@ -7396,6 +7555,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "Z0ginenK6DSWjjPv": {
+          "id": "Z0ginenK6DSWjjPv",
+          "name": "Miecz"
         }
       }
     },
@@ -7411,9 +7574,9 @@
       "items": {
         "KB8HgDz56dh2w7w1": {
           "id": "KB8HgDz56dh2w7w1",
-          "name": "5k10 srebrnych szylingów",
+          "name": "5d10 srebrnych szylingów",
           "description": " ",
-          "originalName": "5k10 srebrnych szylingów"
+          "originalName": "5d10 Silver Shilling"
         },
         "kw3ZBlwsaDJ9rJTx": {
           "id": "kw3ZBlwsaDJ9rJTx",
@@ -7718,7 +7881,7 @@
         "Mwfts7c76mXBZEgt": {
           "id": "Mwfts7c76mXBZEgt",
           "name": "Pocisk spaczenia",
-            "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w wyładowanie niszczycielskiej energii. Uznawane jest za magiczny pocisk o współczynniku Obrażeń +6. Trafiona ofiara musi zdać </span><strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong><span class=\"fontstyle0\"> lub otrzymać 1 Punkt Zepsucia.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
+          "description": "<p><span class=\"fontstyle0\">Formujesz mroczną magię w wyładowanie niszczycielskiej energii. Uznawane jest za magiczny pocisk o współczynniku Obrażeń +6. Trafiona ofiara musi zdać </span><strong><span class=\"fontstyle2\">Wymagający (+0) Test Odporności</span></strong><span class=\"fontstyle0\"> lub otrzymać 1 Punkt Zepsucia.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
           "originalName": "Pocisk spaczenia",
           "effects": {
             "BcIqqg2LrTJdON5l": {
@@ -7741,7 +7904,7 @@
         "WuJf2YV4RaCkUyAk": {
           "id": "WuJf2YV4RaCkUyAk",
           "name": "Potęga Chaosu",
-            "description": "<p><span class=\"fontstyle0\">Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania Potęgi Chaosu ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać </span><strong><span class=\"fontstyle2\">Przeciętny (+20) Test Odporności</span></strong><span class=\"fontstyle0\"><strong> na koniec każdej Rundy</strong> lub otrzymać +1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają </span><span class=\"fontstyle2\"><strong>Przeciętną (+20) Trudność</strong>.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
+          "description": "<p><span class=\"fontstyle0\">Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania Potęgi Chaosu ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać </span><strong><span class=\"fontstyle2\">Przeciętny (+20) Test Odporności</span></strong><span class=\"fontstyle0\"><strong> na koniec każdej Rundy</strong> lub otrzymać +1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają </span><span class=\"fontstyle2\"><strong>Przeciętną (+20) Trudność</strong>.</span></p><p>\n\n <b>Tradycja:</b> Ofiary czarów z Tradycji Tzeentcha zostają rozszarpane przez przemieniającą magię Chaosu. Ofiary czaru z Tradycji Tzeentcha muszą zdać Wymagający (+0) Test Odporności lub otrzymać +1 Punkt Zepsucia. Jeśli zdadzą Test, zamiast tego otrzymują +1 Punkt Szczęścia, który mogą wykorzystać normalnie. Takie są kaprysy Tzeentcha.<p>",
           "originalName": "Potęga Chaosu",
           "effects": {
             "OpjmUwcDJXeOUSWe": {
@@ -7809,6 +7972,20 @@
         },
         "eleonUJ670D2IMbV": {
           "specification": "2"
+        },
+        "0s08Rd0egC4jNsZ2": {
+          "id": "0s08Rd0egC4jNsZ2",
+          "name": "Sobowtór",
+          "range": "Ty",
+          "target": "Ty",
+          "duration": "Bonus Int minut"
+        },
+        "lNMfPH8zFtuvb7w6": {
+          "id": "lNMfPH8zFtuvb7w6",
+          "name": "Sobowtór",
+          "range": "Ty",
+          "target": "Ty",
+          "duration": "Bonus Int minut"
         }
       }
     },
@@ -7872,6 +8049,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "1d10 srebrnych szylingów"
         }
       }
     },
@@ -7899,9 +8080,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "4k10 brązowych pensów",
+          "name": "4d10 brązowych pensów",
           "description": " ",
-          "originalName": "4k10 brązowych pensów"
+          "originalName": "4d10 Brass Penny"
         },
         "WnlBlJoQ2Vq6IgGa": {
           "id": "WnlBlJoQ2Vq6IgGa",
@@ -7994,6 +8175,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "yiIACOyzZOCrmX8r": {
+          "id": "yiIACOyzZOCrmX8r",
+          "name": "Pałka"
         }
       }
     },
@@ -8038,7 +8223,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Strażnicy"
         },
         "gFkRm9wS65qe18Xv": {
           "specification": "Wymagający"
@@ -8717,7 +8903,7 @@
         "mS5vOqnIzkewf4D3": {
           "id": "mS5vOqnIzkewf4D3",
           "name": "Księga Zaklęć",
-            "description": "<p><em>Zawiera 4 wybrane przez Ciebie zaklęcia z Tradycji Niebios.</em></p>\n<p>Grimuary zaklęć są zwykle spisywane przez czarodziejów, a ich okładki często zabezpiecza się zamkami. Czasem chronią je nawet magiczne alarmy lub osłony. Noszenie grimuaru zaklęć jest karane jako herezja, chyba że jego właściciel ma licencję Kolegiów Magii.</p>",
+          "description": "<p><em>Zawiera 4 wybrane przez Ciebie zaklęcia z Tradycji Niebios.</em></p>\n<p>Grimuary zaklęć są zwykle spisywane przez czarodziejów, a ich okładki często zabezpiecza się zamkami. Czasem chronią je nawet magiczne alarmy lub osłony. Noszenie grimuaru zaklęć jest karane jako herezja, chyba że jego właściciel ma licencję Kolegiów Magii.</p>",
           "originalName": "Księga Zaklęć"
         },
         "ZggxJSLsTpYAOKPw": {
@@ -8734,9 +8920,9 @@
         },
         "0MYOJFx3vkYA95B4": {
           "id": "0MYOJFx3vkYA95B4",
-          "name": "6k10 brązowych pensów",
+          "name": "6d10 brązowych pensów",
           "description": " ",
-          "originalName": "6k10 brązowych pensów"
+          "originalName": "6d10 Brass Penny"
         },
         "Rt3kN3sBY5USToe2": {
           "id": "Rt3kN3sBY5USToe2",
@@ -8780,7 +8966,8 @@
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
         }
-      }
+      },
+      "motivation": "Udowodnienie swojej wartości"
     },
     "Werner Murrmann": {
       "id": "YWmr1W2O1TOmDBXM",
@@ -8871,7 +9058,8 @@
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
         }
-      }
+      },
+      "motivation": "Ryzykant"
     },
     "Wilhelm Kind": {
       "id": "bemI8rGjEeeIrKvI",
@@ -8891,9 +9079,9 @@
         },
         "PZEEpM8gWeXt3HdL": {
           "id": "PZEEpM8gWeXt3HdL",
-          "name": "2k10 brązowych pensów",
+          "name": "2d10 brązowych pensów",
           "description": " ",
-          "originalName": "2k10 brązowych pensów"
+          "originalName": "2d10 Brass Penny"
         },
         "LScH7RVaNhJLA34y": {
           "id": "LScH7RVaNhJLA34y",
@@ -8959,6 +9147,10 @@
         },
         "GW9LyvHvEVmTuAcG": {
           "specification": "bogaci ludzie"
+        },
+        "ZpaiyzEcIgoTOTCm": {
+          "id": "ZpaiyzEcIgoTOTCm",
+          "name": "Pałka"
         }
       }
     },
@@ -9009,6 +9201,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "yiIACOyzZOCrmX8r": {
+          "id": "yiIACOyzZOCrmX8r",
+          "name": "Pałka"
         }
       }
     },
@@ -9045,7 +9241,7 @@
           "id": "mv60NWUuk4s9pbyo",
           "name": "O Toksycznym Wpływie Chaosu na Umysły i Ciała Sług Jego oraz o Znakach, po Których Tenże Rozpoznany Być Może we Wczesnych Stadiach Niegodziwości",
           "description": " ",
-            "gmdescription": "<p>Łatwo domyślić się, o czym traktuje to dzieło. Chociaż jest to bardzo szczegółowa praca, zawiera parę nieprawdziwych spostrzeżeń. Twierdzi na przykład, że Chaos zawsze znaczy swoje ofiary widoczną mutacją, zanim dojdzie do moralnego upadku, podczas gdy często prawda jest dokładnie odwrotna.</p>\n<p>Notatki i marginalia dodane przez Magnusa i Wolfganga będą prawdopodobnie o wiele bardziej interesujące dla prawdziwego badacza Chaosu niż oryginalny tekst. Księgę można sprzedać nawet za 40 złotych koron — jeśli znajdzie się odpowiedniego kupca. Wielu łowców czarownic chętnie zapłaciłoby za nią dobre pieniądze. Większość jednak oskarżyłaby posiadacza o niezdrowe zainteresowanie „czarostwem Chaosu”, tylko po to, by zagarnąć ją za darmo!</p>",
+          "gmdescription": "<p>Łatwo domyślić się, o czym traktuje to dzieło. Chociaż jest to bardzo szczegółowa praca, zawiera parę nieprawdziwych spostrzeżeń. Twierdzi na przykład, że Chaos zawsze znaczy swoje ofiary widoczną mutacją, zanim dojdzie do moralnego upadku, podczas gdy często prawda jest dokładnie odwrotna.</p>\n<p>Notatki i marginalia dodane przez Magnusa i Wolfganga będą prawdopodobnie o wiele bardziej interesujące dla prawdziwego badacza Chaosu niż oryginalny tekst. Księgę można sprzedać nawet za 40 złotych koron — jeśli znajdzie się odpowiedniego kupca. Wielu łowców czarownic chętnie zapłaciłoby za nią dobre pieniądze. Większość jednak oskarżyłaby posiadacza o niezdrowe zainteresowanie „czarostwem Chaosu”, tylko po to, by zagarnąć ją za darmo!</p>",
           "originalName": "O Toksycznym Wpływie Chaosu na Umysły i Ciała Sług Jego oraz o Znakach, po Których Tenże Rozpoznany Być Może we Wczesnych Stadiach Niegodziwości"
         },
         "btaJ66F1PqKadcma": {
@@ -9181,7 +9377,8 @@
           "specification": "Skórzany kaftan"
         },
         "GwjvDLZz3PvK6xgs": {
-          "specification": "Obcy, Ludzie zadający zbyt wiele pytań"
+          "specification": "Obcy, Ludzie zadający zbyt wiele pytań",
+          "specification_value": "Obcy"
         },
         "AtpAudHA4ybXVlWM": {
           "specification": "0"
@@ -9222,6 +9419,10 @@
           "name": "Skradanie",
           "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "TQBBR04dlGvM23nb": {
+          "id": "TQBBR04dlGvM23nb",
+          "specification_value": "Obcy"
         }
       }
     },
@@ -9249,9 +9450,9 @@
         },
         "F88gR985nKdWRhoH": {
           "id": "F88gR985nKdWRhoH",
-          "name": "10k10 brązowych pensów",
+          "name": "10d10 brązowych pensów",
           "description": " ",
-          "originalName": "10k10 brązowych pensów"
+          "originalName": "10d10 Brass Penny"
         },
         "DNmvl8ZaM5ZlJc5B": {
           "id": "DNmvl8ZaM5ZlJc5B",
@@ -9442,27 +9643,32 @@
         "6BwYy0W9Y2A9KiO1": {
           "id": "6BwYy0W9Y2A9KiO1",
           "name": "Sztuka (Dowolna)",
-          "originalName": "Art"
+          "originalName": "Art",
+          "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Sztuka}</p>"
         },
         "DiKxVr4QYVN29sQy": {
           "id": "DiKxVr4QYVN29sQy",
           "name": "Jeździectwo (Konie)",
-          "originalName": "Ride"
+          "originalName": "Ride",
+          "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Jeździectwo}</p>"
         },
         "MZjHxV7rOCfNwUEX": {
           "id": "MZjHxV7rOCfNwUEX",
           "name": "Skradanie (Miasto)",
-          "originalName": "Stealth"
+          "originalName": "Stealth",
+          "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Skradanie}</p>"
         },
         "SvoYsuvndpEARe3f": {
           "id": "SvoYsuvndpEARe3f",
           "name": "Występy (Dowolne)",
-          "originalName": "Entertain"
+          "originalName": "Entertain",
+          "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Występy}</p>"
         },
         "n9bhBvyAXGIEPboY": {
           "id": "n9bhBvyAXGIEPboY",
           "name": "Broń Biała (Podstawowa)",
-          "originalName": "Melee"
+          "originalName": "Melee",
+          "description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Broń Biała}</p>"
         },
         "ZE73erfsyk3wP1KL": {
           "id": "ZE73erfsyk3wP1KL",
@@ -9512,53 +9718,75 @@
           "name": "Narzędzia pracy (Kucharza)",
           "description": "<p><strong>Aptekarz</strong>: Narzędzia obejmują moździerz z tłuczkiem, łyżki, słoiki oraz wagę szalkową. Warsztat wyposażony jest także w palniki olejowe i półki pełne składników.</p>\n<p></p>\n<p><strong>Rzemieślnik</strong>: Potencjalny wybór narzędzi używanych przez rzemieślników jest szeroki.</p>\n<p>Przykładowe zestawy:</p>\n<ul type=\"disc\">\n<li><strong>Grawer</strong>: Rylce, punktaki, wosk, kwas, młotek i dłuta. Warsztat zawiera także skrawarki i prasy.</li>\n<li><strong>Kowal</strong>: Młotek, cęgi, punktaki, kształtowniki, świdry i wiertła. Warsztat zawiera także kowadło, piec, dziurkownicę, młot kowalski oraz sztaby metalu.</li>\n<li><strong>Stolarz</strong>: Młotek i gwoździe, piła, przymiar, kreda, pion na sznurku. Warsztat zawiera także tokarki, heble, imadła i zapas drewna.</li>\n</ul>\n<p></p>\n<p><strong>Przykłady innych rzemieślników</strong>: balsamista, bednarz, browarnik, dmuchacz szkła, garbarz, garncarz, jubiler, kaligraf, kamieniarz, kartograf, krawiec, kucharz, malarz, murarz, płatnerz, rusznikarz, rymarz, snycerz, szewc, szkutnik, szlifierz, świecarz, tkacz, winiarz, wytwórca łuków, zbrojmistrz i złotnik.</p>\n<p></p>\n<p><strong>Artysta</strong>: Pędzle i farby, młotek i dłuta, pilniki i skrobaki. Warsztat zawiera także sztalugi lub postumenty i zapas płócien, pergaminu, welinu, drewna, gliny lub nieociosanego kamienia.</p>\n<p><strong>Inżynier</strong>: Klepsydra, przymiar, lont, cyrkiel i przykładnica. Warsztat zawiera także wielokrążki, liny i deski kreślarskie.</p>\n<p><strong>Lekarz</strong>: Igły i szwy, bandaże, skalpel, ocet, pincety i wziernik. Warsztat zawiera także rysunki anatomiczne, różne przybory i stół operacyjny.</p>\n<p><strong>Nawigator</strong>: Kwadrant, astrolabium, wykresy i kompasy, klepsydra i sonda na linie.</p>\n<p><strong>Zielarz</strong>: Moździerz z tłuczkiem, nożyki, sekator i rękawice. Warsztat zawiera także stojaki do suszenia ziół, filtry, lejki, miseczki i słoiki.</p>",
           "originalName": "Narzędzia pracy (Kucharza)"
+        },
+        "KB8HgDz56dh2w7w1": {
+          "id": "KB8HgDz56dh2w7w1",
+          "name": "2d10 srebrnych szylingów"
         }
       }
     },
     "Cart": {
       "id": "OoI7OPMt3l182v5d",
       "name": "Wózek",
-      "sourceId": "Compendium.wfrp4e-eis.actors.OoI7OPMt3l182v5d"
+      "sourceId": "Compendium.wfrp4e-eis.actors.OoI7OPMt3l182v5d",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Wózek to ogólne określenie na niewielkie dwukołowe pojazdy, wliczając w to rydwany, jaszcze czy przyczepki. W wózkach pasażerskich znajduje się siedzisko, na którym mogą usiąść maksymalnie dwie osoby. W przypadku wózków towarowych woźnice siadają z przodu, mając towary za plecami. Wózki są ciągnięte zwykle przez jedno zwierzę. Z obu stron pojazdu wychodzą dyszle, do których przyczepiane są uprząż lub chomąto.</p>",
+      "motivePower": "1 zwierzę pociągowe"
     },
     "Chair": {
       "id": "lg4isfAW6NPfovIS",
       "name": "Lektyka Jednosobowa",
-      "sourceId": "Compendium.wfrp4e-eis.actors.lg4isfAW6NPfovIS"
+      "sourceId": "Compendium.wfrp4e-eis.actors.lg4isfAW6NPfovIS",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Ten miejski środek transportu zwany jest czasami Krzesłem z Bordeleaux ze względu na nazwę bretońskiego miasta, w którym pojawił się po raz pierwszy. Bardzo rzadko widuje się je poza murami miast. Składają się z zamkniętego kadłuba, przypominającego niewielką szafę z wyścielonym siedzeniem w środku. Całość stoi na dwóch dyszlach i niesiona jest przez parę tragarzy. Krzesła są popularne wśród bogatych mieszczan, zwłaszcza gdy wracają do domu po długich nocnych hulankach. Niektóre domy korzystają z własnych nosicieli, inne polegają na wynajmowanym transporcie. Typowa stawka za podróż krzesłem wynosi @Pay[–/3]{3 pensy} za każdą przebytą dzielnicę.</p><p>Krzesła i lektyki nie mają kół. Ich tragarze muszą nieść 100% obciążenia pojazdu i jego zawartości.</p>",
+      "motivePower": "2 tragarzy"
     },
     "Coach": {
       "id": "cNfiKH3ZIrlkWptP",
       "name": "Dyliżans",
-      "sourceId": "Compendium.wfrp4e-eis.actors.cNfiKH3ZIrlkWptP"
+      "sourceId": "Compendium.wfrp4e-eis.actors.cNfiKH3ZIrlkWptP",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Dyliżans to zamknięty czterokołowy pojazd, ciągnięty przez dwa, cztery lub sześć koni. To preferowany środek transportu na dłuższych trasach wśród zamożniejszych obywateli Imperium. W całym kraju można znaleźć liczne przedsiębiorstwa woźniców, oferujące przewożenie ludzi i bagaży.</p><p>Szlachecki powóz, zwany także karocą, może przewozić do sześciu pasażerów wraz z umieszczanym z tyłu bagażem (zwykle w kufrach). Przewożenie rzeczy na dachu ze względów estetycznych jest nie do pomyślenia. Wielu szlachciców umieszcza wymyślne ozdoby i herby na dachach swoich karoc, co sprawia, że przewożenie na nich czegokolwiek jest praktycznie niemożliwe. Powozy te są kierowane przez jednego woźnicę, z parą sług stojących z tyłu na specjalnych wysokich stopniach, aby móc spoglądać ponad dachem karocy. Pozostali służący zwykle podróżują wozami, mniejszymi dyliżansami lub konno, a forysie jadą przodem, oczyszczając drogę i wypatrując ewentualnych niebezpieczeństw.</p><p>Normalny dyliżans może przewozić do sześciu pasażerów w środku oraz przywiązane na dachu bagaże. Czterech kolejnych ludzi może podróżować na dachu wraz z towarami, o ile pogoda sprzyja takiej przejażdżce. Powozi zwykle jeden woźnica, któremu towarzyszy pomocnik, uzbrojony w kuszę lub garłacz.</p><p>Biorąc pod uwagę możliwe malunki, zdobienia, rzeźbienia i inne zbytki, nie ma górnego limitu, ile można wydać na karocę. Doprawdy, wydatki na powóz wiążą się z przeświadczeniem, że więcej zawsze znaczy lepiej. Każdy wydany pens podnosi widoczny status właściciela. Ostentacja i autopromocja są celami samymi w sobie i jedynie obdartusy jeżdżą powozami pozbawionymi ozdób.</p>",
+      "motivePower": "2–4 zwierzęta pociągowe"
     },
     "Handcart": {
       "id": "VWwIusi36aToq80o",
       "name": "Wózek Ręczny",
-      "sourceId": "Compendium.wfrp4e-eis.actors.VWwIusi36aToq80o"
+      "sourceId": "Compendium.wfrp4e-eis.actors.VWwIusi36aToq80o",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Wózki ręczne to mniejsze wersje dwukołówek, które ciągnie się lub pcha ręcznie. Mają otwarty kadłub bez siedzeń, chociaż według plotek katajskie riksze posiadają wyściełane miejsca dla dwójki pasażerów. Podobnie jak jego konny odpowiednik, wózek ręczny ma dwa dyszle, zwykle połączone ze sobą w poprzek, aby jedna lub dwie osoby mogły ciągnąć pojazd.</p>",
+      "motivePower": "1–2 tragarzy"
     },
     "Heavy Wagon": {
       "id": "EXsFo4di4egzwvEi",
       "name": "Ciężki Wóz",
-      "sourceId": "Compendium.wfrp4e-eis.actors.EXsFo4di4egzwvEi"
+      "sourceId": "Compendium.wfrp4e-eis.actors.EXsFo4di4egzwvEi",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Wozy to duże, otwarte pojazdy stworzone do przewożenia dowolnego rodzaju ładunku, w tym, niezbyt komfortowo, ludzi. W zależności od rozmiarów mogą być ciągnięte przez dwa (lub więcej) zwierzęta pociągowe. Z przodu znajduje się kozioł, na którym może usiąść do trzech ludzi, choć do powożenia wystarczy jeden woźnica. Niektóre wozy są wyposażone w wygodny brezent. Chroni on towar i pasażerów przed złą pogodą i wścibskimi spojrzeniami. Niektórzy podróżni – przede wszystkim Strzyganie – budują duże, zabudowane wozy, zwane potocznie karawanami. W środku tych konstrukcji znajduje się dość miejsca, by niewielka rodzina mogła żyć we względnym komforcie.</p>",
+      "motivePower": "2–8 zwierząt pociągowych"
     },
     "Large Litter": {
       "id": "Nt3MGuqHZ6TSBsXL",
       "name": "Duża Lektyka",
-      "sourceId": "Compendium.wfrp4e-eis.actors.Nt3MGuqHZ6TSBsXL"
+      "sourceId": "Compendium.wfrp4e-eis.actors.Nt3MGuqHZ6TSBsXL",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Lektyka czy palankin to większa wersja Krzesła z Bordeleaux. Te starożytne środki transportu są obecnie rzadko widywane w Starym Świecie. Wciąż można jednak spotkać emisariuszy z Kataju czy Arabii, gdzie pojazdy te wciąż są używane i modne. Podobnie jak krzesła opisane wyżej, lektyki są zabudowane i wyposażone w dyszle, za które chwytają niosący je tragarze. Różnica jest taka, że w większych lektykach pasażerowie mogą się nawet położyć.</p><p>Większość lektyk jest przeznaczona dla jednej osoby i niesiona przez parę tragarzy. Większe egzemplarze mogą przewozić dwójkę pasażerów i wymagają przynajmniej czterech nosicieli. Liczba tragarzy to oznaka statusu właściciela lektyki. Po Imperium krążą opowieści o katajskich palankinach tak wielkich, że niesione musiały być przez cały dwór czy oddział ogrów, ale z pewnością są mocno przesadzone.</p>",
+      "motivePower": "2–4 tragarzy"
     },
     "Light Wagon": {
       "id": "m6IHp5qzHqPW7QAm",
       "name": "Lekki Wóz",
-      "sourceId": "Compendium.wfrp4e-eis.actors.m6IHp5qzHqPW7QAm"
+      "sourceId": "Compendium.wfrp4e-eis.actors.m6IHp5qzHqPW7QAm",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Wozy to duże, otwarte pojazdy stworzone do przewożenia dowolnego rodzaju ładunku, w tym, niezbyt komfortowo, ludzi. W zależności od rozmiarów mogą być ciągnięte przez dwa (lub więcej) zwierzęta pociągowe. Z przodu znajduje się kozioł, na którym może usiąść do trzech ludzi, choć do powożenia wystarczy jeden woźnica. Niektóre wozy są wyposażone w wygodny brezent. Chroni on towar i pasażerów przed złą pogodą i wścibskimi spojrzeniami. Niektórzy podróżni – przede wszystkim Strzyganie – budują duże, zabudowane wozy, zwane potocznie karawanami. W środku tych konstrukcji znajduje się dość miejsca, by niewielka rodzina mogła żyć we względnym komforcie.</p>",
+      "motivePower": "2–4 zwierzęta pociągowe"
     },
     "Medium Wagon": {
       "id": "6F6euwneMWcrhTM9",
       "name": "Średni Wóz",
-      "sourceId": "Compendium.wfrp4e-eis.actors.6F6euwneMWcrhTM9"
+      "sourceId": "Compendium.wfrp4e-eis.actors.6F6euwneMWcrhTM9",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.lLe63oYqpVSctopI]{Powożenie i jeździectwo}</p><p>Wozy to duże, otwarte pojazdy stworzone do przewożenia dowolnego rodzaju ładunku, w tym, niezbyt komfortowo, ludzi. W zależności od rozmiarów mogą być ciągnięte przez dwa (lub więcej) zwierzęta pociągowe. Z przodu znajduje się kozioł, na którym może usiąść do trzech ludzi, choć do powożenia wystarczy jeden woźnica. Niektóre wozy są wyposażone w wygodny brezent. Chroni on towar i pasażerów przed złą pogodą i wścibskimi spojrzeniami. Niektórzy podróżni – przede wszystkim Strzyganie – budują duże, zabudowane wozy, zwane potocznie karawanami. W środku tych konstrukcji znajduje się dość miejsca, by niewielka rodzina mogła żyć we względnym komforcie.</p>",
+      "motivePower": "2–6 zwierząt pociągowych"
     },
     "Small Litter": {
       "id": "rFWwSMf1f1pMYVPm",
       "name": "Mała Lektyka",
-      "sourceId": "Compendium.wfrp4e-eis.actors.rFWwSMf1f1pMYVPm"
+      "sourceId": "Compendium.wfrp4e-eis.actors.rFWwSMf1f1pMYVPm",
+      "vehicleDescription": "<p>@UUID[Compendium.wfrp4e-eis.journals.GHueUtHKzlhvsd8L.JournalEntryPage.8GLdbAcRWwY522rP]{Wierzchowce i Pojazdy}</p><p>Lektyka czy palankin to większa wersja Krzesła z Bordeleaux. Te starożytne środki transportu są obecnie rzadko widywane w Starym Świecie. Wciąż można jednak spotkać emisariuszy z Kataju czy Arabii, gdzie pojazdy te wciąż są używane i modne. Podobnie jak krzesła opisane wyżej, lektyki są zabudowane i wyposażone w dyszle, za które chwytają niosący je tragarze. Różnica jest taka, że w większych lektykach pasażerowie mogą się nawet położyć.</p><p>Większość lektyk jest przeznaczona dla jednej osoby i niesiona przez parę tragarzy. Większe egzemplarze mogą przewozić dwójkę pasażerów i wymagają przynajmniej czterech nosicieli. Liczba tragarzy to oznaka statusu właściciela lektyki. Po Imperium krążą opowieści o katajskich palankinach tak wielkich, że niesione musiały być przez cały dwór czy oddział ogrów, ale z pewnością są mocno przesadzone.</p>",
+      "motivePower": "2 tragarzy"
     }
   }
 }

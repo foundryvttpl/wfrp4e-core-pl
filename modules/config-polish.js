@@ -1607,6 +1607,108 @@ function sanitizeCareerTableResult(result) {
 	return result;
 }
 
+/**
+ * Plain label from a general table result field: "@UUID[...]{Label}" -> "Label", HTML stripped.
+ */
+function plainGeneralLabel(value) {
+	if (typeof value !== "string") return "";
+	const braceMatch = Array.from(value.matchAll(/\{([^}]+)\}/gm))[0]?.[1];
+	if (braceMatch) return braceMatch.trim();
+	const stripped = value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+	if (/^i\s+class=.*>$/i.test(stripped) || stripped.includes("fa-solid") || stripped.includes("fa-suitcase") || stripped.startsWith("<")) {
+		return "";
+	}
+	return stripped;
+}
+
+function generalNameFromTableResult(result) {
+	if (!result || typeof result !== "object") return "";
+	const data = result.object ?? {};
+	for (const value of [data.name, data.text, data.description]) {
+		const label = plainGeneralLabel(value);
+		if (label) return label;
+	}
+	const uuid = data.documentUuid || result.rollResult?.documentUuid || (data.documentCollection && data.documentId ? `Compendium.${data.documentCollection}.${data.documentId}` : null);
+	if (uuid && typeof fromUuidSync === "function") {
+		try {
+			const document = fromUuidSync(uuid, { strict: false });
+			if (document?.name) {
+				const label = plainGeneralLabel(document.name);
+				if (label) return label;
+			}
+		} catch (err) {}
+	}
+	for (const value of [result.name, result.text]) {
+		const label = plainGeneralLabel(value);
+		if (label) return label;
+	}
+	if (result.result) {
+		const extracted = game.wfrp4e?.utility?.extractLinkLabel?.(result.result);
+		const label = plainGeneralLabel(extracted);
+		if (label) return label;
+	}
+	return "";
+}
+
+function sanitizeGeneralTableResult(result, tableKey) {
+	if (!result || typeof result !== "object") return result;
+	const name = generalNameFromTableResult(result);
+	if (name) {
+		const type = tableKey?.toLowerCase()?.includes("talent") ? "talent" : undefined;
+		const display = game.wfrp4eCorePl?.names?.display?.(name, type) || name;
+		result.name = display;
+		result.text = display;
+	}
+	return result;
+}
+
+export function patchExtractLinkLabel() {
+	const Utility = game.wfrp4e?.utility || globalThis.WFRP_Utility;
+	if (!Utility || Utility._wfrp4eCorePlExtractLinkLabelPatched) return;
+
+	const origExtractLinkLabel = Utility.extractLinkLabel;
+	Utility.extractLinkLabel = function(link) {
+		if (!link || typeof link !== "string") return link;
+		try {
+			// 1. UUID link format with label: @UUID[...]{Label}
+			const braceMatch = Array.from(link.matchAll(/\{([^}]+)\}/gm))[0]?.[1];
+			if (braceMatch) return braceMatch.trim();
+
+			// 2. HTML anchor link format: <a ...><i ...></i>Label</a>
+			if (link.includes("<") && link.includes(">")) {
+				const stripped = link.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+				if (stripped && !stripped.includes("fa-solid") && !stripped.includes("fa-suitcase") && !stripped.startsWith("<")) {
+					return stripped;
+				}
+
+				// If stripped text is empty or only contained an icon, try resolving document name from UUID
+				const uuidMatch = link.match(/data-uuid="([^"]+)"/) || link.match(/@UUID\[([^\]]+)\]/);
+				if (uuidMatch && typeof fromUuidSync === "function") {
+					try {
+						const doc = fromUuidSync(uuidMatch[1], { strict: false });
+						if (doc?.name) return doc.name;
+					} catch (e) {}
+				}
+			}
+
+			// 3. Fall back to original method if no HTML/brace pattern matched or if it gave a valid non-HTML label
+			if (typeof origExtractLinkLabel === "function") {
+				const orig = origExtractLinkLabel.call(this, link);
+				if (orig && typeof orig === "string" && !orig.startsWith("<") && !orig.includes("fa-solid") && !orig.includes("fa-suitcase")) {
+					return orig;
+				}
+			}
+
+			const fallback = link.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+			return fallback || link;
+		} catch (e) {
+			return link;
+		}
+	};
+
+	Utility._wfrp4eCorePlExtractLinkLabelPatched = true;
+}
+
 function careerGroupKey(career) {
 	return normalizeCareerKey(career?.system?.careergroup?.value);
 }
@@ -1787,6 +1889,57 @@ function patchCareerStage(CareerStageClass) {
 	BaseClass.prototype._wfrp4eCorePlPatched = true;
 }
 
+function patchSkillsTalentsStage(SkillsTalentsStage) {
+	if (!SkillsTalentsStage || SkillsTalentsStage.prototype._wfrp4eCorePlPatched) return;
+
+	const cleanTalentName = (name) => {
+		if (typeof name !== "string") return name;
+		if (name.includes("<") || name.includes("fa-solid") || name.includes("fa-suitcase")) {
+			const stripped = name.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+			return stripped || "";
+		}
+		return name;
+	};
+
+	const origGetData = SkillsTalentsStage.prototype.getData;
+	SkillsTalentsStage.prototype.getData = async function() {
+		// Clean any corrupted talent names in random talents context
+		for (const table of Object.values(this.context?.speciesTalents?.randomTalents || {})) {
+			if (Array.isArray(table.talents)) {
+				table.talents = table.talents.map(t => {
+					const cleaned = cleanTalentName(t);
+					return cleaned || t;
+				});
+			}
+		}
+
+		const data = await origGetData.apply(this, arguments);
+
+		// Clean names in template data
+		if (data.talents?.random) {
+			for (const table of data.talents.random) {
+				if (Array.isArray(table.talents)) {
+					for (const talent of table.talents) {
+						if (talent && typeof talent.name === "string") {
+							const cleaned = cleanTalentName(talent.name);
+							if (cleaned) {
+								talent.name = cleaned;
+							} else {
+								talent.duplicate = true;
+								talent.name = game.i18n.localize("CHARGEN.RerollDuplicateTalent");
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return data;
+	};
+
+	SkillsTalentsStage.prototype._wfrp4eCorePlPatched = true;
+}
+
 function patchChargenStages() {
 	const CharGenClass = game.wfrp4e?.apps?.CharGenWfrp4e;
 	if (CharGenClass && !CharGenClass.prototype._wfrp4eCorePlPatched) {
@@ -1800,6 +1953,9 @@ function patchChargenStages() {
 			if (stage?.class && key === "career") {
 				patchCareerStage(stage.class);
 			}
+			if (stage?.class && (key === "skills-talents" || key === "skillstalents")) {
+				patchSkillsTalentsStage(stage.class);
+			}
 			return origAddStage.call(this, stage, index, stageData);
 		};
 
@@ -1811,6 +1967,9 @@ function patchChargenStages() {
 			if (stage && key === "career") {
 				patchCareerStage(stage);
 			}
+			if (stage && (key === "skills-talents" || key === "skillstalents")) {
+				patchSkillsTalentsStage(stage);
+			}
 			return origReplaceStage.call(this, key, stage);
 		};
 
@@ -1819,6 +1978,9 @@ function patchChargenStages() {
 
 	if (game.wfrp4e?.apps?.CareerStage) {
 		patchCareerStage(game.wfrp4e.apps.CareerStage);
+	}
+	if (game.wfrp4e?.apps?.SkillsTalentsStage) {
+		patchSkillsTalentsStage(game.wfrp4e.apps.SkillsTalentsStage);
 	}
 }
 
@@ -1979,6 +2141,8 @@ export function patchTableCompatibility() {
 			const result = await origRollTable.call(this, tableKey, options, resolvedCol);
 			if (result && ["career", "seafarer"].includes(tableKey?.toLowerCase())) {
 				sanitizeCareerTableResult(result);
+			} else if (result) {
+				sanitizeGeneralTableResult(result, tableKey);
 			}
 			return result;
 		};
@@ -1988,6 +2152,7 @@ export function patchTableCompatibility() {
 }
 
 function tryPatchComponents() {
+	patchExtractLinkLabel();
 	tryPatchSpeciesStage();
 	patchChargenStages();
 	patchCareerSelector();
@@ -2022,6 +2187,11 @@ Hooks.on("wfrp4e:chargen", async chargen => {
 	}
 	if (careerStage?.class) {
 		patchCareerStage(careerStage.class);
+	}
+
+	const skillsTalentsStage = chargen?.stages?.find(s => s.key === "skills-talents" || s.key === "skillstalents")?.class;
+	if (skillsTalentsStage) {
+		patchSkillsTalentsStage(skillsTalentsStage);
 	}
 });
 
@@ -2568,7 +2738,7 @@ function polishSettingsWindows(app, html) {
 		});
 		root.querySelectorAll(".notification.info").forEach(el => {
 			if (el.innerHTML.includes("In the future, this window will include") || el.innerHTML.includes("join the Discord")) {
-				el.innerHTML = "W przyszłości to okno będzie zawierać różne opcje do wyboru. Jeśli chcesz zaproponować nową opcję, dołącz do naszego Discorda!";
+				el.innerHTML = "W przyszłości to okno będzie zawierać różne opcje do wyboru. Jeśli chcesz zaproponować nową opcję, dołącz do głównego serwera Discord Warhammera!";
 			}
 		});
 	}

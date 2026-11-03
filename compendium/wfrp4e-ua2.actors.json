@@ -60,7 +60,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Sigmaryci, Jungfreudowie"
         },
         "b7iz2hxkjpvwmxqa": {
           "id": "b7iz2hxkjpvwmxqa",
@@ -942,6 +943,10 @@
           "name": "Jeździectwo",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
           "originalName": "Jeździectwo"
+        },
+        "R7xunPbQvQWJ506Z": {
+          "id": "R7xunPbQvQWJ506Z",
+          "name": "Pałka"
         }
       }
     },
@@ -1602,6 +1607,10 @@
           "name": "Jeździectwo",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
           "originalName": "Jeździectwo"
+        },
+        "lGM02GAeYBhr3zcY": {
+          "id": "lGM02GAeYBhr3zcY",
+          "name": "Miecz"
         }
       }
     },
@@ -1612,7 +1621,12 @@
       "sourceId": "Compendium.wfrp4e-ua2.actors.PMwpeOsIYSYICoKu",
       "species": "Człowiek",
       "gender": "Mężczyzna",
-      "items": {}
+      "items": {
+        "puKZdK5Z3rbhXbcI": {
+          "id": "puKZdK5Z3rbhXbcI",
+          "name": "Miecz"
+        }
+      }
     },
     "Ingwer": {
       "id": "AV0FE0qVRLbPSU7o",
@@ -1840,6 +1854,10 @@
           "name": "Jeździectwo",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
           "originalName": "Jeździectwo"
+        },
+        "2PuVQbQMxgc7oXt4": {
+          "id": "2PuVQbQMxgc7oXt4",
+          "name": "Miecz"
         }
       }
     },
@@ -1894,7 +1912,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Kapusie"
         },
         "ppe01r36xcjba0c7": {
           "specification": "Snoby, Węszyciele"
@@ -2106,6 +2125,10 @@
           "name": "rozmaite przebrania",
           "description": " ",
           "originalName": "rozmaite przebrania"
+        },
+        "oqCYXru0SNJMDtjj": {
+          "id": "oqCYXru0SNJMDtjj",
+          "name": "Miecz"
         }
       }
     },
@@ -2782,6 +2805,10 @@
         },
         "DvBA47zKMoe8r2hB": {
           "specification": "2"
+        },
+        "AE6sacZNVwgJ2A5I": {
+          "id": "AE6sacZNVwgJ2A5I",
+          "name": "Miecz"
         }
       }
     },
@@ -2885,6 +2912,10 @@
           "name": "Jeździectwo",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
           "originalName": "Jeździectwo"
+        },
+        "k4Fu11GjcNBRocVp": {
+          "id": "k4Fu11GjcNBRocVp",
+          "name": "Pałka"
         }
       }
     },
@@ -2951,6 +2982,14 @@
           "name": "Jeździectwo",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Jeździectwo}",
           "originalName": "Jeździectwo"
+        },
+        "j7tTK5AsISaI9NDQ": {
+          "id": "j7tTK5AsISaI9NDQ",
+          "name": "Topór brodaty"
+        },
+        "tfi1Rge4Ps9bZJWc": {
+          "id": "tfi1Rge4Ps9bZJWc",
+          "name": "Topór brodaty"
         }
       }
     },

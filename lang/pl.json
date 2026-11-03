@@ -1,4 +1,6 @@
 {
+  "DIALOG.AddRolesAndTestsTitle": "Testy i role załogi",
+  "DIALOG.AddRolesAndTestsContent": "Czy dodać domyślne testy i role załogi do tego statku?",
   "Yes": "Tak",
   "No": "Nie",
   "Cancel": "Anuluj",
@@ -58,121 +60,6 @@
   "CHAT.ApplyHealing": "Zastosuj leczenie",
   "CHAT.TestModifiers.MovedThisRound": "Strzał w Rundzie, w której wykonano także Ruch",
   "EFFECT.TABS.scripts": "Skrypty",
-  "WH.AdvancedConfig": "Zaawansowana konfiguracja efektu",
-  "WH.Badge.Discord": "DISCORD",
-  "WH.Badge.Issues": "ZGŁOSZENIA",
-  "WH.Badge.Notes": "UWAGI",
-  "WH.Badge.Wiki": "WIKI",
-  "WH.BugReporter.Report": "Zgłoś",
-  "WH.BugReporter.SubmittedIssues": "Przesłane zgłoszenia",
-  "WH.BugReporter.APILimitReached": "Osiągnięto limit użycia API GitHub. Odczekaj godzinę albo utwórz zgłoszenie ręcznie w serwisie GitHub.",
-  "WH.BugReporter.Form.Title": "Tytuł zgłoszenia",
-  "WH.BugReporter.Form.Module": "Moduł",
-  "WH.BugReporter.Form.Type": "Typ",
-  "WH.BugReporter.Form.Contact": "Kontakt",
-  "WH.BugReporter.Form.Description": "Opis",
-  "WH.BugReporter.Form.PAT": "PAT",
-  "WH.BugReporter.Form.MatchingIssues": "Czy ten problem został już zgłoszony?",
-  "WH.BugReporter.Error.Incomplete": "Uzupełnij tytuł, typ, właściwy moduł oraz opis.",
-  "WH.BugReporter.Error.Generic": "Coś poszło nie tak",
-  "WH.BugReporter.Error.Report": "Nie udało się wysłać zgłoszenia. Szczegóły znajdują się w konsoli.",
-  "WH.BugReporter.Error.APIReached": "Osiągnięto limit użycia API GitHub. Odczekaj godzinę albo utwórz zgłoszenie ręcznie w serwisie GitHub.",
-  "WH.BugReporter.Warning.Email": "<b>Uwaga</b>: Twój adres e-mail zostanie publicznie umieszczony w zgłoszeniu GitHub. Jeśli tego nie chcesz, podaj nazwę użytkownika Discord lub skontaktuj się bezpośrednio z <a href='mailto:russellt@cubicle7games.com'>Moo Manem</a>.",
-  "WH.BugReporter.Warning.NeedHelp": "Nie używaj formularza zgłoszeń, jeśli potrzebujesz natychmiastowej pomocy lub chcesz zadać ogólne pytanie. Zobacz stronę <a href='{url}'>Rozwiązywanie problemów</a>.",
-  "WH.BugReporter.Warning.PAT": "PAT jest informacją poufną i zostanie zapisany w ustawieniach tego świata. Inni użytkownicy mogą go odnaleźć, jeśli wiedzą, gdzie szukać.",
-  "WH.BugReporter.Closed": "Zamknięte",
-  "WH.BugReporter.ReportSuccess": "Zgłoszenie wysłane. Odnośnik znajduje się w konsoli.",
-  "WH.Chat.Commands.DefaultArgument": "Argument domyślny",
-  "WH.Chat.Commands.Examples": "Przykłady",
-  "WH.Chat.Commands.HelpAlias": "Pomoc dotycząca komend",
-  "WH.Chat.Commands.HelpDescription": "Wyświetla instrukcję używania komend",
-  "WH.Chat.Commands.Notes": "Uwagi",
-  "WH.Chat.Commands.PrintCommand": "<p>Poniżej znajduje się lista komend czatu i dostępnych parametrów. Wartość parametru można przypisać znakiem <span style='font-family:monospaced'>=</span>. Argumentu domyślnego nie trzeba przypisywać, ale musi być pierwszą podaną wartością.</p><p>Przykład: <span style='font-family:monospaced'>{prefix}command 100 parametr=wartość innyParametr=wartość2</span></p>",
-  "WH.Choice.ChoiceDialog": "Okno wyboru",
-  "WH.Choice.Choices": "Wybory",
-  "WH.Choice.Structure": "Struktura",
-  "WH.Choice.Script": "Skrypt",
-  "WH.Choice.SubmitChoices": "Zatwierdź wybór",
-  "WH.Configuration": "Konfiguracja",
-  "WH.ConfigureZoneTT": "Skonfiguruj strefę",
-  "WH.ConvertDrawings": "Przekształć rysunki w strefy",
-  "WH.DereferenceTooltip": "Zapisuje pełne dane Przedmiotu w różnicy, umożliwiając usunięcie oryginalnego Przedmiotu.",
-  "WH.Dialog.DragDialog": "Okno przeciągania",
-  "WH.Dialog.DragFilter": "Wskazany dokument jest niedozwolony.",
-  "WH.Dialog.DragText": "Wskaż dokument",
-  "WH.Dialog.EnterValue": "Wprowadź wartość",
-  "WH.Dialog.SelectValue": "Wybierz wartość",
-  "WH.Dialog.ValueDialog": "Okno wartości",
-  "WH.Dialog.RollPublic": "Publiczny",
-  "WH.Dialog.RollPrivate": "Prywatny",
-  "WH.Dialog.RollBlind": "Ukryty",
-  "WH.Dialog.RollSelf": "Tylko dla siebie",
-  "WH.DialogScript": "Skrypt okna dialogowego",
-  "WH.DisableDragRuler": "Wyłącz linijkę przeciągania",
-  "WH.DisableDragRulerHint": "Wyłącza linijkę przeciągania tokenów Foundry.",
-  "WH.Effects": "Efekty",
-  "WH.EnableScript": "Włącz skrypt dla: {name}",
-  "WH.Error.MismatchedItemType": "Niezgodny typ Przedmiotu",
-  "WH.Error.NoDrawingsToConvert": "Brak rysunków do przekształcenia.",
-  "WH.Error.WrongChoiceOptionType": "Ten typ Przedmiotu jest niedozwolony. Dozwolone typy: {types}",
-  "WH.Error.AppliedEffectNoItems": "Żaden Przedmiot nie spełnił filtra Aktywnego Efektu.",
-  "WH.Error.NoTargetDrop": "Efekt musi zostać zastosowany do Tokenu.",
-  "WH.Initialization.Actors": "Inicjalizacja Aktorów",
-  "WH.Initialization.Complete": "Inicjalizacja zakończona",
-  "WH.Initialization.DeletingActors": "Usuwanie Aktorów",
-  "WH.Initialization.DeletingFolders": "Usuwanie folderów",
-  "WH.Initialization.DeletingItems": "Usuwanie Przedmiotów",
-  "WH.Initialization.DeletingJournals": "Usuwanie Dzienników",
-  "WH.Initialization.DeletingScenes": "Usuwanie Scen",
-  "WH.Initialization.DeletingTables": "Usuwanie Tabel",
-  "WH.Initialization.ExistingContentMessage": "Odnaleziono dokumenty z wcześniejszej inicjalizacji. Ponowna inicjalizacja może wymagać wyboru między zachowaniem obecnych wersji a zastąpieniem ich zawartością modułu. Czy kontynuować?",
-  "WH.Initialization.Items": "Inicjalizacja Przedmiotów",
-  "WH.Initialization.Journals": "Inicjalizacja Dzienników",
-  "WH.Initialization.Scenes": "Inicjalizacja Scen",
-  "WH.Initialization.Skipped": "Inicjalizacja pominięta",
-  "WH.Initialization.Tables": "Inicjalizacja Tabel",
-  "WH.Initialization.UpdatedExistingDocument": "Zaktualizowano istniejący dokument: {name}",
-  "WH.KeepDrawings": "Zachować rysunki?",
-  "WH.MakeZonesVisible": "Uwidocznić strefy?",
-  "WH.OriginalDocument": "Oryginalny dokument",
-  "WH.PreApplyScript": "Skrypt przed zastosowaniem: {name}",
-  "WH.Resist": "Oprzyj się",
-  "WH.RichEditor": "Edytor tekstu sformatowanego",
-  "WH.RollMode": "Tryb rzutu",
-  "WH.RunIfDisabled": "Uruchamiaj po wyłączeniu",
-  "WH.RunIfDisabledHint": "Uruchamia ten skrypt nawet wtedy, gdy efekt jest wyłączony.",
-  "WH.ScriptLockTT": "Skryptów będących odwołaniami nie można edytować. Aby wprowadzić zmiany: skopiuj skrypt, odblokuj go, a następnie wklej zawartość.",
-  "WH.ShowDuplicates": "Pokaż duplikaty",
-  "WH.ShowDuplicatesHint": "Pokazuje przycisk tego skryptu nawet wtedy, gdy istnieją inne ręczne skrypty o tej samej nazwie.",
-  "WH.SubmitChoices": "Zatwierdź wybory",
-  "WH.Target": "Cel",
-  "WH.TemplateCustomization": "Dostosowanie wzornika",
-  "WH.Theme.Config": "Konfiguracja motywu",
-  "WH.Theme.ConfigButton": "Konfiguruj motyw",
-  "WH.Theme.ConfigHint": "Włącz lub wyłącz stylizację dostarczaną przez system.",
-  "WH.Theme.FIELDS.actor.enabled.label": "Włącz motyw",
-  "WH.Theme.FIELDS.actor.font.label": "Czcionka",
-  "WH.Theme.FIELDS.apps.enabled.label": "Włącz motyw",
-  "WH.Theme.FIELDS.apps.font.label": "Czcionka",
-  "WH.Theme.FIELDS.item.enabled.label": "Włącz motyw",
-  "WH.Theme.FIELDS.item.font.label": "Czcionka",
-  "WH.Theme.FIELDS.journal.enabled.label": "Włącz motyw",
-  "WH.Theme.FIELDS.journal.font.label": "Czcionka",
-  "WH.Theme.FIELDS.sidebar.enabled.label": "Włącz motyw",
-  "WH.Theme.FIELDS.sidebar.font.label": "Czcionka",
-  "WH.Theme.Font.Classic": "Klasyczna",
-  "WH.Theme.Font.Readable": "Czytelna",
-  "WH.ToggleEffect": "Przełącz efekt",
-  "WH.TransferData.AdvancedConfig": "Otwórz konfigurację zaawansowaną",
-  "WH.TransferData.AuraVisibility": "Widoczność aury",
-  "WH.TransferData.AuraVisibilityHint": "Określa, kiedy i dla kogo widoczny jest Obszar aury.",
-  "WH.TransferData.ConfigureShape": "Skonfiguruj kształt",
-  "WH.TransferData.ConfigureShapeHint": "Konfiguruje kształt obszaru efektu.",
-  "WH.TransferData.TransferredFollow": "Przenoszone podążanie",
-  "WH.TransferData.TransferredFollowHint": "Nakłada podążający efekt na cel lub siebie zamiast stale na właściciela.",
-  "WH.TransferTypeOwnerDisplay": "Właściciel: {type}",
-  "WH.TransferTypeSelfDisplay": "Na siebie",
-  "WH.ValueDialog": "Okno wartości",
   "WORLD.GameSystem": "System gry",
   "WH": {
     "Scripts": "Skrypty",
@@ -202,13 +89,37 @@
       "Troubleshooting": "Przed wysłaniem zgłoszenia, proszę przejrzeć stronę poświęconą <a href='{url}'>Troubleshooting</a>.",
       "Contact": "Informacje kontaktowe",
       "ContactPlaceholder": "Nazwa użytkownika Discord lub Email.",
-      "Warning": "<b>Uwaga</b>: To zgłoszenie zostanie upublicznione na stronie GitHub poświęconej błędom, dlatego preferowana jest nazwa użytkownika Discord. W innym przypadku, skontaktuj się z (<a href='mailto:russellt@cubicle7games.com'>Moo Manem</a>) osobiście.",
+      "Warning": {
+        "Email": "<b>Uwaga</b>: Twój adres e-mail zostanie publicznie umieszczony w zgłoszeniu GitHub. Jeśli tego nie chcesz, podaj nazwę użytkownika Discord lub skontaktuj się bezpośrednio z <a href='mailto:russellt@cubicle7games.com'>Moo Manem</a>.",
+        "NeedHelp": "Nie używaj formularza zgłoszeń, jeśli potrzebujesz natychmiastowej pomocy lub chcesz zadać ogólne pytanie. Zobacz stronę <a href='{url}'>Rozwiązywanie problemów</a>.",
+        "PAT": "PAT jest informacją poufną i zostanie zapisany w ustawieniach tego świata. Inni użytkownicy mogą go odnaleźć, jeśli wiedzą, gdzie szukać."
+      },
       "MatchingIssues": "Czy twój problem został już zgłoszony?",
       "DescriptionPlaceholder": "Co się stało, jak to odtworzyć, itp.",
       "ManyModules": "Masz aktywowane moduły inne niż WFRP4e, może jeden z nich powoduje problemy? Wyłącz proszę nieoficjalne moduły Warhammera i tłumaczenia.",
       "AlertHint": "Ten problem albo nie był możliwy do odtworzenia, albo wymaga więcej informacji. Kliknij na tytuł, aby zobaczyć szczegóły.",
       "NeedsAttention": "WYMAGA UWAGI",
-      "Resolved": "ROZWIĄZANY"
+      "Resolved": "ROZWIĄZANY",
+      "Report": "Zgłoś",
+      "SubmittedIssues": "Przesłane zgłoszenia",
+      "APILimitReached": "Osiągnięto limit użycia API GitHub. Odczekaj godzinę albo utwórz zgłoszenie ręcznie w serwisie GitHub.",
+      "Form": {
+        "Title": "Tytuł zgłoszenia",
+        "Module": "Moduł",
+        "Type": "Typ",
+        "Contact": "Kontakt",
+        "Description": "Opis",
+        "PAT": "PAT",
+        "MatchingIssues": "Czy ten problem został już zgłoszony?"
+      },
+      "Error": {
+        "Incomplete": "Uzupełnij tytuł, typ, właściwy moduł oraz opis.",
+        "Generic": "Coś poszło nie tak",
+        "Report": "Nie udało się wysłać zgłoszenia. Szczegóły znajdują się w konsoli.",
+        "APIReached": "Osiągnięto limit użycia API GitHub. Odczekaj godzinę albo utwórz zgłoszenie ręcznie w serwisie GitHub."
+      },
+      "Closed": "Zamknięte",
+      "ReportSuccess": "Zgłoszenie wysłane. Odnośnik znajduje się w konsoli."
     },
     "Choice": {
       "Options": "Opcje",
@@ -222,21 +133,56 @@
       "Filter": "Filtr",
       "FilterPath": "Ścieżka",
       "FilterOperation": "Operacja",
-      "FilterValue": "Wartość"
+      "FilterValue": "Wartość",
+      "ChoiceDialog": "Okno wyboru",
+      "Choices": "Wybory",
+      "Structure": "Struktura",
+      "Script": "Skrypt",
+      "SubmitChoices": "Zatwierdź wybór"
     },
     "Initialization": {
       "DeleteModuleContent": "Usuń zaimportowaną zawartość",
       "DeleteModuleContentPrompt": "<p><strong>OSTRZEŻENIE</strong>: To spowoduje usunięcie wszelkich treści związanych z modułem <strong>{id}</strong>, które zostały zaimportowane do tego świata.</p><p>Czy na pewno chcesz kontynuować?</p>",
-      "ResolveDuplicates": "Rozwiąż konflikty duplikatów"
+      "ResolveDuplicates": "Rozwiąż konflikty duplikatów",
+      "PackSummary": "{module} – {type}: nowe {created}, zaktualizowane {updated}",
+      "Complete": "Inicjalizacja zakończona",
+      "Actors": "Inicjalizacja Aktorów",
+      "DeletingActors": "Usuwanie Aktorów",
+      "DeletingFolders": "Usuwanie folderów",
+      "DeletingItems": "Usuwanie Przedmiotów",
+      "DeletingJournals": "Usuwanie Dzienników",
+      "DeletingScenes": "Usuwanie Scen",
+      "DeletingTables": "Usuwanie Tabel",
+      "ExistingContentMessage": "Odnaleziono dokumenty z wcześniejszej inicjalizacji. Ponowna inicjalizacja może wymagać wyboru między zachowaniem obecnych wersji a zastąpieniem ich zawartością modułu. Czy kontynuować?",
+      "Items": "Inicjalizacja Przedmiotów",
+      "Journals": "Inicjalizacja Dzienników",
+      "Scenes": "Inicjalizacja Scen",
+      "Skipped": "Inicjalizacja pominięta",
+      "Tables": "Inicjalizacja Tabel",
+      "UpdatedExistingDocument": "Zaktualizowano istniejący dokument: {name}",
+      "DiffCurrent": "Obecnie",
+      "DiffField": "Pole",
+      "DiffIncoming": "Nowa wersja",
+      "ResolveDuplicatesNote": "Poniższe dokumenty już istnieją w tym świecie. Przejrzyj różnice i wybierz, które nowe wersje zastosować."
     },
     "Initializer": {
+      "CrewDefaultsBatch": "Czy dodać domyślne testy i role załogi do statków, którym brakuje takich wpisów? Ta odpowiedź zostanie zastosowana do wszystkich takich statków podczas tej inicjalizacji lub aktualizacji.",
+      "BulkUpdate": {
+        "Label": "Aktualizuj wszystko",
+        "Hint": "Aktualizuj całą zawartość aktywnych, już zainicjalizowanych modułów dostępnych w tym oknie.",
+        "Confirm": "Zaktualizować całą zawartość {count} dostępnych, zainicjalizowanych modułów? Aktualizacje zostaną wykonane kolejno.",
+        "Progress": "Aktualizacja {current}/{total}: {title}",
+        "Complete": "Zaktualizowano moduły: {completed}/{total}.",
+        "Failed": "Nie udało się zaktualizować:",
+        "Error": "Nie udało się wykonać zbiorczej aktualizacji. Szczegóły w konsoli."
+      },
       "Action": {
         "Delete": "Usuń zawartość",
         "Initialize": "Zainicjalizuj zawartość",
         "Update": "Zaktualizuj zawartość"
       },
       "DeleteModuleContent": "Usuń zawartość modułu {module}",
-      "DeleteModuleContentDesc": "<p>Ten proces usuwa wszystkie dokumenty z modułu <strong>{module}</strong>, które zostały zaimportowane przez inicjalizację.</p><p>Uwaga:</p><ul><li>Dokumenty zaimportowane ręcznie z kompendium nie zostaną usunięte.</li><li>Dokumenty należące do gracza nie zostaną usunięte.</li></ul><p>Usuwana jest tylko zaimportowana zawartość. Możesz ją później ponownie zaimportować z kompendium.</p>",
+      "DeleteModuleContentDesc": "<p>Usunąć z bieżącego świata zawartość przypisaną do modułu <strong>{module}</strong> oraz jego puste foldery?</p><ul><li>Postacie graczy, aktorzy w walce i prywatne kopie aktorów zostaną zachowani.</li><li>Warianty aktorów nadal używane przez inne materiały zostaną zachowane wraz z działającymi odnośnikami.</li></ul><p>Przed usunięciem zostanie zapisana kopia bezpieczeństwa. Zawartość można przywrócić przyciskiem „Cofnij ostatnią operację” lub ponownie zainicjalizować moduł.</p>",
       "DialogContent": "<p class='centered'><strong>{title}</strong></p><p>{description}</p>",
       "HelpText": "<p>Potrzebujesz pomocy? Sprawdź <a href=https://moo-man.github.io/WFRP4e-FoundryVTT/pages/premium.html#initializiation>wiki</a></p>",
       "OverwriteActors": "Nadpisz aktorów",
@@ -355,7 +301,14 @@
       "SkipImmediatePlacement": "Pomiń natychmiastowe skrypty podczas umieszczania wzornika",
       "SkipImmediatePlacementHint": "Zapobiega uruchomieniu natychmiastowych skryptów po umieszczeniu wzornika.",
       "ZoneType": "Typ Strefy",
-      "ZoneTypeHint": "<strong>Efekt Strefy</strong> oznacza, że efekt jest powiązany ze strefą, <strong>Tokeny w Strefie</strong> oznacza, że dotyczy wszystkich Tokenów w tej Strefie, <strong>Podążanie za Tokenem</strong> oznacza, że dotyczy dowolnej Strefy, w której znajduje się docelowy Token"
+      "ZoneTypeHint": "<strong>Efekt Strefy</strong> oznacza, że efekt jest powiązany ze strefą, <strong>Tokeny w Strefie</strong> oznacza, że dotyczy wszystkich Tokenów w tej Strefie, <strong>Podążanie za Tokenem</strong> oznacza, że dotyczy dowolnej Strefy, w której znajduje się docelowy Token",
+      "AdvancedConfig": "Otwórz konfigurację zaawansowaną",
+      "AuraVisibility": "Widoczność aury",
+      "AuraVisibilityHint": "Określa, kiedy i dla kogo widoczny jest Obszar aury.",
+      "ConfigureShape": "Skonfiguruj kształt",
+      "ConfigureShapeHint": "Konfiguruje kształt obszaru efektu.",
+      "TransferredFollow": "Przenoszone podążanie",
+      "TransferredFollowHint": "Nakłada podążający efekt na cel lub siebie zamiast stale na właściciela."
     },
     "TransferType": {
       "Document": "Właściciel Efektu",
@@ -373,9 +326,8 @@
       "Area": "Umieść szablon obszaru dla efektu, stosując go do znajdujących się w nim tokenów.",
       "Zone": "Wybierz strefę, do której chcesz zastosować ten efekt, stosując go do znajdujących się w niej tokenów."
     },
-    "Dialog.Modifiers": "Okno Modyfikatorów Testu",
-    "Dialog.UserEntry": "Wpis użytkownika",
-    "Dialog.Initial": "Początkowa",
+    "ResolveDuplicates": "Rozwiąż konflikty duplikatów",
+    "FilterClear": "Wyczyść filtry",
     "PlaceEffect": "Umieść {name}",
     "ApplyEffect": "Nałóż {name}",
     "ZoneEffect": "Efekt Strefy",
@@ -394,7 +346,12 @@
       "CreateZoneEffect": "Efekty muszą być tworzone za pomocą aktywnego efektu z typem transferu \"Strefa\"",
       "NoTargetedActors": "Brak celów!",
       "NoActorAssigned": "ak przypisanego aktora, możesz przypisywać aktorów za pomocą konfiguracji Gracza w lewym dolnym rogu ekranu",
-      "NoTargets": "Brak celów!"
+      "NoTargets": "Brak celów!",
+      "MismatchedItemType": "Niezgodny typ Przedmiotu",
+      "NoDrawingsToConvert": "Brak rysunków do przekształcenia.",
+      "WrongChoiceOptionType": "Ten typ Przedmiotu jest niedozwolony. Dozwolone typy: {types}",
+      "AppliedEffectNoItems": "Żaden Przedmiot nie spełnił filtra Aktywnego Efektu.",
+      "NoTargetDrop": "Efekt musi zostać zastosowany do Tokenu."
     },
     "Models": {
       "ammunition": {
@@ -601,6 +558,12 @@
           "advances.force": {
             "label": "Pokazuj Wskaźnik Rozwinięć",
             "hint": "Pokazuj Wskaźnik Rozwinięć niezależnie od Profesji, co umożliwi automatyczne wydawanie doświadczenia."
+          },
+          "max": {
+            "formula": {
+              "label": "Wzór",
+              "hint": "np. @characteristics.int.bonus + @characteristics.wp.bonus"
+            }
           }
         }
       },
@@ -608,6 +571,11 @@
         "FIELDS": {
           "mutationType.value": {
             "label": "Typ Mutacji"
+          },
+          "modifier": {
+            "value": {
+              "label": "Modyfikator"
+            }
           }
         }
       },
@@ -883,6 +851,106 @@
             "momentum": {
               "label": "Impet"
             }
+          },
+          "details": {
+            "mainHand": {
+              "label": "Ręka dominująca",
+              "hint": "Ręka uznawana przez system za dominującą, gdy ma to znaczenie."
+            },
+            "hitLocationTable": {
+              "value": {
+                "label": "Tabela lokalizacji trafienia",
+                "hint": "Określa własną tabelę lokalizacji trafienia używaną podczas atakowania tego aktora."
+              }
+            }
+          },
+          "settings": {
+            "equipPoints": {
+              "label": "Punkty wyposażenia",
+              "hint": "Ogranicza liczbę wyposażonych broni; 2 punkty odpowiadają 2 „rękom”."
+            },
+            "autoCalc": {
+              "size": {
+                "label": "Automatycznie obliczaj rozmiar tokenu",
+                "hint": "Automatycznie ustala rozmiar tokenu na podstawie Rozmiaru aktora."
+              },
+              "run": {
+                "label": "Automatycznie obliczaj szybkość biegu",
+                "hint": "Domyślna szybkość biegu to 4 × Ruch."
+              },
+              "walk": {
+                "label": "Automatycznie obliczaj szybkość chodu",
+                "hint": "Domyślna szybkość chodu to 2 × Ruch."
+              },
+              "wounds": {
+                "label": "Automatycznie obliczaj Żywotność",
+                "hint": "Domyślna maksymalna Żywotność to BW + (2 × BOdp) + BSW (dla średniego Rozmiaru)."
+              },
+              "criticals": {
+                "label": "Automatycznie obliczaj rany krytyczne",
+                "hint": "Domyślna maksymalna liczba ran krytycznych to BOdp."
+              },
+              "corruption": {
+                "label": "Automatycznie obliczaj Spaczenie",
+                "hint": "Domyślny próg Spaczenia to BOdp + BSW."
+              },
+              "encumbrance": {
+                "label": "Automatycznie obliczaj Obciążenie",
+                "hint": "Domyślny próg Obciążenia to BW + BOdp."
+              }
+            }
+          }
+        }
+      },
+      "vehicle": {
+        "FIELDS": {
+          "vehicleType": {
+            "label": "Rodzaj pojazdu"
+          },
+          "details": {
+            "hitLocationTable": {
+              "value": {
+                "label": "Tabela lokalizacji trafienia",
+                "hint": "Określa własną tabelę lokalizacji trafienia używaną podczas atakowania tego aktora."
+              }
+            }
+          },
+          "status": {
+            "morale": {
+              "transferEffects": {
+                "label": "Przenoś efekty morale",
+                "hint": "Stosuje efekty morale do aktorów znajdujących się w tym pojeździe."
+              }
+            }
+          }
+        }
+      },
+      "template": {
+        "FIELDS": {
+          "alterName": {
+            "pre": {
+              "label": "Przedrostek zmieniający nazwę"
+            },
+            "post": {
+              "label": "Przyrostek zmieniający nazwę"
+            }
+          }
+        }
+      },
+      "careerPath": {
+        "FIELDS": {
+          "class": {
+            "label": "Klasa"
+          }
+        }
+      },
+      "careerTier": {
+        "FIELDS": {
+          "name": {
+            "label": "Nazwa"
+          },
+          "level": {
+            "label": "Poziom"
           }
         }
       }
@@ -915,7 +983,7 @@
       },
       "Title": "Przeglądarka kompendium",
       "Action": {
-        "Open": "Otwórz przeglądarkę kompendium"
+        "Open": "Kompendium"
       },
       "Filters": {
         "Label": "Filtry",
@@ -957,7 +1025,166 @@
       "Types": {
         "Label": "Typy"
       }
-    }
+    },
+    "AdvancedConfig": "Zaawansowana konfiguracja efektu",
+    "Badge": {
+      "Discord": "DISCORD",
+      "Issues": "ZGŁOSZENIA",
+      "Notes": "UWAGI",
+      "Wiki": "WIKI"
+    },
+    "Chat": {
+      "Commands": {
+        "DefaultArgument": "Argument domyślny",
+        "Examples": "Przykłady",
+        "HelpAlias": "Pomoc dotycząca komend",
+        "HelpDescription": "Wyświetla instrukcję używania komend",
+        "Notes": "Uwagi",
+        "PrintCommand": "<p>Poniżej znajduje się lista komend czatu i dostępnych parametrów. Wartość parametru można przypisać znakiem <span style='font-family:monospaced'>=</span>. Argumentu domyślnego nie trzeba przypisywać, ale musi być pierwszą podaną wartością.</p><p>Przykład: <span style='font-family:monospaced'>{prefix}command 100 parametr=wartość innyParametr=wartość2</span></p>"
+      }
+    },
+    "Configuration": "Konfiguracja",
+    "ConfigureZoneTT": "Skonfiguruj strefę",
+    "ConvertDrawings": "Przekształć rysunki w strefy",
+    "DereferenceTooltip": "Zapisuje pełne dane Przedmiotu w różnicy, umożliwiając usunięcie oryginalnego Przedmiotu.",
+    "Dialog": {
+      "DragDialog": "Okno przeciągania",
+      "DragFilter": "Wskazany dokument jest niedozwolony.",
+      "DragText": "Wskaż dokument",
+      "EnterValue": "Wprowadź wartość",
+      "SelectValue": "Wybierz wartość",
+      "ValueDialog": "Okno wartości",
+      "RollPublic": "Publiczny",
+      "RollPrivate": "Prywatny",
+      "RollBlind": "Ukryty",
+      "RollSelf": "Tylko dla siebie",
+      "Modifiers": "Okno Modyfikatorów Testu",
+      "UserEntry": "Wpis użytkownika",
+      "Initial": "Początkowa"
+    },
+    "DialogScript": "Skrypt okna dialogowego",
+    "DisableDragRuler": "Wyłącz linijkę przeciągania",
+    "DisableDragRulerHint": "Wyłącza linijkę przeciągania tokenów Foundry.",
+    "Effects": "Efekty",
+    "EnableScript": "Włącz skrypt dla: {name}",
+    "KeepDrawings": "Zachować rysunki?",
+    "MakeZonesVisible": "Uwidocznić strefy?",
+    "OriginalDocument": "Oryginalny dokument",
+    "PreApplyScript": "Skrypt przed zastosowaniem: {name}",
+    "Resist": "Oprzyj się",
+    "RichEditor": "Edytor tekstu sformatowanego",
+    "RollMode": "Tryb rzutu",
+    "RunIfDisabled": "Uruchamiaj po wyłączeniu",
+    "RunIfDisabledHint": "Uruchamia ten skrypt nawet wtedy, gdy efekt jest wyłączony.",
+    "ScriptLockTT": "Skryptów będących odwołaniami nie można edytować. Aby wprowadzić zmiany: skopiuj skrypt, odblokuj go, a następnie wklej zawartość.",
+    "ShowDuplicates": "Pokaż duplikaty",
+    "ShowDuplicatesHint": "Pokazuje przycisk tego skryptu nawet wtedy, gdy istnieją inne ręczne skrypty o tej samej nazwie.",
+    "SubmitChoices": "Zatwierdź wybory",
+    "Target": "Cel",
+    "TemplateCustomization": "Dostosowanie wzornika",
+    "Theme": {
+      "Config": "Konfiguracja motywu",
+      "ConfigButton": "Konfiguruj motyw",
+      "ConfigHint": "Włącz lub wyłącz stylizację dostarczaną przez system.",
+      "FIELDS": {
+        "actor": {
+          "enabled": {
+            "label": "Włącz motyw"
+          },
+          "font": {
+            "label": "Czcionka"
+          }
+        },
+        "apps": {
+          "enabled": {
+            "label": "Włącz motyw"
+          },
+          "font": {
+            "label": "Czcionka"
+          }
+        },
+        "item": {
+          "enabled": {
+            "label": "Włącz motyw"
+          },
+          "font": {
+            "label": "Czcionka"
+          }
+        },
+        "journal": {
+          "enabled": {
+            "label": "Włącz motyw"
+          },
+          "font": {
+            "label": "Czcionka"
+          }
+        },
+        "sidebar": {
+          "enabled": {
+            "label": "Włącz motyw"
+          },
+          "font": {
+            "label": "Czcionka"
+          }
+        }
+      },
+      "Font": {
+        "Classic": "Klasyczna",
+        "Readable": "Czytelna"
+      },
+      "ActorSheet": "Karta postaci",
+      "ItemSheet": "Karta przedmiotu",
+      "JournalSheet": "Karta dziennika",
+      "Sidebar": "Pasek boczny",
+      "Applications": "Aplikacje i okna",
+      "Hint": "<strong>Uwaga</strong>: Jasny motyw ma pierwszeństwo przed poniższymi ustawieniami. Jeśli poniższe motywy są włączone, należy używać ciemnego motywu. Zobacz <strong>Konfiguruj interfejs</strong> w głównych ustawieniach Foundry.",
+      "actor": {
+        "enabled": {
+          "label": "Włącz motyw"
+        },
+        "font": {
+          "label": "Czcionka"
+        }
+      },
+      "apps": {
+        "enabled": {
+          "label": "Włącz motyw"
+        },
+        "font": {
+          "label": "Czcionka"
+        }
+      },
+      "item": {
+        "enabled": {
+          "label": "Włącz motyw"
+        },
+        "font": {
+          "label": "Czcionka"
+        }
+      },
+      "journal": {
+        "enabled": {
+          "label": "Włącz motyw"
+        },
+        "font": {
+          "label": "Czcionka"
+        }
+      },
+      "sidebar": {
+        "enabled": {
+          "label": "Włącz motyw"
+        },
+        "font": {
+          "label": "Czcionka"
+        }
+      },
+      "Save": "Zapisz zmiany",
+      "Reset": "Zresetuj"
+    },
+    "ToggleEffect": "Przełącz efekt",
+    "TransferTypeOwnerDisplay": "Właściciel: {type}",
+    "TransferTypeSelfDisplay": "Na siebie",
+    "ValueDialog": "Okno wartości"
   },
   "WFRP4E.system.title": "Warhammer Fantasy Roleplay 4-ta Edycja",
   "WFRP4E.system.description": "Kompleksowa implementacja mechaniki czwartej edycji Warhammer Fantasy Roleplay w środowisku Foundry VTT pozwalająca na rozgrywanie ponurych i niebezpiecznych przygód.",
@@ -3072,36 +3299,6 @@
   "Years": "lata",
   "Months": "miesiące",
   "Round": "runda",
-  "WH.Models.standard.FIELDS.details.mainHand.label": "Ręka dominująca",
-  "WH.Models.standard.FIELDS.details.mainHand.hint": "Ręka uznawana przez system za dominującą, gdy ma to znaczenie.",
-  "WH.Models.standard.FIELDS.details.hitLocationTable.value.label": "Tabela lokalizacji trafienia",
-  "WH.Models.standard.FIELDS.details.hitLocationTable.value.hint": "Określa własną tabelę lokalizacji trafienia używaną podczas atakowania tego aktora.",
-  "WH.Models.standard.FIELDS.settings.equipPoints.label": "Punkty wyposażenia",
-  "WH.Models.standard.FIELDS.settings.equipPoints.hint": "Ogranicza liczbę wyposażonych broni; 2 punkty odpowiadają 2 „rękom”.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.size.label": "Automatycznie obliczaj rozmiar tokenu",
-  "WH.Models.standard.FIELDS.settings.autoCalc.size.hint": "Automatycznie ustala rozmiar tokenu na podstawie Rozmiaru aktora.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.run.label": "Automatycznie obliczaj szybkość biegu",
-  "WH.Models.standard.FIELDS.settings.autoCalc.run.hint": "Domyślna szybkość biegu to 4 × Ruch.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.walk.label": "Automatycznie obliczaj szybkość chodu",
-  "WH.Models.standard.FIELDS.settings.autoCalc.walk.hint": "Domyślna szybkość chodu to 2 × Ruch.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.wounds.label": "Automatycznie obliczaj Żywotność",
-  "WH.Models.standard.FIELDS.settings.autoCalc.wounds.hint": "Domyślna maksymalna Żywotność to BW + (2 × BOdp) + BSW (dla średniego Rozmiaru).",
-  "WH.Models.standard.FIELDS.settings.autoCalc.criticals.label": "Automatycznie obliczaj rany krytyczne",
-  "WH.Models.standard.FIELDS.settings.autoCalc.criticals.hint": "Domyślna maksymalna liczba ran krytycznych to BOdp.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.corruption.label": "Automatycznie obliczaj Spaczenie",
-  "WH.Models.standard.FIELDS.settings.autoCalc.corruption.hint": "Domyślny próg Spaczenia to BOdp + BSW.",
-  "WH.Models.standard.FIELDS.settings.autoCalc.encumbrance.label": "Automatycznie obliczaj Obciążenie",
-  "WH.Models.standard.FIELDS.settings.autoCalc.encumbrance.hint": "Domyślny próg Obciążenia to BW + BOdp.",
-  "WH.Models.vehicle.FIELDS.vehicleType.label": "Rodzaj pojazdu",
-  "WH.Models.vehicle.FIELDS.details.hitLocationTable.value.label": "Tabela lokalizacji trafienia",
-  "WH.Models.vehicle.FIELDS.details.hitLocationTable.value.hint": "Określa własną tabelę lokalizacji trafienia używaną podczas atakowania tego aktora.",
-  "WH.Models.vehicle.FIELDS.status.morale.transferEffects.label": "Przenoś efekty morale",
-  "WH.Models.vehicle.FIELDS.status.morale.transferEffects.hint": "Stosuje efekty morale do aktorów znajdujących się w tym pojeździe.",
-  "WH.Models.talent.FIELDS.max.formula.label": "Wzór",
-  "WH.Models.talent.FIELDS.max.formula.hint": "np. @characteristics.int.bonus + @characteristics.wp.bonus",
-  "WH.Models.mutation.FIELDS.modifier.value.label": "Modyfikator",
-  "WH.Models.template.FIELDS.alterName.pre.label": "Przedrostek zmieniający nazwę",
-  "WH.Models.template.FIELDS.alterName.post.label": "Przyrostek zmieniający nazwę",
   "WFRP4E.ScriptTriggers.manual": "Wywołany ręcznie",
   "WFRP4E.ScriptTriggers.immediate": "Natychmiast",
   "WFRP4E.ScriptTriggers.dialog": "Okno dialogowe",
@@ -3254,24 +3451,6 @@
   "Homebrew Settings Configuration": "Zasady domowe",
   "Table Settings Configuration": "Ustawienia tabel",
   "Grimoire Miscast": "Manifestacja Ksiąg Zaklęć",
-  "WH.Theme.ActorSheet": "Karta postaci",
-  "WH.Theme.ItemSheet": "Karta przedmiotu",
-  "WH.Theme.JournalSheet": "Karta dziennika",
-  "WH.Theme.Sidebar": "Pasek boczny",
-  "WH.Theme.Applications": "Aplikacje i okna",
-  "WH.Theme.Hint": "<strong>Uwaga</strong>: Jasny motyw ma pierwszeństwo przed poniższymi ustawieniami. Jeśli poniższe motywy są włączone, należy używać ciemnego motywu. Zobacz <strong>Konfiguruj interfejs</strong> w głównych ustawieniach Foundry.",
-  "WH.Theme.actor.enabled.label": "Włącz motyw",
-  "WH.Theme.actor.font.label": "Czcionka",
-  "WH.Theme.apps.enabled.label": "Włącz motyw",
-  "WH.Theme.apps.font.label": "Czcionka",
-  "WH.Theme.item.enabled.label": "Włącz motyw",
-  "WH.Theme.item.font.label": "Czcionka",
-  "WH.Theme.journal.enabled.label": "Włącz motyw",
-  "WH.Theme.journal.font.label": "Czcionka",
-  "WH.Theme.sidebar.enabled.label": "Włącz motyw",
-  "WH.Theme.sidebar.font.label": "Czcionka",
-  "WH.Theme.Save": "Zapisz zmiany",
-  "WH.Theme.Reset": "Zresetuj",
   "Theme": "Motyw",
   "Save Changes": "Zapisz zmiany",
   "Reset": "Zresetuj",
@@ -3334,7 +3513,6 @@
   "NAME.Momentum": "Impet",
   "PROPERTY.Inflict": "Nakładająca",
   "PROPERTY.Parry": "Parująca",
-  "WH.Models.standard.FIELDS.status.momentum.label": "Impet",
   "SETTINGS.Menu.EditionManagerLabel": "Menedżer edycji",
   "SETTINGS.Menu.EditionManagerHint": "Skonfiguruj zasady gry.",
   "SETTINGS.EditionSettings": "Ustawienia edycji",
@@ -3344,8 +3522,118 @@
   "EFFECT.CreatureBackInWater": "Stworzenie wróciło do wody.",
   "EFFECT.CreatureOutOfWater": "Stworzenie wyszło z wody.",
   "TRADE.ErrorNoGazetteer": "Nie znaleziono leksykonu handlowego dla tego typu handlu.",
-  "WH.TargeterTT": "Uruchom ten skrypt w oknie dialogowym każdego Aktora, który obiera za cel tego Aktora.",
-  "WH.DefendingAgainst": "Obrona przed",
-  "WH.DefendingAgainstTT": "Uruchom ten skrypt w oknie dialogowym Aktora, który stał się celem tego Aktora lub Przedmiotu",
-  "WH.CompendiumBrowser.WorldItems": "Pokaż elementy świata w przeglądarce"
+  "TYPES.Item.careerPath": "Ścieżka profesji",
+  "SHEETS.Item.careerPath": "Karta ścieżki profesji",
+  "DIALOG.AdvancementNote": "<strong>Uwaga</strong>: Rozwinięcia wykonane w ten sposób NIE będą zapisywane w Profesji.",
+  "DIALOG.MultipleActiveTokens": "Ten Aktor ma kilka żetonów na bieżącej Scenie. Obliczenie zasięgu może nie uwzględniać żetonu, o który ci chodzi.",
+  "5e.SETTINGS.CareerAdvancement": "Rozwój w profesji według 5. edycji",
+  "5e.Advancement.Characteristic": "Rozwinięto {characteristic} ({value})",
+  "5e.Advancement.Skill": "Rozwinięto {skill} ({value})",
+  "5e.Advancement.Talent": "Zdobyto {talent}",
+  "5e.Warning.CareerCreated": "Przedmiotów typu Profesja nie można używać, gdy aktywne są zasady <strong>rozwoju w profesji według 5. edycji</strong> (użyj zamiast nich przedmiotów <strong>Ścieżka profesji</strong>).",
+  "5e.Warning.CareerPathCreated": "Przedmiotów typu Ścieżka profesji nie można używać, gdy zasady <strong>rozwoju w profesji według 5. edycji</strong> są wyłączone (użyj zamiast nich przedmiotów <strong>Profesja</strong>).",
+  "Post to Chat": "Wyślij na czat",
+  "Reenter Career": "Wróć do profesji",
+  "Remove Advancement": "Usuń rozwinięcie",
+  "Add Advancement": "Dodaj rozwinięcie",
+  "Choose Skill": "Wybierz umiejętność",
+  "Vehicle Crew": "Załoga pojazdu",
+  "Vehicle Modifiers": "Modyfikatory pojazdu",
+  "Edition Configuration": "Konfiguracja edycji",
+  "Edition Manager": "Menedżer edycji",
+  "Edit Test": "Edytuj test",
+  "Switch Career": "Zmień profesję",
+  "Incomplete Career": "Nieukończona profesja",
+  "Advance Career": "Awans w profesji",
+  "Table Key & Column": "Klucz i kolumna tabeli",
+  "Configure Table Key": "Konfiguruj klucz tabeli",
+  "Earning Skills": "Umiejętności zarobkowe",
+  "WFRP4E.PL.UI.ThemeActorSheet": "Karta aktora",
+  "WFRP4E.PL.UI.ThemeItemSheet": "Karta przedmiotu",
+  "WFRP4E.PL.UI.ThemeJournalSheet": "Karta dziennika",
+  "WFRP4E.PL.UI.ThemeNote": "<strong>Uwaga</strong>: jasny motyw ma pierwszeństwo przed poniższymi ustawieniami. Jeśli włączysz poniższe motywy, musisz używać ciemnego motywu. Zobacz <strong>Konfiguruj interfejs</strong> w ustawieniach głównych.",
+  "WFRP4E.PL.UI.ThemeSidebar": "Pasek boczny",
+  "WFRP4E.PL.UI.ThemeApplications": "Okna aplikacji",
+  "WFRP4E.PL.UI.HudToggleVisibility": "Przełącz widoczność",
+  "WFRP4E.PL.UI.HudAssignStatusEffects": "Przypisz stany",
+  "WFRP4E.PL.UI.HudToggleCombat": "Przełącz stan walki",
+  "WFRP4E.PL.UI.AddTier": "Dodaj poziom",
+  "WFRP4E.PL.UI.SpeciesLabel": "Rasa:",
+  "WFRP4E.PL.UI.ClassLabel": "Klasa:",
+  "WFRP4E.PL.UI.AdvanceScheme": "Schemat rozwoju",
+  "WFRP4E.PL.UI.Endeavour": "Zajęcie",
+  "WFRP4E.PL.UI.ConfigureScript": "Konfiguruj skrypt",
+  "WFRP4E.PL.UI.EffectLabel": "Efekt:",
+  "WFRP4E.PL.UI.EndeavourEffectDrop": "Przeciągnij i upuść aktywny efekt. Zostanie on nałożony na Aktora wykonującego to Zajęcie.",
+  "WFRP4E.PL.UI.Advancement": "Rozwinięcia",
+  "WFRP4E.PL.UI.AdvanceTier": "Przejdź na następny poziom",
+  "WFRP4E.PL.UI.AddCareerPath": "Dodaj przedmiot <strong>Ścieżka profesji</strong>.",
+  "WFRP4E.PL.UI.PreviousCareers": "Poprzednie profesje",
+  "WFRP4E.PL.UI.ReceiveIncome": "Otrzymaj dochód",
+  "WFRP4E.PL.UI.MountDrop": "Przeciągnij i upuść Aktora ze świata, aby uczynić go wierzchowcem.",
+  "WFRP4E.PL.UI.Roles": "Role",
+  "WFRP4E.PL.UI.AddRole": "Dodaj rolę",
+  "WFRP4E.PL.UI.ReceivedBy": "Otrzymał(a):",
+  "WFRP4E.PL.UI.RetrievedBy": "Zabrał(a):",
+  "WFRP4E.PL.UI.Dispelled": "Rozproszone!",
+  "WFRP4E.PL.UI.GroupNumberHint": "Podanie numeru grupy pozwala wybrać zamiast tego dowolny inny przedmiot z tym samym numerem grupy.",
+  "WFRP4E.PL.UI.ReportTitlePlaceholder": "Zwięzły opis problemu, błędu lub prośby",
+  "WFRP4E.PL.UI.ReportBug": "Błąd",
+  "WFRP4E.PL.UI.ReportData": "Dane lub tekst",
+  "WFRP4E.PL.UI.ReportScript": "Skrypt efektu",
+  "WFRP4E.PL.UI.ReportEnhancement": "Propozycja funkcji",
+  "WFRP4E.PL.UI.ReportContactPlaceholder": "Discord lub e-mail",
+  "WFRP4E.PL.UI.ReportPATHint": "Opcjonalnie podaj osobisty token dostępu (PAT) do konta GitHub, aby zgłoszenie zostało utworzone z tego konta.",
+  "WFRP4E.PL.UI.ReportAlreadySubmitted": "Czy ktoś już zgłosił ten problem?",
+  "WFRP4E.PL.UI.ReportDescriptionPlaceholder": "Co się stało, jak to odtworzyć itp.",
+  "WFRP4E.PL.UI.ShapeColor": "Kolor",
+  "WFRP4E.PL.UI.ShapeType": "Typ",
+  "WFRP4E.PL.UI.ShapeRadius": "Promień",
+  "WFRP4E.PL.UI.Inherit": "Dziedziczone",
+  "WFRP4E.PL.UI.ShapeBaseWidth": "Szerokość podstawy",
+  "WFRP4E.PL.UI.ShapeBaseHeight": "Wysokość podstawy",
+  "WFRP4E.PL.UI.ShapeHole": "Otwór",
+  "WFRP4E.PL.UI.ShapeCurvature": "Krzywizna",
+  "WFRP4E.PL.UI.ShapeAngle": "Kąt",
+  "WFRP4E.PL.UI.ShapeWidth": "Szerokość (X)",
+  "WFRP4E.PL.UI.ShapeHeight": "Wysokość (Y)",
+  "WFRP4E.PL.UI.ShapeLength": "Długość (Y)",
+  "WFRP4E.PL.UI.ShapeAuraUnavailable": "Opcje kształtu nie są dostępne dla efektów aury.",
+  "WFRP4E.PL.UI.ChoiceScriptHint": "Ten skrypt uruchamia się po dokonaniu wyborów i pozwala je zmienić.",
+  "WFRP4E.PL.UI.IncompleteCareerContent": "Za mało rozwinięć, aby awansować w tej profesji. Kontynuować mimo to?",
+  "WFRP4E.PL.UI.ChooseLocation": "Wybierz lokację trafienia",
+  "WFRP4E.PL.UI.RemoveAdvancementContent": "<p>Usunąć rozwinięcie „{label}”?</p><p><strong>Uwaga</strong>: nie cofnie to samego rozwinięcia, a jedynie jego powiązanie z profesją.</p>",
+  "WFRP4E.PL.UI.EnterAdvancementLabel": "Podaj nazwę rozwinięcia",
+  "WFRP4E.PL.UI.EnterXPCareerChange": "Podaj PD wydane na zmianę profesji",
+  "WFRP4E.PL.UI.EnterXPCareerAdvance": "Podaj PD wydane na awans w profesji",
+  "WFRP4E.PL.UI.FlavorGroupAdvantage": "Akcja za Przewagę grupową",
+  "WFRP4E.PL.UI.FlavorChannellingLost": "Utracone punkty Splatania magii",
+  "WFRP4E.PL.UI.CriticalMitigationDamageArmour": "Ograniczenie trafienia krytycznego: uszkodź pancerz",
+  "WFRP4E.PL.UI.Notify.EndeavourNotDefined": "Nie zdefiniowano testu, skryptu ani aktywnego efektu dla tego Zajęcia.",
+  "WFRP4E.PL.UI.Notify.MustSelectTier": "Musisz wybrać poziom.",
+  "WFRP4E.PL.UI.Notify.NoTradeData": "Nie znaleziono danych handlowych, szczegóły w konsoli.",
+  "WFRP4E.PL.UI.Notify.NoContentFound": "Nie znaleziono zawartości.",
+  "WFRP4E.PL.UI.Notify.NotEnoughAdvantage": "Za mało Przewagi!",
+  "WFRP4E.PL.UI.Notify.NotEnoughSL": "Za mało PS!",
+  "WFRP4E.PL.UI.Notify.AssignCharacter": "Przypisz postać.",
+  "WFRP4E.PL.UI.Notify.CargoTypeMissing": "Ten ładunek nie ma określonego typu ładunku.",
+  "WFRP4E.PL.UI.Notify.SkillsCopied": "Skopiowano umiejętności do schowka.",
+  "WFRP4E.PL.UI.Notify.MultiLoreWillpower": "Zaklęcie wielu Tradycji: nie znaleziono umiejętności Splatanie magii, używam Siły Woli.",
+  "WFRP4E.PL.UI.Notify.NonRollableTrait": "Tej cechy nie można testować.",
+  "WFRP4E.PL.UI.Notify.EndeavourEffectLocked": "Nie można zmieniać tego aktywnego efektu, gdy należy do Zajęcia!",
+  "WFRP4E.PL.UI.Notify.NoActorAssigned": "Nie przypisano Aktora, wybierz spośród posiadanych Aktorów.",
+  "WFRP4E.PL.UI.Notify.NoCharacterOrToken": "Nie przypisano postaci ani nie zaznaczono żetonu.",
+  "WFRP4E.PL.UI.Notify.ContainerLoop": "Wykryto zapętlenie pojemników – przywracam położenie pojemnika.",
+  "WFRP4E.PL.UI.Notify.OldSpeciesTable": "Skonfigurowana tabela ras pochodzi ze starszej wersji i może nie działać z tworzeniem postaci w V13. Aby działała poprawnie, usuń ją i zaimportuj ponownie z kompendium.",
+  "WFRP4E.PL.UI.Notify.TierNotFound": "Nie znaleziono poziomu {tier} na Ścieżce profesji!",
+  "WFRP4E.PL.UI.Notify.RewardAlreadyReceived": "{name} już otrzymał(a) tę nagrodę.",
+  "WFRP4E.PL.UI.Notify.ItemBroken": "{name} – zniszczone!",
+  "WFRP4E.PL.UI.Notify.AdvancingCareer": "Rozwijanie Cech, Umiejętności i Talentów profesji {career}...",
+  "WFRP4E.PL.UI.Notify.SpellNotFound": "Nie znaleziono zaklęcia {name}. Spróbuj ponownie.",
+  "WFRP4E.PL.UI.Notify.NotFound": "Nie znaleziono: {name}",
+  "WFRP4E.PL.UI.Notify.MultiLoreSkill": "Zaklęcie wielu Tradycji: używam najniższej umiejętności Splatanie magii ({skill})",
+  "WFRP4E.PL.UI.Notify.GainedAdvantage": "<strong>{effect}</strong>: zyskano Przewagę ({value})",
+  "WFRP4E.PL.UI.Notify.CannotBeSurprised": "<strong>{effect}</strong>: nie można zostać zaskoczonym",
+  "WFRP4E.PL.UI.Notify.MigrationStart": "Trwa migracja systemu WFRP4e do wersji {version}. Zachowaj cierpliwość i nie zamykaj gry ani serwera.",
+  "WFRP4E.PL.UI.Notify.MigrationDone": "Migracja systemu wfrp4e do wersji {version} zakończona!"
 }

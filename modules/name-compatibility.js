@@ -469,6 +469,13 @@ export function display(query, type) {
 	if (typeof query !== "string") {
 		return query;
 	}
+	if (query.includes("<") && query.includes(">")) {
+		const stripped = query.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+		if (!stripped || stripped.includes("fa-solid") || stripped.includes("fa-suitcase")) {
+			return "";
+		}
+		query = stripped;
+	}
 	const types = normalizeTypes(type);
 	const translated = translatedCompendiumName(query, types);
 	if (translated) {

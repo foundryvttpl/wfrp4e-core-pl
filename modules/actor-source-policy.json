@@ -1,0 +1,458 @@
+{
+  "schema": 1,
+  "status": "used by modules/content-lifecycle.js; world changes happen only during a managed import, update or removal",
+  "basis": "First official English publication of the book, normally PDF; module patches, translations, reprints and VTT packaging do not change precedence.",
+  "newerPublicationBecomesPrimary": true,
+  "primaryCandidates": "available active owned official sources; importing an older book also considers newer available sources even if not initialized; unavailable imported data is preserved",
+  "unknownPublication": "verify publication date and register source before choosing; never use install order or module version",
+  "equalOrOverlappingDates": "stop before world changes and request verified bibliographic ordering; do not guess",
+  "primaryName": "translated base name without managed source suffix",
+  "secondaryName": "{baseName} ({abbreviation})",
+  "preserveBaseNameAndLookupAliases": true,
+  "publications": {
+    "core": {
+      "title": "Podręcznik Podstawowy",
+      "englishTitle": "Warhammer Fantasy Roleplay Core Rulebook",
+      "release": "2018-08",
+      "precision": "month",
+      "abbreviation": "Podręcznik Podstawowy",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications"
+      ],
+      "legacyAbbreviations": [
+        "pp"
+      ]
+    },
+    "starter": {
+      "title": "Zestaw Startowy",
+      "englishTitle": "Starter Set",
+      "release": "2018-12",
+      "precision": "month",
+      "abbreviation": "Zestaw Startowy",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications"
+      ],
+      "legacyAbbreviations": [
+        "zs"
+      ]
+    },
+    "rnhd": {
+      "title": "Ciężkie Dnie i Niespokojne Noce",
+      "englishTitle": "Rough Nights & Hard Days",
+      "release": "2019-04",
+      "precision": "month",
+      "abbreviation": "Ciężkie Dnie i Niespokojne Noce",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications",
+        "https://cubicle7games.com/en_US/blog/wfrp-rough-nights-hard-days-blog"
+      ],
+      "legacyAbbreviations": [
+        "cdinn"
+      ]
+    },
+    "eis": {
+      "title": "Wróg w Cieniach",
+      "englishTitle": "Enemy in Shadows",
+      "release": "2019-10-16",
+      "precision": "day",
+      "abbreviation": "Wróg w Cieniach",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/enemy-in-shadows-pdf-release-standard-edition-pre-order-live"
+      ],
+      "legacyAbbreviations": [
+        "wwc"
+      ]
+    },
+    "eis-companion": {
+      "title": "Wróg w Cieniach — Niezbędnik",
+      "englishTitle": "Enemy in Shadows Companion",
+      "release": "2019-11",
+      "precision": "month",
+      "abbreviation": "Wróg w Cieniach",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications"
+      ],
+      "legacyAbbreviations": [
+        "wwc-n"
+      ]
+    },
+    "ua1": {
+      "title": "Przygody w Ubersreiku I",
+      "englishTitle": "Ubersreik Adventures",
+      "release": "2019-12-11",
+      "precision": "day",
+      "abbreviation": "Przygody w Ubersreiku I",
+      "sources": [
+        "https://cubicle7games.com/en_US/blog/wfrp-gm-screen-ubersreik-adventures-pre-order"
+      ],
+      "legacyAbbreviations": [
+        "pwu1"
+      ]
+    },
+    "dotr": {
+      "title": "Śmierć na rzece Reik",
+      "englishTitle": "Death on the Reik",
+      "release": "2020-07",
+      "precision": "month",
+      "abbreviation": "Śmierć na rzece Reik",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications",
+        "https://cubicle7games.com/en_US/blog/wfrp-death-on-the-reik-status-update"
+      ],
+      "legacyAbbreviations": [
+        "reik"
+      ]
+    },
+    "dotr-companion": {
+      "title": "Śmierć na rzece Reik — Niezbędnik",
+      "englishTitle": "Death on the Reik Companion",
+      "release": "2020-09-16",
+      "precision": "day",
+      "abbreviation": "Śmierć na rzece Reik",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/death-on-the-reik-companion-pdf-out-now"
+      ],
+      "legacyAbbreviations": [
+        "reik-n"
+      ]
+    },
+    "middenheim": {
+      "title": "Middenheim: Miasto Białego Wilka",
+      "englishTitle": "Middenheim: City of the White Wolf",
+      "release": "2020-11-19",
+      "precision": "day",
+      "abbreviation": "Middenheim: Miasto Białego Wilka",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/middenheim-city-of-the-white-wolf-pdf-out-now"
+      ],
+      "legacyAbbreviations": [
+        "middenheim"
+      ]
+    },
+    "one-shots": {
+      "title": "One Shots of the Reikland",
+      "englishTitle": "One Shots of the Reikland",
+      "release": "2020-11-25",
+      "precision": "day",
+      "abbreviation": "One Shots of the Reikland",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/wfrp-one-shots-of-the-reikland-out-now"
+      ],
+      "legacyAbbreviations": [
+        "osr"
+      ]
+    },
+    "pbtt": {
+      "title": "Szara Eminencja",
+      "englishTitle": "Power Behind the Throne",
+      "release": "2020-12",
+      "precision": "month",
+      "abbreviation": "Szara Eminencja",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Warhammer_Fantasy_Roleplay_publications",
+        "https://cubicle7games.com/en_US/enemy-within-campaign-volume-3-power-behind-the-throne-pdf"
+      ],
+      "legacyAbbreviations": [
+        "se"
+      ]
+    },
+    "pbtt-companion": {
+      "title": "Szara Eminencja — Niezbędnik",
+      "englishTitle": "Power Behind the Throne Companion",
+      "release": "2021-02-23",
+      "precision": "day",
+      "abbreviation": "Szara Eminencja",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/power-behind-the-throne-companion-pdf-out-now"
+      ],
+      "legacyAbbreviations": [
+        "se-n"
+      ]
+    },
+    "patrons1": {
+      "title": "Patrons of the Old World I",
+      "englishTitle": "Patrons of the Old World I",
+      "release": "2021-03-10",
+      "precision": "day",
+      "abbreviation": "Patrons of the Old World I",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog?page=39",
+        "https://cubicle7games.com/en_US/warhammer-fantasy-roleplay-patrons-of-the-old-world-i-pdf"
+      ],
+      "legacyAbbreviations": [
+        "pss1"
+      ]
+    },
+    "horned-rat": {
+      "title": "Rogaty Szczur",
+      "englishTitle": "The Horned Rat",
+      "release": "2021-05-26",
+      "precision": "day",
+      "abbreviation": "Rogaty Szczur",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/warhammer-fantasy-rpg?page=8"
+      ],
+      "legacyAbbreviations": [
+        "rs"
+      ]
+    },
+    "ua2": {
+      "title": "Przygody w Ubersreiku II",
+      "englishTitle": "Ubersreik Adventures II",
+      "release": "2021-06-23",
+      "precision": "day",
+      "abbreviation": "Przygody w Ubersreiku II",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog?page=35"
+      ],
+      "legacyAbbreviations": [
+        "pwu2"
+      ]
+    },
+    "cluster-eye": {
+      "title": "The Cluster-Eye Tribe",
+      "englishTitle": "The Cluster-Eye Tribe",
+      "release": "2021-06-30",
+      "precision": "day",
+      "abbreviation": "Patrons of the Old World I",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog?page=34"
+      ],
+      "legacyAbbreviations": [
+        "pss1"
+      ]
+    },
+    "horned-rat-companion": {
+      "title": "Rogaty Szczur — Niezbędnik",
+      "englishTitle": "The Horned Rat Companion",
+      "release": "2021-07-09",
+      "precision": "day",
+      "abbreviation": "Rogaty Szczur",
+      "sources": [
+        "https://cubicle7games.com/en_GB/blog/wfrp-the-horned-rat-companion-pdf-now-complete"
+      ],
+      "legacyAbbreviations": [
+        "rs-n"
+      ]
+    },
+    "empire-ruins": {
+      "title": "Imperium w Ruinie",
+      "englishTitle": "Empire in Ruins",
+      "release": "2021-09-22",
+      "precision": "day",
+      "abbreviation": "Imperium w Ruinie",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/wfrp-empire-in-ruins-out-now"
+      ],
+      "legacyAbbreviations": [
+        "iwr"
+      ]
+    },
+    "empire-ruins-companion": {
+      "title": "Imperium w Ruinie — Niezbędnik",
+      "englishTitle": "Empire in Ruins Companion",
+      "release": "2021-12-01",
+      "precision": "day",
+      "abbreviation": "Imperium w Ruinie",
+      "sources": [
+        "https://cubicle7games.com/en_GB/blog/warhammer-fantasy-rpg?page=5"
+      ],
+      "legacyAbbreviations": [
+        "iwr-n"
+      ]
+    },
+    "wom": {
+      "title": "Wiatry Magii",
+      "englishTitle": "Winds of Magic",
+      "release": "2022-05",
+      "precision": "month",
+      "abbreviation": "Wiatry Magii",
+      "sources": [
+        "https://cubicle7games.com/blog/heres-everything-cubicle-7-released-in-2022"
+      ],
+      "legacyAbbreviations": [
+        "wm"
+      ]
+    },
+    "soc": {
+      "title": "Morze Szponów",
+      "englishTitle": "Sea of Claws",
+      "release": "2022-08",
+      "precision": "month",
+      "abbreviation": "Morze Szponów",
+      "sources": [
+        "https://cubicle7games.com/blog/heres-everything-cubicle-7-released-in-2022",
+        "https://cubicle7games.com/en_US/blog/cubicle-7-production-update-september-2022"
+      ],
+      "legacyAbbreviations": [
+        "ms"
+      ]
+    },
+    "lustria": {
+      "title": "Lustria",
+      "englishTitle": "Lustria",
+      "release": "2023-03-15",
+      "precision": "day",
+      "abbreviation": "Lustria",
+      "sources": [
+        "https://cubicle7games.com/en_GB/blog/warhammer-fantasy-roleplay-lustria-landscapes"
+      ],
+      "legacyAbbreviations": [
+        "lustria"
+      ]
+    },
+    "corsairs": {
+      "title": "The Corsairs of Captain Flariel",
+      "englishTitle": "The Corsairs of Captain Flariel",
+      "release": "2024-06-10",
+      "precision": "day",
+      "abbreviation": "The Corsairs of Captain Flariel",
+      "sources": [
+        "https://cubicle7games.com/en_EU/blog/Warhammer%20Fantasy%20Roleplay%3A%20The%20Corsairs%20of%20Captain%20Flariel"
+      ],
+      "legacyAbbreviations": [
+        "miz"
+      ]
+    }
+  },
+  "modules": {
+    "wfrp4e-core": {
+      "publication": "core"
+    },
+    "wfrp4e-starter-set": {
+      "publication": "starter"
+    },
+    "wfrp4e-rnhd": {
+      "publication": "rnhd"
+    },
+    "wfrp4e-eis": {
+      "publication": "eis",
+      "folderPublications": {
+        "vTNWMOmmVwE4Po94": "eis-companion"
+      }
+    },
+    "wfrp4e-ua1": {
+      "publication": "ua1"
+    },
+    "wfrp4e-dotr": {
+      "publication": "dotr",
+      "folderPublications": {
+        "OoEPEtf677wIc7a3": "dotr-companion"
+      }
+    },
+    "wfrp4e-middenheim": {
+      "publication": "middenheim"
+    },
+    "wfrp4e-pbtt": {
+      "publication": "pbtt",
+      "folderPublications": {
+        "g3dkE0xKfMoUtNVc": "pbtt-companion"
+      }
+    },
+    "wfrp4e-horned-rat": {
+      "publication": "horned-rat",
+      "folderPublications": {
+        "yqpuzCxHEvoE70cL": "horned-rat-companion"
+      }
+    },
+    "wfrp4e-ua2": {
+      "publication": "ua2"
+    },
+    "wfrp4e-empire-ruins": {
+      "publication": "empire-ruins",
+      "folderPublications": {
+        "0nWfVN1hHF7uN6nN": "empire-ruins-companion"
+      }
+    },
+    "wfrp4e-wom": {
+      "publication": "wom"
+    },
+    "wfrp4e-soc": {
+      "publication": "soc"
+    },
+    "wfrp4e-lustria": {
+      "publication": "lustria"
+    },
+    "wfrp4e-owb1": {
+      "publication": null,
+      "folderPublications": {
+        "6tzl8Peou4P5GTvs": "patrons1",
+        "W26eNZoskYSdNo3c": "cluster-eye"
+      }
+    },
+    "wfrp4e-owb3": {
+      "publication": null,
+      "folderPublications": {
+        "t7FPL7QSP4eqQW4k": "corsairs",
+        "v0LDvyMQd8oB6Emi": "one-shots"
+      }
+    }
+  },
+  "nameSuffixes": {
+    "pp": "Podręcznik Podstawowy",
+    "zs": "Zestaw Startowy",
+    "cdinn": "Ciężkie Dnie i Niespokojne Noce",
+    "wwc": "Wróg w Cieniach",
+    "wwc-n": "Wróg w Cieniach",
+    "pwu1": "Przygody w Ubersreiku I",
+    "pwu2": "Przygody w Ubersreiku II",
+    "reik": "Śmierć na rzece Reik",
+    "reik-n": "Śmierć na rzece Reik",
+    "middenheim": "Middenheim: Miasto Białego Wilka",
+    "se": "Szara Eminencja",
+    "se-n": "Szara Eminencja",
+    "rs": "Rogaty Szczur",
+    "rs-n": "Rogaty Szczur",
+    "iwr": "Imperium w Ruinie",
+    "iwr-n": "Imperium w Ruinie",
+    "wm": "Wiatry Magii",
+    "ms": "Morze Szponów",
+    "lustria": "Lustria",
+    "pss1": "Patrons of the Old World I",
+    "osr": "One Shots of the Reikland",
+    "miz": "The Corsairs of Captain Flariel",
+    "altdorf": "Altdorf: Korona Imperium",
+    "ai1": "Archiwa Imperium — Tom I",
+    "ai2": "Archiwa Imperium — Tom II",
+    "ai3": "Archiwa Imperium — Tom III",
+    "pb": "Pod Bronią",
+    "iz": "Imperialny Zwierzyniec",
+    "salzenmund": "Salzenmund: Miasto Soli i Srebra",
+    "pss2": "Pakiet Starego Świata II",
+    "pwu3": "Przygody w Ubersreiku III",
+    "tribes": "Tribes & Tribulations",
+    "dslf": "Deft Steps Light Fingers",
+    "krasnoludy": "Dwarf Bundle",
+    "helf": "High Elf Bundle"
+  },
+  "moduleNameSuffixes": {
+    "wfrp4e-core": "pp",
+    "wfrp4e-starter-set": "zs",
+    "wfrp4e-rnhd": "cdinn",
+    "wfrp4e-eis": "wwc",
+    "wfrp4e-ua1": "pwu1",
+    "wfrp4e-ua2": "pwu2",
+    "wfrp4e-dotr": "reik",
+    "wfrp4e-middenheim": "middenheim",
+    "wfrp4e-pbtt": "se",
+    "wfrp4e-horned-rat": "rs",
+    "wfrp4e-empire-ruins": "iwr",
+    "wfrp4e-wom": "wm",
+    "wfrp4e-soc": "ms",
+    "wfrp4e-lustria": "lustria",
+    "wfrp4e-owb1": "pss1",
+    "wfrp4e-altdorf": "altdorf",
+    "wfrp4e-archives1": "ai1",
+    "wfrp4e-archives2": "ai2",
+    "wfrp4e-archives3": "ai3",
+    "wfrp4e-up-in-arms": "pb",
+    "wfrp4e-zoo": "iz",
+    "wfrp4e-salzenmund": "salzenmund",
+    "wfrp4e-owb2": "pss2",
+    "wfrp4e-ua3": "pwu3",
+    "wfrp4e-tribes": "tribes",
+    "wfrp4e-dslf": "dslf",
+    "wfrp4e-dwarfs": "krasnoludy",
+    "wfrp4e-helf": "helf"
+  }
+}
