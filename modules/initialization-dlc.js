@@ -14,6 +14,39 @@ function getLogPrefix() {
 // 1. Tłumaczenia ustawień modułów (Hooks.on("init"))
 // ---------------------------------------------------------------------------
 Hooks.on("init", () => {
+    // The client language is applied after init, so game.i18n.lang can still
+    // be "en" here. Install the clock getter regardless; it checks at display.
+    if (game.modules.get("wfrp4e-rnhd")?.active) {
+        // Patch only the display getter: hour is also used by the native clock hands.
+        const clockPrototype = typeof WFRP_Clock === "undefined" ? null : WFRP_Clock.prototype;
+        const timeDescriptor = clockPrototype && Object.getOwnPropertyDescriptor(clockPrototype, "time");
+        if (timeDescriptor?.get && timeDescriptor.configurable) {
+            const originalTime = timeDescriptor.get;
+            Object.defineProperty(clockPrototype, "time", {
+                ...timeDescriptor,
+                get() {
+                    if (game.i18n?.lang !== "pl") return originalTime.call(this);
+                    return `${String(this._hour).padStart(2, "0")}:${String(this._minute).padStart(2, "0")}`;
+                },
+            });
+        }
+
+        // The native window title is a hard-coded "Clock" in DEFAULT_OPTIONS.
+        const clockApp = typeof WFRPClockApp === "undefined" ? null : WFRPClockApp.prototype;
+        let titleOwner = clockApp;
+        while (titleOwner && !Object.getOwnPropertyDescriptor(titleOwner, "title")) titleOwner = Object.getPrototypeOf(titleOwner);
+        const titleDescriptor = titleOwner && Object.getOwnPropertyDescriptor(titleOwner, "title");
+        if (titleDescriptor?.get && !Object.hasOwn(clockApp, "title")) {
+            Object.defineProperty(clockApp, "title", {
+                configurable: true,
+                get() {
+                    if (game.i18n?.lang !== "pl") return titleDescriptor.get.call(this);
+                    return game.i18n.localize("WFRP4E_RNHD_PL.Clock");
+                },
+            });
+        }
+    }
+
     if (game.i18n?.lang !== "pl") return;
 
     // --- Rough Nights & Hard Days ---

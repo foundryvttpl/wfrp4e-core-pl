@@ -1,11 +1,28 @@
-  /* ==================== (A) CASLON ANTIQUE ==================== */
+  /* Preserve the upstream body typeface. Only the decorative headings need
+     the Polish Caslon Antique variant, which supplies missing Polish glyphs. */
   @font-face {
     font-family: "CaslonAntiquePL";
     src: url('../fonts/CaslonAntiquePL.ttf');
   }
+  @font-face {
+    font-family: "CaslonAntiquePL";
+    src: url('../fonts/CaslonAntique-BoldPL.ttf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "CaslonAntiquePL";
+    src: url('../fonts/CaslonAntique-ItalicPL.ttf');
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "CaslonAntiquePL";
+    src: url('../fonts/CaslonAntique-BoldItalicPL.ttf');
+    font-weight: bold;
+    font-style: italic;
+  }
 
 :root :not(.no-theme) {
-  --primary-font: "CaslonAntiquePL";
+  --primary-font: "CaslonPro";
   --header-font: "CaslonAntiquePL";
 
   /* Increase font size for better readability */

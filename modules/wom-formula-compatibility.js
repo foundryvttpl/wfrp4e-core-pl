@@ -139,6 +139,14 @@ const FORMULAS = Object.freeze({
     "duration": {
       "polish": "Liczba godzin równa Bonusowi z Siły Woli",
       "source": "Willpower Bonus hours"
+    },
+    "range": {
+      "polish": "Liczba kilometrów równa półtorakrotnemu Bonusowi z Inicjatywy",
+      "source": "1500 * Initiative Bonus yards",
+      "kilometres_note": true,
+      "legacy_polish": [
+        "Bonus I Kilometrów"
+      ]
     }
   },
   "Kt61ifWQpjaaxOO7": {
@@ -256,12 +264,10 @@ const FORMULAS = Object.freeze({
   },
   "zoOcTnMzgNo64qXv": {
     "range": {
-      "polish": "Liczba metrów równa połowie Siły Woli albo podwojony Bonus z Siły Woli",
+      "polish": "Liczba metrów równa połowie Siły Woli",
       "source": "Willpower / 2 yards",
-      "alternatives": [
-        "2 * Willpower Bonus yards"
-      ],
       "legacy_polish": [
+        "Liczba metrów równa połowie Siły Woli albo podwojony Bonus z Siły Woli",
         "Liczba metrów równa Sile Woli / 2"
       ]
     },
@@ -396,6 +402,16 @@ const FORMULAS = Object.freeze({
       "areas_count": 4,
       "legacy_polish": [
         "4 * Liczba metrów równa Bonusowi z Siły Woli (Obszarowy)"
+      ]
+    }
+  },
+  "NPQkxWhqCjqvXX6p": {
+    "range": {
+      "polish": "Liczba kilometrów równa półtorakrotnemu Bonusowi z Inicjatywy",
+      "source": "1500 * Initiative Bonus yards",
+      "kilometres_note": true,
+      "legacy_polish": [
+        "Bonus I Kilometrów"
       ]
     }
   }

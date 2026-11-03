@@ -19399,7 +19399,7 @@
     },
     "Doppelganger": {
       "id": "OcYPErjJzQKOX2aI",
-      "name": "Mimik",
+      "name": "Sobowtór",
       "description": "<p>Tkasz z <em>Ulgu</em> maskę i płaszcz, które nakładasz na siebie, przybierając postać podobną do innego humanoida, którego dobrze znasz (co ustalane jest przez MG). Podobieństwo jest na tyle dobre, że jeśli ktoś nie posiada Talentu @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Percepcja Magiczna}, nie pozna się na sztuczce, choć niektórzy mogą zauważyć, że część manieryzmów nie jest identyczna. Nawet ci, którzy posiadają ten Talent, muszą zdać <strong>Trudny (-10) Test Percepcji</strong>, a w przypadku niepowodzenia nie przejrzą twojego magicznego przebrania. Jednakże, nawet jeśli uda im się wyczuć fortel, nie będą w stanie spojrzeć „poza” zaklęcie. Aby zobaczyć twoją prawdziwą formę, muszą rozproszyć zaklęcie.</p>\n\n<p>Zaklęcia z Tradycji Cieni są dyskretne i podstępne do tego stopnia, że w przypadku tej Tradycji <i>Lingua Praestantia</i> może być mówiona szeptem. Wszelkie ochronne zaklęcia oplatają cel kłębami cieni i dymu, sprawiając, że wydaje się niewyraźny i rozmyty. Ponadto wszystkie zaklęcia z Tradycji Cieni zadają Obrażenia, które ignorują wszelkie niemagiczne Punkty Pancerza.</p>",
       "sourceId": "Compendium.wfrp4e-core.items.Item.OcYPErjJzQKOX2aI",
       "duration": "Bonus Int minut",

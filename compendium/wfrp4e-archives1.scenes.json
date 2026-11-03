@@ -12,7 +12,8 @@
     "drawings": {
       "path": "drawings",
       "converter": "drawings"
-    }
+    },
+    "distance": "grid.distance"
   },
   "entries": {
     "The Laurelorn": {
@@ -186,7 +187,8 @@
         "zgwb9xqsbxTiiXig": {
           "text": "Kronven"
         }
-      }
+      },
+      "distance": 8.04672
     },
     "The Mootland": {
       "id": "SmQJpAnynYyOBusA",
@@ -225,7 +227,8 @@
         }
       },
       "units": "km",
-      "initialization_folder": "Archiwa Imperium Tom I"
+      "initialization_folder": "Archiwa Imperium Tom I",
+      "distance": 8.04672
     }
   },
   "folders": {

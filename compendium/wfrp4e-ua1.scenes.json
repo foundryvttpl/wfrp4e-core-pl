@@ -56,9 +56,10 @@
         "Grausee Environs": {
             "id": "jZWoauy9VMH1hCIm",
             "name": "Okolice Grausse",
-            "units": "mi",
+            "units": "km",
             "image": "modules/wfrp4e-core-pl/images/ua1/maps/grausee-environs-white.webp",
-            "initialization_folder": "Przygody w Ubersreiku I"
+            "initialization_folder": "Przygody w Ubersreiku I",
+            "distance": 0.402336
         },
         "Guilty Party Route": {
             "id": "8RcvI9tLo5kSbJVP",
@@ -134,7 +135,7 @@
             "id": "DDtwpWItznY2DBhr",
             "name": "Spittlefeld",
             "units": "m",
-            "image": "modules/wfrp4e-ua1/assets/spittlefeld-unlabeled.webp",
+            "image": "modules/wfrp4e-ua1/assets/maps/spittlefeld-unlabeled.webp",
             "drawings": {
                 "r1OCSIfemulUjrcB": {
                     "text": "1",

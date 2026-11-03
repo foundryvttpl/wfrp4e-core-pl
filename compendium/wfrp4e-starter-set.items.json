@@ -684,7 +684,7 @@
     },
     "Doppelganger": {
       "id": "TQDlbIGPOPNDF9uB",
-      "name": "Mimik",
+      "name": "Sobowtór",
       "description": "<p>BN może przybrać postać dowolnej humanoidalnej istoty o Rozmiarze Średnim. Musi osiągnąć +5 PS w <strong>Wydłużonym Teście Percepcji</strong> , gdy obserwuje swój cel. Następnie przybranie postaci celu zajmuje mu 2 Rundy. Kopiowane są także ubranie i mniejsze elementy wyposażenia celu; stają się częścią stwora i nie mogą być usuwane. Większe elementy wyposażenia, takie jak miecze i plecaki, nie są kopiowane. Gdy ci, którzy znają ofiarę, spotkają przekształconego stwora, wykonują <strong>Trudny (−20)Test Intuicji</strong>. Jeśli go zdadzą, zorientują się, że coś jest nie tak. Jeśli im się nie uda, pozostaną przekonani, że stwór jest znajomą im osobą.</p>",
       "sourceId": "Compendium.wfrp4e-starter-set.items.TQDlbIGPOPNDF9uB"
     },

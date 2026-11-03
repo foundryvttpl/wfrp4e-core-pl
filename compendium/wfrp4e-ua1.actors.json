@@ -407,7 +407,7 @@
       "species": "Człowiek",
       "gender": "Kobieta",
       "status": "Srebro 3",
-      "gmnotes": "<p>Cordelia jest piękną kobietą o długich, srebrnoszarych włosach. Ma zawsze przyjazny uśmiech i uwielbia spędzać popołudnia na plotkach z klientami, przygotowując swoje ziołowe maści i medykamenty. Niewielu ludzi wie, że wiele dekad temu Cordelia była studentką w @UUID[Compendium.wfrp4e-wom.journals.Q9sQhbDN8NUHXYdA.JournalEntryPage.MVwOuM2YKhUvA1E1#jadeitowe-kolegium]{Jadeitowym Kolegium} w Altdorfie. Nigdy nie miała dość talentu, by zostać pełnoprawną czarodziejką, ale wciąż czuje się lojalna wobec Kolegiów Magii. W jej piwnicy znajduje się sekretne przejście do @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.tCh9vROs0eeTuEwA]{wieży} arcymaga @UUID[Compendium.wfrp4e-rnhd.actors.7M5OJZbbtV6DKUvG]{Christopha Engela} z Szarego Zakonu, któremu aptekarka przekazuje wszelkie zasłyszane interesujące plotki. Cordelia ma dostępne w sklepie wszystkie @UUID[Compendium.wfrp4e-core.journals.sLomXnc8R8518cWN.JournalEntryPage.PYiffieXenZHBUAU]{zioła i lekarstwa }. Gdyby drużyna zapytała ją o nową miksturę leczniczą, odpowie, że pracuje nad czymś specjalnym, ale jest jeszcze za wcześnie, by o tym mówić. </p>",
+      "gmnotes": "<p>Cordelia jest piękną kobietą o długich, srebrnoszarych włosach. Ma zawsze przyjazny uśmiech i uwielbia spędzać popołudnia na plotkach z klientami, przygotowując swoje ziołowe maści i medykamenty. Niewielu ludzi wie, że wiele dekad temu Cordelia była studentką w @UUID[Compendium.wfrp4e-wom.journals.Q9sQhbDN8NUHXYdA.JournalEntryPage.MVwOuM2YKhUvA1E1#the-jade-college]{Jadeitowym Kolegium} w Altdorfie. Nigdy nie miała dość talentu, by zostać pełnoprawną czarodziejką, ale wciąż czuje się lojalna wobec Kolegiów Magii. W jej piwnicy znajduje się sekretne przejście do @UUID[Compendium.wfrp4e-starter-set.journals.TSyoR9nSk7cehypG.JournalEntryPage.tCh9vROs0eeTuEwA]{wieży} arcymaga @UUID[Compendium.wfrp4e-rnhd.actors.7M5OJZbbtV6DKUvG]{Christopha Engela} z Szarego Zakonu, któremu aptekarka przekazuje wszelkie zasłyszane interesujące plotki. Cordelia ma dostępne w sklepie wszystkie @UUID[Compendium.wfrp4e-core.journals.sLomXnc8R8518cWN.JournalEntryPage.PYiffieXenZHBUAU]{zioła i lekarstwa }. Gdyby drużyna zapytała ją o nową miksturę leczniczą, odpowie, że pracuje nad czymś specjalnym, ale jest jeszcze za wcześnie, by o tym mówić. </p>",
       "items": {
         "wKwel9MG7NIG3i3w": {
           "id": "wKwel9MG7NIG3i3w",
@@ -707,6 +707,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "QnGUgqxNTpRstDqs": {
+          "id": "QnGUgqxNTpRstDqs",
+          "name": "Miecz"
         }
       }
     },
@@ -942,7 +946,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Ci, którzy krzywdzą jego przyjaciół"
         },
         "8slW8CJ2oVTxeQ6q": {
           "specification": "Duży"
@@ -1109,7 +1114,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Czarodzieje i osoby, które z nimi przestają"
         },
         "Dd1P2oX7Z6EbXSYq": {
           "id": "Dd1P2oX7Z6EbXSYq",
@@ -1152,6 +1158,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "Vz3ophWLwIUL2X21": {
+          "id": "Vz3ophWLwIUL2X21",
+          "name": "Miecz"
         }
       }
     },
@@ -1357,6 +1367,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "sboC82iPb39YdoiZ": {
+          "id": "sboC82iPb39YdoiZ",
+          "name": "Miecz"
         }
       }
     },
@@ -1539,6 +1553,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "SX5B9pBFaOnEOFNM": {
+          "id": "SX5B9pBFaOnEOFNM",
+          "name": "Miecz"
         }
       }
     },
@@ -2020,7 +2038,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Bohaterowie"
         },
         "EdkAiYdj5FRMcovw": {
           "id": "EdkAiYdj5FRMcovw",
@@ -2077,6 +2096,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "tkCWlbf8hcesPGes": {
+          "id": "tkCWlbf8hcesPGes",
+          "name": "Miecz"
         }
       }
     },
@@ -2299,6 +2322,10 @@
         },
         "GZxVNUS67U4gBxLf": {
           "specification": "Azyr"
+        },
+        "iYBWk2vBUZZy2jep": {
+          "id": "iYBWk2vBUZZy2jep",
+          "name": "Miecz"
         }
       }
     },
@@ -2373,6 +2400,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "LtGSULya8I2FpbQL": {
+          "id": "LtGSULya8I2FpbQL",
+          "name": "Topór"
         }
       }
     },
@@ -2447,6 +2478,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "LtGSULya8I2FpbQL": {
+          "id": "LtGSULya8I2FpbQL",
+          "name": "Topór"
         }
       }
     },
@@ -2871,7 +2906,8 @@
               ]
             }
           },
-          "specification": "Cel"
+          "specification": "Cel",
+          "specification_value": "Bohaterowie"
         }
       }
     },
@@ -2920,6 +2956,10 @@
           "name": "Skradanie",
           "description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Skradanie}",
           "originalName": "Skradanie"
+        },
+        "DQl0PlwEMOoJVwhu": {
+          "id": "DQl0PlwEMOoJVwhu",
+          "name": "Miecz"
         }
       }
     },

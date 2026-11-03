@@ -932,7 +932,7 @@ function terrainSpecializationScript({polish}) {
 		"let tests = this.item.system.tests.value;",
 		"let selected = specialization(name);",
 		"if (!selected || placeholders.has(selected.toLocaleLowerCase())) {",
-		"    const choice = await ItemDialog.create(ItemDialog.objectToArray(" + JSON.stringify(choices) + ", this.item.img), 1, " + JSON.stringify(title) + ");",
+		"    const choice = await ItemDialog.create(ItemDialog.objectToArray(" + JSON.stringify(choices) + ", this.item.img), 1, " + "{text: " + JSON.stringify(title) + "});",
 		"    if (!choice[0]) return;",
 		"    selected = choice[0].name;",
 		"}",
@@ -1400,11 +1400,194 @@ function prepareTranslationPairs(sourceScripts, translations) {
 	}
 }
 
+// Exact current-source PL generator name compatibility; no selection changes.
+const WOM_GENERATOR_NAME_RULES = Object.freeze({
+    "Ph3TdQw1lGiFr049": {
+        "before": "game.wfrp4eCorePl.names.oneOf(args.test.item, [\"Język (Magiczny)\", \"Unik\"])",
+        "after": "game.wfrp4eCorePl.names.oneOf(args.test.item, [\"Language (Magick)\", \"Dodge\", \"Język (Magiczny)\", \"Unik\"])",
+        "hash": "49065887"
+    },
+    "ULmZMLezDamerN04": {
+        "before": "if (game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"GM's Choice\", \"ULmZMLezDamerN04\")) return;",
+        "after": "if (game.wfrp4eCorePl.scripts.equivalent(displayedLore, \"GM's Choice\", \"ULmZMLezDamerN04\") || displayedLore === \"Wybór MG\") return;",
+        "hash": "1fa2a91a"
+    }
+});
+function adaptWomGeneratorNames(id, sourceHash, code, {polish}) {
+    const rule = WOM_GENERATOR_NAME_RULES[id];
+    if (!polish || !rule || rule.hash !== sourceHash
+        || game.system?.id !== "wfrp4e" || !["10.0.3", "10.1.2"].includes(game.system.version)
+        || game.modules?.get("wfrp4e-wom")?.version !== "8.0.0"
+        || !game.modules.get("wfrp4e-wom").active
+        || code.split(rule.before).length !== 2) return code;
+    return code.replace(rule.before, rule.after);
+}
+
+// Canonical action-link codes must resolve in localized Core condition/symptom dictionaries.
+const ACTION_KEY_LOOKUP_PATCH = Symbol.for("wfrp4e-core-pl.actionCanonicalKeyLookup");
+function currentActionLookupContext() {
+    return game.system?.id === "wfrp4e" && game.system.version === "10.1.2"
+        && game.modules?.get("warhammer-lib")?.version === "3.5.1"
+        && game.modules?.get("wfrp4e-core")?.version === "8.0.1"
+        && game.modules.get("wfrp4e-core").active;
+}
+export function installActionLinkKeyCompatibility() {
+    const utility = globalThis.warhammer?.utility;
+    const original = utility?.findKey;
+    if (!currentActionLookupContext() || typeof original !== "function"
+        || original[ACTION_KEY_LOOKUP_PATCH] || hashSource(original.toString()) !== "aead6ad3") return false;
+    const wrapped = function(value, object, ...options) {
+        const config = game.wfrp4e?.config;
+        if (currentActionLookupContext() && game.i18n?.lang === "pl" && typeof value === "string"
+            && object && typeof object === "object" && config
+            && (object === config.conditions || object === config.symptoms)) {
+            const key = Object.keys(object).find(key => key.toLowerCase() === value.toLowerCase());
+            if (key !== undefined) return key;
+        }
+        return original.call(this, value, object, ...options);
+    };
+    Object.defineProperty(wrapped, ACTION_KEY_LOOKUP_PATCH, {value: true});
+    utility.findKey = wrapped;
+    return true;
+}
+
+// Source-bound PL prompt adaptation for the current ItemDialog options API.
+const WOM_DIALOG_OPTION_RULES = Object.freeze({
+    "PeZYj8b0vedyJj00": {
+        "hash": "0fd0a7f7",
+        "options": [
+            [
+                ", 1, \"Wybierz Tradycję Magiczną\")",
+                ", 1, {text: \"Wybierz Tradycję Magiczną\"})"
+            ]
+        ]
+    },
+    "sB4KB9bT3nQhAoqG": {
+        "hash": "184485a6",
+        "options": [
+            [
+                ", 1, \"Wybierz Tradycję Magiczną\")",
+                ", 1, {text: \"Wybierz Tradycję Magiczną\"})"
+            ]
+        ]
+    },
+    "CHnaBPHk6HdFS512": {
+        "hash": "583c8b87",
+        "options": [
+            [
+                ", 1, \"Wybierz Kończynę\")",
+                ", 1, {text: \"Wybierz Kończynę\"})"
+            ]
+        ]
+    },
+    "a8i0sA1RBnD8nHZt": {
+        "hash": "3c0f4dcc",
+        "options": [
+            [
+                ", \"unlimited\", \"Wybierz Zalety do dodania\")",
+                ", \"unlimited\", {text: \"Wybierz Zalety do dodania\"})"
+            ],
+            [
+                ", \"unlimited\", \"Wybierz Wady do usunięcia\")",
+                ", \"unlimited\", {text: \"Wybierz Wady do usunięcia\"})"
+            ]
+        ]
+    }
+});
+function adaptWomDialogOptions(id, sourceHash, code, {polish}) {
+    const rule = WOM_DIALOG_OPTION_RULES[id];
+    if (!polish || !rule || rule.hash !== sourceHash
+        || game.system?.id !== "wfrp4e" || ! ["10.0.3", "10.1.2"].includes(game.system.version)
+        || game.modules?.get("wfrp4e-wom")?.version !== "8.0.0"
+        || !game.modules.get("wfrp4e-wom").active) return code;
+    if (!rule.options.every(([before]) => code.split(before).length === 2)) return code;
+    for (const [before, after] of rule.options) code = code.replace(before, after);
+    return code;
+}
+
+// Owner-selected Lifebloom Silt: multiply healing, never the regeneration roll.
+const LIFEBLOOM_SOURCE_HASHES = Object.freeze({
+    "6QZUX7ZrFxOzqI0b": "abc71550",
+    "OGX4BneaYAnV25TO": "0839a3c2"
+});
+function currentLifebloomVersion() {
+    return game.system?.id === "wfrp4e" && ["10.0.3", "10.1.2"].includes(game.system.version)
+        && game.modules?.get("wfrp4e-wom")?.version === "8.0.0"
+        && game.modules.get("wfrp4e-wom").active;
+}
+export function lifebloomWoundMultiplier(actor) {
+    if (!currentLifebloomVersion() || typeof actor?.allApplicableEffects !== "function") return 1;
+    for (const effect of actor.allApplicableEffects()) {
+        if (effect.disabled || effect.isSuppressed || effect.duration?.expired
+            || effect.system?.transferData?.documentType !== "Actor") continue;
+        const matchesScript = effect.system?.scriptData?.some(data =>
+            data.trigger === "prePrepareData" && data.script === "[Script.6QZUX7ZrFxOzqI0b]");
+        if (!matchesScript) continue;
+        let item;
+        try { item = effect.sourceItem; } catch { continue; }
+        if (item?.type !== "spell") continue;
+        const source = item._stats?.compendiumSource ?? item.flags?.core?.sourceId ?? item.uuid;
+        if (typeof source !== "string" || source.replace(".items.Item.", ".items.")
+            !== "Compendium.wfrp4e-wom.items.Kt61ifWQpjaaxOO7") continue;
+        return 2;
+    }
+    return 1;
+}
+function adaptVitalMudScript(id, sourceHash, code, {polish}) {
+    if (!currentLifebloomVersion() || LIFEBLOOM_SOURCE_HASHES[id] !== sourceHash) return code;
+    if (id === "6QZUX7ZrFxOzqI0b") return "// Healing is evaluated by the source-bound Regenerate script at execution time.\nreturn;";
+    if (id !== "OGX4BneaYAnV25TO") return code;
+    const pairs = [
+        ["wounds.value += regen", "wounds.value += regen * lifebloomMultiplier"],
+        ["wounds.value += 1", "wounds.value += lifebloomMultiplier"],
+        [polish ? "odzyskuje ${regen} punktów Żywotności." : "regains ${regen} Wounds.",
+         polish ? "odzyskuje ${regen * lifebloomMultiplier} punktów Żywotności." : "regains ${regen * lifebloomMultiplier} Wounds."],
+        [polish ? "i odzyskuje 1 punkt Żywotności." : "and regains 1 Wound.",
+         polish ? "i odzyskuje ${lifebloomMultiplier} ${lifebloomMultiplier === 1 ? 'punkt' : 'punkty'} Żywotności."
+                : "and regains ${lifebloomMultiplier} ${lifebloomMultiplier === 1 ? 'Wound' : 'Wounds'}."],
+    ];
+    if (!pairs.every(([before]) => code.split(before).length === 2)) return code;
+    for (const [before, after] of pairs) code = code.replace(before, after);
+    return "const lifebloomMultiplier = game.wfrp4eCorePl.scripts.lifebloomWoundMultiplier(this.actor);\n" + code;
+}
+
+// Source-bound grants: replace the generic Resistance placeholder, not append it.
+const WOM_FINAL_GRANT_HASHES = Object.freeze({
+    "KQzbrpb0T5a7it4k": "00cb1a00",
+    "fiF9sM5UpcHMYa33": "e225bbcc",
+    "qK4q4o6cQhcGzFX3": "f925359e"
+});
+function adaptFinalWomGrants(id, sourceHash, code, {polish}) {
+    if (WOM_FINAL_GRANT_HASHES[id] !== sourceHash
+        || game.system?.id !== "wfrp4e" || !["10.0.3", "10.1.2"].includes(game.system.version)
+        || game.modules?.get("wfrp4e-wom")?.version !== "8.0.0"
+        || !game.modules.get("wfrp4e-wom").active
+        || game.modules?.get("wfrp4e-core")?.version !== "8.0.1") return code;
+    if (id === "qK4q4o6cQhcGzFX3") {
+        const before = "talents = new Array(1 + this.effect.sourceTest.result.overcast.available).fill(leaderData);";
+        return code.split(before).length === 2 ? code.replace(before, "const " + before) : code;
+    }
+    const threat = id === "KQzbrpb0T5a7it4k"
+        ? (polish ? "Choroby" : "Disease")
+        : (polish ? "Trucizny, Choroby, Chaos" : "Poison, Disease, Chaos");
+    const before = id === "KQzbrpb0T5a7it4k"
+        ? "data.name += ` (" + threat + ")`;"
+        : "data.name += " + JSON.stringify(" (" + threat + ")");
+    if (code.split(before).length !== 2) return code;
+    const after = [
+        "data.name = data.name.replace(/\\s*\\([^()]*\\)\\s*$/, \"\").trim() + " + JSON.stringify(" (" + threat + ")") + ";",
+        "for (const effect of data.effects ?? []) {",
+        "    if (effect.system?.scriptData?.some(data => data.script === \"[Script.tCIT1a12Gt6k2ohA]\")) effect.name = data.name;",
+        "}",
+    ].join("\n");
+    return code.replace(before, after);
+}
+
 export function resolveScript(id, source, translation, {polish = true} = {}) {
 	const sourceHash = hashSource(source);
 	const corrected = applyPatchSet(id, source, {sourceHash});
 	if (!polish || !translation) {
-		return applyBilingualTransforms(applyBehaviorPatches(id, corrected, {sourceHash, polish}), {id, polish});
+		return adaptFinalWomGrants(id, sourceHash, applyBilingualTransforms(adaptVitalMudScript(id, sourceHash, applyBehaviorPatches(id, corrected, {sourceHash, polish}), {polish}), {id, polish}), {polish});
 	}
 	const postTransplant = SOURCE_PATCHES[id]?.postTransplant;
 	const transplantSource = postTransplant ? source : corrected;
@@ -1428,10 +1611,56 @@ export function resolveScript(id, source, translation, {polish = true} = {}) {
 		);
 	}
 	const patched = applyBehaviorPatches(id, localized, {sourceHash, polish});
-	return applyBilingualTransforms(patched, {id, polish});
+	return adaptFinalWomGrants(id, sourceHash, adaptWomGeneratorNames(id, sourceHash, applyBilingualTransforms(adaptWomDialogOptions(id, sourceHash, adaptVitalMudScript(id, sourceHash, patched, {polish}), {polish}), {id, polish}), {polish}), {polish});
+}
+
+// Two source-bound WOM robe effects have legacy inline name parsers.
+// Their qualified provenance is supplied only by the reviewed local payloads.
+const EMBEDDED_ROBE_RULES = Object.freeze({
+    "Compendium.wfrp4e-wom.actors.Actor.JrH67vCaUXSF7YQq.Item.jinS4zLQ3CK3xU8r.ActiveEffect.QwsWIBmagSplcAwa": {
+        "itemName": "Practical Robes of the Light Order",
+        "effectName": "Practical Robes (Light)",
+        "source": "let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\n\nif (args.type == \"channelling\" && args.item.system.lore.value == lore)\n    args.prefillModifiers.slBonus  += 1\nelse if ((args.type == \"channelling\" || args.type == \"cast\") && args.item.system.lore.value != lore && args.item.system.lore.value != \"petty\")\n    args.prefillModifiers.slBonus  -= 1"
+    },
+    "Compendium.wfrp4e-wom.actors.Actor.oldtgeL8W8JqlmMA.Item.wNp6gSeJc2bA4XpR.ActiveEffect.QwsWIBmagSplcAwa": {
+        "itemName": "High Quality Elaborate Robes",
+        "effectName": "Elaborate Robes (Death)",
+        "source": "let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\n\nif (args.type == \"channelling\" && args.item.system.lore.value == lore)\n    args.prefillModifiers.slBonus  += 3\nelse if ((args.type == \"channelling\" || args.type == \"cast\") && args.item.system.lore.value != lore && args.item.system.lore.value != \"petty\")\n    args.prefillModifiers.slBonus  -= 1"
+    }
+});
+// Adapt only the known official inline rule; retain its persisted source payload.
+const BORROWED_COURAGE_SOURCE = "// Spider-mounted Forest Goblins are not subject to Afraid (Elves).\n\nconsole.log(\"Running Borrowed Courage\")\n\n// Get id of Afraid (Elves) trait\nconst fearElvesTraitId = this.actor.items.filter(i => \n  i.type == \"trait\" && i.name == \"Afraid\").filter(t => \n    t.specification.value === \"Elves\")[0].id\n// Exit if not (potentially) Afraid (Elves)\nif (!fearElvesTraitId) return \n\n\n// By default the goblin should be Afraid of Elves\nlet isAfraidOfElves = true\n\n// Does the actor's excluded traits include Afraid (Elves)?\nif (this.actor.excludedTraits.includes(fearElvesTraitId)) {\n  isAfraidOfElves = false\n}\n\n// Is the goblin currently mounted on a spider?\nconst isSpiderMounted = \n  this.actor.isMounted && \n  game.actors.get(this.actor.system.status.mount.id\n    ).name.toLowerCase().includes(\"spider\")\n\n// Exit if everything is as it should be ...\nif (isSpiderMounted & !isAfraidOfElves) return\nif (!isSpiderMounted & isAfraidOfElves) return\n\n// ... otherwise toggle Afraid (Elves) depending on whether spider-mounted\nlet newExcludedTraits = duplicate(this.actor.excludedTraits);\nif (isSpiderMounted && isAfraidOfElves) {\n  console.log(\"Spider-mounted, so disabling Afraid (Elves)\")\n  newExcludedTraits.push(fearElvesTraitId);\n}\nif (!isSpiderMounted && !isAfraidOfElves) {\n  console.log(\"Not spider-mounted,so enabling Afraid (Elves)\")\n  newExcludedTraits = newExcludedTraits.filter(i => i != fearElvesTraitId)\n}\nreturn this.actor.update({\"system.excludedTraits\": newExcludedTraits});\n";
+const BORROWED_COURAGE_LEGACY = "// Spider-mounted Forest Goblins are not subject to Afraid (Elves).\n\nconsole.log(\"Running Borrowed Courage\")\n\n// Get id of Afraid (Elves) trait\nconst fearElvesTraitId = this.actor.items.filter(i => \n  i.type == \"trait\" && i.name == \"Afraid\").filter(t => \n    t.specification.value === \"Elves\")[0].id\n// Exit if not (potentially) Afraid (Elves)\nif (!fearElvesTraitId) return \n\n\n// By default the goblin should be Afraid of Elves\nlet isAfraidOfElves = true\n\n// Does the actor's excluded traits include Afraid (Elves)?\nif (this.actor.excludedTraits.includes(fearElvesTraitId)) {\n  isAfraidOfElves = false\n}\n\n// Is the goblin currently mounted on a spider?\nconst isSpiderMounted = \n  this.actor.isMounted && \n  game.actors.get(this.actor.system.status.mount.id\n    ).name.toLowerCase().includes(\"spider\")\n\n// Exit if everything is as it should be ...\nif (isSpiderMounted & !isAfraidOfElves) return\nif (!isSpiderMounted & isAfraidOfElves) return\n\n// ... otherwise toggle Afraid (Elves) depending on whether spider-mounted\nlet newExcludedTraits = duplicate(this.actor.excludedTraits);\nif (isSpiderMounted && isAfraidOfElves) {\n  console.log(\"Spider-mounted, so disabling Afraid (Elves)\")\n  newExcludedTraits.push(fearElvesTraitId);\n}\nif (!isSpiderMounted && !isAfraidOfElves) {\n  console.log(\"Not spider-mounted,so enabling Afraid (Elves)\")\n  newExcludedTraits = newExcludedTraits.filter(i => i != fearElvesTraitId)\n}\nreturn this.actor.update({\"system.excludedTraits\": newExcludedTraits});";
+const BORROWED_COURAGE_LOCALIZED = "// Spider-mounted Forest Goblins are not subject to Afraid (Elves).\nconst actor = this.actor;\nconst helpers = game.wfrp4eCorePl?.scripts;\nconst names = game.wfrp4eCorePl?.names;\nif (!actor || typeof helpers?.aliasFor !== \"function\" || typeof helpers.fragmentFor !== \"function\" || typeof names?.matches !== \"function\") return;\n\nconst fearTrait = actor.items.find(item => {\n  if (item.type !== helpers.aliasFor(\"trait\", item.type) || !names.matches(item, \"Afraid\")) return false;\n  return String(item.specification?.value || \"\") === helpers.aliasFor(\"Elves\", item.specification?.value);\n});\nif (!fearTrait) return;\n\nconst excludedTraits = Array.isArray(actor.excludedTraits) ? actor.excludedTraits : [];\nconst mountId = actor.system?.status?.mount?.id;\nconst mount = mountId ? game.actors.get(mountId) : null;\nconst mountName = String(mount?.name || \"\").toLowerCase();\nconst spiderName = String(helpers.fragmentFor(\"spider\", mountName) || \"\").toLowerCase();\nconst spiderMounted = Boolean(actor.isMounted && mountName && spiderName && mountName.includes(spiderName));\nconst currentlyExcluded = excludedTraits.includes(fearTrait.id);\n\n// Do not issue an actor update if the trait already has the desired state.\nif (currentlyExcluded === spiderMounted) return;\nconst nextExcludedTraits = spiderMounted\n  ? [...excludedTraits, fearTrait.id]\n  : excludedTraits.filter(id => id !== fearTrait.id);\nreturn actor.update({ \"system.excludedTraits\": nextExcludedTraits });\n";
+const BORROWED_COURAGE_RUNTIME = "if (game.wfrp4eCorePl?.sourceImport?.isManagedDocument(this.actor)) return;\nconst originalName = document => game.wfrp4eCorePl?.names?.original?.(document)\n    ?? document?.flags?.babele?.originalName ?? document?.name ?? \"\";\nconst fear = this.actor.items.find(item => item.type === \"trait\"\n    && (game.wfrp4eCorePl?.names?.matches?.(item, \"Afraid\") || [\"Afraid\", \"Strach\"].includes(originalName(item)))\n    && [\"Elves\", \"Elfy\", \"Elfów\"].includes(item.system?.specification?.value ?? item.specification?.value));\nif (!fear) return;\nconst mount = this.actor.isMounted ? game.actors.get(this.actor.system.status.mount.id) : null;\nconst mounted = !!mount && /spider|pająk/iu.test(originalName(mount));\nconst excluded = this.actor.excludedTraits ?? [];\nconst afraid = !excluded.includes(fear.id);\nif (mounted === !afraid) return;\nconst next = mounted ? [...excluded, fear.id] : excluded.filter(id => id !== fear.id);\nreturn this.actor.update({\"system.excludedTraits\": next});";
+export function resolveBorrowedCourageInline(source, script) {
+    if (game.system?.id !== "wfrp4e" || game.i18n?.lang !== "pl"
+        || script?.trigger !== "prepareData"
+        || script.item?.id !== "NZDmejNmPKo8eYDz" || script.effect?.id !== "SlFdmvBTyW0ZGZqG"
+        || ![BORROWED_COURAGE_SOURCE, BORROWED_COURAGE_LEGACY, BORROWED_COURAGE_LOCALIZED].some(known => normalizeSource(source) === normalizeSource(known))) return source;
+    return BORROWED_COURAGE_RUNTIME;
+}
+
+export function resolveEmbeddedRobeInline(source, script) {
+    if (game.modules?.get("wfrp4e-wom")?.version !== "8.0.0"
+        || !game.modules.get("wfrp4e-wom").active
+        || game.system?.id !== "wfrp4e" || !["10.0.3", "10.1.2"].includes(game.system.version)) return source;
+    const effect = script?.effect, item = script?.item;
+    const rule = EMBEDDED_ROBE_RULES[effect?.flags?.[MODULE_ID]?.embeddedRobeSource];
+    const names = game.wfrp4eCorePl?.names;
+    if (!rule || script.trigger !== "dialog" || item?.type !== "trapping"
+        || typeof names?.original !== "function"
+        || names.original(item) !== rule.itemName
+        || names.original(effect) !== rule.effectName
+        || normalizeSource(source) !== normalizeSource(rule.source)) return source;
+    const aliases = [effect.originalName, effect.flags?.babele?.originalName].filter(value => typeof value === "string");
+    if (aliases.some(value => value !== rule.effectName)) return source;
+    return source.replace("this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase()",
+        "game.wfrp4eCorePl.names.original(this.effect).split(\"(\")[1].split(\")\")[0].toLowerCase()");
 }
 
 export function installScriptCompatibility() {
+	installActionLinkKeyCompatibility();
 	const ScriptClass = globalThis.warhammer?.apps?.WarhammerScript;
 	const sourceScripts = game.wfrp4e?.config?.effectScripts;
 	const translations = game.wfrp4eCorePl?.scriptTranslations;
@@ -1458,16 +1687,26 @@ export function installScriptCompatibility() {
 		let source = originalHandleScriptId.call(this, reference);
 		let id = Array.from(String(reference).matchAll(/\[Script\.([a-zA-Z0-9]{16})\]/g))[0]?.[1];
 		if (!id && typeof reference === "string" && reference.length > 20) {
-			const refTrim = reference.trim();
+			const refTrim = reference.replace(/\r\n/g, "\n").trim();
 			for (const [srcId, srcCode] of Object.entries(sourceScripts)) {
-				if (srcCode && srcCode.trim() === refTrim) {
+				if (srcCode && srcCode.replace(/\r\n/g, "\n").trim() === refTrim) {
 					id = srcId;
 					source = srcCode;
 					break;
 				}
 			}
+			if (!id) {
+				if (reference.includes("yCgH3N9AurIiAv0i") || (reference.includes("ItemDialog") && reference.includes("taste") && (reference.includes("Choose Sense") || reference.includes("Wybierz Zmysł")))) {
+					id = "yCgH3N9AurIiAv0i";
+					source = sourceScripts[id] || reference;
+				} else if (reference.includes("190PHSHKGaJ74wsR") || (reference.includes("coastal") && reference.includes("deserts") && (reference.includes("Choose Terrain") || reference.includes("Wybierz Teren")))) {
+					id = "190PHSHKGaJ74wsR";
+					source = sourceScripts[id] || reference;
+				}
+			}
 		}
-		if (!id || !translations[id]) {
+		if (!id) return resolveBorrowedCourageInline(resolveEmbeddedRobeInline(source, this), this);
+		if (!translations[id]) {
 			return source;
 		}
 
@@ -1482,6 +1721,7 @@ export function installScriptCompatibility() {
 
 	Object.defineProperty(ScriptClass.prototype, PATCH_MARK, {value: true});
 	game.wfrp4eCorePl.scripts = {
+		lifebloomWoundMultiplier,
 		aliasFor,
 		display,
 		equivalent,
@@ -1506,4 +1746,7 @@ export function installScriptCompatibility() {
 
 if (globalThis.Hooks) {
 	Hooks.once("init", installScriptCompatibility);
+	Hooks.once("i18nInit", installScriptCompatibility);
+	Hooks.once("setup", installScriptCompatibility);
+	Hooks.once("ready", installScriptCompatibility);
 }
