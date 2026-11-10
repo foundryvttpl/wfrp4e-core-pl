@@ -1,4 +1,4 @@
-import {withCrewDefaultsPrompt} from './crew-defaults-compatibility.js';
+import {managedModule, runContentOperation} from './content-lifecycle.js';
 
 // Add a single bulk action to the upstream initializer without replacing its
 // template or changing how individual modules update their documents.
@@ -45,7 +45,7 @@ async function availableModules(app) {
         const module = game.modules.get(entry.key);
         const packs = module?.flags?.initializationPacks;
         return entry.installed && entry.active && entry.initialized && module?.active
-            && Array.isArray(packs) && packs.length > 0
+            && managedModule(module) && Array.isArray(packs) && packs.length > 0
             && packs.every(id => game.packs.has(id));
     });
 }
@@ -63,7 +63,6 @@ async function updateAll(app, button) {
     // multiple initializer windows. Always release it on cancel or failure.
     bulkUpdateRunning = true;
     let started = false;
-    let managed = false;
     try {
         lockControls(app.element);
         const available = await availableModules(app);
@@ -73,46 +72,16 @@ async function updateAll(app, button) {
         const modules = available.filter(entry => selection.moduleIds.includes(entry.key));
         for (const entry of modules) {
             const module = game.modules.get(entry.key);
-            if (!module?.active || !game.settings.get(entry.key, 'initialized')
+            if (!module?.active || !managedModule(module) || !game.settings.get(entry.key, 'initialized')
                 || !module.flags?.initializationPacks?.every(id => game.packs.has(id))) {
                 throw new Error(`Książka nie jest już dostępna: ${entry.title ?? entry.key}`);
             }
         }
         started = true;
         const settings = selection.settings;
-        if (game.wfrp4eCorePl?.contentLifecycle) {
-            managed = true;
-            await game.wfrp4eCorePl.contentLifecycle.run(modules.map(entry => ({
-                module: game.modules.get(entry.key), mode: 'update', settings: {...settings}
-            })), message => {button.textContent = message;});
-            return;
-        }
-        let completed = 0;
-        const failed = [];
-        await withCrewDefaultsPrompt(async () => {
-            for (const [index, entry] of modules.entries()) {
-                const module = game.modules.get(entry.key);
-                button.textContent = game.i18n.format('WH.Initializer.BulkUpdate.Progress', {
-                    current: index + 1, total: modules.length, title: entry.title
-            });
-            try {
-                // Recheck availability in case a preceding update changed it.
-                if (!module?.active || !game.settings.get(entry.key, 'initialized')
-                    || !module.flags.initializationPacks.every(id => game.packs.has(id))) {
-                    throw new Error(`Module no longer available: ${entry.key}`);
-                }
-                await new WarhammerModuleContentHandler(module).update({...settings});
-                completed++;
-            } catch (error) {
-                failed.push(entry.title);
-                console.error(`WFRP PL | Bulk content update failed: ${entry.key}`, error);
-            }
-        }
-        });
-        ui.notifications[failed.length ? 'warn' : 'info'](game.i18n.format(
-            'WH.Initializer.BulkUpdate.Complete', {completed, total: modules.length}
-        ));
-        if (failed.length) ui.notifications.error(`${text('Failed')} ${failed.join(', ')}`);
+        await runContentOperation(modules.map(entry => ({
+            module: game.modules.get(entry.key), mode: 'update', settings: {...settings}
+        })), message => {button.textContent = message;});
     } catch (error) {
         console.error('WFRP PL | Bulk content update failed', error);
         ui.notifications.error(error.message || text('Error'), {permanent: true});
@@ -121,13 +90,6 @@ async function updateAll(app, button) {
         for (const [control, disabled] of lockedButtons) control.disabled = disabled;
         lockedButtons.clear();
         button.textContent = text('Label');
-        if (started && !managed) {
-            try {
-                await game.wfrp4eCorePl?.contentOrganization?.organize();
-            } catch (error) {
-                console.error('WFRP PL | Could not organize updated content', error);
-            }
-        }
         if (started && app.rendered) app.render();
     }
 }

@@ -158,6 +158,23 @@ export function legacySources(actor, records) {
         const source = actorSource(item._stats?.compendiumSource ?? item.flags?.core?.sourceId);
         if (source && records.some(r => r.uuid === source.uuid && r.data.items?.some(i => i._id === item._id))) result.add(source.uuid);
     }
+    // Older initializers kept the 16-character compendium ID without any
+    // source flag, or with a source in a since renamed pack (e.g.
+    // wfrp4e-dotr.dotr-actors). Such an ID only comes from those books. Books
+    // copy each other's source metadata, so the Polish name decides first,
+    // then the original name, then the book of the old source path.
+    if (!result.size) {
+        const same = records.filter(r => r.originalId === actor._id);
+        const translated = same.filter(r => [r.baseName, r.data?.name].includes(actor.name));
+        const original = same.filter(r => [r.raw?.name, r.data?.flags?.babele?.originalName]
+            .includes(actor.flags?.babele?.originalName ?? actor.name));
+        const modules = new Set([actor._stats?.compendiumSource, actor.flags?.core?.sourceId]
+            .map(uuid => actorSource(uuid)).filter(source => source?.id === actor._id).map(source => source.module));
+        const book = same.filter(r => modules.has(r.module));
+        const chosen = [translated, original, book].find(list => list.length === 1)
+            ?? (translated.length ? translated : original.length ? original : same.length === 1 ? same : []);
+        for (const record of chosen) result.add(record.uuid);
+    }
     return result;
 }
 

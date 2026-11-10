@@ -92,8 +92,16 @@ export function documentPatch(document, incoming, snapshot = document.toObject()
     return Object.keys(patch).length ? patch : null;
 }
 
+// A type from an inactive package cannot be written. Foundry keeps such a
+// child only in the parent's source, outside the collection: never recreate it.
+export function unsupportedChild(collection, type, child) {
+    if (collection.invalidDocumentIds?.has(child._id)) return true;
+    const types = globalThis.game?.documentTypes?.[type];
+    return typeof child.type === 'string' && Array.isArray(types) && !types.includes(child.type);
+}
+
 export function documentChanges(document, incoming, snapshot = document.toObject()) {
-    const patch = documentPatch(document, incoming, snapshot), collections = [];
+    const patch = documentPatch(document, incoming, snapshot), collections = [], kept = [];
     for (const [type, field] of Object.entries(document.constructor.metadata?.embedded ?? {})) {
         if (type === 'ActorDelta' || (!Array.isArray(incoming[field]) && !Array.isArray(document[field]?.contents))) continue;
         const target = incoming[field] ?? [], existing = document.getEmbeddedCollection(type);
@@ -103,15 +111,18 @@ export function documentChanges(document, incoming, snapshot = document.toObject
         const create = [], update = [];
         for (const child of target) {
             const present = existing.get(child._id);
-            if (!present) create.push(copyUpdate(child));
+            if (unsupportedChild(existing, type, child)) {
+                if (!equal(old.get(child._id), child)) kept.push({name: child.name ?? child._id, type: child.type});
+            } else if (!present) create.push(copyUpdate(child));
             else {
                 const changes = documentChanges(present, child, old.get(child._id) ?? present.toObject());
                 if (changes.changed) update.push({id: child._id, changes});
+                kept.push(...changes.kept);
             }
         }
         if (remove.length || create.length || update.length) collections.push({type, remove, create, update});
     }
-    return {patch, collections, changed: !!patch || !!collections.length};
+    return {patch, collections, kept, changed: !!patch || !!collections.length};
 }
 
 export function changeCounts(changes) {

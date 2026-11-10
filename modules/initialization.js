@@ -130,13 +130,13 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization
             }
             // Jeden zbiorczy komunikat na paczkę zamiast komunikatu o każdym dokumencie.
             const createdCount = documents.filter(document => !target[0].has(document.id)).length;
-            this._wfrp4eCorePlUpdatedCount = 0;
+            const existingCount = documents.length - createdCount;
             await this.createOrUpdateDocuments(documents, target[0]);
             ui.notifications.info(game.i18n.format("WH.Initialization.PackSummary", {
                 module: premiumModuleTitle(this.module.id, this.module.title),
                 type: game.i18n.localize(target[0].documentClass.metadata.labelPlural),
                 created: createdCount,
-                updated: this._wfrp4eCorePlUpdatedCount,
+                updated: existingCount,
             }));
             const missingDocumentIds = documents
                 .map(document => document.id)
@@ -152,34 +152,6 @@ if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization
         return true;
     };
     WarhammerModuleContentHandler.prototype._wfrp4eCorePlFailFastInitialization = true;
-}
-
-// warhammer-lib wysyła na sztywno angielskie "Updated existing document {name}"
-// dla każdego dokumentu. Wyciszamy je i tylko zliczamy; podsumowanie pokazuje initialize().
-// Musi być zdefiniowane przed nakładkami createOrUpdateDocuments niżej,
-// bo każda z nich zapamiętuje wcześniejszą wersję metody.
-if (!WarhammerModuleContentHandler.prototype._wfrp4eCorePlLocalizedUpdateNotice) {
-    const baseCreateOrUpdateDocuments = WarhammerModuleContentHandler.prototype.createOrUpdateDocuments;
-    WarhammerModuleContentHandler.prototype.createOrUpdateDocuments = async function(...args) {
-        const handler = this;
-        const notifications = ui.notifications;
-        const notify = notifications.notify;
-        notifications.notify = function(message, ...rest) {
-            const match = typeof message === "string" && message.match(/^Updated existing document (.*)$/s);
-            if (match) {
-                handler._wfrp4eCorePlUpdatedCount = (handler._wfrp4eCorePlUpdatedCount ?? 0) + 1;
-                return;
-            }
-            return notify.call(this, message, ...rest);
-        };
-        try {
-            return await baseCreateOrUpdateDocuments.apply(this, args);
-        }
-        finally {
-            notifications.notify = notify;
-        }
-    };
-    WarhammerModuleContentHandler.prototype._wfrp4eCorePlLocalizedUpdateNotice = true;
 }
 
 function normalizeFolderName(name) {
