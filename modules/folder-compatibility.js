@@ -45,9 +45,8 @@ export function initFolderCompatibility() {
     }
 
     // --- 2. Helper Functions for Folder Translation ---
-    function findSourceCollectionForFolder(folder, visited = new Set()) {
-        if (!folder || visited.has(folder.id)) return null;
-        visited.add(folder.id);
+    function findSourceCollectionForFolder(folder) {
+        if (!folder) return null;
 
         // A. Direct sourceId on folder
         const directSourceId = folder._stats?.compendiumSource ?? folder.flags?.core?.sourceId;
@@ -64,35 +63,6 @@ export function initFolderCompatibility() {
                 if (pack.folders?.has(folderId)) {
                     return pack.collection;
                 }
-            }
-        }
-
-        // C. Direct contents of the folder
-        for (const entry of folder.contents ?? []) {
-            const sourceId = entry._stats?.compendiumSource ?? entry.flags?.core?.sourceId;
-            if (sourceId) {
-                const match = String(sourceId).match(/^Compendium\.([^.]+\.[^.]+)\./);
-                if (match) return match[1];
-            }
-        }
-
-        // D. Recursive check on child folders (subfolders)
-        const allFolders = game.folders ?? game.collections?.get("Folder");
-        if (allFolders && folderId) {
-            const children = allFolders.filter(f => (f.folder?.id === folderId || f.folder === folderId));
-            for (const child of children) {
-                const col = findSourceCollectionForFolder(child, visited);
-                if (col) return col;
-            }
-        }
-
-        // E. Check parent folder in world
-        const parentId = folder.folder?.id ?? folder.folder;
-        if (parentId && allFolders) {
-            const parent = allFolders.get(parentId);
-            if (parent && !visited.has(parent.id)) {
-                const col = findSourceCollectionForFolder(parent, visited);
-                if (col) return col;
             }
         }
 
@@ -136,48 +106,13 @@ export function initFolderCompatibility() {
             }
         }
 
-        // 2. Check all _packs-folders translations in Babele
-        const allTranslations = game.babele?.folderTranslations?._packFolderTranslations?.()?.allTranslations?.()
-            ?? game.babele?._session?.packFolderTranslations?.allTranslations?.();
-        if (allTranslations?.[originalName]) {
-            return allTranslations[originalName];
-        }
-
-        // 3. Search all game.packs for a folder matching originalName
-        if (game.packs) {
-            for (const pack of game.packs) {
-                if (!pack.folders?.size) continue;
-                for (const pf of pack.folders) {
-                    if (pf.originalName === originalName && pf.name && pf.name !== originalName) {
-                        return pf.name;
-                    }
-                }
-            }
-        }
-
         return null;
-    }
-
-    function renderSidebarTab(type) {
-        const tabMap = {
-            Item: "items",
-            RollTable: "tables",
-            Actor: "actors",
-            Scene: "scenes",
-            JournalEntry: "journal"
-        };
-        const tabName = tabMap[type] || (type ? type.toLowerCase() : null);
-        if (!tabName) return;
-        const tab = ui.sidebar?.tabs?.[tabName];
-        if (tab?.rendered) {
-            tab.render();
-        }
     }
 
     // --- 3. Pre-Creation Hook (Database Persistence) ---
     Hooks.on("preCreateFolder", (folder, data, options, userId) => {
         // Only handle world folders (pack is falsy or null)
-        if (folder.pack) return;
+        if (game.i18n?.lang !== "pl" || folder.pack || options?.wfrp4eContentLifecycle) return;
 
         const collection = findSourceCollectionForFolder(folder);
         const originalName = folder.name || data?.name;
@@ -191,46 +126,9 @@ export function initFolderCompatibility() {
         }
     });
 
-    // --- 4. Runtime Tree Translation & UI Refresh (F5 / Existing Worlds) ---
-    function translateWorldFolderTree() {
-        const allFolders = game.folders ?? game.collections?.get("Folder");
-        if (!allFolders?.size) return;
-
-        let anyChanged = false;
-        const changedTypes = new Set();
-
-        allFolders.forEach((folder) => {
-            const originalName = folder.originalName ?? folder.name;
-            const collection = findSourceCollectionForFolder(folder);
-            const translatedName = getTranslatedFolderName(originalName, collection);
-
-            if (translatedName && translatedName !== folder.name) {
-                folder.originalName = originalName;
-                folder.name = translatedName;
-                anyChanged = true;
-                if (folder.type) changedTypes.add(folder.type);
-            }
-        });
-
-        if (anyChanged) {
-            for (const type of changedTypes) {
-                renderSidebarTab(type);
-            }
-        }
-    }
-
-    // Execute translation on babele.ready and standard ready
-    Hooks.on("babele.ready", () => {
-        translateWorldFolderTree();
-    });
-
-    Hooks.once("ready", () => {
-        // Fallback in case babele.ready already fired or was skipped
-        setTimeout(() => translateWorldFolderTree(), 100);
-    });
-
     // --- 5. Compendium Window Folder Translation ---
     function translateCompendiumApp(app, html) {
+        if (game.i18n?.lang !== "pl") return;
         const pack = app?.collection ?? (typeof app?.metadata?.id === "string" ? app : null);
         if (!pack) return;
 

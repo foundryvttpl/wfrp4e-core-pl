@@ -1,3 +1,5 @@
+export class SourceCatalogUnavailableError extends Error {}
+
 const catalogs = new Map();
 
 async function hasLocalCatalog(pack) {
@@ -30,14 +32,20 @@ export async function localizedSourceData(pack, document, context = null) {
     const data = document.toObject();
     const mapped = babele.translatedCompendiumFor(pack.collection);
     if (!mapped) {
-        if (await hasLocalCatalog(pack)) throw new Error(`Nie wczytano polskiego tłumaczenia paczki ${pack.collection}. Przeładuj Foundry przed ponowieniem.`);
+        let available;
+        try {available = await hasLocalCatalog(pack);}
+        catch (error) {
+            catalogs.delete(pack.collection);
+            throw new SourceCatalogUnavailableError(`Nie można sprawdzić polskiego tłumaczenia paczki ${pack.collection}.`, {cause: error});
+        }
+        if (available) throw new SourceCatalogUnavailableError(`Nie wczytano polskiego tłumaczenia paczki ${pack.collection}. Przeładuj Foundry przed ponowieniem.`);
         return data;
     }
     // The public API is idempotent for already translated documents. Explicitly
     // invoke it here as well as through Babele's normal database wrapper.
     const translated = babele.translate(pack.collection, structuredClone(data));
     if (!translated || (mapped.hasTranslation(data) && translated.flags?.babele?.lang !== 'pl')) {
-        throw new Error(`Nie udało się przetłumaczyć „${data.name}” (${pack.collection}). Aktualizacja została zatrzymana przed zapisem.`);
+        throw new Error(`Nie udało się przetłumaczyć „${data.name}” (${pack.collection}).`);
     }
     return structuredClone(translated);
 }

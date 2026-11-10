@@ -1,15 +1,16 @@
-import {documentPatch, documentChanges, copyUpdate, changeCounts} from './content-diff.js';
+import {documentPatch, documentChanges, unsupportedChild, copyUpdate, changeCounts} from './content-diff.js';
 import {encodeSnapshot, decodeSnapshot, MAX_SNAPSHOT_CHARACTERS} from './content-snapshot-codec.js';
 import {sourceReadContext} from './content-source-reader.js';
 import {hasActorReference} from './content-reference-scan.js';
 import {SCOPE, clone, values, variantFlag, sourceFlag, actorSource, publicationFor,
     choosePrimary, faithfulActor, comparable, digest, legacySources, displayName,
     referenceMaps, rewriteReferences, unscopedActorIds} from './actor-variants-core.js';
-import {localizedSourceData, nativeSourceData} from './content-localization.js';
+import {localizedSourceData, nativeSourceData, SourceCatalogUnavailableError} from './content-localization.js';
 import './v14-migration-compatibility.js';
 import {withSourceActorContext, withSourceSceneContext, automaticActorValues} from './source-import-compatibility.js';
-import {inspectDocumentWrite, inspectionHtml} from './content-plan-diagnostics.js';
+import {inspectDocumentWrite, inspectionHtml, problemsHtml} from './content-plan-diagnostics.js';
 import {automaticActorBaseline, actorBaselineValues, automaticActorNoop, keepAutomaticEffects, keepWorldWounds} from './content-actor-baseline.js';
+import {applySceneMapCorrections} from './scene-map-compatibility.js';
 import {sceneDigest, automaticSceneChange, keepAutomaticTokenValues} from './content-scene-data.js';
 
 const KEY = 'contentLifecycle';
@@ -27,6 +28,7 @@ let writingActors = false;
 let operationStatus = null;
 let lastOperation = null;
 let lastInspection = null;
+let lastProblems = [];
 
 function operationProgress(callback) {
     const started = Date.now();
@@ -81,7 +83,7 @@ const packLabel = pack => {
     const module = game.modules.get(moduleOf(pack));
     return module ? moduleLabel(module) : pack.metadata?.label ?? 'zawartość modułu';
 };
-const managedModule = module => enabled() && module?.id?.startsWith('wfrp4e-')
+export const managedModule = module => enabled() && module?.id?.startsWith('wfrp4e-')
     && (module.protected || Object.hasOwn(game.wfrp4e?.config?.premiumModules ?? {}, module.id));
 function initialized(id) {try {return !!game.settings.get(id, 'initialized');} catch {return false;}}
 function documentModule(document) {
@@ -196,43 +198,73 @@ async function readSnapshot(pointer) {
 
 function packsFor(module) {
     const declared = (module.flags?.initializationPacks ?? []).map(id => game.packs.get(id));
-    if (declared.some(pack => !pack)) throw new Error(`Brakuje paczki inicjalizacji modułu ${module.title}.`);
     // Actors can be imported lazily by journals; some modules also omit Macros
     // from initializationPacks. Both still need the same lifecycle and IDs.
-    return [...new Set([...declared, ...values(game.packs).filter(pack =>
+    return [...new Set([...declared.filter(Boolean), ...values(game.packs).filter(pack =>
         moduleOf(pack) === module.id && ['Actor', 'Macro'].includes(pack.documentName))])];
 }
 function sourceUuid(pack, data, type) {return `Compendium.${pack.collection}.${type}.${data._id}`;}
 function nativeData(data, pack, type) {
     return nativeSourceData(pack, type, data);
 }
-async function actorRecords(pack, rules, ids, progress, packIndex, packCount, sources, index, reuse) {
+// An update skips a faulty source and reports it; null problems abort as before.
+function noteProblem(problems, problem, error) {
+    if (!problems || error instanceof SourceCatalogUnavailableError) throw error;
+    console.error(`WFRP PL | Pominięto „${problem.name}”`, error);
+    problems.push({...problem, reason: error?.message ?? String(error)});
+}
+
+// A failed batch is read again one by one, to skip only the faulty document.
+async function readDocuments(sources, pack, ids, optionsFor, failed) {
+    try {return await sources.read(pack, ids, optionsFor(ids));}
+    catch (error) {
+        if (!failed) throw error;
+        if (ids.length === 1) {failed(ids[0], error); return [];}
+        const documents = [];
+        for (const id of ids) documents.push(...await readDocuments(sources, pack, [id], optionsFor, failed));
+        return documents;
+    }
+}
+
+async function actorRecords(pack, rules, ids, progress, packIndex, packCount, sources, index, reuse, failed) {
     const folders = values(pack.folders).map(f => f.toObject());
-    const records = [];
+    const records = [], lost = new Set();
+    const fail = failed && ((id, name, error) => {lost.add(id); failed(id, name, error);});
     for (let offset = 0; offset < ids.length; offset += 8) {
         await progress(`Wczytywanie aktorów: ${packLabel(pack)} (${offset}/${ids.length})`,
             0.1 + 0.2 * (packIndex + offset / ids.length) / Math.max(packCount, 1), true);
         // Foundry 14's supported _id__in operator limits both database results
         // and Babele/Actor construction to these exact source variants.
-        const docs = await sources.read(pack, ids.slice(offset, offset + 8), {index, reuse});
+        const docs = await readDocuments(sources, pack, ids.slice(offset, offset + 8), () => ({index, reuse}),
+            fail && ((id, error) => fail(id, index?.get(id)?.name ?? id, error)));
         for (const document of docs) {
-            if (!ids.includes(document.id)) throw new Error(`Paczka ${pack.collection} zwróciła niewłaściwego aktora.`);
-            const translated = await localizedSourceData(pack, document, sources);
-            const original = nativeData(translated, pack, 'Actor');
-            const data = faithfulActor(original, translated);
-            records.push({uuid: sourceUuid(pack, data, 'Actor'), module: moduleOf(pack), pack: pack.collection,
-                originalId: data._id, sourceFolder: data.folder, data, raw: original,
-                sourceRevision: await sources.sourceRevision?.(index?.get(document.id)),
-                baseName: data.name, publication: publicationFor(moduleOf(pack), data.folder, folders, rules)});
+            try {
+                if (!ids.includes(document.id)) throw new Error(`Paczka ${pack.collection} zwróciła niewłaściwego aktora.`);
+                const translated = await localizedSourceData(pack, document, sources);
+                const original = nativeData(translated, pack, 'Actor');
+                const data = faithfulActor(original, translated);
+                records.push({uuid: sourceUuid(pack, data, 'Actor'), module: moduleOf(pack), pack: pack.collection,
+                    originalId: data._id, sourceFolder: data.folder, data, raw: original,
+                    sourceRevision: await sources.sourceRevision?.(index?.get(document.id)),
+                    baseName: data.name, publication: publicationFor(moduleOf(pack), data.folder, folders, rules)});
+            } catch (error) {
+                if (!fail) throw error;
+                fail(document.id, document.name, error);
+            }
             await progress(`Przygotowywanie aktorów: ${packLabel(pack)} (${records.length}/${ids.length})`,
                 0.1 + 0.2 * (packIndex + records.length / ids.length) / Math.max(packCount, 1));
         }
     }
-    if (records.length !== ids.length) throw new Error(`Nie wczytano wszystkich wymaganych aktorów z ${pack.collection}.`);
+    const missing = ids.filter(id => !lost.has(id) && !records.some(record => record.originalId === id));
+    if (missing.length) {
+        const error = new Error(`Nie wczytano wszystkich wymaganych aktorów z ${pack.collection}.`);
+        if (!fail) throw error;
+        for (const id of missing) fail(id, index?.get(id)?.name ?? id, error);
+    }
     return records;
 }
 
-async function readCatalog(requests, state, rules, progress, sources) {
+async function readCatalog(requests, state, rules, progress, sources, problems) {
     const deleted = new Set(requests.filter(r => r.mode === 'delete').map(r => r.module.id));
     const reimported = new Set(requests.filter(r => r.mode !== 'delete').map(r => r.module.id));
     const excluded = new Set([...Object.keys(state.excludedModules).filter(id => state.excludedModules[id]
@@ -242,7 +274,7 @@ async function readCatalog(requests, state, rules, progress, sources) {
     const packs = [];
     const wantedIds = new Set();
     for (const actor of values(game.actors)) if (deleted.has(sourceFlag(actor))) wantedIds.add(variantFlag(actor)?.originalId ?? actor.id);
-    const records = new Map(), removedRecords = new Map(), protectedRecords = [];
+    const records = new Map(), removedRecords = new Map(), protectedRecords = [], failedIds = new Set();
     for (const {module} of actorRequests) {
         if (!managedModule(module) || !module.active) continue;
         for (const pack of actorPacks.filter(pack => moduleOf(pack) === module.id)) {
@@ -262,8 +294,14 @@ async function readCatalog(requests, state, rules, progress, sources) {
     for (const {module, pack} of packs) {
         const request = actorRequests.find(r => r.module.id === module.id);
         if (!request) continue;
-        for (const entry of await indexFor(pack)) {
-            if (!request.actorIds || request.actorIds.includes(entry._id)) wantedIds.add(entry._id);
+        try {
+            for (const entry of await indexFor(pack)) {
+                if (!request.actorIds || request.actorIds.includes(entry._id)) wantedIds.add(entry._id);
+            }
+        } catch (error) {
+            // An unreadable index cannot tell us which families overlap with other books.
+            noteProblem(problems, {type: 'Actor', id: pack.collection, name: packLabel(pack), modules: [module.id]}, error);
+            return {records, removedRecords, protectedRecords, deleted, failedIds};
         }
     }
     // An update reads only Actors whose prepared source may differ from the
@@ -291,7 +329,11 @@ async function readCatalog(requests, state, rules, progress, sources) {
         }
         if (ids.length) {
             const reuse = id => request.mode === 'update' && !!game.actors.get(state.variants[sourceUuid(pack, {_id: id}, 'Actor')]?.worldId);
-            for (const record of await actorRecords(pack, rules, ids, progress, packIndex, packs.length, sources, index, reuse)) {
+            const failed = problems && ((id, name, error) => {
+                failedIds.add(id);
+                noteProblem(problems, {type: 'Actor', id, name, modules: [module.id]}, error);
+            });
+            for (const record of await actorRecords(pack, rules, ids, progress, packIndex, packs.length, sources, index, reuse, failed)) {
                 records.set(record.uuid, record);
             }
         }
@@ -314,6 +356,12 @@ async function readCatalog(requests, state, rules, progress, sources) {
             && (!source || source.module !== sourceFlag(actor))) {
             const ownPacks = actorPacks.filter(pack => moduleOf(pack) === sourceFlag(actor));
             source = ownPacks.length === 1 ? actorSource(`Compendium.${ownPacks[0].collection}.Actor.${actor.id}`) : null;
+        }
+        // Books renamed their packs (e.g. wfrp4e-dotr.dotr-actors → actors).
+        // An old pack name is the same source, not a second one.
+        if (source && !game.packs.get(source.pack)) {
+            const ownPacks = actorPacks.filter(pack => moduleOf(pack) === source.module);
+            source = ownPacks.length === 1 ? actorSource(`Compendium.${ownPacks[0].collection}.Actor.${source.id}`) : null;
         }
         if (!source || !wantedIds.has(source.id) || records.has(source.uuid)) continue;
         if (!flag && !rules.modules[source.module] && !managedModule(game.modules.get(source.module))) continue;
@@ -387,7 +435,7 @@ async function readCatalog(requests, state, rules, progress, sources) {
             }
         }
     }
-    return {records, removedRecords, protectedRecords, deleted};
+    return {records, removedRecords, protectedRecords, deleted, failedIds};
 }
 
 function protectedActor(actor) {
@@ -413,7 +461,87 @@ function folderModule(id) {
     return null;
 }
 
-async function buildActorPlan(requests, state, catalog, progress) {
+// Plans one Actor family into `family`. Nothing reaches the operation or the
+// registry until the whole family succeeds, so a failure can skip it cleanly.
+async function planActorFamily(originalId, candidates, family, {state, catalog, wanted, usedIds, skipped}) {
+    const available = candidates.filter(record => !record.retained && !record.unavailable);
+    // With no eligible source there is no primary. Used removed variants
+    // survive under their stable secondary IDs until explicitly imported.
+    const primary = available.length ? choosePrimary(available) : {uuid: null};
+    const original = game.actors.get(originalId);
+    const knownCandidates = [...candidates, ...[...catalog.removedRecords.values()].filter(r => r.originalId === originalId)];
+    let owners = original ? knownOwner(original, knownCandidates) : new Set();
+    // On source removal, its old flag is still evidence of its identity.
+    if (original && !owners.size && catalog.deleted.has(sourceFlag(original))) {
+        const source = actorSource(original._stats?.compendiumSource ?? original.flags?.core?.sourceId);
+        if (source) owners.add(source.uuid);
+        else if (variantFlag(original)) owners.add(variantFlag(original).sourceUuid);
+    }
+    if (original && protectedActor(original)) {
+        skipped.push(original.name);
+        return;
+    }
+    if (original && !owners.size) {
+        throw new Error(`Nie można przejąć ID aktora „${original.name}”: brak potwierdzonego źródła.`);
+    }
+    if (owners.size === 1) family.bindings.set(originalId, [...owners][0]);
+    family.ambiguous = owners.size > 1;
+    for (const record of candidates) {
+        const previous = state.variants[record.uuid];
+        let current = previous ? game.actors.get(previous.worldId) : null;
+        if (current && variantFlag(current)?.sourceUuid !== record.uuid) current = null;
+        if (!current && original && owners.size === 1 && owners.has(record.uuid)) current = original;
+        let worldId = originalId;
+        if (record.uuid !== primary.uuid) {
+            worldId = state.aliases[record.uuid];
+            if (!worldId || (game.actors.has(worldId) && variantFlag(game.actors.get(worldId))?.sourceUuid !== record.uuid)) {
+                let salt = 0;
+                do {worldId = (await digest(`${SCOPE}:${record.uuid}:${salt++}`)).slice(0, 16);} while (usedIds.has(worldId));
+                family.aliases.set(record.uuid, worldId);
+            }
+        }
+        usedIds.add(worldId);
+        // The same check as before the write, so it can skip the whole family.
+        for (const actor of [current, game.actors.get(worldId)]) {
+            if (actor && protectedActor(actor)) throw new Error(`Aktor „${actor.name}” jest postacią gracza lub uczestniczy w walce.`);
+        }
+        // Snapshot placement before any writes: the old primary's live
+        // Document may later become the newer primary under the same ID.
+        const currentFolder = current?.folder?.id ?? current?.folder ?? null;
+        const canRestoreFolder = !!game.packs.get(record.pack) || game.folders.has(record.sourceFolder);
+        const currentFolderModule = folderModule(currentFolder);
+        const foreignFolder = currentFolderModule && currentFolderModule !== record.module;
+        const preserveFolder = !!current && (!canRestoreFolder
+            || (record.uuid === primary.uuid && worldId === current.id && !foreignFolder));
+        const refresh = wanted.has(record.module) || !current || !variantFlag(current);
+        const data = refresh ? {...record.data, flags: {...record.data.flags}} : dataOf(current);
+        const baseName = refresh ? record.baseName : variantFlag(current).baseName;
+        data._id = worldId;
+        data.name = displayName({...record, baseName}, primary);
+        data.flags ??= {};
+        data.flags['warhammer-lib'] = {...data.flags['warhammer-lib'], source: record.module};
+        data.flags.core = {...data.flags.core, sourceId: record.uuid};
+        data._stats = {...data._stats, compendiumSource: record.uuid};
+        data.flags[SCOPE] = {...data.flags[SCOPE], nameAliases: [...new Set([
+            ...(current?.flags?.[SCOPE]?.nameAliases ?? []), baseName, data.flags.babele?.originalName, record.raw?.name
+        ].filter(Boolean))], actorVariant: {sourceUuid: record.uuid, originalId, module: record.module,
+            baseName, publicationKey: record.publication?.key ?? null, sourceFolder: record.sourceFolder,
+            role: record.uuid === primary.uuid ? 'primary' : 'secondary', retained: !!record.retained, schema: 1}};
+        family.assignments.push({...record, worldId, referenceNames: [...data.flags[SCOPE].nameAliases, current?.name].filter(Boolean)});
+        family.plans.push({type: 'Actor', id: worldId, data, raw: record.raw, record, current,
+            sourceFolder: record.sourceFolder, preserveFolder, currentFolder,
+            ownership: current?.ownership ?? original?.ownership,
+            mixed: !!original && owners.size > 1, refresh});
+        if (current) family.bindings.set(current.id, record.uuid);
+    }
+    const worldIds = new Map();
+    for (const {module, worldId} of family.assignments) {
+        if (worldIds.has(module) && worldIds.get(module) !== worldId) throw new Error(`Kilka źródeł aktora ${originalId} w tym samym module.`);
+        worldIds.set(module, worldId);
+    }
+}
+
+async function buildActorPlan(requests, state, catalog, progress, problems) {
     const wanted = new Set(requests.filter(r => r.mode !== 'delete' && r.settings.actors).map(r => r.module.id));
     const touched = new Set();
     for (const record of catalog.records.values()) if (wanted.has(record.module)
@@ -431,83 +559,46 @@ async function buildActorPlan(requests, state, catalog, progress) {
     const ambiguities = new Set();
     const usedIds = new Set(values(game.actors).map(idOf));
     const skipped = [];
+    const frozen = new Map();
     for (const [originalId, candidates] of groups) {
         if (!touched.has(originalId)) continue;
         await progress('Planowanie wariantów aktorów…', 0.31);
-        const available = candidates.filter(record => !record.retained && !record.unavailable);
-        // With no eligible source there is no primary. Used removed variants
-        // survive under their stable secondary IDs until explicitly imported.
-        const primary = available.length ? choosePrimary(available) : {uuid: null};
-        const original = game.actors.get(originalId);
-        const knownCandidates = [...candidates, ...[...catalog.removedRecords.values()].filter(r => r.originalId === originalId)];
-        let owners = original ? knownOwner(original, knownCandidates) : new Set();
-        // On source removal, its old flag is still evidence of its identity.
-        if (original && !owners.size && catalog.deleted.has(sourceFlag(original))) {
-            const source = actorSource(original._stats?.compendiumSource ?? original.flags?.core?.sourceId);
-            if (source) owners.add(source.uuid);
-            else if (variantFlag(original)) owners.add(variantFlag(original).sourceUuid);
-        }
-        if (original && protectedActor(original)) {
-            skipped.push(original.name);
+        if (catalog.failedIds.has(originalId)) {
+            frozen.set(originalId, candidates);
+            touched.delete(originalId);
             continue;
         }
-        if (original && !owners.size) {
-            throw new Error(`Nie można przejąć ID aktora „${original.name}”: brak potwierdzonego źródła.`);
+        const family = {plans: [], assignments: [], bindings: new Map(), aliases: new Map(), ambiguous: false};
+        try {
+            await planActorFamily(originalId, candidates, family, {state, catalog, wanted, usedIds, skipped});
+        } catch (error) {
+            noteProblem(problems, {type: 'Actor', id: originalId, name: game.actors.get(originalId)?.name ?? candidates[0].baseName,
+                modules: [...new Set(candidates.map(record => record.module))]}, error);
+            frozen.set(originalId, candidates);
+            touched.delete(originalId);
+            continue;
         }
-        if (owners.size === 1) oldBindings.set(originalId, [...owners][0]);
-        else if (owners.size > 1) ambiguities.add(originalId);
-        for (const record of candidates) {
-            const previous = state.variants[record.uuid];
-            let current = previous ? game.actors.get(previous.worldId) : null;
-            if (current && variantFlag(current)?.sourceUuid !== record.uuid) current = null;
-            if (!current && original && owners.size === 1 && owners.has(record.uuid)) current = original;
-            let worldId = originalId;
-            if (record.uuid !== primary.uuid) {
-                worldId = state.aliases[record.uuid];
-                if (!worldId || (game.actors.has(worldId) && variantFlag(game.actors.get(worldId))?.sourceUuid !== record.uuid)) {
-                    let salt = 0;
-                    do {worldId = (await digest(`${SCOPE}:${record.uuid}:${salt++}`)).slice(0, 16);} while (usedIds.has(worldId));
-                    state.aliases[record.uuid] = worldId;
-                }
-            }
-            usedIds.add(worldId);
-            if (current && protectedActor(current)) throw new Error(`Aktor „${current.name}” jest postacią gracza lub uczestniczy w walce.`);
-            // Snapshot placement before any writes: the old primary's live
-            // Document may later become the newer primary under the same ID.
-            const currentFolder = current?.folder?.id ?? current?.folder ?? null;
-            const canRestoreFolder = !!game.packs.get(record.pack) || game.folders.has(record.sourceFolder);
-            const currentFolderModule = folderModule(currentFolder);
-            const foreignFolder = currentFolderModule && currentFolderModule !== record.module;
-            const preserveFolder = !!current && (!canRestoreFolder
-                || (record.uuid === primary.uuid && worldId === current.id && !foreignFolder));
-            const refresh = wanted.has(record.module) || !current || !variantFlag(current);
-            const data = refresh ? {...record.data, flags: {...record.data.flags}} : dataOf(current);
-            const baseName = refresh ? record.baseName : variantFlag(current).baseName;
-            data._id = worldId;
-            data.name = displayName({...record, baseName}, primary);
-            data.flags ??= {};
-            data.flags['warhammer-lib'] = {...data.flags['warhammer-lib'], source: record.module};
-            data.flags.core = {...data.flags.core, sourceId: record.uuid};
-            data._stats = {...data._stats, compendiumSource: record.uuid};
-            data.flags[SCOPE] = {...data.flags[SCOPE], nameAliases: [...new Set([
-                ...(current?.flags?.[SCOPE]?.nameAliases ?? []), baseName, data.flags.babele?.originalName, record.raw?.name
-            ].filter(Boolean))], actorVariant: {sourceUuid: record.uuid, originalId, module: record.module,
-                baseName, publicationKey: record.publication?.key ?? null, sourceFolder: record.sourceFolder,
-                role: record.uuid === primary.uuid ? 'primary' : 'secondary', retained: !!record.retained, schema: 1}};
-            assignments.push({...record, worldId, referenceNames: [...data.flags[SCOPE].nameAliases, current?.name].filter(Boolean)});
-            plans.push({type: 'Actor', id: worldId, data, raw: record.raw, record, current,
-                sourceFolder: record.sourceFolder, preserveFolder, currentFolder,
-                ownership: current?.ownership ?? original?.ownership,
-                mixed: !!original && owners.size > 1, refresh});
-            if (current) oldBindings.set(current.id, record.uuid);
-        }
+        plans.push(...family.plans);
+        assignments.push(...family.assignments);
+        for (const [id, uuid] of family.bindings) oldBindings.set(id, uuid);
+        for (const [uuid, id] of family.aliases) state.aliases[uuid] = id;
+        if (family.ambiguous) ambiguities.add(originalId);
     }
     // Unaffected variants still participate in cross-book reference resolution.
     for (const [uuid, entry] of Object.entries(state.variants)) {
         if (touched.has(entry.originalId) || catalog.deleted.has(entry.module)) continue;
         if (!game.actors.has(entry.worldId)) continue;
+        if (frozen.has(entry.originalId) && assignments.some(record => record.module === entry.module && record.originalId === entry.originalId)) continue;
         assignments.push({uuid, ...entry, referenceNames: game.actors.get(entry.worldId)?.flags?.[SCOPE]?.nameAliases});
         oldBindings.set(entry.worldId, uuid);
+    }
+    // A skipped family stays as it is, so its references keep the world Actor.
+    for (const [originalId, candidates] of frozen) {
+        if (!game.actors.has(originalId)) continue;
+        for (const record of candidates) {
+            if (!game.packs.get(record.pack) || assignments.some(entry => entry.module === record.module && entry.originalId === originalId)) continue;
+            assignments.push({uuid: record.uuid, module: record.module, originalId, worldId: originalId, baseName: record.baseName});
+        }
     }
     for (const record of catalog.protectedRecords) {
         assignments.push(record);
@@ -519,30 +610,53 @@ async function buildActorPlan(requests, state, catalog, progress) {
     return {plans, assignments, oldBindings, ambiguities, touched, skipped};
 }
 
-async function buildOtherPlans(requests, progress, sources) {
+async function buildOtherPlans(requests, progress, sources, problems) {
     const plans = [];
     for (const request of requests) {
         if (request.mode === 'delete') continue;
+        const declared = request.module.flags?.initializationPacks ?? [];
+        for (const id of declared.filter(id => !game.packs.has(id))) {
+            noteProblem(problems, {type: 'Kompendium', id, name: id, modules: [request.module.id]},
+                new Error('Brakuje paczki inicjalizacji.'));
+        }
         for (const pack of packsFor(request.module)) {
             const type = pack.documentName;
             if (type === 'Actor' || !TYPES[type] || !request.settings[TYPES[type]]) continue;
             await progress(`Sprawdzanie zawartości: ${moduleLabel(request.module)}`, 0.33, true);
-            const index = new Map(values(await pack.getIndex({fields: request.mode === 'update' ? ['_stats.modifiedTime'] : []})).map(entry => [entry._id, entry]));
+            let index;
+            try {
+                index = new Map(values(await pack.getIndex({fields: request.mode === 'update' ? ['_stats.modifiedTime'] : []})).map(entry => [entry._id, entry]));
+            } catch (error) {
+                noteProblem(problems, {type, id: pack.collection, name: packLabel(pack), modules: [request.module.id]}, error);
+                continue;
+            }
             const ids = [...index.keys()];
             let prepared = 0;
             for (let offset = 0; offset < ids.length; offset += 20) {
                 await progress(`Przygotowywanie zawartości: ${moduleLabel(request.module)} (${prepared}/${ids.length})`, 0.35, true);
                 const batch = ids.slice(offset, offset + 20);
-                const documents = await sources.read(pack, batch, {index,
+                const failed = problems && ((id, name, error) => noteProblem(problems,
+                    {type, id, name, modules: [request.module.id]}, error));
+                const documents = await readDocuments(sources, pack, batch, part => ({index,
                     reuse: id => request.mode === 'update' && collection(type).has(id),
-                    invoke: read => type === 'Scene' ? withSourceSceneContext(batch, read) : read()});
+                    invoke: read => type === 'Scene' ? withSourceSceneContext(part, read) : read()}),
+                    failed && ((id, error) => failed(id, index.get(id)?.name ?? id, error)));
                 for (const document of documents) {
                     prepared++;
-                    const data = await localizedSourceData(pack, document, sources);
+                    let data;
+                    try {data = await localizedSourceData(pack, document, sources);}
+                    catch (error) {
+                        if (!failed) throw error;
+                        failed(document.id, document.name, error);
+                        continue;
+                    }
                     const current = collection(type).get(data._id);
                     if (request.settings.excludeNameChange && current && current.name !== data.name) continue;
                     if (current?.hasPlayerOwner) continue;
-                    if (type === 'Scene' && current) data.active = current.active ?? dataOf(current).active;
+                    if (type === 'Scene') {
+                        applySceneMapCorrections(pack.collection, data);
+                        if (current) data.active = current.active ?? dataOf(current).active;
+                    }
                     data.flags ??= {};
                     data.flags['warhammer-lib'] = {...data.flags['warhammer-lib'], source: request.module.id};
                     // Original EN data is needed only to recognize an old
@@ -557,6 +671,37 @@ async function buildOtherPlans(requests, progress, sources) {
         }
     }
     return plans;
+}
+
+// All non-Actor documents share the same world ID space within their type.
+function resolveSharedDocuments(plans, conflicts) {
+    const groups = new Map();
+    for (const plan of plans) {
+        const key = `${plan.type}:${plan.id}`;
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(plan);
+    }
+    const resolved = [];
+    for (const group of groups.values()) {
+        const owner = documentModule(group[0].current ?? {});
+        const ordered = [...group].sort((a, b) => a.pack.localeCompare(b.pack));
+        const winner = owner ? ordered.find(plan => plan.module === owner) : ordered[0];
+        if (winner) resolved.push(winner);
+        for (const plan of ordered) if (plan !== winner) {
+            const retained = winner?.module ?? owner;
+            conflicts.push({type: plan.type, id: plan.id, name: plan.data.name, modules: [plan.module],
+                reason: `Wspólne ID dokumentu. Zachowano źródło ${game.modules.get(retained)?.title ?? retained}.`});
+        }
+    }
+    return resolved;
+}
+
+function assertDeletionCurrent(plan) {
+    const document = collection(plan.type).get(plan.id);
+    if (!document || document.hasPlayerOwner || (plan.type === 'Actor' && protectedActor(document))
+        || JSON.stringify(dataOf(document)) !== JSON.stringify(plan.data)) {
+        throw new Error(`Dokument „${plan.data.name ?? plan.id}” zmienił się lub jest chroniony. Ponów operację.`);
+    }
 }
 
 function legacyMatches(current, incoming, raw) {
@@ -682,6 +827,10 @@ function embeddedUpdateSatisfied(document, update) {
     } catch {return false;}
 }
 
+// Items of an inactive package stay in the Actor's source, outside its collection.
+const writableItemIds = (actor, data) => (data.items ?? [])
+    .filter(item => !unsupportedChild(actor.items, 'Item', item)).map(item => item._id).sort();
+
 async function replaceEmbedded(document, incoming, changes) {
     for (const group of changes.collections) {
         const {type, remove, create, update} = group;
@@ -737,7 +886,7 @@ async function replaceDocumentInContext(document, incoming, reconcile = true, ch
         await waitForSceneCanvas(document);
     }
     if (document.documentName === 'Actor') {
-        const expected = JSON.stringify((incoming.items ?? []).map(item => item._id).sort());
+        const expected = JSON.stringify(writableItemIds(document, incoming));
         const matches = () => JSON.stringify(values(document.items).map(idOf).sort()) === expected;
         if (!matches() && reconcile) await replaceDocument(document, incoming, false);
         if (!matches()) throw new Error(`Niezgodny zestaw elementów aktora ${incoming.name}. Kopia operacji jest zachowana.`);
@@ -863,21 +1012,28 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
     if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id !== game.user.id)) {
         throw new Error('Operację może wykonać tylko aktywny Mistrz Gry.');
     }
+    if (requests.some(request => !managedModule(request.module))) throw new Error('Wybrano książkę spoza zarządzanego importu.');
     const storedRegistry = clone(game.settings.get(scope(), KEY) ?? {});
     delete storedRegistry.backup; delete storedRegistry.pending;
     const state = loadState();
     if (state.pending) throw new Error('Poprzednia operacja została przerwana. Użyj „Cofnij ostatnią operację” przed kolejnym importem.');
     const originalRegistry = clone(state);
+    const originalBackup = originalRegistry.backup;
     delete originalRegistry.backup;
     const rules = await policy();
     progress.stage?.('źródła');
     await progress('Sprawdzanie źródeł i odnośników…', 0.01, true);
     const sources = requests.some(request => request.mode !== 'delete')
         ? await sourceReadContext(progress) : {current() {}};
-    const catalog = await readCatalog(requests, state, rules, progress, sources);
-    const actorPlan = await buildActorPlan(requests, state, catalog, progress);
+    // Only an update may finish without a faulty element: initialization and
+    // removal must stay complete or leave the world as it was.
+    const problems = requests.every(request => request.mode === 'update') ? [] : null;
+    const catalog = await readCatalog(requests, state, rules, progress, sources, problems);
+    const actorPlan = await buildActorPlan(requests, state, catalog, progress, problems);
     progress.stage?.('pozostała zawartość');
-    const plans = [...actorPlan.plans, ...await buildOtherPlans(requests, progress, sources)];
+    const conflicts = [];
+    const otherPlans = await buildOtherPlans(requests, progress, sources, problems);
+    const plans = [...actorPlan.plans, ...resolveSharedDocuments(otherPlans, conflicts)];
     const maps = referenceMaps(actorPlan.assignments);
     const affectedIds = new Set(actorPlan.touched);
     for (const record of actorPlan.assignments) if (actorPlan.touched.has(record.originalId)) affectedIds.add(record.worldId);
@@ -925,15 +1081,12 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             const before = dataOf(document);
             if ((!module || !managedModule(game.modules.get(module)))
                 && [...unscopedActorIds(before)].some(id => actorPlan.ambiguities.has(id))) {
-                throw new Error(`Dokument „${document.name}” odwołuje się do mieszanego aktora bez wskazania książki. Najpierw wskaż jego źródło.`);
+                noteProblem(problems, {type, id: document.id, name: document.name, modules: module ? [module] : []},
+                    new Error('Odwołuje się do mieszanego aktora bez wskazania książki. Najpierw wskaż jego źródło.'));
+                continue;
             }
             const references = rewriteReferences(before, module, maps, actorPlan.oldBindings);
             if (references !== before && comparable(references) !== comparable(before)) {
-                if (!module || !managedModule(game.modules.get(module))) {
-                    // Unmanaged documents keep their exact previous variant via
-                    // a known old binding; mixed actors cannot be guessed.
-                    // Exact previous bindings preserve private token variants.
-                }
                 plans.push({type, id: document.id, data: references, current: document,
                     module, preserveFolder: true, currentFolder: document.folder?.id ?? document.folder ?? null, referencesOnly: true});
             }
@@ -952,6 +1105,7 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
     let diagnosticBudget = 400;
     const writePlans = [], skippedPlans = [];
     let automaticUnchanged = 0, sourceUnchangedCount = 0;
+    const rejected = [];
     progress.stage?.('porównanie');
     for (const plan of plans) {
         await progress('Sprawdzanie istniejącej zawartości…', 0.45);
@@ -960,10 +1114,22 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             plan.data = rewriteReferences(plan.data, module, maps, actorPlan.oldBindings);
         }
         const existing = collection(plan.type).get(plan.id);
-        if (existing?.hasPlayerOwner) throw new Error(`Dokument „${existing.name}” należy do gracza i jest chroniony.`);
-        if (plan.type === 'Actor' && existing && protectedActor(existing)) throw new Error(`Aktor „${existing.name}” uczestniczy w walce lub jest postacią gracza i jest chroniony.`);
+        const sameActor = plan.type === 'Actor' && (!plan.record || plan.current === existing);
+        // Source Actors were checked with their family. Here a protected
+        // document only holds a reference to rewrite: keep it and report it.
+        if (existing?.hasPlayerOwner || (plan.type === 'Actor' && existing && protectedActor(existing))) {
+            const error = new Error(`Dokument „${existing.name}” jest chroniony (postać gracza lub aktor w walce). Jego odnośniki do aktorów nie zostały zmienione.`);
+            if (plan.type === 'Actor' && !plan.referencesOnly) throw error;
+            noteProblem(problems, {type: plan.type, id: plan.id, name: existing.name, modules: plan.module ? [plan.module] : []}, error);
+            rejected.push(plan);
+            continue;
+        }
         const marker = existing ? state.documents[`${plan.type}:${plan.id}`]
             ?? (plan.type === 'Actor' ? state.variants[variantFlag(existing)?.sourceUuid] : null) : null;
+        if (!plan.referencesOnly) plan.sourceHash = plan.record?.unchangedSource ? marker?.sourceHash ?? null : await sourceDigest(plan.data);
+        if (plan.record && plan.current && plan.current !== existing) {
+            plan.data = keepWorldWounds(plan.data, dataOf(plan.current));
+        }
         const target = existing ? comparableTarget(plan) : null;
         const before = existing ? dataOf(existing) : null;
         if (target && plan.type === 'Scene') keepAutomaticTokenValues(target, before, existing);
@@ -971,8 +1137,6 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             ownership: {...before.ownership}, sourceUuid: variantFlag(before)?.sourceUuid ?? null,
             module: sourceFlag(before) ?? null, compendiumSource: before._stats?.compendiumSource ?? null};
         plan.folderUnresolved = !!existing && !target;
-        // A skipped read keeps the digest of the unchanged prepared source.
-        if (!plan.referencesOnly) plan.sourceHash = plan.record?.unchangedSource ? marker?.sourceHash ?? null : await sourceDigest(plan.data);
         const beforeHash = before ? await digest(before) : null;
         // Same source as the last import and no world edit since: nothing to
         // compare. Placement and the compendium source link must still match.
@@ -984,11 +1148,17 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             let projected = target ?? {...plan.data, folder: before.folder,
                 ownership: plan.ownership ?? plan.data.ownership ?? {default: 0, [game.user.id]: 3},
                 ...(plan.type === 'Scene' ? {active: before.active} : {})};
-            if (plan.type === 'Actor') projected = keepWorldWounds(projected, before);
+            if (sameActor) projected = keepWorldWounds(projected, before);
             plan.changes = sourceUnchanged ? {patch: null, collections: [], changed: false}
                 : documentChanges(existing, projected, before);
-            if (plan.type === 'Actor') keepAutomaticEffects(plan.changes, before);
-            if (!sourceUnchanged && plan.type === 'Actor' && automaticActorNoop(plan.changes, before, projected, marker, automaticActorValues(existing))) {
+            if (plan.changes.kept?.length) {
+                const types = [...new Set(plan.changes.kept.map(child => child.type))].join(', ');
+                const error = new Error(`Elementy typu ${types} nie zostały zmienione, bo ich moduł nie jest aktywny.`);
+                if (problems) noteProblem(problems, {type: plan.type, id: plan.id, name: existing.name, modules: plan.module ? [plan.module] : []}, error);
+                else console.warn(`WFRP PL | „${existing.name}”: ${error.message}`);
+            }
+            if (sameActor) keepAutomaticEffects(plan.changes, before);
+            if (!sourceUnchanged && sameActor && automaticActorNoop(plan.changes, before, projected, marker, automaticActorValues(existing))) {
                 plan.changes = {patch: null, collections: [], changed: false};
                 automaticUnchanged++;
             }
@@ -1032,6 +1202,9 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             ...details});
         }
     }
+    for (const plan of rejected) plans.splice(plans.indexOf(plan), 1);
+    lastProblems = [...problems ?? [], ...conflicts, ...[...new Set(actorPlan.skipped)].map(name => ({type: 'Actor', name,
+        modules: [], reason: 'Postać gracza lub aktor w walce: dokument jest chroniony.'}))];
     const plannedWrites = {rootWrites: 0, embeddedCreates: 0, embeddedUpdates: 0, embeddedDeletes: 0};
     for (const plan of writePlans) for (const [key, count] of Object.entries(changeCounts(plan.changes))) plannedWrites[key] += count;
     progress.count?.({...plannedWrites, automaticUnchanged, sourceUnchanged: sourceUnchangedCount, checked: plans.length, unchanged: skippedPlans.length,
@@ -1062,7 +1235,7 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
         summary: {...sources.counts, referenceChecked, referenceCandidates, ...plannedWrites, automaticUnchanged,
             sourceUnchanged: sourceUnchangedCount, checked: plans.length, unchanged: skippedPlans.length, create: writePlans.filter(plan => !collection(plan.type).has(plan.id)).length,
             update: writePlans.filter(plan => collection(plan.type).has(plan.id)).length, delete: deleting.length, folderPacks: changedFolderPacks.size},
-        documents: diagnostics};
+        documents: diagnostics, problems: clone(lastProblems)};
     if (diagnostics.length) console.info('WFRP PL | Diagnostyka planu przed zapisem', clone(lastInspection));
     sources.current();
     if (inspectOnly) return clone(lastInspection);
@@ -1076,6 +1249,7 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
     // A user may edit a page while preparation or the confirmation dialog is
     // open. Do not record that new edit as an unchanged importer baseline.
     for (const plan of plans) await assertPlanCurrent(plan);
+    for (const plan of deleting) assertDeletionCurrent(plan);
 
     // Remember legacy/metadata-only imports too, without backing up identical
     // document payloads. A genuine no-op keeps the previous Undo snapshot.
@@ -1136,9 +1310,11 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
     // Compression/settings writes yield to other clients. Verify only targets
     // about to be changed again, before publishing pending or mutating content.
     for (const plan of writePlans) await assertPlanCurrent(plan);
+    for (const plan of deleting) assertDeletionCurrent(plan);
     state.pending = snapshotPointer;
     await saveState(state);
     writingActors = true;
+    const attemptedDeletes = new Set();
     try {
         progress.stage?.('foldery');
         const folderPacks = new Set([...changedFolderPacks,
@@ -1196,13 +1372,15 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
             if (plan.type === 'Actor' && plan.record) {
                 const actor = target.get(plan.id);
                 const actualIds = values(actor.items).map(idOf).sort();
-                const expectedIds = (data.items ?? []).map(i => i._id).sort();
+                const expectedIds = writableItemIds(actor, data);
                 if (JSON.stringify(actualIds) !== JSON.stringify(expectedIds)) throw new Error(`Niezgodny zestaw elementów aktora ${data.name}.`);
             }
             await rememberPlan(state, plan);
         }
         for (const plan of deleting) {
             await progress(`Usuwanie zawartości: ${plan.data.name ?? plan.id}`, 0.99);
+            assertDeletionCurrent(plan);
+            attemptedDeletes.add(`${plan.type}:${plan.id}`);
             await deleteWorldDocument(plan.type, plan.id);
             delete state.documents[`${plan.type}:${plan.id}`];
             for (const [uuid, entry] of Object.entries(state.variants)) if (entry.worldId === plan.id) delete state.variants[uuid];
@@ -1242,13 +1420,15 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
         state.backup = snapshotPointer;
         await saveState(state);
         ui.notifications.info(`Zakończono: zapisano ${writePlans.length}, bez zmian ${skippedPlans.length}, usunięto ${deleting.length}. Zachowano kopię bezpieczeństwa.`);
-        if (actorPlan.skipped.length) ui.notifications.warn(`Pominięto chronione postacie graczy lub walki: ${[...new Set(actorPlan.skipped)].join(', ')}.`);
         return true;
     } catch (error) {
         try {
             await progress('Błąd zapisu — przywracanie kopii bezpieczeństwa…', 0.99, true);
-            await restoreSnapshot(snapshot, progress);
-            await saveState({...snapshot.registry, backup: snapshotPointer});
+            // A concurrent edit on a document we did not delete must survive rollback.
+            const untouched = new Set(deleting.map(plan => `${plan.type}:${plan.id}`).filter(key => !attemptedDeletes.has(key)));
+            const keep = saved => !untouched.has(`${saved.type}:${saved.id}`);
+            await restoreSnapshot({...snapshot, before: snapshot.before.filter(keep), placements: snapshot.placements.filter(keep)}, progress);
+            await saveState({...snapshot.registry, backup: originalBackup});
         } catch (restoreError) {
             console.error('WFRP PL | Przywracanie przerwane', restoreError);
             ui.notifications.error('Nie udało się dokończyć przywracania. Kopia bezpieczeństwa pozostaje zapisana; użyj „Cofnij ostatnią operację”.', {permanent: true});
@@ -1257,14 +1437,28 @@ async function execute(requests, progress, {inspectOnly = false} = {}) {
     } finally {writingActors = false;}
 }
 
+// Shown after the progress window, so a finished update stays readable.
+function showProblems(problems) {
+    if (!problems.length) return;
+    const titled = problems.map(problem => ({...problem,
+        modules: problem.modules.map(id => game.modules.get(id)?.title ?? id)}));
+    ui.notifications.warn(`Operację zakończono z pominiętymi elementami (${problems.length}).`, {permanent: true});
+    foundry.applications.api.DialogV2.prompt?.({window: {title: 'Pominięte elementy aktualizacji'}, position: {width: 560}, rejectClose: false,
+        content: problemsHtml(titled), ok: {label: 'Zamknij'}}).catch(error => console.error('WFRP PL | Raport pominiętych elementów', error));
+}
+
 export function runContentOperation(requests, progress, options = {}) {
     const normalized = requests.map(request => ({...request, settings: request.settings
         ?? Object.fromEntries(Object.values(TYPES).map(key => [key, true]))}));
     const task = queue.then(async () => {
         const report = operationProgress(progress);
         let outcome = 'błąd';
+        lastProblems = [];
         try {const result = await execute(normalized, report, options); outcome = result ? 'ukończono' : 'anulowano'; return result;}
-        finally {report.close(outcome);}
+        finally {
+            report.close(outcome);
+            if (outcome === 'ukończono' && !options.inspectOnly) showProblems(lastProblems);
+        }
     });
     queue = task.catch(() => {});
     return task;
@@ -1362,6 +1556,7 @@ function install() {
 const lifecycleApi = {run: runContentOperation, undo: undoLastOperation, repairFolders: repairFolderDuplicates,
     inspect: requests => runContentOperation(requests, undefined, {inspectOnly: true}),
     get lastInspection() {return lastInspection ? clone(lastInspection) : null;},
+    get lastProblems() {return clone(lastProblems);},
     get status() {return operationStatus ? {...operationStatus} : null;},
     get lastOperation() {return lastOperation ? clone(lastOperation) : null;},
     get strictActorImport() {return writingActors;}};

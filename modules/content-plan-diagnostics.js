@@ -81,3 +81,12 @@ export function inspectionHtml(report) {
             Po aktualizacji: <code style="white-space:pre-wrap;overflow-wrap:anywhere">${escape(change.after)}</code></li>`).join('')}</ul>
         ${document.truncated ? '<p>Lista została skrócona.</p>' : ''}</details></li>`).join('');
 }
+
+const documentTypes = {Actor: 'Aktor', Item: 'Przedmiot', JournalEntry: 'Dziennik', Scene: 'Scena', RollTable: 'Tabela', Macro: 'Makro'};
+
+export function problemsHtml(problems) {
+    return `<p>Te elementy pominięto i pozostały bez zmian. Pozostałą zawartość zaktualizowano. Kolejna aktualizacja spróbuje ponownie.</p>
+        <ul style="max-height: min(45vh, 24rem); overflow-y: auto; overflow-wrap: anywhere;">${problems.map(problem => `<li><strong>${escape(problem.name)}</strong>
+            (${escape(documentTypes[problem.type] ?? problem.type)}${problem.modules.length ? `, ${escape(problem.modules.join(', '))}` : ''}${problem.id ? `, ID ${escape(problem.id)}` : ''})<br>
+            ${escape(problem.reason)}</li>`).join('')}</ul>`;
+}

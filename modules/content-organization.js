@@ -313,7 +313,7 @@ async function createModuleFolder(moduleId, type) {
     }]);
     return folder;
 }
-async function organizeCompendiums(moduleIds = null) {
+async function organizeCompendiums(moduleIds = null, managed = false) {
     if (!canWrite()) return;
     const modules = new Map();
     for (const pack of values(game.packs)) {
@@ -341,7 +341,11 @@ async function organizeCompendiums(moduleIds = null) {
                 }
             }
         }
-        let root = chooseRoot(values(game.folders).filter(folder => folder.type === "Compendium" && isRoot(folder, moduleId)));
+        const roots = values(game.folders).filter(folder => folder.type === "Compendium" && isRoot(folder, moduleId));
+        let root = chooseRoot(roots);
+        if (managed && root) for (const duplicate of roots) {
+            if (duplicate.id !== root.id) await mergeModuleRoot(duplicate, root);
+        }
         if (!root) {
             for (const pack of packs) {
                 const seen = new Set();
@@ -388,7 +392,7 @@ async function organize({moduleIds = null, managed = false} = {}) {
     current.promise = (async () => {
         if (previous) await previous.promise.catch(() => {});
         await organizeWorldFolders({moduleIds, managed});
-        await organizeCompendiums(moduleIds);
+        await organizeCompendiums(moduleIds, managed);
     })();
     organizing = current;
     try {return await current.promise;} finally {if (organizing === current) organizing = null;}
@@ -409,8 +413,9 @@ Hooks.once('init', exposeOrganizationApi);
 // operation, for the modules it involved. No pass runs at startup or after
 // unrelated folder creation; a book's layout is repaired by updating it.
 for (const type of ["Actor", "Item", "JournalEntry", "Scene", "RollTable", "Macro", "Playlist", "Cards", "Adventure"]) {
-    Hooks.on(`create${type}`, async document => {
-        if (!canWrite() || document.pack || document.folder) return;
+    Hooks.on(`create${type}`, async (document, options) => {
+        if (!canWrite() || options?.wfrp4eContentLifecycle
+            || document.flags?.["wfrp4e-core-pl"]?.privateCopy || document.pack || document.folder) return;
         const uuid = document._stats?.compendiumSource ?? document.flags?.core?.sourceId;
         const moduleId = document.flags?.["warhammer-lib"]?.source ?? uuid?.match(/^Compendium\.([^.]+)\./u)?.[1];
         if (!category(moduleId)) return;
