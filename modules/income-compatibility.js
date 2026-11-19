@@ -836,12 +836,17 @@ function registerChatHooks() {
     const root = html?.[0] || html;
     if (!root?.querySelector) return;
 
-    const test = message.system?.test;
-    const isIncome = Boolean(test?.options?.income || root.querySelector(".money-drag"));
-    if (!isIncome) return;
-
+    // Nie dotykaj message.system.test dla zwykłych wiadomości: getter odtwarza
+    // test i rzuca wyjątki dla starych/uszkodzonych kart (brak speakera, cechy).
     const moneyDrag = root.querySelector(".money-drag");
     if (!moneyDrag || moneyDrag[INCOME_PATCH_MARK]) return;
+
+    let test;
+    try {
+      test = message.system?.test;
+    } catch (_e) {
+      test = undefined;
+    }
     moneyDrag[INCOME_PATCH_MARK] = true;
 
     const earned = moneyDrag.dataset.amt || test?.result?.earned;
@@ -920,7 +925,6 @@ function registerChatHooks() {
   }
 
   Hooks.on("renderChatMessageHTML", enhanceIncomeCard);
-  Hooks.on("renderChatMessage", enhanceIncomeCard);
 }
 
 /**
