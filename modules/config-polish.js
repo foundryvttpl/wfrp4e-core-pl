@@ -694,12 +694,150 @@ function hookPrepareSystemItems() {
 		config["PrepareSystemItems"] = function(...args) {
 			const result = origPrepare.apply(this, args);
 			localizeSystemEffectsConfig();
+			localizeDynamicConfig();
 			return result;
 		};
 		config._wfrp4eCorePlPrepareHooked = true;
 	}
 }
 
+export function localizeDynamicConfig() {
+	const config = game.wfrp4e?.config;
+	if (!config) return;
+
+	// 1. Difficulties: repair hardcoded English strings and ensure difficultyNames exist
+	if (config.difficultyLabels) {
+		const isMoo = Boolean(game.settings?.get?.("wfrp4e", "homebrew")?.mooDifficulty);
+		if (config.difficultyModifiers?.["futile"] !== undefined || config.difficultyLabels?.["futile"] !== undefined) {
+			config.difficultyLabels["futile"] = game.i18n.localize(isMoo ? "DIFFICULTY.MooFutile" : "DIFFICULTY.Futile");
+			if (config.difficultyNames) {
+				config.difficultyNames["futile"] = game.i18n.localize("DIFFICULTYNAME.Futile");
+			}
+		}
+		if (config.difficultyModifiers?.["impossible"] !== undefined || config.difficultyLabels?.["impossible"] !== undefined) {
+			config.difficultyLabels["impossible"] = game.i18n.localize(isMoo ? "DIFFICULTY.MooImpossible" : "DIFFICULTY.Impossible");
+			if (config.difficultyNames) {
+				config.difficultyNames["impossible"] = game.i18n.localize("DIFFICULTYNAME.Impossible");
+			}
+		}
+	}
+
+	// 2. Symptoms & Symptom Effects from core and DLC modules
+	const SYMPTOM_DATA = {
+		delirium: {
+			name: "WFRP4E.Symptom.Delirium",
+			desc: "WFRP4E.SymptomDescriptions.Delirium",
+			treatment: "WFRP4E.SymptomTreatment.Delirium"
+		},
+		swelling: {
+			name: "WFRP4E.Symptom.Swelling",
+			desc: "WFRP4E.SymptomDescriptions.Swelling",
+			treatment: "WFRP4E.SymptomTreatment.Swelling"
+		},
+		gripes: {
+			name: "WFRP4E.Symptom.Gripes",
+			desc: "WFRP4E.SymptomDescriptions.Gripes",
+			treatment: "WFRP4E.SymptomTreatment.Gripes"
+		},
+		disorientation: {
+			name: "WFRP4E.Symptom.Disorientation",
+			desc: "WFRP4E.SymptomDescriptions.Disorientation",
+			treatment: "WFRP4E.SymptomTreatment.Disorientation"
+		},
+		organfailure: {
+			name: "WFRP4E.Symptom.OrganFailure",
+			desc: "WFRP4E.SymptomDescriptions.OrganFailure",
+			treatment: "WFRP4E.SymptomTreatment.OrganFailure"
+		},
+		parasitization: {
+			name: "WFRP4E.Symptom.Parasitization",
+			desc: "WFRP4E.SymptomDescriptions.Parasitization",
+			treatment: "WFRP4E.SymptomTreatment.Parasitization"
+		},
+		homicidalRaging: {
+			name: "WFRP4E.Symptom.HomicidalRaging",
+			desc: "WFRP4E.SymptomDescriptions.HomicidalRaging",
+			treatment: "WFRP4E.SymptomTreatment.HomicidalRaging"
+		}
+	};
+
+	if (config.symptoms) {
+		for (const [key, data] of Object.entries(SYMPTOM_DATA)) {
+			if (config.symptoms[key] !== undefined) {
+				config.symptoms[key] = game.i18n.localize(data.name);
+			}
+			if (config.symptomDescriptions && config.symptomDescriptions[key] !== undefined) {
+				const localizedDesc = game.i18n.localize(data.desc);
+				if (localizedDesc && localizedDesc !== data.desc) {
+					config.symptomDescriptions[key] = localizedDesc;
+				}
+			}
+			if (config.symptomTreatment && config.symptomTreatment[key] !== undefined) {
+				const localizedTreatment = game.i18n.localize(data.treatment);
+				if (localizedTreatment && localizedTreatment !== data.treatment) {
+					config.symptomTreatment[key] = localizedTreatment;
+				}
+			}
+		}
+	}
+
+	if (config.symptomEffects) {
+		for (const [key, data] of Object.entries(SYMPTOM_DATA)) {
+			if (config.symptomEffects[key]) {
+				config.symptomEffects[key].name = game.i18n.localize(data.name);
+			}
+		}
+	}
+
+	// 3. System Effects (system and modules)
+	const SYSTEM_EFFECT_NAMES = {
+		rattled: "EFFECT.Rattled",
+		besmirched: "EFFECT.Besmirched",
+		invisible: "EFFECT.Invisible",
+		blind: "EFFECT.Blind",
+	};
+
+	if (config.systemEffects) {
+		for (const [key, locKey] of Object.entries(SYSTEM_EFFECT_NAMES)) {
+			if (config.systemEffects[key]) {
+				config.systemEffects[key].name = game.i18n.localize(locKey);
+			}
+		}
+	}
+
+	// 4. Hit Location Tables
+	const HIT_LOC_TABLES = {
+		quadruped: "WFRP4E.hitLocationTables.quadruped",
+		sailingboat: "WFRP4E.hitLocationTables.sailingboat",
+		rowingboat: "WFRP4E.hitLocationTables.rowingboat",
+		"boat-with-oars-and-sails": "WFRP4E.hitLocationTables.boat-with-oars-and-sails",
+	};
+	if (config.hitLocationTables) {
+		for (const [key, locKey] of Object.entries(HIT_LOC_TABLES)) {
+			if (config.hitLocationTables[key] !== undefined) {
+				config.hitLocationTables[key] = game.i18n.localize(locKey);
+			}
+		}
+	}
+
+	// 5. Magic Lores & Lore Effects
+	if (config.magicLores) {
+		if (config.magicLores["dark"]) config.magicLores["dark"] = game.i18n.localize("WFRP4E.MagicLores.dark");
+		if (config.magicLores["greatMaw"]) config.magicLores["greatMaw"] = game.i18n.localize("WFRP4E.MagicLores.greatMaw");
+	}
+	if (config.loreEffects) {
+		if (config.loreEffects["tzeentch"]) config.loreEffects["tzeentch"].name = game.i18n.localize("WFRP4E.LoreEffects.Tzeentch");
+		if (config.loreEffects["dark"]) config.loreEffects["dark"].name = game.i18n.localize("WFRP4E.LoreEffects.Dark");
+		if (config.loreEffects["greatMaw"]) config.loreEffects["greatMaw"].name = game.i18n.localize("WFRP4E.LoreEffects.GreatMaw");
+	}
+
+	// 6. Generic localization pass on named objects
+	localizeNamedEntries(config.loreEffects);
+	localizeNamedEntries(config.symptomEffects);
+	localizeNamedEntries(config.systemEffects);
+	localizeNamedEntries(config.vehicleSystemEffects);
+}
+
 patchWarhammerScript();
 
 Hooks.on("i18nInit", () => {
@@ -722,6 +860,7 @@ Hooks.on("i18nInit", () => {
 	localizeNamedEntries(config.symptomEffects);
 
 	localizeSystemEffectsConfig();
+	localizeDynamicConfig();
 	patchWarhammerScript();
 	hookPrepareSystemItems();
 });
@@ -2910,11 +3049,14 @@ Hooks.once("ready", () => {
 	installSafeRandomizer();
 	ensureCompendiumTablesLoaded();
 	localizeSystemEffectsConfig();
+	localizeDynamicConfig();
 	patchWarhammerScript();
 });
+Hooks.on("ready", () => localizeDynamicConfig());
 
 game.wfrp4eCorePl = game.wfrp4eCorePl || {};
 game.wfrp4eCorePl.localizeScriptLabel = localizeScriptLabel;
 game.wfrp4eCorePl.localizeSystemEffectsConfig = localizeSystemEffectsConfig;
+game.wfrp4eCorePl.localizeDynamicConfig = localizeDynamicConfig;
 game.wfrp4eCorePl.patchWarhammerScript = patchWarhammerScript;
 

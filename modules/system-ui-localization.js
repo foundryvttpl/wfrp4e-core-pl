@@ -259,6 +259,22 @@ const CHAT_FLAVORS = {
 	"Channelled Power Lost": "FlavorChannellingLost",
 };
 
+const CHAT_SPEAKER_ALIASES = {
+	"Fear & Terror": "AliasFearTerror",
+	"End Combat - Corruption": "AliasEndCombatCorruption",
+	"End Combat - Infections": "AliasEndCombatInfections",
+	"End Combat - Diseases": "AliasEndCombatDiseases",
+	"Table Menu": "AliasTableMenu",
+	"Opposed Result": "AliasOpposedResult",
+	"INFO": "AliasInfo",
+};
+
+const CORRUPTION_ENRICHER_TEXTS = {
+	"Minor": "CORRUPTION.Minor",
+	"Moderate": "CORRUPTION.Moderate",
+	"Major": "CORRUPTION.Major",
+};
+
 Hooks.on("renderChatMessageHTML", (_message, html) => {
 	if (!isPolishWfrp()) return;
 	const root = html?.querySelectorAll ? html : html?.[0];
@@ -267,11 +283,39 @@ Hooks.on("renderChatMessageHTML", (_message, html) => {
 			link.textContent = game.i18n.localize("WFRP4E.PL.UI.CriticalMitigationDamageArmour");
 		}
 	}
+
+	for (const sender of root?.querySelectorAll?.(".message-sender") ?? []) {
+		const aliasKey = CHAT_SPEAKER_ALIASES[sender.textContent.trim()];
+		if (aliasKey) {
+			sender.textContent = game.i18n.localize(`WFRP4E.PL.UI.${aliasKey}`);
+		}
+	}
+
+	for (const link of root?.querySelectorAll?.('a[data-action="clickCorruption"]') ?? []) {
+		const locKey = CORRUPTION_ENRICHER_TEXTS[link.textContent.trim()];
+		if (locKey) {
+			const localized = game.i18n.localize(locKey);
+			const img = link.querySelector("img");
+			if (img) {
+				link.innerHTML = "";
+				link.appendChild(img);
+				link.appendChild(document.createTextNode(localized));
+			} else {
+				link.textContent = localized;
+			}
+		}
+	}
 });
 
 Hooks.on("preCreateChatMessage", message => {
-	const key = isPolishWfrp() && CHAT_FLAVORS[message.flavor];
+	if (!isPolishWfrp()) return;
+	const key = CHAT_FLAVORS[message.flavor];
 	if (key) message.updateSource({flavor: game.i18n.localize(`WFRP4E.PL.UI.${key}`)});
+
+	const speakerAliasKey = CHAT_SPEAKER_ALIASES[message.speaker?.alias];
+	if (speakerAliasKey) {
+		message.updateSource({"speaker.alias": game.i18n.localize(`WFRP4E.PL.UI.${speakerAliasKey}`)});
+	}
 });
 
 Hooks.once("init", () => queueMicrotask(() => {
