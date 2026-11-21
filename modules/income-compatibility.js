@@ -296,6 +296,13 @@ export function resolveEarningSkills(actor, career) {
   if (rawNames.length === 0 && Array.isArray(career.earningSkills)) {
     rawNames = career.earningSkills;
   }
+  // 5e: poziom bez własnej umiejętności dochodu dziedziczy ją z niższego poziomu (logika systemu)
+  if (rawNames.length === 0 && Array.isArray(career.incomeSkill)) {
+    try {
+      const inherited = actor.system?.career?.earningSkills;
+      if (Array.isArray(inherited)) rawNames = inherited.filter(Boolean);
+    } catch (_e) {}
+  }
   if (rawNames.length === 0 && Array.isArray(career.system?.earningSkills)) {
     rawNames = career.system.earningSkills;
   }
@@ -455,6 +462,13 @@ export async function rollIncomeForActor(actor, { career = null, event = null, t
     return null;
   }
 
+  // 1a. Ścieżka kariery 5e: umiejętności dochodu i status są zapisane na poziomie (tier), a nie na przedmiocie
+  // ścieżki – jak w systemie bierzemy bieżący poziom postaci.
+  if (career.type === "careerPath" || career.system?.tiers) {
+    const current = actor.system?.career?.current;
+    if (current && (!career.id || actor.system?.career?.path?.document?.id === career.id)) career = current;
+  }
+
   // 2. Weryfikacja wymaganego wyposażenia
   if (career.system?.requiredTrappingStatus?.length && career.system.requiredTrappingStatus.some(t => !t.owned)) {
     ui.notifications?.error(game.i18n?.localize("SHEET.RequiredTrappingsError") || "Nie posiadasz wymaganego wyposażenia profesji!");
@@ -585,10 +599,17 @@ function installIncomeRollPatch() {
     const originalHandleIncomeTest = TestClass.prototype.handleIncomeTest;
 
     TestClass.prototype.handleIncomeTest = async function() {
-      // Zapewnienie poprawnych danych options / context
-      this.options = this.options || {};
-      const status = this.options.income || this.context?.income || (this.actor ? resolveIncomeStatus(this.actor) : { tier: "b", standing: 1 });
-      this.options.income = status;
+      // Zapewnienie poprawnych danych options / context.
+      // W WFRP 10.x `options` testu ma tylko getter (dane: data.preData.options, w 5e data.testData.options),
+      // więc nie przypisujemy go wprost – uzupełniamy obiekt, który zwraca system.
+      let options = this.options;
+      if (!options) {
+        const holder = this.data?.preData ?? this.data?.testData;
+        options = {};
+        if (holder) holder.options = options;
+      }
+      const status = options.income || this.context?.income || (this.actor ? resolveIncomeStatus(this.actor) : { tier: "b", standing: 1 });
+      options.income = status;
       if (this.context) this.context.income = status;
 
       await originalHandleIncomeTest.call(this);
@@ -729,7 +750,8 @@ function installCareerModelPatches() {
   if (CharacterCareerModel?.prototype && !CharacterCareerModel.prototype[CAREER_PATCH_MARK]) {
     CharacterCareerModel.prototype.rollIncome = async function() {
       const actor = this.parent?.parent || this.actor;
-      const career = this.path?.document || this.current;
+      // Bieżący poziom ścieżki (tier) ma umiejętności dochodu i status
+      const career = this.current || this.path?.document;
       return rollIncomeForActor(actor, { career });
     };
     Object.defineProperty(CharacterCareerModel.prototype, CAREER_PATCH_MARK, { value: true });
